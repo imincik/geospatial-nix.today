@@ -5,6 +5,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
+
 allPackages =
     [ "geopkgs.gdal", "geopkgs.gdal-minimal", "geopkgs.pdal", "geopkgs.grass", "geopkgs.qgis", "geopkgs.qgis-ltr", "pkgs.sl" ]
 
@@ -19,8 +20,8 @@ allPgPackages =
 
 aboutText =
     """
-In a world of horrendously complex software developed by myriads of authors,
-create a declarative and reproducible geospatial environment, lovely built to
+In a world of horrendously complex software developed by myriads of authors, be
+smart, use Nix and create reproducible geospatial environment, lovely built to
 work together on any modern Linux distribution.
 """
 
@@ -127,6 +128,7 @@ containerTemplateComment =
 containerTemplate =
     """
 nix run github:imincik/geospatial-nix#geonixcli -- container shell
+
 docker run --rm -it shell:latest
 """
 

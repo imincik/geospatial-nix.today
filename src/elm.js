@@ -5403,7 +5403,7 @@ var $author$project$HomePage$UpdateShellHook = function (a) {
 	return {$: 'UpdateShellHook', a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$HomePage$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\ncreate a declarative and reproducible geospatial environment, lovely built to\nwork together on any modern Linux distribution.\n';
+var $author$project$HomePage$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors, be\nsmart, use Nix and create reproducible geospatial environment, lovely built to\nwork together on any modern Linux distribution.\n';
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -5415,7 +5415,7 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $author$project$HomePage$configTemplateComment = '\n- Copy and paste configuration to geonix.nix file\n';
-var $author$project$HomePage$containerTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
+var $author$project$HomePage$containerTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- container shell\n\ndocker run --rm -it shell:latest\n';
 var $author$project$HomePage$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
