@@ -69,23 +69,19 @@ configTemplate =
 let
   geopkgs = inputs.geonix.packages.${pkgs.system};
 
-  packages = [ <PACKAGES> ];
-  python = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);
-  pgExtensions = [ <PG-PACKAGES> ];
-
 in {
   name = "<NAME>";
 
-  packages = packages;
+  packages = [ <PACKAGES> ];
 
   languages.python = {
     enable = <PYTHON-ENABLED>;
-    package = python;
+    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);
   };
 
   services.postgres = {
     enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;
-    extensions = e: pgExtensions;
+    extensions = e: [ <PG-PACKAGES> ];
   };
 
   enterShell = ''

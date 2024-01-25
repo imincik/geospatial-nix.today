@@ -5208,7 +5208,7 @@ var $elm$browser$Browser$sandbox = function (impl) {
 			view: impl.view
 		});
 };
-var $author$project$HomePage$configTemplate = '\n{ inputs, config, pkgs, lib, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\n  packages = [ <PACKAGES> ];\n  python = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);\n  pgExtensions = [ <PG-PACKAGES> ];\n\nin {\n  name = "<NAME>";\n\n  packages = packages;\n\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = python;\n  };\n\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: pgExtensions;\n  };\n\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n}\n';
+var $author$project$HomePage$configTemplate = '\n{ inputs, config, pkgs, lib, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\nin {\n  name = "<NAME>";\n\n  packages = [ <PACKAGES> ];\n\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);\n  };\n\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: [ <PG-PACKAGES> ];\n  };\n\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n}\n';
 var $elm$core$String$replace = F3(
 	function (before, after, string) {
 		return A2(
