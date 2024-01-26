@@ -1,21 +1,27 @@
 module HomePage exposing (main)
 
 import Browser
+import GeoPackages
+import GeoPostgresqlPackages
+import GeoPythonPackages
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
+import Packages
+import PostgresqlPackages
+import PythonPackages
 
 
 allPackages =
-    [ "geopkgs.gdal", "geopkgs.gdal-minimal", "geopkgs.pdal", "geopkgs.grass", "geopkgs.qgis", "geopkgs.qgis-ltr", "pkgs.sl" ]
+    GeoPackages.packages ++ Packages.packages
 
 
 allPyPackages =
-    [ "geopkgs.python3-fiona", "geopkgs.python3-gdal", "geopkgs.python3-geopandas", "geopkgs.python3-rasterio", "pkgs.python3Packages.numpy" ]
+    GeoPythonPackages.packages ++ PythonPackages.packages
 
 
 allPgPackages =
-    [ "geopkgs.postgresql-postgis", "pkgs.postgresqlPackages.pgrouting" ]
+    GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
 
 
 aboutText =
@@ -190,14 +196,28 @@ type alias Config =
 
 type alias Model =
     { name : String
+
+    -- packages
     , availablePackages : List String
     , selectedPackages : List String
+
+    -- python
     , pythonEnabled : String
     , availablePyPackages : List String
     , selectedPyPackages : List String
+
+    -- postgresql
     , postgresEnabled : String
     , availablePgPackages : List String
     , selectedPgPackages : List String
+
+    -- filters
+    , filterLimit : Int
+    , filterPackages : String
+    , filterPyPackages : String
+    , filterPgPackages : String
+
+    -- config
     , config : Config
     , nixConfig : String
     }
@@ -206,14 +226,28 @@ type alias Model =
 initialModel : Model
 initialModel =
     { name = ""
+
+    -- packages
     , availablePackages = allPackages
     , selectedPackages = []
+
+    -- python
     , pythonEnabled = "false"
     , availablePyPackages = allPyPackages
     , selectedPyPackages = []
+
+    -- postgresql
     , postgresEnabled = "false"
     , availablePgPackages = allPgPackages
     , selectedPgPackages = []
+
+    -- filters
+    , filterLimit = 5
+    , filterPackages = ""
+    , filterPyPackages = ""
+    , filterPgPackages = ""
+
+    -- config
     , config =
         { packages = []
         , languages =
@@ -253,20 +287,41 @@ view model =
                     ]
                 , div [ class "packages" ]
                     [ hr [] []
-                    , p [ class "fw-bold fs-2" ] [ text "packages" ]
-                    , toHtmlListAdd model.availablePackages model.selectedPackages AddPackage
+                    , p [ class "fw-bold fs-2 d-flex justify-content-between align-items-center" ]
+                        [ text "packages"
+                        , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
+                        ]
+                    , toHtmlListAdd model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
+                    , p [ class "text-secondary" ]
+                        [ packagesCountText (List.length model.availablePackages)
+                        , showMorePackagesButton model.filterLimit
+                        ]
                     , hr [] []
                     ]
                 , div [ class "python" ]
                     [ p [ class "fw-bold fs-2 d-flex justify-content-between align-items-center" ] [ text "languages.python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text model.pythonEnabled ] ]
-                    , p [ class "fw-bold fs-3" ] [ text "packages" ]
-                    , toHtmlListAdd model.availablePyPackages model.selectedPyPackages AddPyPackage
+                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                        [ text "packages"
+                        , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
+                        ]
+                    , toHtmlListAdd model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
+                    , p [ class "text-secondary" ]
+                        [ packagesCountText (List.length model.availablePyPackages)
+                        , showMorePackagesButton model.filterLimit
+                        ]
                     , hr [] []
                     ]
                 , div [ class "postgres" ]
                     [ p [ class "fw-bold fs-2 d-flex justify-content-between align-items-center" ] [ text "services.postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text model.postgresEnabled ] ]
-                    , p [ class "fw-bold fs-3" ] [ text "packages" ]
-                    , toHtmlListAdd model.availablePgPackages model.selectedPgPackages AddPgPackage
+                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                        [ text "packages"
+                        , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
+                        ]
+                    , toHtmlListAdd model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
+                    , p [ class "text-secondary" ]
+                        [ packagesCountText (List.length model.availablePgPackages)
+                        , showMorePackagesButton model.filterLimit
+                        ]
                     , hr [] []
                     ]
                 , div [ class "shell-hook" ]
@@ -329,9 +384,16 @@ view model =
         ]
 
 
-toHtmlListAdd : List String -> List String -> (String -> Msg) -> Html Msg
-toHtmlListAdd availableItems selectedItems onClickAction =
-    ul [ class "list-group" ] (List.map (toLiAdd selectedItems onClickAction) availableItems)
+toHtmlListAdd : List String -> List String -> String -> Int -> (String -> Msg) -> Html Msg
+toHtmlListAdd availableItems selectedItems filter filterLimit onClickAction =
+    let
+        filteredItems =
+            -- filter items
+            List.filter (\item -> String.contains filter item) availableItems
+                -- show only first x items
+                |> List.take filterLimit
+    in
+    ul [ class "list-group" ] (List.map (toLiAdd selectedItems onClickAction) filteredItems)
 
 
 toLiAdd : List String -> (String -> Msg) -> String -> Html Msg
@@ -348,7 +410,23 @@ toLiAdd selectedItems onClickAction item =
                 "btn btn-success btn-sm"
     in
     li [ class "list-group-item d-flex justify-content-between align-items-center" ]
-        [ text item, button [ class buttonClass, style "margin" "10px", onClick (onClickAction item) ] [ text buttonLabel ] ]
+        [ text item, button [ class buttonClass, style "margin" "10px", onClick (onClickAction item), id "packagesList" ] [ text buttonLabel ] ]
+
+
+packagesCountText : Int -> Html Msg
+packagesCountText packagesCount =
+    text ("Total packages: " ++ String.fromInt packagesCount)
+
+
+showMorePackagesButton : Int -> Html Msg
+showMorePackagesButton filterLimit =
+    button [ class "btn btn-sm btn-link", onClick UpdateFilterLimit ]
+        [ if filterLimit < 15 then
+            text "show more"
+
+          else
+            text "show less"
+        ]
 
 
 type Msg
@@ -359,6 +437,10 @@ type Msg
     | EnablePostgres
     | AddPgPackage String
     | UpdateShellHook String
+    | FilterPackages String
+    | FilterPyPackages String
+    | FilterPgPackages String
+    | UpdateFilterLimit
     | BuildConfig
 
 
@@ -390,6 +472,9 @@ update msg model =
             else
                 { model | selectedPackages = List.filter (\x -> x /= pkg) model.selectedPackages }
 
+        FilterPackages pkg ->
+            { model | filterPackages = pkg }
+
         EnablePython ->
             { model
                 | pythonEnabled =
@@ -406,6 +491,9 @@ update msg model =
 
             else
                 { model | selectedPyPackages = List.filter (\x -> x /= pkg) model.selectedPyPackages }
+
+        FilterPyPackages pkg ->
+            { model | filterPyPackages = pkg }
 
         EnablePostgres ->
             { model
@@ -424,8 +512,22 @@ update msg model =
             else
                 { model | selectedPgPackages = List.filter (\x -> x /= pkg) model.selectedPgPackages }
 
+        FilterPgPackages pkg ->
+            { model | filterPgPackages = pkg }
+
         UpdateShellHook script ->
             { model | config = (\p -> { p | enterShell = script }) model.config }
+
+        UpdateFilterLimit ->
+            { model
+                | filterLimit =
+                    -- allow to increase limit up to 15 items
+                    if model.filterLimit < 15 then
+                        model.filterLimit + 5
+
+                    else
+                        5
+            }
 
         BuildConfig ->
             { model | nixConfig = buildConfig model }
