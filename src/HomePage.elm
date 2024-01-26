@@ -22,7 +22,7 @@ aboutText =
     """
 In a world of horrendously complex software developed by myriads of authors, be
 smart, use Nix and create reproducible geospatial environment, lovely built to
-work together on any modern Linux distribution.
+work together on any modern Linux machine.
 """
 
 
