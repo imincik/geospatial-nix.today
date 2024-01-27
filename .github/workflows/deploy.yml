@@ -41,6 +41,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Make package files
+        run: nix develop --accept-flake-config --impure --command make-package-files
+
       - name: Build website
         run: nix develop --accept-flake-config --impure --command make-elm-site-prod
 
