@@ -10,12 +10,16 @@ in
     pkgs.fswatch
   ];
 
+  scripts.develop-elm-site.exec = ''
+    fswatch -o src/HomePage.elm | xargs -I{} elm make src/HomePage.elm --output src/elm.js
+  '';
+
   scripts.make-elm-site.exec = ''
     elm make src/HomePage.elm --output src/elm.js
   '';
 
-  scripts.develop-elm-site.exec = ''
-    fswatch -o src/HomePage.elm | xargs -I{} elm make src/HomePage.elm --output src/elm.js
+  scripts.make-elm-site-prod.exec = ''
+    elm make src/HomePage.elm --optimize --output src/elm.js
   '';
 
   languages.elm.enable = true;

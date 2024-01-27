@@ -42,7 +42,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build website
-        run: nix develop --accept-flake-config --impure --command make-elm-site
+        run: nix develop --accept-flake-config --impure --command make-elm-site-prod
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
