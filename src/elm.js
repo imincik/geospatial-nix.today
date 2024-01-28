@@ -5446,7 +5446,7 @@ var $author$project$HomePage$UpdateShellHook = function (a) {
 	return {$: 'UpdateShellHook', a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$HomePage$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors, be\nsmart, use Nix and create reproducible geospatial environment, lovely built to\nwork together on any modern Linux machine.\n';
+var $author$project$HomePage$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environment,\nlovely built to work on any modern Linux machine.\n';
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
