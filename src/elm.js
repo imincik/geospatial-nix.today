@@ -5529,10 +5529,11 @@ var $elm$html$Html$Events$onInput = function (tagger) {
 var $elm$html$Html$p = _VirtualDom_node('p');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$HomePage$packagesCountText = function (packagesCount) {
-	return $elm$html$Html$text(
-		'Total packages: ' + $elm$core$String$fromInt(packagesCount));
-};
+var $author$project$HomePage$packagesCountText = F2(
+	function (packagesCount, selectedCount) {
+		return $elm$html$Html$text(
+			'Total packages: ' + ($elm$core$String$fromInt(packagesCount) + (' , selected: ' + $elm$core$String$fromInt(selectedCount))));
+	});
 var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
 var $elm$html$Html$pre = _VirtualDom_node('pre');
 var $author$project$HomePage$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
@@ -5842,8 +5843,10 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$author$project$HomePage$packagesCountText(
-												$elm$core$List$length(model.availablePackages)),
+												A2(
+												$author$project$HomePage$packagesCountText,
+												$elm$core$List$length(model.availablePackages),
+												$elm$core$List$length(model.selectedPackages)),
 												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil)
@@ -5908,8 +5911,10 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$author$project$HomePage$packagesCountText(
-												$elm$core$List$length(model.availablePyPackages)),
+												A2(
+												$author$project$HomePage$packagesCountText,
+												$elm$core$List$length(model.availablePyPackages),
+												$elm$core$List$length(model.selectedPyPackages)),
 												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil)
@@ -5974,8 +5979,10 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$author$project$HomePage$packagesCountText(
-												$elm$core$List$length(model.availablePgPackages)),
+												A2(
+												$author$project$HomePage$packagesCountText,
+												$elm$core$List$length(model.availablePgPackages),
+												$elm$core$List$length(model.selectedPgPackages)),
 												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil)

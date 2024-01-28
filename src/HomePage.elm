@@ -293,7 +293,7 @@ view model =
                         ]
                     , toHtmlListAdd model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
                     , p [ class "text-secondary" ]
-                        [ packagesCountText (List.length model.availablePackages)
+                        [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
                         , showMorePackagesButton model.filterLimit
                         ]
                     , hr [] []
@@ -306,7 +306,7 @@ view model =
                         ]
                     , toHtmlListAdd model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
                     , p [ class "text-secondary" ]
-                        [ packagesCountText (List.length model.availablePyPackages)
+                        [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
                         , showMorePackagesButton model.filterLimit
                         ]
                     , hr [] []
@@ -319,7 +319,7 @@ view model =
                         ]
                     , toHtmlListAdd model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
                     , p [ class "text-secondary" ]
-                        [ packagesCountText (List.length model.availablePgPackages)
+                        [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
                         , showMorePackagesButton model.filterLimit
                         ]
                     , hr [] []
@@ -413,9 +413,9 @@ toLiAdd selectedItems onClickAction item =
         [ text item, button [ class buttonClass, style "margin" "10px", onClick (onClickAction item), id "packagesList" ] [ text buttonLabel ] ]
 
 
-packagesCountText : Int -> Html Msg
-packagesCountText packagesCount =
-    text ("Total packages: " ++ String.fromInt packagesCount)
+packagesCountText : Int -> Int -> Html Msg
+packagesCountText packagesCount selectedCount =
+    text ("Total packages: " ++ String.fromInt packagesCount ++ " , selected: " ++ String.fromInt selectedCount)
 
 
 showMorePackagesButton : Int -> Html Msg
