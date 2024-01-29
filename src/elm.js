@@ -5817,7 +5817,7 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('fw-bold fs-2 d-flex justify-content-between align-items-center')
+												$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
 											]),
 										_List_fromArray(
 											[
@@ -5848,14 +5848,13 @@ var $author$project$HomePage$view = function (model) {
 												$elm$core$List$length(model.availablePackages),
 												$elm$core$List$length(model.selectedPackages)),
 												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
-											])),
-										A2($elm$html$Html$hr, _List_Nil, _List_Nil)
+											]))
 									])),
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$class('python')
+										$elm$html$Html$Attributes$class('languages')
 									]),
 								_List_fromArray(
 									[
@@ -5863,11 +5862,22 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('fw-bold fs-2 d-flex justify-content-between align-items-center')
+												$elm$html$Html$Attributes$class('fw-bold fs-2')
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('languages.python.enabled'),
+												$elm$html$Html$text('LANGUAGES')
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('python.enabled'),
 												A2(
 												$elm$html$Html$button,
 												_List_fromArray(
@@ -5885,7 +5895,7 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+												$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
 											]),
 										_List_fromArray(
 											[
@@ -5916,14 +5926,13 @@ var $author$project$HomePage$view = function (model) {
 												$elm$core$List$length(model.availablePyPackages),
 												$elm$core$List$length(model.selectedPyPackages)),
 												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
-											])),
-										A2($elm$html$Html$hr, _List_Nil, _List_Nil)
+											]))
 									])),
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$class('postgres')
+										$elm$html$Html$Attributes$class('services')
 									]),
 								_List_fromArray(
 									[
@@ -5931,11 +5940,22 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('fw-bold fs-2 d-flex justify-content-between align-items-center')
+												$elm$html$Html$Attributes$class('fw-bold fs-2')
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('services.postgres.enabled'),
+												$elm$html$Html$text('SERVICES')
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('postgres.enabled'),
 												A2(
 												$elm$html$Html$button,
 												_List_fromArray(
@@ -5953,7 +5973,7 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+												$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
 											]),
 										_List_fromArray(
 											[
@@ -5984,8 +6004,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$core$List$length(model.availablePgPackages),
 												$elm$core$List$length(model.selectedPgPackages)),
 												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
-											])),
-										A2($elm$html$Html$hr, _List_Nil, _List_Nil)
+											]))
 									])),
 								A2(
 								$elm$html$Html$div,
@@ -5995,6 +6014,7 @@ var $author$project$HomePage$view = function (model) {
 									]),
 								_List_fromArray(
 									[
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(

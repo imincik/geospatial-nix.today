@@ -287,7 +287,7 @@ view model =
                     ]
                 , div [ class "packages" ]
                     [ hr [] []
-                    , p [ class "fw-bold fs-2 d-flex justify-content-between align-items-center" ]
+                    , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                         [ text "packages"
                         , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
                         ]
@@ -296,11 +296,12 @@ view model =
                         [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
                         , showMorePackagesButton model.filterLimit
                         ]
-                    , hr [] []
                     ]
-                , div [ class "python" ]
-                    [ p [ class "fw-bold fs-2 d-flex justify-content-between align-items-center" ] [ text "languages.python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text model.pythonEnabled ] ]
-                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                , div [ class "languages" ]
+                    [ p [ class "fw-bold fs-2" ] [ text "LANGUAGES" ]
+                    , hr [] []
+                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text model.pythonEnabled ] ]
+                    , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                         [ text "packages"
                         , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
                         ]
@@ -309,11 +310,12 @@ view model =
                         [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
                         , showMorePackagesButton model.filterLimit
                         ]
-                    , hr [] []
                     ]
-                , div [ class "postgres" ]
-                    [ p [ class "fw-bold fs-2 d-flex justify-content-between align-items-center" ] [ text "services.postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text model.postgresEnabled ] ]
-                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                , div [ class "services" ]
+                    [ p [ class "fw-bold fs-2" ] [ text "SERVICES" ]
+                    , hr [] []
+                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text model.postgresEnabled ] ]
+                    , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                         [ text "packages"
                         , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
                         ]
@@ -322,10 +324,10 @@ view model =
                         [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
                         , showMorePackagesButton model.filterLimit
                         ]
-                    , hr [] []
                     ]
                 , div [ class "shell-hook" ]
-                    [ p [ class "fw-bold fs-3" ] [ text "shell hook" ]
+                    [ hr [] []
+                    , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
                     , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput UpdateShellHook ] []
                     ]
                 ]
