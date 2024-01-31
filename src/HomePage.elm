@@ -137,6 +137,13 @@ docker run --rm -it shell:latest
 
 
 -- MODEL
+
+
+type alias Package =
+    ( String, String )
+
+
+
 -- packages
 
 
@@ -198,18 +205,18 @@ type alias Model =
     { name : String
 
     -- packages
-    , availablePackages : List String
-    , selectedPackages : List String
+    , availablePackages : List Package
+    , selectedPackages : List Package
 
     -- python
     , pythonEnabled : String
-    , availablePyPackages : List String
-    , selectedPyPackages : List String
+    , availablePyPackages : List Package
+    , selectedPyPackages : List Package
 
     -- postgresql
     , postgresEnabled : String
-    , availablePgPackages : List String
-    , selectedPgPackages : List String
+    , availablePgPackages : List Package
+    , selectedPgPackages : List Package
 
     -- filters
     , filterLimit : Int
@@ -386,19 +393,29 @@ view model =
         ]
 
 
-toHtmlListAdd : List String -> List String -> String -> Int -> (String -> Msg) -> Html Msg
+packagesListToNamesList : List Package -> List String
+packagesListToNamesList packages =
+    List.map (\item -> Tuple.first item) packages
+
+
+packagesCountText : Int -> Int -> Html Msg
+packagesCountText packagesCount selectedCount =
+    text ("Total packages: " ++ String.fromInt packagesCount ++ " , selected: " ++ String.fromInt selectedCount)
+
+
+toHtmlListAdd : List Package -> List Package -> String -> Int -> (Package -> Msg) -> Html Msg
 toHtmlListAdd availableItems selectedItems filter filterLimit onClickAction =
     let
         filteredItems =
             -- filter items
-            List.filter (\item -> String.contains filter item) availableItems
+            List.filter (\item -> String.contains filter (Tuple.first item)) availableItems
                 -- show only first x items
                 |> List.take filterLimit
     in
     ul [ class "list-group" ] (List.map (toLiAdd selectedItems onClickAction) filteredItems)
 
 
-toLiAdd : List String -> (String -> Msg) -> String -> Html Msg
+toLiAdd : List Package -> (Package -> Msg) -> Package -> Html Msg
 toLiAdd selectedItems onClickAction item =
     let
         buttonLabel =
@@ -412,12 +429,12 @@ toLiAdd selectedItems onClickAction item =
                 "btn btn-success btn-sm"
     in
     li [ class "list-group-item d-flex justify-content-between align-items-center" ]
-        [ text item, button [ class buttonClass, style "margin" "10px", onClick (onClickAction item), id "packagesList" ] [ text buttonLabel ] ]
-
-
-packagesCountText : Int -> Int -> Html Msg
-packagesCountText packagesCount selectedCount =
-    text ("Total packages: " ++ String.fromInt packagesCount ++ " , selected: " ++ String.fromInt selectedCount)
+        [ p [ class "fs-5" ]
+            [ text (Tuple.first item)
+            , span [ class "text-secondary fs-6" ] [ text ("  v" ++ Tuple.second item) ]
+            ]
+        , button [ class buttonClass, style "margin" "10px", onClick (onClickAction item), id "packagesList" ] [ text buttonLabel ]
+        ]
 
 
 showMorePackagesButton : Int -> Html Msg
@@ -433,11 +450,11 @@ showMorePackagesButton filterLimit =
 
 type Msg
     = UpdateName String
-    | AddPackage String
+    | AddPackage Package
     | EnablePython
-    | AddPyPackage String
+    | AddPyPackage Package
     | EnablePostgres
-    | AddPgPackage String
+    | AddPgPackage Package
     | UpdateShellHook String
     | FilterPackages String
     | FilterPyPackages String
@@ -452,12 +469,22 @@ type Msg
 
 buildConfig : Model -> String
 buildConfig model =
+    let
+        selectedPackages =
+            packagesListToNamesList model.selectedPackages
+
+        selectedPyPackages =
+            packagesListToNamesList model.selectedPyPackages
+
+        selectedPgPackages =
+            packagesListToNamesList model.selectedPgPackages
+    in
     String.replace "<NAME>" model.name configTemplate
-        |> String.replace "<PACKAGES>" (String.join " " model.selectedPackages)
+        |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
         |> String.replace "<PYTHON-ENABLED>" model.pythonEnabled
-        |> String.replace "<PY-PACKAGES>" (String.join " " model.selectedPyPackages)
+        |> String.replace "<PY-PACKAGES>" (String.join " " selectedPyPackages)
         |> String.replace "<POSTGRES-ENABLED>" model.postgresEnabled
-        |> String.replace "<PG-PACKAGES>" (String.join " " model.selectedPgPackages)
+        |> String.replace "<PG-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<SHELL-HOOK>" model.config.enterShell
 
 

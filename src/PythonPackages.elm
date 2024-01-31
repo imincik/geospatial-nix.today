@@ -2,7914 +2,7914 @@ module PythonPackages exposing (packages)
 
 
 packages =
-    [ "pkgs.python3Packages.APScheduler"
-    , "pkgs.python3Packages.BTrees"
-    , "pkgs.python3Packages.Babel"
-    , "pkgs.python3Packages.BlinkStick"
-    , "pkgs.python3Packages.ColanderAlchemy"
-    , "pkgs.python3Packages.CommonMark"
-    , "pkgs.python3Packages.ConfigArgParse"
-    , "pkgs.python3Packages.EasyProcess"
-    , "pkgs.python3Packages.Fabric"
-    , "pkgs.python3Packages.FormEncode"
-    , "pkgs.python3Packages.GeoIP"
-    , "pkgs.python3Packages.GitPython"
-    , "pkgs.python3Packages.HAP-python"
-    , "pkgs.python3Packages.HTSeq"
-    , "pkgs.python3Packages.IMAPClient"
-    , "pkgs.python3Packages.JPype1"
-    , "pkgs.python3Packages.JayDeBeApi"
-    , "pkgs.python3Packages.Kajiki"
-    , "pkgs.python3Packages.Keras"
-    , "pkgs.python3Packages.MDP"
-    , "pkgs.python3Packages.Mako"
-    , "pkgs.python3Packages.Markups"
-    , "pkgs.python3Packages.MechanicalSoup"
-    , "pkgs.python3Packages.Nuitka"
-    , "pkgs.python3Packages.PasteDeploy"
-    , "pkgs.python3Packages.Polygon3"
-    , "pkgs.python3Packages.Pweave"
-    , "pkgs.python3Packages.PyChromecast"
-    , "pkgs.python3Packages.PyGithub"
-    , "pkgs.python3Packages.PyICU"
-    , "pkgs.python3Packages.PyLD"
-    , "pkgs.python3Packages.PyMVGLive"
-    , "pkgs.python3Packages.PyRSS2Gen"
-    , "pkgs.python3Packages.PyStemmer"
-    , "pkgs.python3Packages.PyVirtualDisplay"
-    , "pkgs.python3Packages.Pyro4"
-    , "pkgs.python3Packages.Pyro5"
-    , "pkgs.python3Packages.Quandl"
-    , "pkgs.python3Packages.ROPGadget"
-    , "pkgs.python3Packages.SPARQLWrapper"
-    , "pkgs.python3Packages.Theano"
-    , "pkgs.python3Packages.TheanoWithCuda"
-    , "pkgs.python3Packages.TheanoWithoutCuda"
-    , "pkgs.python3Packages.ViennaRNA"
-    , "pkgs.python3Packages.WSME"
-    , "pkgs.python3Packages.Wand"
-    , "pkgs.python3Packages.WazeRouteCalculator"
-    , "pkgs.python3Packages.XlsxWriter"
-    , "pkgs.python3Packages.Yapsy"
-    , "pkgs.python3Packages.a2wsgi"
-    , "pkgs.python3Packages.aadict"
-    , "pkgs.python3Packages.aafigure"
-    , "pkgs.python3Packages.aardwolf"
-    , "pkgs.python3Packages.abjad"
-    , "pkgs.python3Packages.abodepy"
-    , "pkgs.python3Packages.about-time"
-    , "pkgs.python3Packages.absl-py"
-    , "pkgs.python3Packages.accelerate"
-    , "pkgs.python3Packages.accessible-pygments"
-    , "pkgs.python3Packages.accupy"
-    , "pkgs.python3Packages.accuweather"
-    , "pkgs.python3Packages.acme"
-    , "pkgs.python3Packages.acme-tiny"
-    , "pkgs.python3Packages.acoustics"
-    , "pkgs.python3Packages.acquire"
-    , "pkgs.python3Packages.actdiag"
-    , "pkgs.python3Packages.acunetix"
-    , "pkgs.python3Packages.adafruit-io"
-    , "pkgs.python3Packages.adafruit-platformdetect"
-    , "pkgs.python3Packages.adafruit-pureio"
-    , "pkgs.python3Packages.adal"
-    , "pkgs.python3Packages.adax"
-    , "pkgs.python3Packages.adax-local"
-    , "pkgs.python3Packages.adb-enhanced"
-    , "pkgs.python3Packages.adb-homeassistant"
-    , "pkgs.python3Packages.adb-shell"
-    , "pkgs.python3Packages.adblock"
-    , "pkgs.python3Packages.add-trailing-comma"
-    , "pkgs.python3Packages.addict"
-    , "pkgs.python3Packages.adext"
-    , "pkgs.python3Packages.adguardhome"
-    , "pkgs.python3Packages.adjusttext"
-    , "pkgs.python3Packages.adlfs"
-    , "pkgs.python3Packages.advantage-air"
-    , "pkgs.python3Packages.advocate"
-    , "pkgs.python3Packages.aemet-opendata"
-    , "pkgs.python3Packages.aenum"
-    , "pkgs.python3Packages.aeppl"
-    , "pkgs.python3Packages.aesara"
-    , "pkgs.python3Packages.aesedb"
-    , "pkgs.python3Packages.afdko"
-    , "pkgs.python3Packages.affine"
-    , "pkgs.python3Packages.afsapi"
-    , "pkgs.python3Packages.agate"
-    , "pkgs.python3Packages.agate-dbf"
-    , "pkgs.python3Packages.agate-excel"
-    , "pkgs.python3Packages.agate-sql"
-    , "pkgs.python3Packages.agent-py"
-    , "pkgs.python3Packages.aggdraw"
-    , "pkgs.python3Packages.aigpy"
-    , "pkgs.python3Packages.ailment"
-    , "pkgs.python3Packages.aio-geojson-client"
-    , "pkgs.python3Packages.aio-geojson-generic-client"
-    , "pkgs.python3Packages.aio-geojson-geonetnz-quakes"
-    , "pkgs.python3Packages.aio-geojson-geonetnz-volcano"
-    , "pkgs.python3Packages.aio-geojson-nsw-rfs-incidents"
-    , "pkgs.python3Packages.aio-geojson-usgs-earthquakes"
-    , "pkgs.python3Packages.aio-georss-client"
-    , "pkgs.python3Packages.aio-georss-gdacs"
-    , "pkgs.python3Packages.aio-pika"
-    , "pkgs.python3Packages.aioairq"
-    , "pkgs.python3Packages.aioairzone"
-    , "pkgs.python3Packages.aioairzone-cloud"
-    , "pkgs.python3Packages.aioaladdinconnect"
-    , "pkgs.python3Packages.aioambient"
-    , "pkgs.python3Packages.aioamqp"
-    , "pkgs.python3Packages.aioapns"
-    , "pkgs.python3Packages.aioaseko"
-    , "pkgs.python3Packages.aioasuswrt"
-    , "pkgs.python3Packages.aioazuredevops"
-    , "pkgs.python3Packages.aiobafi6"
-    , "pkgs.python3Packages.aiobiketrax"
-    , "pkgs.python3Packages.aioblescan"
-    , "pkgs.python3Packages.aioboto3"
-    , "pkgs.python3Packages.aiobotocore"
-    , "pkgs.python3Packages.aiobroadlink"
-    , "pkgs.python3Packages.aiocache"
-    , "pkgs.python3Packages.aiocoap"
-    , "pkgs.python3Packages.aiocomelit"
-    , "pkgs.python3Packages.aioconsole"
-    , "pkgs.python3Packages.aiocontextvars"
-    , "pkgs.python3Packages.aiocron"
-    , "pkgs.python3Packages.aiocsv"
-    , "pkgs.python3Packages.aiocurrencylayer"
-    , "pkgs.python3Packages.aiodiscover"
-    , "pkgs.python3Packages.aiodns"
-    , "pkgs.python3Packages.aiodocker"
-    , "pkgs.python3Packages.aioeafm"
-    , "pkgs.python3Packages.aioeagle"
-    , "pkgs.python3Packages.aioecowitt"
-    , "pkgs.python3Packages.aioelectricitymaps"
-    , "pkgs.python3Packages.aioemonitor"
-    , "pkgs.python3Packages.aioesphomeapi"
-    , "pkgs.python3Packages.aioextensions"
-    , "pkgs.python3Packages.aiofile"
-    , "pkgs.python3Packages.aiofiles"
-    , "pkgs.python3Packages.aioflo"
-    , "pkgs.python3Packages.aioftp"
-    , "pkgs.python3Packages.aiogithubapi"
-    , "pkgs.python3Packages.aiogram"
-    , "pkgs.python3Packages.aioguardian"
-    , "pkgs.python3Packages.aioharmony"
-    , "pkgs.python3Packages.aiohomekit"
-    , "pkgs.python3Packages.aiohttp"
-    , "pkgs.python3Packages.aiohttp-apispec"
-    , "pkgs.python3Packages.aiohttp-basicauth"
-    , "pkgs.python3Packages.aiohttp-cors"
-    , "pkgs.python3Packages.aiohttp-jinja2"
-    , "pkgs.python3Packages.aiohttp-oauthlib"
-    , "pkgs.python3Packages.aiohttp-openmetrics"
-    , "pkgs.python3Packages.aiohttp-remotes"
-    , "pkgs.python3Packages.aiohttp-retry"
-    , "pkgs.python3Packages.aiohttp-socks"
-    , "pkgs.python3Packages.aiohttp-swagger"
-    , "pkgs.python3Packages.aiohttp-wsgi"
-    , "pkgs.python3Packages.aiohue"
-    , "pkgs.python3Packages.aiohwenergy"
-    , "pkgs.python3Packages.aioimaplib"
-    , "pkgs.python3Packages.aioinflux"
-    , "pkgs.python3Packages.aioitertools"
-    , "pkgs.python3Packages.aiojobs"
-    , "pkgs.python3Packages.aiokafka"
-    , "pkgs.python3Packages.aiokef"
-    , "pkgs.python3Packages.aiolifx"
-    , "pkgs.python3Packages.aiolifx-connection"
-    , "pkgs.python3Packages.aiolifx-effects"
-    , "pkgs.python3Packages.aiolifx-themes"
-    , "pkgs.python3Packages.aiolimiter"
-    , "pkgs.python3Packages.aiolip"
-    , "pkgs.python3Packages.aiolivisi"
-    , "pkgs.python3Packages.aiolookin"
-    , "pkgs.python3Packages.aiolyric"
-    , "pkgs.python3Packages.aiomisc"
-    , "pkgs.python3Packages.aiomisc-pytest"
-    , "pkgs.python3Packages.aiomodernforms"
-    , "pkgs.python3Packages.aiomqtt"
-    , "pkgs.python3Packages.aiomultiprocess"
-    , "pkgs.python3Packages.aiomusiccast"
-    , "pkgs.python3Packages.aiomysensors"
-    , "pkgs.python3Packages.aiomysql"
-    , "pkgs.python3Packages.aionanoleaf"
-    , "pkgs.python3Packages.aionotion"
-    , "pkgs.python3Packages.aiooncue"
-    , "pkgs.python3Packages.aioopenexchangerates"
-    , "pkgs.python3Packages.aioopenssl"
-    , "pkgs.python3Packages.aiooss2"
-    , "pkgs.python3Packages.aiopegelonline"
-    , "pkgs.python3Packages.aiopg"
-    , "pkgs.python3Packages.aioprocessing"
-    , "pkgs.python3Packages.aioprometheus"
-    , "pkgs.python3Packages.aiopulse"
-    , "pkgs.python3Packages.aiopurpleair"
-    , "pkgs.python3Packages.aiopvapi"
-    , "pkgs.python3Packages.aiopvpc"
-    , "pkgs.python3Packages.aiopyarr"
-    , "pkgs.python3Packages.aiopylgtv"
-    , "pkgs.python3Packages.aioqsw"
-    , "pkgs.python3Packages.aioquic"
-    , "pkgs.python3Packages.aioquic-mitmproxy"
-    , "pkgs.python3Packages.aiorecollect"
-    , "pkgs.python3Packages.aioredis"
-    , "pkgs.python3Packages.aioresponses"
-    , "pkgs.python3Packages.aioridwell"
-    , "pkgs.python3Packages.aiormq"
-    , "pkgs.python3Packages.aiorpcx"
-    , "pkgs.python3Packages.aiortm"
-    , "pkgs.python3Packages.aioruckus"
-    , "pkgs.python3Packages.aiorun"
-    , "pkgs.python3Packages.aioruuvigateway"
-    , "pkgs.python3Packages.aiorwlock"
-    , "pkgs.python3Packages.aiosasl"
-    , "pkgs.python3Packages.aiosenz"
-    , "pkgs.python3Packages.aioserial"
-    , "pkgs.python3Packages.aioshelly"
-    , "pkgs.python3Packages.aioshutil"
-    , "pkgs.python3Packages.aiosignal"
-    , "pkgs.python3Packages.aioskybell"
-    , "pkgs.python3Packages.aioslimproto"
-    , "pkgs.python3Packages.aiosmb"
-    , "pkgs.python3Packages.aiosmtpd"
-    , "pkgs.python3Packages.aiosmtplib"
-    , "pkgs.python3Packages.aiosomecomfort"
-    , "pkgs.python3Packages.aiosql"
-    , "pkgs.python3Packages.aiosqlite"
-    , "pkgs.python3Packages.aiosteamist"
-    , "pkgs.python3Packages.aiostream"
-    , "pkgs.python3Packages.aioswitcher"
-    , "pkgs.python3Packages.aiosyncthing"
-    , "pkgs.python3Packages.aiotractive"
-    , "pkgs.python3Packages.aiounifi"
-    , "pkgs.python3Packages.aiounittest"
-    , "pkgs.python3Packages.aiovlc"
-    , "pkgs.python3Packages.aiovodafone"
-    , "pkgs.python3Packages.aiowaqi"
-    , "pkgs.python3Packages.aiowatttime"
-    , "pkgs.python3Packages.aiowebostv"
-    , "pkgs.python3Packages.aioweenect"
-    , "pkgs.python3Packages.aiowinreg"
-    , "pkgs.python3Packages.aiowithings"
-    , "pkgs.python3Packages.aioxmpp"
-    , "pkgs.python3Packages.aioymaps"
-    , "pkgs.python3Packages.aiozeroconf"
-    , "pkgs.python3Packages.airly"
-    , "pkgs.python3Packages.airthings-ble"
-    , "pkgs.python3Packages.airthings-cloud"
-    , "pkgs.python3Packages.airtouch4pyapi"
-    , "pkgs.python3Packages.ajpy"
-    , "pkgs.python3Packages.ajsonrpc"
-    , "pkgs.python3Packages.alabaster"
-    , "pkgs.python3Packages.aladdin-connect"
-    , "pkgs.python3Packages.alarmdecoder"
-    , "pkgs.python3Packages.albumentations"
-    , "pkgs.python3Packages.ale-py"
-    , "pkgs.python3Packages.alectryon"
-    , "pkgs.python3Packages.alembic"
-    , "pkgs.python3Packages.alexapy"
-    , "pkgs.python3Packages.algebraic-data-types"
-    , "pkgs.python3Packages.alive-progress"
-    , "pkgs.python3Packages.aliyun-python-sdk-cdn"
-    , "pkgs.python3Packages.aliyun-python-sdk-config"
-    , "pkgs.python3Packages.aliyun-python-sdk-core"
-    , "pkgs.python3Packages.aliyun-python-sdk-dbfs"
-    , "pkgs.python3Packages.aliyun-python-sdk-iot"
-    , "pkgs.python3Packages.aliyun-python-sdk-kms"
-    , "pkgs.python3Packages.aliyun-python-sdk-sts"
-    , "pkgs.python3Packages.allpairspy"
-    , "pkgs.python3Packages.allure-behave"
-    , "pkgs.python3Packages.allure-pytest"
-    , "pkgs.python3Packages.allure-python-commons"
-    , "pkgs.python3Packages.allure-python-commons-test"
-    , "pkgs.python3Packages.alpha-vantage"
-    , "pkgs.python3Packages.altair"
-    , "pkgs.python3Packages.altgraph"
-    , "pkgs.python3Packages.amaranth"
-    , "pkgs.python3Packages.amaranth-boards"
-    , "pkgs.python3Packages.amaranth-soc"
-    , "pkgs.python3Packages.amarna"
-    , "pkgs.python3Packages.amazon-ion"
-    , "pkgs.python3Packages.amazon-kclpy"
-    , "pkgs.python3Packages.amazon_kclpy"
-    , "pkgs.python3Packages.ambee"
-    , "pkgs.python3Packages.amberelectric"
-    , "pkgs.python3Packages.ambiclimate"
-    , "pkgs.python3Packages.amcrest"
-    , "pkgs.python3Packages.amiibo-py"
-    , "pkgs.python3Packages.amply"
-    , "pkgs.python3Packages.amqp"
-    , "pkgs.python3Packages.amqplib"
-    , "pkgs.python3Packages.amqtt"
-    , "pkgs.python3Packages.ancp-bids"
-    , "pkgs.python3Packages.androguard"
-    , "pkgs.python3Packages.android-backup"
-    , "pkgs.python3Packages.androidtv"
-    , "pkgs.python3Packages.androidtvremote2"
-    , "pkgs.python3Packages.anel-pwrctrl-homeassistant"
-    , "pkgs.python3Packages.angr"
-    , "pkgs.python3Packages.angrcli"
-    , "pkgs.python3Packages.angrop"
-    , "pkgs.python3Packages.aniso8601"
-    , "pkgs.python3Packages.annexremote"
-    , "pkgs.python3Packages.annotated-types"
-    , "pkgs.python3Packages.annoy"
-    , "pkgs.python3Packages.anonip"
-    , "pkgs.python3Packages.ansi"
-    , "pkgs.python3Packages.ansi2html"
-    , "pkgs.python3Packages.ansi2image"
-    , "pkgs.python3Packages.ansible"
-    , "pkgs.python3Packages.ansible-compat"
-    , "pkgs.python3Packages.ansible-core"
-    , "pkgs.python3Packages.ansible-kernel"
-    , "pkgs.python3Packages.ansible-pylibssh"
-    , "pkgs.python3Packages.ansible-runner"
-    , "pkgs.python3Packages.ansible-vault-rw"
-    , "pkgs.python3Packages.ansicolor"
-    , "pkgs.python3Packages.ansicolors"
-    , "pkgs.python3Packages.ansiconv"
-    , "pkgs.python3Packages.ansimarkup"
-    , "pkgs.python3Packages.ansiwrap"
-    , "pkgs.python3Packages.anthemav"
-    , "pkgs.python3Packages.anthropic"
-    , "pkgs.python3Packages.antlr4-python3-runtime"
-    , "pkgs.python3Packages.anyascii"
-    , "pkgs.python3Packages.anybadge"
-    , "pkgs.python3Packages.anyconfig"
-    , "pkgs.python3Packages.anyio"
-    , "pkgs.python3Packages.anyqt"
-    , "pkgs.python3Packages.anytree"
-    , "pkgs.python3Packages.anywidget"
-    , "pkgs.python3Packages.aocd"
-    , "pkgs.python3Packages.apache-beam"
-    , "pkgs.python3Packages.apcaccess"
-    , "pkgs.python3Packages.apipkg"
-    , "pkgs.python3Packages.apischema"
-    , "pkgs.python3Packages.apispec"
-    , "pkgs.python3Packages.apispec-webframeworks"
-    , "pkgs.python3Packages.apkit"
-    , "pkgs.python3Packages.aplpy"
-    , "pkgs.python3Packages.app-model"
-    , "pkgs.python3Packages.appdirs"
-    , "pkgs.python3Packages.apple-weatherkit"
-    , "pkgs.python3Packages.applicationinsights"
-    , "pkgs.python3Packages.appnope"
-    , "pkgs.python3Packages.apprise"
-    , "pkgs.python3Packages.approval-utilities"
-    , "pkgs.python3Packages.approvaltests"
-    , "pkgs.python3Packages.appthreat-vulnerability-db"
-    , "pkgs.python3Packages.apptools"
-    , "pkgs.python3Packages.apricot-select"
-    , "pkgs.python3Packages.aprslib"
-    , "pkgs.python3Packages.apscheduler"
-    , "pkgs.python3Packages.apsw"
-    , "pkgs.python3Packages.apycula"
-    , "pkgs.python3Packages.aqipy-atmotech"
-    , "pkgs.python3Packages.aqualogic"
-    , "pkgs.python3Packages.arabic-reshaper"
-    , "pkgs.python3Packages.aranet4"
-    , "pkgs.python3Packages.arc4"
-    , "pkgs.python3Packages.arcam-fmj"
-    , "pkgs.python3Packages.archinfo"
-    , "pkgs.python3Packages.archspec"
-    , "pkgs.python3Packages.area"
-    , "pkgs.python3Packages.arelle"
-    , "pkgs.python3Packages.arelle-headless"
-    , "pkgs.python3Packages.aresponses"
-    , "pkgs.python3Packages.argcomplete"
-    , "pkgs.python3Packages.argh"
-    , "pkgs.python3Packages.argilla"
-    , "pkgs.python3Packages.argon2-cffi"
-    , "pkgs.python3Packages.argon2-cffi-bindings"
-    , "pkgs.python3Packages.argon2_cffi"
-    , "pkgs.python3Packages.argos-translate-files"
-    , "pkgs.python3Packages.argostranslate"
-    , "pkgs.python3Packages.argparse-addons"
-    , "pkgs.python3Packages.argparse-dataclass"
-    , "pkgs.python3Packages.args"
-    , "pkgs.python3Packages.aria2p"
-    , "pkgs.python3Packages.ariadne"
-    , "pkgs.python3Packages.arnparse"
-    , "pkgs.python3Packages.arpeggio"
-    , "pkgs.python3Packages.arpy"
-    , "pkgs.python3Packages.array-record"
-    , "pkgs.python3Packages.arrayqueues"
-    , "pkgs.python3Packages.arris-tg2492lg"
-    , "pkgs.python3Packages.arrow"
-    , "pkgs.python3Packages.arsenic"
-    , "pkgs.python3Packages.art"
-    , "pkgs.python3Packages.arviz"
-    , "pkgs.python3Packages.arxiv2bib"
-    , "pkgs.python3Packages.asana"
-    , "pkgs.python3Packages.ascii-magic"
-    , "pkgs.python3Packages.asciimatics"
-    , "pkgs.python3Packages.asciitree"
-    , "pkgs.python3Packages.asdf"
-    , "pkgs.python3Packages.asdf-standard"
-    , "pkgs.python3Packages.asdf-transform-schemas"
-    , "pkgs.python3Packages.ase"
-    , "pkgs.python3Packages.asf-search"
-    , "pkgs.python3Packages.asgi-csrf"
-    , "pkgs.python3Packages.asgi-logger"
-    , "pkgs.python3Packages.asgineer"
-    , "pkgs.python3Packages.asgiref"
-    , "pkgs.python3Packages.asks"
-    , "pkgs.python3Packages.asmog"
-    , "pkgs.python3Packages.asn1"
-    , "pkgs.python3Packages.asn1ate"
-    , "pkgs.python3Packages.asn1crypto"
-    , "pkgs.python3Packages.asn1tools"
-    , "pkgs.python3Packages.aspectlib"
-    , "pkgs.python3Packages.aspell-python"
-    , "pkgs.python3Packages.aspy-refactor-imports"
-    , "pkgs.python3Packages.aspy-yaml"
-    , "pkgs.python3Packages.assay"
-    , "pkgs.python3Packages.assertpy"
-    , "pkgs.python3Packages.asterisk-mbox"
-    , "pkgs.python3Packages.asteval"
-    , "pkgs.python3Packages.astor"
-    , "pkgs.python3Packages.astral"
-    , "pkgs.python3Packages.astroid"
-    , "pkgs.python3Packages.astropy"
-    , "pkgs.python3Packages.astropy-extension-helpers"
-    , "pkgs.python3Packages.astropy-healpix"
-    , "pkgs.python3Packages.astropy-helpers"
-    , "pkgs.python3Packages.astroquery"
-    , "pkgs.python3Packages.asttokens"
-    , "pkgs.python3Packages.astunparse"
-    , "pkgs.python3Packages.asyauth"
-    , "pkgs.python3Packages.async-dns"
-    , "pkgs.python3Packages.async-generator"
-    , "pkgs.python3Packages.async-interrupt"
-    , "pkgs.python3Packages.async-lru"
-    , "pkgs.python3Packages.async-modbus"
-    , "pkgs.python3Packages.async-stagger"
-    , "pkgs.python3Packages.async-timeout"
-    , "pkgs.python3Packages.async-tkinter-loop"
-    , "pkgs.python3Packages.async-upnp-client"
-    , "pkgs.python3Packages.async_generator"
-    , "pkgs.python3Packages.async_stagger"
-    , "pkgs.python3Packages.asyncclick"
-    , "pkgs.python3Packages.asynccmd"
-    , "pkgs.python3Packages.asyncinotify"
-    , "pkgs.python3Packages.asyncio-dgram"
-    , "pkgs.python3Packages.asyncio-mqtt"
-    , "pkgs.python3Packages.asyncio-nats-client"
-    , "pkgs.python3Packages.asyncio-rlock"
-    , "pkgs.python3Packages.asyncio-throttle"
-    , "pkgs.python3Packages.asyncmy"
-    , "pkgs.python3Packages.asyncpg"
-    , "pkgs.python3Packages.asyncserial"
-    , "pkgs.python3Packages.asyncsleepiq"
-    , "pkgs.python3Packages.asyncssh"
-    , "pkgs.python3Packages.asyncstdlib"
-    , "pkgs.python3Packages.asynctest"
-    , "pkgs.python3Packages.asyncua"
-    , "pkgs.python3Packages.asyncwhois"
-    , "pkgs.python3Packages.asysocks"
-    , "pkgs.python3Packages.atc-ble"
-    , "pkgs.python3Packages.atenpdu"
-    , "pkgs.python3Packages.atlassian-python-api"
-    , "pkgs.python3Packages.atom"
-    , "pkgs.python3Packages.atomiclong"
-    , "pkgs.python3Packages.atomicwrites"
-    , "pkgs.python3Packages.atomicwrites-homeassistant"
-    , "pkgs.python3Packages.atomman"
-    , "pkgs.python3Packages.atpublic"
-    , "pkgs.python3Packages.atsim-potentials"
-    , "pkgs.python3Packages.atsim_potentials"
-    , "pkgs.python3Packages.attrdict"
-    , "pkgs.python3Packages.attrs"
-    , "pkgs.python3Packages.aubio"
-    , "pkgs.python3Packages.audible"
-    , "pkgs.python3Packages.audio-metadata"
-    , "pkgs.python3Packages.audioread"
-    , "pkgs.python3Packages.audiotools"
-    , "pkgs.python3Packages.auditok"
-    , "pkgs.python3Packages.augeas"
-    , "pkgs.python3Packages.augmax"
-    , "pkgs.python3Packages.auroranoaa"
-    , "pkgs.python3Packages.aurorapy"
-    , "pkgs.python3Packages.autarco"
-    , "pkgs.python3Packages.auth0-python"
-    , "pkgs.python3Packages.authcaptureproxy"
-    , "pkgs.python3Packages.authheaders"
-    , "pkgs.python3Packages.authlib"
-    , "pkgs.python3Packages.authres"
-    , "pkgs.python3Packages.autobahn"
-    , "pkgs.python3Packages.autocommand"
-    , "pkgs.python3Packages.autofaiss"
-    , "pkgs.python3Packages.autoflake"
-    , "pkgs.python3Packages.autograd"
-    , "pkgs.python3Packages.autograd-gamma"
-    , "pkgs.python3Packages.autoit-ripper"
-    , "pkgs.python3Packages.autologging"
-    , "pkgs.python3Packages.automat"
-    , "pkgs.python3Packages.automate-home"
-    , "pkgs.python3Packages.automx2"
-    , "pkgs.python3Packages.autopage"
-    , "pkgs.python3Packages.autopep8"
-    , "pkgs.python3Packages.autoslot"
-    , "pkgs.python3Packages.av"
-    , "pkgs.python3Packages.avahi"
-    , "pkgs.python3Packages.avea"
-    , "pkgs.python3Packages.avion"
-    , "pkgs.python3Packages.avro"
-    , "pkgs.python3Packages.avro-python3"
-    , "pkgs.python3Packages.avro3k"
-    , "pkgs.python3Packages.aw-client"
-    , "pkgs.python3Packages.aw-core"
-    , "pkgs.python3Packages.awacs"
-    , "pkgs.python3Packages.awesome-slugify"
-    , "pkgs.python3Packages.awesomeversion"
-    , "pkgs.python3Packages.awkward"
-    , "pkgs.python3Packages.awkward-cpp"
-    , "pkgs.python3Packages.aws-adfs"
-    , "pkgs.python3Packages.aws-encryption-sdk"
-    , "pkgs.python3Packages.aws-lambda-builders"
-    , "pkgs.python3Packages.aws-sam-translator"
-    , "pkgs.python3Packages.aws-secretsmanager-caching"
-    , "pkgs.python3Packages.aws-xray-sdk"
-    , "pkgs.python3Packages.awscrt"
-    , "pkgs.python3Packages.awsiotpythonsdk"
-    , "pkgs.python3Packages.awslambdaric"
-    , "pkgs.python3Packages.awswrangler"
-    , "pkgs.python3Packages.ax"
-    , "pkgs.python3Packages.axis"
-    , "pkgs.python3Packages.azure-appconfiguration"
-    , "pkgs.python3Packages.azure-applicationinsights"
-    , "pkgs.python3Packages.azure-batch"
-    , "pkgs.python3Packages.azure-common"
-    , "pkgs.python3Packages.azure-containerregistry"
-    , "pkgs.python3Packages.azure-core"
-    , "pkgs.python3Packages.azure-cosmos"
-    , "pkgs.python3Packages.azure-cosmosdb-nspkg"
-    , "pkgs.python3Packages.azure-cosmosdb-table"
-    , "pkgs.python3Packages.azure-data-tables"
-    , "pkgs.python3Packages.azure-datalake-store"
-    , "pkgs.python3Packages.azure-eventgrid"
-    , "pkgs.python3Packages.azure-eventhub"
-    , "pkgs.python3Packages.azure-functions-devops-build"
-    , "pkgs.python3Packages.azure-graphrbac"
-    , "pkgs.python3Packages.azure-identity"
-    , "pkgs.python3Packages.azure-keyvault"
-    , "pkgs.python3Packages.azure-keyvault-administration"
-    , "pkgs.python3Packages.azure-keyvault-certificates"
-    , "pkgs.python3Packages.azure-keyvault-keys"
-    , "pkgs.python3Packages.azure-keyvault-nspkg"
-    , "pkgs.python3Packages.azure-keyvault-secrets"
-    , "pkgs.python3Packages.azure-loganalytics"
-    , "pkgs.python3Packages.azure-mgmt-advisor"
-    , "pkgs.python3Packages.azure-mgmt-apimanagement"
-    , "pkgs.python3Packages.azure-mgmt-appconfiguration"
-    , "pkgs.python3Packages.azure-mgmt-appcontainers"
-    , "pkgs.python3Packages.azure-mgmt-applicationinsights"
-    , "pkgs.python3Packages.azure-mgmt-authorization"
-    , "pkgs.python3Packages.azure-mgmt-batch"
-    , "pkgs.python3Packages.azure-mgmt-batchai"
-    , "pkgs.python3Packages.azure-mgmt-billing"
-    , "pkgs.python3Packages.azure-mgmt-botservice"
-    , "pkgs.python3Packages.azure-mgmt-cdn"
-    , "pkgs.python3Packages.azure-mgmt-cognitiveservices"
-    , "pkgs.python3Packages.azure-mgmt-commerce"
-    , "pkgs.python3Packages.azure-mgmt-common"
-    , "pkgs.python3Packages.azure-mgmt-compute"
-    , "pkgs.python3Packages.azure-mgmt-consumption"
-    , "pkgs.python3Packages.azure-mgmt-containerinstance"
-    , "pkgs.python3Packages.azure-mgmt-containerregistry"
-    , "pkgs.python3Packages.azure-mgmt-containerservice"
-    , "pkgs.python3Packages.azure-mgmt-core"
-    , "pkgs.python3Packages.azure-mgmt-cosmosdb"
-    , "pkgs.python3Packages.azure-mgmt-databoxedge"
-    , "pkgs.python3Packages.azure-mgmt-datafactory"
-    , "pkgs.python3Packages.azure-mgmt-datalake-analytics"
-    , "pkgs.python3Packages.azure-mgmt-datalake-nspkg"
-    , "pkgs.python3Packages.azure-mgmt-datalake-store"
-    , "pkgs.python3Packages.azure-mgmt-datamigration"
-    , "pkgs.python3Packages.azure-mgmt-deploymentmanager"
-    , "pkgs.python3Packages.azure-mgmt-devspaces"
-    , "pkgs.python3Packages.azure-mgmt-devtestlabs"
-    , "pkgs.python3Packages.azure-mgmt-dns"
-    , "pkgs.python3Packages.azure-mgmt-eventgrid"
-    , "pkgs.python3Packages.azure-mgmt-eventhub"
-    , "pkgs.python3Packages.azure-mgmt-extendedlocation"
-    , "pkgs.python3Packages.azure-mgmt-frontdoor"
-    , "pkgs.python3Packages.azure-mgmt-hanaonazure"
-    , "pkgs.python3Packages.azure-mgmt-hdinsight"
-    , "pkgs.python3Packages.azure-mgmt-imagebuilder"
-    , "pkgs.python3Packages.azure-mgmt-iotcentral"
-    , "pkgs.python3Packages.azure-mgmt-iothub"
-    , "pkgs.python3Packages.azure-mgmt-iothubprovisioningservices"
-    , "pkgs.python3Packages.azure-mgmt-keyvault"
-    , "pkgs.python3Packages.azure-mgmt-kusto"
-    , "pkgs.python3Packages.azure-mgmt-loganalytics"
-    , "pkgs.python3Packages.azure-mgmt-logic"
-    , "pkgs.python3Packages.azure-mgmt-machinelearningcompute"
-    , "pkgs.python3Packages.azure-mgmt-managedservices"
-    , "pkgs.python3Packages.azure-mgmt-managementgroups"
-    , "pkgs.python3Packages.azure-mgmt-managementpartner"
-    , "pkgs.python3Packages.azure-mgmt-maps"
-    , "pkgs.python3Packages.azure-mgmt-marketplaceordering"
-    , "pkgs.python3Packages.azure-mgmt-media"
-    , "pkgs.python3Packages.azure-mgmt-monitor"
-    , "pkgs.python3Packages.azure-mgmt-msi"
-    , "pkgs.python3Packages.azure-mgmt-netapp"
-    , "pkgs.python3Packages.azure-mgmt-network"
-    , "pkgs.python3Packages.azure-mgmt-notificationhubs"
-    , "pkgs.python3Packages.azure-mgmt-nspkg"
-    , "pkgs.python3Packages.azure-mgmt-policyinsights"
-    , "pkgs.python3Packages.azure-mgmt-powerbiembedded"
-    , "pkgs.python3Packages.azure-mgmt-privatedns"
-    , "pkgs.python3Packages.azure-mgmt-rdbms"
-    , "pkgs.python3Packages.azure-mgmt-recoveryservices"
-    , "pkgs.python3Packages.azure-mgmt-recoveryservicesbackup"
-    , "pkgs.python3Packages.azure-mgmt-redhatopenshift"
-    , "pkgs.python3Packages.azure-mgmt-redis"
-    , "pkgs.python3Packages.azure-mgmt-relay"
-    , "pkgs.python3Packages.azure-mgmt-reservations"
-    , "pkgs.python3Packages.azure-mgmt-resource"
-    , "pkgs.python3Packages.azure-mgmt-scheduler"
-    , "pkgs.python3Packages.azure-mgmt-search"
-    , "pkgs.python3Packages.azure-mgmt-security"
-    , "pkgs.python3Packages.azure-mgmt-servicebus"
-    , "pkgs.python3Packages.azure-mgmt-servicefabric"
-    , "pkgs.python3Packages.azure-mgmt-servicefabricmanagedclusters"
-    , "pkgs.python3Packages.azure-mgmt-servicelinker"
-    , "pkgs.python3Packages.azure-mgmt-signalr"
-    , "pkgs.python3Packages.azure-mgmt-sql"
-    , "pkgs.python3Packages.azure-mgmt-sqlvirtualmachine"
-    , "pkgs.python3Packages.azure-mgmt-storage"
-    , "pkgs.python3Packages.azure-mgmt-subscription"
-    , "pkgs.python3Packages.azure-mgmt-synapse"
-    , "pkgs.python3Packages.azure-mgmt-trafficmanager"
-    , "pkgs.python3Packages.azure-mgmt-web"
-    , "pkgs.python3Packages.azure-monitor-ingestion"
-    , "pkgs.python3Packages.azure-multiapi-storage"
-    , "pkgs.python3Packages.azure-nspkg"
-    , "pkgs.python3Packages.azure-servicebus"
-    , "pkgs.python3Packages.azure-servicefabric"
-    , "pkgs.python3Packages.azure-servicemanagement-legacy"
-    , "pkgs.python3Packages.azure-storage-blob"
-    , "pkgs.python3Packages.azure-storage-common"
-    , "pkgs.python3Packages.azure-storage-file"
-    , "pkgs.python3Packages.azure-storage-file-share"
-    , "pkgs.python3Packages.azure-storage-nspkg"
-    , "pkgs.python3Packages.azure-storage-queue"
-    , "pkgs.python3Packages.azure-synapse-accesscontrol"
-    , "pkgs.python3Packages.azure-synapse-artifacts"
-    , "pkgs.python3Packages.azure-synapse-managedprivateendpoints"
-    , "pkgs.python3Packages.azure-synapse-spark"
-    , "pkgs.python3Packages.b2sdk"
-    , "pkgs.python3Packages.babel"
-    , "pkgs.python3Packages.babelfish"
-    , "pkgs.python3Packages.babelgladeextractor"
-    , "pkgs.python3Packages.backcall"
-    , "pkgs.python3Packages.backoff"
-    , "pkgs.python3Packages.backports-cached-property"
-    , "pkgs.python3Packages.backports-datetime-fromisoformat"
-    , "pkgs.python3Packages.backports-entry-points-selectable"
-    , "pkgs.python3Packages.backports-shutil-which"
-    , "pkgs.python3Packages.backports-strenum"
-    , "pkgs.python3Packages.backports-zoneinfo"
-    , "pkgs.python3Packages.bacpypes"
-    , "pkgs.python3Packages.bagit"
-    , "pkgs.python3Packages.bambi"
-    , "pkgs.python3Packages.banal"
-    , "pkgs.python3Packages.bandcamp-api"
-    , "pkgs.python3Packages.bandit"
-    , "pkgs.python3Packages.bangla"
-    , "pkgs.python3Packages.bap"
-    , "pkgs.python3Packages.barectf"
-    , "pkgs.python3Packages.baron"
-    , "pkgs.python3Packages.base36"
-    , "pkgs.python3Packages.base58"
-    , "pkgs.python3Packages.base58check"
-    , "pkgs.python3Packages.base64io"
-    , "pkgs.python3Packages.baseline"
-    , "pkgs.python3Packages.baselines"
-    , "pkgs.python3Packages.basemap"
-    , "pkgs.python3Packages.basemap-data"
-    , "pkgs.python3Packages.bash-kernel"
-    , "pkgs.python3Packages.bash_kernel"
-    , "pkgs.python3Packages.bashlex"
-    , "pkgs.python3Packages.basiciw"
-    , "pkgs.python3Packages.batchgenerators"
-    , "pkgs.python3Packages.batchspawner"
-    , "pkgs.python3Packages.batinfo"
-    , "pkgs.python3Packages.baycomp"
-    , "pkgs.python3Packages.bayesian-optimization"
-    , "pkgs.python3Packages.bayespy"
-    , "pkgs.python3Packages.bbox"
-    , "pkgs.python3Packages.bc-detect-secrets"
-    , "pkgs.python3Packages.bc-jsonpath-ng"
-    , "pkgs.python3Packages.bc-python-hcl2"
-    , "pkgs.python3Packages.bcdoc"
-    , "pkgs.python3Packages.bcf"
-    , "pkgs.python3Packages.bcg"
-    , "pkgs.python3Packages.bch"
-    , "pkgs.python3Packages.bcrypt"
-    , "pkgs.python3Packages.beaker"
-    , "pkgs.python3Packages.beancount"
-    , "pkgs.python3Packages.beancount-black"
-    , "pkgs.python3Packages.beancount-docverif"
-    , "pkgs.python3Packages.beancount-parser"
-    , "pkgs.python3Packages.beancount_docverif"
-    , "pkgs.python3Packages.beanstalkc"
-    , "pkgs.python3Packages.beartype"
-    , "pkgs.python3Packages.beautiful-date"
-    , "pkgs.python3Packages.beautifulsoup4"
-    , "pkgs.python3Packages.beautifultable"
-    , "pkgs.python3Packages.beautysh"
-    , "pkgs.python3Packages.bech32"
-    , "pkgs.python3Packages.before-after"
-    , "pkgs.python3Packages.behave"
-    , "pkgs.python3Packages.bellows"
-    , "pkgs.python3Packages.bencode-py"
-    , "pkgs.python3Packages.bencoder"
-    , "pkgs.python3Packages.beniget"
-    , "pkgs.python3Packages.bentoml"
-    , "pkgs.python3Packages.bespon"
-    , "pkgs.python3Packages.betacode"
-    , "pkgs.python3Packages.betamax"
-    , "pkgs.python3Packages.betamax-matchers"
-    , "pkgs.python3Packages.betamax-serializers"
-    , "pkgs.python3Packages.betterproto"
-    , "pkgs.python3Packages.bibtexparser"
-    , "pkgs.python3Packages.bidict"
-    , "pkgs.python3Packages.bids-validator"
-    , "pkgs.python3Packages.biliass"
-    , "pkgs.python3Packages.billiard"
-    , "pkgs.python3Packages.bimmer-connected"
-    , "pkgs.python3Packages.binary"
-    , "pkgs.python3Packages.binaryornot"
-    , "pkgs.python3Packages.bincopy"
-    , "pkgs.python3Packages.binho-host-adapter"
-    , "pkgs.python3Packages.binwalk"
-    , "pkgs.python3Packages.binwalk-full"
-    , "pkgs.python3Packages.biopandas"
-    , "pkgs.python3Packages.biopython"
-    , "pkgs.python3Packages.bip-utils"
-    , "pkgs.python3Packages.bip32"
-    , "pkgs.python3Packages.bip_utils"
-    , "pkgs.python3Packages.biplist"
-    , "pkgs.python3Packages.bitarray"
-    , "pkgs.python3Packages.bitbox02"
-    , "pkgs.python3Packages.bitcoin-utils-fork-minimal"
-    , "pkgs.python3Packages.bitcoinlib"
-    , "pkgs.python3Packages.bitcoinrpc"
-    , "pkgs.python3Packages.bite-parser"
-    , "pkgs.python3Packages.bitlist"
-    , "pkgs.python3Packages.bitmath"
-    , "pkgs.python3Packages.bitsandbytes"
-    , "pkgs.python3Packages.bitstring"
-    , "pkgs.python3Packages.bitstruct"
-    , "pkgs.python3Packages.bitvavo-aio"
-    , "pkgs.python3Packages.bizkaibus"
-    , "pkgs.python3Packages.bjoern"
-    , "pkgs.python3Packages.bkcharts"
-    , "pkgs.python3Packages.black"
-    , "pkgs.python3Packages.black-macchiato"
-    , "pkgs.python3Packages.blackjax"
-    , "pkgs.python3Packages.bleach"
-    , "pkgs.python3Packages.bleach-allowlist"
-    , "pkgs.python3Packages.bleak"
-    , "pkgs.python3Packages.bleak-retry-connector"
-    , "pkgs.python3Packages.blebox-uniapi"
-    , "pkgs.python3Packages.bless"
-    , "pkgs.python3Packages.blessed"
-    , "pkgs.python3Packages.blessings"
-    , "pkgs.python3Packages.blinker"
-    , "pkgs.python3Packages.blinkpy"
-    , "pkgs.python3Packages.blinkstick"
-    , "pkgs.python3Packages.blis"
-    , "pkgs.python3Packages.blobfile"
-    , "pkgs.python3Packages.block-io"
-    , "pkgs.python3Packages.blockchain"
-    , "pkgs.python3Packages.blockdiag"
-    , "pkgs.python3Packages.blockfrost-python"
-    , "pkgs.python3Packages.blocksat-cli"
-    , "pkgs.python3Packages.blosc2"
-    , "pkgs.python3Packages.blspy"
-    , "pkgs.python3Packages.bluemaestro-ble"
-    , "pkgs.python3Packages.bluepy"
-    , "pkgs.python3Packages.bluepy-devices"
-    , "pkgs.python3Packages.bluetooth-adapters"
-    , "pkgs.python3Packages.bluetooth-auto-recovery"
-    , "pkgs.python3Packages.bluetooth-data-tools"
-    , "pkgs.python3Packages.bluetooth-sensor-state-data"
-    , "pkgs.python3Packages.blurhash"
-    , "pkgs.python3Packages.bme280spi"
-    , "pkgs.python3Packages.bme680"
-    , "pkgs.python3Packages.bnnumerizer"
-    , "pkgs.python3Packages.bnunicodenormalizer"
-    , "pkgs.python3Packages.boa-api"
-    , "pkgs.python3Packages.boiboite-opener-framework"
-    , "pkgs.python3Packages.boilerpy3"
-    , "pkgs.python3Packages.bokeh"
-    , "pkgs.python3Packages.boltons"
-    , "pkgs.python3Packages.boltztrap2"
-    , "pkgs.python3Packages.bond-api"
-    , "pkgs.python3Packages.bond-async"
-    , "pkgs.python3Packages.bonsai"
-    , "pkgs.python3Packages.boolean-py"
-    , "pkgs.python3Packages.booleanoperations"
-    , "pkgs.python3Packages.boost"
-    , "pkgs.python3Packages.boost-histogram"
-    , "pkgs.python3Packages.bootstrap.build"
-    , "pkgs.python3Packages.bootstrap.flit-core"
-    , "pkgs.python3Packages.bootstrap.installer"
-    , "pkgs.python3Packages.bork"
-    , "pkgs.python3Packages.boschshcpy"
-    , "pkgs.python3Packages.boto"
-    , "pkgs.python3Packages.boto3"
-    , "pkgs.python3Packages.boto3-stubs"
-    , "pkgs.python3Packages.botocore"
-    , "pkgs.python3Packages.botocore-stubs"
-    , "pkgs.python3Packages.botorch"
-    , "pkgs.python3Packages.bottle"
-    , "pkgs.python3Packages.bottleneck"
-    , "pkgs.python3Packages.bottombar"
-    , "pkgs.python3Packages.boxx"
-    , "pkgs.python3Packages.bpycv"
-    , "pkgs.python3Packages.bpython"
-    , "pkgs.python3Packages.bqplot"
-    , "pkgs.python3Packages.bqscales"
-    , "pkgs.python3Packages.braceexpand"
-    , "pkgs.python3Packages.bracex"
-    , "pkgs.python3Packages.braintree"
-    , "pkgs.python3Packages.branca"
-    , "pkgs.python3Packages.bravado-core"
-    , "pkgs.python3Packages.bravia-tv"
-    , "pkgs.python3Packages.breathe"
-    , "pkgs.python3Packages.breezy"
-    , "pkgs.python3Packages.brelpy"
-    , "pkgs.python3Packages.brian2"
-    , "pkgs.python3Packages.broadbean"
-    , "pkgs.python3Packages.broadlink"
-    , "pkgs.python3Packages.brother"
-    , "pkgs.python3Packages.brother-ql"
-    , "pkgs.python3Packages.brotli"
-    , "pkgs.python3Packages.brotli-asgi"
-    , "pkgs.python3Packages.brotlicffi"
-    , "pkgs.python3Packages.brotlipy"
-    , "pkgs.python3Packages.brottsplatskartan"
-    , "pkgs.python3Packages.browser-cookie3"
-    , "pkgs.python3Packages.brunt"
-    , "pkgs.python3Packages.bsblan"
-    , "pkgs.python3Packages.bsddb3"
-    , "pkgs.python3Packages.bsdiff4"
-    , "pkgs.python3Packages.bson"
-    , "pkgs.python3Packages.bsuite"
-    , "pkgs.python3Packages.bt-proximity"
-    , "pkgs.python3Packages.bt_proximity"
-    , "pkgs.python3Packages.btchip"
-    , "pkgs.python3Packages.btchip-python"
-    , "pkgs.python3Packages.btest"
-    , "pkgs.python3Packages.bthome-ble"
-    , "pkgs.python3Packages.btrees"
-    , "pkgs.python3Packages.btrfs"
-    , "pkgs.python3Packages.btrfsutil"
-    , "pkgs.python3Packages.btsmarthub_devicelist"
-    , "pkgs.python3Packages.btsocket"
-    , "pkgs.python3Packages.bucketstore"
-    , "pkgs.python3Packages.bugsnag"
-    , "pkgs.python3Packages.bugwarrior"
-    , "pkgs.python3Packages.bugz"
-    , "pkgs.python3Packages.bugzilla"
-    , "pkgs.python3Packages.buienradar"
-    , "pkgs.python3Packages.build"
-    , "pkgs.python3Packages.buildcatrust"
-    , "pkgs.python3Packages.bumps"
-    , "pkgs.python3Packages.bunch"
-    , "pkgs.python3Packages.bundlewrap"
-    , "pkgs.python3Packages.busypie"
-    , "pkgs.python3Packages.bwapy"
-    , "pkgs.python3Packages.bx-py-utils"
-    , "pkgs.python3Packages.bx-python"
-    , "pkgs.python3Packages.bytecode"
-    , "pkgs.python3Packages.bytewax"
-    , "pkgs.python3Packages.bz2file"
-    , "pkgs.python3Packages.cachecontrol"
-    , "pkgs.python3Packages.cached-property"
-    , "pkgs.python3Packages.cachelib"
-    , "pkgs.python3Packages.cachetools"
-    , "pkgs.python3Packages.cachey"
-    , "pkgs.python3Packages.cacheyou"
-    , "pkgs.python3Packages.cachier"
-    , "pkgs.python3Packages.cachy"
-    , "pkgs.python3Packages.cadquery"
-    , "pkgs.python3Packages.caffe"
-    , "pkgs.python3Packages.caffeWithCuda"
-    , "pkgs.python3Packages.caio"
-    , "pkgs.python3Packages.cairocffi"
-    , "pkgs.python3Packages.cairosvg"
-    , "pkgs.python3Packages.caldav"
-    , "pkgs.python3Packages.callee"
-    , "pkgs.python3Packages.calmjs"
-    , "pkgs.python3Packages.calmjs-parse"
-    , "pkgs.python3Packages.calmjs-types"
-    , "pkgs.python3Packages.calver"
-    , "pkgs.python3Packages.calysto"
-    , "pkgs.python3Packages.calysto-scheme"
-    , "pkgs.python3Packages.camel-converter"
-    , "pkgs.python3Packages.camelot"
-    , "pkgs.python3Packages.can"
-    , "pkgs.python3Packages.canals"
-    , "pkgs.python3Packages.canmatrix"
-    , "pkgs.python3Packages.canonicaljson"
-    , "pkgs.python3Packages.canopen"
-    , "pkgs.python3Packages.cantools"
-    , "pkgs.python3Packages.capstone"
-    , "pkgs.python3Packages.captcha"
-    , "pkgs.python3Packages.capturer"
-    , "pkgs.python3Packages.carbon"
-    , "pkgs.python3Packages.cart"
-    , "pkgs.python3Packages.cartopy"
-    , "pkgs.python3Packages.casa-formats-io"
-    , "pkgs.python3Packages.casbin"
-    , "pkgs.python3Packages.case"
-    , "pkgs.python3Packages.cassandra-driver"
-    , "pkgs.python3Packages.castepxbin"
-    , "pkgs.python3Packages.casttube"
-    , "pkgs.python3Packages.catalogue"
-    , "pkgs.python3Packages.catboost"
-    , "pkgs.python3Packages.catppuccin"
-    , "pkgs.python3Packages.cattrs"
-    , "pkgs.python3Packages.cbeams"
-    , "pkgs.python3Packages.cbor"
-    , "pkgs.python3Packages.cbor2"
-    , "pkgs.python3Packages.cccolutils"
-    , "pkgs.python3Packages.cchardet"
-    , "pkgs.python3Packages.cdcs"
-    , "pkgs.python3Packages.celery"
-    , "pkgs.python3Packages.celery-redbeat"
-    , "pkgs.python3Packages.celery-singleton"
-    , "pkgs.python3Packages.celery-types"
-    , "pkgs.python3Packages.cement"
-    , "pkgs.python3Packages.cemm"
-    , "pkgs.python3Packages.censys"
-    , "pkgs.python3Packages.cepa"
-    , "pkgs.python3Packages.cerberus"
-    , "pkgs.python3Packages.cert-chain-resolver"
-    , "pkgs.python3Packages.certauth"
-    , "pkgs.python3Packages.certbot"
-    , "pkgs.python3Packages.certbot-dns-cloudflare"
-    , "pkgs.python3Packages.certbot-dns-google"
-    , "pkgs.python3Packages.certbot-dns-inwx"
-    , "pkgs.python3Packages.certbot-dns-ovh"
-    , "pkgs.python3Packages.certbot-dns-rfc2136"
-    , "pkgs.python3Packages.certbot-dns-route53"
-    , "pkgs.python3Packages.certifi"
-    , "pkgs.python3Packages.certipy"
-    , "pkgs.python3Packages.certipy-ad"
-    , "pkgs.python3Packages.certomancer"
-    , "pkgs.python3Packages.certvalidator"
-    , "pkgs.python3Packages.cexprtk"
-    , "pkgs.python3Packages.cf-xarray"
-    , "pkgs.python3Packages.cffi"
-    , "pkgs.python3Packages.cffsubr"
-    , "pkgs.python3Packages.cfgv"
-    , "pkgs.python3Packages.cfn-flip"
-    , "pkgs.python3Packages.cfn-lint"
-    , "pkgs.python3Packages.cfscrape"
-    , "pkgs.python3Packages.cftime"
-    , "pkgs.python3Packages.cgen"
-    , "pkgs.python3Packages.cgroup-utils"
-    , "pkgs.python3Packages.chacha20poly1305"
-    , "pkgs.python3Packages.chacha20poly1305-reuseable"
-    , "pkgs.python3Packages.chai"
-    , "pkgs.python3Packages.chainer"
-    , "pkgs.python3Packages.chainmap"
-    , "pkgs.python3Packages.chalice"
-    , "pkgs.python3Packages.chameleon"
-    , "pkgs.python3Packages.channels"
-    , "pkgs.python3Packages.channels-redis"
-    , "pkgs.python3Packages.characteristic"
-    , "pkgs.python3Packages.chardet"
-    , "pkgs.python3Packages.charset-normalizer"
-    , "pkgs.python3Packages.chart-studio"
-    , "pkgs.python3Packages.chat-downloader"
-    , "pkgs.python3Packages.check-manifest"
-    , "pkgs.python3Packages.checkdmarc"
-    , "pkgs.python3Packages.checksumdir"
-    , "pkgs.python3Packages.cheetah3"
-    , "pkgs.python3Packages.cheroot"
-    , "pkgs.python3Packages.cherrypy"
-    , "pkgs.python3Packages.chess"
-    , "pkgs.python3Packages.chevron"
-    , "pkgs.python3Packages.chex"
-    , "pkgs.python3Packages.chia-rs"
-    , "pkgs.python3Packages.chiabip158"
-    , "pkgs.python3Packages.chiapos"
-    , "pkgs.python3Packages.chiavdf"
-    , "pkgs.python3Packages.chirpstack-api"
-    , "pkgs.python3Packages.chispa"
-    , "pkgs.python3Packages.chromaprint"
-    , "pkgs.python3Packages.ci-info"
-    , "pkgs.python3Packages.ci-py"
-    , "pkgs.python3Packages.cinemagoer"
-    , "pkgs.python3Packages.circuit-webhook"
-    , "pkgs.python3Packages.circuitbreaker"
-    , "pkgs.python3Packages.circus"
-    , "pkgs.python3Packages.cirq"
-    , "pkgs.python3Packages.cirq-aqt"
-    , "pkgs.python3Packages.cirq-core"
-    , "pkgs.python3Packages.cirq-ft"
-    , "pkgs.python3Packages.cirq-google"
-    , "pkgs.python3Packages.cirq-ionq"
-    , "pkgs.python3Packages.cirq-pasqal"
-    , "pkgs.python3Packages.cirq-rigetti"
-    , "pkgs.python3Packages.cirq-web"
-    , "pkgs.python3Packages.ciscoconfparse"
-    , "pkgs.python3Packages.ciscomobilityexpress"
-    , "pkgs.python3Packages.ciso8601"
-    , "pkgs.python3Packages.citeproc-py"
-    , "pkgs.python3Packages.cjkwrap"
-    , "pkgs.python3Packages.ckcc-protocol"
-    , "pkgs.python3Packages.clarabel"
-    , "pkgs.python3Packages.clarifai"
-    , "pkgs.python3Packages.clarifai-grpc"
-    , "pkgs.python3Packages.claripy"
-    , "pkgs.python3Packages.class-doc"
-    , "pkgs.python3Packages.class-registry"
-    , "pkgs.python3Packages.classify-imports"
-    , "pkgs.python3Packages.cld2-cffi"
-    , "pkgs.python3Packages.cle"
-    , "pkgs.python3Packages.clean-fid"
-    , "pkgs.python3Packages.cleanlab"
-    , "pkgs.python3Packages.cleo"
-    , "pkgs.python3Packages.clevercsv"
-    , "pkgs.python3Packages.clf"
-    , "pkgs.python3Packages.cli-helpers"
-    , "pkgs.python3Packages.cliche"
-    , "pkgs.python3Packages.click"
-    , "pkgs.python3Packages.click-aliases"
-    , "pkgs.python3Packages.click-command-tree"
-    , "pkgs.python3Packages.click-completion"
-    , "pkgs.python3Packages.click-configfile"
-    , "pkgs.python3Packages.click-datetime"
-    , "pkgs.python3Packages.click-default-group"
-    , "pkgs.python3Packages.click-didyoumean"
-    , "pkgs.python3Packages.click-help-colors"
-    , "pkgs.python3Packages.click-log"
-    , "pkgs.python3Packages.click-odoo"
-    , "pkgs.python3Packages.click-odoo-contrib"
-    , "pkgs.python3Packages.click-option-group"
-    , "pkgs.python3Packages.click-plugins"
-    , "pkgs.python3Packages.click-repl"
-    , "pkgs.python3Packages.click-shell"
-    , "pkgs.python3Packages.click-spinner"
-    , "pkgs.python3Packages.click-threading"
-    , "pkgs.python3Packages.clickclick"
-    , "pkgs.python3Packages.clickgen"
-    , "pkgs.python3Packages.clickhouse-cityhash"
-    , "pkgs.python3Packages.clickhouse-cli"
-    , "pkgs.python3Packages.clickhouse-connect"
-    , "pkgs.python3Packages.clickhouse-driver"
-    , "pkgs.python3Packages.cliff"
-    , "pkgs.python3Packages.clifford"
-    , "pkgs.python3Packages.cligj"
-    , "pkgs.python3Packages.clikit"
-    , "pkgs.python3Packages.clint"
-    , "pkgs.python3Packages.clintermission"
-    , "pkgs.python3Packages.clip"
-    , "pkgs.python3Packages.clip-anytorch"
-    , "pkgs.python3Packages.clize"
-    , "pkgs.python3Packages.clldutils"
-    , "pkgs.python3Packages.cloudflare"
-    , "pkgs.python3Packages.cloudpathlib"
-    , "pkgs.python3Packages.cloudpickle"
-    , "pkgs.python3Packages.cloudscraper"
-    , "pkgs.python3Packages.cloudsmith-api"
-    , "pkgs.python3Packages.cloudsplaining"
-    , "pkgs.python3Packages.cloup"
-    , "pkgs.python3Packages.clr-loader"
-    , "pkgs.python3Packages.clustershell"
-    , "pkgs.python3Packages.clvm"
-    , "pkgs.python3Packages.clvm-rs"
-    , "pkgs.python3Packages.clvm-tools"
-    , "pkgs.python3Packages.clvm-tools-rs"
-    , "pkgs.python3Packages.cma"
-    , "pkgs.python3Packages.cmaes"
-    , "pkgs.python3Packages.cmake"
-    , "pkgs.python3Packages.cmarkgfm"
-    , "pkgs.python3Packages.cmd2"
-    , "pkgs.python3Packages.cmd2-ext-test"
-    , "pkgs.python3Packages.cmdline"
-    , "pkgs.python3Packages.cmdstanpy"
-    , "pkgs.python3Packages.cmigemo"
-    , "pkgs.python3Packages.cmsis-pack-manager"
-    , "pkgs.python3Packages.cmsis-svd"
-    , "pkgs.python3Packages.cnvkit"
-    , "pkgs.python3Packages.co2signal"
-    , "pkgs.python3Packages.coapthon3"
-    , "pkgs.python3Packages.cobs"
-    , "pkgs.python3Packages.cock"
-    , "pkgs.python3Packages.coconut"
-    , "pkgs.python3Packages.cocotb"
-    , "pkgs.python3Packages.cocotb-bus"
-    , "pkgs.python3Packages.codecov"
-    , "pkgs.python3Packages.codepy"
-    , "pkgs.python3Packages.coffea"
-    , "pkgs.python3Packages.cogapp"
-    , "pkgs.python3Packages.cohere"
-    , "pkgs.python3Packages.coincurve"
-    , "pkgs.python3Packages.coinmetrics-api-client"
-    , "pkgs.python3Packages.colander"
-    , "pkgs.python3Packages.colanderalchemy"
-    , "pkgs.python3Packages.collections-extended"
-    , "pkgs.python3Packages.colorama"
-    , "pkgs.python3Packages.colorcet"
-    , "pkgs.python3Packages.colorclass"
-    , "pkgs.python3Packages.colored"
-    , "pkgs.python3Packages.colored-traceback"
-    , "pkgs.python3Packages.coloredlogs"
-    , "pkgs.python3Packages.colorful"
-    , "pkgs.python3Packages.colorlog"
-    , "pkgs.python3Packages.colorlover"
-    , "pkgs.python3Packages.colormath"
-    , "pkgs.python3Packages.colorspacious"
-    , "pkgs.python3Packages.colorthief"
-    , "pkgs.python3Packages.colorzero"
-    , "pkgs.python3Packages.colour"
-    , "pkgs.python3Packages.colout"
-    , "pkgs.python3Packages.cometblue-lite"
-    , "pkgs.python3Packages.comicon"
-    , "pkgs.python3Packages.comm"
-    , "pkgs.python3Packages.command_runner"
-    , "pkgs.python3Packages.commandparse"
-    , "pkgs.python3Packages.commentjson"
-    , "pkgs.python3Packages.commoncode"
-    , "pkgs.python3Packages.commonmark"
-    , "pkgs.python3Packages.compiledb"
-    , "pkgs.python3Packages.complycube"
-    , "pkgs.python3Packages.compreffor"
-    , "pkgs.python3Packages.compressai"
-    , "pkgs.python3Packages.concurrent-log-handler"
-    , "pkgs.python3Packages.conda"
-    , "pkgs.python3Packages.condaInstallHook"
-    , "pkgs.python3Packages.condaUnpackHook"
-    , "pkgs.python3Packages.confection"
-    , "pkgs.python3Packages.configargparse"
-    , "pkgs.python3Packages.configclass"
-    , "pkgs.python3Packages.confight"
-    , "pkgs.python3Packages.configobj"
-    , "pkgs.python3Packages.configparser"
-    , "pkgs.python3Packages.configshell"
-    , "pkgs.python3Packages.configupdater"
-    , "pkgs.python3Packages.confluent-kafka"
-    , "pkgs.python3Packages.confuse"
-    , "pkgs.python3Packages.connect-box"
-    , "pkgs.python3Packages.connection-pool"
-    , "pkgs.python3Packages.connexion"
-    , "pkgs.python3Packages.connio"
-    , "pkgs.python3Packages.cons"
-    , "pkgs.python3Packages.consonance"
-    , "pkgs.python3Packages.constantly"
-    , "pkgs.python3Packages.construct"
-    , "pkgs.python3Packages.construct-classes"
-    , "pkgs.python3Packages.consul"
-    , "pkgs.python3Packages.container-inspector"
-    , "pkgs.python3Packages.contexter"
-    , "pkgs.python3Packages.contextlib2"
-    , "pkgs.python3Packages.contexttimer"
-    , "pkgs.python3Packages.contourpy"
-    , "pkgs.python3Packages.controku"
-    , "pkgs.python3Packages.convertdate"
-    , "pkgs.python3Packages.cookiecutter"
-    , "pkgs.python3Packages.cookies"
-    , "pkgs.python3Packages.coordinates"
-    , "pkgs.python3Packages.coqpit"
-    , "pkgs.python3Packages.coreapi"
-    , "pkgs.python3Packages.coredis"
-    , "pkgs.python3Packages.coreschema"
-    , "pkgs.python3Packages.cornice"
-    , "pkgs.python3Packages.correctionlib"
-    , "pkgs.python3Packages.corsair-scan"
-    , "pkgs.python3Packages.cose"
-    , "pkgs.python3Packages.cot"
-    , "pkgs.python3Packages.covCore"
-    , "pkgs.python3Packages.coverage"
-    , "pkgs.python3Packages.coveralls"
-    , "pkgs.python3Packages.cppe"
-    , "pkgs.python3Packages.cppheaderparser"
-    , "pkgs.python3Packages.cppy"
-    , "pkgs.python3Packages.cpyparsing"
-    , "pkgs.python3Packages.cram"
-    , "pkgs.python3Packages.cramjam"
-    , "pkgs.python3Packages.crashtest"
-    , "pkgs.python3Packages.crate"
-    , "pkgs.python3Packages.crayons"
-    , "pkgs.python3Packages.crc"
-    , "pkgs.python3Packages.crc16"
-    , "pkgs.python3Packages.crc32c"
-    , "pkgs.python3Packages.crccheck"
-    , "pkgs.python3Packages.crcmod"
-    , "pkgs.python3Packages.credstash"
-    , "pkgs.python3Packages.criticality-score"
-    , "pkgs.python3Packages.crocoddyl"
-    , "pkgs.python3Packages.cron-descriptor"
-    , "pkgs.python3Packages.croniter"
-    , "pkgs.python3Packages.cronsim"
-    , "pkgs.python3Packages.crossplane"
-    , "pkgs.python3Packages.crownstone-cloud"
-    , "pkgs.python3Packages.crownstone-core"
-    , "pkgs.python3Packages.crownstone-sse"
-    , "pkgs.python3Packages.crownstone-uart"
-    , "pkgs.python3Packages.cryptacular"
-    , "pkgs.python3Packages.cryptg"
-    , "pkgs.python3Packages.cryptodatahub"
-    , "pkgs.python3Packages.cryptography"
-    , "pkgs.python3Packages.cryptolyzer"
-    , "pkgs.python3Packages.cryptoparser"
-    , "pkgs.python3Packages.crysp"
-    , "pkgs.python3Packages.crytic-compile"
-    , "pkgs.python3Packages.cson"
-    , "pkgs.python3Packages.csrmesh"
-    , "pkgs.python3Packages.css-html-js-minify"
-    , "pkgs.python3Packages.css-inline"
-    , "pkgs.python3Packages.css-parser"
-    , "pkgs.python3Packages.cssbeautifier"
-    , "pkgs.python3Packages.csscompressor"
-    , "pkgs.python3Packages.cssmin"
-    , "pkgs.python3Packages.cssselect"
-    , "pkgs.python3Packages.cssselect2"
-    , "pkgs.python3Packages.cssutils"
-    , "pkgs.python3Packages.cstruct"
-    , "pkgs.python3Packages.csvw"
-    , "pkgs.python3Packages.ctap-keyring-device"
-    , "pkgs.python3Packages.ctranslate2"
-    , "pkgs.python3Packages.cu2qu"
-    , "pkgs.python3Packages.cucumber-tag-expressions"
-    , "pkgs.python3Packages.cufflinks"
-    , "pkgs.python3Packages.cupy"
-    , "pkgs.python3Packages.curio"
-    , "pkgs.python3Packages.curlify"
-    , "pkgs.python3Packages.curtsies"
-    , "pkgs.python3Packages.curve25519-donna"
-    , "pkgs.python3Packages.cvelib"
-    , "pkgs.python3Packages.cvss"
-    , "pkgs.python3Packages.cvxopt"
-    , "pkgs.python3Packages.cvxpy"
-    , "pkgs.python3Packages.cwcwidth"
-    , "pkgs.python3Packages.cwl-upgrader"
-    , "pkgs.python3Packages.cwl-utils"
-    , "pkgs.python3Packages.cwlformat"
-    , "pkgs.python3Packages.cx-freeze"
-    , "pkgs.python3Packages.cx_Freeze"
-    , "pkgs.python3Packages.cx_oracle"
-    , "pkgs.python3Packages.cxxfilt"
-    , "pkgs.python3Packages.cycler"
-    , "pkgs.python3Packages.cyclonedx-python-lib"
-    , "pkgs.python3Packages.cymem"
-    , "pkgs.python3Packages.cypari2"
-    , "pkgs.python3Packages.cypherpunkpay"
-    , "pkgs.python3Packages.cysignals"
-    , "pkgs.python3Packages.cython"
-    , "pkgs.python3Packages.cython-test-exception-raiser"
-    , "pkgs.python3Packages.cython_3"
-    , "pkgs.python3Packages.cytoolz"
-    , "pkgs.python3Packages.dacite"
-    , "pkgs.python3Packages.daemonize"
-    , "pkgs.python3Packages.daemonocle"
-    , "pkgs.python3Packages.daiquiri"
-    , "pkgs.python3Packages.dalle-mini"
-    , "pkgs.python3Packages.daphne"
-    , "pkgs.python3Packages.daqp"
-    , "pkgs.python3Packages.darkdetect"
-    , "pkgs.python3Packages.dasbus"
-    , "pkgs.python3Packages.dash"
-    , "pkgs.python3Packages.dash-core-components"
-    , "pkgs.python3Packages.dash-html-components"
-    , "pkgs.python3Packages.dash-renderer"
-    , "pkgs.python3Packages.dash-table"
-    , "pkgs.python3Packages.dashing"
-    , "pkgs.python3Packages.dask"
-    , "pkgs.python3Packages.dask-awkward"
-    , "pkgs.python3Packages.dask-gateway"
-    , "pkgs.python3Packages.dask-gateway-server"
-    , "pkgs.python3Packages.dask-glm"
-    , "pkgs.python3Packages.dask-histogram"
-    , "pkgs.python3Packages.dask-image"
-    , "pkgs.python3Packages.dask-jobqueue"
-    , "pkgs.python3Packages.dask-ml"
-    , "pkgs.python3Packages.dask-mpi"
-    , "pkgs.python3Packages.dask-yarn"
-    , "pkgs.python3Packages.databases"
-    , "pkgs.python3Packages.databricks-cli"
-    , "pkgs.python3Packages.databricks-connect"
-    , "pkgs.python3Packages.databricks-sql-connector"
-    , "pkgs.python3Packages.dataclass-factory"
-    , "pkgs.python3Packages.dataclass-wizard"
-    , "pkgs.python3Packages.dataclasses-json"
-    , "pkgs.python3Packages.dataclasses-serialization"
-    , "pkgs.python3Packages.datadiff"
-    , "pkgs.python3Packages.datadog"
-    , "pkgs.python3Packages.datafusion"
-    , "pkgs.python3Packages.datamodeldict"
-    , "pkgs.python3Packages.datapoint"
-    , "pkgs.python3Packages.dataprep-ml"
-    , "pkgs.python3Packages.dataproperty"
-    , "pkgs.python3Packages.dataset"
-    , "pkgs.python3Packages.datasets"
-    , "pkgs.python3Packages.datasette"
-    , "pkgs.python3Packages.datasette-publish-fly"
-    , "pkgs.python3Packages.datasette-template-sql"
-    , "pkgs.python3Packages.datashader"
-    , "pkgs.python3Packages.datashape"
-    , "pkgs.python3Packages.datatable"
-    , "pkgs.python3Packages.datauri"
-    , "pkgs.python3Packages.datefinder"
-    , "pkgs.python3Packages.dateparser"
-    , "pkgs.python3Packages.datetime"
-    , "pkgs.python3Packages.dateutil"
-    , "pkgs.python3Packages.dateutils"
-    , "pkgs.python3Packages.datrie"
-    , "pkgs.python3Packages.dawg-python"
-    , "pkgs.python3Packages.db-dtypes"
-    , "pkgs.python3Packages.dbf"
-    , "pkgs.python3Packages.dbfread"
-    , "pkgs.python3Packages.dbt-bigquery"
-    , "pkgs.python3Packages.dbt-core"
-    , "pkgs.python3Packages.dbt-extractor"
-    , "pkgs.python3Packages.dbt-postgres"
-    , "pkgs.python3Packages.dbt-redshift"
-    , "pkgs.python3Packages.dbt-semantic-interfaces"
-    , "pkgs.python3Packages.dbt-snowflake"
-    , "pkgs.python3Packages.dbus-client-gen"
-    , "pkgs.python3Packages.dbus-deviation"
-    , "pkgs.python3Packages.dbus-fast"
-    , "pkgs.python3Packages.dbus-next"
-    , "pkgs.python3Packages.dbus-python"
-    , "pkgs.python3Packages.dbus-python-client-gen"
-    , "pkgs.python3Packages.dbus-signature-pyparsing"
-    , "pkgs.python3Packages.dbutils"
-    , "pkgs.python3Packages.dcmstack"
-    , "pkgs.python3Packages.dctorch"
-    , "pkgs.python3Packages.ddt"
-    , "pkgs.python3Packages.deal"
-    , "pkgs.python3Packages.deal-solver"
-    , "pkgs.python3Packages.deap"
-    , "pkgs.python3Packages.debian"
-    , "pkgs.python3Packages.debian-inspector"
-    , "pkgs.python3Packages.debianbts"
-    , "pkgs.python3Packages.debtcollector"
-    , "pkgs.python3Packages.debts"
-    , "pkgs.python3Packages.debuglater"
-    , "pkgs.python3Packages.debugpy"
-    , "pkgs.python3Packages.decli"
-    , "pkgs.python3Packages.decopatch"
-    , "pkgs.python3Packages.decorator"
-    , "pkgs.python3Packages.deemix"
-    , "pkgs.python3Packages.deep-chainmap"
-    , "pkgs.python3Packages.deep-translator"
-    , "pkgs.python3Packages.deepdiff"
-    , "pkgs.python3Packages.deepdish"
-    , "pkgs.python3Packages.deepl"
-    , "pkgs.python3Packages.deepmerge"
-    , "pkgs.python3Packages.deeptoolsintervals"
-    , "pkgs.python3Packages.deepwave"
-    , "pkgs.python3Packages.deezer-py"
-    , "pkgs.python3Packages.deezer-python"
-    , "pkgs.python3Packages.defcon"
-    , "pkgs.python3Packages.deform"
-    , "pkgs.python3Packages.defusedcsv"
-    , "pkgs.python3Packages.defusedxml"
-    , "pkgs.python3Packages.deid"
-    , "pkgs.python3Packages.delegator-py"
-    , "pkgs.python3Packages.delorean"
-    , "pkgs.python3Packages.deltachat"
-    , "pkgs.python3Packages.deluge-client"
-    , "pkgs.python3Packages.demes"
-    , "pkgs.python3Packages.demesdraw"
-    , "pkgs.python3Packages.demetriek"
-    , "pkgs.python3Packages.demjson3"
-    , "pkgs.python3Packages.dendropy"
-    , "pkgs.python3Packages.denonavr"
-    , "pkgs.python3Packages.dependency-injector"
-    , "pkgs.python3Packages.deploykit"
-    , "pkgs.python3Packages.deprecat"
-    , "pkgs.python3Packages.deprecated"
-    , "pkgs.python3Packages.deprecation"
-    , "pkgs.python3Packages.derpconf"
-    , "pkgs.python3Packages.desktop-entry-lib"
-    , "pkgs.python3Packages.desktop-notifier"
-    , "pkgs.python3Packages.detect-secrets"
-    , "pkgs.python3Packages.detectron2"
-    , "pkgs.python3Packages.devito"
-    , "pkgs.python3Packages.devolo-home-control-api"
-    , "pkgs.python3Packages.devolo-plc-api"
-    , "pkgs.python3Packages.devpi-common"
-    , "pkgs.python3Packages.devtools"
-    , "pkgs.python3Packages.diagrams"
-    , "pkgs.python3Packages.diceware"
-    , "pkgs.python3Packages.dicom-numpy"
-    , "pkgs.python3Packages.dicom2nifti"
-    , "pkgs.python3Packages.dicomweb-client"
-    , "pkgs.python3Packages.dict2xml"
-    , "pkgs.python3Packages.dictdiffer"
-    , "pkgs.python3Packages.dictionaries"
-    , "pkgs.python3Packages.dictpath"
-    , "pkgs.python3Packages.dicttoxml"
-    , "pkgs.python3Packages.dicttoxml2"
-    , "pkgs.python3Packages.diff-cover"
-    , "pkgs.python3Packages.diff-match-patch"
-    , "pkgs.python3Packages.diff_cover"
-    , "pkgs.python3Packages.diffimg"
-    , "pkgs.python3Packages.diffsync"
-    , "pkgs.python3Packages.digi-xbee"
-    , "pkgs.python3Packages.digital-ocean"
-    , "pkgs.python3Packages.dill"
-    , "pkgs.python3Packages.dinghy"
-    , "pkgs.python3Packages.dingz"
-    , "pkgs.python3Packages.diofant"
-    , "pkgs.python3Packages.dipy"
-    , "pkgs.python3Packages.directv"
-    , "pkgs.python3Packages.dirty-equals"
-    , "pkgs.python3Packages.discid"
-    , "pkgs.python3Packages.discogs-client"
-    , "pkgs.python3Packages.discogs_client"
-    , "pkgs.python3Packages.discordpy"
-    , "pkgs.python3Packages.discovery30303"
-    , "pkgs.python3Packages.diskcache"
-    , "pkgs.python3Packages.dissect"
-    , "pkgs.python3Packages.dissect-cim"
-    , "pkgs.python3Packages.dissect-clfs"
-    , "pkgs.python3Packages.dissect-cobaltstrike"
-    , "pkgs.python3Packages.dissect-cstruct"
-    , "pkgs.python3Packages.dissect-esedb"
-    , "pkgs.python3Packages.dissect-etl"
-    , "pkgs.python3Packages.dissect-eventlog"
-    , "pkgs.python3Packages.dissect-evidence"
-    , "pkgs.python3Packages.dissect-executable"
-    , "pkgs.python3Packages.dissect-extfs"
-    , "pkgs.python3Packages.dissect-fat"
-    , "pkgs.python3Packages.dissect-ffs"
-    , "pkgs.python3Packages.dissect-hypervisor"
-    , "pkgs.python3Packages.dissect-ntfs"
-    , "pkgs.python3Packages.dissect-ole"
-    , "pkgs.python3Packages.dissect-regf"
-    , "pkgs.python3Packages.dissect-shellitem"
-    , "pkgs.python3Packages.dissect-sql"
-    , "pkgs.python3Packages.dissect-squashfs"
-    , "pkgs.python3Packages.dissect-target"
-    , "pkgs.python3Packages.dissect-thumbcache"
-    , "pkgs.python3Packages.dissect-util"
-    , "pkgs.python3Packages.dissect-vmfs"
-    , "pkgs.python3Packages.dissect-volume"
-    , "pkgs.python3Packages.dissect-xfs"
-    , "pkgs.python3Packages.dissononce"
-    , "pkgs.python3Packages.distlib"
-    , "pkgs.python3Packages.distorm3"
-    , "pkgs.python3Packages.distrax"
-    , "pkgs.python3Packages.distributed"
-    , "pkgs.python3Packages.distro"
-    , "pkgs.python3Packages.distutils-extra"
-    , "pkgs.python3Packages.distutils_extra"
-    , "pkgs.python3Packages.dj-database-url"
-    , "pkgs.python3Packages.dj-email-url"
-    , "pkgs.python3Packages.dj-rest-auth"
-    , "pkgs.python3Packages.dj-search-url"
-    , "pkgs.python3Packages.dj-static"
-    , "pkgs.python3Packages.django"
-    , "pkgs.python3Packages.django-admin-datta"
-    , "pkgs.python3Packages.django-admin-sortable2"
-    , "pkgs.python3Packages.django-allauth"
-    , "pkgs.python3Packages.django-allauth-2fa"
-    , "pkgs.python3Packages.django-annoying"
-    , "pkgs.python3Packages.django-anymail"
-    , "pkgs.python3Packages.django-appconf"
-    , "pkgs.python3Packages.django-auth-ldap"
-    , "pkgs.python3Packages.django-autocomplete-light"
-    , "pkgs.python3Packages.django-bootstrap3"
-    , "pkgs.python3Packages.django-bootstrap4"
-    , "pkgs.python3Packages.django-bootstrap5"
-    , "pkgs.python3Packages.django-cachalot"
-    , "pkgs.python3Packages.django-cache-url"
-    , "pkgs.python3Packages.django-cacheops"
-    , "pkgs.python3Packages.django-celery-beat"
-    , "pkgs.python3Packages.django-celery-email"
-    , "pkgs.python3Packages.django-celery-results"
-    , "pkgs.python3Packages.django-ckeditor"
-    , "pkgs.python3Packages.django-classy-tags"
-    , "pkgs.python3Packages.django-cleanup"
-    , "pkgs.python3Packages.django-colorful"
-    , "pkgs.python3Packages.django-compression-middleware"
-    , "pkgs.python3Packages.django-compressor"
-    , "pkgs.python3Packages.django-configurations"
-    , "pkgs.python3Packages.django-context-decorator"
-    , "pkgs.python3Packages.django-contrib-comments"
-    , "pkgs.python3Packages.django-cors-headers"
-    , "pkgs.python3Packages.django-countries"
-    , "pkgs.python3Packages.django-crispy-bootstrap4"
-    , "pkgs.python3Packages.django-crispy-forms"
-    , "pkgs.python3Packages.django-crontab"
-    , "pkgs.python3Packages.django-cryptography"
-    , "pkgs.python3Packages.django-csp"
-    , "pkgs.python3Packages.django-debug-toolbar"
-    , "pkgs.python3Packages.django-dynamic-preferences"
-    , "pkgs.python3Packages.django-encrypted-model-fields"
-    , "pkgs.python3Packages.django-environ"
-    , "pkgs.python3Packages.django-extensions"
-    , "pkgs.python3Packages.django-filter"
-    , "pkgs.python3Packages.django-formset-js-improved"
-    , "pkgs.python3Packages.django-formtools"
-    , "pkgs.python3Packages.django-google-analytics-app"
-    , "pkgs.python3Packages.django-graphiql-debug-toolbar"
-    , "pkgs.python3Packages.django-gravatar2"
-    , "pkgs.python3Packages.django-guardian"
-    , "pkgs.python3Packages.django-haystack"
-    , "pkgs.python3Packages.django-hcaptcha"
-    , "pkgs.python3Packages.django-health-check"
-    , "pkgs.python3Packages.django-hierarkey"
-    , "pkgs.python3Packages.django-hijack"
-    , "pkgs.python3Packages.django-i18nfield"
-    , "pkgs.python3Packages.django-import-export"
-    , "pkgs.python3Packages.django-ipware"
-    , "pkgs.python3Packages.django-jinja"
-    , "pkgs.python3Packages.django-jquery-js"
-    , "pkgs.python3Packages.django-js-asset"
-    , "pkgs.python3Packages.django-js-reverse"
-    , "pkgs.python3Packages.django-leaflet"
-    , "pkgs.python3Packages.django-libsass"
-    , "pkgs.python3Packages.django-localflavor"
-    , "pkgs.python3Packages.django-logentry-admin"
-    , "pkgs.python3Packages.django-login-required-middleware"
-    , "pkgs.python3Packages.django-mailman3"
-    , "pkgs.python3Packages.django-maintenance-mode"
-    , "pkgs.python3Packages.django-markup"
-    , "pkgs.python3Packages.django-model-utils"
-    , "pkgs.python3Packages.django-modelcluster"
-    , "pkgs.python3Packages.django-mptt"
-    , "pkgs.python3Packages.django-multiselectfield"
-    , "pkgs.python3Packages.django-mysql"
-    , "pkgs.python3Packages.django-ninja"
-    , "pkgs.python3Packages.django-nose"
-    , "pkgs.python3Packages.django-oauth-toolkit"
-    , "pkgs.python3Packages.django-otp"
-    , "pkgs.python3Packages.django-paintstore"
-    , "pkgs.python3Packages.django-parler"
-    , "pkgs.python3Packages.django-pattern-library"
-    , "pkgs.python3Packages.django-payments"
-    , "pkgs.python3Packages.django-pglocks"
-    , "pkgs.python3Packages.django-phonenumber-field"
-    , "pkgs.python3Packages.django-picklefield"
-    , "pkgs.python3Packages.django-polymorphic"
-    , "pkgs.python3Packages.django-postgresql-netfields"
-    , "pkgs.python3Packages.django-prometheus"
-    , "pkgs.python3Packages.django-pwa"
-    , "pkgs.python3Packages.django-q"
-    , "pkgs.python3Packages.django-ranged-response"
-    , "pkgs.python3Packages.django-raster"
-    , "pkgs.python3Packages.django-redis"
-    , "pkgs.python3Packages.django-rest-auth"
-    , "pkgs.python3Packages.django-rest-polymorphic"
-    , "pkgs.python3Packages.django-rest-registration"
-    , "pkgs.python3Packages.django-reversion"
-    , "pkgs.python3Packages.django-rosetta"
-    , "pkgs.python3Packages.django-rq"
-    , "pkgs.python3Packages.django-scheduler"
-    , "pkgs.python3Packages.django-scim2"
-    , "pkgs.python3Packages.django-scopes"
-    , "pkgs.python3Packages.django-sekizai"
-    , "pkgs.python3Packages.django-sesame"
-    , "pkgs.python3Packages.django-shortuuidfield"
-    , "pkgs.python3Packages.django-silk"
-    , "pkgs.python3Packages.django-simple-captcha"
-    , "pkgs.python3Packages.django-simple-history"
-    , "pkgs.python3Packages.django-sites"
-    , "pkgs.python3Packages.django-sr"
-    , "pkgs.python3Packages.django-statici18n"
-    , "pkgs.python3Packages.django-storages"
-    , "pkgs.python3Packages.django-stubs"
-    , "pkgs.python3Packages.django-stubs-ext"
-    , "pkgs.python3Packages.django-tables2"
-    , "pkgs.python3Packages.django-tagging"
-    , "pkgs.python3Packages.django-taggit"
-    , "pkgs.python3Packages.django-tastypie"
-    , "pkgs.python3Packages.django-timezone-field"
-    , "pkgs.python3Packages.django-treebeard"
-    , "pkgs.python3Packages.django-two-factor-auth"
-    , "pkgs.python3Packages.django-types"
-    , "pkgs.python3Packages.django-versatileimagefield"
-    , "pkgs.python3Packages.django-vite"
-    , "pkgs.python3Packages.django-webpack-loader"
-    , "pkgs.python3Packages.django-webpush"
-    , "pkgs.python3Packages.django-widget-tweaks"
-    , "pkgs.python3Packages.django_3"
-    , "pkgs.python3Packages.django_4"
-    , "pkgs.python3Packages.django_5"
-    , "pkgs.python3Packages.django_appconf"
-    , "pkgs.python3Packages.django_classytags"
-    , "pkgs.python3Packages.django_colorful"
-    , "pkgs.python3Packages.django_contrib_comments"
-    , "pkgs.python3Packages.django_environ"
-    , "pkgs.python3Packages.django_extensions"
-    , "pkgs.python3Packages.django_guardian"
-    , "pkgs.python3Packages.django_hijack"
-    , "pkgs.python3Packages.django_modelcluster"
-    , "pkgs.python3Packages.django_nose"
-    , "pkgs.python3Packages.django_polymorphic"
-    , "pkgs.python3Packages.django_redis"
-    , "pkgs.python3Packages.django_reversion"
-    , "pkgs.python3Packages.django_silk"
-    , "pkgs.python3Packages.django_tagging"
-    , "pkgs.python3Packages.django_taggit"
-    , "pkgs.python3Packages.django_treebeard"
-    , "pkgs.python3Packages.djangoql"
-    , "pkgs.python3Packages.djangorestframework"
-    , "pkgs.python3Packages.djangorestframework-camel-case"
-    , "pkgs.python3Packages.djangorestframework-dataclasses"
-    , "pkgs.python3Packages.djangorestframework-guardian"
-    , "pkgs.python3Packages.djangorestframework-guardian2"
-    , "pkgs.python3Packages.djangorestframework-jwt"
-    , "pkgs.python3Packages.djangorestframework-recursive"
-    , "pkgs.python3Packages.djangorestframework-simplejwt"
-    , "pkgs.python3Packages.djangorestframework-stubs"
-    , "pkgs.python3Packages.djmail"
-    , "pkgs.python3Packages.dkimpy"
-    , "pkgs.python3Packages.dlib"
-    , "pkgs.python3Packages.dlinfo"
-    , "pkgs.python3Packages.dllogger"
-    , "pkgs.python3Packages.dlms-cosem"
-    , "pkgs.python3Packages.dlx"
-    , "pkgs.python3Packages.dm-env"
-    , "pkgs.python3Packages.dm-haiku"
-    , "pkgs.python3Packages.dm-sonnet"
-    , "pkgs.python3Packages.dm-tree"
-    , "pkgs.python3Packages.dmenu-python"
-    , "pkgs.python3Packages.dnachisel"
-    , "pkgs.python3Packages.dnfile"
-    , "pkgs.python3Packages.dns"
-    , "pkgs.python3Packages.dns-lexicon"
-    , "pkgs.python3Packages.dnslib"
-    , "pkgs.python3Packages.dnspython"
-    , "pkgs.python3Packages.doc8"
-    , "pkgs.python3Packages.docformatter"
-    , "pkgs.python3Packages.docker"
-    , "pkgs.python3Packages.docker-py"
-    , "pkgs.python3Packages.docker_pycreds"
-    , "pkgs.python3Packages.dockerfile-parse"
-    , "pkgs.python3Packages.dockerpty"
-    , "pkgs.python3Packages.dockerspawner"
-    , "pkgs.python3Packages.docloud"
-    , "pkgs.python3Packages.docopt"
-    , "pkgs.python3Packages.docopt-ng"
-    , "pkgs.python3Packages.docplex"
-    , "pkgs.python3Packages.docrep"
-    , "pkgs.python3Packages.docstring-parser"
-    , "pkgs.python3Packages.docstring-to-markdown"
-    , "pkgs.python3Packages.doctest-ignore-unicode"
-    , "pkgs.python3Packages.docutils"
-    , "pkgs.python3Packages.docx2python"
-    , "pkgs.python3Packages.docx2txt"
-    , "pkgs.python3Packages.dodgy"
-    , "pkgs.python3Packages.dogpile-cache"
-    , "pkgs.python3Packages.dogpile_cache"
-    , "pkgs.python3Packages.dogtag-pki"
-    , "pkgs.python3Packages.dogtail"
-    , "pkgs.python3Packages.doit"
-    , "pkgs.python3Packages.doit-py"
-    , "pkgs.python3Packages.dokuwiki"
-    , "pkgs.python3Packages.domeneshop"
-    , "pkgs.python3Packages.dominate"
-    , "pkgs.python3Packages.doorbirdpy"
-    , "pkgs.python3Packages.dopy"
-    , "pkgs.python3Packages.dot2tex"
-    , "pkgs.python3Packages.dotmap"
-    , "pkgs.python3Packages.dotty-dict"
-    , "pkgs.python3Packages.dotwiz"
-    , "pkgs.python3Packages.downloader-cli"
-    , "pkgs.python3Packages.dparse"
-    , "pkgs.python3Packages.dparse2"
-    , "pkgs.python3Packages.dpath"
-    , "pkgs.python3Packages.dpcontracts"
-    , "pkgs.python3Packages.dpkt"
-    , "pkgs.python3Packages.draftjs-exporter"
-    , "pkgs.python3Packages.dragonfly"
-    , "pkgs.python3Packages.dramatiq"
-    , "pkgs.python3Packages.drawille"
-    , "pkgs.python3Packages.drawilleplot"
-    , "pkgs.python3Packages.dremel3dpy"
-    , "pkgs.python3Packages.drf-jwt"
-    , "pkgs.python3Packages.drf-nested-routers"
-    , "pkgs.python3Packages.drf-spectacular"
-    , "pkgs.python3Packages.drf-spectacular-sidecar"
-    , "pkgs.python3Packages.drf-ujson2"
-    , "pkgs.python3Packages.drf-writable-nested"
-    , "pkgs.python3Packages.drf-yasg"
-    , "pkgs.python3Packages.drivelib"
-    , "pkgs.python3Packages.drms"
-    , "pkgs.python3Packages.dronecan"
-    , "pkgs.python3Packages.dropbox"
-    , "pkgs.python3Packages.ds-store"
-    , "pkgs.python3Packages.ds4drv"
-    , "pkgs.python3Packages.dsinternals"
-    , "pkgs.python3Packages.dsmr-parser"
-    , "pkgs.python3Packages.dsnap"
-    , "pkgs.python3Packages.dtlssocket"
-    , "pkgs.python3Packages.dtschema"
-    , "pkgs.python3Packages.dtw-python"
-    , "pkgs.python3Packages.ducc0"
-    , "pkgs.python3Packages.duckdb"
-    , "pkgs.python3Packages.duckdb-engine"
-    , "pkgs.python3Packages.duckduckgo-search"
-    , "pkgs.python3Packages.duct-py"
-    , "pkgs.python3Packages.duecredit"
-    , "pkgs.python3Packages.duet"
-    , "pkgs.python3Packages.dufte"
-    , "pkgs.python3Packages.dugong"
-    , "pkgs.python3Packages.dulwich"
-    , "pkgs.python3Packages.dunamai"
-    , "pkgs.python3Packages.dungeon-eos"
-    , "pkgs.python3Packages.duo-client"
-    , "pkgs.python3Packages.durus"
-    , "pkgs.python3Packages.dvc"
-    , "pkgs.python3Packages.dvc-azure"
-    , "pkgs.python3Packages.dvc-data"
-    , "pkgs.python3Packages.dvc-gs"
-    , "pkgs.python3Packages.dvc-http"
-    , "pkgs.python3Packages.dvc-objects"
-    , "pkgs.python3Packages.dvc-render"
-    , "pkgs.python3Packages.dvc-s3"
-    , "pkgs.python3Packages.dvc-ssh"
-    , "pkgs.python3Packages.dvc-studio-client"
-    , "pkgs.python3Packages.dvc-task"
-    , "pkgs.python3Packages.dvclive"
-    , "pkgs.python3Packages.dwdwfsapi"
-    , "pkgs.python3Packages.dyn"
-    , "pkgs.python3Packages.dynalite-devices"
-    , "pkgs.python3Packages.dynd"
-    , "pkgs.python3Packages.eagle100"
-    , "pkgs.python3Packages.easy-thumbnails"
-    , "pkgs.python3Packages.easydict"
-    , "pkgs.python3Packages.easyenergy"
-    , "pkgs.python3Packages.easygui"
-    , "pkgs.python3Packages.easyocr"
-    , "pkgs.python3Packages.easyprocess"
-    , "pkgs.python3Packages.easywatch"
-    , "pkgs.python3Packages.ebaysdk"
-    , "pkgs.python3Packages.ebooklib"
-    , "pkgs.python3Packages.ec2instanceconnectcli"
-    , "pkgs.python3Packages.eccodes"
-    , "pkgs.python3Packages.ecdsa"
-    , "pkgs.python3Packages.echo"
-    , "pkgs.python3Packages.ecoaliface"
-    , "pkgs.python3Packages.ecos"
-    , "pkgs.python3Packages.ecpy"
-    , "pkgs.python3Packages.ecs-logging"
-    , "pkgs.python3Packages.ed25519"
-    , "pkgs.python3Packages.ed25519-blake2b"
-    , "pkgs.python3Packages.edalize"
-    , "pkgs.python3Packages.editables"
-    , "pkgs.python3Packages.editdistance"
-    , "pkgs.python3Packages.editdistance-s"
-    , "pkgs.python3Packages.editorconfig"
-    , "pkgs.python3Packages.edk2-pytool-library"
-    , "pkgs.python3Packages.edlib"
-    , "pkgs.python3Packages.edward"
-    , "pkgs.python3Packages.effdet"
-    , "pkgs.python3Packages.effect"
-    , "pkgs.python3Packages.eggBuildHook"
-    , "pkgs.python3Packages.eggInstallHook"
-    , "pkgs.python3Packages.eggUnpackHook"
-    , "pkgs.python3Packages.eggdeps"
-    , "pkgs.python3Packages.eigenpy"
-    , "pkgs.python3Packages.einops"
-    , "pkgs.python3Packages.eiswarnung"
-    , "pkgs.python3Packages.elastic-apm"
-    , "pkgs.python3Packages.elastic-transport"
-    , "pkgs.python3Packages.elasticsearch"
-    , "pkgs.python3Packages.elasticsearch-dsl"
-    , "pkgs.python3Packages.elasticsearch8"
-    , "pkgs.python3Packages.elasticsearchdsl"
-    , "pkgs.python3Packages.elegy"
-    , "pkgs.python3Packages.elementpath"
-    , "pkgs.python3Packages.elevate"
-    , "pkgs.python3Packages.elgato"
-    , "pkgs.python3Packages.eliot"
-    , "pkgs.python3Packages.eliqonline"
-    , "pkgs.python3Packages.elkm1-lib"
-    , "pkgs.python3Packages.elmax"
-    , "pkgs.python3Packages.elmax-api"
-    , "pkgs.python3Packages.email-validator"
-    , "pkgs.python3Packages.email_validator"
-    , "pkgs.python3Packages.emailthreads"
-    , "pkgs.python3Packages.embedding-reader"
-    , "pkgs.python3Packages.emborg"
-    , "pkgs.python3Packages.embrace"
-    , "pkgs.python3Packages.emcee"
-    , "pkgs.python3Packages.emoji"
-    , "pkgs.python3Packages.empty-files"
-    , "pkgs.python3Packages.empy"
-    , "pkgs.python3Packages.emulated-roku"
-    , "pkgs.python3Packages.emv"
-    , "pkgs.python3Packages.enaml"
-    , "pkgs.python3Packages.enamlx"
-    , "pkgs.python3Packages.encodec"
-    , "pkgs.python3Packages.energyflip-client"
-    , "pkgs.python3Packages.energyflow"
-    , "pkgs.python3Packages.energyzero"
-    , "pkgs.python3Packages.enlighten"
-    , "pkgs.python3Packages.enocean"
-    , "pkgs.python3Packages.enochecker-core"
-    , "pkgs.python3Packages.enrich"
-    , "pkgs.python3Packages.entrance"
-    , "pkgs.python3Packages.entrance-with-router-features"
-    , "pkgs.python3Packages.entry-points-txt"
-    , "pkgs.python3Packages.entrypoint2"
-    , "pkgs.python3Packages.entrypoints"
-    , "pkgs.python3Packages.enturclient"
-    , "pkgs.python3Packages.enum-compat"
-    , "pkgs.python3Packages.env-canada"
-    , "pkgs.python3Packages.environmental-override"
-    , "pkgs.python3Packages.environs"
-    , "pkgs.python3Packages.envisage"
-    , "pkgs.python3Packages.envoy-reader"
-    , "pkgs.python3Packages.envoy-utils"
-    , "pkgs.python3Packages.envs"
-    , "pkgs.python3Packages.enzyme"
-    , "pkgs.python3Packages.epc"
-    , "pkgs.python3Packages.ephem"
-    , "pkgs.python3Packages.ephemeral-port-reserve"
-    , "pkgs.python3Packages.epson-projector"
-    , "pkgs.python3Packages.equinox"
-    , "pkgs.python3Packages.eradicate"
-    , "pkgs.python3Packages.es-client"
-    , "pkgs.python3Packages.escapism"
-    , "pkgs.python3Packages.esig"
-    , "pkgs.python3Packages.espeak-phonemizer"
-    , "pkgs.python3Packages.esphome-dashboard-api"
-    , "pkgs.python3Packages.esprima"
-    , "pkgs.python3Packages.et-xmlfile"
-    , "pkgs.python3Packages.et_xmlfile"
-    , "pkgs.python3Packages.etcd"
-    , "pkgs.python3Packages.etcd3"
-    , "pkgs.python3Packages.ete3"
-    , "pkgs.python3Packages.etebase"
-    , "pkgs.python3Packages.etebase-server"
-    , "pkgs.python3Packages.etelemetry"
-    , "pkgs.python3Packages.eternalegypt"
-    , "pkgs.python3Packages.etesync"
-    , "pkgs.python3Packages.eth-abi"
-    , "pkgs.python3Packages.eth-account"
-    , "pkgs.python3Packages.eth-hash"
-    , "pkgs.python3Packages.eth-keyfile"
-    , "pkgs.python3Packages.eth-keys"
-    , "pkgs.python3Packages.eth-rlp"
-    , "pkgs.python3Packages.eth-typing"
-    , "pkgs.python3Packages.eth-utils"
-    , "pkgs.python3Packages.etils"
-    , "pkgs.python3Packages.etuples"
-    , "pkgs.python3Packages.euclid3"
-    , "pkgs.python3Packages.eufylife-ble-client"
-    , "pkgs.python3Packages.ev3dev2"
-    , "pkgs.python3Packages.evaluate"
-    , "pkgs.python3Packages.evdev"
-    , "pkgs.python3Packages.eve"
-    , "pkgs.python3Packages.eventlet"
-    , "pkgs.python3Packages.events"
-    , "pkgs.python3Packages.evernote"
-    , "pkgs.python3Packages.evohome-async"
-    , "pkgs.python3Packages.evtx"
-    , "pkgs.python3Packages.ewmh"
-    , "pkgs.python3Packages.example-robot-data"
-    , "pkgs.python3Packages.exceptiongroup"
-    , "pkgs.python3Packages.exchangelib"
-    , "pkgs.python3Packages.exdown"
-    , "pkgs.python3Packages.execnb"
-    , "pkgs.python3Packages.execnet"
-    , "pkgs.python3Packages.executing"
-    , "pkgs.python3Packages.executor"
-    , "pkgs.python3Packages.exif"
-    , "pkgs.python3Packages.exifread"
-    , "pkgs.python3Packages.exitcode"
-    , "pkgs.python3Packages.expandvars"
-    , "pkgs.python3Packages.expects"
-    , "pkgs.python3Packages.expecttest"
-    , "pkgs.python3Packages.experiment-utilities"
-    , "pkgs.python3Packages.expiring-dict"
-    , "pkgs.python3Packages.expiringdict"
-    , "pkgs.python3Packages.explorerscript"
-    , "pkgs.python3Packages.exrex"
-    , "pkgs.python3Packages.extractcode"
-    , "pkgs.python3Packages.extractcode-7z"
-    , "pkgs.python3Packages.extractcode-libarchive"
-    , "pkgs.python3Packages.extras"
-    , "pkgs.python3Packages.extruct"
-    , "pkgs.python3Packages.eyeD3"
-    , "pkgs.python3Packages.ezdxf"
-    , "pkgs.python3Packages.ezyrb"
-    , "pkgs.python3Packages.f5-icontrol-rest"
-    , "pkgs.python3Packages.f5-sdk"
-    , "pkgs.python3Packages.f90nml"
-    , "pkgs.python3Packages.faadelays"
-    , "pkgs.python3Packages.fabric"
-    , "pkgs.python3Packages.fabulous"
-    , "pkgs.python3Packages.face"
-    , "pkgs.python3Packages.face-recognition"
-    , "pkgs.python3Packages.face-recognition-models"
-    , "pkgs.python3Packages.face_recognition"
-    , "pkgs.python3Packages.face_recognition_models"
-    , "pkgs.python3Packages.facebook-sdk"
-    , "pkgs.python3Packages.facedancer"
-    , "pkgs.python3Packages.factory-boy"
-    , "pkgs.python3Packages.factory_boy"
-    , "pkgs.python3Packages.fairscale"
-    , "pkgs.python3Packages.fairseq"
-    , "pkgs.python3Packages.faiss"
-    , "pkgs.python3Packages.fake-useragent"
-    , "pkgs.python3Packages.faker"
-    , "pkgs.python3Packages.fakeredis"
-    , "pkgs.python3Packages.falcon"
-    , "pkgs.python3Packages.faraday-agent-parameters-types"
-    , "pkgs.python3Packages.faraday-plugins"
-    , "pkgs.python3Packages.farama-notifications"
-    , "pkgs.python3Packages.farm-haystack"
-    , "pkgs.python3Packages.fast-histogram"
-    , "pkgs.python3Packages.fastai"
-    , "pkgs.python3Packages.fastapi"
-    , "pkgs.python3Packages.fastapi-mail"
-    , "pkgs.python3Packages.fastavro"
-    , "pkgs.python3Packages.fastbencode"
-    , "pkgs.python3Packages.fastcache"
-    , "pkgs.python3Packages.fastcore"
-    , "pkgs.python3Packages.fastdiff"
-    , "pkgs.python3Packages.fastdownload"
-    , "pkgs.python3Packages.fastdtw"
-    , "pkgs.python3Packages.fastecdsa"
-    , "pkgs.python3Packages.fastembed"
-    , "pkgs.python3Packages.fasteners"
-    , "pkgs.python3Packages.fastentrypoints"
-    , "pkgs.python3Packages.faster-fifo"
-    , "pkgs.python3Packages.faster-whisper"
-    , "pkgs.python3Packages.fastimport"
-    , "pkgs.python3Packages.fastjet"
-    , "pkgs.python3Packages.fastjsonschema"
-    , "pkgs.python3Packages.fastnlo_toolkit"
-    , "pkgs.python3Packages.fastnumbers"
-    , "pkgs.python3Packages.fastpair"
-    , "pkgs.python3Packages.fastparquet"
-    , "pkgs.python3Packages.fastpbkdf2"
-    , "pkgs.python3Packages.fastprogress"
-    , "pkgs.python3Packages.fastrlock"
-    , "pkgs.python3Packages.fasttext"
-    , "pkgs.python3Packages.fasttext-predict"
-    , "pkgs.python3Packages.faust-cchardet"
-    , "pkgs.python3Packages.favicon"
-    , "pkgs.python3Packages.fb-re2"
-    , "pkgs.python3Packages.fe25519"
-    , "pkgs.python3Packages.feedgen"
-    , "pkgs.python3Packages.feedgenerator"
-    , "pkgs.python3Packages.feedparser"
-    , "pkgs.python3Packages.fenics"
-    , "pkgs.python3Packages.ffcv"
-    , "pkgs.python3Packages.ffmpeg-progress-yield"
-    , "pkgs.python3Packages.ffmpeg-python"
-    , "pkgs.python3Packages.ffmpy"
-    , "pkgs.python3Packages.fiblary3-fork"
-    , "pkgs.python3Packages.fido2"
-    , "pkgs.python3Packages.fields"
-    , "pkgs.python3Packages.file-read-backwards"
-    , "pkgs.python3Packages.filebrowser_safe"
-    , "pkgs.python3Packages.filebytes"
-    , "pkgs.python3Packages.filecheck"
-    , "pkgs.python3Packages.filedepot"
-    , "pkgs.python3Packages.filelock"
-    , "pkgs.python3Packages.filetype"
-    , "pkgs.python3Packages.filterpy"
-    , "pkgs.python3Packages.finalfusion"
-    , "pkgs.python3Packages.find-libpython"
-    , "pkgs.python3Packages.findimports"
-    , "pkgs.python3Packages.findpython"
-    , "pkgs.python3Packages.fingerprints"
-    , "pkgs.python3Packages.finitude"
-    , "pkgs.python3Packages.fints"
-    , "pkgs.python3Packages.finvizfinance"
-    , "pkgs.python3Packages.fiona"
-    , "pkgs.python3Packages.fipy"
-    , "pkgs.python3Packages.fire"
-    , "pkgs.python3Packages.fireflyalgorithm"
-    , "pkgs.python3Packages.firetv"
-    , "pkgs.python3Packages.first"
-    , "pkgs.python3Packages.fitbit"
-    , "pkgs.python3Packages.fivem-api"
-    , "pkgs.python3Packages.fixerio"
-    , "pkgs.python3Packages.fixtures"
-    , "pkgs.python3Packages.fjaraskupan"
-    , "pkgs.python3Packages.flake8"
-    , "pkgs.python3Packages.flake8-blind-except"
-    , "pkgs.python3Packages.flake8-bugbear"
-    , "pkgs.python3Packages.flake8-debugger"
-    , "pkgs.python3Packages.flake8-docstrings"
-    , "pkgs.python3Packages.flake8-future-import"
-    , "pkgs.python3Packages.flake8-import-order"
-    , "pkgs.python3Packages.flake8-length"
-    , "pkgs.python3Packages.flake8-polyfill"
-    , "pkgs.python3Packages.flaky"
-    , "pkgs.python3Packages.flametree"
-    , "pkgs.python3Packages.flammkuchen"
-    , "pkgs.python3Packages.flasgger"
-    , "pkgs.python3Packages.flashtext"
-    , "pkgs.python3Packages.flask"
-    , "pkgs.python3Packages.flask-admin"
-    , "pkgs.python3Packages.flask-api"
-    , "pkgs.python3Packages.flask-appbuilder"
-    , "pkgs.python3Packages.flask-assets"
-    , "pkgs.python3Packages.flask-autoindex"
-    , "pkgs.python3Packages.flask-babel"
-    , "pkgs.python3Packages.flask-babelex"
-    , "pkgs.python3Packages.flask-basicauth"
-    , "pkgs.python3Packages.flask-bcrypt"
-    , "pkgs.python3Packages.flask-bootstrap"
-    , "pkgs.python3Packages.flask-caching"
-    , "pkgs.python3Packages.flask-common"
-    , "pkgs.python3Packages.flask-compress"
-    , "pkgs.python3Packages.flask-cors"
-    , "pkgs.python3Packages.flask-dramatiq"
-    , "pkgs.python3Packages.flask-elastic"
-    , "pkgs.python3Packages.flask-expects-json"
-    , "pkgs.python3Packages.flask-gravatar"
-    , "pkgs.python3Packages.flask-httpauth"
-    , "pkgs.python3Packages.flask-jwt-extended"
-    , "pkgs.python3Packages.flask-limiter"
-    , "pkgs.python3Packages.flask-login"
-    , "pkgs.python3Packages.flask-mail"
-    , "pkgs.python3Packages.flask-mailman"
-    , "pkgs.python3Packages.flask-marshmallow"
-    , "pkgs.python3Packages.flask-migrate"
-    , "pkgs.python3Packages.flask-mongoengine"
-    , "pkgs.python3Packages.flask-mysqldb"
-    , "pkgs.python3Packages.flask-openid"
-    , "pkgs.python3Packages.flask-paginate"
-    , "pkgs.python3Packages.flask-paranoid"
-    , "pkgs.python3Packages.flask-principal"
-    , "pkgs.python3Packages.flask-pymongo"
-    , "pkgs.python3Packages.flask-restful"
-    , "pkgs.python3Packages.flask-restx"
-    , "pkgs.python3Packages.flask-reverse-proxy-fix"
-    , "pkgs.python3Packages.flask-script"
-    , "pkgs.python3Packages.flask-seasurf"
-    , "pkgs.python3Packages.flask-security-too"
-    , "pkgs.python3Packages.flask-session"
-    , "pkgs.python3Packages.flask-session-captcha"
-    , "pkgs.python3Packages.flask-sessionstore"
-    , "pkgs.python3Packages.flask-silk"
-    , "pkgs.python3Packages.flask-socketio"
-    , "pkgs.python3Packages.flask-sockets"
-    , "pkgs.python3Packages.flask-sqlalchemy"
-    , "pkgs.python3Packages.flask-sslify"
-    , "pkgs.python3Packages.flask-swagger"
-    , "pkgs.python3Packages.flask-swagger-ui"
-    , "pkgs.python3Packages.flask-talisman"
-    , "pkgs.python3Packages.flask-testing"
-    , "pkgs.python3Packages.flask-themes2"
-    , "pkgs.python3Packages.flask-versioned"
-    , "pkgs.python3Packages.flask-wtf"
-    , "pkgs.python3Packages.flask_assets"
-    , "pkgs.python3Packages.flask_elastic"
-    , "pkgs.python3Packages.flask_login"
-    , "pkgs.python3Packages.flask_mail"
-    , "pkgs.python3Packages.flask_marshmallow"
-    , "pkgs.python3Packages.flask_migrate"
-    , "pkgs.python3Packages.flask_principal"
-    , "pkgs.python3Packages.flask_script"
-    , "pkgs.python3Packages.flask_sqlalchemy"
-    , "pkgs.python3Packages.flask_testing"
-    , "pkgs.python3Packages.flask_wtf"
-    , "pkgs.python3Packages.flaskbabel"
-    , "pkgs.python3Packages.flatbuffers"
-    , "pkgs.python3Packages.flatdict"
-    , "pkgs.python3Packages.flatten-dict"
-    , "pkgs.python3Packages.flax"
-    , "pkgs.python3Packages.fleep"
-    , "pkgs.python3Packages.flet"
-    , "pkgs.python3Packages.flet-core"
-    , "pkgs.python3Packages.flexmock"
-    , "pkgs.python3Packages.flickrapi"
-    , "pkgs.python3Packages.flipr-api"
-    , "pkgs.python3Packages.flit"
-    , "pkgs.python3Packages.flit-core"
-    , "pkgs.python3Packages.flit-scm"
-    , "pkgs.python3Packages.floret"
-    , "pkgs.python3Packages.flow-record"
-    , "pkgs.python3Packages.flower"
-    , "pkgs.python3Packages.flowlogs_reader"
-    , "pkgs.python3Packages.fluent-logger"
-    , "pkgs.python3Packages.flufl_bounce"
-    , "pkgs.python3Packages.flufl_i18n"
-    , "pkgs.python3Packages.flufl_lock"
-    , "pkgs.python3Packages.flux-led"
-    , "pkgs.python3Packages.flyingsquid"
-    , "pkgs.python3Packages.flynt"
-    , "pkgs.python3Packages.fn"
-    , "pkgs.python3Packages.fnv-hash-fast"
-    , "pkgs.python3Packages.fnvhash"
-    , "pkgs.python3Packages.folium"
-    , "pkgs.python3Packages.fontawesomefree"
-    , "pkgs.python3Packages.fontforge"
-    , "pkgs.python3Packages.fontmake"
-    , "pkgs.python3Packages.fontmath"
-    , "pkgs.python3Packages.fontparts"
-    , "pkgs.python3Packages.fontpens"
-    , "pkgs.python3Packages.fonttools"
-    , "pkgs.python3Packages.foobot-async"
-    , "pkgs.python3Packages.foolscap"
-    , "pkgs.python3Packages.forbiddenfruit"
-    , "pkgs.python3Packages.fordpass"
-    , "pkgs.python3Packages.forecast-solar"
-    , "pkgs.python3Packages.formbox"
-    , "pkgs.python3Packages.formencode"
-    , "pkgs.python3Packages.formulae"
-    , "pkgs.python3Packages.formulaic"
-    , "pkgs.python3Packages.fortiosapi"
-    , "pkgs.python3Packages.foundationdb71"
-    , "pkgs.python3Packages.fountains"
-    , "pkgs.python3Packages.foxdot"
-    , "pkgs.python3Packages.fpdf"
-    , "pkgs.python3Packages.fpylll"
-    , "pkgs.python3Packages.fpyutils"
-    , "pkgs.python3Packages.fqdn"
-    , "pkgs.python3Packages.freebox-api"
-    , "pkgs.python3Packages.freetype-py"
-    , "pkgs.python3Packages.freezegun"
-    , "pkgs.python3Packages.frida-python"
-    , "pkgs.python3Packages.frigidaire"
-    , "pkgs.python3Packages.frilouz"
-    , "pkgs.python3Packages.fritzconnection"
-    , "pkgs.python3Packages.fritzprofiles"
-    , "pkgs.python3Packages.frozendict"
-    , "pkgs.python3Packages.frozenlist"
-    , "pkgs.python3Packages.fs"
-    , "pkgs.python3Packages.fs-s3fs"
-    , "pkgs.python3Packages.fschat"
-    , "pkgs.python3Packages.fsspec"
-    , "pkgs.python3Packages.fst-pso"
-    , "pkgs.python3Packages.ftfy"
-    , "pkgs.python3Packages.ftputil"
-    , "pkgs.python3Packages.fugashi"
-    , "pkgs.python3Packages.func-timeout"
-    , "pkgs.python3Packages.funcparserlib"
-    , "pkgs.python3Packages.funcsigs"
-    , "pkgs.python3Packages.functiontrace"
-    , "pkgs.python3Packages.funcy"
-    , "pkgs.python3Packages.funsor"
-    , "pkgs.python3Packages.furl"
-    , "pkgs.python3Packages.furo"
-    , "pkgs.python3Packages.fuse"
-    , "pkgs.python3Packages.fusepy"
-    , "pkgs.python3Packages.future"
-    , "pkgs.python3Packages.future-fstrings"
-    , "pkgs.python3Packages.future-typing"
-    , "pkgs.python3Packages.fuzzyfinder"
-    , "pkgs.python3Packages.fuzzytm"
-    , "pkgs.python3Packages.fuzzywuzzy"
-    , "pkgs.python3Packages.fvcore"
-    , "pkgs.python3Packages.fvs"
-    , "pkgs.python3Packages.fx2"
-    , "pkgs.python3Packages.g2pkk"
-    , "pkgs.python3Packages.galario"
-    , "pkgs.python3Packages.galois"
-    , "pkgs.python3Packages.gamble"
-    , "pkgs.python3Packages.gaphas"
-    , "pkgs.python3Packages.garminconnect"
-    , "pkgs.python3Packages.garminconnect-aio"
-    , "pkgs.python3Packages.garminconnect-ha"
-    , "pkgs.python3Packages.garth"
-    , "pkgs.python3Packages.gassist-text"
-    , "pkgs.python3Packages.gast"
-    , "pkgs.python3Packages.gatt"
-    , "pkgs.python3Packages.gattlib"
-    , "pkgs.python3Packages.gb-io"
-    , "pkgs.python3Packages.gbinder-python"
-    , "pkgs.python3Packages.gbulb"
-    , "pkgs.python3Packages.gcal-sync"
-    , "pkgs.python3Packages.gcovr"
-    , "pkgs.python3Packages.gcs-oauth2-boto-plugin"
-    , "pkgs.python3Packages.gcsa"
-    , "pkgs.python3Packages.gcsfs"
-    , "pkgs.python3Packages.gdal"
-    , "pkgs.python3Packages.gdata"
-    , "pkgs.python3Packages.gdcm"
-    , "pkgs.python3Packages.gdown"
-    , "pkgs.python3Packages.ge25519"
-    , "pkgs.python3Packages.geant4"
-    , "pkgs.python3Packages.geeknote"
-    , "pkgs.python3Packages.gehomesdk"
-    , "pkgs.python3Packages.gekitchen"
-    , "pkgs.python3Packages.gemfileparser"
-    , "pkgs.python3Packages.gemfileparser2"
-    , "pkgs.python3Packages.genanki"
-    , "pkgs.python3Packages.generic"
-    , "pkgs.python3Packages.geniushub-client"
-    , "pkgs.python3Packages.genome-collector"
-    , "pkgs.python3Packages.genpy"
-    , "pkgs.python3Packages.genshi"
-    , "pkgs.python3Packages.gensim"
-    , "pkgs.python3Packages.gentools"
-    , "pkgs.python3Packages.genzshcomp"
-    , "pkgs.python3Packages.geoalchemy2"
-    , "pkgs.python3Packages.geocachingapi"
-    , "pkgs.python3Packages.geographiclib"
-    , "pkgs.python3Packages.geoip"
-    , "pkgs.python3Packages.geoip2"
-    , "pkgs.python3Packages.geojson"
-    , "pkgs.python3Packages.geojson-client"
-    , "pkgs.python3Packages.geomet"
-    , "pkgs.python3Packages.geometric"
-    , "pkgs.python3Packages.geopandas"
-    , "pkgs.python3Packages.geopy"
-    , "pkgs.python3Packages.georss-client"
-    , "pkgs.python3Packages.georss-generic-client"
-    , "pkgs.python3Packages.georss-ign-sismologia-client"
-    , "pkgs.python3Packages.georss-ingv-centro-nazionale-terremoti-client"
-    , "pkgs.python3Packages.georss-nrcan-earthquakes-client"
-    , "pkgs.python3Packages.georss-qld-bushfire-alert-client"
-    , "pkgs.python3Packages.georss-tfs-incidents-client"
-    , "pkgs.python3Packages.georss-wa-dfes-client"
-    , "pkgs.python3Packages.get-video-properties"
-    , "pkgs.python3Packages.getjump"
-    , "pkgs.python3Packages.getkey"
-    , "pkgs.python3Packages.getmac"
-    , "pkgs.python3Packages.gevent"
-    , "pkgs.python3Packages.gevent-socketio"
-    , "pkgs.python3Packages.gevent-websocket"
-    , "pkgs.python3Packages.geventhttpclient"
-    , "pkgs.python3Packages.gflags"
-    , "pkgs.python3Packages.ghapi"
-    , "pkgs.python3Packages.ghdiff"
-    , "pkgs.python3Packages.ghp-import"
-    , "pkgs.python3Packages.ghrepo-stats"
-    , "pkgs.python3Packages.gibberish-detector"
-    , "pkgs.python3Packages.gidgethub"
-    , "pkgs.python3Packages.gin-config"
-    , "pkgs.python3Packages.gios"
-    , "pkgs.python3Packages.gipc"
-    , "pkgs.python3Packages.gistyc"
-    , "pkgs.python3Packages.git-annex-adapter"
-    , "pkgs.python3Packages.git-filter-repo"
-    , "pkgs.python3Packages.git-revise"
-    , "pkgs.python3Packages.git-sweep"
-    , "pkgs.python3Packages.git-url-parse"
-    , "pkgs.python3Packages.gitdb"
-    , "pkgs.python3Packages.github-to-sqlite"
-    , "pkgs.python3Packages.github-webhook"
-    , "pkgs.python3Packages.github3_py"
-    , "pkgs.python3Packages.gitignore-parser"
-    , "pkgs.python3Packages.gitlike-commands"
-    , "pkgs.python3Packages.gitpython"
-    , "pkgs.python3Packages.glad"
-    , "pkgs.python3Packages.glad2"
-    , "pkgs.python3Packages.glances-api"
-    , "pkgs.python3Packages.glcontext"
-    , "pkgs.python3Packages.glean-parser"
-    , "pkgs.python3Packages.glean-sdk"
-    , "pkgs.python3Packages.glfw"
-    , "pkgs.python3Packages.glob2"
-    , "pkgs.python3Packages.globre"
-    , "pkgs.python3Packages.globus-sdk"
-    , "pkgs.python3Packages.glom"
-    , "pkgs.python3Packages.glueviz"
-    , "pkgs.python3Packages.glymur"
-    , "pkgs.python3Packages.glyphslib"
-    , "pkgs.python3Packages.gmpy"
-    , "pkgs.python3Packages.gmpy2"
-    , "pkgs.python3Packages.gmsh"
-    , "pkgs.python3Packages.gntp"
-    , "pkgs.python3Packages.gnureadline"
-    , "pkgs.python3Packages.goalzero"
-    , "pkgs.python3Packages.gocardless-pro"
-    , "pkgs.python3Packages.goobook"
-    , "pkgs.python3Packages.goocalendar"
-    , "pkgs.python3Packages.goodwe"
-    , "pkgs.python3Packages.google"
-    , "pkgs.python3Packages.google-ai-generativelanguage"
-    , "pkgs.python3Packages.google-api-core"
-    , "pkgs.python3Packages.google-api-python-client"
-    , "pkgs.python3Packages.google-auth"
-    , "pkgs.python3Packages.google-auth-httplib2"
-    , "pkgs.python3Packages.google-auth-oauthlib"
-    , "pkgs.python3Packages.google-cloud-access-context-manager"
-    , "pkgs.python3Packages.google-cloud-appengine-logging"
-    , "pkgs.python3Packages.google-cloud-artifact-registry"
-    , "pkgs.python3Packages.google-cloud-asset"
-    , "pkgs.python3Packages.google-cloud-audit-log"
-    , "pkgs.python3Packages.google-cloud-automl"
-    , "pkgs.python3Packages.google-cloud-bigquery"
-    , "pkgs.python3Packages.google-cloud-bigquery-datatransfer"
-    , "pkgs.python3Packages.google-cloud-bigquery-logging"
-    , "pkgs.python3Packages.google-cloud-bigquery-storage"
-    , "pkgs.python3Packages.google-cloud-bigtable"
-    , "pkgs.python3Packages.google-cloud-compute"
-    , "pkgs.python3Packages.google-cloud-container"
-    , "pkgs.python3Packages.google-cloud-core"
-    , "pkgs.python3Packages.google-cloud-datacatalog"
-    , "pkgs.python3Packages.google-cloud-dataproc"
-    , "pkgs.python3Packages.google-cloud-datastore"
-    , "pkgs.python3Packages.google-cloud-dlp"
-    , "pkgs.python3Packages.google-cloud-dns"
-    , "pkgs.python3Packages.google-cloud-error-reporting"
-    , "pkgs.python3Packages.google-cloud-firestore"
-    , "pkgs.python3Packages.google-cloud-iam"
-    , "pkgs.python3Packages.google-cloud-iam-logging"
-    , "pkgs.python3Packages.google-cloud-iot"
-    , "pkgs.python3Packages.google-cloud-kms"
-    , "pkgs.python3Packages.google-cloud-language"
-    , "pkgs.python3Packages.google-cloud-logging"
-    , "pkgs.python3Packages.google-cloud-monitoring"
-    , "pkgs.python3Packages.google-cloud-org-policy"
-    , "pkgs.python3Packages.google-cloud-os-config"
-    , "pkgs.python3Packages.google-cloud-pubsub"
-    , "pkgs.python3Packages.google-cloud-redis"
-    , "pkgs.python3Packages.google-cloud-resource-manager"
-    , "pkgs.python3Packages.google-cloud-runtimeconfig"
-    , "pkgs.python3Packages.google-cloud-secret-manager"
-    , "pkgs.python3Packages.google-cloud-securitycenter"
-    , "pkgs.python3Packages.google-cloud-spanner"
-    , "pkgs.python3Packages.google-cloud-speech"
-    , "pkgs.python3Packages.google-cloud-storage"
-    , "pkgs.python3Packages.google-cloud-tasks"
-    , "pkgs.python3Packages.google-cloud-testutils"
-    , "pkgs.python3Packages.google-cloud-texttospeech"
-    , "pkgs.python3Packages.google-cloud-trace"
-    , "pkgs.python3Packages.google-cloud-translate"
-    , "pkgs.python3Packages.google-cloud-videointelligence"
-    , "pkgs.python3Packages.google-cloud-vision"
-    , "pkgs.python3Packages.google-cloud-websecurityscanner"
-    , "pkgs.python3Packages.google-compute-engine"
-    , "pkgs.python3Packages.google-crc32c"
-    , "pkgs.python3Packages.google-generativeai"
-    , "pkgs.python3Packages.google-i18n-address"
-    , "pkgs.python3Packages.google-nest-sdm"
-    , "pkgs.python3Packages.google-pasta"
-    , "pkgs.python3Packages.google-re2"
-    , "pkgs.python3Packages.google-reauth"
-    , "pkgs.python3Packages.google-resumable-media"
-    , "pkgs.python3Packages.google-search-results"
-    , "pkgs.python3Packages.google_api_python_client"
-    , "pkgs.python3Packages.googleapis-common-protos"
-    , "pkgs.python3Packages.googleapis_common_protos"
-    , "pkgs.python3Packages.googlemaps"
-    , "pkgs.python3Packages.googletrans"
-    , "pkgs.python3Packages.gorilla"
-    , "pkgs.python3Packages.govee-ble"
-    , "pkgs.python3Packages.goveelights"
-    , "pkgs.python3Packages.gpapi"
-    , "pkgs.python3Packages.gpaw"
-    , "pkgs.python3Packages.gpgme"
-    , "pkgs.python3Packages.gphoto2"
-    , "pkgs.python3Packages.gpib-ctypes"
-    , "pkgs.python3Packages.gpiozero"
-    , "pkgs.python3Packages.gplaycli"
-    , "pkgs.python3Packages.gprof2dot"
-    , "pkgs.python3Packages.gps3"
-    , "pkgs.python3Packages.gpsoauth"
-    , "pkgs.python3Packages.gpt-2-simple"
-    , "pkgs.python3Packages.gptcache"
-    , "pkgs.python3Packages.gpustat"
-    , "pkgs.python3Packages.gpxpy"
-    , "pkgs.python3Packages.gpy"
-    , "pkgs.python3Packages.gpytorch"
-    , "pkgs.python3Packages.gql"
-    , "pkgs.python3Packages.grad-cam"
-    , "pkgs.python3Packages.gradient"
-    , "pkgs.python3Packages.gradient-utils"
-    , "pkgs.python3Packages.gradient_statsd"
-    , "pkgs.python3Packages.gradio"
-    , "pkgs.python3Packages.gradio-client"
-    , "pkgs.python3Packages.grammalecte"
-    , "pkgs.python3Packages.grandalf"
-    , "pkgs.python3Packages.graph-tool"
-    , "pkgs.python3Packages.grapheme"
-    , "pkgs.python3Packages.graphene"
-    , "pkgs.python3Packages.graphene-django"
-    , "pkgs.python3Packages.graphite-web"
-    , "pkgs.python3Packages.graphql-core"
-    , "pkgs.python3Packages.graphql-relay"
-    , "pkgs.python3Packages.graphql-server-core"
-    , "pkgs.python3Packages.graphql-subscription-manager"
-    , "pkgs.python3Packages.graphqlclient"
-    , "pkgs.python3Packages.graphtage"
-    , "pkgs.python3Packages.graphviz"
-    , "pkgs.python3Packages.grappelli-safe"
-    , "pkgs.python3Packages.grappelli_safe"
-    , "pkgs.python3Packages.graspologic"
-    , "pkgs.python3Packages.greatfet"
-    , "pkgs.python3Packages.greeclimate"
-    , "pkgs.python3Packages.green"
-    , "pkgs.python3Packages.greeneye-monitor"
-    , "pkgs.python3Packages.greenlet"
-    , "pkgs.python3Packages.gremlinpython"
-    , "pkgs.python3Packages.grequests"
-    , "pkgs.python3Packages.greynoise"
-    , "pkgs.python3Packages.gridnet"
-    , "pkgs.python3Packages.griffe"
-    , "pkgs.python3Packages.grip"
-    , "pkgs.python3Packages.groestlcoin_hash"
-    , "pkgs.python3Packages.growattserver"
-    , "pkgs.python3Packages.grpc-google-iam-v1"
-    , "pkgs.python3Packages.grpc-interceptor"
-    , "pkgs.python3Packages.grpc_google_iam_v1"
-    , "pkgs.python3Packages.grpcio"
-    , "pkgs.python3Packages.grpcio-channelz"
-    , "pkgs.python3Packages.grpcio-gcp"
-    , "pkgs.python3Packages.grpcio-health-checking"
-    , "pkgs.python3Packages.grpcio-reflection"
-    , "pkgs.python3Packages.grpcio-status"
-    , "pkgs.python3Packages.grpcio-testing"
-    , "pkgs.python3Packages.grpcio-tools"
-    , "pkgs.python3Packages.grpclib"
-    , "pkgs.python3Packages.gruut"
-    , "pkgs.python3Packages.gruut-ipa"
-    , "pkgs.python3Packages.gsd"
-    , "pkgs.python3Packages.gsm0338"
-    , "pkgs.python3Packages.gspread"
-    , "pkgs.python3Packages.gssapi"
-    , "pkgs.python3Packages.gst-python"
-    , "pkgs.python3Packages.gtfs-realtime-bindings"
-    , "pkgs.python3Packages.gtimelog"
-    , "pkgs.python3Packages.gtts"
-    , "pkgs.python3Packages.gtts-token"
-    , "pkgs.python3Packages.gudhi"
-    , "pkgs.python3Packages.guessit"
-    , "pkgs.python3Packages.guestfs"
-    , "pkgs.python3Packages.guidance"
-    , "pkgs.python3Packages.gumath"
-    , "pkgs.python3Packages.gunicorn"
-    , "pkgs.python3Packages.guppy3"
-    , "pkgs.python3Packages.gurobipy"
-    , "pkgs.python3Packages.guzzle-sphinx-theme"
-    , "pkgs.python3Packages.guzzle_sphinx_theme"
-    , "pkgs.python3Packages.gviz-api"
-    , "pkgs.python3Packages.gvm-tools"
-    , "pkgs.python3Packages.gym"
-    , "pkgs.python3Packages.gym-notices"
-    , "pkgs.python3Packages.gymnasium"
-    , "pkgs.python3Packages.gyp"
-    , "pkgs.python3Packages.h11"
-    , "pkgs.python3Packages.h2"
-    , "pkgs.python3Packages.h3"
-    , "pkgs.python3Packages.h5netcdf"
-    , "pkgs.python3Packages.h5py"
-    , "pkgs.python3Packages.h5py-mpi"
-    , "pkgs.python3Packages.ha-ffmpeg"
-    , "pkgs.python3Packages.ha-mqtt-discoverable"
-    , "pkgs.python3Packages.ha-philipsjs"
-    , "pkgs.python3Packages.habanero"
-    , "pkgs.python3Packages.habitipy"
-    , "pkgs.python3Packages.hachoir"
-    , "pkgs.python3Packages.hacking"
-    , "pkgs.python3Packages.hahomematic"
-    , "pkgs.python3Packages.halo"
-    , "pkgs.python3Packages.halohome"
-    , "pkgs.python3Packages.handout"
-    , "pkgs.python3Packages.hap-python"
-    , "pkgs.python3Packages.hass-nabucasa"
-    , "pkgs.python3Packages.hassil"
-    , "pkgs.python3Packages.hatasmota"
-    , "pkgs.python3Packages.hatch-fancy-pypi-readme"
-    , "pkgs.python3Packages.hatch-jupyter-builder"
-    , "pkgs.python3Packages.hatch-nodejs-version"
-    , "pkgs.python3Packages.hatch-requirements-txt"
-    , "pkgs.python3Packages.hatch-vcs"
-    , "pkgs.python3Packages.hatchling"
-    , "pkgs.python3Packages.haversine"
-    , "pkgs.python3Packages.hawkauthlib"
-    , "pkgs.python3Packages.hcloud"
-    , "pkgs.python3Packages.hcs_utils"
-    , "pkgs.python3Packages.hdate"
-    , "pkgs.python3Packages.hdbscan"
-    , "pkgs.python3Packages.hdf5plugin"
-    , "pkgs.python3Packages.hdfs"
-    , "pkgs.python3Packages.hdmedians"
-    , "pkgs.python3Packages.headerparser"
-    , "pkgs.python3Packages.heapdict"
-    , "pkgs.python3Packages.heatshrink2"
-    , "pkgs.python3Packages.heatzypy"
-    , "pkgs.python3Packages.help2man"
-    , "pkgs.python3Packages.helpdev"
-    , "pkgs.python3Packages.helper"
-    , "pkgs.python3Packages.hepmc3"
-    , "pkgs.python3Packages.hepunits"
-    , "pkgs.python3Packages.here-routing"
-    , "pkgs.python3Packages.here-transit"
-    , "pkgs.python3Packages.herepy"
-    , "pkgs.python3Packages.hetzner"
-    , "pkgs.python3Packages.heudiconv"
-    , "pkgs.python3Packages.hexbytes"
-    , "pkgs.python3Packages.hexdump"
-    , "pkgs.python3Packages.hfst"
-    , "pkgs.python3Packages.hg-commitsigs"
-    , "pkgs.python3Packages.hg-evolve"
-    , "pkgs.python3Packages.hg-git"
-    , "pkgs.python3Packages.hglib"
-    , "pkgs.python3Packages.hickle"
-    , "pkgs.python3Packages.hid"
-    , "pkgs.python3Packages.hid-parser"
-    , "pkgs.python3Packages.hidapi"
-    , "pkgs.python3Packages.hieroglyph"
-    , "pkgs.python3Packages.hijri-converter"
-    , "pkgs.python3Packages.hikvision"
-    , "pkgs.python3Packages.hiredis"
-    , "pkgs.python3Packages.hiro"
-    , "pkgs.python3Packages.hist"
-    , "pkgs.python3Packages.histoprint"
-    , "pkgs.python3Packages.hiyapyco"
-    , "pkgs.python3Packages.hjson"
-    , "pkgs.python3Packages.hkavr"
-    , "pkgs.python3Packages.hkdf"
-    , "pkgs.python3Packages.hledger-utils"
-    , "pkgs.python3Packages.hlk-sw16"
-    , "pkgs.python3Packages.hmmlearn"
-    , "pkgs.python3Packages.hnswlib"
-    , "pkgs.python3Packages.hocr-tools"
-    , "pkgs.python3Packages.hole"
-    , "pkgs.python3Packages.holidays"
-    , "pkgs.python3Packages.hologram"
-    , "pkgs.python3Packages.holoviews"
-    , "pkgs.python3Packages.home-assistant-bluetooth"
-    , "pkgs.python3Packages.home-assistant-chip-clusters"
-    , "pkgs.python3Packages.home-assistant-chip-core"
-    , "pkgs.python3Packages.homeassistant-pyozw"
-    , "pkgs.python3Packages.homeassistant-stubs"
-    , "pkgs.python3Packages.homeconnect"
-    , "pkgs.python3Packages.homematicip"
-    , "pkgs.python3Packages.homepluscontrol"
-    , "pkgs.python3Packages.hoomd-blue"
-    , "pkgs.python3Packages.hopcroftkarp"
-    , "pkgs.python3Packages.horizon-eda"
-    , "pkgs.python3Packages.howdoi"
-    , "pkgs.python3Packages.hpack"
-    , "pkgs.python3Packages.hpccm"
-    , "pkgs.python3Packages.hpp-fcl"
-    , "pkgs.python3Packages.hs-dbus-signature"
-    , "pkgs.python3Packages.hsaudiotag3k"
-    , "pkgs.python3Packages.hsluv"
-    , "pkgs.python3Packages.hstspreload"
-    , "pkgs.python3Packages.html-sanitizer"
-    , "pkgs.python3Packages.html-tag-names"
-    , "pkgs.python3Packages.html-text"
-    , "pkgs.python3Packages.html-void-elements"
-    , "pkgs.python3Packages.html2text"
-    , "pkgs.python3Packages.html5-parser"
-    , "pkgs.python3Packages.html5lib"
-    , "pkgs.python3Packages.html5tagger"
-    , "pkgs.python3Packages.htmllaundry"
-    , "pkgs.python3Packages.htmllistparse"
-    , "pkgs.python3Packages.htmlmin"
-    , "pkgs.python3Packages.htseq"
-    , "pkgs.python3Packages.httmock"
-    , "pkgs.python3Packages.http-ece"
-    , "pkgs.python3Packages.http-message-signatures"
-    , "pkgs.python3Packages.http-parser"
-    , "pkgs.python3Packages.http-sfv"
-    , "pkgs.python3Packages.httpagentparser"
-    , "pkgs.python3Packages.httpauth"
-    , "pkgs.python3Packages.httpbin"
-    , "pkgs.python3Packages.httpcore"
-    , "pkgs.python3Packages.httpie"
-    , "pkgs.python3Packages.httpie-ntlm"
-    , "pkgs.python3Packages.httplib2"
-    , "pkgs.python3Packages.httpretty"
-    , "pkgs.python3Packages.httpserver"
-    , "pkgs.python3Packages.httpsig"
-    , "pkgs.python3Packages.httptools"
-    , "pkgs.python3Packages.httpx"
-    , "pkgs.python3Packages.httpx-auth"
-    , "pkgs.python3Packages.httpx-ntlm"
-    , "pkgs.python3Packages.httpx-socks"
-    , "pkgs.python3Packages.huawei-lte-api"
-    , "pkgs.python3Packages.huey"
-    , "pkgs.python3Packages.hug"
-    , "pkgs.python3Packages.huggingface-hub"
-    , "pkgs.python3Packages.huisbaasje-client"
-    , "pkgs.python3Packages.humanfriendly"
-    , "pkgs.python3Packages.humanize"
-    , "pkgs.python3Packages.humblewx"
-    , "pkgs.python3Packages.hupper"
-    , "pkgs.python3Packages.huum"
-    , "pkgs.python3Packages.hvac"
-    , "pkgs.python3Packages.hvplot"
-    , "pkgs.python3Packages.hwdata"
-    , "pkgs.python3Packages.hwi"
-    , "pkgs.python3Packages.hy"
-    , "pkgs.python3Packages.hydra-check"
-    , "pkgs.python3Packages.hydra-core"
-    , "pkgs.python3Packages.hydrawiser"
-    , "pkgs.python3Packages.hydrus-api"
-    , "pkgs.python3Packages.hypchat"
-    , "pkgs.python3Packages.hypercorn"
-    , "pkgs.python3Packages.hyperframe"
-    , "pkgs.python3Packages.hyperion-py"
-    , "pkgs.python3Packages.hyperlink"
-    , "pkgs.python3Packages.hyperopt"
-    , "pkgs.python3Packages.hyperpyyaml"
-    , "pkgs.python3Packages.hyperscan"
-    , "pkgs.python3Packages.hypothesis"
-    , "pkgs.python3Packages.hypothesis-auto"
-    , "pkgs.python3Packages.hypothesmith"
-    , "pkgs.python3Packages.hyppo"
-    , "pkgs.python3Packages.hyrule"
-    , "pkgs.python3Packages.i-pi"
-    , "pkgs.python3Packages.i2c-tools"
-    , "pkgs.python3Packages.i2csense"
-    , "pkgs.python3Packages.i3-py"
-    , "pkgs.python3Packages.i3ipc"
-    , "pkgs.python3Packages.iammeter"
-    , "pkgs.python3Packages.iapws"
-    , "pkgs.python3Packages.iaqualink"
-    , "pkgs.python3Packages.ibeacon-ble"
-    , "pkgs.python3Packages.ibis"
-    , "pkgs.python3Packages.ibis-framework"
-    , "pkgs.python3Packages.ibm-cloud-sdk-core"
-    , "pkgs.python3Packages.ibm-watson"
-    , "pkgs.python3Packages.ical"
-    , "pkgs.python3Packages.icalendar"
-    , "pkgs.python3Packages.icecream"
-    , "pkgs.python3Packages.iceportal"
-    , "pkgs.python3Packages.icmplib"
-    , "pkgs.python3Packages.icnsutil"
-    , "pkgs.python3Packages.icoextract"
-    , "pkgs.python3Packages.icontract"
-    , "pkgs.python3Packages.ics"
-    , "pkgs.python3Packages.idasen"
-    , "pkgs.python3Packages.identify"
-    , "pkgs.python3Packages.idna"
-    , "pkgs.python3Packages.idna-ssl"
-    , "pkgs.python3Packages.ifaddr"
-    , "pkgs.python3Packages.ifconfig-parser"
-    , "pkgs.python3Packages.ifcopenshell"
-    , "pkgs.python3Packages.ignite"
-    , "pkgs.python3Packages.igraph"
-    , "pkgs.python3Packages.ihm"
-    , "pkgs.python3Packages.iisignature"
-    , "pkgs.python3Packages.ijson"
-    , "pkgs.python3Packages.ilua"
-    , "pkgs.python3Packages.image-diff"
-    , "pkgs.python3Packages.image-go-nord"
-    , "pkgs.python3Packages.imagecodecs-lite"
-    , "pkgs.python3Packages.imagecorruptions"
-    , "pkgs.python3Packages.imagededup"
-    , "pkgs.python3Packages.imagehash"
-    , "pkgs.python3Packages.imageio"
-    , "pkgs.python3Packages.imageio-ffmpeg"
-    , "pkgs.python3Packages.imagesize"
-    , "pkgs.python3Packages.imantics"
-    , "pkgs.python3Packages.imap-tools"
-    , "pkgs.python3Packages.imapclient"
-    , "pkgs.python3Packages.imaplib2"
-    , "pkgs.python3Packages.imbalanced-learn"
-    , "pkgs.python3Packages.img2pdf"
-    , "pkgs.python3Packages.imgdiff"
-    , "pkgs.python3Packages.imgsize"
-    , "pkgs.python3Packages.imgtool"
-    , "pkgs.python3Packages.imia"
-    , "pkgs.python3Packages.iminuit"
-    , "pkgs.python3Packages.immutabledict"
-    , "pkgs.python3Packages.immutables"
-    , "pkgs.python3Packages.impacket"
-    , "pkgs.python3Packages.importlab"
-    , "pkgs.python3Packages.importlib-metadata"
-    , "pkgs.python3Packages.importlib-resources"
-    , "pkgs.python3Packages.importmagic"
-    , "pkgs.python3Packages.imread"
-    , "pkgs.python3Packages.imutils"
-    , "pkgs.python3Packages.in-n-out"
-    , "pkgs.python3Packages.in-place"
-    , "pkgs.python3Packages.incomfort-client"
-    , "pkgs.python3Packages.incremental"
-    , "pkgs.python3Packages.indexed-bzip2"
-    , "pkgs.python3Packages.indexed-gzip"
-    , "pkgs.python3Packages.indexed-zstd"
-    , "pkgs.python3Packages.infinity"
-    , "pkgs.python3Packages.inflect"
-    , "pkgs.python3Packages.inflection"
-    , "pkgs.python3Packages.influxdb"
-    , "pkgs.python3Packages.influxdb-client"
-    , "pkgs.python3Packages.inform"
-    , "pkgs.python3Packages.iniconfig"
-    , "pkgs.python3Packages.inifile"
-    , "pkgs.python3Packages.iniparse"
-    , "pkgs.python3Packages.injector"
-    , "pkgs.python3Packages.inkbird-ble"
-    , "pkgs.python3Packages.inkex"
-    , "pkgs.python3Packages.inlinestyler"
-    , "pkgs.python3Packages.inotify"
-    , "pkgs.python3Packages.inotify-simple"
-    , "pkgs.python3Packages.inotifyrecursive"
-    , "pkgs.python3Packages.inquirer"
-    , "pkgs.python3Packages.inquirerpy"
-    , "pkgs.python3Packages.inscriptis"
-    , "pkgs.python3Packages.insegel"
-    , "pkgs.python3Packages.insightface"
-    , "pkgs.python3Packages.installer"
-    , "pkgs.python3Packages.insteon-frontend-home-assistant"
-    , "pkgs.python3Packages.intake"
-    , "pkgs.python3Packages.intake-parquet"
-    , "pkgs.python3Packages.intbitset"
-    , "pkgs.python3Packages.intelhex"
-    , "pkgs.python3Packages.intellifire4py"
-    , "pkgs.python3Packages.intensity-normalization"
-    , "pkgs.python3Packages.interface-meta"
-    , "pkgs.python3Packages.internetarchive"
-    , "pkgs.python3Packages.interruptingcow"
-    , "pkgs.python3Packages.intervaltree"
-    , "pkgs.python3Packages.into-dbus-python"
-    , "pkgs.python3Packages.invisible-watermark"
-    , "pkgs.python3Packages.invocations"
-    , "pkgs.python3Packages.invoke"
-    , "pkgs.python3Packages.iocapture"
-    , "pkgs.python3Packages.iocextract"
-    , "pkgs.python3Packages.iodata"
-    , "pkgs.python3Packages.ionhash"
-    , "pkgs.python3Packages.ionoscloud"
-    , "pkgs.python3Packages.iopath"
-    , "pkgs.python3Packages.iotawattpy"
-    , "pkgs.python3Packages.iowait"
-    , "pkgs.python3Packages.ipaddr"
-    , "pkgs.python3Packages.ipadic"
-    , "pkgs.python3Packages.ipdb"
-    , "pkgs.python3Packages.ipdbplugin"
-    , "pkgs.python3Packages.ipfshttpclient"
-    , "pkgs.python3Packages.iptools"
-    , "pkgs.python3Packages.ipwhl"
-    , "pkgs.python3Packages.ipwhois"
-    , "pkgs.python3Packages.ipy"
-    , "pkgs.python3Packages.ipycanvas"
-    , "pkgs.python3Packages.ipydatawidgets"
-    , "pkgs.python3Packages.ipykernel"
-    , "pkgs.python3Packages.ipymarkup"
-    , "pkgs.python3Packages.ipympl"
-    , "pkgs.python3Packages.ipynbname"
-    , "pkgs.python3Packages.ipyniivue"
-    , "pkgs.python3Packages.ipyparallel"
-    , "pkgs.python3Packages.ipytablewidgets"
-    , "pkgs.python3Packages.ipython"
-    , "pkgs.python3Packages.ipython-genutils"
-    , "pkgs.python3Packages.ipython-sql"
-    , "pkgs.python3Packages.ipython_genutils"
-    , "pkgs.python3Packages.ipyvue"
-    , "pkgs.python3Packages.ipyvuetify"
-    , "pkgs.python3Packages.ipywidgets"
-    , "pkgs.python3Packages.ipyxact"
-    , "pkgs.python3Packages.irc"
-    , "pkgs.python3Packages.ircrobots"
-    , "pkgs.python3Packages.ircstates"
-    , "pkgs.python3Packages.irctokens"
-    , "pkgs.python3Packages.isbnlib"
-    , "pkgs.python3Packages.islpy"
-    , "pkgs.python3Packages.ismartgate"
-    , "pkgs.python3Packages.iso-639"
-    , "pkgs.python3Packages.iso3166"
-    , "pkgs.python3Packages.iso4217"
-    , "pkgs.python3Packages.iso8601"
-    , "pkgs.python3Packages.isodate"
-    , "pkgs.python3Packages.isoduration"
-    , "pkgs.python3Packages.isort"
-    , "pkgs.python3Packages.isosurfaces"
-    , "pkgs.python3Packages.isounidecode"
-    , "pkgs.python3Packages.isoweek"
-    , "pkgs.python3Packages.itanium-demangler"
-    , "pkgs.python3Packages.itanium_demangler"
-    , "pkgs.python3Packages.itemadapter"
-    , "pkgs.python3Packages.itemdb"
-    , "pkgs.python3Packages.itemloaders"
-    , "pkgs.python3Packages.iteration-utilities"
-    , "pkgs.python3Packages.iterative-telemetry"
-    , "pkgs.python3Packages.iterm2"
-    , "pkgs.python3Packages.itsdangerous"
-    , "pkgs.python3Packages.itunespy"
-    , "pkgs.python3Packages.itypes"
-    , "pkgs.python3Packages.iwlib"
-    , "pkgs.python3Packages.j2cli"
-    , "pkgs.python3Packages.jaconv"
-    , "pkgs.python3Packages.jaeger-client"
-    , "pkgs.python3Packages.jamo"
-    , "pkgs.python3Packages.janus"
-    , "pkgs.python3Packages.jaraco-abode"
-    , "pkgs.python3Packages.jaraco-classes"
-    , "pkgs.python3Packages.jaraco-collections"
-    , "pkgs.python3Packages.jaraco-context"
-    , "pkgs.python3Packages.jaraco-email"
-    , "pkgs.python3Packages.jaraco-functools"
-    , "pkgs.python3Packages.jaraco-itertools"
-    , "pkgs.python3Packages.jaraco-logging"
-    , "pkgs.python3Packages.jaraco-net"
-    , "pkgs.python3Packages.jaraco-stream"
-    , "pkgs.python3Packages.jaraco-test"
-    , "pkgs.python3Packages.jaraco-text"
-    , "pkgs.python3Packages.jaraco_classes"
-    , "pkgs.python3Packages.jaraco_collections"
-    , "pkgs.python3Packages.jaraco_functools"
-    , "pkgs.python3Packages.jaraco_itertools"
-    , "pkgs.python3Packages.jaraco_logging"
-    , "pkgs.python3Packages.jaraco_stream"
-    , "pkgs.python3Packages.jaraco_text"
-    , "pkgs.python3Packages.jarowinkler"
-    , "pkgs.python3Packages.javaobj-py3"
-    , "pkgs.python3Packages.javaproperties"
-    , "pkgs.python3Packages.jax"
-    , "pkgs.python3Packages.jax-jumpy"
-    , "pkgs.python3Packages.jaxlib"
-    , "pkgs.python3Packages.jaxlib-bin"
-    , "pkgs.python3Packages.jaxlib-build"
-    , "pkgs.python3Packages.jaxlibWithCuda"
-    , "pkgs.python3Packages.jaxlibWithoutCuda"
-    , "pkgs.python3Packages.jaxopt"
-    , "pkgs.python3Packages.jaxtyping"
-    , "pkgs.python3Packages.jaydebeapi"
-    , "pkgs.python3Packages.jc"
-    , "pkgs.python3Packages.jdatetime"
-    , "pkgs.python3Packages.jdcal"
-    , "pkgs.python3Packages.jedi"
-    , "pkgs.python3Packages.jedi-language-server"
-    , "pkgs.python3Packages.jeepney"
-    , "pkgs.python3Packages.jello"
-    , "pkgs.python3Packages.jellyfin-apiclient-python"
-    , "pkgs.python3Packages.jellyfish"
-    , "pkgs.python3Packages.jenkins-job-builder"
-    , "pkgs.python3Packages.jenkinsapi"
-    , "pkgs.python3Packages.jieba"
-    , "pkgs.python3Packages.jinja2"
-    , "pkgs.python3Packages.jinja2-ansible-filters"
-    , "pkgs.python3Packages.jinja2-git"
-    , "pkgs.python3Packages.jinja2-pluralize"
-    , "pkgs.python3Packages.jinja2-time"
-    , "pkgs.python3Packages.jinja2_pluralize"
-    , "pkgs.python3Packages.jinja2_time"
-    , "pkgs.python3Packages.jira"
-    , "pkgs.python3Packages.jiwer"
-    , "pkgs.python3Packages.jmespath"
-    , "pkgs.python3Packages.jmp"
-    , "pkgs.python3Packages.joblib"
-    , "pkgs.python3Packages.johnnycanencrypt"
-    , "pkgs.python3Packages.josepy"
-    , "pkgs.python3Packages.journalwatch"
-    , "pkgs.python3Packages.jplephem"
-    , "pkgs.python3Packages.jproperties"
-    , "pkgs.python3Packages.jpylyzer"
-    , "pkgs.python3Packages.jpype1"
-    , "pkgs.python3Packages.jq"
-    , "pkgs.python3Packages.js2py"
-    , "pkgs.python3Packages.jsbeautifier"
-    , "pkgs.python3Packages.jschema-to-python"
-    , "pkgs.python3Packages.jsmin"
-    , "pkgs.python3Packages.json-home-client"
-    , "pkgs.python3Packages.json-logging"
-    , "pkgs.python3Packages.json-merge-patch"
-    , "pkgs.python3Packages.json-rpc"
-    , "pkgs.python3Packages.json-schema-for-humans"
-    , "pkgs.python3Packages.json-stream"
-    , "pkgs.python3Packages.json-stream-rs-tokenizer"
-    , "pkgs.python3Packages.json-tricks"
-    , "pkgs.python3Packages.json5"
-    , "pkgs.python3Packages.jsonable"
-    , "pkgs.python3Packages.jsonconversion"
-    , "pkgs.python3Packages.jsondate"
-    , "pkgs.python3Packages.jsondiff"
-    , "pkgs.python3Packages.jsonfield"
-    , "pkgs.python3Packages.jsonlines"
-    , "pkgs.python3Packages.jsonmerge"
-    , "pkgs.python3Packages.jsonnet"
-    , "pkgs.python3Packages.jsonpatch"
-    , "pkgs.python3Packages.jsonpath"
-    , "pkgs.python3Packages.jsonpath-ng"
-    , "pkgs.python3Packages.jsonpath_rw"
-    , "pkgs.python3Packages.jsonpickle"
-    , "pkgs.python3Packages.jsonpointer"
-    , "pkgs.python3Packages.jsonref"
-    , "pkgs.python3Packages.jsonrpc-async"
-    , "pkgs.python3Packages.jsonrpc-base"
-    , "pkgs.python3Packages.jsonrpc-websocket"
-    , "pkgs.python3Packages.jsonrpclib-pelix"
-    , "pkgs.python3Packages.jsons"
-    , "pkgs.python3Packages.jsonschema"
-    , "pkgs.python3Packages.jsonschema-spec"
-    , "pkgs.python3Packages.jsonschema-specifications"
-    , "pkgs.python3Packages.jsonstreams"
-    , "pkgs.python3Packages.jstyleson"
-    , "pkgs.python3Packages.jug"
-    , "pkgs.python3Packages.junit-xml"
-    , "pkgs.python3Packages.junit2html"
-    , "pkgs.python3Packages.junitparser"
-    , "pkgs.python3Packages.junos-eznc"
-    , "pkgs.python3Packages.jupyter"
-    , "pkgs.python3Packages.jupyter-book"
-    , "pkgs.python3Packages.jupyter-c-kernel"
-    , "pkgs.python3Packages.jupyter-cache"
-    , "pkgs.python3Packages.jupyter-client"
-    , "pkgs.python3Packages.jupyter-collaboration"
-    , "pkgs.python3Packages.jupyter-console"
-    , "pkgs.python3Packages.jupyter-contrib-core"
-    , "pkgs.python3Packages.jupyter-contrib-nbextensions"
-    , "pkgs.python3Packages.jupyter-core"
-    , "pkgs.python3Packages.jupyter-events"
-    , "pkgs.python3Packages.jupyter-highlight-selected-word"
-    , "pkgs.python3Packages.jupyter-lsp"
-    , "pkgs.python3Packages.jupyter-nbextensions-configurator"
-    , "pkgs.python3Packages.jupyter-packaging"
-    , "pkgs.python3Packages.jupyter-repo2docker"
-    , "pkgs.python3Packages.jupyter-server"
-    , "pkgs.python3Packages.jupyter-server-fileid"
-    , "pkgs.python3Packages.jupyter-server-mathjax"
-    , "pkgs.python3Packages.jupyter-server-terminals"
-    , "pkgs.python3Packages.jupyter-server-ydoc"
-    , "pkgs.python3Packages.jupyter-sphinx"
-    , "pkgs.python3Packages.jupyter-telemetry"
-    , "pkgs.python3Packages.jupyter-ui-poll"
-    , "pkgs.python3Packages.jupyter-ydoc"
-    , "pkgs.python3Packages.jupyter_client"
-    , "pkgs.python3Packages.jupyter_console"
-    , "pkgs.python3Packages.jupyter_core"
-    , "pkgs.python3Packages.jupyter_server"
-    , "pkgs.python3Packages.jupyterhub"
-    , "pkgs.python3Packages.jupyterhub-ldapauthenticator"
-    , "pkgs.python3Packages.jupyterhub-systemdspawner"
-    , "pkgs.python3Packages.jupyterhub-tmpauthenticator"
-    , "pkgs.python3Packages.jupyterlab"
-    , "pkgs.python3Packages.jupyterlab-git"
-    , "pkgs.python3Packages.jupyterlab-lsp"
-    , "pkgs.python3Packages.jupyterlab-pygments"
-    , "pkgs.python3Packages.jupyterlab-server"
-    , "pkgs.python3Packages.jupyterlab-widgets"
-    , "pkgs.python3Packages.jupyterlab_server"
-    , "pkgs.python3Packages.jupytext"
-    , "pkgs.python3Packages.justbackoff"
-    , "pkgs.python3Packages.justbases"
-    , "pkgs.python3Packages.justbytes"
-    , "pkgs.python3Packages.justnimbus"
-    , "pkgs.python3Packages.jwcrypto"
-    , "pkgs.python3Packages.jwt"
-    , "pkgs.python3Packages.jxmlease"
-    , "pkgs.python3Packages.k-diffusion"
-    , "pkgs.python3Packages.k5test"
-    , "pkgs.python3Packages.kaa-base"
-    , "pkgs.python3Packages.kaa-metadata"
-    , "pkgs.python3Packages.kafka-python"
-    , "pkgs.python3Packages.kaggle"
-    , "pkgs.python3Packages.kaitaistruct"
-    , "pkgs.python3Packages.kajiki"
-    , "pkgs.python3Packages.kaldi-active-grammar"
-    , "pkgs.python3Packages.kanidm"
-    , "pkgs.python3Packages.kaptan"
-    , "pkgs.python3Packages.karton-asciimagic"
-    , "pkgs.python3Packages.karton-autoit-ripper"
-    , "pkgs.python3Packages.karton-classifier"
-    , "pkgs.python3Packages.karton-config-extractor"
-    , "pkgs.python3Packages.karton-core"
-    , "pkgs.python3Packages.karton-dashboard"
-    , "pkgs.python3Packages.karton-mwdb-reporter"
-    , "pkgs.python3Packages.karton-yaramatcher"
-    , "pkgs.python3Packages.kasa-crypt"
-    , "pkgs.python3Packages.kazoo"
-    , "pkgs.python3Packages.kbcstorage"
-    , "pkgs.python3Packages.kconfiglib"
-    , "pkgs.python3Packages.keba-kecontact"
-    , "pkgs.python3Packages.keep"
-    , "pkgs.python3Packages.keepalive"
-    , "pkgs.python3Packages.keepkey"
-    , "pkgs.python3Packages.keepkey_agent"
-    , "pkgs.python3Packages.kegtron-ble"
-    , "pkgs.python3Packages.keras"
-    , "pkgs.python3Packages.keras-applications"
-    , "pkgs.python3Packages.keras-preprocessing"
-    , "pkgs.python3Packages.kerberos"
-    , "pkgs.python3Packages.keyboard"
-    , "pkgs.python3Packages.keyring"
-    , "pkgs.python3Packages.keyrings-alt"
-    , "pkgs.python3Packages.keyrings-cryptfile"
-    , "pkgs.python3Packages.keyrings-google-artifactregistry-auth"
-    , "pkgs.python3Packages.keyrings-passwordstore"
-    , "pkgs.python3Packages.keystone-engine"
-    , "pkgs.python3Packages.keystoneauth1"
-    , "pkgs.python3Packages.keyutils"
-    , "pkgs.python3Packages.kicad"
-    , "pkgs.python3Packages.kinparse"
-    , "pkgs.python3Packages.kiss-headers"
-    , "pkgs.python3Packages.kitchen"
-    , "pkgs.python3Packages.kivy"
-    , "pkgs.python3Packages.kivy-garden"
-    , "pkgs.python3Packages.kiwiki-client"
-    , "pkgs.python3Packages.kiwisolver"
-    , "pkgs.python3Packages.klaus"
-    , "pkgs.python3Packages.klein"
-    , "pkgs.python3Packages.kmapper"
-    , "pkgs.python3Packages.kml2geojson"
-    , "pkgs.python3Packages.kmsxx"
-    , "pkgs.python3Packages.knack"
-    , "pkgs.python3Packages.kneed"
-    , "pkgs.python3Packages.knx-frontend"
-    , "pkgs.python3Packages.kombu"
-    , "pkgs.python3Packages.konnected"
-    , "pkgs.python3Packages.korean-lunar-calendar"
-    , "pkgs.python3Packages.kornia"
-    , "pkgs.python3Packages.kotsu"
-    , "pkgs.python3Packages.krakenex"
-    , "pkgs.python3Packages.krfzf-py"
-    , "pkgs.python3Packages.kubernetes"
-    , "pkgs.python3Packages.l18n"
-    , "pkgs.python3Packages.labelbox"
-    , "pkgs.python3Packages.labgrid"
-    , "pkgs.python3Packages.labmath"
-    , "pkgs.python3Packages.lakeside"
-    , "pkgs.python3Packages.langchain"
-    , "pkgs.python3Packages.langchainplus-sdk"
-    , "pkgs.python3Packages.langcodes"
-    , "pkgs.python3Packages.langdetect"
-    , "pkgs.python3Packages.langid"
-    , "pkgs.python3Packages.langsmith"
-    , "pkgs.python3Packages.language-data"
-    , "pkgs.python3Packages.language-tags"
-    , "pkgs.python3Packages.lanms-neo"
-    , "pkgs.python3Packages.lark"
-    , "pkgs.python3Packages.laspy"
-    , "pkgs.python3Packages.laszip"
-    , "pkgs.python3Packages.latex2mathml"
-    , "pkgs.python3Packages.latexcodec"
-    , "pkgs.python3Packages.latexify-py"
-    , "pkgs.python3Packages.launchpadlib"
-    , "pkgs.python3Packages.laundrify-aio"
-    , "pkgs.python3Packages.layoutparser"
-    , "pkgs.python3Packages.lazr-config"
-    , "pkgs.python3Packages.lazr-delegates"
-    , "pkgs.python3Packages.lazr-restfulclient"
-    , "pkgs.python3Packages.lazr-uri"
-    , "pkgs.python3Packages.lazr_config"
-    , "pkgs.python3Packages.lazr_delegates"
-    , "pkgs.python3Packages.lazy"
-    , "pkgs.python3Packages.lazy-imports"
-    , "pkgs.python3Packages.lazy-loader"
-    , "pkgs.python3Packages.lazy-object-proxy"
-    , "pkgs.python3Packages.lazy_import"
-    , "pkgs.python3Packages.lazy_imports"
-    , "pkgs.python3Packages.lc7001"
-    , "pkgs.python3Packages.lcgit"
-    , "pkgs.python3Packages.lcov_cobertura"
-    , "pkgs.python3Packages.ld2410-ble"
-    , "pkgs.python3Packages.ldap"
-    , "pkgs.python3Packages.ldap3"
-    , "pkgs.python3Packages.ldapdomaindump"
-    , "pkgs.python3Packages.ldappool"
-    , "pkgs.python3Packages.ldaptor"
-    , "pkgs.python3Packages.leather"
-    , "pkgs.python3Packages.leb128"
-    , "pkgs.python3Packages.led-ble"
-    , "pkgs.python3Packages.ledger"
-    , "pkgs.python3Packages.ledger-bitcoin"
-    , "pkgs.python3Packages.ledger_agent"
-    , "pkgs.python3Packages.ledgerblue"
-    , "pkgs.python3Packages.ledgercomm"
-    , "pkgs.python3Packages.ledgerwallet"
-    , "pkgs.python3Packages.leidenalg"
-    , "pkgs.python3Packages.leveldb"
-    , "pkgs.python3Packages.levenshtein"
-    , "pkgs.python3Packages.lexid"
-    , "pkgs.python3Packages.lhapdf"
-    , "pkgs.python3Packages.libagent"
-    , "pkgs.python3Packages.libais"
-    , "pkgs.python3Packages.libarchive-c"
-    , "pkgs.python3Packages.libarcus"
-    , "pkgs.python3Packages.libasyncns"
-    , "pkgs.python3Packages.libclang"
-    , "pkgs.python3Packages.libcloud"
-    , "pkgs.python3Packages.libcst"
-    , "pkgs.python3Packages.libevdev"
-    , "pkgs.python3Packages.libfdt"
-    , "pkgs.python3Packages.libfive"
-    , "pkgs.python3Packages.libgpiod"
-    , "pkgs.python3Packages.libgpuarray"
-    , "pkgs.python3Packages.libiio"
-    , "pkgs.python3Packages.libkeepass"
-    , "pkgs.python3Packages.libknot"
-    , "pkgs.python3Packages.liblarch"
-    , "pkgs.python3Packages.liblzfse"
-    , "pkgs.python3Packages.libmodulemd"
-    , "pkgs.python3Packages.libmr"
-    , "pkgs.python3Packages.libnacl"
-    , "pkgs.python3Packages.libpcap"
-    , "pkgs.python3Packages.libpurecool"
-    , "pkgs.python3Packages.libpwquality"
-    , "pkgs.python3Packages.libpyfoscam"
-    , "pkgs.python3Packages.libpyvivotek"
-    , "pkgs.python3Packages.libredwg"
-    , "pkgs.python3Packages.librepo"
-    , "pkgs.python3Packages.librespot"
-    , "pkgs.python3Packages.libretranslate"
-    , "pkgs.python3Packages.librosa"
-    , "pkgs.python3Packages.librouteros"
-    , "pkgs.python3Packages.libsass"
-    , "pkgs.python3Packages.libsavitar"
-    , "pkgs.python3Packages.libselinux"
-    , "pkgs.python3Packages.libsixel"
-    , "pkgs.python3Packages.libsoundtouch"
-    , "pkgs.python3Packages.libthumbor"
-    , "pkgs.python3Packages.libtmux"
-    , "pkgs.python3Packages.libtorrent-rasterbar"
-    , "pkgs.python3Packages.libusb1"
-    , "pkgs.python3Packages.libusbsio"
-    , "pkgs.python3Packages.libversion"
-    , "pkgs.python3Packages.libvirt"
-    , "pkgs.python3Packages.libxml2"
-    , "pkgs.python3Packages.libxslt"
-    , "pkgs.python3Packages.liccheck"
-    , "pkgs.python3Packages.license-expression"
-    , "pkgs.python3Packages.lief"
-    , "pkgs.python3Packages.life360"
-    , "pkgs.python3Packages.lifelines"
-    , "pkgs.python3Packages.lightgbm"
-    , "pkgs.python3Packages.lightning-utilities"
-    , "pkgs.python3Packages.lightparam"
-    , "pkgs.python3Packages.lightwave"
-    , "pkgs.python3Packages.lightwave2"
-    , "pkgs.python3Packages.lima"
-    , "pkgs.python3Packages.lime"
-    , "pkgs.python3Packages.limiter"
-    , "pkgs.python3Packages.limitlessled"
-    , "pkgs.python3Packages.limits"
-    , "pkgs.python3Packages.limnoria"
-    , "pkgs.python3Packages.line-profiler"
-    , "pkgs.python3Packages.line_profiler"
-    , "pkgs.python3Packages.linear_operator"
-    , "pkgs.python3Packages.linecache2"
-    , "pkgs.python3Packages.lineedit"
-    , "pkgs.python3Packages.linetable"
-    , "pkgs.python3Packages.lingua"
-    , "pkgs.python3Packages.linkify-it-py"
-    , "pkgs.python3Packages.linknlink"
-    , "pkgs.python3Packages.linode"
-    , "pkgs.python3Packages.linode-api"
-    , "pkgs.python3Packages.linuxfd"
-    , "pkgs.python3Packages.lion-pytorch"
-    , "pkgs.python3Packages.liquidctl"
-    , "pkgs.python3Packages.lirc"
-    , "pkgs.python3Packages.lit"
-    , "pkgs.python3Packages.litellm"
-    , "pkgs.python3Packages.litemapy"
-    , "pkgs.python3Packages.littleutils"
-    , "pkgs.python3Packages.livelossplot"
-    , "pkgs.python3Packages.livereload"
-    , "pkgs.python3Packages.livestreamer"
-    , "pkgs.python3Packages.livestreamer-curses"
-    , "pkgs.python3Packages.lizard"
-    , "pkgs.python3Packages.llfuse"
-    , "pkgs.python3Packages.llm"
-    , "pkgs.python3Packages.llvmlite"
-    , "pkgs.python3Packages.lmdb"
-    , "pkgs.python3Packages.lmfit"
-    , "pkgs.python3Packages.lml"
-    , "pkgs.python3Packages.lmnotify"
-    , "pkgs.python3Packages.lmtpd"
-    , "pkgs.python3Packages.loca"
-    , "pkgs.python3Packages.localimport"
-    , "pkgs.python3Packages.localstack"
-    , "pkgs.python3Packages.localstack-client"
-    , "pkgs.python3Packages.localstack-ext"
-    , "pkgs.python3Packages.localzone"
-    , "pkgs.python3Packages.locationsharinglib"
-    , "pkgs.python3Packages.locket"
-    , "pkgs.python3Packages.lockfile"
-    , "pkgs.python3Packages.log-symbols"
-    , "pkgs.python3Packages.logbook"
-    , "pkgs.python3Packages.logfury"
-    , "pkgs.python3Packages.logging-journald"
-    , "pkgs.python3Packages.logi-circle"
-    , "pkgs.python3Packages.logical-unification"
-    , "pkgs.python3Packages.logilab-common"
-    , "pkgs.python3Packages.logilab-constraint"
-    , "pkgs.python3Packages.logilab_common"
-    , "pkgs.python3Packages.logster"
-    , "pkgs.python3Packages.loguru"
-    , "pkgs.python3Packages.logutils"
-    , "pkgs.python3Packages.logzero"
-    , "pkgs.python3Packages.lomond"
-    , "pkgs.python3Packages.loo-py"
-    , "pkgs.python3Packages.loopy"
-    , "pkgs.python3Packages.looseversion"
-    , "pkgs.python3Packages.loqedapi"
-    , "pkgs.python3Packages.losant-rest"
-    , "pkgs.python3Packages.lpc-checksum"
-    , "pkgs.python3Packages.lrcalc-python"
-    , "pkgs.python3Packages.lru-dict"
-    , "pkgs.python3Packages.lsassy"
-    , "pkgs.python3Packages.lsprotocol"
-    , "pkgs.python3Packages.ltpycld2"
-    , "pkgs.python3Packages.luddite"
-    , "pkgs.python3Packages.luftdaten"
-    , "pkgs.python3Packages.luhn"
-    , "pkgs.python3Packages.lunarcalendar"
-    , "pkgs.python3Packages.lupa"
-    , "pkgs.python3Packages.lupupy"
-    , "pkgs.python3Packages.luqum"
-    , "pkgs.python3Packages.luxor"
-    , "pkgs.python3Packages.luxtronik"
-    , "pkgs.python3Packages.lxmf"
-    , "pkgs.python3Packages.lxml"
-    , "pkgs.python3Packages.lxml-stubs"
-    , "pkgs.python3Packages.lyricwikia"
-    , "pkgs.python3Packages.lz4"
-    , "pkgs.python3Packages.lzallright"
-    , "pkgs.python3Packages.lzstring"
-    , "pkgs.python3Packages.m2crypto"
-    , "pkgs.python3Packages.m2r"
-    , "pkgs.python3Packages.m3u8"
-    , "pkgs.python3Packages.mac-vendor-lookup"
-    , "pkgs.python3Packages.mac_alias"
-    , "pkgs.python3Packages.macaddress"
-    , "pkgs.python3Packages.macfsevents"
-    , "pkgs.python3Packages.macropy"
-    , "pkgs.python3Packages.maestral"
-    , "pkgs.python3Packages.magic"
-    , "pkgs.python3Packages.magic-filter"
-    , "pkgs.python3Packages.magic-wormhole"
-    , "pkgs.python3Packages.magic-wormhole-mailbox-server"
-    , "pkgs.python3Packages.magic-wormhole-transit-relay"
-    , "pkgs.python3Packages.magicgui"
-    , "pkgs.python3Packages.mahotas"
-    , "pkgs.python3Packages.mail-parser"
-    , "pkgs.python3Packages.mailcap-fix"
-    , "pkgs.python3Packages.mailchecker"
-    , "pkgs.python3Packages.mailchimp"
-    , "pkgs.python3Packages.mailmanclient"
-    , "pkgs.python3Packages.mailsuite"
-    , "pkgs.python3Packages.maison"
-    , "pkgs.python3Packages.makefun"
-    , "pkgs.python3Packages.mako"
-    , "pkgs.python3Packages.malduck"
-    , "pkgs.python3Packages.managesieve"
-    , "pkgs.python3Packages.mando"
-    , "pkgs.python3Packages.mandown"
-    , "pkgs.python3Packages.manhole"
-    , "pkgs.python3Packages.manifest-ml"
-    , "pkgs.python3Packages.manifestoo"
-    , "pkgs.python3Packages.manifestoo-core"
-    , "pkgs.python3Packages.manifestparser"
-    , "pkgs.python3Packages.manimpango"
-    , "pkgs.python3Packages.manuel"
-    , "pkgs.python3Packages.manuf"
-    , "pkgs.python3Packages.mapbox"
-    , "pkgs.python3Packages.mapbox-earcut"
-    , "pkgs.python3Packages.mariadb"
-    , "pkgs.python3Packages.marisa"
-    , "pkgs.python3Packages.marisa-trie"
-    , "pkgs.python3Packages.markdown"
-    , "pkgs.python3Packages.markdown-include"
-    , "pkgs.python3Packages.markdown-it-py"
-    , "pkgs.python3Packages.markdown-macros"
-    , "pkgs.python3Packages.markdown2"
-    , "pkgs.python3Packages.markdownify"
-    , "pkgs.python3Packages.markuppy"
-    , "pkgs.python3Packages.markups"
-    , "pkgs.python3Packages.markupsafe"
-    , "pkgs.python3Packages.marshmallow"
-    , "pkgs.python3Packages.marshmallow-dataclass"
-    , "pkgs.python3Packages.marshmallow-enum"
-    , "pkgs.python3Packages.marshmallow-oneofschema"
-    , "pkgs.python3Packages.marshmallow-polyfield"
-    , "pkgs.python3Packages.marshmallow-sqlalchemy"
-    , "pkgs.python3Packages.mashumaro"
-    , "pkgs.python3Packages.masky"
-    , "pkgs.python3Packages.mastodon-py"
-    , "pkgs.python3Packages.mat2"
-    , "pkgs.python3Packages.matchpy"
-    , "pkgs.python3Packages.material-color-utilities"
-    , "pkgs.python3Packages.mathlibtools"
-    , "pkgs.python3Packages.matlink-gpapi"
-    , "pkgs.python3Packages.matplotlib"
-    , "pkgs.python3Packages.matplotlib-inline"
-    , "pkgs.python3Packages.matplotlib-sixel"
-    , "pkgs.python3Packages.matplotx"
-    , "pkgs.python3Packages.matrix-api-async"
-    , "pkgs.python3Packages.matrix-client"
-    , "pkgs.python3Packages.matrix-common"
-    , "pkgs.python3Packages.matrix-nio"
-    , "pkgs.python3Packages.mattermostdriver"
-    , "pkgs.python3Packages.maubot"
-    , "pkgs.python3Packages.mautrix"
-    , "pkgs.python3Packages.mautrix-appservice"
-    , "pkgs.python3Packages.maxcube-api"
-    , "pkgs.python3Packages.maxminddb"
-    , "pkgs.python3Packages.maya"
-    , "pkgs.python3Packages.mayavi"
-    , "pkgs.python3Packages.mbddns"
-    , "pkgs.python3Packages.mbstrdecoder"
-    , "pkgs.python3Packages.mccabe"
-    , "pkgs.python3Packages.mcstatus"
-    , "pkgs.python3Packages.mcuuid"
-    , "pkgs.python3Packages.md-toc"
-    , "pkgs.python3Packages.md2gemini"
-    , "pkgs.python3Packages.mdformat"
-    , "pkgs.python3Packages.mdformat-admon"
-    , "pkgs.python3Packages.mdformat-beautysh"
-    , "pkgs.python3Packages.mdformat-footnote"
-    , "pkgs.python3Packages.mdformat-frontmatter"
-    , "pkgs.python3Packages.mdformat-gfm"
-    , "pkgs.python3Packages.mdformat-mkdocs"
-    , "pkgs.python3Packages.mdformat-nix-alejandra"
-    , "pkgs.python3Packages.mdformat-simple-breaks"
-    , "pkgs.python3Packages.mdformat-tables"
-    , "pkgs.python3Packages.mdformat-toc"
-    , "pkgs.python3Packages.mdit-py-plugins"
-    , "pkgs.python3Packages.mdp"
-    , "pkgs.python3Packages.mdtraj"
-    , "pkgs.python3Packages.mdurl"
-    , "pkgs.python3Packages.mdutils"
-    , "pkgs.python3Packages.mdx-truly-sane-lists"
-    , "pkgs.python3Packages.measurement"
-    , "pkgs.python3Packages.meater-python"
-    , "pkgs.python3Packages.mecab-python3"
-    , "pkgs.python3Packages.mechanicalsoup"
-    , "pkgs.python3Packages.mechanize"
-    , "pkgs.python3Packages.mediafile"
-    , "pkgs.python3Packages.mediapy"
-    , "pkgs.python3Packages.meeko"
-    , "pkgs.python3Packages.meep"
-    , "pkgs.python3Packages.meilisearch"
-    , "pkgs.python3Packages.meinheld"
-    , "pkgs.python3Packages.meld3"
-    , "pkgs.python3Packages.memcached"
-    , "pkgs.python3Packages.memestra"
-    , "pkgs.python3Packages.memory-allocator"
-    , "pkgs.python3Packages.memory-profiler"
-    , "pkgs.python3Packages.memory_profiler"
-    , "pkgs.python3Packages.meraki"
-    , "pkgs.python3Packages.mercadopago"
-    , "pkgs.python3Packages.mercantile"
-    , "pkgs.python3Packages.mercurial"
-    , "pkgs.python3Packages.merge3"
-    , "pkgs.python3Packages.mergedb"
-    , "pkgs.python3Packages.mergedeep"
-    , "pkgs.python3Packages.mergedict"
-    , "pkgs.python3Packages.merkletools"
-    , "pkgs.python3Packages.meross-iot"
-    , "pkgs.python3Packages.mesa"
-    , "pkgs.python3Packages.meshcat"
-    , "pkgs.python3Packages.meshio"
-    , "pkgs.python3Packages.meshlabxml"
-    , "pkgs.python3Packages.meshtastic"
-    , "pkgs.python3Packages.meson"
-    , "pkgs.python3Packages.meson-python"
-    , "pkgs.python3Packages.mesonpep517"
-    , "pkgs.python3Packages.messagebird"
-    , "pkgs.python3Packages.metakernel"
-    , "pkgs.python3Packages.metar"
-    , "pkgs.python3Packages.metawear"
-    , "pkgs.python3Packages.meteoalertapi"
-    , "pkgs.python3Packages.meteocalc"
-    , "pkgs.python3Packages.meteofrance-api"
-    , "pkgs.python3Packages.mezzanine"
-    , "pkgs.python3Packages.mf2py"
-    , "pkgs.python3Packages.mhcflurry"
-    , "pkgs.python3Packages.mhcgnomes"
-    , "pkgs.python3Packages.micawber"
-    , "pkgs.python3Packages.micloud"
-    , "pkgs.python3Packages.microdata"
-    , "pkgs.python3Packages.midiutil"
-    , "pkgs.python3Packages.mido"
-    , "pkgs.python3Packages.migen"
-    , "pkgs.python3Packages.mike"
-    , "pkgs.python3Packages.milc"
-    , "pkgs.python3Packages.milksnake"
-    , "pkgs.python3Packages.mill-local"
-    , "pkgs.python3Packages.millheater"
-    , "pkgs.python3Packages.mindsdb-evaluator"
-    , "pkgs.python3Packages.minexr"
-    , "pkgs.python3Packages.miniaudio"
-    , "pkgs.python3Packages.minichain"
-    , "pkgs.python3Packages.minidb"
-    , "pkgs.python3Packages.minidump"
-    , "pkgs.python3Packages.miniful"
-    , "pkgs.python3Packages.minikanren"
-    , "pkgs.python3Packages.minikerberos"
-    , "pkgs.python3Packages.minimal-snowplow-tracker"
-    , "pkgs.python3Packages.minimock"
-    , "pkgs.python3Packages.mininet-python"
-    , "pkgs.python3Packages.minio"
-    , "pkgs.python3Packages.miniupnpc"
-    , "pkgs.python3Packages.mip"
-    , "pkgs.python3Packages.mir_eval"
-    , "pkgs.python3Packages.mirakuru"
-    , "pkgs.python3Packages.misaka"
-    , "pkgs.python3Packages.misoc"
-    , "pkgs.python3Packages.mistletoe"
-    , "pkgs.python3Packages.mistune"
-    , "pkgs.python3Packages.mistune_2_0"
-    , "pkgs.python3Packages.mitmproxy"
-    , "pkgs.python3Packages.mitmproxy-macos"
-    , "pkgs.python3Packages.mitmproxy-rs"
-    , "pkgs.python3Packages.mitmproxy-wireguard"
-    , "pkgs.python3Packages.mitogen"
-    , "pkgs.python3Packages.mixins"
-    , "pkgs.python3Packages.mixpanel"
-    , "pkgs.python3Packages.mizani"
-    , "pkgs.python3Packages.mkdocs"
-    , "pkgs.python3Packages.mkdocs-autorefs"
-    , "pkgs.python3Packages.mkdocs-drawio-exporter"
-    , "pkgs.python3Packages.mkdocs-exclude"
-    , "pkgs.python3Packages.mkdocs-git-authors-plugin"
-    , "pkgs.python3Packages.mkdocs-git-revision-date-localized-plugin"
-    , "pkgs.python3Packages.mkdocs-gitlab"
-    , "pkgs.python3Packages.mkdocs-jupyter"
-    , "pkgs.python3Packages.mkdocs-linkcheck"
-    , "pkgs.python3Packages.mkdocs-macros"
-    , "pkgs.python3Packages.mkdocs-material"
-    , "pkgs.python3Packages.mkdocs-material-extensions"
-    , "pkgs.python3Packages.mkdocs-mermaid2-plugin"
-    , "pkgs.python3Packages.mkdocs-minify"
-    , "pkgs.python3Packages.mkdocs-redirects"
-    , "pkgs.python3Packages.mkdocs-simple-hooks"
-    , "pkgs.python3Packages.mkdocs-swagger-ui-tag"
-    , "pkgs.python3Packages.mkdocstrings"
-    , "pkgs.python3Packages.mkdocstrings-python"
-    , "pkgs.python3Packages.mkl-service"
-    , "pkgs.python3Packages.ml-collections"
-    , "pkgs.python3Packages.ml-dtypes"
-    , "pkgs.python3Packages.mlflow"
-    , "pkgs.python3Packages.mlrose"
-    , "pkgs.python3Packages.mlt"
-    , "pkgs.python3Packages.mlxtend"
-    , "pkgs.python3Packages.mmcif-pdbx"
-    , "pkgs.python3Packages.mmcv"
-    , "pkgs.python3Packages.mmengine"
-    , "pkgs.python3Packages.mmh3"
-    , "pkgs.python3Packages.mmpython"
-    , "pkgs.python3Packages.mmtf-python"
-    , "pkgs.python3Packages.mne-python"
-    , "pkgs.python3Packages.mnemonic"
-    , "pkgs.python3Packages.mnist"
-    , "pkgs.python3Packages.moat-ble"
-    , "pkgs.python3Packages.mobi"
-    , "pkgs.python3Packages.mobly"
-    , "pkgs.python3Packages.mock"
-    , "pkgs.python3Packages.mock-open"
-    , "pkgs.python3Packages.mock-services"
-    , "pkgs.python3Packages.mock-ssh-server"
-    , "pkgs.python3Packages.mocket"
-    , "pkgs.python3Packages.mockfs"
-    , "pkgs.python3Packages.mockito"
-    , "pkgs.python3Packages.mockupdb"
-    , "pkgs.python3Packages.moddb"
-    , "pkgs.python3Packages.model-bakery"
-    , "pkgs.python3Packages.modelcif"
-    , "pkgs.python3Packages.modeled"
-    , "pkgs.python3Packages.moderngl"
-    , "pkgs.python3Packages.moderngl-window"
-    , "pkgs.python3Packages.modestmaps"
-    , "pkgs.python3Packages.mohawk"
-    , "pkgs.python3Packages.molecule"
-    , "pkgs.python3Packages.molecule-plugins"
-    , "pkgs.python3Packages.monai"
-    , "pkgs.python3Packages.monai-deploy"
-    , "pkgs.python3Packages.monero"
-    , "pkgs.python3Packages.mongodict"
-    , "pkgs.python3Packages.mongoengine"
-    , "pkgs.python3Packages.mongomock"
-    , "pkgs.python3Packages.mongoquery"
-    , "pkgs.python3Packages.monkeyhex"
-    , "pkgs.python3Packages.monosat"
-    , "pkgs.python3Packages.monotonic"
-    , "pkgs.python3Packages.monty"
-    , "pkgs.python3Packages.moonraker-api"
-    , "pkgs.python3Packages.mopeka-iot-ble"
-    , "pkgs.python3Packages.more-itertools"
-    , "pkgs.python3Packages.more-properties"
-    , "pkgs.python3Packages.moreorless"
-    , "pkgs.python3Packages.moretools"
-    , "pkgs.python3Packages.morfessor"
-    , "pkgs.python3Packages.morphys"
-    , "pkgs.python3Packages.mortgage"
-    , "pkgs.python3Packages.motionblinds"
-    , "pkgs.python3Packages.motioneye-client"
-    , "pkgs.python3Packages.moto"
-    , "pkgs.python3Packages.motor"
-    , "pkgs.python3Packages.mouseinfo"
-    , "pkgs.python3Packages.moviepy"
-    , "pkgs.python3Packages.mox3"
-    , "pkgs.python3Packages.mpd2"
-    , "pkgs.python3Packages.mpi4py"
-    , "pkgs.python3Packages.mpl-scatter-density"
-    , "pkgs.python3Packages.mpldatacursor"
-    , "pkgs.python3Packages.mplfinance"
-    , "pkgs.python3Packages.mplhep"
-    , "pkgs.python3Packages.mplhep-data"
-    , "pkgs.python3Packages.mplleaflet"
-    , "pkgs.python3Packages.mpmath"
-    , "pkgs.python3Packages.mpris-server"
-    , "pkgs.python3Packages.mpv"
-    , "pkgs.python3Packages.mpyq"
-    , "pkgs.python3Packages.mqtt2influxdb"
-    , "pkgs.python3Packages.mrjob"
-    , "pkgs.python3Packages.mrsqm"
-    , "pkgs.python3Packages.ms-active-directory"
-    , "pkgs.python3Packages.ms-cv"
-    , "pkgs.python3Packages.msal"
-    , "pkgs.python3Packages.msal-extensions"
-    , "pkgs.python3Packages.mscerts"
-    , "pkgs.python3Packages.msg-parser"
-    , "pkgs.python3Packages.msgpack"
-    , "pkgs.python3Packages.msgpack-numpy"
-    , "pkgs.python3Packages.msgraph-core"
-    , "pkgs.python3Packages.msgspec"
-    , "pkgs.python3Packages.msldap"
-    , "pkgs.python3Packages.msoffcrypto-tool"
-    , "pkgs.python3Packages.msprime"
-    , "pkgs.python3Packages.msrest"
-    , "pkgs.python3Packages.msrestazure"
-    , "pkgs.python3Packages.mss"
-    , "pkgs.python3Packages.mt-940"
-    , "pkgs.python3Packages.mujson"
-    , "pkgs.python3Packages.mullvad-api"
-    , "pkgs.python3Packages.mullvad-closest"
-    , "pkgs.python3Packages.mulpyplexer"
-    , "pkgs.python3Packages.multi-key-dict"
-    , "pkgs.python3Packages.multi_key_dict"
-    , "pkgs.python3Packages.multidict"
-    , "pkgs.python3Packages.multimethod"
-    , "pkgs.python3Packages.multipart"
-    , "pkgs.python3Packages.multipledispatch"
-    , "pkgs.python3Packages.multiprocess"
-    , "pkgs.python3Packages.multiset"
-    , "pkgs.python3Packages.multitasking"
-    , "pkgs.python3Packages.munch"
-    , "pkgs.python3Packages.mung"
-    , "pkgs.python3Packages.munkres"
-    , "pkgs.python3Packages.murmurhash"
-    , "pkgs.python3Packages.muscima"
-    , "pkgs.python3Packages.music-tag"
-    , "pkgs.python3Packages.musicbrainzngs"
-    , "pkgs.python3Packages.mutag"
-    , "pkgs.python3Packages.mutagen"
-    , "pkgs.python3Packages.mutatormath"
-    , "pkgs.python3Packages.mutesync"
-    , "pkgs.python3Packages.mutf8"
-    , "pkgs.python3Packages.mwcli"
-    , "pkgs.python3Packages.mwclient"
-    , "pkgs.python3Packages.mwdblib"
-    , "pkgs.python3Packages.mwoauth"
-    , "pkgs.python3Packages.mwparserfromhell"
-    , "pkgs.python3Packages.mwtypes"
-    , "pkgs.python3Packages.mwxml"
-    , "pkgs.python3Packages.mxnet"
-    , "pkgs.python3Packages.myfitnesspal"
-    , "pkgs.python3Packages.mygpoclient"
-    , "pkgs.python3Packages.myhdl"
-    , "pkgs.python3Packages.myhome"
-    , "pkgs.python3Packages.myjwt"
-    , "pkgs.python3Packages.mypy"
-    , "pkgs.python3Packages.mypy-boto3-accessanalyzer"
-    , "pkgs.python3Packages.mypy-boto3-account"
-    , "pkgs.python3Packages.mypy-boto3-acm"
-    , "pkgs.python3Packages.mypy-boto3-acm-pca"
-    , "pkgs.python3Packages.mypy-boto3-alexaforbusiness"
-    , "pkgs.python3Packages.mypy-boto3-amp"
-    , "pkgs.python3Packages.mypy-boto3-amplify"
-    , "pkgs.python3Packages.mypy-boto3-amplifybackend"
-    , "pkgs.python3Packages.mypy-boto3-amplifyuibuilder"
-    , "pkgs.python3Packages.mypy-boto3-apigateway"
-    , "pkgs.python3Packages.mypy-boto3-apigatewaymanagementapi"
-    , "pkgs.python3Packages.mypy-boto3-apigatewayv2"
-    , "pkgs.python3Packages.mypy-boto3-appconfig"
-    , "pkgs.python3Packages.mypy-boto3-appconfigdata"
-    , "pkgs.python3Packages.mypy-boto3-appfabric"
-    , "pkgs.python3Packages.mypy-boto3-appflow"
-    , "pkgs.python3Packages.mypy-boto3-appintegrations"
-    , "pkgs.python3Packages.mypy-boto3-application-autoscaling"
-    , "pkgs.python3Packages.mypy-boto3-application-insights"
-    , "pkgs.python3Packages.mypy-boto3-applicationcostprofiler"
-    , "pkgs.python3Packages.mypy-boto3-appmesh"
-    , "pkgs.python3Packages.mypy-boto3-apprunner"
-    , "pkgs.python3Packages.mypy-boto3-appstream"
-    , "pkgs.python3Packages.mypy-boto3-appsync"
-    , "pkgs.python3Packages.mypy-boto3-arc-zonal-shift"
-    , "pkgs.python3Packages.mypy-boto3-athena"
-    , "pkgs.python3Packages.mypy-boto3-auditmanager"
-    , "pkgs.python3Packages.mypy-boto3-autoscaling"
-    , "pkgs.python3Packages.mypy-boto3-autoscaling-plans"
-    , "pkgs.python3Packages.mypy-boto3-backup"
-    , "pkgs.python3Packages.mypy-boto3-backup-gateway"
-    , "pkgs.python3Packages.mypy-boto3-backupstorage"
-    , "pkgs.python3Packages.mypy-boto3-batch"
-    , "pkgs.python3Packages.mypy-boto3-billingconductor"
-    , "pkgs.python3Packages.mypy-boto3-braket"
-    , "pkgs.python3Packages.mypy-boto3-budgets"
-    , "pkgs.python3Packages.mypy-boto3-builder"
-    , "pkgs.python3Packages.mypy-boto3-ce"
-    , "pkgs.python3Packages.mypy-boto3-chime"
-    , "pkgs.python3Packages.mypy-boto3-chime-sdk-identity"
-    , "pkgs.python3Packages.mypy-boto3-chime-sdk-media-pipelines"
-    , "pkgs.python3Packages.mypy-boto3-chime-sdk-meetings"
-    , "pkgs.python3Packages.mypy-boto3-chime-sdk-messaging"
-    , "pkgs.python3Packages.mypy-boto3-chime-sdk-voice"
-    , "pkgs.python3Packages.mypy-boto3-cleanrooms"
-    , "pkgs.python3Packages.mypy-boto3-cloud9"
-    , "pkgs.python3Packages.mypy-boto3-cloudcontrol"
-    , "pkgs.python3Packages.mypy-boto3-clouddirectory"
-    , "pkgs.python3Packages.mypy-boto3-cloudformation"
-    , "pkgs.python3Packages.mypy-boto3-cloudfront"
-    , "pkgs.python3Packages.mypy-boto3-cloudhsm"
-    , "pkgs.python3Packages.mypy-boto3-cloudhsmv2"
-    , "pkgs.python3Packages.mypy-boto3-cloudsearch"
-    , "pkgs.python3Packages.mypy-boto3-cloudsearchdomain"
-    , "pkgs.python3Packages.mypy-boto3-cloudtrail"
-    , "pkgs.python3Packages.mypy-boto3-cloudtrail-data"
-    , "pkgs.python3Packages.mypy-boto3-cloudwatch"
-    , "pkgs.python3Packages.mypy-boto3-codeartifact"
-    , "pkgs.python3Packages.mypy-boto3-codebuild"
-    , "pkgs.python3Packages.mypy-boto3-codecatalyst"
-    , "pkgs.python3Packages.mypy-boto3-codecommit"
-    , "pkgs.python3Packages.mypy-boto3-codedeploy"
-    , "pkgs.python3Packages.mypy-boto3-codeguru-reviewer"
-    , "pkgs.python3Packages.mypy-boto3-codeguru-security"
-    , "pkgs.python3Packages.mypy-boto3-codeguruprofiler"
-    , "pkgs.python3Packages.mypy-boto3-codepipeline"
-    , "pkgs.python3Packages.mypy-boto3-codestar"
-    , "pkgs.python3Packages.mypy-boto3-codestar-connections"
-    , "pkgs.python3Packages.mypy-boto3-codestar-notifications"
-    , "pkgs.python3Packages.mypy-boto3-cognito-identity"
-    , "pkgs.python3Packages.mypy-boto3-cognito-idp"
-    , "pkgs.python3Packages.mypy-boto3-cognito-sync"
-    , "pkgs.python3Packages.mypy-boto3-comprehend"
-    , "pkgs.python3Packages.mypy-boto3-comprehendmedical"
-    , "pkgs.python3Packages.mypy-boto3-compute-optimizer"
-    , "pkgs.python3Packages.mypy-boto3-config"
-    , "pkgs.python3Packages.mypy-boto3-connect"
-    , "pkgs.python3Packages.mypy-boto3-connect-contact-lens"
-    , "pkgs.python3Packages.mypy-boto3-connectcampaigns"
-    , "pkgs.python3Packages.mypy-boto3-connectcases"
-    , "pkgs.python3Packages.mypy-boto3-connectparticipant"
-    , "pkgs.python3Packages.mypy-boto3-controltower"
-    , "pkgs.python3Packages.mypy-boto3-cur"
-    , "pkgs.python3Packages.mypy-boto3-customer-profiles"
-    , "pkgs.python3Packages.mypy-boto3-databrew"
-    , "pkgs.python3Packages.mypy-boto3-dataexchange"
-    , "pkgs.python3Packages.mypy-boto3-datapipeline"
-    , "pkgs.python3Packages.mypy-boto3-datasync"
-    , "pkgs.python3Packages.mypy-boto3-dax"
-    , "pkgs.python3Packages.mypy-boto3-detective"
-    , "pkgs.python3Packages.mypy-boto3-devicefarm"
-    , "pkgs.python3Packages.mypy-boto3-devops-guru"
-    , "pkgs.python3Packages.mypy-boto3-directconnect"
-    , "pkgs.python3Packages.mypy-boto3-discovery"
-    , "pkgs.python3Packages.mypy-boto3-dlm"
-    , "pkgs.python3Packages.mypy-boto3-dms"
-    , "pkgs.python3Packages.mypy-boto3-docdb"
-    , "pkgs.python3Packages.mypy-boto3-docdb-elastic"
-    , "pkgs.python3Packages.mypy-boto3-drs"
-    , "pkgs.python3Packages.mypy-boto3-ds"
-    , "pkgs.python3Packages.mypy-boto3-dynamodb"
-    , "pkgs.python3Packages.mypy-boto3-dynamodbstreams"
-    , "pkgs.python3Packages.mypy-boto3-ebs"
-    , "pkgs.python3Packages.mypy-boto3-ec2"
-    , "pkgs.python3Packages.mypy-boto3-ec2-instance-connect"
-    , "pkgs.python3Packages.mypy-boto3-ecr"
-    , "pkgs.python3Packages.mypy-boto3-ecr-public"
-    , "pkgs.python3Packages.mypy-boto3-ecs"
-    , "pkgs.python3Packages.mypy-boto3-efs"
-    , "pkgs.python3Packages.mypy-boto3-eks"
-    , "pkgs.python3Packages.mypy-boto3-elastic-inference"
-    , "pkgs.python3Packages.mypy-boto3-elasticache"
-    , "pkgs.python3Packages.mypy-boto3-elasticbeanstalk"
-    , "pkgs.python3Packages.mypy-boto3-elastictranscoder"
-    , "pkgs.python3Packages.mypy-boto3-elb"
-    , "pkgs.python3Packages.mypy-boto3-elbv2"
-    , "pkgs.python3Packages.mypy-boto3-emr"
-    , "pkgs.python3Packages.mypy-boto3-emr-containers"
-    , "pkgs.python3Packages.mypy-boto3-emr-serverless"
-    , "pkgs.python3Packages.mypy-boto3-entityresolution"
-    , "pkgs.python3Packages.mypy-boto3-es"
-    , "pkgs.python3Packages.mypy-boto3-events"
-    , "pkgs.python3Packages.mypy-boto3-evidently"
-    , "pkgs.python3Packages.mypy-boto3-finspace"
-    , "pkgs.python3Packages.mypy-boto3-finspace-data"
-    , "pkgs.python3Packages.mypy-boto3-firehose"
-    , "pkgs.python3Packages.mypy-boto3-fis"
-    , "pkgs.python3Packages.mypy-boto3-fms"
-    , "pkgs.python3Packages.mypy-boto3-forecast"
-    , "pkgs.python3Packages.mypy-boto3-forecastquery"
-    , "pkgs.python3Packages.mypy-boto3-frauddetector"
-    , "pkgs.python3Packages.mypy-boto3-fsx"
-    , "pkgs.python3Packages.mypy-boto3-gamelift"
-    , "pkgs.python3Packages.mypy-boto3-gamesparks"
-    , "pkgs.python3Packages.mypy-boto3-glacier"
-    , "pkgs.python3Packages.mypy-boto3-globalaccelerator"
-    , "pkgs.python3Packages.mypy-boto3-glue"
-    , "pkgs.python3Packages.mypy-boto3-grafana"
-    , "pkgs.python3Packages.mypy-boto3-greengrass"
-    , "pkgs.python3Packages.mypy-boto3-greengrassv2"
-    , "pkgs.python3Packages.mypy-boto3-groundstation"
-    , "pkgs.python3Packages.mypy-boto3-guardduty"
-    , "pkgs.python3Packages.mypy-boto3-health"
-    , "pkgs.python3Packages.mypy-boto3-healthlake"
-    , "pkgs.python3Packages.mypy-boto3-honeycode"
-    , "pkgs.python3Packages.mypy-boto3-iam"
-    , "pkgs.python3Packages.mypy-boto3-identitystore"
-    , "pkgs.python3Packages.mypy-boto3-imagebuilder"
-    , "pkgs.python3Packages.mypy-boto3-importexport"
-    , "pkgs.python3Packages.mypy-boto3-inspector"
-    , "pkgs.python3Packages.mypy-boto3-inspector2"
-    , "pkgs.python3Packages.mypy-boto3-internetmonitor"
-    , "pkgs.python3Packages.mypy-boto3-iot"
-    , "pkgs.python3Packages.mypy-boto3-iot-data"
-    , "pkgs.python3Packages.mypy-boto3-iot-jobs-data"
-    , "pkgs.python3Packages.mypy-boto3-iot-roborunner"
-    , "pkgs.python3Packages.mypy-boto3-iot1click-devices"
-    , "pkgs.python3Packages.mypy-boto3-iot1click-projects"
-    , "pkgs.python3Packages.mypy-boto3-iotanalytics"
-    , "pkgs.python3Packages.mypy-boto3-iotdeviceadvisor"
-    , "pkgs.python3Packages.mypy-boto3-iotevents"
-    , "pkgs.python3Packages.mypy-boto3-iotevents-data"
-    , "pkgs.python3Packages.mypy-boto3-iotfleethub"
-    , "pkgs.python3Packages.mypy-boto3-iotfleetwise"
-    , "pkgs.python3Packages.mypy-boto3-iotsecuretunneling"
-    , "pkgs.python3Packages.mypy-boto3-iotsitewise"
-    , "pkgs.python3Packages.mypy-boto3-iotthingsgraph"
-    , "pkgs.python3Packages.mypy-boto3-iottwinmaker"
-    , "pkgs.python3Packages.mypy-boto3-iotwireless"
-    , "pkgs.python3Packages.mypy-boto3-ivs"
-    , "pkgs.python3Packages.mypy-boto3-ivs-realtime"
-    , "pkgs.python3Packages.mypy-boto3-ivschat"
-    , "pkgs.python3Packages.mypy-boto3-kafka"
-    , "pkgs.python3Packages.mypy-boto3-kafkaconnect"
-    , "pkgs.python3Packages.mypy-boto3-kendra"
-    , "pkgs.python3Packages.mypy-boto3-kendra-ranking"
-    , "pkgs.python3Packages.mypy-boto3-keyspaces"
-    , "pkgs.python3Packages.mypy-boto3-kinesis"
-    , "pkgs.python3Packages.mypy-boto3-kinesis-video-archived-media"
-    , "pkgs.python3Packages.mypy-boto3-kinesis-video-media"
-    , "pkgs.python3Packages.mypy-boto3-kinesis-video-signaling"
-    , "pkgs.python3Packages.mypy-boto3-kinesis-video-webrtc-storage"
-    , "pkgs.python3Packages.mypy-boto3-kinesisanalytics"
-    , "pkgs.python3Packages.mypy-boto3-kinesisanalyticsv2"
-    , "pkgs.python3Packages.mypy-boto3-kinesisvideo"
-    , "pkgs.python3Packages.mypy-boto3-kms"
-    , "pkgs.python3Packages.mypy-boto3-lakeformation"
-    , "pkgs.python3Packages.mypy-boto3-lambda"
-    , "pkgs.python3Packages.mypy-boto3-lex-models"
-    , "pkgs.python3Packages.mypy-boto3-lex-runtime"
-    , "pkgs.python3Packages.mypy-boto3-lexv2-models"
-    , "pkgs.python3Packages.mypy-boto3-lexv2-runtime"
-    , "pkgs.python3Packages.mypy-boto3-license-manager"
-    , "pkgs.python3Packages.mypy-boto3-license-manager-linux-subscriptions"
-    , "pkgs.python3Packages.mypy-boto3-license-manager-user-subscriptions"
-    , "pkgs.python3Packages.mypy-boto3-lightsail"
-    , "pkgs.python3Packages.mypy-boto3-location"
-    , "pkgs.python3Packages.mypy-boto3-logs"
-    , "pkgs.python3Packages.mypy-boto3-lookoutequipment"
-    , "pkgs.python3Packages.mypy-boto3-lookoutmetrics"
-    , "pkgs.python3Packages.mypy-boto3-lookoutvision"
-    , "pkgs.python3Packages.mypy-boto3-m2"
-    , "pkgs.python3Packages.mypy-boto3-machinelearning"
-    , "pkgs.python3Packages.mypy-boto3-macie"
-    , "pkgs.python3Packages.mypy-boto3-macie2"
-    , "pkgs.python3Packages.mypy-boto3-managedblockchain"
-    , "pkgs.python3Packages.mypy-boto3-managedblockchain-query"
-    , "pkgs.python3Packages.mypy-boto3-marketplace-catalog"
-    , "pkgs.python3Packages.mypy-boto3-marketplace-entitlement"
-    , "pkgs.python3Packages.mypy-boto3-marketplacecommerceanalytics"
-    , "pkgs.python3Packages.mypy-boto3-mediaconnect"
-    , "pkgs.python3Packages.mypy-boto3-mediaconvert"
-    , "pkgs.python3Packages.mypy-boto3-medialive"
-    , "pkgs.python3Packages.mypy-boto3-mediapackage"
-    , "pkgs.python3Packages.mypy-boto3-mediapackage-vod"
-    , "pkgs.python3Packages.mypy-boto3-mediapackagev2"
-    , "pkgs.python3Packages.mypy-boto3-mediastore"
-    , "pkgs.python3Packages.mypy-boto3-mediastore-data"
-    , "pkgs.python3Packages.mypy-boto3-mediatailor"
-    , "pkgs.python3Packages.mypy-boto3-medical-imaging"
-    , "pkgs.python3Packages.mypy-boto3-memorydb"
-    , "pkgs.python3Packages.mypy-boto3-meteringmarketplace"
-    , "pkgs.python3Packages.mypy-boto3-mgh"
-    , "pkgs.python3Packages.mypy-boto3-mgn"
-    , "pkgs.python3Packages.mypy-boto3-migration-hub-refactor-spaces"
-    , "pkgs.python3Packages.mypy-boto3-migrationhub-config"
-    , "pkgs.python3Packages.mypy-boto3-migrationhuborchestrator"
-    , "pkgs.python3Packages.mypy-boto3-migrationhubstrategy"
-    , "pkgs.python3Packages.mypy-boto3-mobile"
-    , "pkgs.python3Packages.mypy-boto3-mq"
-    , "pkgs.python3Packages.mypy-boto3-mturk"
-    , "pkgs.python3Packages.mypy-boto3-mwaa"
-    , "pkgs.python3Packages.mypy-boto3-neptune"
-    , "pkgs.python3Packages.mypy-boto3-neptunedata"
-    , "pkgs.python3Packages.mypy-boto3-network-firewall"
-    , "pkgs.python3Packages.mypy-boto3-networkmanager"
-    , "pkgs.python3Packages.mypy-boto3-nimble"
-    , "pkgs.python3Packages.mypy-boto3-oam"
-    , "pkgs.python3Packages.mypy-boto3-omics"
-    , "pkgs.python3Packages.mypy-boto3-opensearch"
-    , "pkgs.python3Packages.mypy-boto3-opensearchserverless"
-    , "pkgs.python3Packages.mypy-boto3-opsworks"
-    , "pkgs.python3Packages.mypy-boto3-opsworkscm"
-    , "pkgs.python3Packages.mypy-boto3-organizations"
-    , "pkgs.python3Packages.mypy-boto3-osis"
-    , "pkgs.python3Packages.mypy-boto3-outposts"
-    , "pkgs.python3Packages.mypy-boto3-panorama"
-    , "pkgs.python3Packages.mypy-boto3-payment-cryptography"
-    , "pkgs.python3Packages.mypy-boto3-payment-cryptography-data"
-    , "pkgs.python3Packages.mypy-boto3-pca-connector-ad"
-    , "pkgs.python3Packages.mypy-boto3-personalize"
-    , "pkgs.python3Packages.mypy-boto3-personalize-events"
-    , "pkgs.python3Packages.mypy-boto3-personalize-runtime"
-    , "pkgs.python3Packages.mypy-boto3-pi"
-    , "pkgs.python3Packages.mypy-boto3-pinpoint"
-    , "pkgs.python3Packages.mypy-boto3-pinpoint-email"
-    , "pkgs.python3Packages.mypy-boto3-pinpoint-sms-voice"
-    , "pkgs.python3Packages.mypy-boto3-pinpoint-sms-voice-v2"
-    , "pkgs.python3Packages.mypy-boto3-pipes"
-    , "pkgs.python3Packages.mypy-boto3-polly"
-    , "pkgs.python3Packages.mypy-boto3-pricing"
-    , "pkgs.python3Packages.mypy-boto3-privatenetworks"
-    , "pkgs.python3Packages.mypy-boto3-proton"
-    , "pkgs.python3Packages.mypy-boto3-qldb"
-    , "pkgs.python3Packages.mypy-boto3-qldb-session"
-    , "pkgs.python3Packages.mypy-boto3-quicksight"
-    , "pkgs.python3Packages.mypy-boto3-ram"
-    , "pkgs.python3Packages.mypy-boto3-rbin"
-    , "pkgs.python3Packages.mypy-boto3-rds"
-    , "pkgs.python3Packages.mypy-boto3-rds-data"
-    , "pkgs.python3Packages.mypy-boto3-redshift"
-    , "pkgs.python3Packages.mypy-boto3-redshift-data"
-    , "pkgs.python3Packages.mypy-boto3-redshift-serverless"
-    , "pkgs.python3Packages.mypy-boto3-rekognition"
-    , "pkgs.python3Packages.mypy-boto3-resiliencehub"
-    , "pkgs.python3Packages.mypy-boto3-resource-explorer-2"
-    , "pkgs.python3Packages.mypy-boto3-resource-groups"
-    , "pkgs.python3Packages.mypy-boto3-resourcegroupstaggingapi"
-    , "pkgs.python3Packages.mypy-boto3-robomaker"
-    , "pkgs.python3Packages.mypy-boto3-rolesanywhere"
-    , "pkgs.python3Packages.mypy-boto3-route53"
-    , "pkgs.python3Packages.mypy-boto3-route53-recovery-cluster"
-    , "pkgs.python3Packages.mypy-boto3-route53-recovery-control-config"
-    , "pkgs.python3Packages.mypy-boto3-route53-recovery-readiness"
-    , "pkgs.python3Packages.mypy-boto3-route53domains"
-    , "pkgs.python3Packages.mypy-boto3-route53resolver"
-    , "pkgs.python3Packages.mypy-boto3-rum"
-    , "pkgs.python3Packages.mypy-boto3-s3"
-    , "pkgs.python3Packages.mypy-boto3-s3control"
-    , "pkgs.python3Packages.mypy-boto3-s3outposts"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker-a2i-runtime"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker-edge"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker-featurestore-runtime"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker-geospatial"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker-metrics"
-    , "pkgs.python3Packages.mypy-boto3-sagemaker-runtime"
-    , "pkgs.python3Packages.mypy-boto3-savingsplans"
-    , "pkgs.python3Packages.mypy-boto3-scheduler"
-    , "pkgs.python3Packages.mypy-boto3-schemas"
-    , "pkgs.python3Packages.mypy-boto3-sdb"
-    , "pkgs.python3Packages.mypy-boto3-secretsmanager"
-    , "pkgs.python3Packages.mypy-boto3-securityhub"
-    , "pkgs.python3Packages.mypy-boto3-securitylake"
-    , "pkgs.python3Packages.mypy-boto3-serverlessrepo"
-    , "pkgs.python3Packages.mypy-boto3-service-quotas"
-    , "pkgs.python3Packages.mypy-boto3-servicecatalog"
-    , "pkgs.python3Packages.mypy-boto3-servicecatalog-appregistry"
-    , "pkgs.python3Packages.mypy-boto3-servicediscovery"
-    , "pkgs.python3Packages.mypy-boto3-ses"
-    , "pkgs.python3Packages.mypy-boto3-sesv2"
-    , "pkgs.python3Packages.mypy-boto3-shield"
-    , "pkgs.python3Packages.mypy-boto3-signer"
-    , "pkgs.python3Packages.mypy-boto3-simspaceweaver"
-    , "pkgs.python3Packages.mypy-boto3-sms"
-    , "pkgs.python3Packages.mypy-boto3-sms-voice"
-    , "pkgs.python3Packages.mypy-boto3-snow-device-management"
-    , "pkgs.python3Packages.mypy-boto3-snowball"
-    , "pkgs.python3Packages.mypy-boto3-sns"
-    , "pkgs.python3Packages.mypy-boto3-sqs"
-    , "pkgs.python3Packages.mypy-boto3-ssm"
-    , "pkgs.python3Packages.mypy-boto3-ssm-contacts"
-    , "pkgs.python3Packages.mypy-boto3-ssm-incidents"
-    , "pkgs.python3Packages.mypy-boto3-ssm-sap"
-    , "pkgs.python3Packages.mypy-boto3-sso"
-    , "pkgs.python3Packages.mypy-boto3-sso-admin"
-    , "pkgs.python3Packages.mypy-boto3-sso-oidc"
-    , "pkgs.python3Packages.mypy-boto3-stepfunctions"
-    , "pkgs.python3Packages.mypy-boto3-storagegateway"
-    , "pkgs.python3Packages.mypy-boto3-sts"
-    , "pkgs.python3Packages.mypy-boto3-support"
-    , "pkgs.python3Packages.mypy-boto3-support-app"
-    , "pkgs.python3Packages.mypy-boto3-swf"
-    , "pkgs.python3Packages.mypy-boto3-synthetics"
-    , "pkgs.python3Packages.mypy-boto3-textract"
-    , "pkgs.python3Packages.mypy-boto3-timestream-query"
-    , "pkgs.python3Packages.mypy-boto3-timestream-write"
-    , "pkgs.python3Packages.mypy-boto3-tnb"
-    , "pkgs.python3Packages.mypy-boto3-transcribe"
-    , "pkgs.python3Packages.mypy-boto3-transfer"
-    , "pkgs.python3Packages.mypy-boto3-translate"
-    , "pkgs.python3Packages.mypy-boto3-verifiedpermissions"
-    , "pkgs.python3Packages.mypy-boto3-voice-id"
-    , "pkgs.python3Packages.mypy-boto3-vpc-lattice"
-    , "pkgs.python3Packages.mypy-boto3-waf"
-    , "pkgs.python3Packages.mypy-boto3-waf-regional"
-    , "pkgs.python3Packages.mypy-boto3-wafv2"
-    , "pkgs.python3Packages.mypy-boto3-wellarchitected"
-    , "pkgs.python3Packages.mypy-boto3-wisdom"
-    , "pkgs.python3Packages.mypy-boto3-workdocs"
-    , "pkgs.python3Packages.mypy-boto3-worklink"
-    , "pkgs.python3Packages.mypy-boto3-workmail"
-    , "pkgs.python3Packages.mypy-boto3-workmailmessageflow"
-    , "pkgs.python3Packages.mypy-boto3-workspaces"
-    , "pkgs.python3Packages.mypy-boto3-workspaces-web"
-    , "pkgs.python3Packages.mypy-boto3-xray"
-    , "pkgs.python3Packages.mypy-extensions"
-    , "pkgs.python3Packages.mypy-protobuf"
-    , "pkgs.python3Packages.mysql-connector"
-    , "pkgs.python3Packages.mysqlclient"
-    , "pkgs.python3Packages.myst-docutils"
-    , "pkgs.python3Packages.myst-nb"
-    , "pkgs.python3Packages.myst-parser"
-    , "pkgs.python3Packages.n3fit"
-    , "pkgs.python3Packages.nad-receiver"
-    , "pkgs.python3Packages.nagiosplugin"
-    , "pkgs.python3Packages.name-that-hash"
-    , "pkgs.python3Packages.namedlist"
-    , "pkgs.python3Packages.nameparser"
-    , "pkgs.python3Packages.names"
-    , "pkgs.python3Packages.nampa"
-    , "pkgs.python3Packages.nanoid"
-    , "pkgs.python3Packages.nanoleaf"
-    , "pkgs.python3Packages.nanomsg-python"
-    , "pkgs.python3Packages.nanotime"
-    , "pkgs.python3Packages.napalm"
-    , "pkgs.python3Packages.napalm-hp-procurve"
-    , "pkgs.python3Packages.napari"
-    , "pkgs.python3Packages.napari-console"
-    , "pkgs.python3Packages.napari-npe2"
-    , "pkgs.python3Packages.napari-plugin-engine"
-    , "pkgs.python3Packages.napari-svg"
-    , "pkgs.python3Packages.nasdaq-data-link"
-    , "pkgs.python3Packages.natasha"
-    , "pkgs.python3Packages.nats-py"
-    , "pkgs.python3Packages.nats-python"
-    , "pkgs.python3Packages.natsort"
-    , "pkgs.python3Packages.naturalsort"
-    , "pkgs.python3Packages.navec"
-    , "pkgs.python3Packages.nbclassic"
-    , "pkgs.python3Packages.nbclient"
-    , "pkgs.python3Packages.nbconflux"
-    , "pkgs.python3Packages.nbconvert"
-    , "pkgs.python3Packages.nbdev"
-    , "pkgs.python3Packages.nbdime"
-    , "pkgs.python3Packages.nbexec"
-    , "pkgs.python3Packages.nbformat"
-    , "pkgs.python3Packages.nbmerge"
-    , "pkgs.python3Packages.nbsmoke"
-    , "pkgs.python3Packages.nbsphinx"
-    , "pkgs.python3Packages.nbtlib"
-    , "pkgs.python3Packages.nbval"
-    , "pkgs.python3Packages.nbxmpp"
-    , "pkgs.python3Packages.nc-dnsapi"
-    , "pkgs.python3Packages.ncclient"
-    , "pkgs.python3Packages.nclib"
-    , "pkgs.python3Packages.ndeflib"
-    , "pkgs.python3Packages.ndg-httpsclient"
-    , "pkgs.python3Packages.ndindex"
-    , "pkgs.python3Packages.ndjson"
-    , "pkgs.python3Packages.ndms2-client"
-    , "pkgs.python3Packages.ndspy"
-    , "pkgs.python3Packages.ndtypes"
-    , "pkgs.python3Packages.nengo"
-    , "pkgs.python3Packages.neo"
-    , "pkgs.python3Packages.neo4j"
-    , "pkgs.python3Packages.nessclient"
-    , "pkgs.python3Packages.nest"
-    , "pkgs.python3Packages.nest-asyncio"
-    , "pkgs.python3Packages.nested-lookup"
-    , "pkgs.python3Packages.nestedtext"
-    , "pkgs.python3Packages.net2grid"
-    , "pkgs.python3Packages.netaddr"
-    , "pkgs.python3Packages.netapp-lib"
-    , "pkgs.python3Packages.netapp-ontap"
-    , "pkgs.python3Packages.netcdf4"
-    , "pkgs.python3Packages.netdata"
-    , "pkgs.python3Packages.netdisco"
-    , "pkgs.python3Packages.nethsm"
-    , "pkgs.python3Packages.netifaces"
-    , "pkgs.python3Packages.netio"
-    , "pkgs.python3Packages.netmap"
-    , "pkgs.python3Packages.netmiko"
-    , "pkgs.python3Packages.nettigo-air-monitor"
-    , "pkgs.python3Packages.netutils"
-    , "pkgs.python3Packages.networkx"
-    , "pkgs.python3Packages.neuron-full"
-    , "pkgs.python3Packages.neuronpy"
-    , "pkgs.python3Packages.nevow"
-    , "pkgs.python3Packages.newick"
-    , "pkgs.python3Packages.newversion"
-    , "pkgs.python3Packages.nexia"
-    , "pkgs.python3Packages.nextcloudmonitor"
-    , "pkgs.python3Packages.nextcord"
-    , "pkgs.python3Packages.nextdns"
-    , "pkgs.python3Packages.nfcpy"
-    , "pkgs.python3Packages.nftables"
-    , "pkgs.python3Packages.nh3"
-    , "pkgs.python3Packages.niaaml"
-    , "pkgs.python3Packages.niaarm"
-    , "pkgs.python3Packages.niaclass"
-    , "pkgs.python3Packages.nianet"
-    , "pkgs.python3Packages.niapy"
-    , "pkgs.python3Packages.nibabel"
-    , "pkgs.python3Packages.nibe"
-    , "pkgs.python3Packages.nidaqmx"
-    , "pkgs.python3Packages.niko-home-control"
-    , "pkgs.python3Packages.nikola"
-    , "pkgs.python3Packages.nilearn"
-    , "pkgs.python3Packages.niluclient"
-    , "pkgs.python3Packages.nimfa"
-    , "pkgs.python3Packages.nine"
-    , "pkgs.python3Packages.ninja"
-    , "pkgs.python3Packages.ninja-python"
-    , "pkgs.python3Packages.nipy"
-    , "pkgs.python3Packages.nipype"
-    , "pkgs.python3Packages.nitime"
-    , "pkgs.python3Packages.nitpick"
-    , "pkgs.python3Packages.nitransforms"
-    , "pkgs.python3Packages.nix-kernel"
-    , "pkgs.python3Packages.nix-prefetch-github"
-    , "pkgs.python3Packages.nixpkgs"
-    , "pkgs.python3Packages.nixpkgs-pytools"
-    , "pkgs.python3Packages.nkdfu"
-    , "pkgs.python3Packages.nlpcloud"
-    , "pkgs.python3Packages.nltk"
-    , "pkgs.python3Packages.nmapthon2"
-    , "pkgs.python3Packages.nnpdf"
-    , "pkgs.python3Packages.nocasedict"
-    , "pkgs.python3Packages.nocaselist"
-    , "pkgs.python3Packages.nocturne"
-    , "pkgs.python3Packages.node-semver"
-    , "pkgs.python3Packages.nodeenv"
-    , "pkgs.python3Packages.nodepy-runtime"
-    , "pkgs.python3Packages.noise"
-    , "pkgs.python3Packages.noiseprotocol"
-    , "pkgs.python3Packages.nomadnet"
-    , "pkgs.python3Packages.normality"
-    , "pkgs.python3Packages.nose"
-    , "pkgs.python3Packages.nose-cov"
-    , "pkgs.python3Packages.nose-cprof"
-    , "pkgs.python3Packages.nose-exclude"
-    , "pkgs.python3Packages.nose-pattern-exclude"
-    , "pkgs.python3Packages.nose-randomly"
-    , "pkgs.python3Packages.nose-timer"
-    , "pkgs.python3Packages.nose2"
-    , "pkgs.python3Packages.nose3"
-    , "pkgs.python3Packages.nose_warnings_filters"
-    , "pkgs.python3Packages.nosejs"
-    , "pkgs.python3Packages.nosexcover"
-    , "pkgs.python3Packages.notebook"
-    , "pkgs.python3Packages.notebook-shim"
-    , "pkgs.python3Packages.notedown"
-    , "pkgs.python3Packages.notifications-android-tv"
-    , "pkgs.python3Packages.notifications-python-client"
-    , "pkgs.python3Packages.notify-events"
-    , "pkgs.python3Packages.notify-py"
-    , "pkgs.python3Packages.notify2"
-    , "pkgs.python3Packages.notion-client"
-    , "pkgs.python3Packages.notmuch"
-    , "pkgs.python3Packages.notmuch2"
-    , "pkgs.python3Packages.nototools"
-    , "pkgs.python3Packages.notus-scanner"
-    , "pkgs.python3Packages.nox"
-    , "pkgs.python3Packages.nplusone"
-    , "pkgs.python3Packages.nptyping"
-    , "pkgs.python3Packages.npyscreen"
-    , "pkgs.python3Packages.nsapi"
-    , "pkgs.python3Packages.nsz"
-    , "pkgs.python3Packages.ntc-templates"
-    , "pkgs.python3Packages.ntplib"
-    , "pkgs.python3Packages.nuheat"
-    , "pkgs.python3Packages.nuitka"
-    , "pkgs.python3Packages.nulltype"
-    , "pkgs.python3Packages.num2words"
-    , "pkgs.python3Packages.numba"
-    , "pkgs.python3Packages.numba-scipy"
-    , "pkgs.python3Packages.numbaWithCuda"
-    , "pkgs.python3Packages.numcodecs"
-    , "pkgs.python3Packages.numdifftools"
-    , "pkgs.python3Packages.numericalunits"
-    , "pkgs.python3Packages.numexpr"
-    , "pkgs.python3Packages.numpy"
-    , "pkgs.python3Packages.numpy-stl"
-    , "pkgs.python3Packages.numpydoc"
-    , "pkgs.python3Packages.numpyro"
-    , "pkgs.python3Packages.nunavut"
-    , "pkgs.python3Packages.nutils"
-    , "pkgs.python3Packages.nvchecker"
-    , "pkgs.python3Packages.nvidia-ml-py"
-    , "pkgs.python3Packages.nwdiag"
-    , "pkgs.python3Packages.nxt-python"
-    , "pkgs.python3Packages.oasatelematics"
-    , "pkgs.python3Packages.oath"
-    , "pkgs.python3Packages.oauth"
-    , "pkgs.python3Packages.oauth2"
-    , "pkgs.python3Packages.oauth2client"
-    , "pkgs.python3Packages.oauthenticator"
-    , "pkgs.python3Packages.oauthlib"
-    , "pkgs.python3Packages.obfsproxy"
-    , "pkgs.python3Packages.objax"
-    , "pkgs.python3Packages.objgraph"
-    , "pkgs.python3Packages.objsize"
-    , "pkgs.python3Packages.obspy"
-    , "pkgs.python3Packages.oca-port"
-    , "pkgs.python3Packages.ochre"
-    , "pkgs.python3Packages.oci"
-    , "pkgs.python3Packages.ocifs"
-    , "pkgs.python3Packages.ocrmypdf"
-    , "pkgs.python3Packages.od"
-    , "pkgs.python3Packages.odfpy"
-    , "pkgs.python3Packages.odp-amsterdam"
-    , "pkgs.python3Packages.oelint-parser"
-    , "pkgs.python3Packages.oemthermostat"
-    , "pkgs.python3Packages.offtrac"
-    , "pkgs.python3Packages.ofxclient"
-    , "pkgs.python3Packages.ofxhome"
-    , "pkgs.python3Packages.ofxparse"
-    , "pkgs.python3Packages.ofxtools"
-    , "pkgs.python3Packages.okonomiyaki"
-    , "pkgs.python3Packages.okta"
-    , "pkgs.python3Packages.oldest-supported-numpy"
-    , "pkgs.python3Packages.olefile"
-    , "pkgs.python3Packages.oletools"
-    , "pkgs.python3Packages.ome-zarr"
-    , "pkgs.python3Packages.omegaconf"
-    , "pkgs.python3Packages.omemo-dr"
-    , "pkgs.python3Packages.omnikinverter"
-    , "pkgs.python3Packages.omnilogic"
-    , "pkgs.python3Packages.omorfi"
-    , "pkgs.python3Packages.omrdatasettools"
-    , "pkgs.python3Packages.ondilo"
-    , "pkgs.python3Packages.onetimepad"
-    , "pkgs.python3Packages.onetimepass"
-    , "pkgs.python3Packages.onkyo-eiscp"
-    , "pkgs.python3Packages.online-judge-api-client"
-    , "pkgs.python3Packages.online-judge-tools"
-    , "pkgs.python3Packages.onlykey-solo-python"
-    , "pkgs.python3Packages.onnx"
-    , "pkgs.python3Packages.onnxconverter-common"
-    , "pkgs.python3Packages.onnxmltools"
-    , "pkgs.python3Packages.onnxruntime"
-    , "pkgs.python3Packages.onnxruntime-tools"
-    , "pkgs.python3Packages.onvif-zeep-async"
-    , "pkgs.python3Packages.oocsi"
-    , "pkgs.python3Packages.opcua-widgets"
-    , "pkgs.python3Packages.open-garage"
-    , "pkgs.python3Packages.open-meteo"
-    , "pkgs.python3Packages.openai"
-    , "pkgs.python3Packages.openai-triton"
-    , "pkgs.python3Packages.openai-triton-bin"
-    , "pkgs.python3Packages.openai-triton-cuda"
-    , "pkgs.python3Packages.openai-triton-no-cuda"
-    , "pkgs.python3Packages.openai-whisper"
-    , "pkgs.python3Packages.openaiauth"
-    , "pkgs.python3Packages.openant"
-    , "pkgs.python3Packages.openapi-core"
-    , "pkgs.python3Packages.openapi-schema-validator"
-    , "pkgs.python3Packages.openapi-spec-validator"
-    , "pkgs.python3Packages.openapi3"
-    , "pkgs.python3Packages.openbabel-bindings"
-    , "pkgs.python3Packages.opencensus"
-    , "pkgs.python3Packages.opencensus-context"
-    , "pkgs.python3Packages.opencensus-ext-azure"
-    , "pkgs.python3Packages.opencontainers"
-    , "pkgs.python3Packages.opencv4"
-    , "pkgs.python3Packages.openerz-api"
-    , "pkgs.python3Packages.openevsewifi"
-    , "pkgs.python3Packages.openhomedevice"
-    , "pkgs.python3Packages.openidc-client"
-    , "pkgs.python3Packages.openllm"
-    , "pkgs.python3Packages.openllm-client"
-    , "pkgs.python3Packages.openllm-core"
-    , "pkgs.python3Packages.openmm"
-    , "pkgs.python3Packages.openpaperwork-core"
-    , "pkgs.python3Packages.openpaperwork-gtk"
-    , "pkgs.python3Packages.openpyxl"
-    , "pkgs.python3Packages.openrazer"
-    , "pkgs.python3Packages.openrazer-daemon"
-    , "pkgs.python3Packages.openrgb-python"
-    , "pkgs.python3Packages.openrouteservice"
-    , "pkgs.python3Packages.opensearch-py"
-    , "pkgs.python3Packages.opensensemap-api"
-    , "pkgs.python3Packages.opensfm"
-    , "pkgs.python3Packages.openshift"
-    , "pkgs.python3Packages.opensimplex"
-    , "pkgs.python3Packages.openstackdocstheme"
-    , "pkgs.python3Packages.openstacksdk"
-    , "pkgs.python3Packages.openstep-plist"
-    , "pkgs.python3Packages.opentelemetry-api"
-    , "pkgs.python3Packages.opentelemetry-exporter-otlp"
-    , "pkgs.python3Packages.opentelemetry-exporter-otlp-proto-common"
-    , "pkgs.python3Packages.opentelemetry-exporter-otlp-proto-grpc"
-    , "pkgs.python3Packages.opentelemetry-exporter-otlp-proto-http"
-    , "pkgs.python3Packages.opentelemetry-exporter-prometheus"
-    , "pkgs.python3Packages.opentelemetry-instrumentation"
-    , "pkgs.python3Packages.opentelemetry-instrumentation-aiohttp-client"
-    , "pkgs.python3Packages.opentelemetry-instrumentation-asgi"
-    , "pkgs.python3Packages.opentelemetry-instrumentation-django"
-    , "pkgs.python3Packages.opentelemetry-instrumentation-grpc"
-    , "pkgs.python3Packages.opentelemetry-instrumentation-wsgi"
-    , "pkgs.python3Packages.opentelemetry-proto"
-    , "pkgs.python3Packages.opentelemetry-sdk"
-    , "pkgs.python3Packages.opentelemetry-semantic-conventions"
-    , "pkgs.python3Packages.opentelemetry-test-utils"
-    , "pkgs.python3Packages.opentelemetry-util-http"
-    , "pkgs.python3Packages.opentimestamps"
-    , "pkgs.python3Packages.opentracing"
-    , "pkgs.python3Packages.opentsne"
-    , "pkgs.python3Packages.openturns"
-    , "pkgs.python3Packages.openvino"
-    , "pkgs.python3Packages.openwebifpy"
-    , "pkgs.python3Packages.openwrt-luci-rpc"
-    , "pkgs.python3Packages.openwrt-ubus-rpc"
-    , "pkgs.python3Packages.opower"
-    , "pkgs.python3Packages.opsdroid-get-image-size"
-    , "pkgs.python3Packages.opsdroid_get_image_size"
-    , "pkgs.python3Packages.opt-einsum"
-    , "pkgs.python3Packages.optax"
-    , "pkgs.python3Packages.optimum"
-    , "pkgs.python3Packages.optuna"
-    , "pkgs.python3Packages.opuslib"
-    , "pkgs.python3Packages.opytimark"
-    , "pkgs.python3Packages.oracledb"
-    , "pkgs.python3Packages.oralb-ble"
-    , "pkgs.python3Packages.orange-canvas-core"
-    , "pkgs.python3Packages.orange-widget-base"
-    , "pkgs.python3Packages.orange3"
-    , "pkgs.python3Packages.ordered-set"
-    , "pkgs.python3Packages.orderedmultidict"
-    , "pkgs.python3Packages.orderedset"
-    , "pkgs.python3Packages.orjson"
-    , "pkgs.python3Packages.orm"
-    , "pkgs.python3Packages.ormar"
-    , "pkgs.python3Packages.ortools"
-    , "pkgs.python3Packages.orvibo"
-    , "pkgs.python3Packages.os-service-types"
-    , "pkgs.python3Packages.osc"
-    , "pkgs.python3Packages.osc-lib"
-    , "pkgs.python3Packages.oscpy"
-    , "pkgs.python3Packages.oscrypto"
-    , "pkgs.python3Packages.oset"
-    , "pkgs.python3Packages.oslo-concurrency"
-    , "pkgs.python3Packages.oslo-config"
-    , "pkgs.python3Packages.oslo-context"
-    , "pkgs.python3Packages.oslo-db"
-    , "pkgs.python3Packages.oslo-i18n"
-    , "pkgs.python3Packages.oslo-log"
-    , "pkgs.python3Packages.oslo-serialization"
-    , "pkgs.python3Packages.oslo-utils"
-    , "pkgs.python3Packages.oslotest"
-    , "pkgs.python3Packages.osmnx"
-    , "pkgs.python3Packages.osmpythontools"
-    , "pkgs.python3Packages.ospd"
-    , "pkgs.python3Packages.osqp"
-    , "pkgs.python3Packages.oss2"
-    , "pkgs.python3Packages.ossfs"
-    , "pkgs.python3Packages.outcome"
-    , "pkgs.python3Packages.overly"
-    , "pkgs.python3Packages.overpy"
-    , "pkgs.python3Packages.overrides"
-    , "pkgs.python3Packages.ovh"
-    , "pkgs.python3Packages.ovmfvartool"
-    , "pkgs.python3Packages.ovoenergy"
-    , "pkgs.python3Packages.owslib"
-    , "pkgs.python3Packages.oyaml"
-    , "pkgs.python3Packages.p1monitor"
-    , "pkgs.python3Packages.pa-ringbuffer"
-    , "pkgs.python3Packages.packageurl-python"
-    , "pkgs.python3Packages.packaging"
-    , "pkgs.python3Packages.packbits"
-    , "pkgs.python3Packages.packet-python"
-    , "pkgs.python3Packages.packvers"
-    , "pkgs.python3Packages.pad4pi"
-    , "pkgs.python3Packages.paddle-bfloat"
-    , "pkgs.python3Packages.paddle2onnx"
-    , "pkgs.python3Packages.paddleocr"
-    , "pkgs.python3Packages.paddlepaddle"
-    , "pkgs.python3Packages.pagelabels"
-    , "pkgs.python3Packages.paho-mqtt"
-    , "pkgs.python3Packages.palace"
-    , "pkgs.python3Packages.palettable"
-    , "pkgs.python3Packages.pallets-sphinx-themes"
-    , "pkgs.python3Packages.pam"
-    , "pkgs.python3Packages.pamela"
-    , "pkgs.python3Packages.pamqp"
-    , "pkgs.python3Packages.panacotta"
-    , "pkgs.python3Packages.panasonic-viera"
-    , "pkgs.python3Packages.pandas"
-    , "pkgs.python3Packages.pandas-datareader"
-    , "pkgs.python3Packages.pandas-stubs"
-    , "pkgs.python3Packages.pandoc-attributes"
-    , "pkgs.python3Packages.pandoc-xnos"
-    , "pkgs.python3Packages.pandocfilters"
-    , "pkgs.python3Packages.panel"
-    , "pkgs.python3Packages.panflute"
-    , "pkgs.python3Packages.papermill"
-    , "pkgs.python3Packages.paperwork-backend"
-    , "pkgs.python3Packages.paperwork-shell"
-    , "pkgs.python3Packages.papis"
-    , "pkgs.python3Packages.papis-python-rofi"
-    , "pkgs.python3Packages.para"
-    , "pkgs.python3Packages.param"
-    , "pkgs.python3Packages.parameter-expansion-patched"
-    , "pkgs.python3Packages.parameterized"
-    , "pkgs.python3Packages.parametrize-from-file"
-    , "pkgs.python3Packages.paramiko"
-    , "pkgs.python3Packages.paramz"
-    , "pkgs.python3Packages.paranoid-crypto"
-    , "pkgs.python3Packages.parfive"
-    , "pkgs.python3Packages.parquet"
-    , "pkgs.python3Packages.parse"
-    , "pkgs.python3Packages.parse-type"
-    , "pkgs.python3Packages.parsedatetime"
-    , "pkgs.python3Packages.parsedmarc"
-    , "pkgs.python3Packages.parsel"
-    , "pkgs.python3Packages.parsimonious"
-    , "pkgs.python3Packages.parsley"
-    , "pkgs.python3Packages.parso"
-    , "pkgs.python3Packages.parsy"
-    , "pkgs.python3Packages.partd"
-    , "pkgs.python3Packages.particle"
-    , "pkgs.python3Packages.parts"
-    , "pkgs.python3Packages.parver"
-    , "pkgs.python3Packages.pasimple"
-    , "pkgs.python3Packages.passlib"
-    , "pkgs.python3Packages.paste"
-    , "pkgs.python3Packages.pastedeploy"
-    , "pkgs.python3Packages.pastel"
-    , "pkgs.python3Packages.pastescript"
-    , "pkgs.python3Packages.patator"
-    , "pkgs.python3Packages.patch"
-    , "pkgs.python3Packages.patch-ng"
-    , "pkgs.python3Packages.path"
-    , "pkgs.python3Packages.path-and-address"
-    , "pkgs.python3Packages.pathable"
-    , "pkgs.python3Packages.pathlib"
-    , "pkgs.python3Packages.pathlib2"
-    , "pkgs.python3Packages.pathos"
-    , "pkgs.python3Packages.pathpy"
-    , "pkgs.python3Packages.pathspec"
-    , "pkgs.python3Packages.pathtools"
-    , "pkgs.python3Packages.pathvalidate"
-    , "pkgs.python3Packages.pathy"
-    , "pkgs.python3Packages.patiencediff"
-    , "pkgs.python3Packages.patool"
-    , "pkgs.python3Packages.patrowl4py"
-    , "pkgs.python3Packages.patsy"
-    , "pkgs.python3Packages.paver"
-    , "pkgs.python3Packages.paypal-checkout-serversdk"
-    , "pkgs.python3Packages.paypalhttp"
-    , "pkgs.python3Packages.paypalrestsdk"
-    , "pkgs.python3Packages.pbkdf2"
-    , "pkgs.python3Packages.pbr"
-    , "pkgs.python3Packages.pc-ble-driver-py"
-    , "pkgs.python3Packages.pcapy-ng"
-    , "pkgs.python3Packages.pcbnew-transition"
-    , "pkgs.python3Packages.pcodedmp"
-    , "pkgs.python3Packages.pcpp"
-    , "pkgs.python3Packages.pdb2pqr"
-    , "pkgs.python3Packages.pdbfixer"
-    , "pkgs.python3Packages.pdf2docx"
-    , "pkgs.python3Packages.pdf2image"
-    , "pkgs.python3Packages.pdfkit"
-    , "pkgs.python3Packages.pdfminer"
-    , "pkgs.python3Packages.pdfminer-six"
-    , "pkgs.python3Packages.pdfplumber"
-    , "pkgs.python3Packages.pdfrw"
-    , "pkgs.python3Packages.pdftotext"
-    , "pkgs.python3Packages.pdfx"
-    , "pkgs.python3Packages.pdm-backend"
-    , "pkgs.python3Packages.pdm-pep517"
-    , "pkgs.python3Packages.pdoc"
-    , "pkgs.python3Packages.pdoc3"
-    , "pkgs.python3Packages.pdunehd"
-    , "pkgs.python3Packages.peaqevcore"
-    , "pkgs.python3Packages.pebble"
-    , "pkgs.python3Packages.pecan"
-    , "pkgs.python3Packages.peco"
-    , "pkgs.python3Packages.peewee"
-    , "pkgs.python3Packages.peewee-migrate"
-    , "pkgs.python3Packages.pefile"
-    , "pkgs.python3Packages.peft"
-    , "pkgs.python3Packages.pegen"
-    , "pkgs.python3Packages.pelican"
-    , "pkgs.python3Packages.pem"
-    , "pkgs.python3Packages.pencompy"
-    , "pkgs.python3Packages.pendulum"
-    , "pkgs.python3Packages.pep257"
-    , "pkgs.python3Packages.pep440"
-    , "pkgs.python3Packages.pep517"
-    , "pkgs.python3Packages.pep8"
-    , "pkgs.python3Packages.pep8-naming"
-    , "pkgs.python3Packages.peppercorn"
-    , "pkgs.python3Packages.percol"
-    , "pkgs.python3Packages.perfplot"
-    , "pkgs.python3Packages.periodictable"
-    , "pkgs.python3Packages.periodiq"
-    , "pkgs.python3Packages.permissionedforms"
-    , "pkgs.python3Packages.persim"
-    , "pkgs.python3Packages.persist-queue"
-    , "pkgs.python3Packages.persistent"
-    , "pkgs.python3Packages.persisting-theory"
-    , "pkgs.python3Packages.pescea"
-    , "pkgs.python3Packages.pex"
-    , "pkgs.python3Packages.pexif"
-    , "pkgs.python3Packages.pexpect"
-    , "pkgs.python3Packages.pfzy"
-    , "pkgs.python3Packages.pg8000"
-    , "pkgs.python3Packages.pgcli"
-    , "pkgs.python3Packages.pglast"
-    , "pkgs.python3Packages.pgmpy"
-    , "pkgs.python3Packages.pgpdump"
-    , "pkgs.python3Packages.pgpy"
-    , "pkgs.python3Packages.pgsanity"
-    , "pkgs.python3Packages.pgspecial"
-    , "pkgs.python3Packages.pgvector"
-    , "pkgs.python3Packages.phe"
-    , "pkgs.python3Packages.phik"
-    , "pkgs.python3Packages.phone-modem"
-    , "pkgs.python3Packages.phonemizer"
-    , "pkgs.python3Packages.phonenumbers"
-    , "pkgs.python3Packages.phonopy"
-    , "pkgs.python3Packages.phpserialize"
-    , "pkgs.python3Packages.phx-class-registry"
-    , "pkgs.python3Packages.pi1wire"
-    , "pkgs.python3Packages.piano-transcription-inference"
-    , "pkgs.python3Packages.piccata"
-    , "pkgs.python3Packages.piccolo-theme"
-    , "pkgs.python3Packages.pick"
-    , "pkgs.python3Packages.pickleshare"
-    , "pkgs.python3Packages.picobox"
-    , "pkgs.python3Packages.picos"
-    , "pkgs.python3Packages.picosvg"
-    , "pkgs.python3Packages.pid"
-    , "pkgs.python3Packages.piep"
-    , "pkgs.python3Packages.piexif"
-    , "pkgs.python3Packages.pijuice"
-    , "pkgs.python3Packages.pika"
-    , "pkgs.python3Packages.pika-pool"
-    , "pkgs.python3Packages.pikepdf"
-    , "pkgs.python3Packages.pilkit"
-    , "pkgs.python3Packages.pillow"
-    , "pkgs.python3Packages.pillow-heif"
-    , "pkgs.python3Packages.pillow-simd"
-    , "pkgs.python3Packages.pillowfight"
-    , "pkgs.python3Packages.pims"
-    , "pkgs.python3Packages.pinboard"
-    , "pkgs.python3Packages.pinecone-client"
-    , "pkgs.python3Packages.ping3"
-    , "pkgs.python3Packages.pinocchio"
-    , "pkgs.python3Packages.pint"
-    , "pkgs.python3Packages.pint-pandas"
-    , "pkgs.python3Packages.pip"
-    , "pkgs.python3Packages.pip-api"
-    , "pkgs.python3Packages.pip-requirements-parser"
-    , "pkgs.python3Packages.pip-tools"
-    , "pkgs.python3Packages.pipBuildHook"
-    , "pkgs.python3Packages.pipInstallHook"
-    , "pkgs.python3Packages.pipdate"
-    , "pkgs.python3Packages.pipdeptree"
-    , "pkgs.python3Packages.pipenv-poetry-migrate"
-    , "pkgs.python3Packages.piper-phonemize"
-    , "pkgs.python3Packages.pipx"
-    , "pkgs.python3Packages.pivy"
-    , "pkgs.python3Packages.pixcat"
-    , "pkgs.python3Packages.pixel-ring"
-    , "pkgs.python3Packages.pixelmatch"
-    , "pkgs.python3Packages.pjsua2"
-    , "pkgs.python3Packages.pkce"
-    , "pkgs.python3Packages.pkg-about"
-    , "pkgs.python3Packages.pkgconfig"
-    , "pkgs.python3Packages.pkginfo"
-    , "pkgs.python3Packages.pkginfo2"
-    , "pkgs.python3Packages.pkgutil-resolve-name"
-    , "pkgs.python3Packages.pkuseg"
-    , "pkgs.python3Packages.pkutils"
-    , "pkgs.python3Packages.plac"
-    , "pkgs.python3Packages.plaid-python"
-    , "pkgs.python3Packages.plantuml"
-    , "pkgs.python3Packages.plantuml-markdown"
-    , "pkgs.python3Packages.plaster"
-    , "pkgs.python3Packages.plaster-pastedeploy"
-    , "pkgs.python3Packages.platformdirs"
-    , "pkgs.python3Packages.playsound"
-    , "pkgs.python3Packages.playwright"
-    , "pkgs.python3Packages.plexapi"
-    , "pkgs.python3Packages.plexauth"
-    , "pkgs.python3Packages.plexwebsocket"
-    , "pkgs.python3Packages.plfit"
-    , "pkgs.python3Packages.plone-testing"
-    , "pkgs.python3Packages.plotext"
-    , "pkgs.python3Packages.plotly"
-    , "pkgs.python3Packages.plotnine"
-    , "pkgs.python3Packages.pluggy"
-    , "pkgs.python3Packages.pluginbase"
-    , "pkgs.python3Packages.plugincode"
-    , "pkgs.python3Packages.plugnplay"
-    , "pkgs.python3Packages.plugwise"
-    , "pkgs.python3Packages.plum-py"
-    , "pkgs.python3Packages.plumbum"
-    , "pkgs.python3Packages.plux"
-    , "pkgs.python3Packages.ply"
-    , "pkgs.python3Packages.plyer"
-    , "pkgs.python3Packages.plyfile"
-    , "pkgs.python3Packages.plyplus"
-    , "pkgs.python3Packages.plyvel"
-    , "pkgs.python3Packages.pmdarima"
-    , "pkgs.python3Packages.pmdsky-debug-py"
-    , "pkgs.python3Packages.pmsensor"
-    , "pkgs.python3Packages.pmw"
-    , "pkgs.python3Packages.pnglatex"
-    , "pkgs.python3Packages.pocket"
-    , "pkgs.python3Packages.podcastparser"
-    , "pkgs.python3Packages.podcats"
-    , "pkgs.python3Packages.podman"
-    , "pkgs.python3Packages.poetry-core"
-    , "pkgs.python3Packages.poetry-dynamic-versioning"
-    , "pkgs.python3Packages.poetry-semver"
-    , "pkgs.python3Packages.polarizationsolver"
-    , "pkgs.python3Packages.polars"
-    , "pkgs.python3Packages.polib"
-    , "pkgs.python3Packages.policy-sentry"
-    , "pkgs.python3Packages.policyuniverse"
-    , "pkgs.python3Packages.polling"
-    , "pkgs.python3Packages.polygon3"
-    , "pkgs.python3Packages.polyline"
-    , "pkgs.python3Packages.pomegranate"
-    , "pkgs.python3Packages.pontos"
-    , "pkgs.python3Packages.pony"
-    , "pkgs.python3Packages.ponywhoosh"
-    , "pkgs.python3Packages.pooch"
-    , "pkgs.python3Packages.pook"
-    , "pkgs.python3Packages.poolsense"
-    , "pkgs.python3Packages.poppler-qt5"
-    , "pkgs.python3Packages.port-for"
-    , "pkgs.python3Packages.portalocker"
-    , "pkgs.python3Packages.portend"
-    , "pkgs.python3Packages.portpicker"
-    , "pkgs.python3Packages.posix_ipc"
-    , "pkgs.python3Packages.posthog"
-    , "pkgs.python3Packages.pot"
-    , "pkgs.python3Packages.potentials"
-    , "pkgs.python3Packages.potr"
-    , "pkgs.python3Packages.power"
-    , "pkgs.python3Packages.powerline"
-    , "pkgs.python3Packages.powerline-mem-segment"
-    , "pkgs.python3Packages.powerlineMemSegment"
-    , "pkgs.python3Packages.pox"
-    , "pkgs.python3Packages.poyo"
-    , "pkgs.python3Packages.ppdeep"
-    , "pkgs.python3Packages.ppft"
-    , "pkgs.python3Packages.pplpy"
-    , "pkgs.python3Packages.pprintpp"
-    , "pkgs.python3Packages.pproxy"
-    , "pkgs.python3Packages.ppscore"
-    , "pkgs.python3Packages.pq"
-    , "pkgs.python3Packages.prance"
-    , "pkgs.python3Packages.praw"
-    , "pkgs.python3Packages.prawcore"
-    , "pkgs.python3Packages.prayer-times-calculator"
-    , "pkgs.python3Packages.pre-commit-hooks"
-    , "pkgs.python3Packages.precis-i18n"
-    , "pkgs.python3Packages.prefixed"
-    , "pkgs.python3Packages.preggy"
-    , "pkgs.python3Packages.premailer"
-    , "pkgs.python3Packages.preprocess-cancellation"
-    , "pkgs.python3Packages.preshed"
-    , "pkgs.python3Packages.pretend"
-    , "pkgs.python3Packages.prettytable"
-    , "pkgs.python3Packages.primecountpy"
-    , "pkgs.python3Packages.primer3"
-    , "pkgs.python3Packages.priority"
-    , "pkgs.python3Packages.prison"
-    , "pkgs.python3Packages.proboscis"
-    , "pkgs.python3Packages.process-tests"
-    , "pkgs.python3Packages.procmon-parser"
-    , "pkgs.python3Packages.prodict"
-    , "pkgs.python3Packages.proglog"
-    , "pkgs.python3Packages.progress"
-    , "pkgs.python3Packages.progressbar"
-    , "pkgs.python3Packages.progressbar2"
-    , "pkgs.python3Packages.progressbar33"
-    , "pkgs.python3Packages.prometheus-client"
-    , "pkgs.python3Packages.prometheus-flask-exporter"
-    , "pkgs.python3Packages.prometheus-pandas"
-    , "pkgs.python3Packages.prometheus_client"
-    , "pkgs.python3Packages.promise"
-    , "pkgs.python3Packages.prompt-toolkit"
-    , "pkgs.python3Packages.prompt_toolkit"
-    , "pkgs.python3Packages.prompthub-py"
-    , "pkgs.python3Packages.property-manager"
-    , "pkgs.python3Packages.prophet"
-    , "pkgs.python3Packages.propka"
-    , "pkgs.python3Packages.protego"
-    , "pkgs.python3Packages.proto-plus"
-    , "pkgs.python3Packages.protobuf"
-    , "pkgs.python3Packages.protobuf3"
-    , "pkgs.python3Packages.protobuf3-to-dict"
-    , "pkgs.python3Packages.proton-client"
-    , "pkgs.python3Packages.protonup"
-    , "pkgs.python3Packages.protonup-ng"
-    , "pkgs.python3Packages.protonvpn-nm-lib"
-    , "pkgs.python3Packages.prov"
-    , "pkgs.python3Packages.prox-tv"
-    , "pkgs.python3Packages.proxmoxer"
-    , "pkgs.python3Packages.proxy-db"
-    , "pkgs.python3Packages.proxy-py"
-    , "pkgs.python3Packages.proxy-tools"
-    , "pkgs.python3Packages.proxy_tools"
-    , "pkgs.python3Packages.psautohint"
-    , "pkgs.python3Packages.pscript"
-    , "pkgs.python3Packages.psd-tools"
-    , "pkgs.python3Packages.psrpcore"
-    , "pkgs.python3Packages.psutil"
-    , "pkgs.python3Packages.psutil-home-assistant"
-    , "pkgs.python3Packages.psychrolib"
-    , "pkgs.python3Packages.psycopg"
-    , "pkgs.python3Packages.psycopg2"
-    , "pkgs.python3Packages.psycopg2cffi"
-    , "pkgs.python3Packages.psygnal"
-    , "pkgs.python3Packages.ptable"
-    , "pkgs.python3Packages.ptest"
-    , "pkgs.python3Packages.ptpython"
-    , "pkgs.python3Packages.ptyprocess"
-    , "pkgs.python3Packages.publicsuffix"
-    , "pkgs.python3Packages.publicsuffix2"
-    , "pkgs.python3Packages.publicsuffixlist"
-    , "pkgs.python3Packages.pubnub"
-    , "pkgs.python3Packages.pubnubsub-handler"
-    , "pkgs.python3Packages.pudb"
-    , "pkgs.python3Packages.pulp"
-    , "pkgs.python3Packages.pulsectl"
-    , "pkgs.python3Packages.pulsectl-asyncio"
-    , "pkgs.python3Packages.pulumi"
-    , "pkgs.python3Packages.pulumi-aws"
-    , "pkgs.python3Packages.pulumi-aws-native"
-    , "pkgs.python3Packages.pulumi-azure-native"
-    , "pkgs.python3Packages.pulumi-command"
-    , "pkgs.python3Packages.pulumi-random"
-    , "pkgs.python3Packages.pure-cdb"
-    , "pkgs.python3Packages.pure-eval"
-    , "pkgs.python3Packages.pure-pcapy3"
-    , "pkgs.python3Packages.pure-protobuf"
-    , "pkgs.python3Packages.pure-python-adb"
-    , "pkgs.python3Packages.pure-python-adb-homeassistant"
-    , "pkgs.python3Packages.puremagic"
-    , "pkgs.python3Packages.purepng"
-    , "pkgs.python3Packages.purl"
-    , "pkgs.python3Packages.push-receiver"
-    , "pkgs.python3Packages.pushbullet"
-    , "pkgs.python3Packages.pushbullet-py"
-    , "pkgs.python3Packages.pushover-complete"
-    , "pkgs.python3Packages.pvextractor"
-    , "pkgs.python3Packages.pvlib"
-    , "pkgs.python3Packages.pvo"
-    , "pkgs.python3Packages.pweave"
-    , "pkgs.python3Packages.pwntools"
-    , "pkgs.python3Packages.pxml"
-    , "pkgs.python3Packages.py"
-    , "pkgs.python3Packages.py-air-control"
-    , "pkgs.python3Packages.py-air-control-exporter"
-    , "pkgs.python3Packages.py-bip39-bindings"
-    , "pkgs.python3Packages.py-canary"
-    , "pkgs.python3Packages.py-cid"
-    , "pkgs.python3Packages.py-cpuinfo"
-    , "pkgs.python3Packages.py-deprecate"
-    , "pkgs.python3Packages.py-desmume"
-    , "pkgs.python3Packages.py-dmidecode"
-    , "pkgs.python3Packages.py-dormakaba-dkey"
-    , "pkgs.python3Packages.py-ecc"
-    , "pkgs.python3Packages.py-eth-sig-utils"
-    , "pkgs.python3Packages.py-expression-eval"
-    , "pkgs.python3Packages.py-libzfs"
-    , "pkgs.python3Packages.py-lru-cache"
-    , "pkgs.python3Packages.py-multiaddr"
-    , "pkgs.python3Packages.py-multibase"
-    , "pkgs.python3Packages.py-multicodec"
-    , "pkgs.python3Packages.py-multihash"
-    , "pkgs.python3Packages.py-nextbusnext"
-    , "pkgs.python3Packages.py-nightscout"
-    , "pkgs.python3Packages.py-partiql-parser"
-    , "pkgs.python3Packages.py-pdf-parser"
-    , "pkgs.python3Packages.py-radix-sr"
-    , "pkgs.python3Packages.py-serializable"
-    , "pkgs.python3Packages.py-sneakers"
-    , "pkgs.python3Packages.py-sonic"
-    , "pkgs.python3Packages.py-sr25519-bindings"
-    , "pkgs.python3Packages.py-stringmatching"
-    , "pkgs.python3Packages.py-synologydsm-api"
-    , "pkgs.python3Packages.py-tes"
-    , "pkgs.python3Packages.py-tree-sitter"
-    , "pkgs.python3Packages.py-ubjson"
-    , "pkgs.python3Packages.py-vapid"
-    , "pkgs.python3Packages.py-zabbix"
-    , "pkgs.python3Packages.py17track"
-    , "pkgs.python3Packages.py2bit"
-    , "pkgs.python3Packages.py3buddy"
-    , "pkgs.python3Packages.py3exiv2"
-    , "pkgs.python3Packages.py3nvml"
-    , "pkgs.python3Packages.py3rijndael"
-    , "pkgs.python3Packages.py3status"
-    , "pkgs.python3Packages.py3to2"
-    , "pkgs.python3Packages.py4j"
-    , "pkgs.python3Packages.py65"
-    , "pkgs.python3Packages.pyRFC3339"
-    , "pkgs.python3Packages.pySmartDL"
-    , "pkgs.python3Packages.py_scrypt"
-    , "pkgs.python3Packages.py_stringmatching"
-    , "pkgs.python3Packages.pyacaia-async"
-    , "pkgs.python3Packages.pyacoustid"
-    , "pkgs.python3Packages.pyads"
-    , "pkgs.python3Packages.pyaehw4a1"
-    , "pkgs.python3Packages.pyaes"
-    , "pkgs.python3Packages.pyaftership"
-    , "pkgs.python3Packages.pyahocorasick"
-    , "pkgs.python3Packages.pyairnow"
-    , "pkgs.python3Packages.pyairvisual"
-    , "pkgs.python3Packages.pyalgotrade"
-    , "pkgs.python3Packages.pyamg"
-    , "pkgs.python3Packages.pyaml"
-    , "pkgs.python3Packages.pyannotate"
-    , "pkgs.python3Packages.pyarlo"
-    , "pkgs.python3Packages.pyarr"
-    , "pkgs.python3Packages.pyarrow"
-    , "pkgs.python3Packages.pyasn"
-    , "pkgs.python3Packages.pyasn1"
-    , "pkgs.python3Packages.pyasn1-modules"
-    , "pkgs.python3Packages.pyatag"
-    , "pkgs.python3Packages.pyathena"
-    , "pkgs.python3Packages.pyatmo"
-    , "pkgs.python3Packages.pyatome"
-    , "pkgs.python3Packages.pyatspi"
-    , "pkgs.python3Packages.pyatv"
-    , "pkgs.python3Packages.pyaudio"
-    , "pkgs.python3Packages.pyaussiebb"
-    , "pkgs.python3Packages.pyautogui"
-    , "pkgs.python3Packages.pyavm"
-    , "pkgs.python3Packages.pyaxmlparser"
-    , "pkgs.python3Packages.pybalboa"
-    , "pkgs.python3Packages.pybars3"
-    , "pkgs.python3Packages.pybase64"
-    , "pkgs.python3Packages.pybids"
-    , "pkgs.python3Packages.pybigwig"
-    , "pkgs.python3Packages.pybind11"
-    , "pkgs.python3Packages.pybindgen"
-    , "pkgs.python3Packages.pyblackbird"
-    , "pkgs.python3Packages.pybloom-live"
-    , "pkgs.python3Packages.pybluez"
-    , "pkgs.python3Packages.pybotvac"
-    , "pkgs.python3Packages.pybox2d"
-    , "pkgs.python3Packages.pybravia"
-    , "pkgs.python3Packages.pybrowserid"
-    , "pkgs.python3Packages.pybtex"
-    , "pkgs.python3Packages.pybtex-docutils"
-    , "pkgs.python3Packages.pybullet"
-    , "pkgs.python3Packages.pycairo"
-    , "pkgs.python3Packages.pycangjie"
-    , "pkgs.python3Packages.pycapnp"
-    , "pkgs.python3Packages.pycaption"
-    , "pkgs.python3Packages.pycardano"
-    , "pkgs.python3Packages.pycares"
-    , "pkgs.python3Packages.pycarwings2"
-    , "pkgs.python3Packages.pycatch22"
-    , "pkgs.python3Packages.pycategories"
-    , "pkgs.python3Packages.pycddl"
-    , "pkgs.python3Packages.pycdio"
-    , "pkgs.python3Packages.pycec"
-    , "pkgs.python3Packages.pycep-parser"
-    , "pkgs.python3Packages.pycfdns"
-    , "pkgs.python3Packages.pycflow2dot"
-    , "pkgs.python3Packages.pycfmodel"
-    , "pkgs.python3Packages.pychannels"
-    , "pkgs.python3Packages.pychart"
-    , "pkgs.python3Packages.pychm"
-    , "pkgs.python3Packages.pychromecast"
-    , "pkgs.python3Packages.pycketcasts"
-    , "pkgs.python3Packages.pyclimacell"
-    , "pkgs.python3Packages.pyclip"
-    , "pkgs.python3Packages.pyclipper"
-    , "pkgs.python3Packages.pycm"
-    , "pkgs.python3Packages.pycmarkgfm"
-    , "pkgs.python3Packages.pycocotools"
-    , "pkgs.python3Packages.pycodestyle"
-    , "pkgs.python3Packages.pycognito"
-    , "pkgs.python3Packages.pycoin"
-    , "pkgs.python3Packages.pycollada"
-    , "pkgs.python3Packages.pycomfoconnect"
-    , "pkgs.python3Packages.pycomposefile"
-    , "pkgs.python3Packages.pycontracts"
-    , "pkgs.python3Packages.pycontrol4"
-    , "pkgs.python3Packages.pycookiecheat"
-    , "pkgs.python3Packages.pycoolmasternet-async"
-    , "pkgs.python3Packages.pycosat"
-    , "pkgs.python3Packages.pycotap"
-    , "pkgs.python3Packages.pycountry"
-    , "pkgs.python3Packages.pycparser"
-    , "pkgs.python3Packages.pycrc"
-    , "pkgs.python3Packages.pycritty"
-    , "pkgs.python3Packages.pycron"
-    , "pkgs.python3Packages.pycrypto"
-    , "pkgs.python3Packages.pycryptodome"
-    , "pkgs.python3Packages.pycryptodomex"
-    , "pkgs.python3Packages.pycsdr"
-    , "pkgs.python3Packages.pyct"
-    , "pkgs.python3Packages.pyctr"
-    , "pkgs.python3Packages.pycuda"
-    , "pkgs.python3Packages.pycups"
-    , "pkgs.python3Packages.pycurl"
-    , "pkgs.python3Packages.pycxx"
-    , "pkgs.python3Packages.pycyphal"
-    , "pkgs.python3Packages.pydaikin"
-    , "pkgs.python3Packages.pydal"
-    , "pkgs.python3Packages.pydanfossair"
-    , "pkgs.python3Packages.pydantic"
-    , "pkgs.python3Packages.pydantic-core"
-    , "pkgs.python3Packages.pydantic-extra-types"
-    , "pkgs.python3Packages.pydantic-scim"
-    , "pkgs.python3Packages.pydantic-settings"
-    , "pkgs.python3Packages.pydash"
-    , "pkgs.python3Packages.pydata-google-auth"
-    , "pkgs.python3Packages.pydata-sphinx-theme"
-    , "pkgs.python3Packages.pydateinfer"
-    , "pkgs.python3Packages.pydbus"
-    , "pkgs.python3Packages.pydeck"
-    , "pkgs.python3Packages.pydeconz"
-    , "pkgs.python3Packages.pydelijn"
-    , "pkgs.python3Packages.pydenticon"
-    , "pkgs.python3Packages.pydeps"
-    , "pkgs.python3Packages.pydes"
-    , "pkgs.python3Packages.pydevccu"
-    , "pkgs.python3Packages.pydevd"
-    , "pkgs.python3Packages.pydevtool"
-    , "pkgs.python3Packages.pydexcom"
-    , "pkgs.python3Packages.pydicom"
-    , "pkgs.python3Packages.pydicom-seg"
-    , "pkgs.python3Packages.pydigiham"
-    , "pkgs.python3Packages.pydiscourse"
-    , "pkgs.python3Packages.pydiscovergy"
-    , "pkgs.python3Packages.pydispatcher"
-    , "pkgs.python3Packages.pydmd"
-    , "pkgs.python3Packages.pydns"
-    , "pkgs.python3Packages.pydocstyle"
-    , "pkgs.python3Packages.pydocumentdb"
-    , "pkgs.python3Packages.pydoods"
-    , "pkgs.python3Packages.pydot"
-    , "pkgs.python3Packages.pydrawise"
-    , "pkgs.python3Packages.pydrive2"
-    , "pkgs.python3Packages.pydroid-ipcam"
-    , "pkgs.python3Packages.pydruid"
-    , "pkgs.python3Packages.pydsdl"
-    , "pkgs.python3Packages.pydub"
-    , "pkgs.python3Packages.pyduke-energy"
-    , "pkgs.python3Packages.pyduotecno"
-    , "pkgs.python3Packages.pydy"
-    , "pkgs.python3Packages.pydyf"
-    , "pkgs.python3Packages.pyeapi"
-    , "pkgs.python3Packages.pyebus"
-    , "pkgs.python3Packages.pyechonest"
-    , "pkgs.python3Packages.pyeclib"
-    , "pkgs.python3Packages.pyecoforest"
-    , "pkgs.python3Packages.pyeconet"
-    , "pkgs.python3Packages.pyecowitt"
-    , "pkgs.python3Packages.pyedimax"
-    , "pkgs.python3Packages.pyee"
-    , "pkgs.python3Packages.pyefergy"
-    , "pkgs.python3Packages.pyeight"
-    , "pkgs.python3Packages.pyelftools"
-    , "pkgs.python3Packages.pyemby"
-    , "pkgs.python3Packages.pyemd"
-    , "pkgs.python3Packages.pyenchant"
-    , "pkgs.python3Packages.pyenphase"
-    , "pkgs.python3Packages.pyenvisalink"
-    , "pkgs.python3Packages.pyephember"
-    , "pkgs.python3Packages.pyepsg"
-    , "pkgs.python3Packages.pyerfa"
-    , "pkgs.python3Packages.pyeverlights"
-    , "pkgs.python3Packages.pyevilgenius"
-    , "pkgs.python3Packages.pyevmasm"
-    , "pkgs.python3Packages.pyexcel"
-    , "pkgs.python3Packages.pyexcel-io"
-    , "pkgs.python3Packages.pyexcel-ods"
-    , "pkgs.python3Packages.pyexcel-xls"
-    , "pkgs.python3Packages.pyexploitdb"
-    , "pkgs.python3Packages.pyezviz"
-    , "pkgs.python3Packages.pyface"
-    , "pkgs.python3Packages.pyfaidx"
-    , "pkgs.python3Packages.pyfakefs"
-    , "pkgs.python3Packages.pyfakewebcam"
-    , "pkgs.python3Packages.pyfantom"
-    , "pkgs.python3Packages.pyfcm"
-    , "pkgs.python3Packages.pyfftw"
-    , "pkgs.python3Packages.pyfibaro"
-    , "pkgs.python3Packages.pyfido"
-    , "pkgs.python3Packages.pyfiglet"
-    , "pkgs.python3Packages.pyfireservicerota"
-    , "pkgs.python3Packages.pyflakes"
-    , "pkgs.python3Packages.pyflexit"
-    , "pkgs.python3Packages.pyflic"
-    , "pkgs.python3Packages.pyflick"
-    , "pkgs.python3Packages.pyfluidsynth"
-    , "pkgs.python3Packages.pyflume"
-    , "pkgs.python3Packages.pyflunearyou"
-    , "pkgs.python3Packages.pyfma"
-    , "pkgs.python3Packages.pyfnip"
-    , "pkgs.python3Packages.pyfreedompro"
-    , "pkgs.python3Packages.pyfribidi"
-    , "pkgs.python3Packages.pyfritzhome"
-    , "pkgs.python3Packages.pyfronius"
-    , "pkgs.python3Packages.pyftdi"
-    , "pkgs.python3Packages.pyftgl"
-    , "pkgs.python3Packages.pyftpdlib"
-    , "pkgs.python3Packages.pyfttt"
-    , "pkgs.python3Packages.pyfume"
-    , "pkgs.python3Packages.pyfuse3"
-    , "pkgs.python3Packages.pyfxa"
-    , "pkgs.python3Packages.pyfzf"
-    , "pkgs.python3Packages.pygal"
-    , "pkgs.python3Packages.pygame"
-    , "pkgs.python3Packages.pygame-gui"
-    , "pkgs.python3Packages.pygame_sdl2"
-    , "pkgs.python3Packages.pygatt"
-    , "pkgs.python3Packages.pygccxml"
-    , "pkgs.python3Packages.pygdbmi"
-    , "pkgs.python3Packages.pygeoip"
-    , "pkgs.python3Packages.pygeos"
-    , "pkgs.python3Packages.pygetwindow"
-    , "pkgs.python3Packages.pygit2"
-    , "pkgs.python3Packages.pygitguardian"
-    , "pkgs.python3Packages.pygithub"
-    , "pkgs.python3Packages.pyglet"
-    , "pkgs.python3Packages.pyglm"
-    , "pkgs.python3Packages.pygls"
-    , "pkgs.python3Packages.pygmars"
-    , "pkgs.python3Packages.pygments"
-    , "pkgs.python3Packages.pygments-better-html"
-    , "pkgs.python3Packages.pygments-markdown-lexer"
-    , "pkgs.python3Packages.pygments-style-github"
-    , "pkgs.python3Packages.pygmo"
-    , "pkgs.python3Packages.pygmt"
-    , "pkgs.python3Packages.pygnmi"
-    , "pkgs.python3Packages.pygobject-stubs"
-    , "pkgs.python3Packages.pygobject3"
-    , "pkgs.python3Packages.pygogo"
-    , "pkgs.python3Packages.pygpgme"
-    , "pkgs.python3Packages.pygraphviz"
-    , "pkgs.python3Packages.pygreat"
-    , "pkgs.python3Packages.pygrok"
-    , "pkgs.python3Packages.pygsl"
-    , "pkgs.python3Packages.pygtail"
-    , "pkgs.python3Packages.pygtfs"
-    , "pkgs.python3Packages.pygti"
-    , "pkgs.python3Packages.pygtkspellcheck"
-    , "pkgs.python3Packages.pygtrie"
-    , "pkgs.python3Packages.pyhamcrest"
-    , "pkgs.python3Packages.pyhanko"
-    , "pkgs.python3Packages.pyhanko-certvalidator"
-    , "pkgs.python3Packages.pyhaversion"
-    , "pkgs.python3Packages.pyhcl"
-    , "pkgs.python3Packages.pyheck"
-    , "pkgs.python3Packages.pyheif"
-    , "pkgs.python3Packages.pyheos"
-    , "pkgs.python3Packages.pyhepmc"
-    , "pkgs.python3Packages.pyhiveapi"
-    , "pkgs.python3Packages.pyhocon"
-    , "pkgs.python3Packages.pyhomematic"
-    , "pkgs.python3Packages.pyhomepilot"
-    , "pkgs.python3Packages.pyhomeworks"
-    , "pkgs.python3Packages.pyhs100"
-    , "pkgs.python3Packages.pyhumps"
-    , "pkgs.python3Packages.pyi2cflash"
-    , "pkgs.python3Packages.pyialarm"
-    , "pkgs.python3Packages.pyicloud"
-    , "pkgs.python3Packages.pyicu"
-    , "pkgs.python3Packages.pyimpfuzzy"
-    , "pkgs.python3Packages.pyinfra"
-    , "pkgs.python3Packages.pyinotify"
-    , "pkgs.python3Packages.pyinputevent"
-    , "pkgs.python3Packages.pyinstaller-versionfile"
-    , "pkgs.python3Packages.pyinsteon"
-    , "pkgs.python3Packages.pyinstrument"
-    , "pkgs.python3Packages.pyintesishome"
-    , "pkgs.python3Packages.pyipma"
-    , "pkgs.python3Packages.pyipp"
-    , "pkgs.python3Packages.pyiqvia"
-    , "pkgs.python3Packages.pyisbn"
-    , "pkgs.python3Packages.pyisy"
-    , "pkgs.python3Packages.pyixapi"
-    , "pkgs.python3Packages.pyjet"
-    , "pkgs.python3Packages.pyjks"
-    , "pkgs.python3Packages.pyjnius"
-    , "pkgs.python3Packages.pyjson5"
-    , "pkgs.python3Packages.pyjsparser"
-    , "pkgs.python3Packages.pyjwkest"
-    , "pkgs.python3Packages.pyjwt"
-    , "pkgs.python3Packages.pykakasi"
-    , "pkgs.python3Packages.pykaleidescape"
-    , "pkgs.python3Packages.pykalman"
-    , "pkgs.python3Packages.pykdl"
-    , "pkgs.python3Packages.pykdtree"
-    , "pkgs.python3Packages.pykeepass"
-    , "pkgs.python3Packages.pykerberos"
-    , "pkgs.python3Packages.pykeyatome"
-    , "pkgs.python3Packages.pykira"
-    , "pkgs.python3Packages.pykka"
-    , "pkgs.python3Packages.pykmtronic"
-    , "pkgs.python3Packages.pykodi"
-    , "pkgs.python3Packages.pykoplenti"
-    , "pkgs.python3Packages.pykostalpiko"
-    , "pkgs.python3Packages.pykrakenapi"
-    , "pkgs.python3Packages.pykulersky"
-    , "pkgs.python3Packages.pykwalify"
-    , "pkgs.python3Packages.pykwb"
-    , "pkgs.python3Packages.pylacrosse"
-    , "pkgs.python3Packages.pylama"
-    , "pkgs.python3Packages.pylast"
-    , "pkgs.python3Packages.pylatexenc"
-    , "pkgs.python3Packages.pylaunches"
-    , "pkgs.python3Packages.pyld"
-    , "pkgs.python3Packages.pylddwrap"
-    , "pkgs.python3Packages.pyleri"
-    , "pkgs.python3Packages.pylev"
-    , "pkgs.python3Packages.pylgnetcast"
-    , "pkgs.python3Packages.pylibacl"
-    , "pkgs.python3Packages.pylibconfig2"
-    , "pkgs.python3Packages.pylibdmtx"
-    , "pkgs.python3Packages.pylibftdi"
-    , "pkgs.python3Packages.pylibjpeg-libjpeg"
-    , "pkgs.python3Packages.pyliblo"
-    , "pkgs.python3Packages.pylibmc"
-    , "pkgs.python3Packages.pylink-square"
-    , "pkgs.python3Packages.pylint"
-    , "pkgs.python3Packages.pylint-celery"
-    , "pkgs.python3Packages.pylint-django"
-    , "pkgs.python3Packages.pylint-flask"
-    , "pkgs.python3Packages.pylint-plugin-utils"
-    , "pkgs.python3Packages.pylint-venv"
-    , "pkgs.python3Packages.pylion"
-    , "pkgs.python3Packages.pylitterbot"
-    , "pkgs.python3Packages.pylnk3"
-    , "pkgs.python3Packages.pylpsd"
-    , "pkgs.python3Packages.pylru"
-    , "pkgs.python3Packages.pyls-flake8"
-    , "pkgs.python3Packages.pyls-isort"
-    , "pkgs.python3Packages.pyls-memestra"
-    , "pkgs.python3Packages.pyls-spyder"
-    , "pkgs.python3Packages.pylsp-mypy"
-    , "pkgs.python3Packages.pylsp-rope"
-    , "pkgs.python3Packages.pylsqpack"
-    , "pkgs.python3Packages.pylti"
-    , "pkgs.python3Packages.pylutron"
-    , "pkgs.python3Packages.pylutron-caseta"
-    , "pkgs.python3Packages.pylxd"
-    , "pkgs.python3Packages.pylyrics"
-    , "pkgs.python3Packages.pylzma"
-    , "pkgs.python3Packages.pymacaroons"
-    , "pkgs.python3Packages.pymailgunner"
-    , "pkgs.python3Packages.pymanopt"
-    , "pkgs.python3Packages.pymarshal"
-    , "pkgs.python3Packages.pymata-express"
-    , "pkgs.python3Packages.pymatgen"
-    , "pkgs.python3Packages.pymatting"
-    , "pkgs.python3Packages.pymaven-patch"
-    , "pkgs.python3Packages.pymavlink"
-    , "pkgs.python3Packages.pymbolic"
-    , "pkgs.python3Packages.pymc"
-    , "pkgs.python3Packages.pymc3"
-    , "pkgs.python3Packages.pymdown-extensions"
-    , "pkgs.python3Packages.pymdstat"
-    , "pkgs.python3Packages.pymediainfo"
-    , "pkgs.python3Packages.pymediaroom"
-    , "pkgs.python3Packages.pymedio"
-    , "pkgs.python3Packages.pymeeus"
-    , "pkgs.python3Packages.pymelcloud"
-    , "pkgs.python3Packages.pymemcache"
-    , "pkgs.python3Packages.pymemoize"
-    , "pkgs.python3Packages.pyment"
-    , "pkgs.python3Packages.pymeta3"
-    , "pkgs.python3Packages.pymetar"
-    , "pkgs.python3Packages.pymeteireann"
-    , "pkgs.python3Packages.pymeteoclimatic"
-    , "pkgs.python3Packages.pymetno"
-    , "pkgs.python3Packages.pymfy"
-    , "pkgs.python3Packages.pymicrobot"
-    , "pkgs.python3Packages.pymilter"
-    , "pkgs.python3Packages.pymilvus"
-    , "pkgs.python3Packages.pymitv"
-    , "pkgs.python3Packages.pymodbus"
-    , "pkgs.python3Packages.pymongo"
-    , "pkgs.python3Packages.pymongo-inmemory"
-    , "pkgs.python3Packages.pymoo"
-    , "pkgs.python3Packages.pymorphy2"
-    , "pkgs.python3Packages.pymorphy2-dicts-ru"
-    , "pkgs.python3Packages.pymorphy3"
-    , "pkgs.python3Packages.pymorphy3-dicts-ru"
-    , "pkgs.python3Packages.pymorphy3-dicts-uk"
-    , "pkgs.python3Packages.pympler"
-    , "pkgs.python3Packages.pymsgbox"
-    , "pkgs.python3Packages.pymsteams"
-    , "pkgs.python3Packages.pymumble"
-    , "pkgs.python3Packages.pymunk"
-    , "pkgs.python3Packages.pymupdf"
-    , "pkgs.python3Packages.pymvglive"
-    , "pkgs.python3Packages.pymyq"
-    , "pkgs.python3Packages.pymysensors"
-    , "pkgs.python3Packages.pymysql"
-    , "pkgs.python3Packages.pymysqlsa"
-    , "pkgs.python3Packages.pymystem3"
-    , "pkgs.python3Packages.pynac"
-    , "pkgs.python3Packages.pynacl"
-    , "pkgs.python3Packages.pynamecheap"
-    , "pkgs.python3Packages.pynamodb"
-    , "pkgs.python3Packages.pynanoleaf"
-    , "pkgs.python3Packages.pync"
-    , "pkgs.python3Packages.pynello"
-    , "pkgs.python3Packages.pynest2d"
-    , "pkgs.python3Packages.pynetbox"
-    , "pkgs.python3Packages.pynetdicom"
-    , "pkgs.python3Packages.pynetgear"
-    , "pkgs.python3Packages.pyngrok"
-    , "pkgs.python3Packages.pynina"
-    , "pkgs.python3Packages.pynisher"
-    , "pkgs.python3Packages.pynmea2"
-    , "pkgs.python3Packages.pynndescent"
-    , "pkgs.python3Packages.pynobo"
-    , "pkgs.python3Packages.pynput"
-    , "pkgs.python3Packages.pynrrd"
-    , "pkgs.python3Packages.pynuki"
-    , "pkgs.python3Packages.pynut2"
-    , "pkgs.python3Packages.pynvim"
-    , "pkgs.python3Packages.pynvim-pp"
-    , "pkgs.python3Packages.pynvml"
-    , "pkgs.python3Packages.pynws"
-    , "pkgs.python3Packages.pynx584"
-    , "pkgs.python3Packages.pynzb"
-    , "pkgs.python3Packages.pyobihai"
-    , "pkgs.python3Packages.pyocd"
-    , "pkgs.python3Packages.pyocr"
-    , "pkgs.python3Packages.pyoctoprintapi"
-    , "pkgs.python3Packages.pyodbc"
-    , "pkgs.python3Packages.pyogg"
-    , "pkgs.python3Packages.pyombi"
-    , "pkgs.python3Packages.pyomo"
-    , "pkgs.python3Packages.pyopencl"
-    , "pkgs.python3Packages.pyopengl"
-    , "pkgs.python3Packages.pyopengl-accelerate"
-    , "pkgs.python3Packages.pyopenssl"
-    , "pkgs.python3Packages.pyopenuv"
-    , "pkgs.python3Packages.pyopnsense"
-    , "pkgs.python3Packages.pyoppleio"
-    , "pkgs.python3Packages.pyorthanc"
-    , "pkgs.python3Packages.pyosf"
-    , "pkgs.python3Packages.pyosmium"
-    , "pkgs.python3Packages.pyotgw"
-    , "pkgs.python3Packages.pyotp"
-    , "pkgs.python3Packages.pyoutbreaksnearme"
-    , "pkgs.python3Packages.pyoverkiz"
-    , "pkgs.python3Packages.pyowm"
-    , "pkgs.python3Packages.pyownet"
-    , "pkgs.python3Packages.pyp"
-    , "pkgs.python3Packages.pypaBuildHook"
-    , "pkgs.python3Packages.pypaInstallHook"
-    , "pkgs.python3Packages.pypamtest"
-    , "pkgs.python3Packages.pypandoc"
-    , "pkgs.python3Packages.pyparser"
-    , "pkgs.python3Packages.pyparsing"
-    , "pkgs.python3Packages.pyparted"
-    , "pkgs.python3Packages.pypass"
-    , "pkgs.python3Packages.pypblib"
-    , "pkgs.python3Packages.pypca"
-    , "pkgs.python3Packages.pypcap"
-    , "pkgs.python3Packages.pypck"
-    , "pkgs.python3Packages.pypdf"
-    , "pkgs.python3Packages.pypdf2"
-    , "pkgs.python3Packages.pypdf3"
-    , "pkgs.python3Packages.pypeg2"
-    , "pkgs.python3Packages.pypemicro"
-    , "pkgs.python3Packages.pyperclip"
-    , "pkgs.python3Packages.pyperf"
-    , "pkgs.python3Packages.pyperscan"
-    , "pkgs.python3Packages.pyphen"
-    , "pkgs.python3Packages.pyphotonfile"
-    , "pkgs.python3Packages.pypika"
-    , "pkgs.python3Packages.pypillowfight"
-    , "pkgs.python3Packages.pypinyin"
-    , "pkgs.python3Packages.pypiserver"
-    , "pkgs.python3Packages.pypitoken"
-    , "pkgs.python3Packages.pyplaato"
-    , "pkgs.python3Packages.pyplatec"
-    , "pkgs.python3Packages.pypng"
-    , "pkgs.python3Packages.pypoint"
-    , "pkgs.python3Packages.pypoolstation"
-    , "pkgs.python3Packages.pyppeteer"
-    , "pkgs.python3Packages.pyprecice"
-    , "pkgs.python3Packages.pypresence"
-    , "pkgs.python3Packages.pyprind"
-    , "pkgs.python3Packages.pyprof2calltree"
-    , "pkgs.python3Packages.pyproj"
-    , "pkgs.python3Packages.pyproject-api"
-    , "pkgs.python3Packages.pyproject-hooks"
-    , "pkgs.python3Packages.pyproject-metadata"
-    , "pkgs.python3Packages.pyprosegur"
-    , "pkgs.python3Packages.pyprusalink"
-    , "pkgs.python3Packages.pypsrp"
-    , "pkgs.python3Packages.pyptlib"
-    , "pkgs.python3Packages.pypubsub"
-    , "pkgs.python3Packages.pypugjs"
-    , "pkgs.python3Packages.pypykatz"
-    , "pkgs.python3Packages.pypytools"
-    , "pkgs.python3Packages.pyqldb"
-    , "pkgs.python3Packages.pyqrcode"
-    , "pkgs.python3Packages.pyqt-builder"
-    , "pkgs.python3Packages.pyqt3d"
-    , "pkgs.python3Packages.pyqt5"
-    , "pkgs.python3Packages.pyqt5-stubs"
-    , "pkgs.python3Packages.pyqt5_sip"
-    , "pkgs.python3Packages.pyqt5_with_qtmultimedia"
-    , "pkgs.python3Packages.pyqt5_with_qtwebkit"
-    , "pkgs.python3Packages.pyqt6"
-    , "pkgs.python3Packages.pyqt6-charts"
-    , "pkgs.python3Packages.pyqt6-sip"
-    , "pkgs.python3Packages.pyqt6-webengine"
-    , "pkgs.python3Packages.pyqtchart"
-    , "pkgs.python3Packages.pyqtdatavisualization"
-    , "pkgs.python3Packages.pyqtgraph"
-    , "pkgs.python3Packages.pyqtwebengine"
-    , "pkgs.python3Packages.pyquaternion"
-    , "pkgs.python3Packages.pyquery"
-    , "pkgs.python3Packages.pyquil"
-    , "pkgs.python3Packages.pyqvrpro"
-    , "pkgs.python3Packages.pyqwikswitch"
-    , "pkgs.python3Packages.pyrabbit2"
-    , "pkgs.python3Packages.pyrad"
-    , "pkgs.python3Packages.pyradiomics"
-    , "pkgs.python3Packages.pyradios"
-    , "pkgs.python3Packages.pyrainbird"
-    , "pkgs.python3Packages.pyramid"
-    , "pkgs.python3Packages.pyramid-beaker"
-    , "pkgs.python3Packages.pyramid-chameleon"
-    , "pkgs.python3Packages.pyramid-exclog"
-    , "pkgs.python3Packages.pyramid-jinja2"
-    , "pkgs.python3Packages.pyramid-mako"
-    , "pkgs.python3Packages.pyramid-multiauth"
-    , "pkgs.python3Packages.pyramid_beaker"
-    , "pkgs.python3Packages.pyramid_chameleon"
-    , "pkgs.python3Packages.pyramid_exclog"
-    , "pkgs.python3Packages.pyramid_jinja2"
-    , "pkgs.python3Packages.pyramid_mako"
-    , "pkgs.python3Packages.pyramid_multiauth"
-    , "pkgs.python3Packages.pyrate-limiter"
-    , "pkgs.python3Packages.pyrdfa3"
-    , "pkgs.python3Packages.pyre-extensions"
-    , "pkgs.python3Packages.pyreadability"
-    , "pkgs.python3Packages.pyreaderwriterlock"
-    , "pkgs.python3Packages.pyreadstat"
-    , "pkgs.python3Packages.pyrealsense2"
-    , "pkgs.python3Packages.pyrealsense2WithCuda"
-    , "pkgs.python3Packages.pyrealsense2WithoutCuda"
-    , "pkgs.python3Packages.pyrect"
-    , "pkgs.python3Packages.pyregion"
-    , "pkgs.python3Packages.pyrender"
-    , "pkgs.python3Packages.pyrevolve"
-    , "pkgs.python3Packages.pyrfxtrx"
-    , "pkgs.python3Packages.pyric"
-    , "pkgs.python3Packages.pyrisco"
-    , "pkgs.python3Packages.pyrituals"
-    , "pkgs.python3Packages.pyrmvtransport"
-    , "pkgs.python3Packages.pyro-api"
-    , "pkgs.python3Packages.pyro-ppl"
-    , "pkgs.python3Packages.pyro4"
-    , "pkgs.python3Packages.pyro5"
-    , "pkgs.python3Packages.pyrogram"
-    , "pkgs.python3Packages.pyroma"
-    , "pkgs.python3Packages.pyroute2"
-    , "pkgs.python3Packages.pyrr"
-    , "pkgs.python3Packages.pyrsistent"
-    , "pkgs.python3Packages.pyrss2gen"
-    , "pkgs.python3Packages.pyrtlsdr"
-    , "pkgs.python3Packages.pysabnzbd"
-    , "pkgs.python3Packages.pysaj"
-    , "pkgs.python3Packages.pysam"
-    , "pkgs.python3Packages.pysaml2"
-    , "pkgs.python3Packages.pysatochip"
-    , "pkgs.python3Packages.pysbd"
-    , "pkgs.python3Packages.pysc2"
-    , "pkgs.python3Packages.pyscard"
-    , "pkgs.python3Packages.pyscf"
-    , "pkgs.python3Packages.pyschedule"
-    , "pkgs.python3Packages.pyschemes"
-    , "pkgs.python3Packages.pyschlage"
-    , "pkgs.python3Packages.pyscreenshot"
-    , "pkgs.python3Packages.pyscreeze"
-    , "pkgs.python3Packages.pyscrypt"
-    , "pkgs.python3Packages.pyscss"
-    , "pkgs.python3Packages.pysdcp"
-    , "pkgs.python3Packages.pysdl2"
-    , "pkgs.python3Packages.pysearpc"
-    , "pkgs.python3Packages.pysecuritas"
-    , "pkgs.python3Packages.pysendfile"
-    , "pkgs.python3Packages.pysensibo"
-    , "pkgs.python3Packages.pysensors"
-    , "pkgs.python3Packages.pysequoia"
-    , "pkgs.python3Packages.pyserial"
-    , "pkgs.python3Packages.pyserial-asyncio"
-    , "pkgs.python3Packages.pyserial-asyncio-fast"
-    , "pkgs.python3Packages.pysftp"
-    , "pkgs.python3Packages.pyshark"
-    , "pkgs.python3Packages.pyshp"
-    , "pkgs.python3Packages.pysiaalarm"
-    , "pkgs.python3Packages.pyside2"
-    , "pkgs.python3Packages.pyside2-tools"
-    , "pkgs.python3Packages.pyside6"
-    , "pkgs.python3Packages.pysigma"
-    , "pkgs.python3Packages.pysigma-backend-elasticsearch"
-    , "pkgs.python3Packages.pysigma-backend-insightidr"
-    , "pkgs.python3Packages.pysigma-backend-opensearch"
-    , "pkgs.python3Packages.pysigma-backend-qradar"
-    , "pkgs.python3Packages.pysigma-backend-splunk"
-    , "pkgs.python3Packages.pysigma-pipeline-crowdstrike"
-    , "pkgs.python3Packages.pysigma-pipeline-sysmon"
-    , "pkgs.python3Packages.pysigma-pipeline-windows"
-    , "pkgs.python3Packages.pysignalclirestapi"
-    , "pkgs.python3Packages.pysigset"
-    , "pkgs.python3Packages.pysim"
-    , "pkgs.python3Packages.pysimplegui"
-    , "pkgs.python3Packages.pysimplesoap"
-    , "pkgs.python3Packages.pysingleton"
-    , "pkgs.python3Packages.pyskyqhub"
-    , "pkgs.python3Packages.pyskyqremote"
-    , "pkgs.python3Packages.pyslim"
-    , "pkgs.python3Packages.pyslurm"
-    , "pkgs.python3Packages.pysma"
-    , "pkgs.python3Packages.pysmappee"
-    , "pkgs.python3Packages.pysmart"
-    , "pkgs.python3Packages.pysmart-smartx"
-    , "pkgs.python3Packages.pysmartapp"
-    , "pkgs.python3Packages.pysmartdl"
-    , "pkgs.python3Packages.pysmartthings"
-    , "pkgs.python3Packages.pysmb"
-    , "pkgs.python3Packages.pysmbc"
-    , "pkgs.python3Packages.pysmf"
-    , "pkgs.python3Packages.pysmi"
-    , "pkgs.python3Packages.pysml"
-    , "pkgs.python3Packages.pysmt"
-    , "pkgs.python3Packages.pysnmp"
-    , "pkgs.python3Packages.pysnmp-pyasn1"
-    , "pkgs.python3Packages.pysnmp-pysmi"
-    , "pkgs.python3Packages.pysnmplib"
-    , "pkgs.python3Packages.pysnooper"
-    , "pkgs.python3Packages.pysnooz"
-    , "pkgs.python3Packages.pysnow"
-    , "pkgs.python3Packages.pysocks"
-    , "pkgs.python3Packages.pysol-cards"
-    , "pkgs.python3Packages.pysolcast"
-    , "pkgs.python3Packages.pysolr"
-    , "pkgs.python3Packages.pysoma"
-    , "pkgs.python3Packages.pysonos"
-    , "pkgs.python3Packages.pysoundfile"
-    , "pkgs.python3Packages.pyspark"
-    , "pkgs.python3Packages.pyspcwebgw"
-    , "pkgs.python3Packages.pyspellchecker"
-    , "pkgs.python3Packages.pyspf"
-    , "pkgs.python3Packages.pyspice"
-    , "pkgs.python3Packages.pyspiflash"
-    , "pkgs.python3Packages.pyspinel"
-    , "pkgs.python3Packages.pyspnego"
-    , "pkgs.python3Packages.pysptk"
-    , "pkgs.python3Packages.pysqlcipher3"
-    , "pkgs.python3Packages.pysqlitecipher"
-    , "pkgs.python3Packages.pysqueezebox"
-    , "pkgs.python3Packages.pysrim"
-    , "pkgs.python3Packages.pysrt"
-    , "pkgs.python3Packages.pyssim"
-    , "pkgs.python3Packages.pystache"
-    , "pkgs.python3Packages.pystardict"
-    , "pkgs.python3Packages.pystemd"
-    , "pkgs.python3Packages.pystemmer"
-    , "pkgs.python3Packages.pystray"
-    , "pkgs.python3Packages.pysubs2"
-    , "pkgs.python3Packages.pysuez"
-    , "pkgs.python3Packages.pysvg-py3"
-    , "pkgs.python3Packages.pysvn"
-    , "pkgs.python3Packages.pyswitchbee"
-    , "pkgs.python3Packages.pyswitchbot"
-    , "pkgs.python3Packages.pysychonaut"
-    , "pkgs.python3Packages.pysyncobj"
-    , "pkgs.python3Packages.pysyncthru"
-    , "pkgs.python3Packages.pytabix"
-    , "pkgs.python3Packages.pytablewriter"
-    , "pkgs.python3Packages.pytado"
-    , "pkgs.python3Packages.pytaglib"
-    , "pkgs.python3Packages.pytankerkoenig"
-    , "pkgs.python3Packages.pytap2"
-    , "pkgs.python3Packages.pytapo"
-    , "pkgs.python3Packages.pytautulli"
-    , "pkgs.python3Packages.pyte"
-    , "pkgs.python3Packages.pytelegrambotapi"
-    , "pkgs.python3Packages.pytenable"
-    , "pkgs.python3Packages.pytensor"
-    , "pkgs.python3Packages.pytesseract"
-    , "pkgs.python3Packages.pytest"
-    , "pkgs.python3Packages.pytest-aio"
-    , "pkgs.python3Packages.pytest-aiohttp"
-    , "pkgs.python3Packages.pytest-annotate"
-    , "pkgs.python3Packages.pytest-ansible"
-    , "pkgs.python3Packages.pytest-arraydiff"
-    , "pkgs.python3Packages.pytest-astropy"
-    , "pkgs.python3Packages.pytest-astropy-header"
-    , "pkgs.python3Packages.pytest-asyncio"
-    , "pkgs.python3Packages.pytest-base-url"
-    , "pkgs.python3Packages.pytest-bdd"
-    , "pkgs.python3Packages.pytest-benchmark"
-    , "pkgs.python3Packages.pytest-black"
-    , "pkgs.python3Packages.pytest-cache"
-    , "pkgs.python3Packages.pytest-cases"
-    , "pkgs.python3Packages.pytest-catchlog"
-    , "pkgs.python3Packages.pytest-celery"
-    , "pkgs.python3Packages.pytest-check"
-    , "pkgs.python3Packages.pytest-cid"
-    , "pkgs.python3Packages.pytest-click"
-    , "pkgs.python3Packages.pytest-console-scripts"
-    , "pkgs.python3Packages.pytest-cov"
-    , "pkgs.python3Packages.pytest-cram"
-    , "pkgs.python3Packages.pytest-datadir"
-    , "pkgs.python3Packages.pytest-datafiles"
-    , "pkgs.python3Packages.pytest-dependency"
-    , "pkgs.python3Packages.pytest-describe"
-    , "pkgs.python3Packages.pytest-django"
-    , "pkgs.python3Packages.pytest-doctestplus"
-    , "pkgs.python3Packages.pytest-dotenv"
-    , "pkgs.python3Packages.pytest-emoji"
-    , "pkgs.python3Packages.pytest-env"
-    , "pkgs.python3Packages.pytest-error-for-skips"
-    , "pkgs.python3Packages.pytest-examples"
-    , "pkgs.python3Packages.pytest-expect"
-    , "pkgs.python3Packages.pytest-factoryboy"
-    , "pkgs.python3Packages.pytest-filter-subpackage"
-    , "pkgs.python3Packages.pytest-fixture-config"
-    , "pkgs.python3Packages.pytest-flake8"
-    , "pkgs.python3Packages.pytest-flakes"
-    , "pkgs.python3Packages.pytest-flask"
-    , "pkgs.python3Packages.pytest-forked"
-    , "pkgs.python3Packages.pytest-freezegun"
-    , "pkgs.python3Packages.pytest-freezer"
-    , "pkgs.python3Packages.pytest-golden"
-    , "pkgs.python3Packages.pytest-grpc"
-    , "pkgs.python3Packages.pytest-helpers-namespace"
-    , "pkgs.python3Packages.pytest-html"
-    , "pkgs.python3Packages.pytest-httpbin"
-    , "pkgs.python3Packages.pytest-httpserver"
-    , "pkgs.python3Packages.pytest-httpx"
-    , "pkgs.python3Packages.pytest-image-diff"
-    , "pkgs.python3Packages.pytest-instafail"
-    , "pkgs.python3Packages.pytest-isort"
-    , "pkgs.python3Packages.pytest-json-report"
-    , "pkgs.python3Packages.pytest-jupyter"
-    , "pkgs.python3Packages.pytest-lazy-fixture"
-    , "pkgs.python3Packages.pytest-localserver"
-    , "pkgs.python3Packages.pytest-logdog"
-    , "pkgs.python3Packages.pytest-md-report"
-    , "pkgs.python3Packages.pytest-metadata"
-    , "pkgs.python3Packages.pytest-mock"
-    , "pkgs.python3Packages.pytest-mockito"
-    , "pkgs.python3Packages.pytest-mockservers"
-    , "pkgs.python3Packages.pytest-mpl"
-    , "pkgs.python3Packages.pytest-mypy"
-    , "pkgs.python3Packages.pytest-mypy-plugins"
-    , "pkgs.python3Packages.pytest-openfiles"
-    , "pkgs.python3Packages.pytest-order"
-    , "pkgs.python3Packages.pytest-parallel"
-    , "pkgs.python3Packages.pytest-param-files"
-    , "pkgs.python3Packages.pytest-playwright"
-    , "pkgs.python3Packages.pytest-plt"
-    , "pkgs.python3Packages.pytest-postgresql"
-    , "pkgs.python3Packages.pytest-pudb"
-    , "pkgs.python3Packages.pytest-pylint"
-    , "pkgs.python3Packages.pytest-pytestrail"
-    , "pkgs.python3Packages.pytest-qt"
-    , "pkgs.python3Packages.pytest-quickcheck"
-    , "pkgs.python3Packages.pytest-raises"
-    , "pkgs.python3Packages.pytest-raisesregexp"
-    , "pkgs.python3Packages.pytest-raisin"
-    , "pkgs.python3Packages.pytest-random-order"
-    , "pkgs.python3Packages.pytest-randomly"
-    , "pkgs.python3Packages.pytest-recording"
-    , "pkgs.python3Packages.pytest-regressions"
-    , "pkgs.python3Packages.pytest-relaxed"
-    , "pkgs.python3Packages.pytest-remotedata"
-    , "pkgs.python3Packages.pytest-repeat"
-    , "pkgs.python3Packages.pytest-rerunfailures"
-    , "pkgs.python3Packages.pytest-resource-path"
-    , "pkgs.python3Packages.pytest-reverse"
-    , "pkgs.python3Packages.pytest-runner"
-    , "pkgs.python3Packages.pytest-server-fixtures"
-    , "pkgs.python3Packages.pytest-services"
-    , "pkgs.python3Packages.pytest-shutil"
-    , "pkgs.python3Packages.pytest-snapshot"
-    , "pkgs.python3Packages.pytest-socket"
-    , "pkgs.python3Packages.pytest-spec"
-    , "pkgs.python3Packages.pytest-subprocess"
-    , "pkgs.python3Packages.pytest-subtesthack"
-    , "pkgs.python3Packages.pytest-subtests"
-    , "pkgs.python3Packages.pytest-sugar"
-    , "pkgs.python3Packages.pytest-tap"
-    , "pkgs.python3Packages.pytest-test-utils"
-    , "pkgs.python3Packages.pytest-testinfra"
-    , "pkgs.python3Packages.pytest-testmon"
-    , "pkgs.python3Packages.pytest-timeout"
-    , "pkgs.python3Packages.pytest-tornado"
-    , "pkgs.python3Packages.pytest-tornasync"
-    , "pkgs.python3Packages.pytest-trio"
-    , "pkgs.python3Packages.pytest-twisted"
-    , "pkgs.python3Packages.pytest-unordered"
-    , "pkgs.python3Packages.pytest-vcr"
-    , "pkgs.python3Packages.pytest-virtualenv"
-    , "pkgs.python3Packages.pytest-voluptuous"
-    , "pkgs.python3Packages.pytest-warnings"
-    , "pkgs.python3Packages.pytest-watch"
-    , "pkgs.python3Packages.pytest-xdist"
-    , "pkgs.python3Packages.pytest-xprocess"
-    , "pkgs.python3Packages.pytest-xvfb"
-    , "pkgs.python3Packages.pytestCheckHook"
-    , "pkgs.python3Packages.pytest_6"
-    , "pkgs.python3Packages.pytest_xdist"
-    , "pkgs.python3Packages.pytestcache"
-    , "pkgs.python3Packages.pytestcov"
-    , "pkgs.python3Packages.pytestquickcheck"
-    , "pkgs.python3Packages.pytestrunner"
-    , "pkgs.python3Packages.python"
-    , "pkgs.python3Packages.python-Levenshtein"
-    , "pkgs.python3Packages.python-arango"
-    , "pkgs.python3Packages.python-awair"
-    , "pkgs.python3Packages.python-axolotl"
-    , "pkgs.python3Packages.python-axolotl-curve25519"
-    , "pkgs.python3Packages.python-barcode"
-    , "pkgs.python3Packages.python-baseconv"
-    , "pkgs.python3Packages.python-benedict"
-    , "pkgs.python3Packages.python-bidi"
-    , "pkgs.python3Packages.python-binance"
-    , "pkgs.python3Packages.python-box"
-    , "pkgs.python3Packages.python-bsblan"
-    , "pkgs.python3Packages.python-cinderclient"
-    , "pkgs.python3Packages.python-codon-tables"
-    , "pkgs.python3Packages.python-constraint"
-    , "pkgs.python3Packages.python-creole"
-    , "pkgs.python3Packages.python-crfsuite"
-    , "pkgs.python3Packages.python-crontab"
-    , "pkgs.python3Packages.python-csxcad"
-    , "pkgs.python3Packages.python-ctags3"
-    , "pkgs.python3Packages.python-daemon"
-    , "pkgs.python3Packages.python-datemath"
-    , "pkgs.python3Packages.python-dateutil"
-    , "pkgs.python3Packages.python-dbusmock"
-    , "pkgs.python3Packages.python-decouple"
-    , "pkgs.python3Packages.python-didl-lite"
-    , "pkgs.python3Packages.python-docs-theme"
-    , "pkgs.python3Packages.python-docx"
-    , "pkgs.python3Packages.python-doi"
-    , "pkgs.python3Packages.python-dotenv"
-    , "pkgs.python3Packages.python-ecobee-api"
-    , "pkgs.python3Packages.python-editor"
-    , "pkgs.python3Packages.python-engineio"
-    , "pkgs.python3Packages.python-etcd"
-    , "pkgs.python3Packages.python-ethtool"
-    , "pkgs.python3Packages.python-ev3dev2"
-    , "pkgs.python3Packages.python-family-hub-local"
-    , "pkgs.python3Packages.python-fedora"
-    , "pkgs.python3Packages.python-flirt"
-    , "pkgs.python3Packages.python-fontconfig"
-    , "pkgs.python3Packages.python-frontmatter"
-    , "pkgs.python3Packages.python-fsutil"
-    , "pkgs.python3Packages.python-fullykiosk"
-    , "pkgs.python3Packages.python-fx"
-    , "pkgs.python3Packages.python-gammu"
-    , "pkgs.python3Packages.python-gitlab"
-    , "pkgs.python3Packages.python-glanceclient"
-    , "pkgs.python3Packages.python-gnupg"
-    , "pkgs.python3Packages.python-google-nest"
-    , "pkgs.python3Packages.python-gvm"
-    , "pkgs.python3Packages.python-heatclient"
-    , "pkgs.python3Packages.python-hglib"
-    , "pkgs.python3Packages.python-hl7"
-    , "pkgs.python3Packages.python-homewizard-energy"
-    , "pkgs.python3Packages.python-hosts"
-    , "pkgs.python3Packages.python-hpilo"
-    , "pkgs.python3Packages.python-http-client"
-    , "pkgs.python3Packages.python-i18n"
-    , "pkgs.python3Packages.python-igraph"
-    , "pkgs.python3Packages.python-ipmi"
-    , "pkgs.python3Packages.python-ipware"
-    , "pkgs.python3Packages.python-ironicclient"
-    , "pkgs.python3Packages.python-izone"
-    , "pkgs.python3Packages.python-jenkins"
-    , "pkgs.python3Packages.python-jose"
-    , "pkgs.python3Packages.python-json-logger"
-    , "pkgs.python3Packages.python-jsonrpc-server"
-    , "pkgs.python3Packages.python-juicenet"
-    , "pkgs.python3Packages.python-kasa"
-    , "pkgs.python3Packages.python-keycloak"
-    , "pkgs.python3Packages.python-keystoneclient"
-    , "pkgs.python3Packages.python-ldap"
-    , "pkgs.python3Packages.python-ldap-test"
-    , "pkgs.python3Packages.python-libnmap"
-    , "pkgs.python3Packages.python-linux-procfs"
-    , "pkgs.python3Packages.python-logstash"
-    , "pkgs.python3Packages.python-louvain"
-    , "pkgs.python3Packages.python-lsp-black"
-    , "pkgs.python3Packages.python-lsp-jsonrpc"
-    , "pkgs.python3Packages.python-lsp-ruff"
-    , "pkgs.python3Packages.python-lsp-server"
-    , "pkgs.python3Packages.python-ly"
-    , "pkgs.python3Packages.python-lz4"
-    , "pkgs.python3Packages.python-lzf"
-    , "pkgs.python3Packages.python-lzo"
-    , "pkgs.python3Packages.python-magic"
-    , "pkgs.python3Packages.python-manilaclient"
-    , "pkgs.python3Packages.python-mapnik"
-    , "pkgs.python3Packages.python-markdown-math"
-    , "pkgs.python3Packages.python-matter-server"
-    , "pkgs.python3Packages.python-mbedtls"
-    , "pkgs.python3Packages.python-memcached"
-    , "pkgs.python3Packages.python-miio"
-    , "pkgs.python3Packages.python-mimeparse"
-    , "pkgs.python3Packages.python-mnist"
-    , "pkgs.python3Packages.python-mpv-jsonipc"
-    , "pkgs.python3Packages.python-multipart"
-    , "pkgs.python3Packages.python-musicpd"
-    , "pkgs.python3Packages.python-myq"
-    , "pkgs.python3Packages.python-mystrom"
-    , "pkgs.python3Packages.python-ndn"
-    , "pkgs.python3Packages.python-nest"
-    , "pkgs.python3Packages.python-nmap"
-    , "pkgs.python3Packages.python-nomad"
-    , "pkgs.python3Packages.python-novaclient"
-    , "pkgs.python3Packages.python-nvd3"
-    , "pkgs.python3Packages.python-oauth2"
-    , "pkgs.python3Packages.python-olm"
-    , "pkgs.python3Packages.python-on-whales"
-    , "pkgs.python3Packages.python-opendata-transport"
-    , "pkgs.python3Packages.python-openems"
-    , "pkgs.python3Packages.python-opensky"
-    , "pkgs.python3Packages.python-openstackclient"
-    , "pkgs.python3Packages.python-openzwave-mqtt"
-    , "pkgs.python3Packages.python-osc"
-    , "pkgs.python3Packages.python-otbr-api"
-    , "pkgs.python3Packages.python-owasp-zap-v2-4"
-    , "pkgs.python3Packages.python-packer"
-    , "pkgs.python3Packages.python-pae"
-    , "pkgs.python3Packages.python-pam"
-    , "pkgs.python3Packages.python-periphery"
-    , "pkgs.python3Packages.python-picnic-api"
-    , "pkgs.python3Packages.python-pidfile"
-    , "pkgs.python3Packages.python-pipedrive"
-    , "pkgs.python3Packages.python-pkcs11"
-    , "pkgs.python3Packages.python-pptx"
-    , "pkgs.python3Packages.python-prctl"
-    , "pkgs.python3Packages.python-ptrace"
-    , "pkgs.python3Packages.python-rabbitair"
-    , "pkgs.python3Packages.python-rapidjson"
-    , "pkgs.python3Packages.python-redis-lock"
-    , "pkgs.python3Packages.python-registry"
-    , "pkgs.python3Packages.python-roborock"
-    , "pkgs.python3Packages.python-rtmidi"
-    , "pkgs.python3Packages.python-sat"
-    , "pkgs.python3Packages.python-simple-hipchat"
-    , "pkgs.python3Packages.python-slugify"
-    , "pkgs.python3Packages.python-smarttub"
-    , "pkgs.python3Packages.python-snap7"
-    , "pkgs.python3Packages.python-snappy"
-    , "pkgs.python3Packages.python-socketio"
-    , "pkgs.python3Packages.python-socks"
-    , "pkgs.python3Packages.python-songpal"
-    , "pkgs.python3Packages.python-sql"
-    , "pkgs.python3Packages.python-status"
-    , "pkgs.python3Packages.python-stdnum"
-    , "pkgs.python3Packages.python-string-utils"
-    , "pkgs.python3Packages.python-subunit"
-    , "pkgs.python3Packages.python-swiftclient"
-    , "pkgs.python3Packages.python-tado"
-    , "pkgs.python3Packages.python-tds"
-    , "pkgs.python3Packages.python-telegram"
-    , "pkgs.python3Packages.python-telegram-bot"
-    , "pkgs.python3Packages.python-toolbox"
-    , "pkgs.python3Packages.python-trovo"
-    , "pkgs.python3Packages.python-twitch-client"
-    , "pkgs.python3Packages.python-twitter"
-    , "pkgs.python3Packages.python-u2flib-host"
-    , "pkgs.python3Packages.python-u2flib-server"
-    , "pkgs.python3Packages.python-uinput"
-    , "pkgs.python3Packages.python-ulid"
-    , "pkgs.python3Packages.python-unshare"
-    , "pkgs.python3Packages.python-utils"
-    , "pkgs.python3Packages.python-vagrant"
-    , "pkgs.python3Packages.python-velbus"
-    , "pkgs.python3Packages.python-vipaccess"
-    , "pkgs.python3Packages.python-vlc"
-    , "pkgs.python3Packages.python-whois"
-    , "pkgs.python3Packages.python-wifi"
-    , "pkgs.python3Packages.python-wink"
-    , "pkgs.python3Packages.python-xmp-toolkit"
-    , "pkgs.python3Packages.python-xz"
-    , "pkgs.python3Packages.python-yate"
-    , "pkgs.python3Packages.python-youtube"
-    , "pkgs.python3Packages.python-zbar"
-    , "pkgs.python3Packages.python3-application"
-    , "pkgs.python3Packages.python3-eventlib"
-    , "pkgs.python3Packages.python3-gnutls"
-    , "pkgs.python3Packages.python3-openid"
-    , "pkgs.python3Packages.python3-saml"
-    , "pkgs.python3Packages.pythonCatchConflictsHook"
-    , "pkgs.python3Packages.pythonImportsCheckHook"
-    , "pkgs.python3Packages.pythonNamespacesHook"
-    , "pkgs.python3Packages.pythonOutputDistHook"
-    , "pkgs.python3Packages.pythonRecompileBytecodeHook"
-    , "pkgs.python3Packages.pythonRelaxDepsHook"
-    , "pkgs.python3Packages.pythonRemoveBinBytecodeHook"
-    , "pkgs.python3Packages.pythonRemoveTestsDirHook"
-    , "pkgs.python3Packages.python_docs_theme"
-    , "pkgs.python3Packages.python_fedora"
-    , "pkgs.python3Packages.python_magic"
-    , "pkgs.python3Packages.python_mimeparse"
-    , "pkgs.python3Packages.python_openzwave"
-    , "pkgs.python3Packages.python_simple_hipchat"
-    , "pkgs.python3Packages.pythondialog"
-    , "pkgs.python3Packages.pythonefl"
-    , "pkgs.python3Packages.pythonegardia"
-    , "pkgs.python3Packages.pythonfinder"
-    , "pkgs.python3Packages.pythonix"
-    , "pkgs.python3Packages.pythonnet"
-    , "pkgs.python3Packages.pythonocc-core"
-    , "pkgs.python3Packages.pythran"
-    , "pkgs.python3Packages.pytibber"
-    , "pkgs.python3Packages.pytile"
-    , "pkgs.python3Packages.pytimeparse"
-    , "pkgs.python3Packages.pytimeparse2"
-    , "pkgs.python3Packages.pytlv"
-    , "pkgs.python3Packages.pytm"
-    , "pkgs.python3Packages.pytmx"
-    , "pkgs.python3Packages.pytomlpp"
-    , "pkgs.python3Packages.pytomorrowio"
-    , "pkgs.python3Packages.pytoolconfig"
-    , "pkgs.python3Packages.pytools"
-    , "pkgs.python3Packages.pytorch"
-    , "pkgs.python3Packages.pytorch-bin"
-    , "pkgs.python3Packages.pytorch-lightning"
-    , "pkgs.python3Packages.pytorch-metric-learning"
-    , "pkgs.python3Packages.pytorch-msssim"
-    , "pkgs.python3Packages.pytorch-pfn-extras"
-    , "pkgs.python3Packages.pytorchWithCuda"
-    , "pkgs.python3Packages.pytorchWithoutCuda"
-    , "pkgs.python3Packages.pytraccar"
-    , "pkgs.python3Packages.pytradfri"
-    , "pkgs.python3Packages.pytrafikverket"
-    , "pkgs.python3Packages.pytransportnsw"
-    , "pkgs.python3Packages.pytransportnswv2"
-    , "pkgs.python3Packages.pytrends"
-    , "pkgs.python3Packages.pytricia"
-    , "pkgs.python3Packages.pytrydan"
-    , "pkgs.python3Packages.pyttsx3"
-    , "pkgs.python3Packages.pytube"
-    , "pkgs.python3Packages.pytun"
-    , "pkgs.python3Packages.pyturbojpeg"
-    , "pkgs.python3Packages.pytweening"
-    , "pkgs.python3Packages.pytwitchapi"
-    , "pkgs.python3Packages.pytz"
-    , "pkgs.python3Packages.pytz-deprecation-shim"
-    , "pkgs.python3Packages.pytzdata"
-    , "pkgs.python3Packages.pyu2f"
-    , "pkgs.python3Packages.pyuavcan"
-    , "pkgs.python3Packages.pyuca"
-    , "pkgs.python3Packages.pyudev"
-    , "pkgs.python3Packages.pyunbound"
-    , "pkgs.python3Packages.pyunifi"
-    , "pkgs.python3Packages.pyunifiprotect"
-    , "pkgs.python3Packages.pyunpack"
-    , "pkgs.python3Packages.pyupdate"
-    , "pkgs.python3Packages.pyupgrade"
-    , "pkgs.python3Packages.pyuptimerobot"
-    , "pkgs.python3Packages.pyusb"
-    , "pkgs.python3Packages.pyuseragents"
-    , "pkgs.python3Packages.pyutil"
-    , "pkgs.python3Packages.pyutilib"
-    , "pkgs.python3Packages.pyuv"
-    , "pkgs.python3Packages.pyvcd"
-    , "pkgs.python3Packages.pyvera"
-    , "pkgs.python3Packages.pyverilog"
-    , "pkgs.python3Packages.pyversasense"
-    , "pkgs.python3Packages.pyvesync"
-    , "pkgs.python3Packages.pyvex"
-    , "pkgs.python3Packages.pyvicare"
-    , "pkgs.python3Packages.pyvips"
-    , "pkgs.python3Packages.pyvirtualdisplay"
-    , "pkgs.python3Packages.pyvis"
-    , "pkgs.python3Packages.pyvisa"
-    , "pkgs.python3Packages.pyvisa-py"
-    , "pkgs.python3Packages.pyvisa-sim"
-    , "pkgs.python3Packages.pyvista"
-    , "pkgs.python3Packages.pyviz-comms"
-    , "pkgs.python3Packages.pyvizio"
-    , "pkgs.python3Packages.pyvlx"
-    , "pkgs.python3Packages.pyvmomi"
-    , "pkgs.python3Packages.pyvo"
-    , "pkgs.python3Packages.pyvolumio"
-    , "pkgs.python3Packages.pyvoro"
-    , "pkgs.python3Packages.pywal"
-    , "pkgs.python3Packages.pywatchman"
-    , "pkgs.python3Packages.pywaterkotte"
-    , "pkgs.python3Packages.pywavelets"
-    , "pkgs.python3Packages.pywayland"
-    , "pkgs.python3Packages.pywaze"
-    , "pkgs.python3Packages.pywbem"
-    , "pkgs.python3Packages.pyweatherflowrest"
-    , "pkgs.python3Packages.pyweatherflowudp"
-    , "pkgs.python3Packages.pywebpush"
-    , "pkgs.python3Packages.pywebview"
-    , "pkgs.python3Packages.pywemo"
-    , "pkgs.python3Packages.pywerview"
-    , "pkgs.python3Packages.pywfa"
-    , "pkgs.python3Packages.pywilight"
-    , "pkgs.python3Packages.pywinrm"
-    , "pkgs.python3Packages.pywizlight"
-    , "pkgs.python3Packages.pywlroots"
-    , "pkgs.python3Packages.pyworld"
-    , "pkgs.python3Packages.pyws66i"
-    , "pkgs.python3Packages.pyx"
-    , "pkgs.python3Packages.pyxattr"
-    , "pkgs.python3Packages.pyxb"
-    , "pkgs.python3Packages.pyxbe"
-    , "pkgs.python3Packages.pyxdg"
-    , "pkgs.python3Packages.pyxeoma"
-    , "pkgs.python3Packages.pyxiaomigateway"
-    , "pkgs.python3Packages.pyxl3"
-    , "pkgs.python3Packages.pyxlsb"
-    , "pkgs.python3Packages.pyxnat"
-    , "pkgs.python3Packages.pyyaml"
-    , "pkgs.python3Packages.pyyaml-env-tag"
-    , "pkgs.python3Packages.pyyaml-include"
-    , "pkgs.python3Packages.pyyardian"
-    , "pkgs.python3Packages.pyzbar"
-    , "pkgs.python3Packages.pyzerproc"
-    , "pkgs.python3Packages.pyzipper"
-    , "pkgs.python3Packages.pyzmq"
-    , "pkgs.python3Packages.pyzufall"
-    , "pkgs.python3Packages.qasync"
-    , "pkgs.python3Packages.qbittorrent-api"
-    , "pkgs.python3Packages.qcelemental"
-    , "pkgs.python3Packages.qcengine"
-    , "pkgs.python3Packages.qcodes"
-    , "pkgs.python3Packages.qcodes-contrib-drivers"
-    , "pkgs.python3Packages.qcodes-loop"
-    , "pkgs.python3Packages.qcs-api-client"
-    , "pkgs.python3Packages.qdarkstyle"
-    , "pkgs.python3Packages.qdldl"
-    , "pkgs.python3Packages.qdrant-client"
-    , "pkgs.python3Packages.qds-sdk"
-    , "pkgs.python3Packages.qds_sdk"
-    , "pkgs.python3Packages.qgrid"
-    , "pkgs.python3Packages.qiling"
-    , "pkgs.python3Packages.qimage2ndarray"
-    , "pkgs.python3Packages.qingping-ble"
-    , "pkgs.python3Packages.qiskit"
-    , "pkgs.python3Packages.qiskit-aer"
-    , "pkgs.python3Packages.qiskit-finance"
-    , "pkgs.python3Packages.qiskit-ibmq-provider"
-    , "pkgs.python3Packages.qiskit-ignis"
-    , "pkgs.python3Packages.qiskit-machine-learning"
-    , "pkgs.python3Packages.qiskit-nature"
-    , "pkgs.python3Packages.qiskit-optimization"
-    , "pkgs.python3Packages.qiskit-terra"
-    , "pkgs.python3Packages.qmk-dotty-dict"
-    , "pkgs.python3Packages.qnap-qsw"
-    , "pkgs.python3Packages.qnapstats"
-    , "pkgs.python3Packages.qpageview"
-    , "pkgs.python3Packages.qpsolvers"
-    , "pkgs.python3Packages.qrcode"
-    , "pkgs.python3Packages.qreactor"
-    , "pkgs.python3Packages.qscintilla"
-    , "pkgs.python3Packages.qscintilla-qt5"
-    , "pkgs.python3Packages.qstylizer"
-    , "pkgs.python3Packages.qt-material"
-    , "pkgs.python3Packages.qt5reactor"
-    , "pkgs.python3Packages.qtawesome"
-    , "pkgs.python3Packages.qtconsole"
-    , "pkgs.python3Packages.qtile"
-    , "pkgs.python3Packages.qtile-extras"
-    , "pkgs.python3Packages.qtpy"
-    , "pkgs.python3Packages.quadprog"
-    , "pkgs.python3Packages.qualysclient"
-    , "pkgs.python3Packages.quamash"
-    , "pkgs.python3Packages.quandl"
-    , "pkgs.python3Packages.quantile-python"
-    , "pkgs.python3Packages.quantiphy"
-    , "pkgs.python3Packages.quantiphy-eval"
-    , "pkgs.python3Packages.quantities"
-    , "pkgs.python3Packages.quantulum3"
-    , "pkgs.python3Packages.quantum-gateway"
-    , "pkgs.python3Packages.quart"
-    , "pkgs.python3Packages.quart-cors"
-    , "pkgs.python3Packages.quaternion"
-    , "pkgs.python3Packages.qudida"
-    , "pkgs.python3Packages.querystring_parser"
-    , "pkgs.python3Packages.questionary"
-    , "pkgs.python3Packages.queuelib"
-    , "pkgs.python3Packages.qutip"
-    , "pkgs.python3Packages.r2pipe"
-    , "pkgs.python3Packages.rachiopy"
-    , "pkgs.python3Packages.radian"
-    , "pkgs.python3Packages.radicale_infcloud"
-    , "pkgs.python3Packages.radio-beam"
-    , "pkgs.python3Packages.radio_beam"
-    , "pkgs.python3Packages.radios"
-    , "pkgs.python3Packages.radiotherm"
-    , "pkgs.python3Packages.radish-bdd"
-    , "pkgs.python3Packages.radon"
-    , "pkgs.python3Packages.railroad-diagrams"
-    , "pkgs.python3Packages.rainbowstream"
-    , "pkgs.python3Packages.raincloudy"
-    , "pkgs.python3Packages.ramlfications"
-    , "pkgs.python3Packages.random2"
-    , "pkgs.python3Packages.range-typed-integers"
-    , "pkgs.python3Packages.rangehttpserver"
-    , "pkgs.python3Packages.rank-bm25"
-    , "pkgs.python3Packages.rapidfuzz"
-    , "pkgs.python3Packages.rapidfuzz-capi"
-    , "pkgs.python3Packages.rapidgzip"
-    , "pkgs.python3Packages.rapt-ble"
-    , "pkgs.python3Packages.rarfile"
-    , "pkgs.python3Packages.rasterio"
-    , "pkgs.python3Packages.ratarmount"
-    , "pkgs.python3Packages.ratarmountcore"
-    , "pkgs.python3Packages.ratelim"
-    , "pkgs.python3Packages.ratelimit"
-    , "pkgs.python3Packages.rauth"
-    , "pkgs.python3Packages.raven"
-    , "pkgs.python3Packages.rawkit"
-    , "pkgs.python3Packages.ray"
-    , "pkgs.python3Packages.razdel"
-    , "pkgs.python3Packages.rbtools"
-    , "pkgs.python3Packages.rchitect"
-    , "pkgs.python3Packages.rcssmin"
-    , "pkgs.python3Packages.rdflib"
-    , "pkgs.python3Packages.rdkit"
-    , "pkgs.python3Packages.re-assert"
-    , "pkgs.python3Packages.reactivex"
-    , "pkgs.python3Packages.readability-lxml"
-    , "pkgs.python3Packages.readchar"
-    , "pkgs.python3Packages.readlike"
-    , "pkgs.python3Packages.readmdict"
-    , "pkgs.python3Packages.readme"
-    , "pkgs.python3Packages.readme_renderer"
-    , "pkgs.python3Packages.readthedocs-sphinx-ext"
-    , "pkgs.python3Packages.rebulk"
-    , "pkgs.python3Packages.recipe-scrapers"
-    , "pkgs.python3Packages.recline"
-    , "pkgs.python3Packages.recoll"
-    , "pkgs.python3Packages.recommonmark"
-    , "pkgs.python3Packages.recordlinkage"
-    , "pkgs.python3Packages.recurring-ical-events"
-    , "pkgs.python3Packages.recursivePthLoader"
-    , "pkgs.python3Packages.redbaron"
-    , "pkgs.python3Packages.redis"
-    , "pkgs.python3Packages.redis-om"
-    , "pkgs.python3Packages.redshift-connector"
-    , "pkgs.python3Packages.reedsolo"
-    , "pkgs.python3Packages.referencing"
-    , "pkgs.python3Packages.reflink"
-    , "pkgs.python3Packages.regenmaschine"
-    , "pkgs.python3Packages.regex"
-    , "pkgs.python3Packages.regional"
-    , "pkgs.python3Packages.reikna"
-    , "pkgs.python3Packages.related"
-    , "pkgs.python3Packages.relatorio"
-    , "pkgs.python3Packages.releases"
-    , "pkgs.python3Packages.remarshal"
-    , "pkgs.python3Packages.remi"
-    , "pkgs.python3Packages.remote-pdb"
-    , "pkgs.python3Packages.remotezip"
-    , "pkgs.python3Packages.renault-api"
-    , "pkgs.python3Packages.rencode"
-    , "pkgs.python3Packages.reolink"
-    , "pkgs.python3Packages.reolink-aio"
-    , "pkgs.python3Packages.reorder-python-imports"
-    , "pkgs.python3Packages.reparser"
-    , "pkgs.python3Packages.repath"
-    , "pkgs.python3Packages.repeated-test"
-    , "pkgs.python3Packages.repeated_test"
-    , "pkgs.python3Packages.repocheck"
-    , "pkgs.python3Packages.reportengine"
-    , "pkgs.python3Packages.reportlab"
-    , "pkgs.python3Packages.repoze_lru"
-    , "pkgs.python3Packages.repoze_sphinx_autointerface"
-    , "pkgs.python3Packages.repoze_who"
-    , "pkgs.python3Packages.reproject"
-    , "pkgs.python3Packages.reprshed"
-    , "pkgs.python3Packages.reptor"
-    , "pkgs.python3Packages.reqif"
-    , "pkgs.python3Packages.requests"
-    , "pkgs.python3Packages.requests-aws4auth"
-    , "pkgs.python3Packages.requests-cache"
-    , "pkgs.python3Packages.requests-credssp"
-    , "pkgs.python3Packages.requests-file"
-    , "pkgs.python3Packages.requests-futures"
-    , "pkgs.python3Packages.requests-hawk"
-    , "pkgs.python3Packages.requests-http-signature"
-    , "pkgs.python3Packages.requests-kerberos"
-    , "pkgs.python3Packages.requests-mock"
-    , "pkgs.python3Packages.requests-oauthlib"
-    , "pkgs.python3Packages.requests-pkcs12"
-    , "pkgs.python3Packages.requests-ratelimiter"
-    , "pkgs.python3Packages.requests-toolbelt"
-    , "pkgs.python3Packages.requests-unixsocket"
-    , "pkgs.python3Packages.requests-wsgi-adapter"
-    , "pkgs.python3Packages.requests_download"
-    , "pkgs.python3Packages.requests_ntlm"
-    , "pkgs.python3Packages.requests_oauthlib"
-    , "pkgs.python3Packages.requests_toolbelt"
-    , "pkgs.python3Packages.requestsexceptions"
-    , "pkgs.python3Packages.requirements-detector"
-    , "pkgs.python3Packages.requirements-parser"
-    , "pkgs.python3Packages.reretry"
-    , "pkgs.python3Packages.resampy"
-    , "pkgs.python3Packages.resize-right"
-    , "pkgs.python3Packages.resolvelib"
-    , "pkgs.python3Packages.responses"
-    , "pkgs.python3Packages.respx"
-    , "pkgs.python3Packages.restfly"
-    , "pkgs.python3Packages.restrictedpython"
-    , "pkgs.python3Packages.restructuredtext-lint"
-    , "pkgs.python3Packages.restructuredtext_lint"
-    , "pkgs.python3Packages.restview"
-    , "pkgs.python3Packages.result"
-    , "pkgs.python3Packages.rethinkdb"
-    , "pkgs.python3Packages.retry"
-    , "pkgs.python3Packages.retry_decorator"
-    , "pkgs.python3Packages.retrying"
-    , "pkgs.python3Packages.returns"
-    , "pkgs.python3Packages.retworkx"
-    , "pkgs.python3Packages.rfc3339"
-    , "pkgs.python3Packages.rfc3339-validator"
-    , "pkgs.python3Packages.rfc3986"
-    , "pkgs.python3Packages.rfc3986-validator"
-    , "pkgs.python3Packages.rfc3987"
-    , "pkgs.python3Packages.rfc6555"
-    , "pkgs.python3Packages.rfc7464"
-    , "pkgs.python3Packages.rfcat"
-    , "pkgs.python3Packages.rflink"
-    , "pkgs.python3Packages.rich"
-    , "pkgs.python3Packages.rich-argparse"
-    , "pkgs.python3Packages.rich-argparse-plus"
-    , "pkgs.python3Packages.rich-click"
-    , "pkgs.python3Packages.rich-pixels"
-    , "pkgs.python3Packages.rich-rst"
-    , "pkgs.python3Packages.ring-doorbell"
-    , "pkgs.python3Packages.ripe-atlas-cousteau"
-    , "pkgs.python3Packages.ripe-atlas-sagan"
-    , "pkgs.python3Packages.riprova"
-    , "pkgs.python3Packages.ripser"
-    , "pkgs.python3Packages.riscof"
-    , "pkgs.python3Packages.riscv-config"
-    , "pkgs.python3Packages.riscv-isac"
-    , "pkgs.python3Packages.rising"
-    , "pkgs.python3Packages.ritassist"
-    , "pkgs.python3Packages.rivet"
-    , "pkgs.python3Packages.rjpl"
-    , "pkgs.python3Packages.rjsmin"
-    , "pkgs.python3Packages.rki-covid-parser"
-    , "pkgs.python3Packages.rkm-codes"
-    , "pkgs.python3Packages.rlax"
-    , "pkgs.python3Packages.rlp"
-    , "pkgs.python3Packages.rmcl"
-    , "pkgs.python3Packages.rmrl"
-    , "pkgs.python3Packages.rmsd"
-    , "pkgs.python3Packages.rnc2rng"
-    , "pkgs.python3Packages.rnginline"
-    , "pkgs.python3Packages.rns"
-    , "pkgs.python3Packages.robomachine"
-    , "pkgs.python3Packages.robot-detection"
-    , "pkgs.python3Packages.robotframework"
-    , "pkgs.python3Packages.robotframework-databaselibrary"
-    , "pkgs.python3Packages.robotframework-pythonlibcore"
-    , "pkgs.python3Packages.robotframework-requests"
-    , "pkgs.python3Packages.robotframework-selenium2library"
-    , "pkgs.python3Packages.robotframework-seleniumlibrary"
-    , "pkgs.python3Packages.robotframework-sshlibrary"
-    , "pkgs.python3Packages.robotframework-tools"
-    , "pkgs.python3Packages.robotstatuschecker"
-    , "pkgs.python3Packages.robotsuite"
-    , "pkgs.python3Packages.rocket-errbot"
-    , "pkgs.python3Packages.roku"
-    , "pkgs.python3Packages.rokuecp"
-    , "pkgs.python3Packages.rollbar"
-    , "pkgs.python3Packages.roman"
-    , "pkgs.python3Packages.ronin"
-    , "pkgs.python3Packages.roombapy"
-    , "pkgs.python3Packages.roonapi"
-    , "pkgs.python3Packages.rope"
-    , "pkgs.python3Packages.ropgadget"
-    , "pkgs.python3Packages.ropper"
-    , "pkgs.python3Packages.rotary-embedding-torch"
-    , "pkgs.python3Packages.rouge-score"
-    , "pkgs.python3Packages.routeros-api"
-    , "pkgs.python3Packages.routes"
-    , "pkgs.python3Packages.rova"
-    , "pkgs.python3Packages.rpcq"
-    , "pkgs.python3Packages.rpdb"
-    , "pkgs.python3Packages.rpds-py"
-    , "pkgs.python3Packages.rpi-bad-power"
-    , "pkgs.python3Packages.rpi-gpio"
-    , "pkgs.python3Packages.rpi-gpio2"
-    , "pkgs.python3Packages.rplcd"
-    , "pkgs.python3Packages.rply"
-    , "pkgs.python3Packages.rpm"
-    , "pkgs.python3Packages.rpmfile"
-    , "pkgs.python3Packages.rpmfluff"
-    , "pkgs.python3Packages.rpy2"
-    , "pkgs.python3Packages.rpyc"
-    , "pkgs.python3Packages.rq"
-    , "pkgs.python3Packages.rsa"
-    , "pkgs.python3Packages.rsskey"
-    , "pkgs.python3Packages.rst2ansi"
-    , "pkgs.python3Packages.rst2pdf"
-    , "pkgs.python3Packages.rstcheck"
-    , "pkgs.python3Packages.rstcheck-core"
-    , "pkgs.python3Packages.rtmidi-python"
-    , "pkgs.python3Packages.rtmixer"
-    , "pkgs.python3Packages.rtoml"
-    , "pkgs.python3Packages.rtp"
-    , "pkgs.python3Packages.rtree"
-    , "pkgs.python3Packages.rtslib"
-    , "pkgs.python3Packages.rtsp-to-webrtc"
-    , "pkgs.python3Packages.ruamel-base"
-    , "pkgs.python3Packages.ruamel-yaml"
-    , "pkgs.python3Packages.ruamel-yaml-clib"
-    , "pkgs.python3Packages.ruamel_base"
-    , "pkgs.python3Packages.ruamel_yaml"
-    , "pkgs.python3Packages.ruamel_yaml_clib"
-    , "pkgs.python3Packages.rubymarshal"
-    , "pkgs.python3Packages.ruff-lsp"
-    , "pkgs.python3Packages.ruffus"
-    , "pkgs.python3Packages.rules"
-    , "pkgs.python3Packages.rustworkx"
-    , "pkgs.python3Packages.ruuvitag-ble"
-    , "pkgs.python3Packages.ruyaml"
-    , "pkgs.python3Packages.rx"
-    , "pkgs.python3Packages.rxv"
-    , "pkgs.python3Packages.rzpipe"
-    , "pkgs.python3Packages.s2clientprotocol"
-    , "pkgs.python3Packages.s3-credentials"
-    , "pkgs.python3Packages.s3fs"
-    , "pkgs.python3Packages.s3transfer"
-    , "pkgs.python3Packages.sabctools"
-    , "pkgs.python3Packages.sabyenc"
-    , "pkgs.python3Packages.sabyenc3"
-    , "pkgs.python3Packages.sacn"
-    , "pkgs.python3Packages.sacrebleu"
-    , "pkgs.python3Packages.sacremoses"
-    , "pkgs.python3Packages.safe"
-    , "pkgs.python3Packages.safe-pysha3"
-    , "pkgs.python3Packages.safeio"
-    , "pkgs.python3Packages.safetensors"
-    , "pkgs.python3Packages.safety"
-    , "pkgs.python3Packages.sagemaker"
-    , "pkgs.python3Packages.salmon-mail"
-    , "pkgs.python3Packages.sampledata"
-    , "pkgs.python3Packages.samplerate"
-    , "pkgs.python3Packages.samsungctl"
-    , "pkgs.python3Packages.samsungtvws"
-    , "pkgs.python3Packages.sane"
-    , "pkgs.python3Packages.saneyaml"
-    , "pkgs.python3Packages.sanic"
-    , "pkgs.python3Packages.sanic-auth"
-    , "pkgs.python3Packages.sanic-routing"
-    , "pkgs.python3Packages.sanic-testing"
-    , "pkgs.python3Packages.sansio-multipart"
-    , "pkgs.python3Packages.sapi-python-client"
-    , "pkgs.python3Packages.sarge"
-    , "pkgs.python3Packages.sarif-om"
-    , "pkgs.python3Packages.sasmodels"
-    , "pkgs.python3Packages.scales"
-    , "pkgs.python3Packages.scancode-toolkit"
-    , "pkgs.python3Packages.scapy"
-    , "pkgs.python3Packages.schedule"
-    , "pkgs.python3Packages.schema"
-    , "pkgs.python3Packages.schema-salad"
-    , "pkgs.python3Packages.schemainspect"
-    , "pkgs.python3Packages.schemdraw"
-    , "pkgs.python3Packages.schiene"
-    , "pkgs.python3Packages.schwifty"
-    , "pkgs.python3Packages.scikit-bio"
-    , "pkgs.python3Packages.scikit-build"
-    , "pkgs.python3Packages.scikit-build-core"
-    , "pkgs.python3Packages.scikit-fmm"
-    , "pkgs.python3Packages.scikit-fuzzy"
-    , "pkgs.python3Packages.scikit-hep-testdata"
-    , "pkgs.python3Packages.scikit-image"
-    , "pkgs.python3Packages.scikit-learn"
-    , "pkgs.python3Packages.scikit-learn-extra"
-    , "pkgs.python3Packages.scikit-misc"
-    , "pkgs.python3Packages.scikit-optimize"
-    , "pkgs.python3Packages.scikit-posthocs"
-    , "pkgs.python3Packages.scikit-rf"
-    , "pkgs.python3Packages.scikit-survival"
-    , "pkgs.python3Packages.scikit-tda"
-    , "pkgs.python3Packages.scikitimage"
-    , "pkgs.python3Packages.scikitlearn"
-    , "pkgs.python3Packages.scikits-odes"
-    , "pkgs.python3Packages.scikits-samplerate"
-    , "pkgs.python3Packages.scim2-filter-parser"
-    , "pkgs.python3Packages.scipy"
-    , "pkgs.python3Packages.scmrepo"
-    , "pkgs.python3Packages.scooby"
-    , "pkgs.python3Packages.scour"
-    , "pkgs.python3Packages.scp"
-    , "pkgs.python3Packages.scramp"
-    , "pkgs.python3Packages.scrap-engine"
-    , "pkgs.python3Packages.scrapy"
-    , "pkgs.python3Packages.scrapy-deltafetch"
-    , "pkgs.python3Packages.scrapy-fake-useragent"
-    , "pkgs.python3Packages.scrapy-splash"
-    , "pkgs.python3Packages.screed"
-    , "pkgs.python3Packages.screeninfo"
-    , "pkgs.python3Packages.screenlogicpy"
-    , "pkgs.python3Packages.scripttest"
-    , "pkgs.python3Packages.scs"
-    , "pkgs.python3Packages.sdds"
-    , "pkgs.python3Packages.sdkmanager"
-    , "pkgs.python3Packages.sdnotify"
-    , "pkgs.python3Packages.seaborn"
-    , "pkgs.python3Packages.seabreeze"
-    , "pkgs.python3Packages.seaserv"
-    , "pkgs.python3Packages.seasonal"
-    , "pkgs.python3Packages.seatconnect"
-    , "pkgs.python3Packages.seccomp"
-    , "pkgs.python3Packages.secp256k1"
-    , "pkgs.python3Packages.secretstorage"
-    , "pkgs.python3Packages.sectools"
-    , "pkgs.python3Packages.secure"
-    , "pkgs.python3Packages.securetar"
-    , "pkgs.python3Packages.seedir"
-    , "pkgs.python3Packages.seekpath"
-    , "pkgs.python3Packages.segments"
-    , "pkgs.python3Packages.segno"
-    , "pkgs.python3Packages.segyio"
-    , "pkgs.python3Packages.selectors2"
-    , "pkgs.python3Packages.selenium"
-    , "pkgs.python3Packages.semantic-version"
-    , "pkgs.python3Packages.semaphore-bot"
-    , "pkgs.python3Packages.semver"
-    , "pkgs.python3Packages.send2trash"
-    , "pkgs.python3Packages.sendgrid"
-    , "pkgs.python3Packages.sense-energy"
-    , "pkgs.python3Packages.sensirion-ble"
-    , "pkgs.python3Packages.sensor-state-data"
-    , "pkgs.python3Packages.sensorpro-ble"
-    , "pkgs.python3Packages.sensorpush-ble"
-    , "pkgs.python3Packages.sentence-splitter"
-    , "pkgs.python3Packages.sentence-transformers"
-    , "pkgs.python3Packages.sentencepiece"
-    , "pkgs.python3Packages.sentinel"
-    , "pkgs.python3Packages.sentinels"
-    , "pkgs.python3Packages.sentry-sdk"
-    , "pkgs.python3Packages.sepaxml"
-    , "pkgs.python3Packages.seqdiag"
-    , "pkgs.python3Packages.seqeval"
-    , "pkgs.python3Packages.serialio"
-    , "pkgs.python3Packages.serializable"
-    , "pkgs.python3Packages.serpent"
-    , "pkgs.python3Packages.serpy"
-    , "pkgs.python3Packages.servefile"
-    , "pkgs.python3Packages.serverfiles"
-    , "pkgs.python3Packages.serverlessrepo"
-    , "pkgs.python3Packages.service-identity"
-    , "pkgs.python3Packages.setproctitle"
-    , "pkgs.python3Packages.setupmeta"
-    , "pkgs.python3Packages.setuptools"
-    , "pkgs.python3Packages.setuptools-changelog-shortener"
-    , "pkgs.python3Packages.setuptools-declarative-requirements"
-    , "pkgs.python3Packages.setuptools-generate"
-    , "pkgs.python3Packages.setuptools-gettext"
-    , "pkgs.python3Packages.setuptools-git"
-    , "pkgs.python3Packages.setuptools-git-versioning"
-    , "pkgs.python3Packages.setuptools-lint"
-    , "pkgs.python3Packages.setuptools-odoo"
-    , "pkgs.python3Packages.setuptools-rust"
-    , "pkgs.python3Packages.setuptools-scm"
-    , "pkgs.python3Packages.setuptools-scm-git-archive"
-    , "pkgs.python3Packages.setuptools-trial"
-    , "pkgs.python3Packages.setuptoolsBuildHook"
-    , "pkgs.python3Packages.setuptoolsCheckHook"
-    , "pkgs.python3Packages.setuptoolsRustBuildHook"
-    , "pkgs.python3Packages.setuptoolsTrial"
-    , "pkgs.python3Packages.setuptools_scm"
-    , "pkgs.python3Packages.seventeentrack"
-    , "pkgs.python3Packages.sexpdata"
-    , "pkgs.python3Packages.sfepy"
-    , "pkgs.python3Packages.sfrbox-api"
-    , "pkgs.python3Packages.sgmllib3k"
-    , "pkgs.python3Packages.sgp4"
-    , "pkgs.python3Packages.sh"
-    , "pkgs.python3Packages.shamir-mnemonic"
-    , "pkgs.python3Packages.shap"
-    , "pkgs.python3Packages.shapely"
-    , "pkgs.python3Packages.sharedmem"
-    , "pkgs.python3Packages.sharkiq"
-    , "pkgs.python3Packages.sharkiqpy"
-    , "pkgs.python3Packages.shazamio"
-    , "pkgs.python3Packages.shellescape"
-    , "pkgs.python3Packages.shellingham"
-    , "pkgs.python3Packages.shiboken2"
-    , "pkgs.python3Packages.shiboken6"
-    , "pkgs.python3Packages.shippai"
-    , "pkgs.python3Packages.shiv"
-    , "pkgs.python3Packages.shlib"
-    , "pkgs.python3Packages.shodan"
-    , "pkgs.python3Packages.shortuuid"
-    , "pkgs.python3Packages.should-dsl"
-    , "pkgs.python3Packages.shouldbe"
-    , "pkgs.python3Packages.show-in-file-manager"
-    , "pkgs.python3Packages.showit"
-    , "pkgs.python3Packages.shtab"
-    , "pkgs.python3Packages.shutilwhich"
-    , "pkgs.python3Packages.sievelib"
-    , "pkgs.python3Packages.signalslot"
-    , "pkgs.python3Packages.signedjson"
-    , "pkgs.python3Packages.signify"
-    , "pkgs.python3Packages.sigrok"
-    , "pkgs.python3Packages.sigtools"
-    , "pkgs.python3Packages.simanneal"
-    , "pkgs.python3Packages.simber"
-    , "pkgs.python3Packages.simpful"
-    , "pkgs.python3Packages.simple-di"
-    , "pkgs.python3Packages.simple-rest-client"
-    , "pkgs.python3Packages.simple-rlp"
-    , "pkgs.python3Packages.simple-salesforce"
-    , "pkgs.python3Packages.simple-websocket"
-    , "pkgs.python3Packages.simple-websocket-server"
-    , "pkgs.python3Packages.simpleaudio"
-    , "pkgs.python3Packages.simplebayes"
-    , "pkgs.python3Packages.simpleeval"
-    , "pkgs.python3Packages.simplefix"
-    , "pkgs.python3Packages.simplegeneric"
-    , "pkgs.python3Packages.simplehound"
-    , "pkgs.python3Packages.simpleitk"
-    , "pkgs.python3Packages.simplejson"
-    , "pkgs.python3Packages.simplekml"
-    , "pkgs.python3Packages.simplekv"
-    , "pkgs.python3Packages.simplemma"
-    , "pkgs.python3Packages.simplenote"
-    , "pkgs.python3Packages.simplepush"
-    , "pkgs.python3Packages.simplesat"
-    , "pkgs.python3Packages.simplisafe-python"
-    , "pkgs.python3Packages.simpy"
-    , "pkgs.python3Packages.single-source"
-    , "pkgs.python3Packages.single-version"
-    , "pkgs.python3Packages.siobrultech-protocols"
-    , "pkgs.python3Packages.siosocks"
-    , "pkgs.python3Packages.sip"
-    , "pkgs.python3Packages.sip_4"
-    , "pkgs.python3Packages.sipyco"
-    , "pkgs.python3Packages.sisyphus-control"
-    , "pkgs.python3Packages.siuba"
-    , "pkgs.python3Packages.six"
-    , "pkgs.python3Packages.sjcl"
-    , "pkgs.python3Packages.skein"
-    , "pkgs.python3Packages.skia-pathops"
-    , "pkgs.python3Packages.skidl"
-    , "pkgs.python3Packages.skl2onnx"
-    , "pkgs.python3Packages.sklearn-deap"
-    , "pkgs.python3Packages.skodaconnect"
-    , "pkgs.python3Packages.skorch"
-    , "pkgs.python3Packages.skrl"
-    , "pkgs.python3Packages.skybellpy"
-    , "pkgs.python3Packages.skyfield"
-    , "pkgs.python3Packages.skytemple-dtef"
-    , "pkgs.python3Packages.skytemple-eventserver"
-    , "pkgs.python3Packages.skytemple-files"
-    , "pkgs.python3Packages.skytemple-icons"
-    , "pkgs.python3Packages.skytemple-rust"
-    , "pkgs.python3Packages.skytemple-ssb-debugger"
-    , "pkgs.python3Packages.slack-bolt"
-    , "pkgs.python3Packages.slack-sdk"
-    , "pkgs.python3Packages.slackclient"
-    , "pkgs.python3Packages.sleekxmpp"
-    , "pkgs.python3Packages.sleepyq"
-    , "pkgs.python3Packages.slicedimage"
-    , "pkgs.python3Packages.slicer"
-    , "pkgs.python3Packages.slicerator"
-    , "pkgs.python3Packages.slimit"
-    , "pkgs.python3Packages.slither-analyzer"
-    , "pkgs.python3Packages.slixmpp"
-    , "pkgs.python3Packages.slob"
-    , "pkgs.python3Packages.slovnet"
-    , "pkgs.python3Packages.slowapi"
-    , "pkgs.python3Packages.slpp"
-    , "pkgs.python3Packages.slugid"
-    , "pkgs.python3Packages.sly"
-    , "pkgs.python3Packages.smart-meter-texas"
-    , "pkgs.python3Packages.smart-open"
-    , "pkgs.python3Packages.smart_open"
-    , "pkgs.python3Packages.smarthab"
-    , "pkgs.python3Packages.smartypants"
-    , "pkgs.python3Packages.smbprotocol"
-    , "pkgs.python3Packages.smbus-cffi"
-    , "pkgs.python3Packages.smbus2"
-    , "pkgs.python3Packages.smdebug-rulesconfig"
-    , "pkgs.python3Packages.smhi-pkg"
-    , "pkgs.python3Packages.smmap"
-    , "pkgs.python3Packages.smpp_pdu"
-    , "pkgs.python3Packages.smpplib"
-    , "pkgs.python3Packages.smtpdfix"
-    , "pkgs.python3Packages.snack"
-    , "pkgs.python3Packages.snakebite"
-    , "pkgs.python3Packages.snakeviz"
-    , "pkgs.python3Packages.snapcast"
-    , "pkgs.python3Packages.snapshottest"
-    , "pkgs.python3Packages.snaptime"
-    , "pkgs.python3Packages.sniffio"
-    , "pkgs.python3Packages.snitun"
-    , "pkgs.python3Packages.snorkel"
-    , "pkgs.python3Packages.snowballstemmer"
-    , "pkgs.python3Packages.snowflake-connector-python"
-    , "pkgs.python3Packages.snowflake-sqlalchemy"
-    , "pkgs.python3Packages.snscrape"
-    , "pkgs.python3Packages.snuggs"
-    , "pkgs.python3Packages.soapysdr"
-    , "pkgs.python3Packages.soapysdr-with-plugins"
-    , "pkgs.python3Packages.social-auth-app-django"
-    , "pkgs.python3Packages.social-auth-core"
-    , "pkgs.python3Packages.socialscan"
-    , "pkgs.python3Packages.socid-extractor"
-    , "pkgs.python3Packages.socketio-client"
-    , "pkgs.python3Packages.sockio"
-    , "pkgs.python3Packages.sockjs"
-    , "pkgs.python3Packages.sockjs-tornado"
-    , "pkgs.python3Packages.socksio"
-    , "pkgs.python3Packages.socksipy-branch"
-    , "pkgs.python3Packages.soco"
-    , "pkgs.python3Packages.softlayer"
-    , "pkgs.python3Packages.solaredge"
-    , "pkgs.python3Packages.solax"
-    , "pkgs.python3Packages.solc-select"
-    , "pkgs.python3Packages.solo-python"
-    , "pkgs.python3Packages.somajo"
-    , "pkgs.python3Packages.somfy-mylink-synergy"
-    , "pkgs.python3Packages.sonarr"
-    , "pkgs.python3Packages.sonos-websocket"
-    , "pkgs.python3Packages.sopel"
-    , "pkgs.python3Packages.sorl-thumbnail"
-    , "pkgs.python3Packages.sorl_thumbnail"
-    , "pkgs.python3Packages.sortedcollections"
-    , "pkgs.python3Packages.sortedcontainers"
-    , "pkgs.python3Packages.soundcloud-v2"
-    , "pkgs.python3Packages.sounddevice"
-    , "pkgs.python3Packages.soundfile"
-    , "pkgs.python3Packages.soupsieve"
-    , "pkgs.python3Packages.sourmash"
-    , "pkgs.python3Packages.soxr"
-    , "pkgs.python3Packages.spacy"
-    , "pkgs.python3Packages.spacy-alignments"
-    , "pkgs.python3Packages.spacy-legacy"
-    , "pkgs.python3Packages.spacy-loggers"
-    , "pkgs.python3Packages.spacy-lookups-data"
-    , "pkgs.python3Packages.spacy-pkuseg"
-    , "pkgs.python3Packages.spacy-transformers"
-    , "pkgs.python3Packages.spake2"
-    , "pkgs.python3Packages.spark_parser"
-    , "pkgs.python3Packages.sparklines"
-    , "pkgs.python3Packages.sparqlwrapper"
-    , "pkgs.python3Packages.sparse"
-    , "pkgs.python3Packages.spdx-tools"
-    , "pkgs.python3Packages.speaklater"
-    , "pkgs.python3Packages.speaklater3"
-    , "pkgs.python3Packages.spectral-cube"
-    , "pkgs.python3Packages.speechbrain"
-    , "pkgs.python3Packages.speedtest-cli"
-    , "pkgs.python3Packages.speg"
-    , "pkgs.python3Packages.spglib"
-    , "pkgs.python3Packages.sphfile"
-    , "pkgs.python3Packages.sphinx"
-    , "pkgs.python3Packages.sphinx-argparse"
-    , "pkgs.python3Packages.sphinx-autoapi"
-    , "pkgs.python3Packages.sphinx-autobuild"
-    , "pkgs.python3Packages.sphinx-autodoc-typehints"
-    , "pkgs.python3Packages.sphinx-automodapi"
-    , "pkgs.python3Packages.sphinx-basic-ng"
-    , "pkgs.python3Packages.sphinx-better-theme"
-    , "pkgs.python3Packages.sphinx-book-theme"
-    , "pkgs.python3Packages.sphinx-codeautolink"
-    , "pkgs.python3Packages.sphinx-comments"
-    , "pkgs.python3Packages.sphinx-copybutton"
-    , "pkgs.python3Packages.sphinx-design"
-    , "pkgs.python3Packages.sphinx-external-toc"
-    , "pkgs.python3Packages.sphinx-fortran"
-    , "pkgs.python3Packages.sphinx-hoverxref"
-    , "pkgs.python3Packages.sphinx-inline-tabs"
-    , "pkgs.python3Packages.sphinx-intl"
-    , "pkgs.python3Packages.sphinx-issues"
-    , "pkgs.python3Packages.sphinx-jinja"
-    , "pkgs.python3Packages.sphinx-jquery"
-    , "pkgs.python3Packages.sphinx-jupyterbook-latex"
-    , "pkgs.python3Packages.sphinx-markdown-parser"
-    , "pkgs.python3Packages.sphinx-markdown-tables"
-    , "pkgs.python3Packages.sphinx-material"
-    , "pkgs.python3Packages.sphinx-mdinclude"
-    , "pkgs.python3Packages.sphinx-multitoc-numbering"
-    , "pkgs.python3Packages.sphinx-notfound-page"
-    , "pkgs.python3Packages.sphinx-prompt"
-    , "pkgs.python3Packages.sphinx-pytest"
-    , "pkgs.python3Packages.sphinx-rtd-theme"
-    , "pkgs.python3Packages.sphinx-serve"
-    , "pkgs.python3Packages.sphinx-sitemap"
-    , "pkgs.python3Packages.sphinx-tabs"
-    , "pkgs.python3Packages.sphinx-testing"
-    , "pkgs.python3Packages.sphinx-thebe"
-    , "pkgs.python3Packages.sphinx-togglebutton"
-    , "pkgs.python3Packages.sphinx-version-warning"
-    , "pkgs.python3Packages.sphinxHook"
-    , "pkgs.python3Packages.sphinx_rtd_theme"
-    , "pkgs.python3Packages.sphinxcontrib-actdiag"
-    , "pkgs.python3Packages.sphinxcontrib-apidoc"
-    , "pkgs.python3Packages.sphinxcontrib-applehelp"
-    , "pkgs.python3Packages.sphinxcontrib-asyncio"
-    , "pkgs.python3Packages.sphinxcontrib-autoapi"
-    , "pkgs.python3Packages.sphinxcontrib-bayesnet"
-    , "pkgs.python3Packages.sphinxcontrib-bibtex"
-    , "pkgs.python3Packages.sphinxcontrib-blockdiag"
-    , "pkgs.python3Packages.sphinxcontrib-confluencebuilder"
-    , "pkgs.python3Packages.sphinxcontrib-devhelp"
-    , "pkgs.python3Packages.sphinxcontrib-excel-table"
-    , "pkgs.python3Packages.sphinxcontrib-fulltoc"
-    , "pkgs.python3Packages.sphinxcontrib-htmlhelp"
-    , "pkgs.python3Packages.sphinxcontrib-httpdomain"
-    , "pkgs.python3Packages.sphinxcontrib-jquery"
-    , "pkgs.python3Packages.sphinxcontrib-jsmath"
-    , "pkgs.python3Packages.sphinxcontrib-katex"
-    , "pkgs.python3Packages.sphinxcontrib-log-cabinet"
-    , "pkgs.python3Packages.sphinxcontrib-mscgen"
-    , "pkgs.python3Packages.sphinxcontrib-newsfeed"
-    , "pkgs.python3Packages.sphinxcontrib-nwdiag"
-    , "pkgs.python3Packages.sphinxcontrib-openapi"
-    , "pkgs.python3Packages.sphinxcontrib-plantuml"
-    , "pkgs.python3Packages.sphinxcontrib-programoutput"
-    , "pkgs.python3Packages.sphinxcontrib-qthelp"
-    , "pkgs.python3Packages.sphinxcontrib-seqdiag"
-    , "pkgs.python3Packages.sphinxcontrib-serializinghtml"
-    , "pkgs.python3Packages.sphinxcontrib-spelling"
-    , "pkgs.python3Packages.sphinxcontrib-tikz"
-    , "pkgs.python3Packages.sphinxcontrib-wavedrom"
-    , "pkgs.python3Packages.sphinxcontrib-websupport"
-    , "pkgs.python3Packages.sphinxcontrib-youtube"
-    , "pkgs.python3Packages.sphinxcontrib_httpdomain"
-    , "pkgs.python3Packages.sphinxcontrib_newsfeed"
-    , "pkgs.python3Packages.sphinxcontrib_plantuml"
-    , "pkgs.python3Packages.sphinxemoji"
-    , "pkgs.python3Packages.sphinxext-opengraph"
-    , "pkgs.python3Packages.spiderpy"
-    , "pkgs.python3Packages.spidev"
-    , "pkgs.python3Packages.spinners"
-    , "pkgs.python3Packages.splinter"
-    , "pkgs.python3Packages.spotipy"
-    , "pkgs.python3Packages.spsdk"
-    , "pkgs.python3Packages.spur"
-    , "pkgs.python3Packages.spyder"
-    , "pkgs.python3Packages.spyder-kernels"
-    , "pkgs.python3Packages.spyse-python"
-    , "pkgs.python3Packages.sqids"
-    , "pkgs.python3Packages.sqlalchemy"
-    , "pkgs.python3Packages.sqlalchemy-citext"
-    , "pkgs.python3Packages.sqlalchemy-continuum"
-    , "pkgs.python3Packages.sqlalchemy-i18n"
-    , "pkgs.python3Packages.sqlalchemy-jsonfield"
-    , "pkgs.python3Packages.sqlalchemy-migrate"
-    , "pkgs.python3Packages.sqlalchemy-mixins"
-    , "pkgs.python3Packages.sqlalchemy-utils"
-    , "pkgs.python3Packages.sqlalchemy-views"
-    , "pkgs.python3Packages.sqlalchemy_migrate"
-    , "pkgs.python3Packages.sqlbag"
-    , "pkgs.python3Packages.sqlglot"
-    , "pkgs.python3Packages.sqlite-fts4"
-    , "pkgs.python3Packages.sqlite-migrate"
-    , "pkgs.python3Packages.sqlite-utils"
-    , "pkgs.python3Packages.sqlitedict"
-    , "pkgs.python3Packages.sqlmap"
-    , "pkgs.python3Packages.sqlobject"
-    , "pkgs.python3Packages.sqlparse"
-    , "pkgs.python3Packages.sqlsoup"
-    , "pkgs.python3Packages.sqltrie"
-    , "pkgs.python3Packages.squarify"
-    , "pkgs.python3Packages.srp"
-    , "pkgs.python3Packages.srpenergy"
-    , "pkgs.python3Packages.srptools"
-    , "pkgs.python3Packages.srsly"
-    , "pkgs.python3Packages.srt"
-    , "pkgs.python3Packages.srvlookup"
-    , "pkgs.python3Packages.ssdeep"
-    , "pkgs.python3Packages.ssdp"
-    , "pkgs.python3Packages.ssdpy"
-    , "pkgs.python3Packages.sseclient"
-    , "pkgs.python3Packages.sseclient-py"
-    , "pkgs.python3Packages.sshfs"
-    , "pkgs.python3Packages.sshpubkeys"
-    , "pkgs.python3Packages.sshtunnel"
-    , "pkgs.python3Packages.sslib"
-    , "pkgs.python3Packages.stack-data"
-    , "pkgs.python3Packages.stanio"
-    , "pkgs.python3Packages.stanza"
-    , "pkgs.python3Packages.starkbank-ecdsa"
-    , "pkgs.python3Packages.starlette"
-    , "pkgs.python3Packages.starlette-wtf"
-    , "pkgs.python3Packages.starline"
-    , "pkgs.python3Packages.stashy"
-    , "pkgs.python3Packages.static3"
-    , "pkgs.python3Packages.staticjinja"
-    , "pkgs.python3Packages.staticmap"
-    , "pkgs.python3Packages.statistics"
-    , "pkgs.python3Packages.statmake"
-    , "pkgs.python3Packages.statsd"
-    , "pkgs.python3Packages.statsmodels"
-    , "pkgs.python3Packages.std2"
-    , "pkgs.python3Packages.stdenv"
-    , "pkgs.python3Packages.stdiomask"
-    , "pkgs.python3Packages.stdlib-list"
-    , "pkgs.python3Packages.stdlibs"
-    , "pkgs.python3Packages.steamodd"
-    , "pkgs.python3Packages.steamship"
-    , "pkgs.python3Packages.stem"
-    , "pkgs.python3Packages.stemming"
-    , "pkgs.python3Packages.stestr"
-    , "pkgs.python3Packages.stevedore"
-    , "pkgs.python3Packages.stickytape"
-    , "pkgs.python3Packages.stim"
-    , "pkgs.python3Packages.stix2-patterns"
-    , "pkgs.python3Packages.stm32loader"
-    , "pkgs.python3Packages.stone"
-    , "pkgs.python3Packages.stookalert"
-    , "pkgs.python3Packages.stopit"
-    , "pkgs.python3Packages.stransi"
-    , "pkgs.python3Packages.strategies"
-    , "pkgs.python3Packages.stravalib"
-    , "pkgs.python3Packages.strawberry-graphql"
-    , "pkgs.python3Packages.streamdeck"
-    , "pkgs.python3Packages.streaming-form-data"
-    , "pkgs.python3Packages.streamlabswater"
-    , "pkgs.python3Packages.streamlit"
-    , "pkgs.python3Packages.streamz"
-    , "pkgs.python3Packages.strenum"
-    , "pkgs.python3Packages.strict-rfc3339"
-    , "pkgs.python3Packages.strictyaml"
-    , "pkgs.python3Packages.stringcase"
-    , "pkgs.python3Packages.stringly"
-    , "pkgs.python3Packages.stringparser"
-    , "pkgs.python3Packages.stripe"
-    , "pkgs.python3Packages.striprtf"
-    , "pkgs.python3Packages.structlog"
-    , "pkgs.python3Packages.stubserver"
-    , "pkgs.python3Packages.stumpy"
-    , "pkgs.python3Packages.stups-cli-support"
-    , "pkgs.python3Packages.stups-fullstop"
-    , "pkgs.python3Packages.stups-pierone"
-    , "pkgs.python3Packages.stups-tokens"
-    , "pkgs.python3Packages.stups-zign"
-    , "pkgs.python3Packages.stytra"
-    , "pkgs.python3Packages.subarulink"
-    , "pkgs.python3Packages.subliminal"
-    , "pkgs.python3Packages.subprocess-tee"
-    , "pkgs.python3Packages.subunit"
-    , "pkgs.python3Packages.subunit2sql"
-    , "pkgs.python3Packages.subzerod"
-    , "pkgs.python3Packages.succulent"
-    , "pkgs.python3Packages.summarytools"
-    , "pkgs.python3Packages.sumo"
-    , "pkgs.python3Packages.sumtypes"
-    , "pkgs.python3Packages.sunpy"
-    , "pkgs.python3Packages.sunwatcher"
-    , "pkgs.python3Packages.sunweg"
-    , "pkgs.python3Packages.superqt"
-    , "pkgs.python3Packages.supervise-api"
-    , "pkgs.python3Packages.supervise_api"
-    , "pkgs.python3Packages.supervisor"
-    , "pkgs.python3Packages.sure"
-    , "pkgs.python3Packages.surepy"
-    , "pkgs.python3Packages.surt"
-    , "pkgs.python3Packages.survey"
-    , "pkgs.python3Packages.sv-ttk"
-    , "pkgs.python3Packages.svg-path"
-    , "pkgs.python3Packages.svg2tikz"
-    , "pkgs.python3Packages.svgelements"
-    , "pkgs.python3Packages.svglib"
-    , "pkgs.python3Packages.svgwrite"
-    , "pkgs.python3Packages.swagger-spec-validator"
-    , "pkgs.python3Packages.swagger-ui-bundle"
-    , "pkgs.python3Packages.swift"
-    , "pkgs.python3Packages.swisshydrodata"
-    , "pkgs.python3Packages.swspotify"
-    , "pkgs.python3Packages.sybil"
-    , "pkgs.python3Packages.symengine"
-    , "pkgs.python3Packages.sympy"
-    , "pkgs.python3Packages.syncedlyrics"
-    , "pkgs.python3Packages.syncer"
-    , "pkgs.python3Packages.synergy"
-    , "pkgs.python3Packages.synologydsm-api"
-    , "pkgs.python3Packages.syrupy"
-    , "pkgs.python3Packages.syslog-rfc5424-formatter"
-    , "pkgs.python3Packages.systembridge"
-    , "pkgs.python3Packages.systemd"
-    , "pkgs.python3Packages.sysv_ipc"
-    , "pkgs.python3Packages.tabcmd"
-    , "pkgs.python3Packages.tableaudocumentapi"
-    , "pkgs.python3Packages.tableauserverclient"
-    , "pkgs.python3Packages.tabledata"
-    , "pkgs.python3Packages.tables"
-    , "pkgs.python3Packages.tablib"
-    , "pkgs.python3Packages.tabula-py"
-    , "pkgs.python3Packages.tabulate"
-    , "pkgs.python3Packages.tabview"
-    , "pkgs.python3Packages.taco"
-    , "pkgs.python3Packages.tadasets"
-    , "pkgs.python3Packages.tag-expressions"
-    , "pkgs.python3Packages.tago"
-    , "pkgs.python3Packages.tagoio-sdk"
-    , "pkgs.python3Packages.tahoma-api"
-    , "pkgs.python3Packages.tailer"
-    , "pkgs.python3Packages.tailscale"
-    , "pkgs.python3Packages.takethetime"
-    , "pkgs.python3Packages.tank-utility"
-    , "pkgs.python3Packages.tappy"
-    , "pkgs.python3Packages.tasklib"
-    , "pkgs.python3Packages.taskw"
-    , "pkgs.python3Packages.tatsu"
-    , "pkgs.python3Packages.taxi"
-    , "pkgs.python3Packages.tbats"
-    , "pkgs.python3Packages.tblib"
-    , "pkgs.python3Packages.tblite"
-    , "pkgs.python3Packages.tbm-utils"
-    , "pkgs.python3Packages.tcolorpy"
-    , "pkgs.python3Packages.tcxparser"
-    , "pkgs.python3Packages.tcxreader"
-    , "pkgs.python3Packages.teamcity-messages"
-    , "pkgs.python3Packages.telegram"
-    , "pkgs.python3Packages.telegram-text"
-    , "pkgs.python3Packages.telegraph"
-    , "pkgs.python3Packages.telepath"
-    , "pkgs.python3Packages.telethon"
-    , "pkgs.python3Packages.telethon-session-sqlalchemy"
-    , "pkgs.python3Packages.teletype"
-    , "pkgs.python3Packages.telfhash"
-    , "pkgs.python3Packages.tellduslive"
-    , "pkgs.python3Packages.temescal"
-    , "pkgs.python3Packages.temperusb"
-    , "pkgs.python3Packages.tempest"
-    , "pkgs.python3Packages.tempita"
-    , "pkgs.python3Packages.tempora"
-    , "pkgs.python3Packages.tenacity"
-    , "pkgs.python3Packages.tensorboard"
-    , "pkgs.python3Packages.tensorboard-data-server"
-    , "pkgs.python3Packages.tensorboard-plugin-profile"
-    , "pkgs.python3Packages.tensorboard-plugin-wit"
-    , "pkgs.python3Packages.tensorboardx"
-    , "pkgs.python3Packages.tensorflow"
-    , "pkgs.python3Packages.tensorflow-bin"
-    , "pkgs.python3Packages.tensorflow-bin_2"
-    , "pkgs.python3Packages.tensorflow-build"
-    , "pkgs.python3Packages.tensorflow-build_2"
-    , "pkgs.python3Packages.tensorflow-datasets"
-    , "pkgs.python3Packages.tensorflow-estimator"
-    , "pkgs.python3Packages.tensorflow-estimator-bin"
-    , "pkgs.python3Packages.tensorflow-estimator_2"
-    , "pkgs.python3Packages.tensorflow-metadata"
-    , "pkgs.python3Packages.tensorflow-probability"
-    , "pkgs.python3Packages.tensorflow-tensorboard"
-    , "pkgs.python3Packages.tensorflow-tensorboard_2"
-    , "pkgs.python3Packages.tensorflowWithCuda"
-    , "pkgs.python3Packages.tensorflowWithoutCuda"
-    , "pkgs.python3Packages.tensorly"
-    , "pkgs.python3Packages.tensorrt"
-    , "pkgs.python3Packages.tensorstore"
-    , "pkgs.python3Packages.termcolor"
-    , "pkgs.python3Packages.termgraph"
-    , "pkgs.python3Packages.terminado"
-    , "pkgs.python3Packages.terminaltables"
-    , "pkgs.python3Packages.termplotlib"
-    , "pkgs.python3Packages.termstyle"
-    , "pkgs.python3Packages.tern"
-    , "pkgs.python3Packages.tesla-powerwall"
-    , "pkgs.python3Packages.tesla-wall-connector"
-    , "pkgs.python3Packages.teslajsonpy"
-    , "pkgs.python3Packages.tess"
-    , "pkgs.python3Packages.tesserocr"
-    , "pkgs.python3Packages.test-tube"
-    , "pkgs.python3Packages.testbook"
-    , "pkgs.python3Packages.testcontainers"
-    , "pkgs.python3Packages.testfixtures"
-    , "pkgs.python3Packages.testing-common-database"
-    , "pkgs.python3Packages.testing-postgresql"
-    , "pkgs.python3Packages.testpath"
-    , "pkgs.python3Packages.testrail-api"
-    , "pkgs.python3Packages.testrepository"
-    , "pkgs.python3Packages.testresources"
-    , "pkgs.python3Packages.testscenarios"
-    , "pkgs.python3Packages.testtools"
-    , "pkgs.python3Packages.text-unidecode"
-    , "pkgs.python3Packages.textacy"
-    , "pkgs.python3Packages.textdistance"
-    , "pkgs.python3Packages.textfsm"
-    , "pkgs.python3Packages.textile"
-    , "pkgs.python3Packages.textnets"
-    , "pkgs.python3Packages.textparser"
-    , "pkgs.python3Packages.texttable"
-    , "pkgs.python3Packages.textual"
-    , "pkgs.python3Packages.textual-dev"
-    , "pkgs.python3Packages.textual-universal-directorytree"
-    , "pkgs.python3Packages.textwrap3"
-    , "pkgs.python3Packages.textx"
-    , "pkgs.python3Packages.tf2onnx"
-    , "pkgs.python3Packages.tflearn"
-    , "pkgs.python3Packages.tftpy"
-    , "pkgs.python3Packages.tgcrypto"
-    , "pkgs.python3Packages.theano"
-    , "pkgs.python3Packages.theano-pymc"
-    , "pkgs.python3Packages.theanoWithCuda"
-    , "pkgs.python3Packages.theanoWithoutCuda"
-    , "pkgs.python3Packages.thefuzz"
-    , "pkgs.python3Packages.thelogrus"
-    , "pkgs.python3Packages.thermobeacon-ble"
-    , "pkgs.python3Packages.thermopro-ble"
-    , "pkgs.python3Packages.thespian"
-    , "pkgs.python3Packages.thinc"
-    , "pkgs.python3Packages.thorlabspm100"
-    , "pkgs.python3Packages.threadloop"
-    , "pkgs.python3Packages.threadpool"
-    , "pkgs.python3Packages.threadpoolctl"
-    , "pkgs.python3Packages.threat9-test-bed"
-    , "pkgs.python3Packages.three-merge"
-    , "pkgs.python3Packages.thrift"
-    , "pkgs.python3Packages.thriftpy2"
-    , "pkgs.python3Packages.throttler"
-    , "pkgs.python3Packages.thumborPexif"
-    , "pkgs.python3Packages.tidalapi"
-    , "pkgs.python3Packages.tidyexc"
-    , "pkgs.python3Packages.tidylib"
-    , "pkgs.python3Packages.tifffile"
-    , "pkgs.python3Packages.tika"
-    , "pkgs.python3Packages.tika-client"
-    , "pkgs.python3Packages.tiktoken"
-    , "pkgs.python3Packages.tikzplotlib"
-    , "pkgs.python3Packages.tiledb"
-    , "pkgs.python3Packages.tilequant"
-    , "pkgs.python3Packages.tiler"
-    , "pkgs.python3Packages.tilestache"
-    , "pkgs.python3Packages.tilt-ble"
-    , "pkgs.python3Packages.time-machine"
-    , "pkgs.python3Packages.timeago"
-    , "pkgs.python3Packages.timecop"
-    , "pkgs.python3Packages.timelib"
-    , "pkgs.python3Packages.timeout-decorator"
-    , "pkgs.python3Packages.timeslot"
-    , "pkgs.python3Packages.timetagger"
-    , "pkgs.python3Packages.timezonefinder"
-    , "pkgs.python3Packages.timm"
-    , "pkgs.python3Packages.tiny-cuda-nn"
-    , "pkgs.python3Packages.tiny-proxy"
-    , "pkgs.python3Packages.tinycss"
-    , "pkgs.python3Packages.tinycss2"
-    , "pkgs.python3Packages.tinydb"
-    , "pkgs.python3Packages.tinyobjloader-py"
-    , "pkgs.python3Packages.tinyrecord"
-    , "pkgs.python3Packages.tissue"
-    , "pkgs.python3Packages.titlecase"
-    , "pkgs.python3Packages.tkinter"
-    , "pkgs.python3Packages.tld"
-    , "pkgs.python3Packages.tldextract"
-    , "pkgs.python3Packages.tlds"
-    , "pkgs.python3Packages.tls-parser"
-    , "pkgs.python3Packages.tlsh"
-    , "pkgs.python3Packages.tlslite-ng"
-    , "pkgs.python3Packages.tlv8"
-    , "pkgs.python3Packages.tmb"
-    , "pkgs.python3Packages.todoist"
-    , "pkgs.python3Packages.todoist-api-python"
-    , "pkgs.python3Packages.toggl-cli"
-    , "pkgs.python3Packages.token-bucket"
-    , "pkgs.python3Packages.tokenize-rt"
-    , "pkgs.python3Packages.tokenizers"
-    , "pkgs.python3Packages.tokenlib"
-    , "pkgs.python3Packages.tokentrim"
-    , "pkgs.python3Packages.tololib"
-    , "pkgs.python3Packages.toml"
-    , "pkgs.python3Packages.toml-adapt"
-    , "pkgs.python3Packages.tomli"
-    , "pkgs.python3Packages.tomli-w"
-    , "pkgs.python3Packages.tomlkit"
-    , "pkgs.python3Packages.toolz"
-    , "pkgs.python3Packages.toonapi"
-    , "pkgs.python3Packages.toposort"
-    , "pkgs.python3Packages.torch"
-    , "pkgs.python3Packages.torch-bin"
-    , "pkgs.python3Packages.torch-tb-profiler"
-    , "pkgs.python3Packages.torchWithCuda"
-    , "pkgs.python3Packages.torchWithRocm"
-    , "pkgs.python3Packages.torchWithoutCuda"
-    , "pkgs.python3Packages.torchWithoutRocm"
-    , "pkgs.python3Packages.torchaudio"
-    , "pkgs.python3Packages.torchaudio-bin"
-    , "pkgs.python3Packages.torchdiffeq"
-    , "pkgs.python3Packages.torchgpipe"
-    , "pkgs.python3Packages.torchinfo"
-    , "pkgs.python3Packages.torchio"
-    , "pkgs.python3Packages.torchlibrosa"
-    , "pkgs.python3Packages.torchmetrics"
-    , "pkgs.python3Packages.torchsde"
-    , "pkgs.python3Packages.torchvision"
-    , "pkgs.python3Packages.torchvision-bin"
-    , "pkgs.python3Packages.tornado"
-    , "pkgs.python3Packages.tornado_4"
-    , "pkgs.python3Packages.tornado_5"
-    , "pkgs.python3Packages.torpy"
-    , "pkgs.python3Packages.torrent-parser"
-    , "pkgs.python3Packages.torrent_parser"
-    , "pkgs.python3Packages.torrequest"
-    , "pkgs.python3Packages.total-connect-client"
-    , "pkgs.python3Packages.towncrier"
-    , "pkgs.python3Packages.tox"
-    , "pkgs.python3Packages.tplink-omada-client"
-    , "pkgs.python3Packages.tpm2-pytss"
-    , "pkgs.python3Packages.tqdm"
-    , "pkgs.python3Packages.traceback2"
-    , "pkgs.python3Packages.tracerite"
-    , "pkgs.python3Packages.tracing"
-    , "pkgs.python3Packages.trackpy"
-    , "pkgs.python3Packages.trailrunner"
-    , "pkgs.python3Packages.trainer"
-    , "pkgs.python3Packages.traitlets"
-    , "pkgs.python3Packages.traits"
-    , "pkgs.python3Packages.traitsui"
-    , "pkgs.python3Packages.traittypes"
-    , "pkgs.python3Packages.trampoline"
-    , "pkgs.python3Packages.transaction"
-    , "pkgs.python3Packages.transformers"
-    , "pkgs.python3Packages.transforms3d"
-    , "pkgs.python3Packages.transitions"
-    , "pkgs.python3Packages.translatehtml"
-    , "pkgs.python3Packages.translatepy"
-    , "pkgs.python3Packages.translationstring"
-    , "pkgs.python3Packages.transmission-rpc"
-    , "pkgs.python3Packages.transmissionrpc"
-    , "pkgs.python3Packages.trectools"
-    , "pkgs.python3Packages.tree-sitter"
-    , "pkgs.python3Packages.treelib"
-    , "pkgs.python3Packages.treelog"
-    , "pkgs.python3Packages.treeo"
-    , "pkgs.python3Packages.treex"
-    , "pkgs.python3Packages.treq"
-    , "pkgs.python3Packages.trezor"
-    , "pkgs.python3Packages.trezor_agent"
-    , "pkgs.python3Packages.trfl"
-    , "pkgs.python3Packages.trimesh"
-    , "pkgs.python3Packages.trino-python-client"
-    , "pkgs.python3Packages.trio"
-    , "pkgs.python3Packages.trio-asyncio"
-    , "pkgs.python3Packages.trio-websocket"
-    , "pkgs.python3Packages.tritonclient"
-    , "pkgs.python3Packages.troposphere"
-    , "pkgs.python3Packages.trove-classifiers"
-    , "pkgs.python3Packages.trueskill"
-    , "pkgs.python3Packages.trustme"
-    , "pkgs.python3Packages.truststore"
-    , "pkgs.python3Packages.trytond"
-    , "pkgs.python3Packages.tsfresh"
-    , "pkgs.python3Packages.tskit"
-    , "pkgs.python3Packages.ttach"
-    , "pkgs.python3Packages.ttls"
-    , "pkgs.python3Packages.ttp"
-    , "pkgs.python3Packages.ttp-templates"
-    , "pkgs.python3Packages.ttstokenizer"
-    , "pkgs.python3Packages.tubes"
-    , "pkgs.python3Packages.tubeup"
-    , "pkgs.python3Packages.tunigo"
-    , "pkgs.python3Packages.turnt"
-    , "pkgs.python3Packages.tuya-iot-py-sdk"
-    , "pkgs.python3Packages.tuyaha"
-    , "pkgs.python3Packages.tvdb-api"
-    , "pkgs.python3Packages.tvdb_api"
-    , "pkgs.python3Packages.tweedledum"
-    , "pkgs.python3Packages.tweepy"
-    , "pkgs.python3Packages.twentemilieu"
-    , "pkgs.python3Packages.twiggy"
-    , "pkgs.python3Packages.twilio"
-    , "pkgs.python3Packages.twill"
-    , "pkgs.python3Packages.twine"
-    , "pkgs.python3Packages.twinkly-client"
-    , "pkgs.python3Packages.twisted"
-    , "pkgs.python3Packages.twitch-python"
-    , "pkgs.python3Packages.twitchapi"
-    , "pkgs.python3Packages.twitter"
-    , "pkgs.python3Packages.twitter-common-collections"
-    , "pkgs.python3Packages.twitter-common-confluence"
-    , "pkgs.python3Packages.twitter-common-dirutil"
-    , "pkgs.python3Packages.twitter-common-lang"
-    , "pkgs.python3Packages.twitter-common-log"
-    , "pkgs.python3Packages.twitter-common-options"
-    , "pkgs.python3Packages.twitterapi"
-    , "pkgs.python3Packages.twofish"
-    , "pkgs.python3Packages.txaio"
-    , "pkgs.python3Packages.txamqp"
-    , "pkgs.python3Packages.txdbus"
-    , "pkgs.python3Packages.txgithub"
-    , "pkgs.python3Packages.txi2p-tahoe"
-    , "pkgs.python3Packages.txredisapi"
-    , "pkgs.python3Packages.txrequests"
-    , "pkgs.python3Packages.txtai"
-    , "pkgs.python3Packages.txtorcon"
-    , "pkgs.python3Packages.txzmq"
-    , "pkgs.python3Packages.type-infer"
-    , "pkgs.python3Packages.typechecks"
-    , "pkgs.python3Packages.typecode"
-    , "pkgs.python3Packages.typecode-libmagic"
-    , "pkgs.python3Packages.typed-ast"
-    , "pkgs.python3Packages.typed-settings"
-    , "pkgs.python3Packages.typeguard"
-    , "pkgs.python3Packages.typepy"
-    , "pkgs.python3Packages.typer"
-    , "pkgs.python3Packages.types-aiobotocore"
-    , "pkgs.python3Packages.types-aiobotocore-accessanalyzer"
-    , "pkgs.python3Packages.types-aiobotocore-account"
-    , "pkgs.python3Packages.types-aiobotocore-acm"
-    , "pkgs.python3Packages.types-aiobotocore-acm-pca"
-    , "pkgs.python3Packages.types-aiobotocore-alexaforbusiness"
-    , "pkgs.python3Packages.types-aiobotocore-amp"
-    , "pkgs.python3Packages.types-aiobotocore-amplify"
-    , "pkgs.python3Packages.types-aiobotocore-amplifybackend"
-    , "pkgs.python3Packages.types-aiobotocore-amplifyuibuilder"
-    , "pkgs.python3Packages.types-aiobotocore-apigateway"
-    , "pkgs.python3Packages.types-aiobotocore-apigatewaymanagementapi"
-    , "pkgs.python3Packages.types-aiobotocore-apigatewayv2"
-    , "pkgs.python3Packages.types-aiobotocore-appconfig"
-    , "pkgs.python3Packages.types-aiobotocore-appconfigdata"
-    , "pkgs.python3Packages.types-aiobotocore-appfabric"
-    , "pkgs.python3Packages.types-aiobotocore-appflow"
-    , "pkgs.python3Packages.types-aiobotocore-appintegrations"
-    , "pkgs.python3Packages.types-aiobotocore-application-autoscaling"
-    , "pkgs.python3Packages.types-aiobotocore-application-insights"
-    , "pkgs.python3Packages.types-aiobotocore-applicationcostprofiler"
-    , "pkgs.python3Packages.types-aiobotocore-appmesh"
-    , "pkgs.python3Packages.types-aiobotocore-apprunner"
-    , "pkgs.python3Packages.types-aiobotocore-appstream"
-    , "pkgs.python3Packages.types-aiobotocore-appsync"
-    , "pkgs.python3Packages.types-aiobotocore-arc-zonal-shift"
-    , "pkgs.python3Packages.types-aiobotocore-athena"
-    , "pkgs.python3Packages.types-aiobotocore-auditmanager"
-    , "pkgs.python3Packages.types-aiobotocore-autoscaling"
-    , "pkgs.python3Packages.types-aiobotocore-autoscaling-plans"
-    , "pkgs.python3Packages.types-aiobotocore-backup"
-    , "pkgs.python3Packages.types-aiobotocore-backup-gateway"
-    , "pkgs.python3Packages.types-aiobotocore-backupstorage"
-    , "pkgs.python3Packages.types-aiobotocore-batch"
-    , "pkgs.python3Packages.types-aiobotocore-billingconductor"
-    , "pkgs.python3Packages.types-aiobotocore-braket"
-    , "pkgs.python3Packages.types-aiobotocore-budgets"
-    , "pkgs.python3Packages.types-aiobotocore-ce"
-    , "pkgs.python3Packages.types-aiobotocore-chime"
-    , "pkgs.python3Packages.types-aiobotocore-chime-sdk-identity"
-    , "pkgs.python3Packages.types-aiobotocore-chime-sdk-media-pipelines"
-    , "pkgs.python3Packages.types-aiobotocore-chime-sdk-meetings"
-    , "pkgs.python3Packages.types-aiobotocore-chime-sdk-messaging"
-    , "pkgs.python3Packages.types-aiobotocore-chime-sdk-voice"
-    , "pkgs.python3Packages.types-aiobotocore-cleanrooms"
-    , "pkgs.python3Packages.types-aiobotocore-cloud9"
-    , "pkgs.python3Packages.types-aiobotocore-cloudcontrol"
-    , "pkgs.python3Packages.types-aiobotocore-clouddirectory"
-    , "pkgs.python3Packages.types-aiobotocore-cloudformation"
-    , "pkgs.python3Packages.types-aiobotocore-cloudfront"
-    , "pkgs.python3Packages.types-aiobotocore-cloudhsm"
-    , "pkgs.python3Packages.types-aiobotocore-cloudhsmv2"
-    , "pkgs.python3Packages.types-aiobotocore-cloudsearch"
-    , "pkgs.python3Packages.types-aiobotocore-cloudsearchdomain"
-    , "pkgs.python3Packages.types-aiobotocore-cloudtrail"
-    , "pkgs.python3Packages.types-aiobotocore-cloudtrail-data"
-    , "pkgs.python3Packages.types-aiobotocore-cloudwatch"
-    , "pkgs.python3Packages.types-aiobotocore-codeartifact"
-    , "pkgs.python3Packages.types-aiobotocore-codebuild"
-    , "pkgs.python3Packages.types-aiobotocore-codecatalyst"
-    , "pkgs.python3Packages.types-aiobotocore-codecommit"
-    , "pkgs.python3Packages.types-aiobotocore-codedeploy"
-    , "pkgs.python3Packages.types-aiobotocore-codeguru-reviewer"
-    , "pkgs.python3Packages.types-aiobotocore-codeguru-security"
-    , "pkgs.python3Packages.types-aiobotocore-codeguruprofiler"
-    , "pkgs.python3Packages.types-aiobotocore-codepipeline"
-    , "pkgs.python3Packages.types-aiobotocore-codestar"
-    , "pkgs.python3Packages.types-aiobotocore-codestar-connections"
-    , "pkgs.python3Packages.types-aiobotocore-codestar-notifications"
-    , "pkgs.python3Packages.types-aiobotocore-cognito-identity"
-    , "pkgs.python3Packages.types-aiobotocore-cognito-idp"
-    , "pkgs.python3Packages.types-aiobotocore-cognito-sync"
-    , "pkgs.python3Packages.types-aiobotocore-comprehend"
-    , "pkgs.python3Packages.types-aiobotocore-comprehendmedical"
-    , "pkgs.python3Packages.types-aiobotocore-compute-optimizer"
-    , "pkgs.python3Packages.types-aiobotocore-config"
-    , "pkgs.python3Packages.types-aiobotocore-connect"
-    , "pkgs.python3Packages.types-aiobotocore-connect-contact-lens"
-    , "pkgs.python3Packages.types-aiobotocore-connectcampaigns"
-    , "pkgs.python3Packages.types-aiobotocore-connectcases"
-    , "pkgs.python3Packages.types-aiobotocore-connectparticipant"
-    , "pkgs.python3Packages.types-aiobotocore-controltower"
-    , "pkgs.python3Packages.types-aiobotocore-cur"
-    , "pkgs.python3Packages.types-aiobotocore-customer-profiles"
-    , "pkgs.python3Packages.types-aiobotocore-databrew"
-    , "pkgs.python3Packages.types-aiobotocore-dataexchange"
-    , "pkgs.python3Packages.types-aiobotocore-datapipeline"
-    , "pkgs.python3Packages.types-aiobotocore-datasync"
-    , "pkgs.python3Packages.types-aiobotocore-dax"
-    , "pkgs.python3Packages.types-aiobotocore-detective"
-    , "pkgs.python3Packages.types-aiobotocore-devicefarm"
-    , "pkgs.python3Packages.types-aiobotocore-devops-guru"
-    , "pkgs.python3Packages.types-aiobotocore-directconnect"
-    , "pkgs.python3Packages.types-aiobotocore-discovery"
-    , "pkgs.python3Packages.types-aiobotocore-dlm"
-    , "pkgs.python3Packages.types-aiobotocore-dms"
-    , "pkgs.python3Packages.types-aiobotocore-docdb"
-    , "pkgs.python3Packages.types-aiobotocore-docdb-elastic"
-    , "pkgs.python3Packages.types-aiobotocore-drs"
-    , "pkgs.python3Packages.types-aiobotocore-ds"
-    , "pkgs.python3Packages.types-aiobotocore-dynamodb"
-    , "pkgs.python3Packages.types-aiobotocore-dynamodbstreams"
-    , "pkgs.python3Packages.types-aiobotocore-ebs"
-    , "pkgs.python3Packages.types-aiobotocore-ec2"
-    , "pkgs.python3Packages.types-aiobotocore-ec2-instance-connect"
-    , "pkgs.python3Packages.types-aiobotocore-ecr"
-    , "pkgs.python3Packages.types-aiobotocore-ecr-public"
-    , "pkgs.python3Packages.types-aiobotocore-ecs"
-    , "pkgs.python3Packages.types-aiobotocore-efs"
-    , "pkgs.python3Packages.types-aiobotocore-eks"
-    , "pkgs.python3Packages.types-aiobotocore-elastic-inference"
-    , "pkgs.python3Packages.types-aiobotocore-elasticache"
-    , "pkgs.python3Packages.types-aiobotocore-elasticbeanstalk"
-    , "pkgs.python3Packages.types-aiobotocore-elastictranscoder"
-    , "pkgs.python3Packages.types-aiobotocore-elb"
-    , "pkgs.python3Packages.types-aiobotocore-elbv2"
-    , "pkgs.python3Packages.types-aiobotocore-emr"
-    , "pkgs.python3Packages.types-aiobotocore-emr-containers"
-    , "pkgs.python3Packages.types-aiobotocore-emr-serverless"
-    , "pkgs.python3Packages.types-aiobotocore-entityresolution"
-    , "pkgs.python3Packages.types-aiobotocore-es"
-    , "pkgs.python3Packages.types-aiobotocore-events"
-    , "pkgs.python3Packages.types-aiobotocore-evidently"
-    , "pkgs.python3Packages.types-aiobotocore-finspace"
-    , "pkgs.python3Packages.types-aiobotocore-finspace-data"
-    , "pkgs.python3Packages.types-aiobotocore-firehose"
-    , "pkgs.python3Packages.types-aiobotocore-fis"
-    , "pkgs.python3Packages.types-aiobotocore-fms"
-    , "pkgs.python3Packages.types-aiobotocore-forecast"
-    , "pkgs.python3Packages.types-aiobotocore-forecastquery"
-    , "pkgs.python3Packages.types-aiobotocore-frauddetector"
-    , "pkgs.python3Packages.types-aiobotocore-fsx"
-    , "pkgs.python3Packages.types-aiobotocore-gamelift"
-    , "pkgs.python3Packages.types-aiobotocore-gamesparks"
-    , "pkgs.python3Packages.types-aiobotocore-glacier"
-    , "pkgs.python3Packages.types-aiobotocore-globalaccelerator"
-    , "pkgs.python3Packages.types-aiobotocore-glue"
-    , "pkgs.python3Packages.types-aiobotocore-grafana"
-    , "pkgs.python3Packages.types-aiobotocore-greengrass"
-    , "pkgs.python3Packages.types-aiobotocore-greengrassv2"
-    , "pkgs.python3Packages.types-aiobotocore-groundstation"
-    , "pkgs.python3Packages.types-aiobotocore-guardduty"
-    , "pkgs.python3Packages.types-aiobotocore-health"
-    , "pkgs.python3Packages.types-aiobotocore-healthlake"
-    , "pkgs.python3Packages.types-aiobotocore-honeycode"
-    , "pkgs.python3Packages.types-aiobotocore-iam"
-    , "pkgs.python3Packages.types-aiobotocore-identitystore"
-    , "pkgs.python3Packages.types-aiobotocore-imagebuilder"
-    , "pkgs.python3Packages.types-aiobotocore-importexport"
-    , "pkgs.python3Packages.types-aiobotocore-inspector"
-    , "pkgs.python3Packages.types-aiobotocore-inspector2"
-    , "pkgs.python3Packages.types-aiobotocore-internetmonitor"
-    , "pkgs.python3Packages.types-aiobotocore-iot"
-    , "pkgs.python3Packages.types-aiobotocore-iot-data"
-    , "pkgs.python3Packages.types-aiobotocore-iot-jobs-data"
-    , "pkgs.python3Packages.types-aiobotocore-iot-roborunner"
-    , "pkgs.python3Packages.types-aiobotocore-iot1click-devices"
-    , "pkgs.python3Packages.types-aiobotocore-iot1click-projects"
-    , "pkgs.python3Packages.types-aiobotocore-iotanalytics"
-    , "pkgs.python3Packages.types-aiobotocore-iotdeviceadvisor"
-    , "pkgs.python3Packages.types-aiobotocore-iotevents"
-    , "pkgs.python3Packages.types-aiobotocore-iotevents-data"
-    , "pkgs.python3Packages.types-aiobotocore-iotfleethub"
-    , "pkgs.python3Packages.types-aiobotocore-iotfleetwise"
-    , "pkgs.python3Packages.types-aiobotocore-iotsecuretunneling"
-    , "pkgs.python3Packages.types-aiobotocore-iotsitewise"
-    , "pkgs.python3Packages.types-aiobotocore-iotthingsgraph"
-    , "pkgs.python3Packages.types-aiobotocore-iottwinmaker"
-    , "pkgs.python3Packages.types-aiobotocore-iotwireless"
-    , "pkgs.python3Packages.types-aiobotocore-ivs"
-    , "pkgs.python3Packages.types-aiobotocore-ivs-realtime"
-    , "pkgs.python3Packages.types-aiobotocore-ivschat"
-    , "pkgs.python3Packages.types-aiobotocore-kafka"
-    , "pkgs.python3Packages.types-aiobotocore-kafkaconnect"
-    , "pkgs.python3Packages.types-aiobotocore-kendra"
-    , "pkgs.python3Packages.types-aiobotocore-kendra-ranking"
-    , "pkgs.python3Packages.types-aiobotocore-keyspaces"
-    , "pkgs.python3Packages.types-aiobotocore-kinesis"
-    , "pkgs.python3Packages.types-aiobotocore-kinesis-video-archived-media"
-    , "pkgs.python3Packages.types-aiobotocore-kinesis-video-media"
-    , "pkgs.python3Packages.types-aiobotocore-kinesis-video-signaling"
-    , "pkgs.python3Packages.types-aiobotocore-kinesis-video-webrtc-storage"
-    , "pkgs.python3Packages.types-aiobotocore-kinesisanalytics"
-    , "pkgs.python3Packages.types-aiobotocore-kinesisanalyticsv2"
-    , "pkgs.python3Packages.types-aiobotocore-kinesisvideo"
-    , "pkgs.python3Packages.types-aiobotocore-kms"
-    , "pkgs.python3Packages.types-aiobotocore-lakeformation"
-    , "pkgs.python3Packages.types-aiobotocore-lambda"
-    , "pkgs.python3Packages.types-aiobotocore-lex-models"
-    , "pkgs.python3Packages.types-aiobotocore-lex-runtime"
-    , "pkgs.python3Packages.types-aiobotocore-lexv2-models"
-    , "pkgs.python3Packages.types-aiobotocore-lexv2-runtime"
-    , "pkgs.python3Packages.types-aiobotocore-license-manager"
-    , "pkgs.python3Packages.types-aiobotocore-license-manager-linux-subscriptions"
-    , "pkgs.python3Packages.types-aiobotocore-license-manager-user-subscriptions"
-    , "pkgs.python3Packages.types-aiobotocore-lightsail"
-    , "pkgs.python3Packages.types-aiobotocore-location"
-    , "pkgs.python3Packages.types-aiobotocore-logs"
-    , "pkgs.python3Packages.types-aiobotocore-lookoutequipment"
-    , "pkgs.python3Packages.types-aiobotocore-lookoutmetrics"
-    , "pkgs.python3Packages.types-aiobotocore-lookoutvision"
-    , "pkgs.python3Packages.types-aiobotocore-m2"
-    , "pkgs.python3Packages.types-aiobotocore-machinelearning"
-    , "pkgs.python3Packages.types-aiobotocore-macie"
-    , "pkgs.python3Packages.types-aiobotocore-macie2"
-    , "pkgs.python3Packages.types-aiobotocore-managedblockchain"
-    , "pkgs.python3Packages.types-aiobotocore-managedblockchain-query"
-    , "pkgs.python3Packages.types-aiobotocore-marketplace-catalog"
-    , "pkgs.python3Packages.types-aiobotocore-marketplace-entitlement"
-    , "pkgs.python3Packages.types-aiobotocore-marketplacecommerceanalytics"
-    , "pkgs.python3Packages.types-aiobotocore-mediaconnect"
-    , "pkgs.python3Packages.types-aiobotocore-mediaconvert"
-    , "pkgs.python3Packages.types-aiobotocore-medialive"
-    , "pkgs.python3Packages.types-aiobotocore-mediapackage"
-    , "pkgs.python3Packages.types-aiobotocore-mediapackage-vod"
-    , "pkgs.python3Packages.types-aiobotocore-mediapackagev2"
-    , "pkgs.python3Packages.types-aiobotocore-mediastore"
-    , "pkgs.python3Packages.types-aiobotocore-mediastore-data"
-    , "pkgs.python3Packages.types-aiobotocore-mediatailor"
-    , "pkgs.python3Packages.types-aiobotocore-medical-imaging"
-    , "pkgs.python3Packages.types-aiobotocore-memorydb"
-    , "pkgs.python3Packages.types-aiobotocore-meteringmarketplace"
-    , "pkgs.python3Packages.types-aiobotocore-mgh"
-    , "pkgs.python3Packages.types-aiobotocore-mgn"
-    , "pkgs.python3Packages.types-aiobotocore-migration-hub-refactor-spaces"
-    , "pkgs.python3Packages.types-aiobotocore-migrationhub-config"
-    , "pkgs.python3Packages.types-aiobotocore-migrationhuborchestrator"
-    , "pkgs.python3Packages.types-aiobotocore-migrationhubstrategy"
-    , "pkgs.python3Packages.types-aiobotocore-mobile"
-    , "pkgs.python3Packages.types-aiobotocore-mq"
-    , "pkgs.python3Packages.types-aiobotocore-mturk"
-    , "pkgs.python3Packages.types-aiobotocore-mwaa"
-    , "pkgs.python3Packages.types-aiobotocore-neptune"
-    , "pkgs.python3Packages.types-aiobotocore-network-firewall"
-    , "pkgs.python3Packages.types-aiobotocore-networkmanager"
-    , "pkgs.python3Packages.types-aiobotocore-nimble"
-    , "pkgs.python3Packages.types-aiobotocore-oam"
-    , "pkgs.python3Packages.types-aiobotocore-omics"
-    , "pkgs.python3Packages.types-aiobotocore-opensearch"
-    , "pkgs.python3Packages.types-aiobotocore-opensearchserverless"
-    , "pkgs.python3Packages.types-aiobotocore-opsworks"
-    , "pkgs.python3Packages.types-aiobotocore-opsworkscm"
-    , "pkgs.python3Packages.types-aiobotocore-organizations"
-    , "pkgs.python3Packages.types-aiobotocore-osis"
-    , "pkgs.python3Packages.types-aiobotocore-outposts"
-    , "pkgs.python3Packages.types-aiobotocore-panorama"
-    , "pkgs.python3Packages.types-aiobotocore-payment-cryptography"
-    , "pkgs.python3Packages.types-aiobotocore-payment-cryptography-data"
-    , "pkgs.python3Packages.types-aiobotocore-personalize"
-    , "pkgs.python3Packages.types-aiobotocore-personalize-events"
-    , "pkgs.python3Packages.types-aiobotocore-personalize-runtime"
-    , "pkgs.python3Packages.types-aiobotocore-pi"
-    , "pkgs.python3Packages.types-aiobotocore-pinpoint"
-    , "pkgs.python3Packages.types-aiobotocore-pinpoint-email"
-    , "pkgs.python3Packages.types-aiobotocore-pinpoint-sms-voice"
-    , "pkgs.python3Packages.types-aiobotocore-pinpoint-sms-voice-v2"
-    , "pkgs.python3Packages.types-aiobotocore-pipes"
-    , "pkgs.python3Packages.types-aiobotocore-polly"
-    , "pkgs.python3Packages.types-aiobotocore-pricing"
-    , "pkgs.python3Packages.types-aiobotocore-privatenetworks"
-    , "pkgs.python3Packages.types-aiobotocore-proton"
-    , "pkgs.python3Packages.types-aiobotocore-qldb"
-    , "pkgs.python3Packages.types-aiobotocore-qldb-session"
-    , "pkgs.python3Packages.types-aiobotocore-quicksight"
-    , "pkgs.python3Packages.types-aiobotocore-ram"
-    , "pkgs.python3Packages.types-aiobotocore-rbin"
-    , "pkgs.python3Packages.types-aiobotocore-rds"
-    , "pkgs.python3Packages.types-aiobotocore-rds-data"
-    , "pkgs.python3Packages.types-aiobotocore-redshift"
-    , "pkgs.python3Packages.types-aiobotocore-redshift-data"
-    , "pkgs.python3Packages.types-aiobotocore-redshift-serverless"
-    , "pkgs.python3Packages.types-aiobotocore-rekognition"
-    , "pkgs.python3Packages.types-aiobotocore-resiliencehub"
-    , "pkgs.python3Packages.types-aiobotocore-resource-explorer-2"
-    , "pkgs.python3Packages.types-aiobotocore-resource-groups"
-    , "pkgs.python3Packages.types-aiobotocore-resourcegroupstaggingapi"
-    , "pkgs.python3Packages.types-aiobotocore-robomaker"
-    , "pkgs.python3Packages.types-aiobotocore-rolesanywhere"
-    , "pkgs.python3Packages.types-aiobotocore-route53"
-    , "pkgs.python3Packages.types-aiobotocore-route53-recovery-cluster"
-    , "pkgs.python3Packages.types-aiobotocore-route53-recovery-control-config"
-    , "pkgs.python3Packages.types-aiobotocore-route53-recovery-readiness"
-    , "pkgs.python3Packages.types-aiobotocore-route53domains"
-    , "pkgs.python3Packages.types-aiobotocore-route53resolver"
-    , "pkgs.python3Packages.types-aiobotocore-rum"
-    , "pkgs.python3Packages.types-aiobotocore-s3"
-    , "pkgs.python3Packages.types-aiobotocore-s3control"
-    , "pkgs.python3Packages.types-aiobotocore-s3outposts"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker-a2i-runtime"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker-edge"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker-featurestore-runtime"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker-geospatial"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker-metrics"
-    , "pkgs.python3Packages.types-aiobotocore-sagemaker-runtime"
-    , "pkgs.python3Packages.types-aiobotocore-savingsplans"
-    , "pkgs.python3Packages.types-aiobotocore-scheduler"
-    , "pkgs.python3Packages.types-aiobotocore-schemas"
-    , "pkgs.python3Packages.types-aiobotocore-sdb"
-    , "pkgs.python3Packages.types-aiobotocore-secretsmanager"
-    , "pkgs.python3Packages.types-aiobotocore-securityhub"
-    , "pkgs.python3Packages.types-aiobotocore-securitylake"
-    , "pkgs.python3Packages.types-aiobotocore-serverlessrepo"
-    , "pkgs.python3Packages.types-aiobotocore-service-quotas"
-    , "pkgs.python3Packages.types-aiobotocore-servicecatalog"
-    , "pkgs.python3Packages.types-aiobotocore-servicecatalog-appregistry"
-    , "pkgs.python3Packages.types-aiobotocore-servicediscovery"
-    , "pkgs.python3Packages.types-aiobotocore-ses"
-    , "pkgs.python3Packages.types-aiobotocore-sesv2"
-    , "pkgs.python3Packages.types-aiobotocore-shield"
-    , "pkgs.python3Packages.types-aiobotocore-signer"
-    , "pkgs.python3Packages.types-aiobotocore-simspaceweaver"
-    , "pkgs.python3Packages.types-aiobotocore-sms"
-    , "pkgs.python3Packages.types-aiobotocore-sms-voice"
-    , "pkgs.python3Packages.types-aiobotocore-snow-device-management"
-    , "pkgs.python3Packages.types-aiobotocore-snowball"
-    , "pkgs.python3Packages.types-aiobotocore-sns"
-    , "pkgs.python3Packages.types-aiobotocore-sqs"
-    , "pkgs.python3Packages.types-aiobotocore-ssm"
-    , "pkgs.python3Packages.types-aiobotocore-ssm-contacts"
-    , "pkgs.python3Packages.types-aiobotocore-ssm-incidents"
-    , "pkgs.python3Packages.types-aiobotocore-ssm-sap"
-    , "pkgs.python3Packages.types-aiobotocore-sso"
-    , "pkgs.python3Packages.types-aiobotocore-sso-admin"
-    , "pkgs.python3Packages.types-aiobotocore-sso-oidc"
-    , "pkgs.python3Packages.types-aiobotocore-stepfunctions"
-    , "pkgs.python3Packages.types-aiobotocore-storagegateway"
-    , "pkgs.python3Packages.types-aiobotocore-sts"
-    , "pkgs.python3Packages.types-aiobotocore-support"
-    , "pkgs.python3Packages.types-aiobotocore-support-app"
-    , "pkgs.python3Packages.types-aiobotocore-swf"
-    , "pkgs.python3Packages.types-aiobotocore-synthetics"
-    , "pkgs.python3Packages.types-aiobotocore-textract"
-    , "pkgs.python3Packages.types-aiobotocore-timestream-query"
-    , "pkgs.python3Packages.types-aiobotocore-timestream-write"
-    , "pkgs.python3Packages.types-aiobotocore-tnb"
-    , "pkgs.python3Packages.types-aiobotocore-transcribe"
-    , "pkgs.python3Packages.types-aiobotocore-transfer"
-    , "pkgs.python3Packages.types-aiobotocore-translate"
-    , "pkgs.python3Packages.types-aiobotocore-verifiedpermissions"
-    , "pkgs.python3Packages.types-aiobotocore-voice-id"
-    , "pkgs.python3Packages.types-aiobotocore-vpc-lattice"
-    , "pkgs.python3Packages.types-aiobotocore-waf"
-    , "pkgs.python3Packages.types-aiobotocore-waf-regional"
-    , "pkgs.python3Packages.types-aiobotocore-wafv2"
-    , "pkgs.python3Packages.types-aiobotocore-wellarchitected"
-    , "pkgs.python3Packages.types-aiobotocore-wisdom"
-    , "pkgs.python3Packages.types-aiobotocore-workdocs"
-    , "pkgs.python3Packages.types-aiobotocore-worklink"
-    , "pkgs.python3Packages.types-aiobotocore-workmail"
-    , "pkgs.python3Packages.types-aiobotocore-workmailmessageflow"
-    , "pkgs.python3Packages.types-aiobotocore-workspaces"
-    , "pkgs.python3Packages.types-aiobotocore-workspaces-web"
-    , "pkgs.python3Packages.types-aiobotocore-xray"
-    , "pkgs.python3Packages.types-appdirs"
-    , "pkgs.python3Packages.types-awscrt"
-    , "pkgs.python3Packages.types-beautifulsoup4"
-    , "pkgs.python3Packages.types-click"
-    , "pkgs.python3Packages.types-colorama"
-    , "pkgs.python3Packages.types-dateutil"
-    , "pkgs.python3Packages.types-decorator"
-    , "pkgs.python3Packages.types-deprecated"
-    , "pkgs.python3Packages.types-docopt"
-    , "pkgs.python3Packages.types-docutils"
-    , "pkgs.python3Packages.types-enum34"
-    , "pkgs.python3Packages.types-freezegun"
-    , "pkgs.python3Packages.types-futures"
-    , "pkgs.python3Packages.types-html5lib"
-    , "pkgs.python3Packages.types-ipaddress"
-    , "pkgs.python3Packages.types-mock"
-    , "pkgs.python3Packages.types-pillow"
-    , "pkgs.python3Packages.types-protobuf"
-    , "pkgs.python3Packages.types-psutil"
-    , "pkgs.python3Packages.types-pyopenssl"
-    , "pkgs.python3Packages.types-python-dateutil"
-    , "pkgs.python3Packages.types-pytz"
-    , "pkgs.python3Packages.types-pyyaml"
-    , "pkgs.python3Packages.types-redis"
-    , "pkgs.python3Packages.types-requests"
-    , "pkgs.python3Packages.types-retry"
-    , "pkgs.python3Packages.types-s3transfer"
-    , "pkgs.python3Packages.types-setuptools"
-    , "pkgs.python3Packages.types-tabulate"
-    , "pkgs.python3Packages.types-toml"
-    , "pkgs.python3Packages.types-typed-ast"
-    , "pkgs.python3Packages.types-ujson"
-    , "pkgs.python3Packages.types-urllib3"
-    , "pkgs.python3Packages.typesentry"
-    , "pkgs.python3Packages.typesystem"
-    , "pkgs.python3Packages.typical"
-    , "pkgs.python3Packages.typing-extensions"
-    , "pkgs.python3Packages.typing-inspect"
-    , "pkgs.python3Packages.typish"
-    , "pkgs.python3Packages.typogrify"
-    , "pkgs.python3Packages.tzdata"
-    , "pkgs.python3Packages.tzlocal"
-    , "pkgs.python3Packages.u-msgpack-python"
-    , "pkgs.python3Packages.ua-parser"
-    , "pkgs.python3Packages.uamqp"
-    , "pkgs.python3Packages.uarray"
-    , "pkgs.python3Packages.uasiren"
-    , "pkgs.python3Packages.ubelt"
-    , "pkgs.python3Packages.uc-micro-py"
-    , "pkgs.python3Packages.ucsmsdk"
-    , "pkgs.python3Packages.udatetime"
-    , "pkgs.python3Packages.ueagle"
-    , "pkgs.python3Packages.ueberzug"
-    , "pkgs.python3Packages.ufmt"
-    , "pkgs.python3Packages.ufo2ft"
-    , "pkgs.python3Packages.ufoLib2"
-    , "pkgs.python3Packages.ufonormalizer"
-    , "pkgs.python3Packages.ufoprocessor"
-    , "pkgs.python3Packages.uharfbuzz"
-    , "pkgs.python3Packages.uhi"
-    , "pkgs.python3Packages.ujson"
-    , "pkgs.python3Packages.ukkonen"
-    , "pkgs.python3Packages.ukpostcodeparser"
-    , "pkgs.python3Packages.ukrainealarm"
-    , "pkgs.python3Packages.ulid-transform"
-    , "pkgs.python3Packages.ultraheat-api"
-    , "pkgs.python3Packages.umalqurra"
-    , "pkgs.python3Packages.umap-learn"
-    , "pkgs.python3Packages.umodbus"
-    , "pkgs.python3Packages.unasync"
-    , "pkgs.python3Packages.uncertainties"
-    , "pkgs.python3Packages.uncompyle6"
-    , "pkgs.python3Packages.unearth"
-    , "pkgs.python3Packages.unicode-slugify"
-    , "pkgs.python3Packages.unicodecsv"
-    , "pkgs.python3Packages.unicodedata2"
-    , "pkgs.python3Packages.unicorn"
-    , "pkgs.python3Packages.unicrypto"
-    , "pkgs.python3Packages.unicurses"
-    , "pkgs.python3Packages.unidecode"
-    , "pkgs.python3Packages.unidic"
-    , "pkgs.python3Packages.unidic-lite"
-    , "pkgs.python3Packages.unidiff"
-    , "pkgs.python3Packages.unifi"
-    , "pkgs.python3Packages.unifi-discovery"
-    , "pkgs.python3Packages.unifiled"
-    , "pkgs.python3Packages.unify"
-    , "pkgs.python3Packages.units"
-    , "pkgs.python3Packages.unittest-data-provider"
-    , "pkgs.python3Packages.unittest-xml-reporting"
-    , "pkgs.python3Packages.unittestCheckHook"
-    , "pkgs.python3Packages.univers"
-    , "pkgs.python3Packages.universal-pathlib"
-    , "pkgs.python3Packages.universal-silabs-flasher"
-    , "pkgs.python3Packages.unpaddedbase64"
-    , "pkgs.python3Packages.unrardll"
-    , "pkgs.python3Packages.unrpa"
-    , "pkgs.python3Packages.unstructured"
-    , "pkgs.python3Packages.unstructured-api-tools"
-    , "pkgs.python3Packages.unstructured-inference"
-    , "pkgs.python3Packages.untangle"
-    , "pkgs.python3Packages.untokenize"
-    , "pkgs.python3Packages.uonet-request-signer-hebe"
-    , "pkgs.python3Packages.upass"
-    , "pkgs.python3Packages.upb-lib"
-    , "pkgs.python3Packages.upcloud-api"
-    , "pkgs.python3Packages.update-copyright"
-    , "pkgs.python3Packages.update-dotdee"
-    , "pkgs.python3Packages.update_checker"
-    , "pkgs.python3Packages.upnpy"
-    , "pkgs.python3Packages.uproot"
-    , "pkgs.python3Packages.uptime"
-    , "pkgs.python3Packages.uptime-kuma-api"
-    , "pkgs.python3Packages.uptime-kuma-monitor"
-    , "pkgs.python3Packages.uqbar"
-    , "pkgs.python3Packages.uranium"
-    , "pkgs.python3Packages.uri-template"
-    , "pkgs.python3Packages.uritemplate"
-    , "pkgs.python3Packages.uritools"
-    , "pkgs.python3Packages.url-normalize"
-    , "pkgs.python3Packages.urlextract"
-    , "pkgs.python3Packages.urlgrabber"
-    , "pkgs.python3Packages.urllib3"
-    , "pkgs.python3Packages.urlman"
-    , "pkgs.python3Packages.urlpy"
-    , "pkgs.python3Packages.urwid"
-    , "pkgs.python3Packages.urwid-mitmproxy"
-    , "pkgs.python3Packages.urwid-readline"
-    , "pkgs.python3Packages.urwidtrees"
-    , "pkgs.python3Packages.us"
-    , "pkgs.python3Packages.usb-devices"
-    , "pkgs.python3Packages.usbrelay-py"
-    , "pkgs.python3Packages.usbtmc"
-    , "pkgs.python3Packages.user-agents"
-    , "pkgs.python3Packages.userpath"
-    , "pkgs.python3Packages.ush"
-    , "pkgs.python3Packages.usort"
-    , "pkgs.python3Packages.utils"
-    , "pkgs.python3Packages.uuid"
-    , "pkgs.python3Packages.uvcclient"
-    , "pkgs.python3Packages.uvicorn"
-    , "pkgs.python3Packages.uvloop"
-    , "pkgs.python3Packages.vaa"
-    , "pkgs.python3Packages.validate-email"
-    , "pkgs.python3Packages.validators"
-    , "pkgs.python3Packages.validobj"
-    , "pkgs.python3Packages.validphys2"
-    , "pkgs.python3Packages.vallox-websocket-api"
-    , "pkgs.python3Packages.vapoursynth"
-    , "pkgs.python3Packages.variants"
-    , "pkgs.python3Packages.varint"
-    , "pkgs.python3Packages.vat-moss"
-    , "pkgs.python3Packages.vcard"
-    , "pkgs.python3Packages.vcrpy"
-    , "pkgs.python3Packages.vcver"
-    , "pkgs.python3Packages.vcversioner"
-    , "pkgs.python3Packages.vdf"
-    , "pkgs.python3Packages.vdirsyncer"
-    , "pkgs.python3Packages.vector"
-    , "pkgs.python3Packages.vega"
-    , "pkgs.python3Packages.vega-datasets"
-    , "pkgs.python3Packages.vega_datasets"
-    , "pkgs.python3Packages.vehicle"
-    , "pkgs.python3Packages.velbus-aio"
-    , "pkgs.python3Packages.venstarcolortouch"
-    , "pkgs.python3Packages.venusian"
-    , "pkgs.python3Packages.venvShellHook"
-    , "pkgs.python3Packages.verboselogs"
-    , "pkgs.python3Packages.versioneer"
-    , "pkgs.python3Packages.versionfinder"
-    , "pkgs.python3Packages.versioningit"
-    , "pkgs.python3Packages.versiontag"
-    , "pkgs.python3Packages.versiontools"
-    , "pkgs.python3Packages.verspec"
-    , "pkgs.python3Packages.vertica-python"
-    , "pkgs.python3Packages.veryprettytable"
-    , "pkgs.python3Packages.vg"
-    , "pkgs.python3Packages.videocr"
-    , "pkgs.python3Packages.vidstab"
-    , "pkgs.python3Packages.viennarna"
-    , "pkgs.python3Packages.viewstate"
-    , "pkgs.python3Packages.vilfo-api-client"
-    , "pkgs.python3Packages.vina"
-    , "pkgs.python3Packages.vincenty"
-    , "pkgs.python3Packages.vine"
-    , "pkgs.python3Packages.virtkey"
-    , "pkgs.python3Packages.virtualenv"
-    , "pkgs.python3Packages.virtualenv-clone"
-    , "pkgs.python3Packages.virtualenvwrapper"
-    , "pkgs.python3Packages.visitor"
-    , "pkgs.python3Packages.vispy"
-    , "pkgs.python3Packages.viv-utils"
-    , "pkgs.python3Packages.vivisect"
-    , "pkgs.python3Packages.vmprof"
-    , "pkgs.python3Packages.vncdo"
-    , "pkgs.python3Packages.vobject"
-    , "pkgs.python3Packages.volatile"
-    , "pkgs.python3Packages.volkszaehler"
-    , "pkgs.python3Packages.voluptuous"
-    , "pkgs.python3Packages.voluptuous-serialize"
-    , "pkgs.python3Packages.voluptuous-stubs"
-    , "pkgs.python3Packages.volvooncall"
-    , "pkgs.python3Packages.vowpalwabbit"
-    , "pkgs.python3Packages.vpk"
-    , "pkgs.python3Packages.vqgan-jax"
-    , "pkgs.python3Packages.vsts"
-    , "pkgs.python3Packages.vsts-cd-manager"
-    , "pkgs.python3Packages.vsure"
-    , "pkgs.python3Packages.vt-py"
-    , "pkgs.python3Packages.vtk"
-    , "pkgs.python3Packages.vulcan-api"
-    , "pkgs.python3Packages.vultr"
-    , "pkgs.python3Packages.vulture"
-    , "pkgs.python3Packages.vxi11"
-    , "pkgs.python3Packages.vyper"
-    , "pkgs.python3Packages.w1thermsensor"
-    , "pkgs.python3Packages.w3lib"
-    , "pkgs.python3Packages.wadllib"
-    , "pkgs.python3Packages.wagtail"
-    , "pkgs.python3Packages.wagtail-factories"
-    , "pkgs.python3Packages.wagtail-localize"
-    , "pkgs.python3Packages.waitress"
-    , "pkgs.python3Packages.waitress-django"
-    , "pkgs.python3Packages.wakeonlan"
-    , "pkgs.python3Packages.wallbox"
-    , "pkgs.python3Packages.walrus"
-    , "pkgs.python3Packages.wand"
-    , "pkgs.python3Packages.wandb"
-    , "pkgs.python3Packages.waqiasync"
-    , "pkgs.python3Packages.warble"
-    , "pkgs.python3Packages.warcio"
-    , "pkgs.python3Packages.ward"
-    , "pkgs.python3Packages.warlock"
-    , "pkgs.python3Packages.warrant"
-    , "pkgs.python3Packages.warrant-lite"
-    , "pkgs.python3Packages.wasabi"
-    , "pkgs.python3Packages.wasmer"
-    , "pkgs.python3Packages.wasmer-compiler-cranelift"
-    , "pkgs.python3Packages.wasmer-compiler-llvm"
-    , "pkgs.python3Packages.wasmer-compiler-singlepass"
-    , "pkgs.python3Packages.wasmerPackages.wasmer"
-    , "pkgs.python3Packages.wasmerPackages.wasmer-compiler-cranelift"
-    , "pkgs.python3Packages.wasmerPackages.wasmer-compiler-llvm"
-    , "pkgs.python3Packages.wasmerPackages.wasmer-compiler-singlepass"
-    , "pkgs.python3Packages.wasserstein"
-    , "pkgs.python3Packages.watchdog"
-    , "pkgs.python3Packages.watchdog-gevent"
-    , "pkgs.python3Packages.watchfiles"
-    , "pkgs.python3Packages.watchgod"
-    , "pkgs.python3Packages.waterfurnace"
-    , "pkgs.python3Packages.watermark"
-    , "pkgs.python3Packages.wavedrom"
-    , "pkgs.python3Packages.wavefile"
-    , "pkgs.python3Packages.wavinsentio"
-    , "pkgs.python3Packages.wazeroutecalculator"
-    , "pkgs.python3Packages.wcag-contrast-ratio"
-    , "pkgs.python3Packages.wcmatch"
-    , "pkgs.python3Packages.wcwidth"
-    , "pkgs.python3Packages.weasel"
-    , "pkgs.python3Packages.weasyprint"
-    , "pkgs.python3Packages.weaviate-client"
-    , "pkgs.python3Packages.web"
-    , "pkgs.python3Packages.web-cache"
-    , "pkgs.python3Packages.web3"
-    , "pkgs.python3Packages.webargs"
-    , "pkgs.python3Packages.webassets"
-    , "pkgs.python3Packages.webauthn"
-    , "pkgs.python3Packages.webcolors"
-    , "pkgs.python3Packages.webdav4"
-    , "pkgs.python3Packages.webdavclient3"
-    , "pkgs.python3Packages.webencodings"
-    , "pkgs.python3Packages.webexteamssdk"
-    , "pkgs.python3Packages.webhelpers"
-    , "pkgs.python3Packages.webob"
-    , "pkgs.python3Packages.weboob"
-    , "pkgs.python3Packages.webrtc-noise-gain"
-    , "pkgs.python3Packages.webrtcvad"
-    , "pkgs.python3Packages.websocket-client"
-    , "pkgs.python3Packages.websocket_client"
-    , "pkgs.python3Packages.websockets"
-    , "pkgs.python3Packages.websockify"
-    , "pkgs.python3Packages.webssh"
-    , "pkgs.python3Packages.webtest"
-    , "pkgs.python3Packages.webtest-aiohttp"
-    , "pkgs.python3Packages.webthing"
-    , "pkgs.python3Packages.webthing-ws"
-    , "pkgs.python3Packages.weconnect"
-    , "pkgs.python3Packages.weconnect-mqtt"
-    , "pkgs.python3Packages.werkzeug"
-    , "pkgs.python3Packages.west"
-    , "pkgs.python3Packages.wfuzz"
-    , "pkgs.python3Packages.wget"
-    , "pkgs.python3Packages.whatthepatch"
-    , "pkgs.python3Packages.wheel"
-    , "pkgs.python3Packages.wheel-filename"
-    , "pkgs.python3Packages.wheel-inspect"
-    , "pkgs.python3Packages.wheelUnpackHook"
-    , "pkgs.python3Packages.wheezy-captcha"
-    , "pkgs.python3Packages.wheezy-template"
-    , "pkgs.python3Packages.whichcraft"
-    , "pkgs.python3Packages.whirlpool-sixth-sense"
-    , "pkgs.python3Packages.whisper"
-    , "pkgs.python3Packages.whispers"
-    , "pkgs.python3Packages.whitenoise"
-    , "pkgs.python3Packages.whodap"
-    , "pkgs.python3Packages.whois"
-    , "pkgs.python3Packages.whois-api"
-    , "pkgs.python3Packages.whoosh"
-    , "pkgs.python3Packages.widgetsnbextension"
-    , "pkgs.python3Packages.widlparser"
-    , "pkgs.python3Packages.wiffi"
-    , "pkgs.python3Packages.wifi"
-    , "pkgs.python3Packages.wikipedia"
-    , "pkgs.python3Packages.wikipedia-api"
-    , "pkgs.python3Packages.wikitextparser"
-    , "pkgs.python3Packages.willow"
-    , "pkgs.python3Packages.winacl"
-    , "pkgs.python3Packages.winsspi"
-    , "pkgs.python3Packages.withings-api"
-    , "pkgs.python3Packages.withings-sync"
-    , "pkgs.python3Packages.wktutils"
-    , "pkgs.python3Packages.wled"
-    , "pkgs.python3Packages.wn"
-    , "pkgs.python3Packages.woob"
-    , "pkgs.python3Packages.woodblock"
-    , "pkgs.python3Packages.wordcloud"
-    , "pkgs.python3Packages.wordfreq"
-    , "pkgs.python3Packages.worldengine"
-    , "pkgs.python3Packages.wrapPython"
-    , "pkgs.python3Packages.wrapio"
-    , "pkgs.python3Packages.wrapt"
-    , "pkgs.python3Packages.wrf-python"
-    , "pkgs.python3Packages.ws4py"
-    , "pkgs.python3Packages.wsdiscovery"
-    , "pkgs.python3Packages.wsgi-intercept"
-    , "pkgs.python3Packages.wsgidav"
-    , "pkgs.python3Packages.wsgiprox"
-    , "pkgs.python3Packages.wsgiproxy2"
-    , "pkgs.python3Packages.wsgitools"
-    , "pkgs.python3Packages.wsme"
-    , "pkgs.python3Packages.wsnsimpy"
-    , "pkgs.python3Packages.wsproto"
-    , "pkgs.python3Packages.wtf-peewee"
-    , "pkgs.python3Packages.wtforms"
-    , "pkgs.python3Packages.wtforms-bootstrap5"
-    , "pkgs.python3Packages.wurlitzer"
-    , "pkgs.python3Packages.wxPython_4_2"
-    , "pkgs.python3Packages.wyoming"
-    , "pkgs.python3Packages.x-wr-timezone"
-    , "pkgs.python3Packages.x11-hash"
-    , "pkgs.python3Packages.x11_hash"
-    , "pkgs.python3Packages.x256"
-    , "pkgs.python3Packages.xapian"
-    , "pkgs.python3Packages.xapp"
-    , "pkgs.python3Packages.xarray"
-    , "pkgs.python3Packages.xarray-einstats"
-    , "pkgs.python3Packages.xattr"
-    , "pkgs.python3Packages.xbox-webapi"
-    , "pkgs.python3Packages.xboxapi"
-    , "pkgs.python3Packages.xcffib"
-    , "pkgs.python3Packages.xdg"
-    , "pkgs.python3Packages.xdg-base-dirs"
-    , "pkgs.python3Packages.xdis"
-    , "pkgs.python3Packages.xdoctest"
-    , "pkgs.python3Packages.xdot"
-    , "pkgs.python3Packages.xformers"
-    , "pkgs.python3Packages.xgboost"
-    , "pkgs.python3Packages.xhtml2pdf"
-    , "pkgs.python3Packages.xiaomi-ble"
-    , "pkgs.python3Packages.xkbcommon"
-    , "pkgs.python3Packages.xkcdpass"
-    , "pkgs.python3Packages.xknx"
-    , "pkgs.python3Packages.xknxproject"
-    , "pkgs.python3Packages.xlib"
-    , "pkgs.python3Packages.xlrd"
-    , "pkgs.python3Packages.xlsx2csv"
-    , "pkgs.python3Packages.xlsxwriter"
-    , "pkgs.python3Packages.xlwt"
-    , "pkgs.python3Packages.xmind"
-    , "pkgs.python3Packages.xml-marshaller"
-    , "pkgs.python3Packages.xml2rfc"
-    , "pkgs.python3Packages.xmldiff"
-    , "pkgs.python3Packages.xmljson"
-    , "pkgs.python3Packages.xmlschema"
-    , "pkgs.python3Packages.xmlsec"
-    , "pkgs.python3Packages.xmltodict"
-    , "pkgs.python3Packages.xmodem"
-    , "pkgs.python3Packages.xnatpy"
-    , "pkgs.python3Packages.xnd"
-    , "pkgs.python3Packages.xpath-expressions"
-    , "pkgs.python3Packages.xpybutil"
-    , "pkgs.python3Packages.xsdata"
-    , "pkgs.python3Packages.xstatic"
-    , "pkgs.python3Packages.xstatic-asciinema-player"
-    , "pkgs.python3Packages.xstatic-bootbox"
-    , "pkgs.python3Packages.xstatic-bootstrap"
-    , "pkgs.python3Packages.xstatic-font-awesome"
-    , "pkgs.python3Packages.xstatic-jquery"
-    , "pkgs.python3Packages.xstatic-jquery-file-upload"
-    , "pkgs.python3Packages.xstatic-jquery-ui"
-    , "pkgs.python3Packages.xstatic-pygments"
-    , "pkgs.python3Packages.xtensor-python"
-    , "pkgs.python3Packages.xvfbwrapper"
-    , "pkgs.python3Packages.xxhash"
-    , "pkgs.python3Packages.xyzservices"
-    , "pkgs.python3Packages.y-py"
-    , "pkgs.python3Packages.yabadaba"
-    , "pkgs.python3Packages.yacs"
-    , "pkgs.python3Packages.yagry"
-    , "pkgs.python3Packages.yahooweather"
-    , "pkgs.python3Packages.yalesmartalarmclient"
-    , "pkgs.python3Packages.yalexs"
-    , "pkgs.python3Packages.yalexs-ble"
-    , "pkgs.python3Packages.yamale"
-    , "pkgs.python3Packages.yamlfix"
-    , "pkgs.python3Packages.yamllint"
-    , "pkgs.python3Packages.yamlloader"
-    , "pkgs.python3Packages.yamlordereddictloader"
-    , "pkgs.python3Packages.yanc"
-    , "pkgs.python3Packages.yangson"
-    , "pkgs.python3Packages.yapf"
-    , "pkgs.python3Packages.yappi"
-    , "pkgs.python3Packages.yapsy"
-    , "pkgs.python3Packages.yara-python"
-    , "pkgs.python3Packages.yaramod"
-    , "pkgs.python3Packages.yarg"
-    , "pkgs.python3Packages.yark"
-    , "pkgs.python3Packages.yarl"
-    , "pkgs.python3Packages.yasi"
-    , "pkgs.python3Packages.yaspin"
-    , "pkgs.python3Packages.yaswfp"
-    , "pkgs.python3Packages.yattag"
-    , "pkgs.python3Packages.ydiff"
-    , "pkgs.python3Packages.yeelight"
-    , "pkgs.python3Packages.yfinance"
-    , "pkgs.python3Packages.yoda"
-    , "pkgs.python3Packages.yolink-api"
-    , "pkgs.python3Packages.youless-api"
-    , "pkgs.python3Packages.youtube-dl"
-    , "pkgs.python3Packages.youtube-dl-light"
-    , "pkgs.python3Packages.youtube-search"
-    , "pkgs.python3Packages.youtube-search-python"
-    , "pkgs.python3Packages.youtube-transcript-api"
-    , "pkgs.python3Packages.yowsup"
-    , "pkgs.python3Packages.yoyo-migrations"
-    , "pkgs.python3Packages.ypy-websocket"
-    , "pkgs.python3Packages.yq"
-    , "pkgs.python3Packages.yt-dlp"
-    , "pkgs.python3Packages.yt-dlp-light"
-    , "pkgs.python3Packages.yte"
-    , "pkgs.python3Packages.ytmusicapi"
-    , "pkgs.python3Packages.yubico"
-    , "pkgs.python3Packages.yubico-client"
-    , "pkgs.python3Packages.z3"
-    , "pkgs.python3Packages.z3c-checkversions"
-    , "pkgs.python3Packages.zadnegoale"
-    , "pkgs.python3Packages.zamg"
-    , "pkgs.python3Packages.zarr"
-    , "pkgs.python3Packages.zc-buildout"
-    , "pkgs.python3Packages.zc-buildout221"
-    , "pkgs.python3Packages.zc_lockfile"
-    , "pkgs.python3Packages.zcbor"
-    , "pkgs.python3Packages.zconfig"
-    , "pkgs.python3Packages.zcs"
-    , "pkgs.python3Packages.zdaemon"
-    , "pkgs.python3Packages.zeek"
-    , "pkgs.python3Packages.zeep"
-    , "pkgs.python3Packages.zeitgeist"
-    , "pkgs.python3Packages.zephyr-python-api"
-    , "pkgs.python3Packages.zeroc-ice"
-    , "pkgs.python3Packages.zeroconf"
-    , "pkgs.python3Packages.zerorpc"
-    , "pkgs.python3Packages.zetup"
-    , "pkgs.python3Packages.zeversolarlocal"
-    , "pkgs.python3Packages.zfec"
-    , "pkgs.python3Packages.zha-quirks"
-    , "pkgs.python3Packages.ziafont"
-    , "pkgs.python3Packages.ziamath"
-    , "pkgs.python3Packages.zict"
-    , "pkgs.python3Packages.zigpy"
-    , "pkgs.python3Packages.zigpy-cc"
-    , "pkgs.python3Packages.zigpy-deconz"
-    , "pkgs.python3Packages.zigpy-xbee"
-    , "pkgs.python3Packages.zigpy-zigate"
-    , "pkgs.python3Packages.zigpy-znp"
-    , "pkgs.python3Packages.zimports"
-    , "pkgs.python3Packages.zipfile2"
-    , "pkgs.python3Packages.zipp"
-    , "pkgs.python3Packages.zipstream"
-    , "pkgs.python3Packages.zipstream-new"
-    , "pkgs.python3Packages.zipstream-ng"
-    , "pkgs.python3Packages.zm-py"
-    , "pkgs.python3Packages.zodb"
-    , "pkgs.python3Packages.zodbpickle"
-    , "pkgs.python3Packages.zope-cachedescriptors"
-    , "pkgs.python3Packages.zope-component"
-    , "pkgs.python3Packages.zope-contenttype"
-    , "pkgs.python3Packages.zope-deferredimport"
-    , "pkgs.python3Packages.zope-deprecation"
-    , "pkgs.python3Packages.zope-dottedname"
-    , "pkgs.python3Packages.zope-hookable"
-    , "pkgs.python3Packages.zope-i18nmessageid"
-    , "pkgs.python3Packages.zope-lifecycleevent"
-    , "pkgs.python3Packages.zope-proxy"
-    , "pkgs.python3Packages.zope-testbrowser"
-    , "pkgs.python3Packages.zope_component"
-    , "pkgs.python3Packages.zope_configuration"
-    , "pkgs.python3Packages.zope_contenttype"
-    , "pkgs.python3Packages.zope_copy"
-    , "pkgs.python3Packages.zope_deprecation"
-    , "pkgs.python3Packages.zope_dottedname"
-    , "pkgs.python3Packages.zope_event"
-    , "pkgs.python3Packages.zope_exceptions"
-    , "pkgs.python3Packages.zope_filerepresentation"
-    , "pkgs.python3Packages.zope_i18nmessageid"
-    , "pkgs.python3Packages.zope_interface"
-    , "pkgs.python3Packages.zope_lifecycleevent"
-    , "pkgs.python3Packages.zope_location"
-    , "pkgs.python3Packages.zope_proxy"
-    , "pkgs.python3Packages.zope_schema"
-    , "pkgs.python3Packages.zope_size"
-    , "pkgs.python3Packages.zope_testing"
-    , "pkgs.python3Packages.zope_testrunner"
-    , "pkgs.python3Packages.zopfli"
-    , "pkgs.python3Packages.zstandard"
-    , "pkgs.python3Packages.zstd"
-    , "pkgs.python3Packages.zulip"
-    , "pkgs.python3Packages.zwave-js-server-python"
-    , "pkgs.python3Packages.zwave-me-ws"
-    , "pkgs.python3Packages.zxcvbn"
-    , "pkgs.python3Packages.zxing-cpp"
-    , "pkgs.python3Packages.zxing_cpp"
+    [ ( "pkgs.python3Packages.APScheduler", "3.10.4" )
+    , ( "pkgs.python3Packages.BTrees", "5.1" )
+    , ( "pkgs.python3Packages.Babel", "2.12.1" )
+    , ( "pkgs.python3Packages.BlinkStick", "2023-05-04" )
+    , ( "pkgs.python3Packages.ColanderAlchemy", "0.3.4" )
+    , ( "pkgs.python3Packages.CommonMark", "0.9.1" )
+    , ( "pkgs.python3Packages.ConfigArgParse", "1.7" )
+    , ( "pkgs.python3Packages.EasyProcess", "1.1" )
+    , ( "pkgs.python3Packages.Fabric", "3.2.2" )
+    , ( "pkgs.python3Packages.FormEncode", "2.1.0" )
+    , ( "pkgs.python3Packages.GeoIP", "1.3.2" )
+    , ( "pkgs.python3Packages.GitPython", "3.1.37" )
+    , ( "pkgs.python3Packages.HAP-python", "4.9.1" )
+    , ( "pkgs.python3Packages.HTSeq", "0.12.4" )
+    , ( "pkgs.python3Packages.IMAPClient", "3.0.0" )
+    , ( "pkgs.python3Packages.JPype1", "1.4.1" )
+    , ( "pkgs.python3Packages.JayDeBeApi", "1.2.3" )
+    , ( "pkgs.python3Packages.Kajiki", "0.9.2" )
+    , ( "pkgs.python3Packages.Keras", "2.14.0" )
+    , ( "pkgs.python3Packages.MDP", "3.6" )
+    , ( "pkgs.python3Packages.Mako", "1.2.4" )
+    , ( "pkgs.python3Packages.Markups", "4.0.0" )
+    , ( "pkgs.python3Packages.MechanicalSoup", "1.3.0" )
+    , ( "pkgs.python3Packages.Nuitka", "1.8.4" )
+    , ( "pkgs.python3Packages.PasteDeploy", "3.0.1" )
+    , ( "pkgs.python3Packages.Polygon3", "3.0.9" )
+    , ( "pkgs.python3Packages.Pweave", "0.30.3" )
+    , ( "pkgs.python3Packages.PyChromecast", "13.0.7" )
+    , ( "pkgs.python3Packages.PyGithub", "2.1.1" )
+    , ( "pkgs.python3Packages.PyICU", "2.11" )
+    , ( "pkgs.python3Packages.PyLD", "1.0.5" )
+    , ( "pkgs.python3Packages.PyMVGLive", "1.1.4" )
+    , ( "pkgs.python3Packages.PyRSS2Gen", "1.1" )
+    , ( "pkgs.python3Packages.PyStemmer", "2.2.0" )
+    , ( "pkgs.python3Packages.PyVirtualDisplay", "3.0" )
+    , ( "pkgs.python3Packages.Pyro4", "4.82" )
+    , ( "pkgs.python3Packages.Pyro5", "5.15" )
+    , ( "pkgs.python3Packages.Quandl", "3.7.0" )
+    , ( "pkgs.python3Packages.ROPGadget", "7.4" )
+    , ( "pkgs.python3Packages.SPARQLWrapper", "2.0.0" )
+    , ( "pkgs.python3Packages.Theano", "1.0.5" )
+    , ( "pkgs.python3Packages.TheanoWithCuda", "1.0.5" )
+    , ( "pkgs.python3Packages.TheanoWithoutCuda", "1.0.5" )
+    , ( "pkgs.python3Packages.ViennaRNA", "2.5.1" )
+    , ( "pkgs.python3Packages.WSME", "0.11.0" )
+    , ( "pkgs.python3Packages.Wand", "0.6.13" )
+    , ( "pkgs.python3Packages.WazeRouteCalculator", "0.15" )
+    , ( "pkgs.python3Packages.XlsxWriter", "3.1.9" )
+    , ( "pkgs.python3Packages.Yapsy", "1.12.2" )
+    , ( "pkgs.python3Packages.a2wsgi", "1.8.0" )
+    , ( "pkgs.python3Packages.aadict", "0.2.3" )
+    , ( "pkgs.python3Packages.aafigure", "0.6" )
+    , ( "pkgs.python3Packages.aardwolf", "0.2.8" )
+    , ( "pkgs.python3Packages.abjad", "3.19" )
+    , ( "pkgs.python3Packages.abodepy", "5.1.0" )
+    , ( "pkgs.python3Packages.about-time", "4.2.1" )
+    , ( "pkgs.python3Packages.absl-py", "1.4.0" )
+    , ( "pkgs.python3Packages.accelerate", "0.24.1" )
+    , ( "pkgs.python3Packages.accessible-pygments", "0.0.4" )
+    , ( "pkgs.python3Packages.accupy", "0.3.6" )
+    , ( "pkgs.python3Packages.accuweather", "2.1.0" )
+    , ( "pkgs.python3Packages.acme", "2.6.0" )
+    , ( "pkgs.python3Packages.acme-tiny", "5.0.1" )
+    , ( "pkgs.python3Packages.acoustics", "0.2.6-unstable-2023-08-20" )
+    , ( "pkgs.python3Packages.acquire", "3.10" )
+    , ( "pkgs.python3Packages.actdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.acunetix", "0.0.7" )
+    , ( "pkgs.python3Packages.adafruit-io", "2.7.0" )
+    , ( "pkgs.python3Packages.adafruit-platformdetect", "3.54.0" )
+    , ( "pkgs.python3Packages.adafruit-pureio", "1.1.11" )
+    , ( "pkgs.python3Packages.adal", "1.2.7" )
+    , ( "pkgs.python3Packages.adax", "0.3.0" )
+    , ( "pkgs.python3Packages.adax-local", "0.1.5" )
+    , ( "pkgs.python3Packages.adb-enhanced", "2.5.22" )
+    , ( "pkgs.python3Packages.adb-homeassistant", "1.3.1" )
+    , ( "pkgs.python3Packages.adb-shell", "0.4.4" )
+    , ( "pkgs.python3Packages.adblock", "0.6.0" )
+    , ( "pkgs.python3Packages.add-trailing-comma", "3.1.0" )
+    , ( "pkgs.python3Packages.addict", "2.4.0" )
+    , ( "pkgs.python3Packages.adext", "0.4.2" )
+    , ( "pkgs.python3Packages.adguardhome", "0.6.2" )
+    , ( "pkgs.python3Packages.adjusttext", "0.8.1" )
+    , ( "pkgs.python3Packages.adlfs", "2023.10.0" )
+    , ( "pkgs.python3Packages.advantage-air", "0.4.4" )
+    , ( "pkgs.python3Packages.advocate", "1.0.0" )
+    , ( "pkgs.python3Packages.aemet-opendata", "0.4.6" )
+    , ( "pkgs.python3Packages.aenum", "3.1.15" )
+    , ( "pkgs.python3Packages.aeppl", "0.1.5" )
+    , ( "pkgs.python3Packages.aesara", "2.9.3" )
+    , ( "pkgs.python3Packages.aesedb", "0.1.4" )
+    , ( "pkgs.python3Packages.afdko", "4.0.0" )
+    , ( "pkgs.python3Packages.affine", "2.4.0" )
+    , ( "pkgs.python3Packages.afsapi", "0.2.8" )
+    , ( "pkgs.python3Packages.agate", "1.7.1" )
+    , ( "pkgs.python3Packages.agate-dbf", "0.2.2" )
+    , ( "pkgs.python3Packages.agate-excel", "0.3.0" )
+    , ( "pkgs.python3Packages.agate-sql", "0.7.0" )
+    , ( "pkgs.python3Packages.agent-py", "0.0.23" )
+    , ( "pkgs.python3Packages.aggdraw", "1.3.16" )
+    , ( "pkgs.python3Packages.aigpy", "2022.7.8.1" )
+    , ( "pkgs.python3Packages.ailment", "9.2.77" )
+    , ( "pkgs.python3Packages.aio-geojson-client", "0.18" )
+    , ( "pkgs.python3Packages.aio-geojson-generic-client", "0.3" )
+    , ( "pkgs.python3Packages.aio-geojson-geonetnz-quakes", "0.15" )
+    , ( "pkgs.python3Packages.aio-geojson-geonetnz-volcano", "0.8" )
+    , ( "pkgs.python3Packages.aio-geojson-nsw-rfs-incidents", "0.6" )
+    , ( "pkgs.python3Packages.aio-geojson-usgs-earthquakes", "0.2" )
+    , ( "pkgs.python3Packages.aio-georss-client", "0.11" )
+    , ( "pkgs.python3Packages.aio-georss-gdacs", "0.8" )
+    , ( "pkgs.python3Packages.aio-pika", "9.3.0" )
+    , ( "pkgs.python3Packages.aioairq", "0.3.1" )
+    , ( "pkgs.python3Packages.aioairzone", "0.6.9" )
+    , ( "pkgs.python3Packages.aioairzone-cloud", "0.3.6" )
+    , ( "pkgs.python3Packages.aioaladdinconnect", "0.1.58" )
+    , ( "pkgs.python3Packages.aioambient", "2023.10.1" )
+    , ( "pkgs.python3Packages.aioamqp", "0.15.0" )
+    , ( "pkgs.python3Packages.aioapns", "3.1" )
+    , ( "pkgs.python3Packages.aioaseko", "0.1.1" )
+    , ( "pkgs.python3Packages.aioasuswrt", "1.4.0" )
+    , ( "pkgs.python3Packages.aioazuredevops", "1.4.3" )
+    , ( "pkgs.python3Packages.aiobafi6", "0.9.0" )
+    , ( "pkgs.python3Packages.aiobiketrax", "1.1.1" )
+    , ( "pkgs.python3Packages.aioblescan", "0.2.14" )
+    , ( "pkgs.python3Packages.aioboto3", "11.3.0" )
+    , ( "pkgs.python3Packages.aiobotocore", "2.6.0" )
+    , ( "pkgs.python3Packages.aiobroadlink", "0.1.3" )
+    , ( "pkgs.python3Packages.aiocache", "0.12.2" )
+    , ( "pkgs.python3Packages.aiocoap", "0.4.7" )
+    , ( "pkgs.python3Packages.aiocomelit", "0.6.0" )
+    , ( "pkgs.python3Packages.aioconsole", "0.6.2" )
+    , ( "pkgs.python3Packages.aiocontextvars", "0.2.2" )
+    , ( "pkgs.python3Packages.aiocron", "1.8" )
+    , ( "pkgs.python3Packages.aiocsv", "1.2.5" )
+    , ( "pkgs.python3Packages.aiocurrencylayer", "1.0.5" )
+    , ( "pkgs.python3Packages.aiodiscover", "1.5.1" )
+    , ( "pkgs.python3Packages.aiodns", "3.0.0" )
+    , ( "pkgs.python3Packages.aiodocker", "2022-01-20" )
+    , ( "pkgs.python3Packages.aioeafm", "1.0.0" )
+    , ( "pkgs.python3Packages.aioeagle", "1.1.0" )
+    , ( "pkgs.python3Packages.aioecowitt", "2023.5.0" )
+    , ( "pkgs.python3Packages.aioelectricitymaps", "0.1.5" )
+    , ( "pkgs.python3Packages.aioemonitor", "1.0.5" )
+    , ( "pkgs.python3Packages.aioesphomeapi", "18.5.2" )
+    , ( "pkgs.python3Packages.aioextensions", "21.7.2261349" )
+    , ( "pkgs.python3Packages.aiofile", "3.8.6" )
+    , ( "pkgs.python3Packages.aiofiles", "23.2.1" )
+    , ( "pkgs.python3Packages.aioflo", "2021.11.0" )
+    , ( "pkgs.python3Packages.aioftp", "0.21.4" )
+    , ( "pkgs.python3Packages.aiogithubapi", "23.2.1" )
+    , ( "pkgs.python3Packages.aiogram", "3.0.0" )
+    , ( "pkgs.python3Packages.aioguardian", "2023.08.0" )
+    , ( "pkgs.python3Packages.aioharmony", "0.2.10" )
+    , ( "pkgs.python3Packages.aiohomekit", "3.0.9" )
+    , ( "pkgs.python3Packages.aiohttp", "3.8.6" )
+    , ( "pkgs.python3Packages.aiohttp-apispec", "3.0.0b2" )
+    , ( "pkgs.python3Packages.aiohttp-basicauth", "1.0.0" )
+    , ( "pkgs.python3Packages.aiohttp-cors", "0.7.0" )
+    , ( "pkgs.python3Packages.aiohttp-jinja2", "1.5.1" )
+    , ( "pkgs.python3Packages.aiohttp-oauthlib", "0.1.0" )
+    , ( "pkgs.python3Packages.aiohttp-openmetrics", "0.0.12" )
+    , ( "pkgs.python3Packages.aiohttp-remotes", "1.2.0" )
+    , ( "pkgs.python3Packages.aiohttp-retry", "2.8.3" )
+    , ( "pkgs.python3Packages.aiohttp-socks", "0.8.3" )
+    , ( "pkgs.python3Packages.aiohttp-swagger", "1.0.15" )
+    , ( "pkgs.python3Packages.aiohttp-wsgi", "0.10.0" )
+    , ( "pkgs.python3Packages.aiohue", "4.7.0" )
+    , ( "pkgs.python3Packages.aiohwenergy", "0.8.0" )
+    , ( "pkgs.python3Packages.aioimaplib", "1.0.1" )
+    , ( "pkgs.python3Packages.aioinflux", "0.9.0" )
+    , ( "pkgs.python3Packages.aioitertools", "0.11.0" )
+    , ( "pkgs.python3Packages.aiojobs", "1.2.0" )
+    , ( "pkgs.python3Packages.aiokafka", "0.8.1" )
+    , ( "pkgs.python3Packages.aiokef", "0.2.17" )
+    , ( "pkgs.python3Packages.aiolifx", "0.9.0" )
+    , ( "pkgs.python3Packages.aiolifx-connection", "1.0.0" )
+    , ( "pkgs.python3Packages.aiolifx-effects", "0.3.2" )
+    , ( "pkgs.python3Packages.aiolifx-themes", "0.4.9" )
+    , ( "pkgs.python3Packages.aiolimiter", "1.1.0" )
+    , ( "pkgs.python3Packages.aiolip", "1.1.6" )
+    , ( "pkgs.python3Packages.aiolivisi", "0.0.19" )
+    , ( "pkgs.python3Packages.aiolookin", "1.0.0" )
+    , ( "pkgs.python3Packages.aiolyric", "1.1.0" )
+    , ( "pkgs.python3Packages.aiomisc", "17.3.25" )
+    , ( "pkgs.python3Packages.aiomisc-pytest", "1.1.1" )
+    , ( "pkgs.python3Packages.aiomodernforms", "0.1.8" )
+    , ( "pkgs.python3Packages.aiomqtt", "1.2.1" )
+    , ( "pkgs.python3Packages.aiomultiprocess", "0.9.0" )
+    , ( "pkgs.python3Packages.aiomusiccast", "0.14.8" )
+    , ( "pkgs.python3Packages.aiomysensors", "0.3.10" )
+    , ( "pkgs.python3Packages.aiomysql", "0.2.0" )
+    , ( "pkgs.python3Packages.aionanoleaf", "0.2.1" )
+    , ( "pkgs.python3Packages.aionotion", "2023.05.5" )
+    , ( "pkgs.python3Packages.aiooncue", "0.3.5" )
+    , ( "pkgs.python3Packages.aioopenexchangerates", "0.4.4" )
+    , ( "pkgs.python3Packages.aioopenssl", "0.6.0" )
+    , ( "pkgs.python3Packages.aiooss2", "0.2.7" )
+    , ( "pkgs.python3Packages.aiopegelonline", "0.0.7" )
+    , ( "pkgs.python3Packages.aiopg", "1.4.0" )
+    , ( "pkgs.python3Packages.aioprocessing", "2.0.1" )
+    , ( "pkgs.python3Packages.aioprometheus", "2023-03-14" )
+    , ( "pkgs.python3Packages.aiopulse", "0.4.4" )
+    , ( "pkgs.python3Packages.aiopurpleair", "2022.12.1" )
+    , ( "pkgs.python3Packages.aiopvapi", "2.0.4" )
+    , ( "pkgs.python3Packages.aiopvpc", "4.2.2" )
+    , ( "pkgs.python3Packages.aiopyarr", "23.4.0" )
+    , ( "pkgs.python3Packages.aiopylgtv", "0.4.1" )
+    , ( "pkgs.python3Packages.aioqsw", "0.3.5" )
+    , ( "pkgs.python3Packages.aioquic", "0.9.21" )
+    , ( "pkgs.python3Packages.aioquic-mitmproxy", "0.9.21.1" )
+    , ( "pkgs.python3Packages.aiorecollect", "2023.09.0" )
+    , ( "pkgs.python3Packages.aioredis", "2.0.1" )
+    , ( "pkgs.python3Packages.aioresponses", "0.7.4" )
+    , ( "pkgs.python3Packages.aioridwell", "2023.10.0" )
+    , ( "pkgs.python3Packages.aiormq", "6.7.6" )
+    , ( "pkgs.python3Packages.aiorpcx", "0.22.1" )
+    , ( "pkgs.python3Packages.aiortm", "0.6.4" )
+    , ( "pkgs.python3Packages.aioruckus", "0.34" )
+    , ( "pkgs.python3Packages.aiorun", "2023.7.2" )
+    , ( "pkgs.python3Packages.aioruuvigateway", "0.1.0" )
+    , ( "pkgs.python3Packages.aiorwlock", "1.3.0" )
+    , ( "pkgs.python3Packages.aiosasl", "0.5.0" )
+    , ( "pkgs.python3Packages.aiosenz", "1.0.0" )
+    , ( "pkgs.python3Packages.aioserial", "1.3.1" )
+    , ( "pkgs.python3Packages.aioshelly", "6.0.0" )
+    , ( "pkgs.python3Packages.aioshutil", "1.3" )
+    , ( "pkgs.python3Packages.aiosignal", "1.3.1" )
+    , ( "pkgs.python3Packages.aioskybell", "22.7.0" )
+    , ( "pkgs.python3Packages.aioslimproto", "2.3.3" )
+    , ( "pkgs.python3Packages.aiosmb", "0.4.10" )
+    , ( "pkgs.python3Packages.aiosmtpd", "1.4.4.post2" )
+    , ( "pkgs.python3Packages.aiosmtplib", "3.0.1" )
+    , ( "pkgs.python3Packages.aiosomecomfort", "0.0.22" )
+    , ( "pkgs.python3Packages.aiosql", "9.0" )
+    , ( "pkgs.python3Packages.aiosqlite", "0.19.0" )
+    , ( "pkgs.python3Packages.aiosteamist", "0.3.2" )
+    , ( "pkgs.python3Packages.aiostream", "0.5.2" )
+    , ( "pkgs.python3Packages.aioswitcher", "3.4.0" )
+    , ( "pkgs.python3Packages.aiosyncthing", "0.6.3" )
+    , ( "pkgs.python3Packages.aiotractive", "0.5.6" )
+    , ( "pkgs.python3Packages.aiounifi", "65" )
+    , ( "pkgs.python3Packages.aiounittest", "1.4.2" )
+    , ( "pkgs.python3Packages.aiovlc", "0.3.2" )
+    , ( "pkgs.python3Packages.aiovodafone", "0.4.2" )
+    , ( "pkgs.python3Packages.aiowaqi", "3.0.0" )
+    , ( "pkgs.python3Packages.aiowatttime", "2023.08.0" )
+    , ( "pkgs.python3Packages.aiowebostv", "0.3.3" )
+    , ( "pkgs.python3Packages.aioweenect", "1.1.1" )
+    , ( "pkgs.python3Packages.aiowinreg", "0.0.10" )
+    , ( "pkgs.python3Packages.aiowithings", "1.0.2" )
+    , ( "pkgs.python3Packages.aioxmpp", "0.13.3" )
+    , ( "pkgs.python3Packages.aioymaps", "1.2.3" )
+    , ( "pkgs.python3Packages.aiozeroconf", "0.1.8" )
+    , ( "pkgs.python3Packages.airly", "1.1.0" )
+    , ( "pkgs.python3Packages.airthings-ble", "0.5.6-4" )
+    , ( "pkgs.python3Packages.airthings-cloud", "0.1.0" )
+    , ( "pkgs.python3Packages.airtouch4pyapi", "1.0.8" )
+    , ( "pkgs.python3Packages.ajpy", "0.0.5" )
+    , ( "pkgs.python3Packages.ajsonrpc", "1.2.0" )
+    , ( "pkgs.python3Packages.alabaster", "0.7.13" )
+    , ( "pkgs.python3Packages.aladdin-connect", "0.4" )
+    , ( "pkgs.python3Packages.alarmdecoder", "1.13.11" )
+    , ( "pkgs.python3Packages.albumentations", "1.3.1" )
+    , ( "pkgs.python3Packages.ale-py", "0.8.1" )
+    , ( "pkgs.python3Packages.alectryon", "1.4.0" )
+    , ( "pkgs.python3Packages.alembic", "1.12.0" )
+    , ( "pkgs.python3Packages.alexapy", "1.27.8" )
+    , ( "pkgs.python3Packages.algebraic-data-types", "0.2.1" )
+    , ( "pkgs.python3Packages.alive-progress", "3.1.4" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-cdn", "3.8.8" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-config", "2.2.12" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-core", "2.14.0" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-dbfs", "2.0.7" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-iot", "8.57.0" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-kms", "2.16.2" )
+    , ( "pkgs.python3Packages.aliyun-python-sdk-sts", "3.1.2" )
+    , ( "pkgs.python3Packages.allpairspy", "2.5.1" )
+    , ( "pkgs.python3Packages.allure-behave", "2.13.2" )
+    , ( "pkgs.python3Packages.allure-pytest", "2.13.2" )
+    , ( "pkgs.python3Packages.allure-python-commons", "2.13.2" )
+    , ( "pkgs.python3Packages.allure-python-commons-test", "2.13.2" )
+    , ( "pkgs.python3Packages.alpha-vantage", "2.3.1" )
+    , ( "pkgs.python3Packages.altair", "5.1.2" )
+    , ( "pkgs.python3Packages.altgraph", "0.17.4" )
+    , ( "pkgs.python3Packages.amaranth", "0.4.dev197+g11d5bb1" )
+    , ( "pkgs.python3Packages.amaranth-boards", "2021-12-17" )
+    , ( "pkgs.python3Packages.amaranth-soc", "2023-09-15" )
+    , ( "pkgs.python3Packages.amarna", "0.1.5" )
+    , ( "pkgs.python3Packages.amazon-ion", "0.10.0" )
+    , ( "pkgs.python3Packages.amazon-kclpy", "2.1.3" )
+    , ( "pkgs.python3Packages.amazon_kclpy", "2.1.3" )
+    , ( "pkgs.python3Packages.ambee", "0.4.0" )
+    , ( "pkgs.python3Packages.amberelectric", "1.0.4" )
+    , ( "pkgs.python3Packages.ambiclimate", "0.2.1" )
+    , ( "pkgs.python3Packages.amcrest", "1.9.8" )
+    , ( "pkgs.python3Packages.amiibo-py", "2021-01-16" )
+    , ( "pkgs.python3Packages.amply", "0.1.6" )
+    , ( "pkgs.python3Packages.amqp", "5.2.0" )
+    , ( "pkgs.python3Packages.amqplib", "1.0.2" )
+    , ( "pkgs.python3Packages.amqtt", "2022-05-29" )
+    , ( "pkgs.python3Packages.ancp-bids", "0.2.1" )
+    , ( "pkgs.python3Packages.androguard", "3.4.0a1" )
+    , ( "pkgs.python3Packages.android-backup", "0.2.0" )
+    , ( "pkgs.python3Packages.androidtv", "0.0.73" )
+    , ( "pkgs.python3Packages.androidtvremote2", "0.0.14" )
+    , ( "pkgs.python3Packages.anel-pwrctrl-homeassistant", "0.0.1.dev2" )
+    , ( "pkgs.python3Packages.angr", "9.2.77" )
+    , ( "pkgs.python3Packages.angrcli", "1.2.0" )
+    , ( "pkgs.python3Packages.angrop", "9.2.8" )
+    , ( "pkgs.python3Packages.aniso8601", "9.0.1" )
+    , ( "pkgs.python3Packages.annexremote", "1.6.4" )
+    , ( "pkgs.python3Packages.annotated-types", "0.6.0" )
+    , ( "pkgs.python3Packages.annoy", "1.17.3" )
+    , ( "pkgs.python3Packages.anonip", "1.1.0" )
+    , ( "pkgs.python3Packages.ansi", "0.3.6" )
+    , ( "pkgs.python3Packages.ansi2html", "1.8.0" )
+    , ( "pkgs.python3Packages.ansi2image", "0.1.4" )
+    , ( "pkgs.python3Packages.ansible", "8.6.0" )
+    , ( "pkgs.python3Packages.ansible-compat", "4.1.10" )
+    , ( "pkgs.python3Packages.ansible-core", "2.15.5" )
+    , ( "pkgs.python3Packages.ansible-kernel", "1.0.0" )
+    , ( "pkgs.python3Packages.ansible-pylibssh", "1.1.0" )
+    , ( "pkgs.python3Packages.ansible-runner", "2.3.4" )
+    , ( "pkgs.python3Packages.ansible-vault-rw", "2.1.0" )
+    , ( "pkgs.python3Packages.ansicolor", "0.3.2" )
+    , ( "pkgs.python3Packages.ansicolors", "1.1.8" )
+    , ( "pkgs.python3Packages.ansiconv", "1.0.0" )
+    , ( "pkgs.python3Packages.ansimarkup", "1.5.0" )
+    , ( "pkgs.python3Packages.ansiwrap", "0.8.4" )
+    , ( "pkgs.python3Packages.anthemav", "1.4.2" )
+    , ( "pkgs.python3Packages.anthropic", "0.7.4" )
+    , ( "pkgs.python3Packages.antlr4-python3-runtime", "4.13.0" )
+    , ( "pkgs.python3Packages.anyascii", "0.3.2" )
+    , ( "pkgs.python3Packages.anybadge", "1.14.0" )
+    , ( "pkgs.python3Packages.anyconfig", "0.13.0" )
+    , ( "pkgs.python3Packages.anyio", "4.0.0" )
+    , ( "pkgs.python3Packages.anyqt", "0.2.0" )
+    , ( "pkgs.python3Packages.anytree", "2.10.0" )
+    , ( "pkgs.python3Packages.anywidget", "0.7.1" )
+    , ( "pkgs.python3Packages.aocd", "2.0.1" )
+    , ( "pkgs.python3Packages.apache-beam", "2.50.0" )
+    , ( "pkgs.python3Packages.apcaccess", "0.0.13" )
+    , ( "pkgs.python3Packages.apipkg", "3.0.2" )
+    , ( "pkgs.python3Packages.apischema", "0.18.1" )
+    , ( "pkgs.python3Packages.apispec", "6.3.0" )
+    , ( "pkgs.python3Packages.apispec-webframeworks", "0.5.2" )
+    , ( "pkgs.python3Packages.apkit", "2022-08-23" )
+    , ( "pkgs.python3Packages.aplpy", "2.1.0" )
+    , ( "pkgs.python3Packages.app-model", "0.2.2" )
+    , ( "pkgs.python3Packages.appdirs", "1.4.4" )
+    , ( "pkgs.python3Packages.apple-weatherkit", "1.0.4" )
+    , ( "pkgs.python3Packages.applicationinsights", "0.11.10" )
+    , ( "pkgs.python3Packages.appnope", "0.1.3" )
+    , ( "pkgs.python3Packages.apprise", "1.6.0" )
+    , ( "pkgs.python3Packages.approval-utilities", "10.0.0" )
+    , ( "pkgs.python3Packages.approvaltests", "10.0.0" )
+    , ( "pkgs.python3Packages.appthreat-vulnerability-db", "5.5.3" )
+    , ( "pkgs.python3Packages.apptools", "5.2.1" )
+    , ( "pkgs.python3Packages.apricot-select", "0.6.1" )
+    , ( "pkgs.python3Packages.aprslib", "0.7.2" )
+    , ( "pkgs.python3Packages.apscheduler", "3.10.4" )
+    , ( "pkgs.python3Packages.apsw", "3.43.1.0" )
+    , ( "pkgs.python3Packages.apycula", "0.9.1" )
+    , ( "pkgs.python3Packages.aqipy-atmotech", "0.1.5" )
+    , ( "pkgs.python3Packages.aqualogic", "3.4" )
+    , ( "pkgs.python3Packages.arabic-reshaper", "3.0.0" )
+    , ( "pkgs.python3Packages.aranet4", "2.2.2" )
+    , ( "pkgs.python3Packages.arc4", "0.4.0" )
+    , ( "pkgs.python3Packages.arcam-fmj", "1.4.0" )
+    , ( "pkgs.python3Packages.archinfo", "9.2.77" )
+    , ( "pkgs.python3Packages.archspec", "0.2.1" )
+    , ( "pkgs.python3Packages.area", "1.1.1" )
+    , ( "pkgs.python3Packages.arelle", "18.3" )
+    , ( "pkgs.python3Packages.arelle-headless", "18.3" )
+    , ( "pkgs.python3Packages.aresponses", "2.1.6" )
+    , ( "pkgs.python3Packages.argcomplete", "3.1.6" )
+    , ( "pkgs.python3Packages.argh", "0.29.4" )
+    , ( "pkgs.python3Packages.argilla", "1.19.0" )
+    , ( "pkgs.python3Packages.argon2-cffi", "23.1.0" )
+    , ( "pkgs.python3Packages.argon2-cffi-bindings", "21.2.0" )
+    , ( "pkgs.python3Packages.argon2_cffi", "23.1.0" )
+    , ( "pkgs.python3Packages.argos-translate-files", "1.1.4" )
+    , ( "pkgs.python3Packages.argostranslate", "1.9.1" )
+    , ( "pkgs.python3Packages.argparse-addons", "0.12.0" )
+    , ( "pkgs.python3Packages.argparse-dataclass", "1.0.0" )
+    , ( "pkgs.python3Packages.args", "0.1.0" )
+    , ( "pkgs.python3Packages.aria2p", "0.11.2" )
+    , ( "pkgs.python3Packages.ariadne", "0.20.1" )
+    , ( "pkgs.python3Packages.arnparse", "0.0.2" )
+    , ( "pkgs.python3Packages.arpeggio", "2.0.2" )
+    , ( "pkgs.python3Packages.arpy", "2.3.0" )
+    , ( "pkgs.python3Packages.array-record", "0.5.0" )
+    , ( "pkgs.python3Packages.arrayqueues", "1.4.1" )
+    , ( "pkgs.python3Packages.arris-tg2492lg", "2.1.0" )
+    , ( "pkgs.python3Packages.arrow", "1.2.3" )
+    , ( "pkgs.python3Packages.arsenic", "21.8" )
+    , ( "pkgs.python3Packages.art", "6.1" )
+    , ( "pkgs.python3Packages.arviz", "0.16.1" )
+    , ( "pkgs.python3Packages.arxiv2bib", "1.0.8" )
+    , ( "pkgs.python3Packages.asana", "4.0.11" )
+    , ( "pkgs.python3Packages.ascii-magic", "2.3.0" )
+    , ( "pkgs.python3Packages.asciimatics", "1.15.0" )
+    , ( "pkgs.python3Packages.asciitree", "0.3.3" )
+    , ( "pkgs.python3Packages.asdf", "2.13.0" )
+    , ( "pkgs.python3Packages.asdf-standard", "1.0.3" )
+    , ( "pkgs.python3Packages.asdf-transform-schemas", "0.4.0" )
+    , ( "pkgs.python3Packages.ase", "3.22.1" )
+    , ( "pkgs.python3Packages.asf-search", "6.6.3" )
+    , ( "pkgs.python3Packages.asgi-csrf", "0.9" )
+    , ( "pkgs.python3Packages.asgi-logger", "0.1.0" )
+    , ( "pkgs.python3Packages.asgineer", "0.8.1" )
+    , ( "pkgs.python3Packages.asgiref", "3.7.2" )
+    , ( "pkgs.python3Packages.asks", "3.0.0" )
+    , ( "pkgs.python3Packages.asmog", "0.0.6" )
+    , ( "pkgs.python3Packages.asn1", "2.7.0" )
+    , ( "pkgs.python3Packages.asn1ate", "0.6" )
+    , ( "pkgs.python3Packages.asn1crypto", "1.5.1" )
+    , ( "pkgs.python3Packages.asn1tools", "0.166.0" )
+    , ( "pkgs.python3Packages.aspectlib", "2.0.0" )
+    , ( "pkgs.python3Packages.aspell-python", "1.15" )
+    , ( "pkgs.python3Packages.aspy-refactor-imports", "3.0.1" )
+    , ( "pkgs.python3Packages.aspy-yaml", "1.3.0" )
+    , ( "pkgs.python3Packages.assay", "2022-01-19" )
+    , ( "pkgs.python3Packages.assertpy", "1.1" )
+    , ( "pkgs.python3Packages.asterisk-mbox", "0.5.0" )
+    , ( "pkgs.python3Packages.asteval", "0.9.31" )
+    , ( "pkgs.python3Packages.astor", "0.8.1" )
+    , ( "pkgs.python3Packages.astral", "3.2" )
+    , ( "pkgs.python3Packages.astroid", "2.15.6" )
+    , ( "pkgs.python3Packages.astropy", "5.3.4" )
+    , ( "pkgs.python3Packages.astropy-extension-helpers", "1.1.0" )
+    , ( "pkgs.python3Packages.astropy-healpix", "1.0.0" )
+    , ( "pkgs.python3Packages.astropy-helpers", "4.0.1" )
+    , ( "pkgs.python3Packages.astroquery", "0.4.6" )
+    , ( "pkgs.python3Packages.asttokens", "2.4.0" )
+    , ( "pkgs.python3Packages.astunparse", "1.6.3" )
+    , ( "pkgs.python3Packages.asyauth", "0.0.16" )
+    , ( "pkgs.python3Packages.async-dns", "2.0.0" )
+    , ( "pkgs.python3Packages.async-generator", "1.10" )
+    , ( "pkgs.python3Packages.async-interrupt", "1.1.1" )
+    , ( "pkgs.python3Packages.async-lru", "2.0.4" )
+    , ( "pkgs.python3Packages.async-modbus", "0.2.1" )
+    , ( "pkgs.python3Packages.async-stagger", "0.3.1" )
+    , ( "pkgs.python3Packages.async-timeout", "4.0.3" )
+    , ( "pkgs.python3Packages.async-tkinter-loop", "0.9.2" )
+    , ( "pkgs.python3Packages.async-upnp-client", "0.36.2" )
+    , ( "pkgs.python3Packages.async_generator", "1.10" )
+    , ( "pkgs.python3Packages.async_stagger", "0.3.1" )
+    , ( "pkgs.python3Packages.asyncclick", "8.1.3.2" )
+    , ( "pkgs.python3Packages.asynccmd", "0.2.4" )
+    , ( "pkgs.python3Packages.asyncinotify", "4.0.2" )
+    , ( "pkgs.python3Packages.asyncio-dgram", "2.1.2" )
+    , ( "pkgs.python3Packages.asyncio-mqtt", "0.16.1" )
+    , ( "pkgs.python3Packages.asyncio-nats-client", "2.6.0" )
+    , ( "pkgs.python3Packages.asyncio-rlock", "0.1.0" )
+    , ( "pkgs.python3Packages.asyncio-throttle", "1.0.2" )
+    , ( "pkgs.python3Packages.asyncmy", "0.2.8" )
+    , ( "pkgs.python3Packages.asyncpg", "0.28.0" )
+    , ( "pkgs.python3Packages.asyncserial", "2022-06-10" )
+    , ( "pkgs.python3Packages.asyncsleepiq", "1.3.7" )
+    , ( "pkgs.python3Packages.asyncssh", "2.14.2" )
+    , ( "pkgs.python3Packages.asyncstdlib", "3.10.9" )
+    , ( "pkgs.python3Packages.asynctest", "0.13.0" )
+    , ( "pkgs.python3Packages.asyncua", "1.0.5" )
+    , ( "pkgs.python3Packages.asyncwhois", "1.0.9" )
+    , ( "pkgs.python3Packages.asysocks", "0.2.9" )
+    , ( "pkgs.python3Packages.atc-ble", "0.1.0" )
+    , ( "pkgs.python3Packages.atenpdu", "0.6.1" )
+    , ( "pkgs.python3Packages.atlassian-python-api", "3.41.3" )
+    , ( "pkgs.python3Packages.atom", "0.10.3" )
+    , ( "pkgs.python3Packages.atomiclong", "0.1.1" )
+    , ( "pkgs.python3Packages.atomicwrites", "1.4.1" )
+    , ( "pkgs.python3Packages.atomicwrites-homeassistant", "1.4.1" )
+    , ( "pkgs.python3Packages.atomman", "2023-07-28" )
+    , ( "pkgs.python3Packages.atpublic", "4.0" )
+    , ( "pkgs.python3Packages.atsim-potentials", "0.4.1" )
+    , ( "pkgs.python3Packages.atsim_potentials", "0.4.1" )
+    , ( "pkgs.python3Packages.attrdict", "2.0.1" )
+    , ( "pkgs.python3Packages.attrs", "23.1.0" )
+    , ( "pkgs.python3Packages.aubio", "0.4.9" )
+    , ( "pkgs.python3Packages.audible", "0.8.2" )
+    , ( "pkgs.python3Packages.audio-metadata", "0.11.1" )
+    , ( "pkgs.python3Packages.audioread", "3.0.0" )
+    , ( "pkgs.python3Packages.audiotools", "3.1.1" )
+    , ( "pkgs.python3Packages.auditok", "0.1.5" )
+    , ( "pkgs.python3Packages.augeas", "1.2.0" )
+    , ( "pkgs.python3Packages.augmax", "0.3.1" )
+    , ( "pkgs.python3Packages.auroranoaa", "0.0.3" )
+    , ( "pkgs.python3Packages.aurorapy", "0.2.7" )
+    , ( "pkgs.python3Packages.autarco", "0.2.0" )
+    , ( "pkgs.python3Packages.auth0-python", "4.6.0" )
+    , ( "pkgs.python3Packages.authcaptureproxy", "1.2.0" )
+    , ( "pkgs.python3Packages.authheaders", "0.15.3" )
+    , ( "pkgs.python3Packages.authlib", "1.2.1" )
+    , ( "pkgs.python3Packages.authres", "1.2.0" )
+    , ( "pkgs.python3Packages.autobahn", "23.6.2" )
+    , ( "pkgs.python3Packages.autocommand", "2.2.2" )
+    , ( "pkgs.python3Packages.autofaiss", "2.15.8" )
+    , ( "pkgs.python3Packages.autoflake", "2.2.1" )
+    , ( "pkgs.python3Packages.autograd", "1.6.2" )
+    , ( "pkgs.python3Packages.autograd-gamma", "0.4.3" )
+    , ( "pkgs.python3Packages.autoit-ripper", "1.1.1" )
+    , ( "pkgs.python3Packages.autologging", "1.3.2" )
+    , ( "pkgs.python3Packages.automat", "22.10.0" )
+    , ( "pkgs.python3Packages.automate-home", "0.9.1" )
+    , ( "pkgs.python3Packages.automx2", "2023-08-23" )
+    , ( "pkgs.python3Packages.autopage", "0.5.1" )
+    , ( "pkgs.python3Packages.autopep8", "2.0.4" )
+    , ( "pkgs.python3Packages.autoslot", "2022.12.1" )
+    , ( "pkgs.python3Packages.av", "10.0.0" )
+    , ( "pkgs.python3Packages.avahi", "0.8" )
+    , ( "pkgs.python3Packages.avea", "1.5.2" )
+    , ( "pkgs.python3Packages.avion", "0.10" )
+    , ( "pkgs.python3Packages.avro", "1.11.2" )
+    , ( "pkgs.python3Packages.avro-python3", "1.10.2" )
+    , ( "pkgs.python3Packages.avro3k", "1.7.7-SNAPSHOT" )
+    , ( "pkgs.python3Packages.aw-client", "0.5.12" )
+    , ( "pkgs.python3Packages.aw-core", "0.5.16" )
+    , ( "pkgs.python3Packages.awacs", "2.4.0" )
+    , ( "pkgs.python3Packages.awesome-slugify", "1.6.5" )
+    , ( "pkgs.python3Packages.awesomeversion", "23.8.0" )
+    , ( "pkgs.python3Packages.awkward", "2.4.10" )
+    , ( "pkgs.python3Packages.awkward-cpp", "26" )
+    , ( "pkgs.python3Packages.aws-adfs", "2.9.0" )
+    , ( "pkgs.python3Packages.aws-encryption-sdk", "3.1.1" )
+    , ( "pkgs.python3Packages.aws-lambda-builders", "1.41.0" )
+    , ( "pkgs.python3Packages.aws-sam-translator", "1.78.0" )
+    , ( "pkgs.python3Packages.aws-secretsmanager-caching", "1.1.1.5" )
+    , ( "pkgs.python3Packages.aws-xray-sdk", "2.12.0" )
+    , ( "pkgs.python3Packages.awscrt", "0.19.12" )
+    , ( "pkgs.python3Packages.awsiotpythonsdk", "1.5.2" )
+    , ( "pkgs.python3Packages.awslambdaric", "2.0.7" )
+    , ( "pkgs.python3Packages.awswrangler", "3.4.0" )
+    , ( "pkgs.python3Packages.ax", "0.3.4" )
+    , ( "pkgs.python3Packages.axis", "48" )
+    , ( "pkgs.python3Packages.azure-appconfiguration", "1.5.0" )
+    , ( "pkgs.python3Packages.azure-applicationinsights", "0.1.1" )
+    , ( "pkgs.python3Packages.azure-batch", "14.0.0" )
+    , ( "pkgs.python3Packages.azure-common", "1.1.28" )
+    , ( "pkgs.python3Packages.azure-containerregistry", "1.2.0" )
+    , ( "pkgs.python3Packages.azure-core", "1.28.0" )
+    , ( "pkgs.python3Packages.azure-cosmos", "4.5.1" )
+    , ( "pkgs.python3Packages.azure-cosmosdb-nspkg", "2.0.2" )
+    , ( "pkgs.python3Packages.azure-cosmosdb-table", "1.0.6" )
+    , ( "pkgs.python3Packages.azure-data-tables", "12.4.4" )
+    , ( "pkgs.python3Packages.azure-datalake-store", "0.0.53" )
+    , ( "pkgs.python3Packages.azure-eventgrid", "4.16.0" )
+    , ( "pkgs.python3Packages.azure-eventhub", "5.11.5" )
+    , ( "pkgs.python3Packages.azure-functions-devops-build", "0.0.22" )
+    , ( "pkgs.python3Packages.azure-graphrbac", "0.61.1" )
+    , ( "pkgs.python3Packages.azure-identity", "1.14.0" )
+    , ( "pkgs.python3Packages.azure-keyvault", "4.2.0" )
+    , ( "pkgs.python3Packages.azure-keyvault-administration", "4.3.0" )
+    , ( "pkgs.python3Packages.azure-keyvault-certificates", "4.7.0" )
+    , ( "pkgs.python3Packages.azure-keyvault-keys", "4.8.0" )
+    , ( "pkgs.python3Packages.azure-keyvault-nspkg", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-keyvault-secrets", "4.7.0" )
+    , ( "pkgs.python3Packages.azure-loganalytics", "0.1.1" )
+    , ( "pkgs.python3Packages.azure-mgmt-advisor", "9.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-apimanagement", "4.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-appconfiguration", "3.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-appcontainers", "3.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-applicationinsights", "4.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-authorization", "4.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-batch", "17.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-batchai", "2.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-billing", "6.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-botservice", "2.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-cdn", "13.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-cognitiveservices", "13.5.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-commerce", "6.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-common", "0.20.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-compute", "30.3.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-consumption", "10.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-containerinstance", "10.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-containerregistry", "10.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-containerservice", "27.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-core", "1.4.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-cosmosdb", "9.3.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-databoxedge", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-datafactory", "3.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-datalake-analytics", "0.6.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-datalake-nspkg", "3.0.1" )
+    , ( "pkgs.python3Packages.azure-mgmt-datalake-store", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-datamigration", "10.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-deploymentmanager", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-devspaces", "0.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-devtestlabs", "9.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-dns", "8.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-eventgrid", "10.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-eventhub", "11.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-extendedlocation", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-frontdoor", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-hanaonazure", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-hdinsight", "9.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-imagebuilder", "1.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-iotcentral", "9.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-iothub", "3.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-iothubprovisioningservices", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-keyvault", "10.3.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-kusto", "3.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-loganalytics", "12.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-logic", "10.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-machinelearningcompute", "0.4.1" )
+    , ( "pkgs.python3Packages.azure-mgmt-managedservices", "6.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-managementgroups", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-managementpartner", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-maps", "2.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-marketplaceordering", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-media", "10.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-monitor", "6.0.2" )
+    , ( "pkgs.python3Packages.azure-mgmt-msi", "7.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-netapp", "11.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-network", "25.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-notificationhubs", "8.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-nspkg", "3.0.2" )
+    , ( "pkgs.python3Packages.azure-mgmt-policyinsights", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-powerbiembedded", "2.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-privatedns", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-rdbms", "10.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-recoveryservices", "2.5.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-recoveryservicesbackup", "6.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-redhatopenshift", "1.4.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-redis", "14.3.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-relay", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-reservations", "2.3.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-resource", "23.0.1" )
+    , ( "pkgs.python3Packages.azure-mgmt-scheduler", "2.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-search", "9.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-security", "5.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-servicebus", "8.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-servicefabric", "2.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-servicefabricmanagedclusters", "1.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-servicelinker", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-signalr", "1.2.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-sql", "3.0.1" )
+    , ( "pkgs.python3Packages.azure-mgmt-sqlvirtualmachine", "0.5.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-storage", "21.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-subscription", "3.1.1" )
+    , ( "pkgs.python3Packages.azure-mgmt-synapse", "2.0.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-trafficmanager", "1.1.0" )
+    , ( "pkgs.python3Packages.azure-mgmt-web", "7.2.0" )
+    , ( "pkgs.python3Packages.azure-monitor-ingestion", "1.0.3" )
+    , ( "pkgs.python3Packages.azure-multiapi-storage", "1.2.0" )
+    , ( "pkgs.python3Packages.azure-nspkg", "3.0.2" )
+    , ( "pkgs.python3Packages.azure-servicebus", "7.11.4" )
+    , ( "pkgs.python3Packages.azure-servicefabric", "8.2.0.0" )
+    , ( "pkgs.python3Packages.azure-servicemanagement-legacy", "0.20.7" )
+    , ( "pkgs.python3Packages.azure-storage-blob", "12.18.2" )
+    , ( "pkgs.python3Packages.azure-storage-common", "2.1.0" )
+    , ( "pkgs.python3Packages.azure-storage-file", "2.1.0" )
+    , ( "pkgs.python3Packages.azure-storage-file-share", "12.15.0" )
+    , ( "pkgs.python3Packages.azure-storage-nspkg", "3.1.0" )
+    , ( "pkgs.python3Packages.azure-storage-queue", "12.8.0" )
+    , ( "pkgs.python3Packages.azure-synapse-accesscontrol", "0.7.0" )
+    , ( "pkgs.python3Packages.azure-synapse-artifacts", "0.18.0" )
+    , ( "pkgs.python3Packages.azure-synapse-managedprivateendpoints", "0.4.0" )
+    , ( "pkgs.python3Packages.azure-synapse-spark", "0.7.0" )
+    , ( "pkgs.python3Packages.b2sdk", "1.24.1" )
+    , ( "pkgs.python3Packages.babel", "2.12.1" )
+    , ( "pkgs.python3Packages.babelfish", "0.6.0" )
+    , ( "pkgs.python3Packages.babelgladeextractor", "0.7.0" )
+    , ( "pkgs.python3Packages.backcall", "0.2.0" )
+    , ( "pkgs.python3Packages.backoff", "2.2.1" )
+    , ( "pkgs.python3Packages.backports-cached-property", "1.0.2" )
+    , ( "pkgs.python3Packages.backports-datetime-fromisoformat", "2.0.0" )
+    , ( "pkgs.python3Packages.backports-entry-points-selectable", "1.2.0" )
+    , ( "pkgs.python3Packages.backports-shutil-which", "3.5.2" )
+    , ( "pkgs.python3Packages.backports-strenum", "1.2.8" )
+    , ( "pkgs.python3Packages.backports-zoneinfo", "0.2.1" )
+    , ( "pkgs.python3Packages.bacpypes", "0.18.6" )
+    , ( "pkgs.python3Packages.bagit", "1.8.1" )
+    , ( "pkgs.python3Packages.bambi", "0.13.0" )
+    , ( "pkgs.python3Packages.banal", "1.0.6" )
+    , ( "pkgs.python3Packages.bandcamp-api", "0.2.3" )
+    , ( "pkgs.python3Packages.bandit", "1.7.5" )
+    , ( "pkgs.python3Packages.bangla", "0.0.2" )
+    , ( "pkgs.python3Packages.bap", "1.3.1" )
+    , ( "pkgs.python3Packages.barectf", "3.1.2" )
+    , ( "pkgs.python3Packages.baron", "0.10.1" )
+    , ( "pkgs.python3Packages.base36", "0.1.1" )
+    , ( "pkgs.python3Packages.base58", "2.1.1" )
+    , ( "pkgs.python3Packages.base58check", "1.0.2" )
+    , ( "pkgs.python3Packages.base64io", "1.0.3" )
+    , ( "pkgs.python3Packages.baseline", "1.2.1" )
+    , ( "pkgs.python3Packages.baselines", "0.1.6" )
+    , ( "pkgs.python3Packages.basemap", "1.3.8" )
+    , ( "pkgs.python3Packages.basemap-data", "1.3.8" )
+    , ( "pkgs.python3Packages.bash-kernel", "0.9.1" )
+    , ( "pkgs.python3Packages.bash_kernel", "0.9.1" )
+    , ( "pkgs.python3Packages.bashlex", "0.18" )
+    , ( "pkgs.python3Packages.basiciw", "0.2.2" )
+    , ( "pkgs.python3Packages.batchgenerators", "0.25" )
+    , ( "pkgs.python3Packages.batchspawner", "1.2.0" )
+    , ( "pkgs.python3Packages.batinfo", "0.4.2" )
+    , ( "pkgs.python3Packages.baycomp", "1.0.3" )
+    , ( "pkgs.python3Packages.bayesian-optimization", "1.4.3" )
+    , ( "pkgs.python3Packages.bayespy", "0.5.26" )
+    , ( "pkgs.python3Packages.bbox", "0.9.4" )
+    , ( "pkgs.python3Packages.bc-detect-secrets", "1.4.30" )
+    , ( "pkgs.python3Packages.bc-jsonpath-ng", "1.5.9" )
+    , ( "pkgs.python3Packages.bc-python-hcl2", "0.4.1" )
+    , ( "pkgs.python3Packages.bcdoc", "0.16.0" )
+    , ( "pkgs.python3Packages.bcf", "1.9.0" )
+    , ( "pkgs.python3Packages.bcg", "1.17.0" )
+    , ( "pkgs.python3Packages.bch", "1.2.1" )
+    , ( "pkgs.python3Packages.bcrypt", "4.0.1" )
+    , ( "pkgs.python3Packages.beaker", "1.11.0" )
+    , ( "pkgs.python3Packages.beancount", "2.3.6" )
+    , ( "pkgs.python3Packages.beancount-black", "0.2.1" )
+    , ( "pkgs.python3Packages.beancount-docverif", "1.0.1" )
+    , ( "pkgs.python3Packages.beancount-parser", "0.2.0" )
+    , ( "pkgs.python3Packages.beancount_docverif", "1.0.1" )
+    , ( "pkgs.python3Packages.beanstalkc", "0.5.2" )
+    , ( "pkgs.python3Packages.beartype", "0.16.4" )
+    , ( "pkgs.python3Packages.beautiful-date", "2.3.0" )
+    , ( "pkgs.python3Packages.beautifulsoup4", "4.12.2" )
+    , ( "pkgs.python3Packages.beautifultable", "1.1.0" )
+    , ( "pkgs.python3Packages.beautysh", "6.2.1" )
+    , ( "pkgs.python3Packages.bech32", "1.2.0" )
+    , ( "pkgs.python3Packages.before-after", "1.0.1" )
+    , ( "pkgs.python3Packages.behave", "1.2.7.dev2" )
+    , ( "pkgs.python3Packages.bellows", "0.36.8" )
+    , ( "pkgs.python3Packages.bencode-py", "4.0.0" )
+    , ( "pkgs.python3Packages.bencoder", "0.2.0" )
+    , ( "pkgs.python3Packages.beniget", "0.4.1" )
+    , ( "pkgs.python3Packages.bentoml", "1.1.9" )
+    , ( "pkgs.python3Packages.bespon", "0.7.0" )
+    , ( "pkgs.python3Packages.betacode", "1.0" )
+    , ( "pkgs.python3Packages.betamax", "0.8.1" )
+    , ( "pkgs.python3Packages.betamax-matchers", "0.4.0" )
+    , ( "pkgs.python3Packages.betamax-serializers", "0.2.1" )
+    , ( "pkgs.python3Packages.betterproto", "2.0.0b5" )
+    , ( "pkgs.python3Packages.bibtexparser", "1.4.1" )
+    , ( "pkgs.python3Packages.bidict", "0.22.1" )
+    , ( "pkgs.python3Packages.bids-validator", "1.13.1" )
+    , ( "pkgs.python3Packages.biliass", "1.3.7" )
+    , ( "pkgs.python3Packages.billiard", "4.1.0" )
+    , ( "pkgs.python3Packages.bimmer-connected", "0.14.3" )
+    , ( "pkgs.python3Packages.binary", "1.0.0" )
+    , ( "pkgs.python3Packages.binaryornot", "0.4.4" )
+    , ( "pkgs.python3Packages.bincopy", "20.0.0" )
+    , ( "pkgs.python3Packages.binho-host-adapter", "0.1.6" )
+    , ( "pkgs.python3Packages.binwalk", "2.3.4" )
+    , ( "pkgs.python3Packages.binwalk-full", "2.3.4" )
+    , ( "pkgs.python3Packages.biopandas", "0.4.1" )
+    , ( "pkgs.python3Packages.biopython", "1.81" )
+    , ( "pkgs.python3Packages.bip-utils", "2.8.0" )
+    , ( "pkgs.python3Packages.bip32", "3.4" )
+    , ( "pkgs.python3Packages.bip_utils", "2.8.0" )
+    , ( "pkgs.python3Packages.biplist", "1.0.3" )
+    , ( "pkgs.python3Packages.bitarray", "2.8.3" )
+    , ( "pkgs.python3Packages.bitbox02", "6.2.0" )
+    , ( "pkgs.python3Packages.bitcoin-utils-fork-minimal", "0.4.11.6" )
+    , ( "pkgs.python3Packages.bitcoinlib", "0.12.2" )
+    , ( "pkgs.python3Packages.bitcoinrpc", "0.5.0" )
+    , ( "pkgs.python3Packages.bite-parser", "0.2.3" )
+    , ( "pkgs.python3Packages.bitlist", "1.2.0" )
+    , ( "pkgs.python3Packages.bitmath", "1.3.3.1" )
+    , ( "pkgs.python3Packages.bitsandbytes", "0.41.0" )
+    , ( "pkgs.python3Packages.bitstring", "4.1.3" )
+    , ( "pkgs.python3Packages.bitstruct", "8.19.0" )
+    , ( "pkgs.python3Packages.bitvavo-aio", "1.0.3" )
+    , ( "pkgs.python3Packages.bizkaibus", "0.1.4" )
+    , ( "pkgs.python3Packages.bjoern", "3.2.1" )
+    , ( "pkgs.python3Packages.bkcharts", "0.2" )
+    , ( "pkgs.python3Packages.black", "23.9.1" )
+    , ( "pkgs.python3Packages.black-macchiato", "1.3.0" )
+    , ( "pkgs.python3Packages.blackjax", "1.0.0" )
+    , ( "pkgs.python3Packages.bleach", "6.0.0" )
+    , ( "pkgs.python3Packages.bleach-allowlist", "1.0.3" )
+    , ( "pkgs.python3Packages.bleak", "0.21.1" )
+    , ( "pkgs.python3Packages.bleak-retry-connector", "3.3.0" )
+    , ( "pkgs.python3Packages.blebox-uniapi", "2.2.0" )
+    , ( "pkgs.python3Packages.bless", "0.2.5" )
+    , ( "pkgs.python3Packages.blessed", "1.20.0" )
+    , ( "pkgs.python3Packages.blessings", "1.7" )
+    , ( "pkgs.python3Packages.blinker", "1.6.2" )
+    , ( "pkgs.python3Packages.blinkpy", "0.22.3" )
+    , ( "pkgs.python3Packages.blinkstick", "2023-05-04" )
+    , ( "pkgs.python3Packages.blis", "0.7.11" )
+    , ( "pkgs.python3Packages.blobfile", "2.0.2" )
+    , ( "pkgs.python3Packages.block-io", "2.0.6" )
+    , ( "pkgs.python3Packages.blockchain", "1.4.4" )
+    , ( "pkgs.python3Packages.blockdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.blockfrost-python", "0.5.3" )
+    , ( "pkgs.python3Packages.blocksat-cli", "0.4.6" )
+    , ( "pkgs.python3Packages.blosc2", "2.2.7" )
+    , ( "pkgs.python3Packages.blspy", "1.0.16" )
+    , ( "pkgs.python3Packages.bluemaestro-ble", "0.2.3" )
+    , ( "pkgs.python3Packages.bluepy", "1.3.0" )
+    , ( "pkgs.python3Packages.bluepy-devices", "0.2.1" )
+    , ( "pkgs.python3Packages.bluetooth-adapters", "0.16.1" )
+    , ( "pkgs.python3Packages.bluetooth-auto-recovery", "1.2.3" )
+    , ( "pkgs.python3Packages.bluetooth-data-tools", "1.14.0" )
+    , ( "pkgs.python3Packages.bluetooth-sensor-state-data", "1.6.2" )
+    , ( "pkgs.python3Packages.blurhash", "1.1.4" )
+    , ( "pkgs.python3Packages.bme280spi", "0.2.0" )
+    , ( "pkgs.python3Packages.bme680", "1.1.1" )
+    , ( "pkgs.python3Packages.bnnumerizer", "0.0.2" )
+    , ( "pkgs.python3Packages.bnunicodenormalizer", "0.1.6" )
+    , ( "pkgs.python3Packages.boa-api", "0.1.14" )
+    , ( "pkgs.python3Packages.boiboite-opener-framework", "1.2.1" )
+    , ( "pkgs.python3Packages.boilerpy3", "1.0.7" )
+    , ( "pkgs.python3Packages.bokeh", "3.2.2" )
+    , ( "pkgs.python3Packages.boltons", "23.0.0" )
+    , ( "pkgs.python3Packages.boltztrap2", "22.12.1" )
+    , ( "pkgs.python3Packages.bond-api", "0.1.18" )
+    , ( "pkgs.python3Packages.bond-async", "0.2.1" )
+    , ( "pkgs.python3Packages.bonsai", "1.5.1" )
+    , ( "pkgs.python3Packages.boolean-py", "4.0" )
+    , ( "pkgs.python3Packages.booleanoperations", "0.9.0" )
+    , ( "pkgs.python3Packages.boost", "1.81.0" )
+    , ( "pkgs.python3Packages.boost-histogram", "1.4.0" )
+    , ( "pkgs.python3Packages.bootstrap.build", "1.0.3" )
+    , ( "pkgs.python3Packages.bootstrap.flit-core", "3.9.0" )
+    , ( "pkgs.python3Packages.bootstrap.installer", "0.7.0" )
+    , ( "pkgs.python3Packages.bork", "7.0.2" )
+    , ( "pkgs.python3Packages.boschshcpy", "0.2.77" )
+    , ( "pkgs.python3Packages.boto", "2.49.0" )
+    , ( "pkgs.python3Packages.boto3", "1.28.57" )
+    , ( "pkgs.python3Packages.boto3-stubs", "1.28.78" )
+    , ( "pkgs.python3Packages.botocore", "1.31.57" )
+    , ( "pkgs.python3Packages.botocore-stubs", "1.31.79" )
+    , ( "pkgs.python3Packages.botorch", "0.9.3" )
+    , ( "pkgs.python3Packages.bottle", "0.12.25" )
+    , ( "pkgs.python3Packages.bottleneck", "1.3.7" )
+    , ( "pkgs.python3Packages.bottombar", "2.1" )
+    , ( "pkgs.python3Packages.boxx", "0.10.12" )
+    , ( "pkgs.python3Packages.bpycv", "0.4.0" )
+    , ( "pkgs.python3Packages.bpython", "0.24" )
+    , ( "pkgs.python3Packages.bqplot", "0.12.40" )
+    , ( "pkgs.python3Packages.bqscales", "0.3.3" )
+    , ( "pkgs.python3Packages.braceexpand", "0.1.7" )
+    , ( "pkgs.python3Packages.bracex", "2.4" )
+    , ( "pkgs.python3Packages.braintree", "4.14.0" )
+    , ( "pkgs.python3Packages.branca", "0.6.0" )
+    , ( "pkgs.python3Packages.bravado-core", "6.1.0" )
+    , ( "pkgs.python3Packages.bravia-tv", "1.0.11" )
+    , ( "pkgs.python3Packages.breathe", "4.35.0" )
+    , ( "pkgs.python3Packages.breezy", "3.3.4" )
+    , ( "pkgs.python3Packages.brelpy", "0.0.3" )
+    , ( "pkgs.python3Packages.brian2", "2.5.4" )
+    , ( "pkgs.python3Packages.broadbean", "0.11.0" )
+    , ( "pkgs.python3Packages.broadlink", "0.18.3" )
+    , ( "pkgs.python3Packages.brother", "2.3.0" )
+    , ( "pkgs.python3Packages.brother-ql", "0.9.4" )
+    , ( "pkgs.python3Packages.brotli", "1.1.0" )
+    , ( "pkgs.python3Packages.brotli-asgi", "1.4.0" )
+    , ( "pkgs.python3Packages.brotlicffi", "1.1.0.0" )
+    , ( "pkgs.python3Packages.brotlipy", "0.7.0" )
+    , ( "pkgs.python3Packages.brottsplatskartan", "1.0.5" )
+    , ( "pkgs.python3Packages.browser-cookie3", "0.19.1" )
+    , ( "pkgs.python3Packages.brunt", "1.2.0" )
+    , ( "pkgs.python3Packages.bsblan", "0.5.16" )
+    , ( "pkgs.python3Packages.bsddb3", "6.2.9" )
+    , ( "pkgs.python3Packages.bsdiff4", "1.2.4" )
+    , ( "pkgs.python3Packages.bson", "0.5.10" )
+    , ( "pkgs.python3Packages.bsuite", "0.3.5" )
+    , ( "pkgs.python3Packages.bt-proximity", "0.2.1" )
+    , ( "pkgs.python3Packages.bt_proximity", "0.2.1" )
+    , ( "pkgs.python3Packages.btchip", "0.1.32" )
+    , ( "pkgs.python3Packages.btchip-python", "0.1.32" )
+    , ( "pkgs.python3Packages.btest", "1.1" )
+    , ( "pkgs.python3Packages.bthome-ble", "3.2.0" )
+    , ( "pkgs.python3Packages.btrees", "5.1" )
+    , ( "pkgs.python3Packages.btrfs", "13" )
+    , ( "pkgs.python3Packages.btrfsutil", "6.6.2" )
+    , ( "pkgs.python3Packages.btsmarthub_devicelist", "0.2.3" )
+    , ( "pkgs.python3Packages.btsocket", "0.2.0" )
+    , ( "pkgs.python3Packages.bucketstore", "0.2.2" )
+    , ( "pkgs.python3Packages.bugsnag", "4.6.0" )
+    , ( "pkgs.python3Packages.bugwarrior", "1.8.0" )
+    , ( "pkgs.python3Packages.bugz", "0.9.3-0.13" )
+    , ( "pkgs.python3Packages.bugzilla", "2.3.0" )
+    , ( "pkgs.python3Packages.buienradar", "1.0.5" )
+    , ( "pkgs.python3Packages.build", "1.0.3" )
+    , ( "pkgs.python3Packages.buildcatrust", "0.1.3" )
+    , ( "pkgs.python3Packages.bumps", "0.9.1" )
+    , ( "pkgs.python3Packages.bunch", "2017-11-21" )
+    , ( "pkgs.python3Packages.bundlewrap", "4.17.2" )
+    , ( "pkgs.python3Packages.busypie", "0.5.1" )
+    , ( "pkgs.python3Packages.bwapy", "0.1.4" )
+    , ( "pkgs.python3Packages.bx-py-utils", "80" )
+    , ( "pkgs.python3Packages.bx-python", "0.10.0" )
+    , ( "pkgs.python3Packages.bytecode", "0.15.1" )
+    , ( "pkgs.python3Packages.bytewax", "0.17.1" )
+    , ( "pkgs.python3Packages.bz2file", "0.98" )
+    , ( "pkgs.python3Packages.cachecontrol", "0.13.1" )
+    , ( "pkgs.python3Packages.cached-property", "1.5.2" )
+    , ( "pkgs.python3Packages.cachelib", "0.10.2" )
+    , ( "pkgs.python3Packages.cachetools", "5.3.0" )
+    , ( "pkgs.python3Packages.cachey", "0.2.1" )
+    , ( "pkgs.python3Packages.cacheyou", "23.3" )
+    , ( "pkgs.python3Packages.cachier", "2.2.1" )
+    , ( "pkgs.python3Packages.cachy", "0.3.0" )
+    , ( "pkgs.python3Packages.cadquery", "2.0" )
+    , ( "pkgs.python3Packages.caffe", "1.0" )
+    , ( "pkgs.python3Packages.caffeWithCuda", "1.0" )
+    , ( "pkgs.python3Packages.caio", "0.9.13" )
+    , ( "pkgs.python3Packages.cairocffi", "1.6.1" )
+    , ( "pkgs.python3Packages.cairosvg", "2.7.0" )
+    , ( "pkgs.python3Packages.caldav", "1.3.6" )
+    , ( "pkgs.python3Packages.callee", "0.3.1" )
+    , ( "pkgs.python3Packages.calmjs", "3.4.4" )
+    , ( "pkgs.python3Packages.calmjs-parse", "1.3.0" )
+    , ( "pkgs.python3Packages.calmjs-types", "1.0.1" )
+    , ( "pkgs.python3Packages.calver", "2022.06.26" )
+    , ( "pkgs.python3Packages.calysto", "1.0.6" )
+    , ( "pkgs.python3Packages.calysto-scheme", "1.4.8" )
+    , ( "pkgs.python3Packages.camel-converter", "3.1.0" )
+    , ( "pkgs.python3Packages.camelot", "0.11.0" )
+    , ( "pkgs.python3Packages.can", "4.2.2" )
+    , ( "pkgs.python3Packages.canals", "0.10.0" )
+    , ( "pkgs.python3Packages.canmatrix", "0.9.5" )
+    , ( "pkgs.python3Packages.canonicaljson", "2.0.0" )
+    , ( "pkgs.python3Packages.canopen", "2.2.0" )
+    , ( "pkgs.python3Packages.cantools", "39.4.0" )
+    , ( "pkgs.python3Packages.capstone", "4.0.2" )
+    , ( "pkgs.python3Packages.captcha", "0.5.0" )
+    , ( "pkgs.python3Packages.capturer", "3.0" )
+    , ( "pkgs.python3Packages.carbon", "1.1.10" )
+    , ( "pkgs.python3Packages.cart", "1.2.2" )
+    , ( "pkgs.python3Packages.cartopy", "0.22.0" )
+    , ( "pkgs.python3Packages.casa-formats-io", "0.2.2" )
+    , ( "pkgs.python3Packages.casbin", "1.33.0" )
+    , ( "pkgs.python3Packages.case", "1.5.3" )
+    , ( "pkgs.python3Packages.cassandra-driver", "3.28.0" )
+    , ( "pkgs.python3Packages.castepxbin", "0.3.0" )
+    , ( "pkgs.python3Packages.casttube", "0.2.1" )
+    , ( "pkgs.python3Packages.catalogue", "2.0.8" )
+    , ( "pkgs.python3Packages.catboost", "1.2.2" )
+    , ( "pkgs.python3Packages.catppuccin", "1.3.2" )
+    , ( "pkgs.python3Packages.cattrs", "23.1.2" )
+    , ( "pkgs.python3Packages.cbeams", "1.0.3" )
+    , ( "pkgs.python3Packages.cbor", "1.0.0" )
+    , ( "pkgs.python3Packages.cbor2", "5.4.6" )
+    , ( "pkgs.python3Packages.cccolutils", "1.5" )
+    , ( "pkgs.python3Packages.cchardet", "2.1.19" )
+    , ( "pkgs.python3Packages.cdcs", "0.2.2" )
+    , ( "pkgs.python3Packages.celery", "5.3.4" )
+    , ( "pkgs.python3Packages.celery-redbeat", "2.1.0" )
+    , ( "pkgs.python3Packages.celery-singleton", "0.3.1" )
+    , ( "pkgs.python3Packages.celery-types", "0.20.0" )
+    , ( "pkgs.python3Packages.cement", "3.0.8" )
+    , ( "pkgs.python3Packages.cemm", "0.5.1" )
+    , ( "pkgs.python3Packages.censys", "2.2.9" )
+    , ( "pkgs.python3Packages.cepa", "1.8.4" )
+    , ( "pkgs.python3Packages.cerberus", "1.3.5" )
+    , ( "pkgs.python3Packages.cert-chain-resolver", "1.1.0" )
+    , ( "pkgs.python3Packages.certauth", "1.3.0" )
+    , ( "pkgs.python3Packages.certbot", "2.6.0" )
+    , ( "pkgs.python3Packages.certbot-dns-cloudflare", "2.6.0" )
+    , ( "pkgs.python3Packages.certbot-dns-google", "2.6.0" )
+    , ( "pkgs.python3Packages.certbot-dns-inwx", "2.2.0" )
+    , ( "pkgs.python3Packages.certbot-dns-ovh", "2.6.0" )
+    , ( "pkgs.python3Packages.certbot-dns-rfc2136", "2.6.0" )
+    , ( "pkgs.python3Packages.certbot-dns-route53", "2.6.0" )
+    , ( "pkgs.python3Packages.certifi", "2023.07.22" )
+    , ( "pkgs.python3Packages.certipy", "0.1.3" )
+    , ( "pkgs.python3Packages.certipy-ad", "4.8.2" )
+    , ( "pkgs.python3Packages.certomancer", "0.11.0" )
+    , ( "pkgs.python3Packages.certvalidator", "0.11.1" )
+    , ( "pkgs.python3Packages.cexprtk", "0.4.1" )
+    , ( "pkgs.python3Packages.cf-xarray", "0.8.6" )
+    , ( "pkgs.python3Packages.cffi", "1.16.0" )
+    , ( "pkgs.python3Packages.cffsubr", "0.2.9.post1" )
+    , ( "pkgs.python3Packages.cfgv", "3.4.0" )
+    , ( "pkgs.python3Packages.cfn-flip", "1.3.0" )
+    , ( "pkgs.python3Packages.cfn-lint", "0.79.11" )
+    , ( "pkgs.python3Packages.cfscrape", "2.1.1" )
+    , ( "pkgs.python3Packages.cftime", "1.6.2" )
+    , ( "pkgs.python3Packages.cgen", "2020.1" )
+    , ( "pkgs.python3Packages.cgroup-utils", "0.8" )
+    , ( "pkgs.python3Packages.chacha20poly1305", "0.0.3" )
+    , ( "pkgs.python3Packages.chacha20poly1305-reuseable", "0.11.0" )
+    , ( "pkgs.python3Packages.chai", "1.1.2" )
+    , ( "pkgs.python3Packages.chainer", "7.8.1.post1" )
+    , ( "pkgs.python3Packages.chainmap", "1.0.3" )
+    , ( "pkgs.python3Packages.chalice", "1.28.0" )
+    , ( "pkgs.python3Packages.chameleon", "3.8.1" )
+    , ( "pkgs.python3Packages.channels", "4.0.0" )
+    , ( "pkgs.python3Packages.channels-redis", "4.1.0" )
+    , ( "pkgs.python3Packages.characteristic", "14.3.0" )
+    , ( "pkgs.python3Packages.chardet", "5.2.0" )
+    , ( "pkgs.python3Packages.charset-normalizer", "3.2.0" )
+    , ( "pkgs.python3Packages.chart-studio", "5.17.0" )
+    , ( "pkgs.python3Packages.chat-downloader", "0.2.8" )
+    , ( "pkgs.python3Packages.check-manifest", "0.49" )
+    , ( "pkgs.python3Packages.checkdmarc", "4.8.4" )
+    , ( "pkgs.python3Packages.checksumdir", "1.2.0" )
+    , ( "pkgs.python3Packages.cheetah3", "3.3.2" )
+    , ( "pkgs.python3Packages.cheroot", "10.0.0" )
+    , ( "pkgs.python3Packages.cherrypy", "18.8.0" )
+    , ( "pkgs.python3Packages.chess", "1.10.0" )
+    , ( "pkgs.python3Packages.chevron", "0.13.1" )
+    , ( "pkgs.python3Packages.chex", "0.1.84" )
+    , ( "pkgs.python3Packages.chia-rs", "0.2.10" )
+    , ( "pkgs.python3Packages.chiabip158", "1.3" )
+    , ( "pkgs.python3Packages.chiapos", "1.0.11" )
+    , ( "pkgs.python3Packages.chiavdf", "1.0.11" )
+    , ( "pkgs.python3Packages.chirpstack-api", "3.12.4" )
+    , ( "pkgs.python3Packages.chispa", "0.9.4" )
+    , ( "pkgs.python3Packages.chromaprint", "0.5" )
+    , ( "pkgs.python3Packages.ci-info", "0.3.0" )
+    , ( "pkgs.python3Packages.ci-py", "1.0.0" )
+    , ( "pkgs.python3Packages.cinemagoer", "2023.5.1" )
+    , ( "pkgs.python3Packages.circuit-webhook", "1.0.1" )
+    , ( "pkgs.python3Packages.circuitbreaker", "2.0.0" )
+    , ( "pkgs.python3Packages.circus", "0.18.0" )
+    , ( "pkgs.python3Packages.cirq", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-aqt", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-core", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-ft", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-google", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-ionq", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-pasqal", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-rigetti", "1.2.0" )
+    , ( "pkgs.python3Packages.cirq-web", "1.2.0" )
+    , ( "pkgs.python3Packages.ciscoconfparse", "1.7.24" )
+    , ( "pkgs.python3Packages.ciscomobilityexpress", "1.0.2" )
+    , ( "pkgs.python3Packages.ciso8601", "2.3.0" )
+    , ( "pkgs.python3Packages.citeproc-py", "0.6.0" )
+    , ( "pkgs.python3Packages.cjkwrap", "2.2" )
+    , ( "pkgs.python3Packages.ckcc-protocol", "1.4.0" )
+    , ( "pkgs.python3Packages.clarabel", "0.6.0.post1" )
+    , ( "pkgs.python3Packages.clarifai", "9.10.4" )
+    , ( "pkgs.python3Packages.clarifai-grpc", "9.10.6" )
+    , ( "pkgs.python3Packages.claripy", "9.2.77" )
+    , ( "pkgs.python3Packages.class-doc", "0.2.6" )
+    , ( "pkgs.python3Packages.class-registry", "4.0.6" )
+    , ( "pkgs.python3Packages.classify-imports", "4.2.0" )
+    , ( "pkgs.python3Packages.cld2-cffi", "0.1.4" )
+    , ( "pkgs.python3Packages.cle", "9.2.77" )
+    , ( "pkgs.python3Packages.clean-fid", "0.1.35" )
+    , ( "pkgs.python3Packages.cleanlab", "2.5.0" )
+    , ( "pkgs.python3Packages.cleo", "2.1.0" )
+    , ( "pkgs.python3Packages.clevercsv", "0.8.2" )
+    , ( "pkgs.python3Packages.clf", "0.5.7" )
+    , ( "pkgs.python3Packages.cli-helpers", "2.3.0" )
+    , ( "pkgs.python3Packages.cliche", "0.10.108" )
+    , ( "pkgs.python3Packages.click", "8.1.7" )
+    , ( "pkgs.python3Packages.click-aliases", "1.0.4" )
+    , ( "pkgs.python3Packages.click-command-tree", "1.1.1" )
+    , ( "pkgs.python3Packages.click-completion", "0.5.2" )
+    , ( "pkgs.python3Packages.click-configfile", "0.2.3" )
+    , ( "pkgs.python3Packages.click-datetime", "0.2.0" )
+    , ( "pkgs.python3Packages.click-default-group", "1.2.2" )
+    , ( "pkgs.python3Packages.click-didyoumean", "0.3.0" )
+    , ( "pkgs.python3Packages.click-help-colors", "0.9.2" )
+    , ( "pkgs.python3Packages.click-log", "0.4.0" )
+    , ( "pkgs.python3Packages.click-odoo", "1.6.0" )
+    , ( "pkgs.python3Packages.click-odoo-contrib", "1.18.0" )
+    , ( "pkgs.python3Packages.click-option-group", "0.5.6" )
+    , ( "pkgs.python3Packages.click-plugins", "1.1.1" )
+    , ( "pkgs.python3Packages.click-repl", "0.2.0" )
+    , ( "pkgs.python3Packages.click-shell", "2.1" )
+    , ( "pkgs.python3Packages.click-spinner", "0.1.10" )
+    , ( "pkgs.python3Packages.click-threading", "0.5.0" )
+    , ( "pkgs.python3Packages.clickclick", "1.2.2" )
+    , ( "pkgs.python3Packages.clickgen", "2.1.9" )
+    , ( "pkgs.python3Packages.clickhouse-cityhash", "1.0.2.4" )
+    , ( "pkgs.python3Packages.clickhouse-cli", "0.3.9" )
+    , ( "pkgs.python3Packages.clickhouse-connect", "0.6.18" )
+    , ( "pkgs.python3Packages.clickhouse-driver", "0.2.5" )
+    , ( "pkgs.python3Packages.cliff", "4.3.0" )
+    , ( "pkgs.python3Packages.clifford", "1.4.0" )
+    , ( "pkgs.python3Packages.cligj", "0.7.2" )
+    , ( "pkgs.python3Packages.clikit", "0.6.2" )
+    , ( "pkgs.python3Packages.clint", "0.5.1" )
+    , ( "pkgs.python3Packages.clintermission", "0.3.1" )
+    , ( "pkgs.python3Packages.clip", "2022-11-17" )
+    , ( "pkgs.python3Packages.clip-anytorch", "2.5.2" )
+    , ( "pkgs.python3Packages.clize", "5.0.2" )
+    , ( "pkgs.python3Packages.clldutils", "3.19.0" )
+    , ( "pkgs.python3Packages.cloudflare", "2.12.4" )
+    , ( "pkgs.python3Packages.cloudpathlib", "0.16.0" )
+    , ( "pkgs.python3Packages.cloudpickle", "2.2.1" )
+    , ( "pkgs.python3Packages.cloudscraper", "1.2.71" )
+    , ( "pkgs.python3Packages.cloudsmith-api", "2.0.7" )
+    , ( "pkgs.python3Packages.cloudsplaining", "0.6.2" )
+    , ( "pkgs.python3Packages.cloup", "3.0.2" )
+    , ( "pkgs.python3Packages.clr-loader", "0.2.6" )
+    , ( "pkgs.python3Packages.clustershell", "1.9.2" )
+    , ( "pkgs.python3Packages.clvm", "0.9.7" )
+    , ( "pkgs.python3Packages.clvm-rs", "0.3.0" )
+    , ( "pkgs.python3Packages.clvm-tools", "0.4.6" )
+    , ( "pkgs.python3Packages.clvm-tools-rs", "0.1.30" )
+    , ( "pkgs.python3Packages.cma", "3.3.0" )
+    , ( "pkgs.python3Packages.cmaes", "0.10.0" )
+    , ( "pkgs.python3Packages.cmake", "3.27.7" )
+    , ( "pkgs.python3Packages.cmarkgfm", "2022.10.27" )
+    , ( "pkgs.python3Packages.cmd2", "2.4.3" )
+    , ( "pkgs.python3Packages.cmd2-ext-test", "2.0.0" )
+    , ( "pkgs.python3Packages.cmdline", "0.2.0" )
+    , ( "pkgs.python3Packages.cmdstanpy", "1.2.0" )
+    , ( "pkgs.python3Packages.cmigemo", "0.1.6" )
+    , ( "pkgs.python3Packages.cmsis-pack-manager", "0.5.2" )
+    , ( "pkgs.python3Packages.cmsis-svd", "0.4" )
+    , ( "pkgs.python3Packages.cnvkit", "0.9.10" )
+    , ( "pkgs.python3Packages.co2signal", "0.4.2" )
+    , ( "pkgs.python3Packages.coapthon3", "1.0.2" )
+    , ( "pkgs.python3Packages.cobs", "1.2.1" )
+    , ( "pkgs.python3Packages.cock", "0.11.0" )
+    , ( "pkgs.python3Packages.coconut", "3.0.3" )
+    , ( "pkgs.python3Packages.cocotb", "1.8.1" )
+    , ( "pkgs.python3Packages.cocotb-bus", "0.2.1" )
+    , ( "pkgs.python3Packages.codecov", "2.1.13" )
+    , ( "pkgs.python3Packages.codepy", "2019.1" )
+    , ( "pkgs.python3Packages.coffea", "2023.10.0.rc1" )
+    , ( "pkgs.python3Packages.cogapp", "3.3.0" )
+    , ( "pkgs.python3Packages.cohere", "4.32" )
+    , ( "pkgs.python3Packages.coincurve", "18.0.0" )
+    , ( "pkgs.python3Packages.coinmetrics-api-client", "2023.11.13.14" )
+    , ( "pkgs.python3Packages.colander", "2.0" )
+    , ( "pkgs.python3Packages.colanderalchemy", "0.3.4" )
+    , ( "pkgs.python3Packages.collections-extended", "2.0.2" )
+    , ( "pkgs.python3Packages.colorama", "0.4.6" )
+    , ( "pkgs.python3Packages.colorcet", "3.0.1" )
+    , ( "pkgs.python3Packages.colorclass", "2.2.2" )
+    , ( "pkgs.python3Packages.colored", "2.2.3" )
+    , ( "pkgs.python3Packages.colored-traceback", "0.3.0" )
+    , ( "pkgs.python3Packages.coloredlogs", "15.0.1" )
+    , ( "pkgs.python3Packages.colorful", "0.5.5" )
+    , ( "pkgs.python3Packages.colorlog", "6.7.0" )
+    , ( "pkgs.python3Packages.colorlover", "0.3.0" )
+    , ( "pkgs.python3Packages.colormath", "2021-04-17" )
+    , ( "pkgs.python3Packages.colorspacious", "1.1.2" )
+    , ( "pkgs.python3Packages.colorthief", "0.2.1" )
+    , ( "pkgs.python3Packages.colorzero", "2.0" )
+    , ( "pkgs.python3Packages.colour", "0.1.5" )
+    , ( "pkgs.python3Packages.colout", "1.1" )
+    , ( "pkgs.python3Packages.cometblue-lite", "0.7.0" )
+    , ( "pkgs.python3Packages.comicon", "1.0.0" )
+    , ( "pkgs.python3Packages.comm", "0.1.4" )
+    , ( "pkgs.python3Packages.command_runner", "1.5.0" )
+    , ( "pkgs.python3Packages.commandparse", "1.1.2" )
+    , ( "pkgs.python3Packages.commentjson", "0.9.0" )
+    , ( "pkgs.python3Packages.commoncode", "31.0.3" )
+    , ( "pkgs.python3Packages.commonmark", "0.9.1" )
+    , ( "pkgs.python3Packages.compiledb", "0.10.1" )
+    , ( "pkgs.python3Packages.complycube", "1.1.6" )
+    , ( "pkgs.python3Packages.compreffor", "0.5.5" )
+    , ( "pkgs.python3Packages.compressai", "1.2.4" )
+    , ( "pkgs.python3Packages.concurrent-log-handler", "0.9.24" )
+    , ( "pkgs.python3Packages.conda", "4.3.16" )
+    , ( "pkgs.python3Packages.condaInstallHook", "" )
+    , ( "pkgs.python3Packages.condaUnpackHook", "" )
+    , ( "pkgs.python3Packages.confection", "0.1.3" )
+    , ( "pkgs.python3Packages.configargparse", "1.7" )
+    , ( "pkgs.python3Packages.configclass", "0.2.0" )
+    , ( "pkgs.python3Packages.confight", "1.3.1" )
+    , ( "pkgs.python3Packages.configobj", "5.0.8" )
+    , ( "pkgs.python3Packages.configparser", "6.0.0" )
+    , ( "pkgs.python3Packages.configshell", "1.1.30" )
+    , ( "pkgs.python3Packages.configupdater", "3.1.1" )
+    , ( "pkgs.python3Packages.confluent-kafka", "2.2.0" )
+    , ( "pkgs.python3Packages.confuse", "1.7.0" )
+    , ( "pkgs.python3Packages.connect-box", "0.3.0" )
+    , ( "pkgs.python3Packages.connection-pool", "0.0.3" )
+    , ( "pkgs.python3Packages.connexion", "2.14.2" )
+    , ( "pkgs.python3Packages.connio", "0.2.0" )
+    , ( "pkgs.python3Packages.cons", "0.4.6" )
+    , ( "pkgs.python3Packages.consonance", "0.1.5" )
+    , ( "pkgs.python3Packages.constantly", "15.1.0" )
+    , ( "pkgs.python3Packages.construct", "2.10.68" )
+    , ( "pkgs.python3Packages.construct-classes", "0.1.2" )
+    , ( "pkgs.python3Packages.consul", "1.1.0" )
+    , ( "pkgs.python3Packages.container-inspector", "32.0.1" )
+    , ( "pkgs.python3Packages.contexter", "0.1.4" )
+    , ( "pkgs.python3Packages.contextlib2", "21.6.0" )
+    , ( "pkgs.python3Packages.contexttimer", "2019-03-30" )
+    , ( "pkgs.python3Packages.contourpy", "1.1.0" )
+    , ( "pkgs.python3Packages.controku", "1.1.0" )
+    , ( "pkgs.python3Packages.convertdate", "2.4.0" )
+    , ( "pkgs.python3Packages.cookiecutter", "2.3.0" )
+    , ( "pkgs.python3Packages.cookies", "2.2.1" )
+    , ( "pkgs.python3Packages.coordinates", "0.4.0" )
+    , ( "pkgs.python3Packages.coqpit", "0.0.17" )
+    , ( "pkgs.python3Packages.coreapi", "2.3.3" )
+    , ( "pkgs.python3Packages.coredis", "4.16.0" )
+    , ( "pkgs.python3Packages.coreschema", "0.0.4" )
+    , ( "pkgs.python3Packages.cornice", "6.0.1" )
+    , ( "pkgs.python3Packages.correctionlib", "2.4.0" )
+    , ( "pkgs.python3Packages.corsair-scan", "0.2.0" )
+    , ( "pkgs.python3Packages.cose", "1.0.1" )
+    , ( "pkgs.python3Packages.cot", "2.2.1" )
+    , ( "pkgs.python3Packages.covCore", "1.15.0" )
+    , ( "pkgs.python3Packages.coverage", "7.3.1" )
+    , ( "pkgs.python3Packages.coveralls", "3.3.1" )
+    , ( "pkgs.python3Packages.cppe", "0.3.1" )
+    , ( "pkgs.python3Packages.cppheaderparser", "2.7.4" )
+    , ( "pkgs.python3Packages.cppy", "1.2.1" )
+    , ( "pkgs.python3Packages.cpyparsing", "2.4.7.2.1.2" )
+    , ( "pkgs.python3Packages.cram", "0.7" )
+    , ( "pkgs.python3Packages.cramjam", "2.6.2.post1" )
+    , ( "pkgs.python3Packages.crashtest", "0.4.1" )
+    , ( "pkgs.python3Packages.crate", "0.34.0" )
+    , ( "pkgs.python3Packages.crayons", "0.4.0" )
+    , ( "pkgs.python3Packages.crc", "5.0.0" )
+    , ( "pkgs.python3Packages.crc16", "0.1.1" )
+    , ( "pkgs.python3Packages.crc32c", "2.3.post0" )
+    , ( "pkgs.python3Packages.crccheck", "1.3.0" )
+    , ( "pkgs.python3Packages.crcmod", "1.7" )
+    , ( "pkgs.python3Packages.credstash", "1.17.1" )
+    , ( "pkgs.python3Packages.criticality-score", "1.0.8" )
+    , ( "pkgs.python3Packages.crocoddyl", "2.0.1" )
+    , ( "pkgs.python3Packages.cron-descriptor", "1.2.35" )
+    , ( "pkgs.python3Packages.croniter", "1.4.1" )
+    , ( "pkgs.python3Packages.cronsim", "2.5" )
+    , ( "pkgs.python3Packages.crossplane", "0.5.8" )
+    , ( "pkgs.python3Packages.crownstone-cloud", "1.4.9" )
+    , ( "pkgs.python3Packages.crownstone-core", "3.2.1" )
+    , ( "pkgs.python3Packages.crownstone-sse", "2.0.4" )
+    , ( "pkgs.python3Packages.crownstone-uart", "2.7.0" )
+    , ( "pkgs.python3Packages.cryptacular", "1.6.2" )
+    , ( "pkgs.python3Packages.cryptg", "0.4" )
+    , ( "pkgs.python3Packages.cryptodatahub", "0.10.1" )
+    , ( "pkgs.python3Packages.cryptography", "41.0.3" )
+    , ( "pkgs.python3Packages.cryptolyzer", "0.10.3" )
+    , ( "pkgs.python3Packages.cryptoparser", "0.11.0" )
+    , ( "pkgs.python3Packages.crysp", "1.2" )
+    , ( "pkgs.python3Packages.crytic-compile", "0.3.5" )
+    , ( "pkgs.python3Packages.cson", "0.8" )
+    , ( "pkgs.python3Packages.csrmesh", "0.10.0" )
+    , ( "pkgs.python3Packages.css-html-js-minify", "2.5.5" )
+    , ( "pkgs.python3Packages.css-inline", "0.10.1" )
+    , ( "pkgs.python3Packages.css-parser", "1.0.10" )
+    , ( "pkgs.python3Packages.cssbeautifier", "1.14.9" )
+    , ( "pkgs.python3Packages.csscompressor", "0.9.5" )
+    , ( "pkgs.python3Packages.cssmin", "0.2.0" )
+    , ( "pkgs.python3Packages.cssselect", "1.2.0" )
+    , ( "pkgs.python3Packages.cssselect2", "0.7.0" )
+    , ( "pkgs.python3Packages.cssutils", "2.9.0" )
+    , ( "pkgs.python3Packages.cstruct", "5.2" )
+    , ( "pkgs.python3Packages.csvw", "1.11.0" )
+    , ( "pkgs.python3Packages.ctap-keyring-device", "1.0.6" )
+    , ( "pkgs.python3Packages.ctranslate2", "3.21.0" )
+    , ( "pkgs.python3Packages.cu2qu", "1.6.7.post2" )
+    , ( "pkgs.python3Packages.cucumber-tag-expressions", "4.1.0" )
+    , ( "pkgs.python3Packages.cufflinks", "0.17.3" )
+    , ( "pkgs.python3Packages.cupy", "12.2.0" )
+    , ( "pkgs.python3Packages.curio", "1.6" )
+    , ( "pkgs.python3Packages.curlify", "2.2.1" )
+    , ( "pkgs.python3Packages.curtsies", "0.4.2" )
+    , ( "pkgs.python3Packages.curve25519-donna", "1.3" )
+    , ( "pkgs.python3Packages.cvelib", "1.2.1" )
+    , ( "pkgs.python3Packages.cvss", "2.6" )
+    , ( "pkgs.python3Packages.cvxopt", "1.3.2" )
+    , ( "pkgs.python3Packages.cvxpy", "1.4.1" )
+    , ( "pkgs.python3Packages.cwcwidth", "0.1.9" )
+    , ( "pkgs.python3Packages.cwl-upgrader", "1.2.9" )
+    , ( "pkgs.python3Packages.cwl-utils", "0.29" )
+    , ( "pkgs.python3Packages.cwlformat", "2022.02.18" )
+    , ( "pkgs.python3Packages.cx-freeze", "6.15.10" )
+    , ( "pkgs.python3Packages.cx_Freeze", "6.15.10" )
+    , ( "pkgs.python3Packages.cx_oracle", "8.3.0" )
+    , ( "pkgs.python3Packages.cxxfilt", "0.3.0" )
+    , ( "pkgs.python3Packages.cycler", "0.11.0" )
+    , ( "pkgs.python3Packages.cyclonedx-python-lib", "5.1.1" )
+    , ( "pkgs.python3Packages.cymem", "2.0.8" )
+    , ( "pkgs.python3Packages.cypari2", "2.1.3" )
+    , ( "pkgs.python3Packages.cypherpunkpay", "1.0.16" )
+    , ( "pkgs.python3Packages.cysignals", "1.11.2" )
+    , ( "pkgs.python3Packages.cython", "0.29.36" )
+    , ( "pkgs.python3Packages.cython-test-exception-raiser", "1.0.2" )
+    , ( "pkgs.python3Packages.cython_3", "3.0.3" )
+    , ( "pkgs.python3Packages.cytoolz", "0.12.2" )
+    , ( "pkgs.python3Packages.dacite", "1.8.1" )
+    , ( "pkgs.python3Packages.daemonize", "2.5.0" )
+    , ( "pkgs.python3Packages.daemonocle", "1.2.3" )
+    , ( "pkgs.python3Packages.daiquiri", "3.2.1" )
+    , ( "pkgs.python3Packages.dalle-mini", "0.1.5" )
+    , ( "pkgs.python3Packages.daphne", "4.0.0" )
+    , ( "pkgs.python3Packages.daqp", "0.5.1" )
+    , ( "pkgs.python3Packages.darkdetect", "0.8.0" )
+    , ( "pkgs.python3Packages.dasbus", "11-10-2022" )
+    , ( "pkgs.python3Packages.dash", "2.14.1" )
+    , ( "pkgs.python3Packages.dash-core-components", "2.0.0" )
+    , ( "pkgs.python3Packages.dash-html-components", "2.0.0" )
+    , ( "pkgs.python3Packages.dash-renderer", "1.9.1" )
+    , ( "pkgs.python3Packages.dash-table", "5.0.0" )
+    , ( "pkgs.python3Packages.dashing", "0.1.0" )
+    , ( "pkgs.python3Packages.dask", "2023.10.1" )
+    , ( "pkgs.python3Packages.dask-awkward", "2023.11.2" )
+    , ( "pkgs.python3Packages.dask-gateway", "2023.1.1" )
+    , ( "pkgs.python3Packages.dask-gateway-server", "2023.9.0" )
+    , ( "pkgs.python3Packages.dask-glm", "0.3.0" )
+    , ( "pkgs.python3Packages.dask-histogram", "2023.10.0" )
+    , ( "pkgs.python3Packages.dask-image", "2023.8.1" )
+    , ( "pkgs.python3Packages.dask-jobqueue", "0.8.2" )
+    , ( "pkgs.python3Packages.dask-ml", "2023.3.24" )
+    , ( "pkgs.python3Packages.dask-mpi", "2022.4.0" )
+    , ( "pkgs.python3Packages.dask-yarn", "0.9" )
+    , ( "pkgs.python3Packages.databases", "0.8.0" )
+    , ( "pkgs.python3Packages.databricks-cli", "0.17.7" )
+    , ( "pkgs.python3Packages.databricks-connect", "11.3.6" )
+    , ( "pkgs.python3Packages.databricks-sql-connector", "2.9.3" )
+    , ( "pkgs.python3Packages.dataclass-factory", "2.16" )
+    , ( "pkgs.python3Packages.dataclass-wizard", "0.22.2" )
+    , ( "pkgs.python3Packages.dataclasses-json", "0.6.1" )
+    , ( "pkgs.python3Packages.dataclasses-serialization", "1.3.1" )
+    , ( "pkgs.python3Packages.datadiff", "2.2.0" )
+    , ( "pkgs.python3Packages.datadog", "0.47.0" )
+    , ( "pkgs.python3Packages.datafusion", "25.0.0" )
+    , ( "pkgs.python3Packages.datamodeldict", "0.9.9" )
+    , ( "pkgs.python3Packages.datapoint", "0.9.8" )
+    , ( "pkgs.python3Packages.dataprep-ml", "0.0.18" )
+    , ( "pkgs.python3Packages.dataproperty", "1.0.1" )
+    , ( "pkgs.python3Packages.dataset", "1.6.2" )
+    , ( "pkgs.python3Packages.datasets", "2.14.5" )
+    , ( "pkgs.python3Packages.datasette", "0.64.5" )
+    , ( "pkgs.python3Packages.datasette-publish-fly", "1.3.1" )
+    , ( "pkgs.python3Packages.datasette-template-sql", "1.0.2" )
+    , ( "pkgs.python3Packages.datashader", "0.15.2" )
+    , ( "pkgs.python3Packages.datashape", "0.5.4" )
+    , ( "pkgs.python3Packages.datatable", "2022-12-15" )
+    , ( "pkgs.python3Packages.datauri", "2.0.0" )
+    , ( "pkgs.python3Packages.datefinder", "0.7.3" )
+    , ( "pkgs.python3Packages.dateparser", "1.1.8" )
+    , ( "pkgs.python3Packages.datetime", "5.2" )
+    , ( "pkgs.python3Packages.dateutil", "2.8.2" )
+    , ( "pkgs.python3Packages.dateutils", "0.6.12" )
+    , ( "pkgs.python3Packages.datrie", "0.8.2" )
+    , ( "pkgs.python3Packages.dawg-python", "0.7.2" )
+    , ( "pkgs.python3Packages.db-dtypes", "1.1.1" )
+    , ( "pkgs.python3Packages.dbf", "0.99.3" )
+    , ( "pkgs.python3Packages.dbfread", "2.0.7" )
+    , ( "pkgs.python3Packages.dbt-bigquery", "1.6.4" )
+    , ( "pkgs.python3Packages.dbt-core", "1.6.2" )
+    , ( "pkgs.python3Packages.dbt-extractor", "0.4.1" )
+    , ( "pkgs.python3Packages.dbt-postgres", "1.6.2" )
+    , ( "pkgs.python3Packages.dbt-redshift", "1.6.1" )
+    , ( "pkgs.python3Packages.dbt-semantic-interfaces", "0.2.2" )
+    , ( "pkgs.python3Packages.dbt-snowflake", "1.6.2" )
+    , ( "pkgs.python3Packages.dbus-client-gen", "0.5.1" )
+    , ( "pkgs.python3Packages.dbus-deviation", "0.6.1" )
+    , ( "pkgs.python3Packages.dbus-fast", "2.14.0" )
+    , ( "pkgs.python3Packages.dbus-next", "0.2.3" )
+    , ( "pkgs.python3Packages.dbus-python", "1.2.18" )
+    , ( "pkgs.python3Packages.dbus-python-client-gen", "0.8.3" )
+    , ( "pkgs.python3Packages.dbus-signature-pyparsing", "0.4.1" )
+    , ( "pkgs.python3Packages.dbutils", "3.0.3" )
+    , ( "pkgs.python3Packages.dcmstack", "0.9" )
+    , ( "pkgs.python3Packages.dctorch", "0.1.2" )
+    , ( "pkgs.python3Packages.ddt", "1.6.0" )
+    , ( "pkgs.python3Packages.deal", "4.24.2" )
+    , ( "pkgs.python3Packages.deal-solver", "0.1.2" )
+    , ( "pkgs.python3Packages.deap", "1.4.1" )
+    , ( "pkgs.python3Packages.debian", "0.1.49" )
+    , ( "pkgs.python3Packages.debian-inspector", "31.0.0" )
+    , ( "pkgs.python3Packages.debianbts", "4.0.2" )
+    , ( "pkgs.python3Packages.debtcollector", "2.5.0" )
+    , ( "pkgs.python3Packages.debts", "0.5" )
+    , ( "pkgs.python3Packages.debuglater", "1.4.4" )
+    , ( "pkgs.python3Packages.debugpy", "1.8.0" )
+    , ( "pkgs.python3Packages.decli", "0.6.1" )
+    , ( "pkgs.python3Packages.decopatch", "1.4.10" )
+    , ( "pkgs.python3Packages.decorator", "5.1.1" )
+    , ( "pkgs.python3Packages.deemix", "3.6.6" )
+    , ( "pkgs.python3Packages.deep-chainmap", "0.1.1" )
+    , ( "pkgs.python3Packages.deep-translator", "1.11.4" )
+    , ( "pkgs.python3Packages.deepdiff", "6.4.1" )
+    , ( "pkgs.python3Packages.deepdish", "0.3.7" )
+    , ( "pkgs.python3Packages.deepl", "1.15.0" )
+    , ( "pkgs.python3Packages.deepmerge", "1.1.0" )
+    , ( "pkgs.python3Packages.deeptoolsintervals", "0.1.9" )
+    , ( "pkgs.python3Packages.deepwave", "0.0.18" )
+    , ( "pkgs.python3Packages.deezer-py", "1.3.7" )
+    , ( "pkgs.python3Packages.deezer-python", "6.1.1" )
+    , ( "pkgs.python3Packages.defcon", "0.10.3" )
+    , ( "pkgs.python3Packages.deform", "2.0.15" )
+    , ( "pkgs.python3Packages.defusedcsv", "2.0.0" )
+    , ( "pkgs.python3Packages.defusedxml", "0.7.1" )
+    , ( "pkgs.python3Packages.deid", "0.3.22" )
+    , ( "pkgs.python3Packages.delegator-py", "0.1.1" )
+    , ( "pkgs.python3Packages.delorean", "1.0.0" )
+    , ( "pkgs.python3Packages.deltachat", "1.131.9" )
+    , ( "pkgs.python3Packages.deluge-client", "1.9.0" )
+    , ( "pkgs.python3Packages.demes", "0.2.3" )
+    , ( "pkgs.python3Packages.demesdraw", "0.4.0" )
+    , ( "pkgs.python3Packages.demetriek", "0.4.0" )
+    , ( "pkgs.python3Packages.demjson3", "3.0.6" )
+    , ( "pkgs.python3Packages.dendropy", "4.5.1" )
+    , ( "pkgs.python3Packages.denonavr", "0.11.4" )
+    , ( "pkgs.python3Packages.dependency-injector", "4.41.0" )
+    , ( "pkgs.python3Packages.deploykit", "1.1.1" )
+    , ( "pkgs.python3Packages.deprecat", "2.1.1" )
+    , ( "pkgs.python3Packages.deprecated", "1.2.14" )
+    , ( "pkgs.python3Packages.deprecation", "2.1.0" )
+    , ( "pkgs.python3Packages.derpconf", "0.8.4" )
+    , ( "pkgs.python3Packages.desktop-entry-lib", "3.1" )
+    , ( "pkgs.python3Packages.desktop-notifier", "3.5.6" )
+    , ( "pkgs.python3Packages.detect-secrets", "1.4.0" )
+    , ( "pkgs.python3Packages.detectron2", "0.6" )
+    , ( "pkgs.python3Packages.devito", "4.8.3" )
+    , ( "pkgs.python3Packages.devolo-home-control-api", "0.18.3" )
+    , ( "pkgs.python3Packages.devolo-plc-api", "1.4.1" )
+    , ( "pkgs.python3Packages.devpi-common", "4.0.2" )
+    , ( "pkgs.python3Packages.devtools", "0.12.2" )
+    , ( "pkgs.python3Packages.diagrams", "0.23.4" )
+    , ( "pkgs.python3Packages.diceware", "0.10" )
+    , ( "pkgs.python3Packages.dicom-numpy", "0.6.5" )
+    , ( "pkgs.python3Packages.dicom2nifti", "2.4.8" )
+    , ( "pkgs.python3Packages.dicomweb-client", "0.59.1" )
+    , ( "pkgs.python3Packages.dict2xml", "1.7.3" )
+    , ( "pkgs.python3Packages.dictdiffer", "0.9.0" )
+    , ( "pkgs.python3Packages.dictionaries", "0.0.2" )
+    , ( "pkgs.python3Packages.dictpath", "0.4.3" )
+    , ( "pkgs.python3Packages.dicttoxml", "1.7.16" )
+    , ( "pkgs.python3Packages.dicttoxml2", "2.1.0" )
+    , ( "pkgs.python3Packages.diff-cover", "7.7.0" )
+    , ( "pkgs.python3Packages.diff-match-patch", "20230430" )
+    , ( "pkgs.python3Packages.diff_cover", "7.7.0" )
+    , ( "pkgs.python3Packages.diffimg", "0.3.0" )
+    , ( "pkgs.python3Packages.diffsync", "1.9.0" )
+    , ( "pkgs.python3Packages.digi-xbee", "1.4.1" )
+    , ( "pkgs.python3Packages.digital-ocean", "1.17.0" )
+    , ( "pkgs.python3Packages.dill", "0.3.7" )
+    , ( "pkgs.python3Packages.dinghy", "1.3.2" )
+    , ( "pkgs.python3Packages.dingz", "0.5.0" )
+    , ( "pkgs.python3Packages.diofant", "0.14.0" )
+    , ( "pkgs.python3Packages.dipy", "1.7.0" )
+    , ( "pkgs.python3Packages.directv", "0.4.0" )
+    , ( "pkgs.python3Packages.dirty-equals", "0.7.0" )
+    , ( "pkgs.python3Packages.discid", "1.2.0" )
+    , ( "pkgs.python3Packages.discogs-client", "2.7" )
+    , ( "pkgs.python3Packages.discogs_client", "2.7" )
+    , ( "pkgs.python3Packages.discordpy", "2.3.2" )
+    , ( "pkgs.python3Packages.discovery30303", "0.2.1" )
+    , ( "pkgs.python3Packages.diskcache", "5.4.0" )
+    , ( "pkgs.python3Packages.dissect", "3.10" )
+    , ( "pkgs.python3Packages.dissect-cim", "3.7" )
+    , ( "pkgs.python3Packages.dissect-clfs", "1.6" )
+    , ( "pkgs.python3Packages.dissect-cobaltstrike", "1.0.0" )
+    , ( "pkgs.python3Packages.dissect-cstruct", "3.10" )
+    , ( "pkgs.python3Packages.dissect-esedb", "3.9" )
+    , ( "pkgs.python3Packages.dissect-etl", "3.7" )
+    , ( "pkgs.python3Packages.dissect-eventlog", "3.6" )
+    , ( "pkgs.python3Packages.dissect-evidence", "3.7" )
+    , ( "pkgs.python3Packages.dissect-executable", "1.4" )
+    , ( "pkgs.python3Packages.dissect-extfs", "3.6" )
+    , ( "pkgs.python3Packages.dissect-fat", "3.7" )
+    , ( "pkgs.python3Packages.dissect-ffs", "3.6" )
+    , ( "pkgs.python3Packages.dissect-hypervisor", "3.10" )
+    , ( "pkgs.python3Packages.dissect-ntfs", "3.7" )
+    , ( "pkgs.python3Packages.dissect-ole", "3.6" )
+    , ( "pkgs.python3Packages.dissect-regf", "3.8" )
+    , ( "pkgs.python3Packages.dissect-shellitem", "3.6" )
+    , ( "pkgs.python3Packages.dissect-sql", "3.7" )
+    , ( "pkgs.python3Packages.dissect-squashfs", "1.3" )
+    , ( "pkgs.python3Packages.dissect-target", "3.13" )
+    , ( "pkgs.python3Packages.dissect-thumbcache", "1.6" )
+    , ( "pkgs.python3Packages.dissect-util", "3.12" )
+    , ( "pkgs.python3Packages.dissect-vmfs", "3.6" )
+    , ( "pkgs.python3Packages.dissect-volume", "3.7" )
+    , ( "pkgs.python3Packages.dissect-xfs", "3.6" )
+    , ( "pkgs.python3Packages.dissononce", "0.34.3" )
+    , ( "pkgs.python3Packages.distlib", "0.3.7" )
+    , ( "pkgs.python3Packages.distorm3", "3.5.2" )
+    , ( "pkgs.python3Packages.distrax", "0.1.4" )
+    , ( "pkgs.python3Packages.distributed", "2023.10.0" )
+    , ( "pkgs.python3Packages.distro", "1.8.0" )
+    , ( "pkgs.python3Packages.distutils-extra", "2.50" )
+    , ( "pkgs.python3Packages.distutils_extra", "2.50" )
+    , ( "pkgs.python3Packages.dj-database-url", "2.1.0" )
+    , ( "pkgs.python3Packages.dj-email-url", "1.0.6" )
+    , ( "pkgs.python3Packages.dj-rest-auth", "5.0.1" )
+    , ( "pkgs.python3Packages.dj-search-url", "0.1" )
+    , ( "pkgs.python3Packages.dj-static", "0.0.6" )
+    , ( "pkgs.python3Packages.django", "4.2.9" )
+    , ( "pkgs.python3Packages.django-admin-datta", "1.0.10" )
+    , ( "pkgs.python3Packages.django-admin-sortable2", "2.1.10" )
+    , ( "pkgs.python3Packages.django-allauth", "0.57.0" )
+    , ( "pkgs.python3Packages.django-allauth-2fa", "2fa-0.11.1" )
+    , ( "pkgs.python3Packages.django-annoying", "0.10.6" )
+    , ( "pkgs.python3Packages.django-anymail", "10.1" )
+    , ( "pkgs.python3Packages.django-appconf", "1.0.5" )
+    , ( "pkgs.python3Packages.django-auth-ldap", "4.6.0" )
+    , ( "pkgs.python3Packages.django-autocomplete-light", "3.9.4" )
+    , ( "pkgs.python3Packages.django-bootstrap3", "23.4" )
+    , ( "pkgs.python3Packages.django-bootstrap4", "23.2" )
+    , ( "pkgs.python3Packages.django-bootstrap5", "23.3" )
+    , ( "pkgs.python3Packages.django-cachalot", "2.6.1" )
+    , ( "pkgs.python3Packages.django-cache-url", "3.2.2" )
+    , ( "pkgs.python3Packages.django-cacheops", "7.0.2" )
+    , ( "pkgs.python3Packages.django-celery-beat", "2.5.0" )
+    , ( "pkgs.python3Packages.django-celery-email", "3.0.0" )
+    , ( "pkgs.python3Packages.django-celery-results", "2.5.1" )
+    , ( "pkgs.python3Packages.django-ckeditor", "6.7" )
+    , ( "pkgs.python3Packages.django-classy-tags", "4.1.0" )
+    , ( "pkgs.python3Packages.django-cleanup", "8.0.0" )
+    , ( "pkgs.python3Packages.django-colorful", "1.3" )
+    , ( "pkgs.python3Packages.django-compression-middleware", "0.5.0" )
+    , ( "pkgs.python3Packages.django-compressor", "4.4" )
+    , ( "pkgs.python3Packages.django-configurations", "2.5" )
+    , ( "pkgs.python3Packages.django-context-decorator", "1.6.0" )
+    , ( "pkgs.python3Packages.django-contrib-comments", "2.2.0" )
+    , ( "pkgs.python3Packages.django-cors-headers", "3.13.0" )
+    , ( "pkgs.python3Packages.django-countries", "7.5.1" )
+    , ( "pkgs.python3Packages.django-crispy-bootstrap4", "2023.1" )
+    , ( "pkgs.python3Packages.django-crispy-forms", "2.1" )
+    , ( "pkgs.python3Packages.django-crontab", "0.7.1" )
+    , ( "pkgs.python3Packages.django-cryptography", "1.1" )
+    , ( "pkgs.python3Packages.django-csp", "3.7" )
+    , ( "pkgs.python3Packages.django-debug-toolbar", "4.2" )
+    , ( "pkgs.python3Packages.django-dynamic-preferences", "1.15.0" )
+    , ( "pkgs.python3Packages.django-encrypted-model-fields", "0.6.5" )
+    , ( "pkgs.python3Packages.django-environ", "0.11.2" )
+    , ( "pkgs.python3Packages.django-extensions", "3.2.3" )
+    , ( "pkgs.python3Packages.django-filter", "23.3" )
+    , ( "pkgs.python3Packages.django-formset-js-improved", "0.5.0.3" )
+    , ( "pkgs.python3Packages.django-formtools", "2.4.1" )
+    , ( "pkgs.python3Packages.django-google-analytics-app", "6.0.0" )
+    , ( "pkgs.python3Packages.django-graphiql-debug-toolbar", "0.2.0" )
+    , ( "pkgs.python3Packages.django-gravatar2", "1.4.4" )
+    , ( "pkgs.python3Packages.django-guardian", "2.4.0" )
+    , ( "pkgs.python3Packages.django-haystack", "3.2.1" )
+    , ( "pkgs.python3Packages.django-hcaptcha", "0.2.0" )
+    , ( "pkgs.python3Packages.django-health-check", "3.17.0" )
+    , ( "pkgs.python3Packages.django-hierarkey", "1.1.0" )
+    , ( "pkgs.python3Packages.django-hijack", "3.4.2" )
+    , ( "pkgs.python3Packages.django-i18nfield", "1.9.4" )
+    , ( "pkgs.python3Packages.django-import-export", "3.3.1" )
+    , ( "pkgs.python3Packages.django-ipware", "5.0.2" )
+    , ( "pkgs.python3Packages.django-jinja", "2.11.0" )
+    , ( "pkgs.python3Packages.django-jquery-js", "3.1.1" )
+    , ( "pkgs.python3Packages.django-js-asset", "2.1" )
+    , ( "pkgs.python3Packages.django-js-reverse", "0.10.1-b1" )
+    , ( "pkgs.python3Packages.django-leaflet", "0.29.0" )
+    , ( "pkgs.python3Packages.django-libsass", "0.9" )
+    , ( "pkgs.python3Packages.django-localflavor", "4.0" )
+    , ( "pkgs.python3Packages.django-logentry-admin", "1.1.0" )
+    , ( "pkgs.python3Packages.django-login-required-middleware", "0.9.0" )
+    , ( "pkgs.python3Packages.django-mailman3", "1.3.9" )
+    , ( "pkgs.python3Packages.django-maintenance-mode", "0.18.0" )
+    , ( "pkgs.python3Packages.django-markup", "1.8.1" )
+    , ( "pkgs.python3Packages.django-model-utils", "4.3.1" )
+    , ( "pkgs.python3Packages.django-modelcluster", "6.0" )
+    , ( "pkgs.python3Packages.django-mptt", "0.13.4" )
+    , ( "pkgs.python3Packages.django-multiselectfield", "0.1.12" )
+    , ( "pkgs.python3Packages.django-mysql", "4.12.0" )
+    , ( "pkgs.python3Packages.django-ninja", "0.22.2" )
+    , ( "pkgs.python3Packages.django-nose", "1.4.7" )
+    , ( "pkgs.python3Packages.django-oauth-toolkit", "2.3.0" )
+    , ( "pkgs.python3Packages.django-otp", "1.1.3" )
+    , ( "pkgs.python3Packages.django-paintstore", "0.2" )
+    , ( "pkgs.python3Packages.django-parler", "2.3" )
+    , ( "pkgs.python3Packages.django-pattern-library", "1.0.1" )
+    , ( "pkgs.python3Packages.django-payments", "2.0.0" )
+    , ( "pkgs.python3Packages.django-pglocks", "1.0.4" )
+    , ( "pkgs.python3Packages.django-phonenumber-field", "7.2.0" )
+    , ( "pkgs.python3Packages.django-picklefield", "3.0.1" )
+    , ( "pkgs.python3Packages.django-polymorphic", "3.1" )
+    , ( "pkgs.python3Packages.django-postgresql-netfields", "1.3.1" )
+    , ( "pkgs.python3Packages.django-prometheus", "2.3.1" )
+    , ( "pkgs.python3Packages.django-pwa", "1.1.0" )
+    , ( "pkgs.python3Packages.django-q", "1.3.9" )
+    , ( "pkgs.python3Packages.django-ranged-response", "0.2.0" )
+    , ( "pkgs.python3Packages.django-raster", "0.8.1" )
+    , ( "pkgs.python3Packages.django-redis", "5.4.0" )
+    , ( "pkgs.python3Packages.django-rest-auth", "0.9.5" )
+    , ( "pkgs.python3Packages.django-rest-polymorphic", "0.1.10" )
+    , ( "pkgs.python3Packages.django-rest-registration", "0.8.2" )
+    , ( "pkgs.python3Packages.django-reversion", "5.0.6" )
+    , ( "pkgs.python3Packages.django-rosetta", "0.9.9" )
+    , ( "pkgs.python3Packages.django-rq", "2.8.1" )
+    , ( "pkgs.python3Packages.django-scheduler", "0.10.1" )
+    , ( "pkgs.python3Packages.django-scim2", "0.19.0" )
+    , ( "pkgs.python3Packages.django-scopes", "2.0.0" )
+    , ( "pkgs.python3Packages.django-sekizai", "4.1.0" )
+    , ( "pkgs.python3Packages.django-sesame", "3.2.1" )
+    , ( "pkgs.python3Packages.django-shortuuidfield", "0.1.3" )
+    , ( "pkgs.python3Packages.django-silk", "5.0.3" )
+    , ( "pkgs.python3Packages.django-simple-captcha", "0.5.20" )
+    , ( "pkgs.python3Packages.django-simple-history", "3.4.0" )
+    , ( "pkgs.python3Packages.django-sites", "0.11" )
+    , ( "pkgs.python3Packages.django-sr", "0.0.4" )
+    , ( "pkgs.python3Packages.django-statici18n", "2.3.1" )
+    , ( "pkgs.python3Packages.django-storages", "1.14" )
+    , ( "pkgs.python3Packages.django-stubs", "4.2.4" )
+    , ( "pkgs.python3Packages.django-stubs-ext", "4.2.2" )
+    , ( "pkgs.python3Packages.django-tables2", "2.6.0" )
+    , ( "pkgs.python3Packages.django-tagging", "0.5.0" )
+    , ( "pkgs.python3Packages.django-taggit", "4.0.0" )
+    , ( "pkgs.python3Packages.django-tastypie", "0.14.6" )
+    , ( "pkgs.python3Packages.django-timezone-field", "5.1" )
+    , ( "pkgs.python3Packages.django-treebeard", "4.7" )
+    , ( "pkgs.python3Packages.django-two-factor-auth", "1.15.1" )
+    , ( "pkgs.python3Packages.django-types", "0.18.0" )
+    , ( "pkgs.python3Packages.django-versatileimagefield", "3.0" )
+    , ( "pkgs.python3Packages.django-vite", "2.1.3" )
+    , ( "pkgs.python3Packages.django-webpack-loader", "2.0.1" )
+    , ( "pkgs.python3Packages.django-webpush", "0.3.4" )
+    , ( "pkgs.python3Packages.django-widget-tweaks", "1.5.0" )
+    , ( "pkgs.python3Packages.django_3", "3.2.23" )
+    , ( "pkgs.python3Packages.django_4", "4.2.9" )
+    , ( "pkgs.python3Packages.django_5", "5.0.1" )
+    , ( "pkgs.python3Packages.django_appconf", "1.0.5" )
+    , ( "pkgs.python3Packages.django_classytags", "4.1.0" )
+    , ( "pkgs.python3Packages.django_colorful", "1.3" )
+    , ( "pkgs.python3Packages.django_contrib_comments", "2.2.0" )
+    , ( "pkgs.python3Packages.django_environ", "0.11.2" )
+    , ( "pkgs.python3Packages.django_extensions", "3.2.3" )
+    , ( "pkgs.python3Packages.django_guardian", "2.4.0" )
+    , ( "pkgs.python3Packages.django_hijack", "3.4.2" )
+    , ( "pkgs.python3Packages.django_modelcluster", "6.0" )
+    , ( "pkgs.python3Packages.django_nose", "1.4.7" )
+    , ( "pkgs.python3Packages.django_polymorphic", "3.1" )
+    , ( "pkgs.python3Packages.django_redis", "5.4.0" )
+    , ( "pkgs.python3Packages.django_reversion", "5.0.6" )
+    , ( "pkgs.python3Packages.django_silk", "5.0.3" )
+    , ( "pkgs.python3Packages.django_tagging", "0.5.0" )
+    , ( "pkgs.python3Packages.django_taggit", "4.0.0" )
+    , ( "pkgs.python3Packages.django_treebeard", "4.7" )
+    , ( "pkgs.python3Packages.djangoql", "0.17.1" )
+    , ( "pkgs.python3Packages.djangorestframework", "3.14.0" )
+    , ( "pkgs.python3Packages.djangorestframework-camel-case", "1.4.2" )
+    , ( "pkgs.python3Packages.djangorestframework-dataclasses", "1.3.1" )
+    , ( "pkgs.python3Packages.djangorestframework-guardian", "0.3.0" )
+    , ( "pkgs.python3Packages.djangorestframework-guardian2", "0.5.0" )
+    , ( "pkgs.python3Packages.djangorestframework-jwt", "1.19.2" )
+    , ( "pkgs.python3Packages.djangorestframework-recursive", "0.1.2" )
+    , ( "pkgs.python3Packages.djangorestframework-simplejwt", "5.3.0" )
+    , ( "pkgs.python3Packages.djangorestframework-stubs", "3.14.2" )
+    , ( "pkgs.python3Packages.djmail", "2.0.0" )
+    , ( "pkgs.python3Packages.dkimpy", "1.1.5" )
+    , ( "pkgs.python3Packages.dlib", "19.24.2" )
+    , ( "pkgs.python3Packages.dlinfo", "1.2.1" )
+    , ( "pkgs.python3Packages.dllogger", "1.0.0" )
+    , ( "pkgs.python3Packages.dlms-cosem", "21.3.2" )
+    , ( "pkgs.python3Packages.dlx", "1.0.4" )
+    , ( "pkgs.python3Packages.dm-env", "1.6" )
+    , ( "pkgs.python3Packages.dm-haiku", "0.0.10" )
+    , ( "pkgs.python3Packages.dm-sonnet", "2.0.0" )
+    , ( "pkgs.python3Packages.dm-tree", "0.1.8" )
+    , ( "pkgs.python3Packages.dmenu-python", "0.2.1" )
+    , ( "pkgs.python3Packages.dnachisel", "3.2.11" )
+    , ( "pkgs.python3Packages.dnfile", "0.14.1" )
+    , ( "pkgs.python3Packages.dns", "2.4.2" )
+    , ( "pkgs.python3Packages.dns-lexicon", "3.16.1" )
+    , ( "pkgs.python3Packages.dnslib", "0.9.23" )
+    , ( "pkgs.python3Packages.dnspython", "2.4.2" )
+    , ( "pkgs.python3Packages.doc8", "1.1.1" )
+    , ( "pkgs.python3Packages.docformatter", "1.7.5" )
+    , ( "pkgs.python3Packages.docker", "6.1.3" )
+    , ( "pkgs.python3Packages.docker-py", "1.10.6" )
+    , ( "pkgs.python3Packages.docker_pycreds", "0.4.0" )
+    , ( "pkgs.python3Packages.dockerfile-parse", "2.0.1" )
+    , ( "pkgs.python3Packages.dockerpty", "0.4.1" )
+    , ( "pkgs.python3Packages.dockerspawner", "12.1.0" )
+    , ( "pkgs.python3Packages.docloud", "1.0.375" )
+    , ( "pkgs.python3Packages.docopt", "0.6.2" )
+    , ( "pkgs.python3Packages.docopt-ng", "0.9.0" )
+    , ( "pkgs.python3Packages.docplex", "2.25.236" )
+    , ( "pkgs.python3Packages.docrep", "0.3.2" )
+    , ( "pkgs.python3Packages.docstring-parser", "0.15" )
+    , ( "pkgs.python3Packages.docstring-to-markdown", "0.12" )
+    , ( "pkgs.python3Packages.doctest-ignore-unicode", "0.1.2" )
+    , ( "pkgs.python3Packages.docutils", "0.20.1" )
+    , ( "pkgs.python3Packages.docx2python", "2.11.0" )
+    , ( "pkgs.python3Packages.docx2txt", "0.8" )
+    , ( "pkgs.python3Packages.dodgy", "0.2.1" )
+    , ( "pkgs.python3Packages.dogpile-cache", "1.2.2" )
+    , ( "pkgs.python3Packages.dogpile_cache", "1.2.2" )
+    , ( "pkgs.python3Packages.dogtag-pki", "11.2.1" )
+    , ( "pkgs.python3Packages.dogtail", "0.9.11" )
+    , ( "pkgs.python3Packages.doit", "0.36.0" )
+    , ( "pkgs.python3Packages.doit-py", "0.5.0" )
+    , ( "pkgs.python3Packages.dokuwiki", "1.3.3" )
+    , ( "pkgs.python3Packages.domeneshop", "0.4.3" )
+    , ( "pkgs.python3Packages.dominate", "2.8.0" )
+    , ( "pkgs.python3Packages.doorbirdpy", "2.2.2" )
+    , ( "pkgs.python3Packages.dopy", "2016-01-04" )
+    , ( "pkgs.python3Packages.dot2tex", "2.11.3" )
+    , ( "pkgs.python3Packages.dotmap", "1.3.30" )
+    , ( "pkgs.python3Packages.dotty-dict", "1.3.1" )
+    , ( "pkgs.python3Packages.dotwiz", "0.4.0" )
+    , ( "pkgs.python3Packages.downloader-cli", "0.3.3" )
+    , ( "pkgs.python3Packages.dparse", "0.6.3" )
+    , ( "pkgs.python3Packages.dparse2", "0.7.0" )
+    , ( "pkgs.python3Packages.dpath", "2.1.6" )
+    , ( "pkgs.python3Packages.dpcontracts", "2018-11-20" )
+    , ( "pkgs.python3Packages.dpkt", "1.9.8" )
+    , ( "pkgs.python3Packages.draftjs-exporter", "5.0.0" )
+    , ( "pkgs.python3Packages.dragonfly", "0.35.0" )
+    , ( "pkgs.python3Packages.dramatiq", "1.15.0" )
+    , ( "pkgs.python3Packages.drawille", "0.1.0" )
+    , ( "pkgs.python3Packages.drawilleplot", "0.1.0" )
+    , ( "pkgs.python3Packages.dremel3dpy", "2.1.1" )
+    , ( "pkgs.python3Packages.drf-jwt", "1.19.2" )
+    , ( "pkgs.python3Packages.drf-nested-routers", "0.93.4" )
+    , ( "pkgs.python3Packages.drf-spectacular", "0.26.5" )
+    , ( "pkgs.python3Packages.drf-spectacular-sidecar", "2023.9.1" )
+    , ( "pkgs.python3Packages.drf-ujson2", "1.7.2" )
+    , ( "pkgs.python3Packages.drf-writable-nested", "0.7.0" )
+    , ( "pkgs.python3Packages.drf-yasg", "1.21.7" )
+    , ( "pkgs.python3Packages.drivelib", "0.3.0" )
+    , ( "pkgs.python3Packages.drms", "0.6.4" )
+    , ( "pkgs.python3Packages.dronecan", "1.0.25" )
+    , ( "pkgs.python3Packages.dropbox", "11.36.2" )
+    , ( "pkgs.python3Packages.ds-store", "1.3.1" )
+    , ( "pkgs.python3Packages.ds4drv", "0.5.1" )
+    , ( "pkgs.python3Packages.dsinternals", "1.2.4" )
+    , ( "pkgs.python3Packages.dsmr-parser", "1.3.1" )
+    , ( "pkgs.python3Packages.dsnap", "1.0.0" )
+    , ( "pkgs.python3Packages.dtlssocket", "0.1.16" )
+    , ( "pkgs.python3Packages.dtschema", "2023.04" )
+    , ( "pkgs.python3Packages.dtw-python", "1.3.0" )
+    , ( "pkgs.python3Packages.ducc0", "0.32.0" )
+    , ( "pkgs.python3Packages.duckdb", "0.9.2" )
+    , ( "pkgs.python3Packages.duckdb-engine", "0.9.2" )
+    , ( "pkgs.python3Packages.duckduckgo-search", "3.9.4" )
+    , ( "pkgs.python3Packages.duct-py", "0.6.4" )
+    , ( "pkgs.python3Packages.duecredit", "0.9.2" )
+    , ( "pkgs.python3Packages.duet", "0.2.7" )
+    , ( "pkgs.python3Packages.dufte", "0.2.29" )
+    , ( "pkgs.python3Packages.dugong", "3.8.1" )
+    , ( "pkgs.python3Packages.dulwich", "0.21.6" )
+    , ( "pkgs.python3Packages.dunamai", "1.18.0" )
+    , ( "pkgs.python3Packages.dungeon-eos", "0.0.5" )
+    , ( "pkgs.python3Packages.duo-client", "5.0.1" )
+    , ( "pkgs.python3Packages.durus", "4.2" )
+    , ( "pkgs.python3Packages.dvc", "3.30.1" )
+    , ( "pkgs.python3Packages.dvc-azure", "2.22.1" )
+    , ( "pkgs.python3Packages.dvc-data", "2.22.0" )
+    , ( "pkgs.python3Packages.dvc-gs", "2.22.1" )
+    , ( "pkgs.python3Packages.dvc-http", "2.30.2" )
+    , ( "pkgs.python3Packages.dvc-objects", "1.2.0" )
+    , ( "pkgs.python3Packages.dvc-render", "0.6.0" )
+    , ( "pkgs.python3Packages.dvc-s3", "2.23.0" )
+    , ( "pkgs.python3Packages.dvc-ssh", "2.22.2" )
+    , ( "pkgs.python3Packages.dvc-studio-client", "0.15.0" )
+    , ( "pkgs.python3Packages.dvc-task", "0.3.0" )
+    , ( "pkgs.python3Packages.dvclive", "3.3.1" )
+    , ( "pkgs.python3Packages.dwdwfsapi", "1.0.7" )
+    , ( "pkgs.python3Packages.dyn", "1.8.6" )
+    , ( "pkgs.python3Packages.dynalite-devices", "0.47" )
+    , ( "pkgs.python3Packages.dynd", "0.7.2" )
+    , ( "pkgs.python3Packages.eagle100", "0.1.1" )
+    , ( "pkgs.python3Packages.easy-thumbnails", "2.8.5" )
+    , ( "pkgs.python3Packages.easydict", "1.11" )
+    , ( "pkgs.python3Packages.easyenergy", "1.0.0" )
+    , ( "pkgs.python3Packages.easygui", "0.98.3" )
+    , ( "pkgs.python3Packages.easyocr", "1.7.1" )
+    , ( "pkgs.python3Packages.easyprocess", "1.1" )
+    , ( "pkgs.python3Packages.easywatch", "0.0.5" )
+    , ( "pkgs.python3Packages.ebaysdk", "2.2.0" )
+    , ( "pkgs.python3Packages.ebooklib", "0.18" )
+    , ( "pkgs.python3Packages.ec2instanceconnectcli", "1.0.3" )
+    , ( "pkgs.python3Packages.eccodes", "2.32.1" )
+    , ( "pkgs.python3Packages.ecdsa", "0.18.0" )
+    , ( "pkgs.python3Packages.echo", "0.8.0" )
+    , ( "pkgs.python3Packages.ecoaliface", "0.5.0" )
+    , ( "pkgs.python3Packages.ecos", "2.0.11" )
+    , ( "pkgs.python3Packages.ecpy", "1.2.5" )
+    , ( "pkgs.python3Packages.ecs-logging", "2.1.0" )
+    , ( "pkgs.python3Packages.ed25519", "1.5" )
+    , ( "pkgs.python3Packages.ed25519-blake2b", "1.4" )
+    , ( "pkgs.python3Packages.edalize", "0.5.1" )
+    , ( "pkgs.python3Packages.editables", "0.5" )
+    , ( "pkgs.python3Packages.editdistance", "0.6.2" )
+    , ( "pkgs.python3Packages.editdistance-s", "1.0.0" )
+    , ( "pkgs.python3Packages.editorconfig", "0.12.3" )
+    , ( "pkgs.python3Packages.edk2-pytool-library", "0.19.5" )
+    , ( "pkgs.python3Packages.edlib", "1.3.9" )
+    , ( "pkgs.python3Packages.edward", "1.3.5" )
+    , ( "pkgs.python3Packages.effdet", "0.4.1" )
+    , ( "pkgs.python3Packages.effect", "1.1.0" )
+    , ( "pkgs.python3Packages.eggBuildHook", "" )
+    , ( "pkgs.python3Packages.eggInstallHook", "" )
+    , ( "pkgs.python3Packages.eggUnpackHook", "" )
+    , ( "pkgs.python3Packages.eggdeps", "1.0" )
+    , ( "pkgs.python3Packages.eigenpy", "3.1.3" )
+    , ( "pkgs.python3Packages.einops", "0.7.0" )
+    , ( "pkgs.python3Packages.eiswarnung", "1.2.0" )
+    , ( "pkgs.python3Packages.elastic-apm", "6.19.0" )
+    , ( "pkgs.python3Packages.elastic-transport", "8.4.1" )
+    , ( "pkgs.python3Packages.elasticsearch", "8.9.0" )
+    , ( "pkgs.python3Packages.elasticsearch-dsl", "8.9.0" )
+    , ( "pkgs.python3Packages.elasticsearch8", "8.10.1" )
+    , ( "pkgs.python3Packages.elasticsearchdsl", "8.9.0" )
+    , ( "pkgs.python3Packages.elegy", "0.8.6" )
+    , ( "pkgs.python3Packages.elementpath", "4.1.5" )
+    , ( "pkgs.python3Packages.elevate", "0.1.3" )
+    , ( "pkgs.python3Packages.elgato", "5.0.0" )
+    , ( "pkgs.python3Packages.eliot", "1.14.0" )
+    , ( "pkgs.python3Packages.eliqonline", "1.2.2" )
+    , ( "pkgs.python3Packages.elkm1-lib", "2.2.6" )
+    , ( "pkgs.python3Packages.elmax", "0.1.5" )
+    , ( "pkgs.python3Packages.elmax-api", "0.0.5" )
+    , ( "pkgs.python3Packages.email-validator", "2.0.0" )
+    , ( "pkgs.python3Packages.email_validator", "2.0.0" )
+    , ( "pkgs.python3Packages.emailthreads", "0.1.3" )
+    , ( "pkgs.python3Packages.embedding-reader", "1.5.1" )
+    , ( "pkgs.python3Packages.emborg", "1.37" )
+    , ( "pkgs.python3Packages.embrace", "4.2.1" )
+    , ( "pkgs.python3Packages.emcee", "3.1.4" )
+    , ( "pkgs.python3Packages.emoji", "2.8.0" )
+    , ( "pkgs.python3Packages.empty-files", "0.0.9" )
+    , ( "pkgs.python3Packages.empy", "3.3.4" )
+    , ( "pkgs.python3Packages.emulated-roku", "0.2.1" )
+    , ( "pkgs.python3Packages.emv", "1.0.14" )
+    , ( "pkgs.python3Packages.enaml", "0.16.1" )
+    , ( "pkgs.python3Packages.enamlx", "0.6.2" )
+    , ( "pkgs.python3Packages.encodec", "0.1.1" )
+    , ( "pkgs.python3Packages.energyflip-client", "0.2.2" )
+    , ( "pkgs.python3Packages.energyflow", "1.3.2" )
+    , ( "pkgs.python3Packages.energyzero", "1.0.0" )
+    , ( "pkgs.python3Packages.enlighten", "1.12.2" )
+    , ( "pkgs.python3Packages.enocean", "0.60.1" )
+    , ( "pkgs.python3Packages.enochecker-core", "0.10.0" )
+    , ( "pkgs.python3Packages.enrich", "1.2.7" )
+    , ( "pkgs.python3Packages.entrance", "1.1.20" )
+    , ( "pkgs.python3Packages.entrance-with-router-features", "1.1.20" )
+    , ( "pkgs.python3Packages.entry-points-txt", "0.2.0" )
+    , ( "pkgs.python3Packages.entrypoint2", "1.1" )
+    , ( "pkgs.python3Packages.entrypoints", "0.4" )
+    , ( "pkgs.python3Packages.enturclient", "0.2.4" )
+    , ( "pkgs.python3Packages.enum-compat", "0.0.3" )
+    , ( "pkgs.python3Packages.env-canada", "0.6.0" )
+    , ( "pkgs.python3Packages.environmental-override", "0.1.2" )
+    , ( "pkgs.python3Packages.environs", "9.5.0" )
+    , ( "pkgs.python3Packages.envisage", "7.0.3" )
+    , ( "pkgs.python3Packages.envoy-reader", "0.21.3" )
+    , ( "pkgs.python3Packages.envoy-utils", "0.0.1" )
+    , ( "pkgs.python3Packages.envs", "1.4" )
+    , ( "pkgs.python3Packages.enzyme", "0.4.1" )
+    , ( "pkgs.python3Packages.epc", "0.0.5" )
+    , ( "pkgs.python3Packages.ephem", "4.1.5" )
+    , ( "pkgs.python3Packages.ephemeral-port-reserve", "1.1.4" )
+    , ( "pkgs.python3Packages.epson-projector", "0.5.1" )
+    , ( "pkgs.python3Packages.equinox", "0.11.2" )
+    , ( "pkgs.python3Packages.eradicate", "2.3.0" )
+    , ( "pkgs.python3Packages.es-client", "8.10.3" )
+    , ( "pkgs.python3Packages.escapism", "1.0.1" )
+    , ( "pkgs.python3Packages.esig", "0.9.8.3" )
+    , ( "pkgs.python3Packages.espeak-phonemizer", "1.3.1" )
+    , ( "pkgs.python3Packages.esphome-dashboard-api", "1.2.3" )
+    , ( "pkgs.python3Packages.esprima", "4.0.1" )
+    , ( "pkgs.python3Packages.et-xmlfile", "1.1" )
+    , ( "pkgs.python3Packages.et_xmlfile", "1.1" )
+    , ( "pkgs.python3Packages.etcd", "2.0.8" )
+    , ( "pkgs.python3Packages.etcd3", "0.12.0" )
+    , ( "pkgs.python3Packages.ete3", "3.1.3" )
+    , ( "pkgs.python3Packages.etebase", "0.31.6" )
+    , ( "pkgs.python3Packages.etebase-server", "0.11.0" )
+    , ( "pkgs.python3Packages.etelemetry", "0.2.1" )
+    , ( "pkgs.python3Packages.eternalegypt", "0.0.16" )
+    , ( "pkgs.python3Packages.etesync", "0.12.1" )
+    , ( "pkgs.python3Packages.eth-abi", "4.1.0" )
+    , ( "pkgs.python3Packages.eth-account", "0.9.0" )
+    , ( "pkgs.python3Packages.eth-hash", "0.5.2" )
+    , ( "pkgs.python3Packages.eth-keyfile", "0.6.0" )
+    , ( "pkgs.python3Packages.eth-keys", "0.4.0" )
+    , ( "pkgs.python3Packages.eth-rlp", "0.3.0" )
+    , ( "pkgs.python3Packages.eth-typing", "3.2.0" )
+    , ( "pkgs.python3Packages.eth-utils", "2.1.1" )
+    , ( "pkgs.python3Packages.etils", "1.5.1" )
+    , ( "pkgs.python3Packages.etuples", "0.3.9" )
+    , ( "pkgs.python3Packages.euclid3", "0.01" )
+    , ( "pkgs.python3Packages.eufylife-ble-client", "0.1.8" )
+    , ( "pkgs.python3Packages.ev3dev2", "2.1.0" )
+    , ( "pkgs.python3Packages.evaluate", "0.4.1" )
+    , ( "pkgs.python3Packages.evdev", "1.6.1" )
+    , ( "pkgs.python3Packages.eve", "2.1.0" )
+    , ( "pkgs.python3Packages.eventlet", "0.33.3" )
+    , ( "pkgs.python3Packages.events", "0.5" )
+    , ( "pkgs.python3Packages.evernote", "1.25.3" )
+    , ( "pkgs.python3Packages.evohome-async", "0.4.9" )
+    , ( "pkgs.python3Packages.evtx", "0.8.2" )
+    , ( "pkgs.python3Packages.ewmh", "0.1.6" )
+    , ( "pkgs.python3Packages.example-robot-data", "4.0.8" )
+    , ( "pkgs.python3Packages.exceptiongroup", "1.1.2" )
+    , ( "pkgs.python3Packages.exchangelib", "5.1.0" )
+    , ( "pkgs.python3Packages.exdown", "0.9.0" )
+    , ( "pkgs.python3Packages.execnb", "0.1.5" )
+    , ( "pkgs.python3Packages.execnet", "2.0.2" )
+    , ( "pkgs.python3Packages.executing", "1.2.0" )
+    , ( "pkgs.python3Packages.executor", "23.2" )
+    , ( "pkgs.python3Packages.exif", "1.6.0" )
+    , ( "pkgs.python3Packages.exifread", "3.0.0" )
+    , ( "pkgs.python3Packages.exitcode", "0.1.0" )
+    , ( "pkgs.python3Packages.expandvars", "0.11.0" )
+    , ( "pkgs.python3Packages.expects", "0.9.0" )
+    , ( "pkgs.python3Packages.expecttest", "0.1.4" )
+    , ( "pkgs.python3Packages.experiment-utilities", "0.3.6" )
+    , ( "pkgs.python3Packages.expiring-dict", "1.1.0" )
+    , ( "pkgs.python3Packages.expiringdict", "1.2.2" )
+    , ( "pkgs.python3Packages.explorerscript", "0.1.3" )
+    , ( "pkgs.python3Packages.exrex", "0.11.0" )
+    , ( "pkgs.python3Packages.extractcode", "31.0.0" )
+    , ( "pkgs.python3Packages.extractcode-7z", "7z-21.5.31" )
+    , ( "pkgs.python3Packages.extractcode-libarchive", "21.5.31" )
+    , ( "pkgs.python3Packages.extras", "1.0.0" )
+    , ( "pkgs.python3Packages.extruct", "0.13.0" )
+    , ( "pkgs.python3Packages.eyeD3", "0.9.7" )
+    , ( "pkgs.python3Packages.ezdxf", "0.18.1" )
+    , ( "pkgs.python3Packages.ezyrb", "1.3.0.post2311" )
+    , ( "pkgs.python3Packages.f5-icontrol-rest", "1.3.15" )
+    , ( "pkgs.python3Packages.f5-sdk", "3.0.21" )
+    , ( "pkgs.python3Packages.f90nml", "1.4.1" )
+    , ( "pkgs.python3Packages.faadelays", "2023.9.1" )
+    , ( "pkgs.python3Packages.fabric", "3.2.2" )
+    , ( "pkgs.python3Packages.fabulous", "0.4.0" )
+    , ( "pkgs.python3Packages.face", "22.0.0" )
+    , ( "pkgs.python3Packages.face-recognition", "1.3.0" )
+    , ( "pkgs.python3Packages.face-recognition-models", "0.3.0" )
+    , ( "pkgs.python3Packages.face_recognition", "1.3.0" )
+    , ( "pkgs.python3Packages.face_recognition_models", "0.3.0" )
+    , ( "pkgs.python3Packages.facebook-sdk", "3.1.0" )
+    , ( "pkgs.python3Packages.facedancer", "2019.3.2" )
+    , ( "pkgs.python3Packages.factory-boy", "3.3.0" )
+    , ( "pkgs.python3Packages.factory_boy", "3.3.0" )
+    , ( "pkgs.python3Packages.fairscale", "0.4.13" )
+    , ( "pkgs.python3Packages.fairseq", "0.12.3" )
+    , ( "pkgs.python3Packages.faiss", "1.7.4" )
+    , ( "pkgs.python3Packages.fake-useragent", "1.3.0" )
+    , ( "pkgs.python3Packages.faker", "19.6.1" )
+    , ( "pkgs.python3Packages.fakeredis", "2.20.0" )
+    , ( "pkgs.python3Packages.falcon", "3.1.1" )
+    , ( "pkgs.python3Packages.faraday-agent-parameters-types", "1.3.1" )
+    , ( "pkgs.python3Packages.faraday-plugins", "1.14.0" )
+    , ( "pkgs.python3Packages.farama-notifications", "0.0.4" )
+    , ( "pkgs.python3Packages.farm-haystack", "1.22.0" )
+    , ( "pkgs.python3Packages.fast-histogram", "0.12" )
+    , ( "pkgs.python3Packages.fastai", "2.7.13" )
+    , ( "pkgs.python3Packages.fastapi", "0.103.1" )
+    , ( "pkgs.python3Packages.fastapi-mail", "1.3.1" )
+    , ( "pkgs.python3Packages.fastavro", "1.8.3" )
+    , ( "pkgs.python3Packages.fastbencode", "0.2" )
+    , ( "pkgs.python3Packages.fastcache", "1.1.0" )
+    , ( "pkgs.python3Packages.fastcore", "1.5.29" )
+    , ( "pkgs.python3Packages.fastdiff", "0.3.0" )
+    , ( "pkgs.python3Packages.fastdownload", "0.0.7" )
+    , ( "pkgs.python3Packages.fastdtw", "0.3.4" )
+    , ( "pkgs.python3Packages.fastecdsa", "2.3.1" )
+    , ( "pkgs.python3Packages.fastembed", "0.1.1" )
+    , ( "pkgs.python3Packages.fasteners", "0.18" )
+    , ( "pkgs.python3Packages.fastentrypoints", "0.12" )
+    , ( "pkgs.python3Packages.faster-fifo", "1.4.5" )
+    , ( "pkgs.python3Packages.faster-whisper", "0.9.0" )
+    , ( "pkgs.python3Packages.fastimport", "0.9.14" )
+    , ( "pkgs.python3Packages.fastjet", "3.4.1" )
+    , ( "pkgs.python3Packages.fastjsonschema", "2.16.2" )
+    , ( "pkgs.python3Packages.fastnlo_toolkit", "2.5.0-2826" )
+    , ( "pkgs.python3Packages.fastnumbers", "5.0.1" )
+    , ( "pkgs.python3Packages.fastpair", "2021-05-19" )
+    , ( "pkgs.python3Packages.fastparquet", "2023.7.0" )
+    , ( "pkgs.python3Packages.fastpbkdf2", "0.2" )
+    , ( "pkgs.python3Packages.fastprogress", "1.0.3" )
+    , ( "pkgs.python3Packages.fastrlock", "0.8.2" )
+    , ( "pkgs.python3Packages.fasttext", "0.9.2" )
+    , ( "pkgs.python3Packages.fasttext-predict", "0.9.2.2" )
+    , ( "pkgs.python3Packages.faust-cchardet", "2.1.19" )
+    , ( "pkgs.python3Packages.favicon", "0.7.0" )
+    , ( "pkgs.python3Packages.fb-re2", "1.0.7" )
+    , ( "pkgs.python3Packages.fe25519", "1.5.0" )
+    , ( "pkgs.python3Packages.feedgen", "0.9.0" )
+    , ( "pkgs.python3Packages.feedgenerator", "2.1.0" )
+    , ( "pkgs.python3Packages.feedparser", "6.0.10" )
+    , ( "pkgs.python3Packages.fenics", "2019.1.0" )
+    , ( "pkgs.python3Packages.ffcv", "1.0.0" )
+    , ( "pkgs.python3Packages.ffmpeg-progress-yield", "0.7.8" )
+    , ( "pkgs.python3Packages.ffmpeg-python", "0.2.0" )
+    , ( "pkgs.python3Packages.ffmpy", "0.3.1" )
+    , ( "pkgs.python3Packages.fiblary3-fork", "0.1.12" )
+    , ( "pkgs.python3Packages.fido2", "1.1.2" )
+    , ( "pkgs.python3Packages.fields", "5.0.0" )
+    , ( "pkgs.python3Packages.file-read-backwards", "3.0.0" )
+    , ( "pkgs.python3Packages.filebrowser_safe", "1.1.1" )
+    , ( "pkgs.python3Packages.filebytes", "0.10.2" )
+    , ( "pkgs.python3Packages.filecheck", "0.0.23" )
+    , ( "pkgs.python3Packages.filedepot", "0.10.0" )
+    , ( "pkgs.python3Packages.filelock", "3.12.4" )
+    , ( "pkgs.python3Packages.filetype", "1.2.0" )
+    , ( "pkgs.python3Packages.filterpy", "2022-08-23" )
+    , ( "pkgs.python3Packages.finalfusion", "0.7.1" )
+    , ( "pkgs.python3Packages.find-libpython", "0.3.0" )
+    , ( "pkgs.python3Packages.findimports", "2.3.0" )
+    , ( "pkgs.python3Packages.findpython", "0.4.0" )
+    , ( "pkgs.python3Packages.fingerprints", "1.1.0" )
+    , ( "pkgs.python3Packages.finitude", "0.1.1" )
+    , ( "pkgs.python3Packages.fints", "4.0.0" )
+    , ( "pkgs.python3Packages.finvizfinance", "0.14.7" )
+    , ( "pkgs.python3Packages.fiona", "1.9.5" )
+    , ( "pkgs.python3Packages.fipy", "3.4.4" )
+    , ( "pkgs.python3Packages.fire", "0.5.0" )
+    , ( "pkgs.python3Packages.fireflyalgorithm", "0.3.4" )
+    , ( "pkgs.python3Packages.firetv", "1.0.9" )
+    , ( "pkgs.python3Packages.first", "2.0.2" )
+    , ( "pkgs.python3Packages.fitbit", "0.3.1" )
+    , ( "pkgs.python3Packages.fivem-api", "0.1.2" )
+    , ( "pkgs.python3Packages.fixerio", "1.0.0-alpha" )
+    , ( "pkgs.python3Packages.fixtures", "4.1.0" )
+    , ( "pkgs.python3Packages.fjaraskupan", "2.2.0" )
+    , ( "pkgs.python3Packages.flake8", "6.1.0" )
+    , ( "pkgs.python3Packages.flake8-blind-except", "0.2.1" )
+    , ( "pkgs.python3Packages.flake8-bugbear", "23.9.16" )
+    , ( "pkgs.python3Packages.flake8-debugger", "4.1.2" )
+    , ( "pkgs.python3Packages.flake8-docstrings", "1.7.0" )
+    , ( "pkgs.python3Packages.flake8-future-import", "0.4.7" )
+    , ( "pkgs.python3Packages.flake8-import-order", "0.18.2" )
+    , ( "pkgs.python3Packages.flake8-length", "0.3.1" )
+    , ( "pkgs.python3Packages.flake8-polyfill", "1.0.2" )
+    , ( "pkgs.python3Packages.flaky", "3.7.0" )
+    , ( "pkgs.python3Packages.flametree", "0.1.12" )
+    , ( "pkgs.python3Packages.flammkuchen", "1.0.3" )
+    , ( "pkgs.python3Packages.flasgger", "0.9.5" )
+    , ( "pkgs.python3Packages.flashtext", "2.7" )
+    , ( "pkgs.python3Packages.flask", "2.3.3" )
+    , ( "pkgs.python3Packages.flask-admin", "1.6.1" )
+    , ( "pkgs.python3Packages.flask-api", "3.1" )
+    , ( "pkgs.python3Packages.flask-appbuilder", "4.3.6" )
+    , ( "pkgs.python3Packages.flask-assets", "2.0" )
+    , ( "pkgs.python3Packages.flask-autoindex", "0.6.6" )
+    , ( "pkgs.python3Packages.flask-babel", "4.0.0" )
+    , ( "pkgs.python3Packages.flask-babelex", "0.9.4" )
+    , ( "pkgs.python3Packages.flask-basicauth", "0.2.0" )
+    , ( "pkgs.python3Packages.flask-bcrypt", "1.0.1" )
+    , ( "pkgs.python3Packages.flask-bootstrap", "3.3.7.1" )
+    , ( "pkgs.python3Packages.flask-caching", "2.0.2" )
+    , ( "pkgs.python3Packages.flask-common", "0.3.0" )
+    , ( "pkgs.python3Packages.flask-compress", "1.14" )
+    , ( "pkgs.python3Packages.flask-cors", "4.0.0" )
+    , ( "pkgs.python3Packages.flask-dramatiq", "0.6.0" )
+    , ( "pkgs.python3Packages.flask-elastic", "0.2" )
+    , ( "pkgs.python3Packages.flask-expects-json", "1.7.0" )
+    , ( "pkgs.python3Packages.flask-gravatar", "0.5.0" )
+    , ( "pkgs.python3Packages.flask-httpauth", "4.8.0" )
+    , ( "pkgs.python3Packages.flask-jwt-extended", "4.5.3" )
+    , ( "pkgs.python3Packages.flask-limiter", "3.5.0" )
+    , ( "pkgs.python3Packages.flask-login", "0.6.3" )
+    , ( "pkgs.python3Packages.flask-mail", "0.9.1" )
+    , ( "pkgs.python3Packages.flask-mailman", "0.3.0" )
+    , ( "pkgs.python3Packages.flask-marshmallow", "0.15.0" )
+    , ( "pkgs.python3Packages.flask-migrate", "4.0.5" )
+    , ( "pkgs.python3Packages.flask-mongoengine", "1.0.0-unstable-2022-08-16" )
+    , ( "pkgs.python3Packages.flask-mysqldb", "2.0.0" )
+    , ( "pkgs.python3Packages.flask-openid", "1.3.0" )
+    , ( "pkgs.python3Packages.flask-paginate", "2023.10.24" )
+    , ( "pkgs.python3Packages.flask-paranoid", "0.3.0" )
+    , ( "pkgs.python3Packages.flask-principal", "0.4.0" )
+    , ( "pkgs.python3Packages.flask-pymongo", "2.3.0" )
+    , ( "pkgs.python3Packages.flask-restful", "0.3.10" )
+    , ( "pkgs.python3Packages.flask-restx", "1.2.0" )
+    , ( "pkgs.python3Packages.flask-reverse-proxy-fix", "0.2.1" )
+    , ( "pkgs.python3Packages.flask-script", "2.0.6" )
+    , ( "pkgs.python3Packages.flask-seasurf", "1.1.1" )
+    , ( "pkgs.python3Packages.flask-security-too", "5.3.2" )
+    , ( "pkgs.python3Packages.flask-session", "0.5.0" )
+    , ( "pkgs.python3Packages.flask-session-captcha", "1.3.0" )
+    , ( "pkgs.python3Packages.flask-sessionstore", "0.4.5" )
+    , ( "pkgs.python3Packages.flask-silk", "2018-06-28" )
+    , ( "pkgs.python3Packages.flask-socketio", "5.3.6" )
+    , ( "pkgs.python3Packages.flask-sockets", "0.2.1" )
+    , ( "pkgs.python3Packages.flask-sqlalchemy", "3.1.1" )
+    , ( "pkgs.python3Packages.flask-sslify", "0.1.5" )
+    , ( "pkgs.python3Packages.flask-swagger", "0.2.14" )
+    , ( "pkgs.python3Packages.flask-swagger-ui", "4.11.1" )
+    , ( "pkgs.python3Packages.flask-talisman", "1.1.0" )
+    , ( "pkgs.python3Packages.flask-testing", "0.8.1" )
+    , ( "pkgs.python3Packages.flask-themes2", "1.0.1" )
+    , ( "pkgs.python3Packages.flask-versioned", "0.9.4-20101221" )
+    , ( "pkgs.python3Packages.flask-wtf", "1.2.1" )
+    , ( "pkgs.python3Packages.flask_assets", "2.0" )
+    , ( "pkgs.python3Packages.flask_elastic", "0.2" )
+    , ( "pkgs.python3Packages.flask_login", "0.6.3" )
+    , ( "pkgs.python3Packages.flask_mail", "0.9.1" )
+    , ( "pkgs.python3Packages.flask_marshmallow", "0.15.0" )
+    , ( "pkgs.python3Packages.flask_migrate", "4.0.5" )
+    , ( "pkgs.python3Packages.flask_principal", "0.4.0" )
+    , ( "pkgs.python3Packages.flask_script", "2.0.6" )
+    , ( "pkgs.python3Packages.flask_sqlalchemy", "3.1.1" )
+    , ( "pkgs.python3Packages.flask_testing", "0.8.1" )
+    , ( "pkgs.python3Packages.flask_wtf", "1.2.1" )
+    , ( "pkgs.python3Packages.flaskbabel", "4.0.0" )
+    , ( "pkgs.python3Packages.flatbuffers", "23.5.26" )
+    , ( "pkgs.python3Packages.flatdict", "4.0.1" )
+    , ( "pkgs.python3Packages.flatten-dict", "0.4.2" )
+    , ( "pkgs.python3Packages.flax", "0.7.5" )
+    , ( "pkgs.python3Packages.fleep", "1.0.1" )
+    , ( "pkgs.python3Packages.flet", "0.10.1" )
+    , ( "pkgs.python3Packages.flet-core", "0.10.1" )
+    , ( "pkgs.python3Packages.flexmock", "0.11.3" )
+    , ( "pkgs.python3Packages.flickrapi", "2.4" )
+    , ( "pkgs.python3Packages.flipr-api", "1.5.0" )
+    , ( "pkgs.python3Packages.flit", "3.9.0" )
+    , ( "pkgs.python3Packages.flit-core", "3.9.0" )
+    , ( "pkgs.python3Packages.flit-scm", "1.7.0" )
+    , ( "pkgs.python3Packages.floret", "0.10.5" )
+    , ( "pkgs.python3Packages.flow-record", "3.13" )
+    , ( "pkgs.python3Packages.flower", "2.0.1" )
+    , ( "pkgs.python3Packages.flowlogs_reader", "5.0.0" )
+    , ( "pkgs.python3Packages.fluent-logger", "0.10.0" )
+    , ( "pkgs.python3Packages.flufl_bounce", "4.0" )
+    , ( "pkgs.python3Packages.flufl_i18n", "4.1.1" )
+    , ( "pkgs.python3Packages.flufl_lock", "7.1.1" )
+    , ( "pkgs.python3Packages.flux-led", "1.0.4" )
+    , ( "pkgs.python3Packages.flyingsquid", "0.0.0a0" )
+    , ( "pkgs.python3Packages.flynt", "0.66" )
+    , ( "pkgs.python3Packages.fn", "0.4.3" )
+    , ( "pkgs.python3Packages.fnv-hash-fast", "0.5.0" )
+    , ( "pkgs.python3Packages.fnvhash", "0.1.0" )
+    , ( "pkgs.python3Packages.folium", "0.15.0" )
+    , ( "pkgs.python3Packages.fontawesomefree", "6.4.2" )
+    , ( "pkgs.python3Packages.fontforge", "20230101" )
+    , ( "pkgs.python3Packages.fontmake", "3.7.1" )
+    , ( "pkgs.python3Packages.fontmath", "0.9.3" )
+    , ( "pkgs.python3Packages.fontparts", "0.11.0" )
+    , ( "pkgs.python3Packages.fontpens", "0.2.4" )
+    , ( "pkgs.python3Packages.fonttools", "4.42.1" )
+    , ( "pkgs.python3Packages.foobot-async", "1.0.0" )
+    , ( "pkgs.python3Packages.foolscap", "23.3.0" )
+    , ( "pkgs.python3Packages.forbiddenfruit", "0.1.4" )
+    , ( "pkgs.python3Packages.fordpass", "0.0.4" )
+    , ( "pkgs.python3Packages.forecast-solar", "3.0.0" )
+    , ( "pkgs.python3Packages.formbox", "0.4.3" )
+    , ( "pkgs.python3Packages.formencode", "2.1.0" )
+    , ( "pkgs.python3Packages.formulae", "0.5.1" )
+    , ( "pkgs.python3Packages.formulaic", "0.6.6" )
+    , ( "pkgs.python3Packages.fortiosapi", "1.0.5" )
+    , ( "pkgs.python3Packages.foundationdb71", "7.1.32" )
+    , ( "pkgs.python3Packages.fountains", "2.2.0" )
+    , ( "pkgs.python3Packages.foxdot", "0.8.12" )
+    , ( "pkgs.python3Packages.fpdf", "1.7.2" )
+    , ( "pkgs.python3Packages.fpylll", "0.5.9" )
+    , ( "pkgs.python3Packages.fpyutils", "3.0.1" )
+    , ( "pkgs.python3Packages.fqdn", "1.5.1" )
+    , ( "pkgs.python3Packages.freebox-api", "1.1.0" )
+    , ( "pkgs.python3Packages.freetype-py", "2.1.0.post1" )
+    , ( "pkgs.python3Packages.freezegun", "1.2.2" )
+    , ( "pkgs.python3Packages.frida-python", "16.0.19" )
+    , ( "pkgs.python3Packages.frigidaire", "0.18.13" )
+    , ( "pkgs.python3Packages.frilouz", "0.0.2" )
+    , ( "pkgs.python3Packages.fritzconnection", "1.13.2" )
+    , ( "pkgs.python3Packages.fritzprofiles", "0.7.3" )
+    , ( "pkgs.python3Packages.frozendict", "2.3.8" )
+    , ( "pkgs.python3Packages.frozenlist", "1.4.0" )
+    , ( "pkgs.python3Packages.fs", "2.4.16" )
+    , ( "pkgs.python3Packages.fs-s3fs", "1.1.1" )
+    , ( "pkgs.python3Packages.fschat", "0.2.32" )
+    , ( "pkgs.python3Packages.fsspec", "2023.10.0" )
+    , ( "pkgs.python3Packages.fst-pso", "1.8.1" )
+    , ( "pkgs.python3Packages.ftfy", "6.1.1" )
+    , ( "pkgs.python3Packages.ftputil", "5.0.4" )
+    , ( "pkgs.python3Packages.fugashi", "1.3.0" )
+    , ( "pkgs.python3Packages.func-timeout", "4.3.5" )
+    , ( "pkgs.python3Packages.funcparserlib", "1.0.1" )
+    , ( "pkgs.python3Packages.funcsigs", "1.0.2" )
+    , ( "pkgs.python3Packages.functiontrace", "0.3.7" )
+    , ( "pkgs.python3Packages.funcy", "2.0" )
+    , ( "pkgs.python3Packages.funsor", "0.4.6" )
+    , ( "pkgs.python3Packages.furl", "2.1.3" )
+    , ( "pkgs.python3Packages.furo", "2023.9.10" )
+    , ( "pkgs.python3Packages.fuse", "1.0.5" )
+    , ( "pkgs.python3Packages.fusepy", "3.0.1" )
+    , ( "pkgs.python3Packages.future", "0.18.3" )
+    , ( "pkgs.python3Packages.future-fstrings", "1.2.0" )
+    , ( "pkgs.python3Packages.future-typing", "0.4.1" )
+    , ( "pkgs.python3Packages.fuzzyfinder", "2.1.0" )
+    , ( "pkgs.python3Packages.fuzzytm", "2.0.5" )
+    , ( "pkgs.python3Packages.fuzzywuzzy", "0.18.0" )
+    , ( "pkgs.python3Packages.fvcore", "0.1.5.post20221221" )
+    , ( "pkgs.python3Packages.fvs", "0.3.4" )
+    , ( "pkgs.python3Packages.fx2", "2023-09-20" )
+    , ( "pkgs.python3Packages.g2pkk", "0.1.2" )
+    , ( "pkgs.python3Packages.galario", "1.2.2" )
+    , ( "pkgs.python3Packages.galois", "0.3.6" )
+    , ( "pkgs.python3Packages.gamble", "0.11" )
+    , ( "pkgs.python3Packages.gaphas", "3.11.3" )
+    , ( "pkgs.python3Packages.garminconnect", "0.2.9" )
+    , ( "pkgs.python3Packages.garminconnect-aio", "0.1.4" )
+    , ( "pkgs.python3Packages.garminconnect-ha", "0.2.9" )
+    , ( "pkgs.python3Packages.garth", "0.4.41" )
+    , ( "pkgs.python3Packages.gassist-text", "0.0.10" )
+    , ( "pkgs.python3Packages.gast", "0.5.3" )
+    , ( "pkgs.python3Packages.gatt", "0.2.6" )
+    , ( "pkgs.python3Packages.gattlib", "2021-06-16" )
+    , ( "pkgs.python3Packages.gb-io", "0.2.1" )
+    , ( "pkgs.python3Packages.gbinder-python", "1.1.1" )
+    , ( "pkgs.python3Packages.gbulb", "0.6.4" )
+    , ( "pkgs.python3Packages.gcal-sync", "6.0.1" )
+    , ( "pkgs.python3Packages.gcovr", "6.0" )
+    , ( "pkgs.python3Packages.gcs-oauth2-boto-plugin", "3.0" )
+    , ( "pkgs.python3Packages.gcsa", "2.1.0" )
+    , ( "pkgs.python3Packages.gcsfs", "2023.4.0" )
+    , ( "pkgs.python3Packages.gdal", "3.7.3" )
+    , ( "pkgs.python3Packages.gdata", "2.0.18" )
+    , ( "pkgs.python3Packages.gdcm", "3.0.22" )
+    , ( "pkgs.python3Packages.gdown", "4.7.1" )
+    , ( "pkgs.python3Packages.ge25519", "1.5.1" )
+    , ( "pkgs.python3Packages.geant4", "11.0.4" )
+    , ( "pkgs.python3Packages.geeknote", "2015-05-11" )
+    , ( "pkgs.python3Packages.gehomesdk", "0.5.23" )
+    , ( "pkgs.python3Packages.gekitchen", "0.2.19" )
+    , ( "pkgs.python3Packages.gemfileparser", "0.8.0" )
+    , ( "pkgs.python3Packages.gemfileparser2", "0.9.3" )
+    , ( "pkgs.python3Packages.genanki", "0.13.1" )
+    , ( "pkgs.python3Packages.generic", "1.1.2" )
+    , ( "pkgs.python3Packages.geniushub-client", "0.7.1" )
+    , ( "pkgs.python3Packages.genome-collector", "0.1.6" )
+    , ( "pkgs.python3Packages.genpy", "2022.1" )
+    , ( "pkgs.python3Packages.genshi", "0.7.7" )
+    , ( "pkgs.python3Packages.gensim", "4.3.2" )
+    , ( "pkgs.python3Packages.gentools", "1.2.1" )
+    , ( "pkgs.python3Packages.genzshcomp", "0.6.0" )
+    , ( "pkgs.python3Packages.geoalchemy2", "0.14.2" )
+    , ( "pkgs.python3Packages.geocachingapi", "0.2.3" )
+    , ( "pkgs.python3Packages.geographiclib", "2.0" )
+    , ( "pkgs.python3Packages.geoip", "1.3.2" )
+    , ( "pkgs.python3Packages.geoip2", "4.7.0" )
+    , ( "pkgs.python3Packages.geojson", "3.0.1" )
+    , ( "pkgs.python3Packages.geojson-client", "0.8" )
+    , ( "pkgs.python3Packages.geomet", "1.1.0" )
+    , ( "pkgs.python3Packages.geometric", "1.0.1" )
+    , ( "pkgs.python3Packages.geopandas", "0.14.1" )
+    , ( "pkgs.python3Packages.geopy", "2.4.0" )
+    , ( "pkgs.python3Packages.georss-client", "0.15" )
+    , ( "pkgs.python3Packages.georss-generic-client", "0.7" )
+    , ( "pkgs.python3Packages.georss-ign-sismologia-client", "0.6" )
+    , ( "pkgs.python3Packages.georss-ingv-centro-nazionale-terremoti-client", "0.6" )
+    , ( "pkgs.python3Packages.georss-nrcan-earthquakes-client", "0.4" )
+    , ( "pkgs.python3Packages.georss-qld-bushfire-alert-client", "0.6" )
+    , ( "pkgs.python3Packages.georss-tfs-incidents-client", "0.4" )
+    , ( "pkgs.python3Packages.georss-wa-dfes-client", "0.4" )
+    , ( "pkgs.python3Packages.get-video-properties", "0.1.1" )
+    , ( "pkgs.python3Packages.getjump", "2.4.0" )
+    , ( "pkgs.python3Packages.getkey", "0.6.5" )
+    , ( "pkgs.python3Packages.getmac", "0.9.4" )
+    , ( "pkgs.python3Packages.gevent", "22.10.2" )
+    , ( "pkgs.python3Packages.gevent-socketio", "0.3.6" )
+    , ( "pkgs.python3Packages.gevent-websocket", "0.10.1" )
+    , ( "pkgs.python3Packages.geventhttpclient", "2.0.10" )
+    , ( "pkgs.python3Packages.gflags", "3.1.2" )
+    , ( "pkgs.python3Packages.ghapi", "1.0.3" )
+    , ( "pkgs.python3Packages.ghdiff", "0.4" )
+    , ( "pkgs.python3Packages.ghp-import", "2.1.0" )
+    , ( "pkgs.python3Packages.ghrepo-stats", "0.5.4" )
+    , ( "pkgs.python3Packages.gibberish-detector", "0.1.1" )
+    , ( "pkgs.python3Packages.gidgethub", "5.3.0" )
+    , ( "pkgs.python3Packages.gin-config", "0.5.0" )
+    , ( "pkgs.python3Packages.gios", "3.2.1" )
+    , ( "pkgs.python3Packages.gipc", "1.4.0" )
+    , ( "pkgs.python3Packages.gistyc", "1.3" )
+    , ( "pkgs.python3Packages.git-annex-adapter", "0.2.2" )
+    , ( "pkgs.python3Packages.git-filter-repo", "2.38.0" )
+    , ( "pkgs.python3Packages.git-revise", "0.7.0" )
+    , ( "pkgs.python3Packages.git-sweep", "0.1.1" )
+    , ( "pkgs.python3Packages.git-url-parse", "1.2.2" )
+    , ( "pkgs.python3Packages.gitdb", "4.0.10" )
+    , ( "pkgs.python3Packages.github-to-sqlite", "2.8.3" )
+    , ( "pkgs.python3Packages.github-webhook", "1.0.4" )
+    , ( "pkgs.python3Packages.github3_py", "3.2.0" )
+    , ( "pkgs.python3Packages.gitignore-parser", "0.1.9" )
+    , ( "pkgs.python3Packages.gitlike-commands", "0.2.1" )
+    , ( "pkgs.python3Packages.gitpython", "3.1.37" )
+    , ( "pkgs.python3Packages.glad", "0.1.36" )
+    , ( "pkgs.python3Packages.glad2", "2.0.4" )
+    , ( "pkgs.python3Packages.glances-api", "0.5.0" )
+    , ( "pkgs.python3Packages.glcontext", "2.5.0" )
+    , ( "pkgs.python3Packages.glean-parser", "9.0.0" )
+    , ( "pkgs.python3Packages.glean-sdk", "52.7.0" )
+    , ( "pkgs.python3Packages.glfw", "2.6.2" )
+    , ( "pkgs.python3Packages.glob2", "0.7" )
+    , ( "pkgs.python3Packages.globre", "0.1.5" )
+    , ( "pkgs.python3Packages.globus-sdk", "3.31.0" )
+    , ( "pkgs.python3Packages.glom", "23.3.0" )
+    , ( "pkgs.python3Packages.glueviz", "1.16.0" )
+    , ( "pkgs.python3Packages.glymur", "0.12.5" )
+    , ( "pkgs.python3Packages.glyphslib", "6.4.1" )
+    , ( "pkgs.python3Packages.gmpy", "1.17" )
+    , ( "pkgs.python3Packages.gmpy2", "2.1.2" )
+    , ( "pkgs.python3Packages.gmsh", "4.11.1" )
+    , ( "pkgs.python3Packages.gntp", "1.0.3" )
+    , ( "pkgs.python3Packages.gnureadline", "8.1.2" )
+    , ( "pkgs.python3Packages.goalzero", "0.2.2" )
+    , ( "pkgs.python3Packages.gocardless-pro", "1.48.0" )
+    , ( "pkgs.python3Packages.goobook", "3.5.2" )
+    , ( "pkgs.python3Packages.goocalendar", "0.8.0" )
+    , ( "pkgs.python3Packages.goodwe", "0.2.32" )
+    , ( "pkgs.python3Packages.google", "3.0.0" )
+    , ( "pkgs.python3Packages.google-ai-generativelanguage", "0.3.4" )
+    , ( "pkgs.python3Packages.google-api-core", "2.11.1" )
+    , ( "pkgs.python3Packages.google-api-python-client", "2.99.0" )
+    , ( "pkgs.python3Packages.google-auth", "2.21.0" )
+    , ( "pkgs.python3Packages.google-auth-httplib2", "0.1.1" )
+    , ( "pkgs.python3Packages.google-auth-oauthlib", "1.1.0" )
+    , ( "pkgs.python3Packages.google-cloud-access-context-manager", "0.1.16" )
+    , ( "pkgs.python3Packages.google-cloud-appengine-logging", "1.3.2" )
+    , ( "pkgs.python3Packages.google-cloud-artifact-registry", "1.9.0" )
+    , ( "pkgs.python3Packages.google-cloud-asset", "3.20.0" )
+    , ( "pkgs.python3Packages.google-cloud-audit-log", "0.2.5" )
+    , ( "pkgs.python3Packages.google-cloud-automl", "2.11.4" )
+    , ( "pkgs.python3Packages.google-cloud-bigquery", "3.11.4" )
+    , ( "pkgs.python3Packages.google-cloud-bigquery-datatransfer", "3.12.1" )
+    , ( "pkgs.python3Packages.google-cloud-bigquery-logging", "1.3.0" )
+    , ( "pkgs.python3Packages.google-cloud-bigquery-storage", "2.22.0" )
+    , ( "pkgs.python3Packages.google-cloud-bigtable", "2.21.0" )
+    , ( "pkgs.python3Packages.google-cloud-compute", "1.14.1" )
+    , ( "pkgs.python3Packages.google-cloud-container", "2.33.0" )
+    , ( "pkgs.python3Packages.google-cloud-core", "2.3.3" )
+    , ( "pkgs.python3Packages.google-cloud-datacatalog", "3.16.0" )
+    , ( "pkgs.python3Packages.google-cloud-dataproc", "5.6.0" )
+    , ( "pkgs.python3Packages.google-cloud-datastore", "2.18.0" )
+    , ( "pkgs.python3Packages.google-cloud-dlp", "3.13.0" )
+    , ( "pkgs.python3Packages.google-cloud-dns", "0.34.2" )
+    , ( "pkgs.python3Packages.google-cloud-error-reporting", "1.9.2" )
+    , ( "pkgs.python3Packages.google-cloud-firestore", "2.13.1" )
+    , ( "pkgs.python3Packages.google-cloud-iam", "2.12.1" )
+    , ( "pkgs.python3Packages.google-cloud-iam-logging", "1.2.2" )
+    , ( "pkgs.python3Packages.google-cloud-iot", "2.9.2" )
+    , ( "pkgs.python3Packages.google-cloud-kms", "2.19.1" )
+    , ( "pkgs.python3Packages.google-cloud-language", "2.11.1" )
+    , ( "pkgs.python3Packages.google-cloud-logging", "3.8.0" )
+    , ( "pkgs.python3Packages.google-cloud-monitoring", "2.16.0" )
+    , ( "pkgs.python3Packages.google-cloud-org-policy", "1.8.3" )
+    , ( "pkgs.python3Packages.google-cloud-os-config", "1.15.3" )
+    , ( "pkgs.python3Packages.google-cloud-pubsub", "2.18.4" )
+    , ( "pkgs.python3Packages.google-cloud-redis", "2.13.2" )
+    , ( "pkgs.python3Packages.google-cloud-resource-manager", "1.10.4" )
+    , ( "pkgs.python3Packages.google-cloud-runtimeconfig", "0.33.2" )
+    , ( "pkgs.python3Packages.google-cloud-secret-manager", "2.16.4" )
+    , ( "pkgs.python3Packages.google-cloud-securitycenter", "1.24.0" )
+    , ( "pkgs.python3Packages.google-cloud-spanner", "3.40.1" )
+    , ( "pkgs.python3Packages.google-cloud-speech", "2.21.1" )
+    , ( "pkgs.python3Packages.google-cloud-storage", "2.10.0" )
+    , ( "pkgs.python3Packages.google-cloud-tasks", "2.14.2" )
+    , ( "pkgs.python3Packages.google-cloud-testutils", "1.3.3" )
+    , ( "pkgs.python3Packages.google-cloud-texttospeech", "2.14.2" )
+    , ( "pkgs.python3Packages.google-cloud-trace", "1.11.3" )
+    , ( "pkgs.python3Packages.google-cloud-translate", "3.12.1" )
+    , ( "pkgs.python3Packages.google-cloud-videointelligence", "2.11.4" )
+    , ( "pkgs.python3Packages.google-cloud-vision", "3.4.5" )
+    , ( "pkgs.python3Packages.google-cloud-websecurityscanner", "1.12.3" )
+    , ( "pkgs.python3Packages.google-compute-engine", "20190124" )
+    , ( "pkgs.python3Packages.google-crc32c", "1.5.0" )
+    , ( "pkgs.python3Packages.google-generativeai", "0.2.2" )
+    , ( "pkgs.python3Packages.google-i18n-address", "3.1.0" )
+    , ( "pkgs.python3Packages.google-nest-sdm", "3.0.3" )
+    , ( "pkgs.python3Packages.google-pasta", "0.2.0" )
+    , ( "pkgs.python3Packages.google-re2", "1.1" )
+    , ( "pkgs.python3Packages.google-reauth", "0.1.1" )
+    , ( "pkgs.python3Packages.google-resumable-media", "2.6.0" )
+    , ( "pkgs.python3Packages.google-search-results", "2.4.2" )
+    , ( "pkgs.python3Packages.google_api_python_client", "2.99.0" )
+    , ( "pkgs.python3Packages.googleapis-common-protos", "1.60.0" )
+    , ( "pkgs.python3Packages.googleapis_common_protos", "1.60.0" )
+    , ( "pkgs.python3Packages.googlemaps", "4.10.0" )
+    , ( "pkgs.python3Packages.googletrans", "2.4.0" )
+    , ( "pkgs.python3Packages.gorilla", "0.4.0" )
+    , ( "pkgs.python3Packages.govee-ble", "0.24.0" )
+    , ( "pkgs.python3Packages.goveelights", "0.1.2" )
+    , ( "pkgs.python3Packages.gpapi", "0.4.4" )
+    , ( "pkgs.python3Packages.gpaw", "23.9.1" )
+    , ( "pkgs.python3Packages.gpgme", "1.23.0" )
+    , ( "pkgs.python3Packages.gphoto2", "2.5.0" )
+    , ( "pkgs.python3Packages.gpib-ctypes", "0.3.0" )
+    , ( "pkgs.python3Packages.gpiozero", "2.0" )
+    , ( "pkgs.python3Packages.gplaycli", "3.29" )
+    , ( "pkgs.python3Packages.gprof2dot", "2022.07.29" )
+    , ( "pkgs.python3Packages.gps3", "2017-11-01" )
+    , ( "pkgs.python3Packages.gpsoauth", "1.0.2" )
+    , ( "pkgs.python3Packages.gpt-2-simple", "2-simple-0.8.1" )
+    , ( "pkgs.python3Packages.gptcache", "0.1.42" )
+    , ( "pkgs.python3Packages.gpustat", "1.1.1" )
+    , ( "pkgs.python3Packages.gpxpy", "1.5.0" )
+    , ( "pkgs.python3Packages.gpy", "1.10.0" )
+    , ( "pkgs.python3Packages.gpytorch", "1.11" )
+    , ( "pkgs.python3Packages.gql", "3.4.1" )
+    , ( "pkgs.python3Packages.grad-cam", "1.4.8" )
+    , ( "pkgs.python3Packages.gradient", "2.0.6" )
+    , ( "pkgs.python3Packages.gradient-utils", "0.5.0" )
+    , ( "pkgs.python3Packages.gradient_statsd", "1.0.1" )
+    , ( "pkgs.python3Packages.gradio", "3.44.3" )
+    , ( "pkgs.python3Packages.gradio-client", "0.5.0" )
+    , ( "pkgs.python3Packages.grammalecte", "2.1.1" )
+    , ( "pkgs.python3Packages.grandalf", "0.7" )
+    , ( "pkgs.python3Packages.graph-tool", "2.45" )
+    , ( "pkgs.python3Packages.grapheme", "0.6.0" )
+    , ( "pkgs.python3Packages.graphene", "3.3.0" )
+    , ( "pkgs.python3Packages.graphene-django", "3.1.5" )
+    , ( "pkgs.python3Packages.graphite-web", "1.1.10" )
+    , ( "pkgs.python3Packages.graphql-core", "3.2.3" )
+    , ( "pkgs.python3Packages.graphql-relay", "3.2.0" )
+    , ( "pkgs.python3Packages.graphql-server-core", "2.0.0" )
+    , ( "pkgs.python3Packages.graphql-subscription-manager", "0.7.1" )
+    , ( "pkgs.python3Packages.graphqlclient", "0.2.4" )
+    , ( "pkgs.python3Packages.graphtage", "0.3.0" )
+    , ( "pkgs.python3Packages.graphviz", "0.20.1" )
+    , ( "pkgs.python3Packages.grappelli-safe", "1.1.1" )
+    , ( "pkgs.python3Packages.grappelli_safe", "1.1.1" )
+    , ( "pkgs.python3Packages.graspologic", "3.2.0" )
+    , ( "pkgs.python3Packages.greatfet", "2019.5.1.dev0" )
+    , ( "pkgs.python3Packages.greeclimate", "1.4.1" )
+    , ( "pkgs.python3Packages.green", "3.4.3" )
+    , ( "pkgs.python3Packages.greeneye-monitor", "5.0.1" )
+    , ( "pkgs.python3Packages.greenlet", "3.0.1" )
+    , ( "pkgs.python3Packages.gremlinpython", "3.6.4" )
+    , ( "pkgs.python3Packages.grequests", "0.7.0" )
+    , ( "pkgs.python3Packages.greynoise", "2.0.1" )
+    , ( "pkgs.python3Packages.gridnet", "4.3.0" )
+    , ( "pkgs.python3Packages.griffe", "0.38.0" )
+    , ( "pkgs.python3Packages.grip", "4.6.1" )
+    , ( "pkgs.python3Packages.groestlcoin_hash", "1.0.3" )
+    , ( "pkgs.python3Packages.growattserver", "1.4.0" )
+    , ( "pkgs.python3Packages.grpc-google-iam-v1", "0.12.6" )
+    , ( "pkgs.python3Packages.grpc-interceptor", "0.15.3" )
+    , ( "pkgs.python3Packages.grpc_google_iam_v1", "0.12.6" )
+    , ( "pkgs.python3Packages.grpcio", "1.59.1" )
+    , ( "pkgs.python3Packages.grpcio-channelz", "1.59.2" )
+    , ( "pkgs.python3Packages.grpcio-gcp", "0.2.2" )
+    , ( "pkgs.python3Packages.grpcio-health-checking", "1.59.0" )
+    , ( "pkgs.python3Packages.grpcio-reflection", "1.59.2" )
+    , ( "pkgs.python3Packages.grpcio-status", "1.59.0" )
+    , ( "pkgs.python3Packages.grpcio-testing", "1.59.0" )
+    , ( "pkgs.python3Packages.grpcio-tools", "1.59.0" )
+    , ( "pkgs.python3Packages.grpclib", "0.4.4" )
+    , ( "pkgs.python3Packages.gruut", "2.3.4" )
+    , ( "pkgs.python3Packages.gruut-ipa", "0.13.0" )
+    , ( "pkgs.python3Packages.gsd", "3.2.0" )
+    , ( "pkgs.python3Packages.gsm0338", "1.1.0" )
+    , ( "pkgs.python3Packages.gspread", "5.12.0" )
+    , ( "pkgs.python3Packages.gssapi", "1.8.3" )
+    , ( "pkgs.python3Packages.gst-python", "1.22.8" )
+    , ( "pkgs.python3Packages.gtfs-realtime-bindings", "1.0.0" )
+    , ( "pkgs.python3Packages.gtimelog", "2020-05-16" )
+    , ( "pkgs.python3Packages.gtts", "2.4.0" )
+    , ( "pkgs.python3Packages.gtts-token", "1.1.4" )
+    , ( "pkgs.python3Packages.gudhi", "3.8.0" )
+    , ( "pkgs.python3Packages.guessit", "3.7.1" )
+    , ( "pkgs.python3Packages.guestfs", "1.40.1" )
+    , ( "pkgs.python3Packages.guidance", "0.0.64" )
+    , ( "pkgs.python3Packages.gumath", "2019-08-01" )
+    , ( "pkgs.python3Packages.gunicorn", "21.2.0" )
+    , ( "pkgs.python3Packages.guppy3", "3.1.4" )
+    , ( "pkgs.python3Packages.gurobipy", "9.1.2" )
+    , ( "pkgs.python3Packages.guzzle-sphinx-theme", "0.7.11" )
+    , ( "pkgs.python3Packages.guzzle_sphinx_theme", "0.7.11" )
+    , ( "pkgs.python3Packages.gviz-api", "1.10.0" )
+    , ( "pkgs.python3Packages.gvm-tools", "23.11.0" )
+    , ( "pkgs.python3Packages.gym", "0.26.2" )
+    , ( "pkgs.python3Packages.gym-notices", "0.0.8" )
+    , ( "pkgs.python3Packages.gymnasium", "0.29.1" )
+    , ( "pkgs.python3Packages.gyp", "2022-04-01" )
+    , ( "pkgs.python3Packages.h11", "0.14.0" )
+    , ( "pkgs.python3Packages.h2", "4.1.0" )
+    , ( "pkgs.python3Packages.h3", "3.7.6" )
+    , ( "pkgs.python3Packages.h5netcdf", "1.2.0" )
+    , ( "pkgs.python3Packages.h5py", "3.9.0" )
+    , ( "pkgs.python3Packages.h5py-mpi", "3.9.0" )
+    , ( "pkgs.python3Packages.ha-ffmpeg", "3.1.0" )
+    , ( "pkgs.python3Packages.ha-mqtt-discoverable", "0.10.0" )
+    , ( "pkgs.python3Packages.ha-philipsjs", "3.1.1" )
+    , ( "pkgs.python3Packages.habanero", "1.2.3" )
+    , ( "pkgs.python3Packages.habitipy", "0.3.0" )
+    , ( "pkgs.python3Packages.hachoir", "3.2.0" )
+    , ( "pkgs.python3Packages.hacking", "6.0.1" )
+    , ( "pkgs.python3Packages.hahomematic", "2023.11.1" )
+    , ( "pkgs.python3Packages.halo", "0.0.31" )
+    , ( "pkgs.python3Packages.halohome", "0.5.0" )
+    , ( "pkgs.python3Packages.handout", "1.1.2" )
+    , ( "pkgs.python3Packages.hap-python", "4.9.1" )
+    , ( "pkgs.python3Packages.hass-nabucasa", "0.74.0" )
+    , ( "pkgs.python3Packages.hassil", "1.2.5" )
+    , ( "pkgs.python3Packages.hatasmota", "0.7.3" )
+    , ( "pkgs.python3Packages.hatch-fancy-pypi-readme", "23.1.0" )
+    , ( "pkgs.python3Packages.hatch-jupyter-builder", "0.8.3" )
+    , ( "pkgs.python3Packages.hatch-nodejs-version", "0.3.2" )
+    , ( "pkgs.python3Packages.hatch-requirements-txt", "0.4.0" )
+    , ( "pkgs.python3Packages.hatch-vcs", "0.3.0" )
+    , ( "pkgs.python3Packages.hatchling", "1.18.0" )
+    , ( "pkgs.python3Packages.haversine", "2.8.0" )
+    , ( "pkgs.python3Packages.hawkauthlib", "0.1.1" )
+    , ( "pkgs.python3Packages.hcloud", "1.32.0" )
+    , ( "pkgs.python3Packages.hcs_utils", "2.0" )
+    , ( "pkgs.python3Packages.hdate", "0.10.4" )
+    , ( "pkgs.python3Packages.hdbscan", "0.8.33" )
+    , ( "pkgs.python3Packages.hdf5plugin", "4.3.0" )
+    , ( "pkgs.python3Packages.hdfs", "2.7.3" )
+    , ( "pkgs.python3Packages.hdmedians", "0.14.2" )
+    , ( "pkgs.python3Packages.headerparser", "0.4.0" )
+    , ( "pkgs.python3Packages.heapdict", "1.0.1" )
+    , ( "pkgs.python3Packages.heatshrink2", "0.12.0" )
+    , ( "pkgs.python3Packages.heatzypy", "2.1.9" )
+    , ( "pkgs.python3Packages.help2man", "0.0.9" )
+    , ( "pkgs.python3Packages.helpdev", "0.7.1" )
+    , ( "pkgs.python3Packages.helper", "2.5.0" )
+    , ( "pkgs.python3Packages.hepmc3", "3.2.7" )
+    , ( "pkgs.python3Packages.hepunits", "2.3.2" )
+    , ( "pkgs.python3Packages.here-routing", "1.0.0" )
+    , ( "pkgs.python3Packages.here-transit", "1.2.0" )
+    , ( "pkgs.python3Packages.herepy", "3.6.0" )
+    , ( "pkgs.python3Packages.hetzner", "0.8.3" )
+    , ( "pkgs.python3Packages.heudiconv", "1.0.0" )
+    , ( "pkgs.python3Packages.hexbytes", "0.3.1" )
+    , ( "pkgs.python3Packages.hexdump", "3.3" )
+    , ( "pkgs.python3Packages.hfst", "3.16.0" )
+    , ( "pkgs.python3Packages.hg-commitsigs", "2021-01-08" )
+    , ( "pkgs.python3Packages.hg-evolve", "11.1.0" )
+    , ( "pkgs.python3Packages.hg-git", "1.0.2" )
+    , ( "pkgs.python3Packages.hglib", "2.6.2" )
+    , ( "pkgs.python3Packages.hickle", "5.0.2" )
+    , ( "pkgs.python3Packages.hid", "1.0.5" )
+    , ( "pkgs.python3Packages.hid-parser", "0.0.3" )
+    , ( "pkgs.python3Packages.hidapi", "0.14.0" )
+    , ( "pkgs.python3Packages.hieroglyph", "2.1.0" )
+    , ( "pkgs.python3Packages.hijri-converter", "2.3.1" )
+    , ( "pkgs.python3Packages.hikvision", "2.0.4" )
+    , ( "pkgs.python3Packages.hiredis", "2.3.0" )
+    , ( "pkgs.python3Packages.hiro", "1.1.1" )
+    , ( "pkgs.python3Packages.hist", "2.7.2" )
+    , ( "pkgs.python3Packages.histoprint", "2.4.0" )
+    , ( "pkgs.python3Packages.hiyapyco", "0.5.1" )
+    , ( "pkgs.python3Packages.hjson", "3.0.2" )
+    , ( "pkgs.python3Packages.hkavr", "0.0.5" )
+    , ( "pkgs.python3Packages.hkdf", "0.0.3" )
+    , ( "pkgs.python3Packages.hledger-utils", "1.14.0" )
+    , ( "pkgs.python3Packages.hlk-sw16", "0.0.9" )
+    , ( "pkgs.python3Packages.hmmlearn", "0.3.0" )
+    , ( "pkgs.python3Packages.hnswlib", "0.7.0" )
+    , ( "pkgs.python3Packages.hocr-tools", "1.3.0" )
+    , ( "pkgs.python3Packages.hole", "0.8.0" )
+    , ( "pkgs.python3Packages.holidays", "0.36" )
+    , ( "pkgs.python3Packages.hologram", "0.0.16" )
+    , ( "pkgs.python3Packages.holoviews", "1.18.0" )
+    , ( "pkgs.python3Packages.home-assistant-bluetooth", "1.10.4" )
+    , ( "pkgs.python3Packages.home-assistant-chip-clusters", "2023.10.2" )
+    , ( "pkgs.python3Packages.home-assistant-chip-core", "2023.10.2" )
+    , ( "pkgs.python3Packages.homeassistant-pyozw", "0.1.10" )
+    , ( "pkgs.python3Packages.homeassistant-stubs", "2023.11.3" )
+    , ( "pkgs.python3Packages.homeconnect", "0.7.2" )
+    , ( "pkgs.python3Packages.homematicip", "1.0.16" )
+    , ( "pkgs.python3Packages.homepluscontrol", "0.1" )
+    , ( "pkgs.python3Packages.hoomd-blue", "2.3.4" )
+    , ( "pkgs.python3Packages.hopcroftkarp", "1.2.5" )
+    , ( "pkgs.python3Packages.horizon-eda", "2.5.0" )
+    , ( "pkgs.python3Packages.howdoi", "2.0.20" )
+    , ( "pkgs.python3Packages.hpack", "4.0.0" )
+    , ( "pkgs.python3Packages.hpccm", "22.10.0" )
+    , ( "pkgs.python3Packages.hpp-fcl", "2.3.7" )
+    , ( "pkgs.python3Packages.hs-dbus-signature", "0.7" )
+    , ( "pkgs.python3Packages.hsaudiotag3k", "1.1.3.post1" )
+    , ( "pkgs.python3Packages.hsluv", "5.0.4" )
+    , ( "pkgs.python3Packages.hstspreload", "2023.1.1" )
+    , ( "pkgs.python3Packages.html-sanitizer", "2.2" )
+    , ( "pkgs.python3Packages.html-tag-names", "0.1.2" )
+    , ( "pkgs.python3Packages.html-text", "0.5.2" )
+    , ( "pkgs.python3Packages.html-void-elements", "0.1.0" )
+    , ( "pkgs.python3Packages.html2text", "2020.1.16" )
+    , ( "pkgs.python3Packages.html5-parser", "0.4.11" )
+    , ( "pkgs.python3Packages.html5lib", "1.1" )
+    , ( "pkgs.python3Packages.html5tagger", "1.3.0" )
+    , ( "pkgs.python3Packages.htmllaundry", "2.2" )
+    , ( "pkgs.python3Packages.htmllistparse", "0.6.1" )
+    , ( "pkgs.python3Packages.htmlmin", "0.1.12" )
+    , ( "pkgs.python3Packages.htseq", "0.12.4" )
+    , ( "pkgs.python3Packages.httmock", "1.4.0" )
+    , ( "pkgs.python3Packages.http-ece", "1.1.0" )
+    , ( "pkgs.python3Packages.http-message-signatures", "0.4.4" )
+    , ( "pkgs.python3Packages.http-parser", "0.9.0" )
+    , ( "pkgs.python3Packages.http-sfv", "0.9.8" )
+    , ( "pkgs.python3Packages.httpagentparser", "1.9.5" )
+    , ( "pkgs.python3Packages.httpauth", "0.3" )
+    , ( "pkgs.python3Packages.httpbin", "0.10.1" )
+    , ( "pkgs.python3Packages.httpcore", "0.18.0" )
+    , ( "pkgs.python3Packages.httpie", "3.2.2" )
+    , ( "pkgs.python3Packages.httpie-ntlm", "1.0.2" )
+    , ( "pkgs.python3Packages.httplib2", "0.21.0" )
+    , ( "pkgs.python3Packages.httpretty", "1.1.4" )
+    , ( "pkgs.python3Packages.httpserver", "1.1.0" )
+    , ( "pkgs.python3Packages.httpsig", "1.3.0" )
+    , ( "pkgs.python3Packages.httptools", "0.6.0" )
+    , ( "pkgs.python3Packages.httpx", "0.25.0" )
+    , ( "pkgs.python3Packages.httpx-auth", "0.18.0" )
+    , ( "pkgs.python3Packages.httpx-ntlm", "1.4.0" )
+    , ( "pkgs.python3Packages.httpx-socks", "0.8.0" )
+    , ( "pkgs.python3Packages.huawei-lte-api", "1.7.3" )
+    , ( "pkgs.python3Packages.huey", "2.5.0" )
+    , ( "pkgs.python3Packages.hug", "2.6.0" )
+    , ( "pkgs.python3Packages.huggingface-hub", "0.18.0" )
+    , ( "pkgs.python3Packages.huisbaasje-client", "0.1.0" )
+    , ( "pkgs.python3Packages.humanfriendly", "10.0" )
+    , ( "pkgs.python3Packages.humanize", "4.8.0" )
+    , ( "pkgs.python3Packages.humblewx", "0.2.2" )
+    , ( "pkgs.python3Packages.hupper", "1.12" )
+    , ( "pkgs.python3Packages.huum", "0.7.1" )
+    , ( "pkgs.python3Packages.hvac", "1.2.1" )
+    , ( "pkgs.python3Packages.hvplot", "0.9.0" )
+    , ( "pkgs.python3Packages.hwdata", "2.4.1" )
+    , ( "pkgs.python3Packages.hwi", "2.3.1" )
+    , ( "pkgs.python3Packages.hy", "0.27.0" )
+    , ( "pkgs.python3Packages.hydra-check", "1.3.5" )
+    , ( "pkgs.python3Packages.hydra-core", "1.3.2" )
+    , ( "pkgs.python3Packages.hydrawiser", "0.2" )
+    , ( "pkgs.python3Packages.hydrus-api", "5.0.1" )
+    , ( "pkgs.python3Packages.hypchat", "0.21" )
+    , ( "pkgs.python3Packages.hypercorn", "0.14.3" )
+    , ( "pkgs.python3Packages.hyperframe", "6.0.1" )
+    , ( "pkgs.python3Packages.hyperion-py", "0.7.5" )
+    , ( "pkgs.python3Packages.hyperlink", "21.0.0" )
+    , ( "pkgs.python3Packages.hyperopt", "0.2.7" )
+    , ( "pkgs.python3Packages.hyperpyyaml", "1.2.2" )
+    , ( "pkgs.python3Packages.hyperscan", "0.6.0" )
+    , ( "pkgs.python3Packages.hypothesis", "6.84.3" )
+    , ( "pkgs.python3Packages.hypothesis-auto", "1.1.5" )
+    , ( "pkgs.python3Packages.hypothesmith", "0.3.0" )
+    , ( "pkgs.python3Packages.hyppo", "0.4.0" )
+    , ( "pkgs.python3Packages.hyrule", "0.4.0" )
+    , ( "pkgs.python3Packages.i-pi", "2.4.0" )
+    , ( "pkgs.python3Packages.i2c-tools", "4.3" )
+    , ( "pkgs.python3Packages.i2csense", "0.0.4" )
+    , ( "pkgs.python3Packages.i3-py", "0.6.4" )
+    , ( "pkgs.python3Packages.i3ipc", "2.2.1" )
+    , ( "pkgs.python3Packages.iammeter", "0.2.1" )
+    , ( "pkgs.python3Packages.iapws", "1.5.3" )
+    , ( "pkgs.python3Packages.iaqualink", "0.5.0" )
+    , ( "pkgs.python3Packages.ibeacon-ble", "1.0.1" )
+    , ( "pkgs.python3Packages.ibis", "3.2.0" )
+    , ( "pkgs.python3Packages.ibis-framework", "6.1.0" )
+    , ( "pkgs.python3Packages.ibm-cloud-sdk-core", "3.18.0" )
+    , ( "pkgs.python3Packages.ibm-watson", "7.0.1" )
+    , ( "pkgs.python3Packages.ical", "6.1.0" )
+    , ( "pkgs.python3Packages.icalendar", "5.0.10" )
+    , ( "pkgs.python3Packages.icecream", "2.1.3" )
+    , ( "pkgs.python3Packages.iceportal", "1.1.2" )
+    , ( "pkgs.python3Packages.icmplib", "3.0.4" )
+    , ( "pkgs.python3Packages.icnsutil", "1.1.0" )
+    , ( "pkgs.python3Packages.icoextract", "0.1.4" )
+    , ( "pkgs.python3Packages.icontract", "2.6.4" )
+    , ( "pkgs.python3Packages.ics", "0.7.2" )
+    , ( "pkgs.python3Packages.idasen", "0.10.3" )
+    , ( "pkgs.python3Packages.identify", "2.5.32" )
+    , ( "pkgs.python3Packages.idna", "3.4" )
+    , ( "pkgs.python3Packages.idna-ssl", "1.1.0" )
+    , ( "pkgs.python3Packages.ifaddr", "0.2.0" )
+    , ( "pkgs.python3Packages.ifconfig-parser", "0.0.5" )
+    , ( "pkgs.python3Packages.ifcopenshell", "230915" )
+    , ( "pkgs.python3Packages.ignite", "0.4.13" )
+    , ( "pkgs.python3Packages.igraph", "0.11.3" )
+    , ( "pkgs.python3Packages.ihm", "0.41" )
+    , ( "pkgs.python3Packages.iisignature", "0.24" )
+    , ( "pkgs.python3Packages.ijson", "3.2.3" )
+    , ( "pkgs.python3Packages.ilua", "0.2.1" )
+    , ( "pkgs.python3Packages.image-diff", "0.2.2" )
+    , ( "pkgs.python3Packages.image-go-nord", "0.1.7" )
+    , ( "pkgs.python3Packages.imagecodecs-lite", "2019.12.3" )
+    , ( "pkgs.python3Packages.imagecorruptions", "1.1.2" )
+    , ( "pkgs.python3Packages.imagededup", "0.3.2" )
+    , ( "pkgs.python3Packages.imagehash", "4.3.1" )
+    , ( "pkgs.python3Packages.imageio", "2.33.0" )
+    , ( "pkgs.python3Packages.imageio-ffmpeg", "0.4.9" )
+    , ( "pkgs.python3Packages.imagesize", "1.4.1" )
+    , ( "pkgs.python3Packages.imantics", "0.1.12" )
+    , ( "pkgs.python3Packages.imap-tools", "1.4.0" )
+    , ( "pkgs.python3Packages.imapclient", "3.0.0" )
+    , ( "pkgs.python3Packages.imaplib2", "3.6" )
+    , ( "pkgs.python3Packages.imbalanced-learn", "0.11.0" )
+    , ( "pkgs.python3Packages.img2pdf", "0.5.1" )
+    , ( "pkgs.python3Packages.imgdiff", "1.7.1" )
+    , ( "pkgs.python3Packages.imgsize", "2.1" )
+    , ( "pkgs.python3Packages.imgtool", "2.0.0" )
+    , ( "pkgs.python3Packages.imia", "0.5.3" )
+    , ( "pkgs.python3Packages.iminuit", "2.24.0" )
+    , ( "pkgs.python3Packages.immutabledict", "3.0.0" )
+    , ( "pkgs.python3Packages.immutables", "0.20" )
+    , ( "pkgs.python3Packages.impacket", "0.11.0" )
+    , ( "pkgs.python3Packages.importlab", "0.7" )
+    , ( "pkgs.python3Packages.importlib-metadata", "6.8.0" )
+    , ( "pkgs.python3Packages.importlib-resources", "6.0.1" )
+    , ( "pkgs.python3Packages.importmagic", "0.1.7" )
+    , ( "pkgs.python3Packages.imread", "0.7.4" )
+    , ( "pkgs.python3Packages.imutils", "0.5.4" )
+    , ( "pkgs.python3Packages.in-n-out", "0.1.9" )
+    , ( "pkgs.python3Packages.in-place", "1.0.0" )
+    , ( "pkgs.python3Packages.incomfort-client", "0.5.0" )
+    , ( "pkgs.python3Packages.incremental", "22.10.0" )
+    , ( "pkgs.python3Packages.indexed-bzip2", "1.5.0" )
+    , ( "pkgs.python3Packages.indexed-gzip", "1.8.5" )
+    , ( "pkgs.python3Packages.indexed-zstd", "1.6.0" )
+    , ( "pkgs.python3Packages.infinity", "1.5" )
+    , ( "pkgs.python3Packages.inflect", "7.0.0" )
+    , ( "pkgs.python3Packages.inflection", "0.5.1" )
+    , ( "pkgs.python3Packages.influxdb", "5.3.1" )
+    , ( "pkgs.python3Packages.influxdb-client", "1.38.0" )
+    , ( "pkgs.python3Packages.inform", "1.28" )
+    , ( "pkgs.python3Packages.iniconfig", "2.0.0" )
+    , ( "pkgs.python3Packages.inifile", "0.4.1" )
+    , ( "pkgs.python3Packages.iniparse", "0.5" )
+    , ( "pkgs.python3Packages.injector", "0.21.0" )
+    , ( "pkgs.python3Packages.inkbird-ble", "0.5.6" )
+    , ( "pkgs.python3Packages.inkex", "1.3.2" )
+    , ( "pkgs.python3Packages.inlinestyler", "0.2.5" )
+    , ( "pkgs.python3Packages.inotify", "2020-08-27" )
+    , ( "pkgs.python3Packages.inotify-simple", "1.3.5" )
+    , ( "pkgs.python3Packages.inotifyrecursive", "0.3.5" )
+    , ( "pkgs.python3Packages.inquirer", "3.1.3" )
+    , ( "pkgs.python3Packages.inquirerpy", "0.3.4" )
+    , ( "pkgs.python3Packages.inscriptis", "2.3.2" )
+    , ( "pkgs.python3Packages.insegel", "1.3.1" )
+    , ( "pkgs.python3Packages.insightface", "0.7.3" )
+    , ( "pkgs.python3Packages.installer", "0.7.0" )
+    , ( "pkgs.python3Packages.insteon-frontend-home-assistant", "0.3.5-1" )
+    , ( "pkgs.python3Packages.intake", "0.7.0" )
+    , ( "pkgs.python3Packages.intake-parquet", "0.3.0" )
+    , ( "pkgs.python3Packages.intbitset", "3.0.2" )
+    , ( "pkgs.python3Packages.intelhex", "2.3.0" )
+    , ( "pkgs.python3Packages.intellifire4py", "3.1.30" )
+    , ( "pkgs.python3Packages.intensity-normalization", "2.2.4" )
+    , ( "pkgs.python3Packages.interface-meta", "1.3.0" )
+    , ( "pkgs.python3Packages.internetarchive", "3.5.0" )
+    , ( "pkgs.python3Packages.interruptingcow", "0.8" )
+    , ( "pkgs.python3Packages.intervaltree", "3.1.0" )
+    , ( "pkgs.python3Packages.into-dbus-python", "0.8.2" )
+    , ( "pkgs.python3Packages.invisible-watermark", "0.2.0" )
+    , ( "pkgs.python3Packages.invocations", "3.3.0" )
+    , ( "pkgs.python3Packages.invoke", "2.2.0" )
+    , ( "pkgs.python3Packages.iocapture", "0.1.2" )
+    , ( "pkgs.python3Packages.iocextract", "1.16.1" )
+    , ( "pkgs.python3Packages.iodata", "0.1.7" )
+    , ( "pkgs.python3Packages.ionhash", "1.2.1" )
+    , ( "pkgs.python3Packages.ionoscloud", "6.1.8" )
+    , ( "pkgs.python3Packages.iopath", "0.1.9" )
+    , ( "pkgs.python3Packages.iotawattpy", "0.1.0" )
+    , ( "pkgs.python3Packages.iowait", "0.2" )
+    , ( "pkgs.python3Packages.ipaddr", "2.2.0" )
+    , ( "pkgs.python3Packages.ipadic", "1.0.0" )
+    , ( "pkgs.python3Packages.ipdb", "0.13.13" )
+    , ( "pkgs.python3Packages.ipdbplugin", "1.5.0" )
+    , ( "pkgs.python3Packages.ipfshttpclient", "0.8.0a2" )
+    , ( "pkgs.python3Packages.iptools", "0.7.0" )
+    , ( "pkgs.python3Packages.ipwhl", "1.1.0" )
+    , ( "pkgs.python3Packages.ipwhois", "1.2.0" )
+    , ( "pkgs.python3Packages.ipy", "1.01" )
+    , ( "pkgs.python3Packages.ipycanvas", "0.13.1" )
+    , ( "pkgs.python3Packages.ipydatawidgets", "4.3.5" )
+    , ( "pkgs.python3Packages.ipykernel", "6.27.1" )
+    , ( "pkgs.python3Packages.ipymarkup", "0.9.0" )
+    , ( "pkgs.python3Packages.ipympl", "0.9.3" )
+    , ( "pkgs.python3Packages.ipynbname", "2023.2.0.0" )
+    , ( "pkgs.python3Packages.ipyniivue", "1.1.0" )
+    , ( "pkgs.python3Packages.ipyparallel", "8.6.1" )
+    , ( "pkgs.python3Packages.ipytablewidgets", "0.3.1" )
+    , ( "pkgs.python3Packages.ipython", "8.15.0" )
+    , ( "pkgs.python3Packages.ipython-genutils", "0.2.0" )
+    , ( "pkgs.python3Packages.ipython-sql", "0.4.0" )
+    , ( "pkgs.python3Packages.ipython_genutils", "0.2.0" )
+    , ( "pkgs.python3Packages.ipyvue", "1.10.1" )
+    , ( "pkgs.python3Packages.ipyvuetify", "1.8.10" )
+    , ( "pkgs.python3Packages.ipywidgets", "8.1.1" )
+    , ( "pkgs.python3Packages.ipyxact", "0.3.2" )
+    , ( "pkgs.python3Packages.irc", "20.3.0" )
+    , ( "pkgs.python3Packages.ircrobots", "0.6.6" )
+    , ( "pkgs.python3Packages.ircstates", "0.12.1" )
+    , ( "pkgs.python3Packages.irctokens", "2.0.2" )
+    , ( "pkgs.python3Packages.isbnlib", "3.10.14" )
+    , ( "pkgs.python3Packages.islpy", "2023.1.2" )
+    , ( "pkgs.python3Packages.ismartgate", "5.0.1" )
+    , ( "pkgs.python3Packages.iso-639", "639-0.4.5" )
+    , ( "pkgs.python3Packages.iso3166", "2.1.1" )
+    , ( "pkgs.python3Packages.iso4217", "1.11" )
+    , ( "pkgs.python3Packages.iso8601", "2.0.0" )
+    , ( "pkgs.python3Packages.isodate", "0.6.1" )
+    , ( "pkgs.python3Packages.isoduration", "20.11.0" )
+    , ( "pkgs.python3Packages.isort", "5.12.0" )
+    , ( "pkgs.python3Packages.isosurfaces", "0.1.0" )
+    , ( "pkgs.python3Packages.isounidecode", "0.3" )
+    , ( "pkgs.python3Packages.isoweek", "1.3.3" )
+    , ( "pkgs.python3Packages.itanium-demangler", "1.1" )
+    , ( "pkgs.python3Packages.itanium_demangler", "1.1" )
+    , ( "pkgs.python3Packages.itemadapter", "0.8.0" )
+    , ( "pkgs.python3Packages.itemdb", "1.1.2" )
+    , ( "pkgs.python3Packages.itemloaders", "1.1.0" )
+    , ( "pkgs.python3Packages.iteration-utilities", "0.12.0" )
+    , ( "pkgs.python3Packages.iterative-telemetry", "0.0.7" )
+    , ( "pkgs.python3Packages.iterm2", "2.7" )
+    , ( "pkgs.python3Packages.itsdangerous", "2.1.2" )
+    , ( "pkgs.python3Packages.itunespy", "1.6" )
+    , ( "pkgs.python3Packages.itypes", "1.2.0" )
+    , ( "pkgs.python3Packages.iwlib", "1.7.0" )
+    , ( "pkgs.python3Packages.j2cli", "0.3.10" )
+    , ( "pkgs.python3Packages.jaconv", "0.3.4" )
+    , ( "pkgs.python3Packages.jaeger-client", "4.8.0" )
+    , ( "pkgs.python3Packages.jamo", "0.4.1" )
+    , ( "pkgs.python3Packages.janus", "1.0.0" )
+    , ( "pkgs.python3Packages.jaraco-abode", "5.1.0" )
+    , ( "pkgs.python3Packages.jaraco-classes", "3.3.0" )
+    , ( "pkgs.python3Packages.jaraco-collections", "4.3.0" )
+    , ( "pkgs.python3Packages.jaraco-context", "4.3.0" )
+    , ( "pkgs.python3Packages.jaraco-email", "3.1.0" )
+    , ( "pkgs.python3Packages.jaraco-functools", "3.9.0" )
+    , ( "pkgs.python3Packages.jaraco-itertools", "6.4.1" )
+    , ( "pkgs.python3Packages.jaraco-logging", "3.2.0" )
+    , ( "pkgs.python3Packages.jaraco-net", "9.3.1" )
+    , ( "pkgs.python3Packages.jaraco-stream", "3.0.3" )
+    , ( "pkgs.python3Packages.jaraco-test", "5.3.0" )
+    , ( "pkgs.python3Packages.jaraco-text", "3.11.1" )
+    , ( "pkgs.python3Packages.jaraco_classes", "3.3.0" )
+    , ( "pkgs.python3Packages.jaraco_collections", "4.3.0" )
+    , ( "pkgs.python3Packages.jaraco_functools", "3.9.0" )
+    , ( "pkgs.python3Packages.jaraco_itertools", "6.4.1" )
+    , ( "pkgs.python3Packages.jaraco_logging", "3.2.0" )
+    , ( "pkgs.python3Packages.jaraco_stream", "3.0.3" )
+    , ( "pkgs.python3Packages.jaraco_text", "3.11.1" )
+    , ( "pkgs.python3Packages.jarowinkler", "2.0.1" )
+    , ( "pkgs.python3Packages.javaobj-py3", "0.4.3" )
+    , ( "pkgs.python3Packages.javaproperties", "0.8.1" )
+    , ( "pkgs.python3Packages.jax", "0.4.20" )
+    , ( "pkgs.python3Packages.jax-jumpy", "1.0.0" )
+    , ( "pkgs.python3Packages.jaxlib", "0.4.20" )
+    , ( "pkgs.python3Packages.jaxlib-bin", "0.4.20" )
+    , ( "pkgs.python3Packages.jaxlib-build", "0.4.20" )
+    , ( "pkgs.python3Packages.jaxlibWithCuda", "0.4.20" )
+    , ( "pkgs.python3Packages.jaxlibWithoutCuda", "0.4.20" )
+    , ( "pkgs.python3Packages.jaxopt", "0.8.2" )
+    , ( "pkgs.python3Packages.jaxtyping", "0.2.23" )
+    , ( "pkgs.python3Packages.jaydebeapi", "1.2.3" )
+    , ( "pkgs.python3Packages.jc", "1.23.6" )
+    , ( "pkgs.python3Packages.jdatetime", "4.1.1" )
+    , ( "pkgs.python3Packages.jdcal", "1.4.1" )
+    , ( "pkgs.python3Packages.jedi", "0.19.1" )
+    , ( "pkgs.python3Packages.jedi-language-server", "0.41.1-unstable-2023-10-04" )
+    , ( "pkgs.python3Packages.jeepney", "0.8.0" )
+    , ( "pkgs.python3Packages.jello", "1.6.0" )
+    , ( "pkgs.python3Packages.jellyfin-apiclient-python", "1.9.2" )
+    , ( "pkgs.python3Packages.jellyfish", "1.0.0" )
+    , ( "pkgs.python3Packages.jenkins-job-builder", "5.0.4" )
+    , ( "pkgs.python3Packages.jenkinsapi", "0.3.13" )
+    , ( "pkgs.python3Packages.jieba", "0.42.1" )
+    , ( "pkgs.python3Packages.jinja2", "3.1.2" )
+    , ( "pkgs.python3Packages.jinja2-ansible-filters", "1.3.2" )
+    , ( "pkgs.python3Packages.jinja2-git", "1.3.0" )
+    , ( "pkgs.python3Packages.jinja2-pluralize", "0.3.0" )
+    , ( "pkgs.python3Packages.jinja2-time", "0.2.0" )
+    , ( "pkgs.python3Packages.jinja2_pluralize", "0.3.0" )
+    , ( "pkgs.python3Packages.jinja2_time", "0.2.0" )
+    , ( "pkgs.python3Packages.jira", "3.5.2" )
+    , ( "pkgs.python3Packages.jiwer", "3.0.3" )
+    , ( "pkgs.python3Packages.jmespath", "1.0.1" )
+    , ( "pkgs.python3Packages.jmp", "0.0.4" )
+    , ( "pkgs.python3Packages.joblib", "1.3.2" )
+    , ( "pkgs.python3Packages.johnnycanencrypt", "0.14.1" )
+    , ( "pkgs.python3Packages.josepy", "1.13.0" )
+    , ( "pkgs.python3Packages.journalwatch", "1.1.0" )
+    , ( "pkgs.python3Packages.jplephem", "2.19" )
+    , ( "pkgs.python3Packages.jproperties", "2.1.1" )
+    , ( "pkgs.python3Packages.jpylyzer", "2.1.0" )
+    , ( "pkgs.python3Packages.jpype1", "1.4.1" )
+    , ( "pkgs.python3Packages.jq", "1.5.0" )
+    , ( "pkgs.python3Packages.js2py", "0.74" )
+    , ( "pkgs.python3Packages.jsbeautifier", "1.14.9" )
+    , ( "pkgs.python3Packages.jschema-to-python", "1.2.3" )
+    , ( "pkgs.python3Packages.jsmin", "3.0.1" )
+    , ( "pkgs.python3Packages.json-home-client", "1.1.1" )
+    , ( "pkgs.python3Packages.json-logging", "1.5.0-rc0" )
+    , ( "pkgs.python3Packages.json-merge-patch", "0.2" )
+    , ( "pkgs.python3Packages.json-rpc", "1.15.0" )
+    , ( "pkgs.python3Packages.json-schema-for-humans", "0.46" )
+    , ( "pkgs.python3Packages.json-stream", "2.3.2" )
+    , ( "pkgs.python3Packages.json-stream-rs-tokenizer", "0.4.22" )
+    , ( "pkgs.python3Packages.json-tricks", "3.17.3" )
+    , ( "pkgs.python3Packages.json5", "0.9.14" )
+    , ( "pkgs.python3Packages.jsonable", "0.3.1" )
+    , ( "pkgs.python3Packages.jsonconversion", "0.2.13" )
+    , ( "pkgs.python3Packages.jsondate", "0.1.3" )
+    , ( "pkgs.python3Packages.jsondiff", "2.0.0" )
+    , ( "pkgs.python3Packages.jsonfield", "3.1.0" )
+    , ( "pkgs.python3Packages.jsonlines", "3.1.0" )
+    , ( "pkgs.python3Packages.jsonmerge", "1.9.2" )
+    , ( "pkgs.python3Packages.jsonnet", "0.20.0" )
+    , ( "pkgs.python3Packages.jsonpatch", "1.33" )
+    , ( "pkgs.python3Packages.jsonpath", "0.82.2" )
+    , ( "pkgs.python3Packages.jsonpath-ng", "1.6.0" )
+    , ( "pkgs.python3Packages.jsonpath_rw", "1.4.0" )
+    , ( "pkgs.python3Packages.jsonpickle", "3.0.2" )
+    , ( "pkgs.python3Packages.jsonpointer", "2.4" )
+    , ( "pkgs.python3Packages.jsonref", "1.1.0" )
+    , ( "pkgs.python3Packages.jsonrpc-async", "2.1.2" )
+    , ( "pkgs.python3Packages.jsonrpc-base", "2.1.1" )
+    , ( "pkgs.python3Packages.jsonrpc-websocket", "3.1.4" )
+    , ( "pkgs.python3Packages.jsonrpclib-pelix", "0.4.3.2" )
+    , ( "pkgs.python3Packages.jsons", "1.6.3" )
+    , ( "pkgs.python3Packages.jsonschema", "4.19.0" )
+    , ( "pkgs.python3Packages.jsonschema-spec", "0.2.4" )
+    , ( "pkgs.python3Packages.jsonschema-specifications", "2023.7.1" )
+    , ( "pkgs.python3Packages.jsonstreams", "0.6.0" )
+    , ( "pkgs.python3Packages.jstyleson", "0.0.2" )
+    , ( "pkgs.python3Packages.jug", "2.3.1" )
+    , ( "pkgs.python3Packages.junit-xml", "1.9" )
+    , ( "pkgs.python3Packages.junit2html", "30.1.3" )
+    , ( "pkgs.python3Packages.junitparser", "2.8.0" )
+    , ( "pkgs.python3Packages.junos-eznc", "2.6.8" )
+    , ( "pkgs.python3Packages.jupyter", "1.0.0" )
+    , ( "pkgs.python3Packages.jupyter-book", "0.15.1" )
+    , ( "pkgs.python3Packages.jupyter-c-kernel", "1.2.2" )
+    , ( "pkgs.python3Packages.jupyter-cache", "1.0.0" )
+    , ( "pkgs.python3Packages.jupyter-client", "8.3.1" )
+    , ( "pkgs.python3Packages.jupyter-collaboration", "1.2.0" )
+    , ( "pkgs.python3Packages.jupyter-console", "6.6.3" )
+    , ( "pkgs.python3Packages.jupyter-contrib-core", "0.4.2" )
+    , ( "pkgs.python3Packages.jupyter-contrib-nbextensions", "0.7.0" )
+    , ( "pkgs.python3Packages.jupyter-core", "5.5.0" )
+    , ( "pkgs.python3Packages.jupyter-events", "0.9.0" )
+    , ( "pkgs.python3Packages.jupyter-highlight-selected-word", "0.2.0" )
+    , ( "pkgs.python3Packages.jupyter-lsp", "2.2.0" )
+    , ( "pkgs.python3Packages.jupyter-nbextensions-configurator", "0.6.3" )
+    , ( "pkgs.python3Packages.jupyter-packaging", "0.12.3" )
+    , ( "pkgs.python3Packages.jupyter-repo2docker", "2022.10.0" )
+    , ( "pkgs.python3Packages.jupyter-server", "2.12.1" )
+    , ( "pkgs.python3Packages.jupyter-server-fileid", "0.9.0" )
+    , ( "pkgs.python3Packages.jupyter-server-mathjax", "0.2.6" )
+    , ( "pkgs.python3Packages.jupyter-server-terminals", "0.4.4" )
+    , ( "pkgs.python3Packages.jupyter-server-ydoc", "1.2.0" )
+    , ( "pkgs.python3Packages.jupyter-sphinx", "0.4.0" )
+    , ( "pkgs.python3Packages.jupyter-telemetry", "0.1.0" )
+    , ( "pkgs.python3Packages.jupyter-ui-poll", "0.2.2" )
+    , ( "pkgs.python3Packages.jupyter-ydoc", "1.1.1" )
+    , ( "pkgs.python3Packages.jupyter_client", "8.3.1" )
+    , ( "pkgs.python3Packages.jupyter_console", "6.6.3" )
+    , ( "pkgs.python3Packages.jupyter_core", "5.5.0" )
+    , ( "pkgs.python3Packages.jupyter_server", "2.12.1" )
+    , ( "pkgs.python3Packages.jupyterhub", "4.0.2" )
+    , ( "pkgs.python3Packages.jupyterhub-ldapauthenticator", "1.3.2" )
+    , ( "pkgs.python3Packages.jupyterhub-systemdspawner", "1.0.1" )
+    , ( "pkgs.python3Packages.jupyterhub-tmpauthenticator", "1.0.0" )
+    , ( "pkgs.python3Packages.jupyterlab", "4.0.6" )
+    , ( "pkgs.python3Packages.jupyterlab-git", "0.50.0" )
+    , ( "pkgs.python3Packages.jupyterlab-lsp", "5.0.0" )
+    , ( "pkgs.python3Packages.jupyterlab-pygments", "0.2.2" )
+    , ( "pkgs.python3Packages.jupyterlab-server", "2.25.1" )
+    , ( "pkgs.python3Packages.jupyterlab-widgets", "3.0.9" )
+    , ( "pkgs.python3Packages.jupyterlab_server", "2.25.1" )
+    , ( "pkgs.python3Packages.jupytext", "1.15.2" )
+    , ( "pkgs.python3Packages.justbackoff", "0.6.0" )
+    , ( "pkgs.python3Packages.justbases", "0.15.2" )
+    , ( "pkgs.python3Packages.justbytes", "0.15.2" )
+    , ( "pkgs.python3Packages.justnimbus", "0.7.2" )
+    , ( "pkgs.python3Packages.jwcrypto", "1.5.0" )
+    , ( "pkgs.python3Packages.jwt", "1.3.1" )
+    , ( "pkgs.python3Packages.jxmlease", "1.0.3" )
+    , ( "pkgs.python3Packages.k-diffusion", "0.1.1" )
+    , ( "pkgs.python3Packages.k5test", "0.10.3" )
+    , ( "pkgs.python3Packages.kaa-base", "0.99.2dev-384-2b73caca" )
+    , ( "pkgs.python3Packages.kaa-metadata", "0.7.8dev-r4569-20111003" )
+    , ( "pkgs.python3Packages.kafka-python", "2.0.2" )
+    , ( "pkgs.python3Packages.kaggle", "1.5.16" )
+    , ( "pkgs.python3Packages.kaitaistruct", "0.10" )
+    , ( "pkgs.python3Packages.kajiki", "0.9.2" )
+    , ( "pkgs.python3Packages.kaldi-active-grammar", "3.1.0" )
+    , ( "pkgs.python3Packages.kanidm", "0.0.3" )
+    , ( "pkgs.python3Packages.kaptan", "0.6.0" )
+    , ( "pkgs.python3Packages.karton-asciimagic", "1.2.0" )
+    , ( "pkgs.python3Packages.karton-autoit-ripper", "1.2.0" )
+    , ( "pkgs.python3Packages.karton-classifier", "2.0.0" )
+    , ( "pkgs.python3Packages.karton-config-extractor", "2.2.0" )
+    , ( "pkgs.python3Packages.karton-core", "5.3.0" )
+    , ( "pkgs.python3Packages.karton-dashboard", "1.5.0" )
+    , ( "pkgs.python3Packages.karton-mwdb-reporter", "1.3.0" )
+    , ( "pkgs.python3Packages.karton-yaramatcher", "1.3.0" )
+    , ( "pkgs.python3Packages.kasa-crypt", "0.4.0" )
+    , ( "pkgs.python3Packages.kazoo", "2.9.0" )
+    , ( "pkgs.python3Packages.kbcstorage", "0.7.1" )
+    , ( "pkgs.python3Packages.kconfiglib", "14.1.0" )
+    , ( "pkgs.python3Packages.keba-kecontact", "3.0.3" )
+    , ( "pkgs.python3Packages.keep", "2.10.1" )
+    , ( "pkgs.python3Packages.keepalive", "0.5" )
+    , ( "pkgs.python3Packages.keepkey", "7.2.1" )
+    , ( "pkgs.python3Packages.keepkey_agent", "0.9.0" )
+    , ( "pkgs.python3Packages.kegtron-ble", "0.4.0" )
+    , ( "pkgs.python3Packages.keras", "2.14.0" )
+    , ( "pkgs.python3Packages.keras-applications", "1.0.8" )
+    , ( "pkgs.python3Packages.keras-preprocessing", "1.1.2" )
+    , ( "pkgs.python3Packages.kerberos", "1.3.1" )
+    , ( "pkgs.python3Packages.keyboard", "0.13.5" )
+    , ( "pkgs.python3Packages.keyring", "24.2.0" )
+    , ( "pkgs.python3Packages.keyrings-alt", "5.0.0" )
+    , ( "pkgs.python3Packages.keyrings-cryptfile", "1.3.9" )
+    , ( "pkgs.python3Packages.keyrings-google-artifactregistry-auth", "1.1.2" )
+    , ( "pkgs.python3Packages.keyrings-passwordstore", "0.1.0" )
+    , ( "pkgs.python3Packages.keystone-engine", "0.9.2" )
+    , ( "pkgs.python3Packages.keystoneauth1", "5.3.0" )
+    , ( "pkgs.python3Packages.keyutils", "0.6" )
+    , ( "pkgs.python3Packages.kicad", "7.0.9" )
+    , ( "pkgs.python3Packages.kinparse", "2019-12-18" )
+    , ( "pkgs.python3Packages.kiss-headers", "2.3.1" )
+    , ( "pkgs.python3Packages.kitchen", "1.2.6" )
+    , ( "pkgs.python3Packages.kivy", "2.1.0" )
+    , ( "pkgs.python3Packages.kivy-garden", "0.1.5" )
+    , ( "pkgs.python3Packages.kiwiki-client", "0.1.2" )
+    , ( "pkgs.python3Packages.kiwisolver", "1.4.5" )
+    , ( "pkgs.python3Packages.klaus", "2.0.3" )
+    , ( "pkgs.python3Packages.klein", "2023-09-05" )
+    , ( "pkgs.python3Packages.kmapper", "2.0.1" )
+    , ( "pkgs.python3Packages.kml2geojson", "5.1.0" )
+    , ( "pkgs.python3Packages.kmsxx", "2021-07-26" )
+    , ( "pkgs.python3Packages.knack", "0.11.0" )
+    , ( "pkgs.python3Packages.kneed", "0.8.5" )
+    , ( "pkgs.python3Packages.knx-frontend", "2023.6.23.191712" )
+    , ( "pkgs.python3Packages.kombu", "5.3.4" )
+    , ( "pkgs.python3Packages.konnected", "1.2.0" )
+    , ( "pkgs.python3Packages.korean-lunar-calendar", "0.3.1" )
+    , ( "pkgs.python3Packages.kornia", "0.7.0" )
+    , ( "pkgs.python3Packages.kotsu", "0.3.3" )
+    , ( "pkgs.python3Packages.krakenex", "2.1.0" )
+    , ( "pkgs.python3Packages.krfzf-py", "0.0.6" )
+    , ( "pkgs.python3Packages.kubernetes", "27.2.0" )
+    , ( "pkgs.python3Packages.l18n", "2021.3" )
+    , ( "pkgs.python3Packages.labelbox", "3.56.0" )
+    , ( "pkgs.python3Packages.labgrid", "23.0.3" )
+    , ( "pkgs.python3Packages.labmath", "2.2.0" )
+    , ( "pkgs.python3Packages.lakeside", "0.13" )
+    , ( "pkgs.python3Packages.langchain", "0.0.334" )
+    , ( "pkgs.python3Packages.langchainplus-sdk", "0.0.21" )
+    , ( "pkgs.python3Packages.langcodes", "3.3.0" )
+    , ( "pkgs.python3Packages.langdetect", "1.0.9" )
+    , ( "pkgs.python3Packages.langid", "1.1.6" )
+    , ( "pkgs.python3Packages.langsmith", "0.0.63" )
+    , ( "pkgs.python3Packages.language-data", "1.0.1" )
+    , ( "pkgs.python3Packages.language-tags", "1.2.0" )
+    , ( "pkgs.python3Packages.lanms-neo", "1.0.2" )
+    , ( "pkgs.python3Packages.lark", "1.1.7" )
+    , ( "pkgs.python3Packages.laspy", "2.5.1" )
+    , ( "pkgs.python3Packages.laszip", "0.2.3" )
+    , ( "pkgs.python3Packages.latex2mathml", "3.76.0" )
+    , ( "pkgs.python3Packages.latexcodec", "2.0.1" )
+    , ( "pkgs.python3Packages.latexify-py", "0.4.1" )
+    , ( "pkgs.python3Packages.launchpadlib", "1.11.0" )
+    , ( "pkgs.python3Packages.laundrify-aio", "1.1.2" )
+    , ( "pkgs.python3Packages.layoutparser", "0.3.4" )
+    , ( "pkgs.python3Packages.lazr-config", "3.0" )
+    , ( "pkgs.python3Packages.lazr-delegates", "2.1.0" )
+    , ( "pkgs.python3Packages.lazr-restfulclient", "0.14.5" )
+    , ( "pkgs.python3Packages.lazr-uri", "1.0.6" )
+    , ( "pkgs.python3Packages.lazr_config", "3.0" )
+    , ( "pkgs.python3Packages.lazr_delegates", "2.1.0" )
+    , ( "pkgs.python3Packages.lazy", "1.4" )
+    , ( "pkgs.python3Packages.lazy-imports", "0.3.1" )
+    , ( "pkgs.python3Packages.lazy-loader", "0.3" )
+    , ( "pkgs.python3Packages.lazy-object-proxy", "1.9.0" )
+    , ( "pkgs.python3Packages.lazy_import", "0.2.2" )
+    , ( "pkgs.python3Packages.lazy_imports", "0.3.1" )
+    , ( "pkgs.python3Packages.lc7001", "1.0.5" )
+    , ( "pkgs.python3Packages.lcgit", "0.2.0" )
+    , ( "pkgs.python3Packages.lcov_cobertura", "2.0.2" )
+    , ( "pkgs.python3Packages.ld2410-ble", "0.2.0" )
+    , ( "pkgs.python3Packages.ldap", "3.4.4" )
+    , ( "pkgs.python3Packages.ldap3", "2.9.1" )
+    , ( "pkgs.python3Packages.ldapdomaindump", "0.9.4" )
+    , ( "pkgs.python3Packages.ldappool", "3.0.0" )
+    , ( "pkgs.python3Packages.ldaptor", "21.2.0" )
+    , ( "pkgs.python3Packages.leather", "0.3.4" )
+    , ( "pkgs.python3Packages.leb128", "1.0.5" )
+    , ( "pkgs.python3Packages.led-ble", "1.0.1" )
+    , ( "pkgs.python3Packages.ledger", "3.3.2" )
+    , ( "pkgs.python3Packages.ledger-bitcoin", "0.2.2" )
+    , ( "pkgs.python3Packages.ledger_agent", "0.9.0" )
+    , ( "pkgs.python3Packages.ledgerblue", "0.1.48" )
+    , ( "pkgs.python3Packages.ledgercomm", "1.2.0" )
+    , ( "pkgs.python3Packages.ledgerwallet", "0.2.4" )
+    , ( "pkgs.python3Packages.leidenalg", "0.9.1" )
+    , ( "pkgs.python3Packages.leveldb", "0.201" )
+    , ( "pkgs.python3Packages.levenshtein", "0.23.0" )
+    , ( "pkgs.python3Packages.lexid", "2021.1006" )
+    , ( "pkgs.python3Packages.lhapdf", "6.5.3" )
+    , ( "pkgs.python3Packages.libagent", "0.14.5" )
+    , ( "pkgs.python3Packages.libais", "0.17" )
+    , ( "pkgs.python3Packages.libarchive-c", "5.0" )
+    , ( "pkgs.python3Packages.libarcus", "4.12.0" )
+    , ( "pkgs.python3Packages.libasyncns", "0.7.1" )
+    , ( "pkgs.python3Packages.libclang", "16.0.6" )
+    , ( "pkgs.python3Packages.libcloud", "3.7.0" )
+    , ( "pkgs.python3Packages.libcst", "1.1.0" )
+    , ( "pkgs.python3Packages.libevdev", "0.11" )
+    , ( "pkgs.python3Packages.libfdt", "1.7.0" )
+    , ( "pkgs.python3Packages.libfive", "2023-06-07" )
+    , ( "pkgs.python3Packages.libgpiod", "2.1" )
+    , ( "pkgs.python3Packages.libgpuarray", "0.7.6" )
+    , ( "pkgs.python3Packages.libiio", "0.24" )
+    , ( "pkgs.python3Packages.libkeepass", "0.3.1.post1" )
+    , ( "pkgs.python3Packages.libknot", "3.3.2" )
+    , ( "pkgs.python3Packages.liblarch", "3.2.0" )
+    , ( "pkgs.python3Packages.liblzfse", "0.4.1" )
+    , ( "pkgs.python3Packages.libmodulemd", "2.15.0" )
+    , ( "pkgs.python3Packages.libmr", "0.1.9" )
+    , ( "pkgs.python3Packages.libnacl", "2.1.0" )
+    , ( "pkgs.python3Packages.libpcap", "1.11.0b7" )
+    , ( "pkgs.python3Packages.libpurecool", "0.6.4" )
+    , ( "pkgs.python3Packages.libpwquality", "1.4.5" )
+    , ( "pkgs.python3Packages.libpyfoscam", "1.2.2" )
+    , ( "pkgs.python3Packages.libpyvivotek", "0.4.0" )
+    , ( "pkgs.python3Packages.libredwg", "0.12.5.6313" )
+    , ( "pkgs.python3Packages.librepo", "1.15.1" )
+    , ( "pkgs.python3Packages.librespot", "0.0.9" )
+    , ( "pkgs.python3Packages.libretranslate", "1.3.11" )
+    , ( "pkgs.python3Packages.librosa", "0.10.1" )
+    , ( "pkgs.python3Packages.librouteros", "3.2.1" )
+    , ( "pkgs.python3Packages.libsass", "0.22.0" )
+    , ( "pkgs.python3Packages.libsavitar", "4.12.0" )
+    , ( "pkgs.python3Packages.libselinux", "3.3" )
+    , ( "pkgs.python3Packages.libsixel", "1.10.3" )
+    , ( "pkgs.python3Packages.libsoundtouch", "0.8.0" )
+    , ( "pkgs.python3Packages.libthumbor", "2.0.2" )
+    , ( "pkgs.python3Packages.libtmux", "0.23.2" )
+    , ( "pkgs.python3Packages.libtorrent-rasterbar", "2.0.9" )
+    , ( "pkgs.python3Packages.libusb1", "3.1.0" )
+    , ( "pkgs.python3Packages.libusbsio", "2.1.11" )
+    , ( "pkgs.python3Packages.libversion", "1.2.4" )
+    , ( "pkgs.python3Packages.libvirt", "9.9.0" )
+    , ( "pkgs.python3Packages.libxml2", "2.11.5" )
+    , ( "pkgs.python3Packages.libxslt", "1.1.38" )
+    , ( "pkgs.python3Packages.liccheck", "0.9.2" )
+    , ( "pkgs.python3Packages.license-expression", "30.1.1" )
+    , ( "pkgs.python3Packages.lief", "0.13.2" )
+    , ( "pkgs.python3Packages.life360", "6.0.0" )
+    , ( "pkgs.python3Packages.lifelines", "0.27.8" )
+    , ( "pkgs.python3Packages.lightgbm", "4.1.0" )
+    , ( "pkgs.python3Packages.lightning-utilities", "0.10.0" )
+    , ( "pkgs.python3Packages.lightparam", "0.4.6" )
+    , ( "pkgs.python3Packages.lightwave", "0.24" )
+    , ( "pkgs.python3Packages.lightwave2", "0.8.23" )
+    , ( "pkgs.python3Packages.lima", "0.5" )
+    , ( "pkgs.python3Packages.lime", "0.2.0.1" )
+    , ( "pkgs.python3Packages.limiter", "0.3.1" )
+    , ( "pkgs.python3Packages.limitlessled", "1.1.3" )
+    , ( "pkgs.python3Packages.limits", "3.6.0" )
+    , ( "pkgs.python3Packages.limnoria", "2023.9.24" )
+    , ( "pkgs.python3Packages.line-profiler", "4.1.2" )
+    , ( "pkgs.python3Packages.line_profiler", "4.1.2" )
+    , ( "pkgs.python3Packages.linear_operator", "0.5.2" )
+    , ( "pkgs.python3Packages.linecache2", "1.0.0" )
+    , ( "pkgs.python3Packages.lineedit", "0.1.6" )
+    , ( "pkgs.python3Packages.linetable", "0.0.3" )
+    , ( "pkgs.python3Packages.lingua", "4.15.0" )
+    , ( "pkgs.python3Packages.linkify-it-py", "2.0.2" )
+    , ( "pkgs.python3Packages.linknlink", "0.1.1" )
+    , ( "pkgs.python3Packages.linode", "0.4" )
+    , ( "pkgs.python3Packages.linode-api", "5.7.2" )
+    , ( "pkgs.python3Packages.linuxfd", "1.5" )
+    , ( "pkgs.python3Packages.lion-pytorch", "0.1.2" )
+    , ( "pkgs.python3Packages.liquidctl", "1.13.0" )
+    , ( "pkgs.python3Packages.lirc", "0.10.2" )
+    , ( "pkgs.python3Packages.lit", "17.0.1" )
+    , ( "pkgs.python3Packages.litellm", "0.11.1" )
+    , ( "pkgs.python3Packages.litemapy", "0.7.2b0" )
+    , ( "pkgs.python3Packages.littleutils", "0.2.2" )
+    , ( "pkgs.python3Packages.livelossplot", "0.5.5" )
+    , ( "pkgs.python3Packages.livereload", "2.6.3" )
+    , ( "pkgs.python3Packages.livestreamer", "1.12.2" )
+    , ( "pkgs.python3Packages.livestreamer-curses", "1.5.2" )
+    , ( "pkgs.python3Packages.lizard", "1.17.10" )
+    , ( "pkgs.python3Packages.llfuse", "1.5.0" )
+    , ( "pkgs.python3Packages.llm", "0.12" )
+    , ( "pkgs.python3Packages.llvmlite", "0.41.0dev0" )
+    , ( "pkgs.python3Packages.lmdb", "1.4.1" )
+    , ( "pkgs.python3Packages.lmfit", "1.2.2" )
+    , ( "pkgs.python3Packages.lml", "0.1.0" )
+    , ( "pkgs.python3Packages.lmnotify", "0.0.6" )
+    , ( "pkgs.python3Packages.lmtpd", "6.2.0" )
+    , ( "pkgs.python3Packages.loca", "2.0.1" )
+    , ( "pkgs.python3Packages.localimport", "1.7.6" )
+    , ( "pkgs.python3Packages.localstack", "2.3.2" )
+    , ( "pkgs.python3Packages.localstack-client", "1.39" )
+    , ( "pkgs.python3Packages.localstack-ext", "2.3.2" )
+    , ( "pkgs.python3Packages.localzone", "0.9.8" )
+    , ( "pkgs.python3Packages.locationsharinglib", "5.0.2" )
+    , ( "pkgs.python3Packages.locket", "1.0.0" )
+    , ( "pkgs.python3Packages.lockfile", "0.12.2" )
+    , ( "pkgs.python3Packages.log-symbols", "0.0.14" )
+    , ( "pkgs.python3Packages.logbook", "1.6.0" )
+    , ( "pkgs.python3Packages.logfury", "1.0.1" )
+    , ( "pkgs.python3Packages.logging-journald", "0.6.5" )
+    , ( "pkgs.python3Packages.logi-circle", "0.2.3" )
+    , ( "pkgs.python3Packages.logical-unification", "0.4.6" )
+    , ( "pkgs.python3Packages.logilab-common", "1.11.0" )
+    , ( "pkgs.python3Packages.logilab-constraint", "0.6.2" )
+    , ( "pkgs.python3Packages.logilab_common", "1.11.0" )
+    , ( "pkgs.python3Packages.logster", "1.0.1" )
+    , ( "pkgs.python3Packages.loguru", "0.7.2" )
+    , ( "pkgs.python3Packages.logutils", "0.3.5" )
+    , ( "pkgs.python3Packages.logzero", "1.7.0" )
+    , ( "pkgs.python3Packages.lomond", "0.3.3" )
+    , ( "pkgs.python3Packages.loo-py", "2020.2.1" )
+    , ( "pkgs.python3Packages.loopy", "2020.2.1" )
+    , ( "pkgs.python3Packages.looseversion", "1.3.0" )
+    , ( "pkgs.python3Packages.loqedapi", "2.1.8" )
+    , ( "pkgs.python3Packages.losant-rest", "1.19.2" )
+    , ( "pkgs.python3Packages.lpc-checksum", "3.0.0" )
+    , ( "pkgs.python3Packages.lrcalc-python", "2.1" )
+    , ( "pkgs.python3Packages.lru-dict", "1.3.0" )
+    , ( "pkgs.python3Packages.lsassy", "3.1.9" )
+    , ( "pkgs.python3Packages.lsprotocol", "2023.0.0b1" )
+    , ( "pkgs.python3Packages.ltpycld2", "0.42" )
+    , ( "pkgs.python3Packages.luddite", "1.0.2" )
+    , ( "pkgs.python3Packages.luftdaten", "0.7.4" )
+    , ( "pkgs.python3Packages.luhn", "0.2.0" )
+    , ( "pkgs.python3Packages.lunarcalendar", "0.0.9" )
+    , ( "pkgs.python3Packages.lupa", "2.0" )
+    , ( "pkgs.python3Packages.lupupy", "0.3.1" )
+    , ( "pkgs.python3Packages.luqum", "0.13.0" )
+    , ( "pkgs.python3Packages.luxor", "0.0.1" )
+    , ( "pkgs.python3Packages.luxtronik", "0.3.14" )
+    , ( "pkgs.python3Packages.lxmf", "0.3.8" )
+    , ( "pkgs.python3Packages.lxml", "4.9.3-3" )
+    , ( "pkgs.python3Packages.lxml-stubs", "0.4.0" )
+    , ( "pkgs.python3Packages.lyricwikia", "0.1.11" )
+    , ( "pkgs.python3Packages.lz4", "4.3.2" )
+    , ( "pkgs.python3Packages.lzallright", "0.2.3" )
+    , ( "pkgs.python3Packages.lzstring", "1.0.4" )
+    , ( "pkgs.python3Packages.m2crypto", "0.39.0" )
+    , ( "pkgs.python3Packages.m2r", "0.3.1" )
+    , ( "pkgs.python3Packages.m3u8", "3.6.0" )
+    , ( "pkgs.python3Packages.mac-vendor-lookup", "0.1.12" )
+    , ( "pkgs.python3Packages.mac_alias", "2.2.2" )
+    , ( "pkgs.python3Packages.macaddress", "2.0.2" )
+    , ( "pkgs.python3Packages.macfsevents", "0.8.4" )
+    , ( "pkgs.python3Packages.macropy", "1.1.0b2" )
+    , ( "pkgs.python3Packages.maestral", "1.8.0" )
+    , ( "pkgs.python3Packages.magic", "5.45" )
+    , ( "pkgs.python3Packages.magic-filter", "1.0.12" )
+    , ( "pkgs.python3Packages.magic-wormhole", "0.13.0" )
+    , ( "pkgs.python3Packages.magic-wormhole-mailbox-server", "0.4.1" )
+    , ( "pkgs.python3Packages.magic-wormhole-transit-relay", "0.2.1" )
+    , ( "pkgs.python3Packages.magicgui", "0.5.1" )
+    , ( "pkgs.python3Packages.mahotas", "1.4.13" )
+    , ( "pkgs.python3Packages.mail-parser", "3.15.0" )
+    , ( "pkgs.python3Packages.mailcap-fix", "1.0.1" )
+    , ( "pkgs.python3Packages.mailchecker", "5.0.9" )
+    , ( "pkgs.python3Packages.mailchimp", "2.0.10" )
+    , ( "pkgs.python3Packages.mailmanclient", "3.3.5" )
+    , ( "pkgs.python3Packages.mailsuite", "1.9.15" )
+    , ( "pkgs.python3Packages.maison", "1.4.1" )
+    , ( "pkgs.python3Packages.makefun", "1.15.1" )
+    , ( "pkgs.python3Packages.mako", "1.2.4" )
+    , ( "pkgs.python3Packages.malduck", "4.3.2" )
+    , ( "pkgs.python3Packages.managesieve", "0.7.1" )
+    , ( "pkgs.python3Packages.mando", "0.7.1" )
+    , ( "pkgs.python3Packages.mandown", "1.6.0" )
+    , ( "pkgs.python3Packages.manhole", "1.8.0" )
+    , ( "pkgs.python3Packages.manifest-ml", "0.1.8" )
+    , ( "pkgs.python3Packages.manifestoo", "0.7" )
+    , ( "pkgs.python3Packages.manifestoo-core", "1.3" )
+    , ( "pkgs.python3Packages.manifestparser", "1.1" )
+    , ( "pkgs.python3Packages.manimpango", "0.5.0" )
+    , ( "pkgs.python3Packages.manuel", "1.12.4" )
+    , ( "pkgs.python3Packages.manuf", "1.1.5" )
+    , ( "pkgs.python3Packages.mapbox", "0.18.0" )
+    , ( "pkgs.python3Packages.mapbox-earcut", "1.0.1" )
+    , ( "pkgs.python3Packages.mariadb", "1.1.4" )
+    , ( "pkgs.python3Packages.marisa", "0.2.6" )
+    , ( "pkgs.python3Packages.marisa-trie", "1.1.0" )
+    , ( "pkgs.python3Packages.markdown", "3.4.4" )
+    , ( "pkgs.python3Packages.markdown-include", "0.8.1" )
+    , ( "pkgs.python3Packages.markdown-it-py", "3.0.0" )
+    , ( "pkgs.python3Packages.markdown-macros", "0.1.2" )
+    , ( "pkgs.python3Packages.markdown2", "2.4.10" )
+    , ( "pkgs.python3Packages.markdownify", "0.11.6" )
+    , ( "pkgs.python3Packages.markuppy", "1.14" )
+    , ( "pkgs.python3Packages.markups", "4.0.0" )
+    , ( "pkgs.python3Packages.markupsafe", "2.1.3" )
+    , ( "pkgs.python3Packages.marshmallow", "3.20.1" )
+    , ( "pkgs.python3Packages.marshmallow-dataclass", "8.6.0" )
+    , ( "pkgs.python3Packages.marshmallow-enum", "1.5.1" )
+    , ( "pkgs.python3Packages.marshmallow-oneofschema", "3.0.2" )
+    , ( "pkgs.python3Packages.marshmallow-polyfield", "5.10" )
+    , ( "pkgs.python3Packages.marshmallow-sqlalchemy", "0.29.0" )
+    , ( "pkgs.python3Packages.mashumaro", "3.10" )
+    , ( "pkgs.python3Packages.masky", "0.2.0" )
+    , ( "pkgs.python3Packages.mastodon-py", "1.8.1" )
+    , ( "pkgs.python3Packages.mat2", "0.13.4" )
+    , ( "pkgs.python3Packages.matchpy", "0.5.5" )
+    , ( "pkgs.python3Packages.material-color-utilities", "0.1.5" )
+    , ( "pkgs.python3Packages.mathlibtools", "1.3.2" )
+    , ( "pkgs.python3Packages.matlink-gpapi", "0.4.4.5" )
+    , ( "pkgs.python3Packages.matplotlib", "3.8.0" )
+    , ( "pkgs.python3Packages.matplotlib-inline", "0.1.6" )
+    , ( "pkgs.python3Packages.matplotlib-sixel", "0.0.2" )
+    , ( "pkgs.python3Packages.matplotx", "0.3.10" )
+    , ( "pkgs.python3Packages.matrix-api-async", "0.1.0" )
+    , ( "pkgs.python3Packages.matrix-client", "0.4.0" )
+    , ( "pkgs.python3Packages.matrix-common", "1.3.0" )
+    , ( "pkgs.python3Packages.matrix-nio", "0.22.1" )
+    , ( "pkgs.python3Packages.mattermostdriver", "7.3.2" )
+    , ( "pkgs.python3Packages.maubot", "0.4.2" )
+    , ( "pkgs.python3Packages.mautrix", "0.20.3" )
+    , ( "pkgs.python3Packages.mautrix-appservice", "0.20.3" )
+    , ( "pkgs.python3Packages.maxcube-api", "0.4.3" )
+    , ( "pkgs.python3Packages.maxminddb", "2.4.0" )
+    , ( "pkgs.python3Packages.maya", "0.6.1" )
+    , ( "pkgs.python3Packages.mayavi", "4.8.1" )
+    , ( "pkgs.python3Packages.mbddns", "0.1.2" )
+    , ( "pkgs.python3Packages.mbstrdecoder", "1.1.3" )
+    , ( "pkgs.python3Packages.mccabe", "0.7.0" )
+    , ( "pkgs.python3Packages.mcstatus", "11.0.1" )
+    , ( "pkgs.python3Packages.mcuuid", "1.1.0" )
+    , ( "pkgs.python3Packages.md-toc", "8.2.2" )
+    , ( "pkgs.python3Packages.md2gemini", "1.9.1" )
+    , ( "pkgs.python3Packages.mdformat", "0.7.17" )
+    , ( "pkgs.python3Packages.mdformat-admon", "1.0.2" )
+    , ( "pkgs.python3Packages.mdformat-beautysh", "0.1.1" )
+    , ( "pkgs.python3Packages.mdformat-footnote", "0.1.1" )
+    , ( "pkgs.python3Packages.mdformat-frontmatter", "2.0.8" )
+    , ( "pkgs.python3Packages.mdformat-gfm", "0.3.5" )
+    , ( "pkgs.python3Packages.mdformat-mkdocs", "1.0.6" )
+    , ( "pkgs.python3Packages.mdformat-nix-alejandra", "0.1.0" )
+    , ( "pkgs.python3Packages.mdformat-simple-breaks", "0.0.1" )
+    , ( "pkgs.python3Packages.mdformat-tables", "0.4.1" )
+    , ( "pkgs.python3Packages.mdformat-toc", "0.3.0" )
+    , ( "pkgs.python3Packages.mdit-py-plugins", "0.4.0" )
+    , ( "pkgs.python3Packages.mdp", "3.6" )
+    , ( "pkgs.python3Packages.mdtraj", "1.9.9" )
+    , ( "pkgs.python3Packages.mdurl", "0.1.2" )
+    , ( "pkgs.python3Packages.mdutils", "1.6.0" )
+    , ( "pkgs.python3Packages.mdx-truly-sane-lists", "1.3" )
+    , ( "pkgs.python3Packages.measurement", "3.2.2" )
+    , ( "pkgs.python3Packages.meater-python", "0.0.8" )
+    , ( "pkgs.python3Packages.mecab-python3", "1.0.8" )
+    , ( "pkgs.python3Packages.mechanicalsoup", "1.3.0" )
+    , ( "pkgs.python3Packages.mechanize", "0.4.9" )
+    , ( "pkgs.python3Packages.mediafile", "0.10.1" )
+    , ( "pkgs.python3Packages.mediapy", "1.1.9" )
+    , ( "pkgs.python3Packages.meeko", "0.5.0" )
+    , ( "pkgs.python3Packages.meep", "1.27.0" )
+    , ( "pkgs.python3Packages.meilisearch", "0.28.4" )
+    , ( "pkgs.python3Packages.meinheld", "1.0.2" )
+    , ( "pkgs.python3Packages.meld3", "2.0.1" )
+    , ( "pkgs.python3Packages.memcached", "1.59" )
+    , ( "pkgs.python3Packages.memestra", "0.2.1" )
+    , ( "pkgs.python3Packages.memory-allocator", "0.1.3" )
+    , ( "pkgs.python3Packages.memory-profiler", "0.61.0" )
+    , ( "pkgs.python3Packages.memory_profiler", "0.61.0" )
+    , ( "pkgs.python3Packages.meraki", "1.39.0" )
+    , ( "pkgs.python3Packages.mercadopago", "2.2.1" )
+    , ( "pkgs.python3Packages.mercantile", "1.2.1" )
+    , ( "pkgs.python3Packages.mercurial", "6.5.2" )
+    , ( "pkgs.python3Packages.merge3", "0.0.14" )
+    , ( "pkgs.python3Packages.mergedb", "0.1.1" )
+    , ( "pkgs.python3Packages.mergedeep", "1.3.4" )
+    , ( "pkgs.python3Packages.mergedict", "1.0.0" )
+    , ( "pkgs.python3Packages.merkletools", "1.0.3" )
+    , ( "pkgs.python3Packages.meross-iot", "0.4.6.0" )
+    , ( "pkgs.python3Packages.mesa", "2.1.1" )
+    , ( "pkgs.python3Packages.meshcat", "0.3.2" )
+    , ( "pkgs.python3Packages.meshio", "5.3.4" )
+    , ( "pkgs.python3Packages.meshlabxml", "2018.3" )
+    , ( "pkgs.python3Packages.meshtastic", "2.2.12" )
+    , ( "pkgs.python3Packages.meson", "1.2.3" )
+    , ( "pkgs.python3Packages.meson-python", "0.14.0" )
+    , ( "pkgs.python3Packages.mesonpep517", "0.2" )
+    , ( "pkgs.python3Packages.messagebird", "2.1.0" )
+    , ( "pkgs.python3Packages.metakernel", "0.30.1" )
+    , ( "pkgs.python3Packages.metar", "1.11.0" )
+    , ( "pkgs.python3Packages.metawear", "1.0.8" )
+    , ( "pkgs.python3Packages.meteoalertapi", "0.3.0" )
+    , ( "pkgs.python3Packages.meteocalc", "1.1.0" )
+    , ( "pkgs.python3Packages.meteofrance-api", "1.2.0" )
+    , ( "pkgs.python3Packages.mezzanine", "6.0.0" )
+    , ( "pkgs.python3Packages.mf2py", "1.1.3" )
+    , ( "pkgs.python3Packages.mhcflurry", "2.1.0" )
+    , ( "pkgs.python3Packages.mhcgnomes", "1.8.6" )
+    , ( "pkgs.python3Packages.micawber", "0.5.5" )
+    , ( "pkgs.python3Packages.micloud", "0.6" )
+    , ( "pkgs.python3Packages.microdata", "0.8.0" )
+    , ( "pkgs.python3Packages.midiutil", "1.2.1" )
+    , ( "pkgs.python3Packages.mido", "1.3.0" )
+    , ( "pkgs.python3Packages.migen", "2022-09-02" )
+    , ( "pkgs.python3Packages.mike", "2023-05-06" )
+    , ( "pkgs.python3Packages.milc", "1.4.2" )
+    , ( "pkgs.python3Packages.milksnake", "0.1.5" )
+    , ( "pkgs.python3Packages.mill-local", "0.3.0" )
+    , ( "pkgs.python3Packages.millheater", "0.11.6" )
+    , ( "pkgs.python3Packages.mindsdb-evaluator", "0.0.11" )
+    , ( "pkgs.python3Packages.minexr", "1.0.1" )
+    , ( "pkgs.python3Packages.miniaudio", "1.59" )
+    , ( "pkgs.python3Packages.minichain", "0.3.3" )
+    , ( "pkgs.python3Packages.minidb", "2.0.7" )
+    , ( "pkgs.python3Packages.minidump", "0.0.21" )
+    , ( "pkgs.python3Packages.miniful", "0.0.6" )
+    , ( "pkgs.python3Packages.minikanren", "1.0.3" )
+    , ( "pkgs.python3Packages.minikerberos", "0.4.2" )
+    , ( "pkgs.python3Packages.minimal-snowplow-tracker", "0.0.2" )
+    , ( "pkgs.python3Packages.minimock", "1.3.0" )
+    , ( "pkgs.python3Packages.mininet-python", "2.3.1b4" )
+    , ( "pkgs.python3Packages.minio", "7.1.17" )
+    , ( "pkgs.python3Packages.miniupnpc", "2.0.2" )
+    , ( "pkgs.python3Packages.mip", "1.15.0" )
+    , ( "pkgs.python3Packages.mir_eval", "0.7" )
+    , ( "pkgs.python3Packages.mirakuru", "2.5.1" )
+    , ( "pkgs.python3Packages.misaka", "2.1.1" )
+    , ( "pkgs.python3Packages.misoc", "2022-10-08" )
+    , ( "pkgs.python3Packages.mistletoe", "1.2.1" )
+    , ( "pkgs.python3Packages.mistune", "3.0.2" )
+    , ( "pkgs.python3Packages.mistune_2_0", "3.0.2" )
+    , ( "pkgs.python3Packages.mitmproxy", "10.1.6" )
+    , ( "pkgs.python3Packages.mitmproxy-macos", "0.4.1" )
+    , ( "pkgs.python3Packages.mitmproxy-rs", "0.4.1" )
+    , ( "pkgs.python3Packages.mitmproxy-wireguard", "0.1.23" )
+    , ( "pkgs.python3Packages.mitogen", "0.3.4" )
+    , ( "pkgs.python3Packages.mixins", "0.1.4" )
+    , ( "pkgs.python3Packages.mixpanel", "4.10.0" )
+    , ( "pkgs.python3Packages.mizani", "0.10.0" )
+    , ( "pkgs.python3Packages.mkdocs", "1.5.2" )
+    , ( "pkgs.python3Packages.mkdocs-autorefs", "0.5.0" )
+    , ( "pkgs.python3Packages.mkdocs-drawio-exporter", "0.8.0" )
+    , ( "pkgs.python3Packages.mkdocs-exclude", "1.0.2" )
+    , ( "pkgs.python3Packages.mkdocs-git-authors-plugin", "0.7.2" )
+    , ( "pkgs.python3Packages.mkdocs-git-revision-date-localized-plugin", "1.2.1" )
+    , ( "pkgs.python3Packages.mkdocs-gitlab", "0.1.4" )
+    , ( "pkgs.python3Packages.mkdocs-jupyter", "0.24.6" )
+    , ( "pkgs.python3Packages.mkdocs-linkcheck", "2021-08-24" )
+    , ( "pkgs.python3Packages.mkdocs-macros", "0.7.0" )
+    , ( "pkgs.python3Packages.mkdocs-material", "9.3.1" )
+    , ( "pkgs.python3Packages.mkdocs-material-extensions", "1.1.1" )
+    , ( "pkgs.python3Packages.mkdocs-mermaid2-plugin", "1.1.0" )
+    , ( "pkgs.python3Packages.mkdocs-minify", "0.7.1" )
+    , ( "pkgs.python3Packages.mkdocs-redirects", "1.2.1" )
+    , ( "pkgs.python3Packages.mkdocs-simple-hooks", "0.1.5" )
+    , ( "pkgs.python3Packages.mkdocs-swagger-ui-tag", "0.6.6" )
+    , ( "pkgs.python3Packages.mkdocstrings", "0.23.0" )
+    , ( "pkgs.python3Packages.mkdocstrings-python", "1.7.3" )
+    , ( "pkgs.python3Packages.mkl-service", "2.4.0.post1" )
+    , ( "pkgs.python3Packages.ml-collections", "0.1.1" )
+    , ( "pkgs.python3Packages.ml-dtypes", "0.3.1" )
+    , ( "pkgs.python3Packages.mlflow", "2.7.0" )
+    , ( "pkgs.python3Packages.mlrose", "1.3.0" )
+    , ( "pkgs.python3Packages.mlt", "7.20.0" )
+    , ( "pkgs.python3Packages.mlxtend", "0.22.0" )
+    , ( "pkgs.python3Packages.mmcif-pdbx", "2.0.1" )
+    , ( "pkgs.python3Packages.mmcv", "2.1.0" )
+    , ( "pkgs.python3Packages.mmengine", "0.8.4" )
+    , ( "pkgs.python3Packages.mmh3", "4.0.1" )
+    , ( "pkgs.python3Packages.mmpython", "0.4.10" )
+    , ( "pkgs.python3Packages.mmtf-python", "1.1.3" )
+    , ( "pkgs.python3Packages.mne-python", "1.5.1" )
+    , ( "pkgs.python3Packages.mnemonic", "0.20" )
+    , ( "pkgs.python3Packages.mnist", "0.2.2" )
+    , ( "pkgs.python3Packages.moat-ble", "0.1.1" )
+    , ( "pkgs.python3Packages.mobi", "0.3.3" )
+    , ( "pkgs.python3Packages.mobly", "1.12.2" )
+    , ( "pkgs.python3Packages.mock", "5.1.0" )
+    , ( "pkgs.python3Packages.mock-open", "1.4.0" )
+    , ( "pkgs.python3Packages.mock-services", "0.3.1" )
+    , ( "pkgs.python3Packages.mock-ssh-server", "0.9.1" )
+    , ( "pkgs.python3Packages.mocket", "3.12.0" )
+    , ( "pkgs.python3Packages.mockfs", "1.1.4" )
+    , ( "pkgs.python3Packages.mockito", "1.4.0" )
+    , ( "pkgs.python3Packages.mockupdb", "1.8.1" )
+    , ( "pkgs.python3Packages.moddb", "0.9.0" )
+    , ( "pkgs.python3Packages.model-bakery", "1.17.0" )
+    , ( "pkgs.python3Packages.modelcif", "0.9" )
+    , ( "pkgs.python3Packages.modeled", "0.1.8" )
+    , ( "pkgs.python3Packages.moderngl", "5.8.2" )
+    , ( "pkgs.python3Packages.moderngl-window", "2.4.5" )
+    , ( "pkgs.python3Packages.modestmaps", "1.4.7" )
+    , ( "pkgs.python3Packages.mohawk", "1.1.0" )
+    , ( "pkgs.python3Packages.molecule", "6.0.3" )
+    , ( "pkgs.python3Packages.molecule-plugins", "23.5.0" )
+    , ( "pkgs.python3Packages.monai", "1.3.0" )
+    , ( "pkgs.python3Packages.monai-deploy", "0.5.1" )
+    , ( "pkgs.python3Packages.monero", "1.1.1" )
+    , ( "pkgs.python3Packages.mongodict", "0.3.1" )
+    , ( "pkgs.python3Packages.mongoengine", "0.27.0" )
+    , ( "pkgs.python3Packages.mongomock", "4.1.2" )
+    , ( "pkgs.python3Packages.mongoquery", "1.4.2" )
+    , ( "pkgs.python3Packages.monkeyhex", "1.7.4" )
+    , ( "pkgs.python3Packages.monosat", "1.8.0" )
+    , ( "pkgs.python3Packages.monotonic", "1.6" )
+    , ( "pkgs.python3Packages.monty", "2023.9.5" )
+    , ( "pkgs.python3Packages.moonraker-api", "2.0.5" )
+    , ( "pkgs.python3Packages.mopeka-iot-ble", "0.5.0" )
+    , ( "pkgs.python3Packages.more-itertools", "10.1.0" )
+    , ( "pkgs.python3Packages.more-properties", "1.1.1" )
+    , ( "pkgs.python3Packages.moreorless", "0.4.0" )
+    , ( "pkgs.python3Packages.moretools", "0.1.12" )
+    , ( "pkgs.python3Packages.morfessor", "2.0.6" )
+    , ( "pkgs.python3Packages.morphys", "1.0" )
+    , ( "pkgs.python3Packages.mortgage", "1.0.5" )
+    , ( "pkgs.python3Packages.motionblinds", "0.6.18" )
+    , ( "pkgs.python3Packages.motioneye-client", "0.3.14" )
+    , ( "pkgs.python3Packages.moto", "4.2.10" )
+    , ( "pkgs.python3Packages.motor", "3.3.1" )
+    , ( "pkgs.python3Packages.mouseinfo", "0.1.3" )
+    , ( "pkgs.python3Packages.moviepy", "1.0.3" )
+    , ( "pkgs.python3Packages.mox3", "1.1.0" )
+    , ( "pkgs.python3Packages.mpd2", "3.1.0" )
+    , ( "pkgs.python3Packages.mpi4py", "3.1.5" )
+    , ( "pkgs.python3Packages.mpl-scatter-density", "0.7" )
+    , ( "pkgs.python3Packages.mpldatacursor", "0.7.1" )
+    , ( "pkgs.python3Packages.mplfinance", "0.12.7a7" )
+    , ( "pkgs.python3Packages.mplhep", "0.3.31" )
+    , ( "pkgs.python3Packages.mplhep-data", "0.0.3" )
+    , ( "pkgs.python3Packages.mplleaflet", "0.0.5" )
+    , ( "pkgs.python3Packages.mpmath", "1.3.0" )
+    , ( "pkgs.python3Packages.mpris-server", "0.4.2" )
+    , ( "pkgs.python3Packages.mpv", "1.0.4" )
+    , ( "pkgs.python3Packages.mpyq", "0.2.5" )
+    , ( "pkgs.python3Packages.mqtt2influxdb", "1.5.2" )
+    , ( "pkgs.python3Packages.mrjob", "0.7.4" )
+    , ( "pkgs.python3Packages.mrsqm", "0.0.6" )
+    , ( "pkgs.python3Packages.ms-active-directory", "1.12.1" )
+    , ( "pkgs.python3Packages.ms-cv", "0.1.1" )
+    , ( "pkgs.python3Packages.msal", "1.24.1" )
+    , ( "pkgs.python3Packages.msal-extensions", "1.0.0" )
+    , ( "pkgs.python3Packages.mscerts", "2023.8.23" )
+    , ( "pkgs.python3Packages.msg-parser", "1.2.0" )
+    , ( "pkgs.python3Packages.msgpack", "1.0.5" )
+    , ( "pkgs.python3Packages.msgpack-numpy", "0.4.8" )
+    , ( "pkgs.python3Packages.msgraph-core", "0.2.2" )
+    , ( "pkgs.python3Packages.msgspec", "0.18.4" )
+    , ( "pkgs.python3Packages.msldap", "0.5.7" )
+    , ( "pkgs.python3Packages.msoffcrypto-tool", "5.1.1" )
+    , ( "pkgs.python3Packages.msprime", "1.2.0" )
+    , ( "pkgs.python3Packages.msrest", "0.7.1" )
+    , ( "pkgs.python3Packages.msrestazure", "0.6.4" )
+    , ( "pkgs.python3Packages.mss", "9.0.1" )
+    , ( "pkgs.python3Packages.mt-940", "940-4.30.0" )
+    , ( "pkgs.python3Packages.mujson", "1.4" )
+    , ( "pkgs.python3Packages.mullvad-api", "1.0.0" )
+    , ( "pkgs.python3Packages.mullvad-closest", "2023-07-09" )
+    , ( "pkgs.python3Packages.mulpyplexer", "0.09" )
+    , ( "pkgs.python3Packages.multi-key-dict", "2.0.3" )
+    , ( "pkgs.python3Packages.multi_key_dict", "2.0.3" )
+    , ( "pkgs.python3Packages.multidict", "6.0.4" )
+    , ( "pkgs.python3Packages.multimethod", "1.9.1" )
+    , ( "pkgs.python3Packages.multipart", "0.2.4" )
+    , ( "pkgs.python3Packages.multipledispatch", "1.0.0" )
+    , ( "pkgs.python3Packages.multiprocess", "0.70.15" )
+    , ( "pkgs.python3Packages.multiset", "3.0.1" )
+    , ( "pkgs.python3Packages.multitasking", "0.0.11" )
+    , ( "pkgs.python3Packages.munch", "4.0.0" )
+    , ( "pkgs.python3Packages.mung", "1.2" )
+    , ( "pkgs.python3Packages.munkres", "1.1.4" )
+    , ( "pkgs.python3Packages.murmurhash", "1.0.10" )
+    , ( "pkgs.python3Packages.muscima", "2023-04-26" )
+    , ( "pkgs.python3Packages.music-tag", "0.4.3" )
+    , ( "pkgs.python3Packages.musicbrainzngs", "0.7.1" )
+    , ( "pkgs.python3Packages.mutag", "0.0.2-2ffa0258ca" )
+    , ( "pkgs.python3Packages.mutagen", "1.47.0" )
+    , ( "pkgs.python3Packages.mutatormath", "3.0.1" )
+    , ( "pkgs.python3Packages.mutesync", "0.0.2" )
+    , ( "pkgs.python3Packages.mutf8", "1.0.6" )
+    , ( "pkgs.python3Packages.mwcli", "0.0.3" )
+    , ( "pkgs.python3Packages.mwclient", "0.10.1" )
+    , ( "pkgs.python3Packages.mwdblib", "4.5.0" )
+    , ( "pkgs.python3Packages.mwoauth", "0.3.8" )
+    , ( "pkgs.python3Packages.mwparserfromhell", "0.6.5" )
+    , ( "pkgs.python3Packages.mwtypes", "0.3.2" )
+    , ( "pkgs.python3Packages.mwxml", "0.3.3" )
+    , ( "pkgs.python3Packages.mxnet", "1.9.1" )
+    , ( "pkgs.python3Packages.myfitnesspal", "2.0.1" )
+    , ( "pkgs.python3Packages.mygpoclient", "1.8" )
+    , ( "pkgs.python3Packages.myhdl", "2022-04-26" )
+    , ( "pkgs.python3Packages.myhome", "0.2.1" )
+    , ( "pkgs.python3Packages.myjwt", "1.6.1" )
+    , ( "pkgs.python3Packages.mypy", "1.5.1" )
+    , ( "pkgs.python3Packages.mypy-boto3-accessanalyzer", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-account", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-acm", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-acm-pca", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-alexaforbusiness", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-amp", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-amplify", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-amplifybackend", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-amplifyuibuilder", "1.28.54" )
+    , ( "pkgs.python3Packages.mypy-boto3-apigateway", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-apigatewaymanagementapi", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-apigatewayv2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-appconfig", "1.28.52" )
+    , ( "pkgs.python3Packages.mypy-boto3-appconfigdata", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-appfabric", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-appflow", "1.28.42" )
+    , ( "pkgs.python3Packages.mypy-boto3-appintegrations", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-application-autoscaling", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-application-insights", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-applicationcostprofiler", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-appmesh", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-apprunner", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-appstream", "1.28.49" )
+    , ( "pkgs.python3Packages.mypy-boto3-appsync", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-arc-zonal-shift", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-athena", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-auditmanager", "1.28.38" )
+    , ( "pkgs.python3Packages.mypy-boto3-autoscaling", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-autoscaling-plans", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-backup", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-backup-gateway", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-backupstorage", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-batch", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-billingconductor", "1.28.41" )
+    , ( "pkgs.python3Packages.mypy-boto3-braket", "1.28.53" )
+    , ( "pkgs.python3Packages.mypy-boto3-budgets", "1.28.57" )
+    , ( "pkgs.python3Packages.mypy-boto3-builder", "7.19.1" )
+    , ( "pkgs.python3Packages.mypy-boto3-ce", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-chime", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-chime-sdk-identity", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-chime-sdk-media-pipelines", "1.28.54" )
+    , ( "pkgs.python3Packages.mypy-boto3-chime-sdk-meetings", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-chime-sdk-messaging", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-chime-sdk-voice", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cleanrooms", "1.28.38" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloud9", "1.28.47" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudcontrol", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-clouddirectory", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudformation", "1.28.48" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudfront", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudhsm", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudhsmv2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudsearch", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudsearchdomain", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudtrail", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudtrail-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cloudwatch", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codeartifact", "1.28.52" )
+    , ( "pkgs.python3Packages.mypy-boto3-codebuild", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codecatalyst", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codecommit", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codedeploy", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-codeguru-reviewer", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codeguru-security", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codeguruprofiler", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codepipeline", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codestar", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codestar-connections", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-codestar-notifications", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cognito-identity", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cognito-idp", "1.28.56" )
+    , ( "pkgs.python3Packages.mypy-boto3-cognito-sync", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-comprehend", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-comprehendmedical", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-compute-optimizer", "1.28.41" )
+    , ( "pkgs.python3Packages.mypy-boto3-config", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-connect", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-connect-contact-lens", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-connectcampaigns", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-connectcases", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-connectparticipant", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-controltower", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-cur", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-customer-profiles", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-databrew", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-dataexchange", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-datapipeline", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-datasync", "1.28.49" )
+    , ( "pkgs.python3Packages.mypy-boto3-dax", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-detective", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-devicefarm", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-devops-guru", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-directconnect", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-discovery", "1.28.50" )
+    , ( "pkgs.python3Packages.mypy-boto3-dlm", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-dms", "1.28.53" )
+    , ( "pkgs.python3Packages.mypy-boto3-docdb", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-docdb-elastic", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-drs", "1.28.47" )
+    , ( "pkgs.python3Packages.mypy-boto3-ds", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-dynamodb", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-dynamodbstreams", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ebs", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ec2", "1.28.58" )
+    , ( "pkgs.python3Packages.mypy-boto3-ec2-instance-connect", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ecr", "1.28.45" )
+    , ( "pkgs.python3Packages.mypy-boto3-ecr-public", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ecs", "1.28.41" )
+    , ( "pkgs.python3Packages.mypy-boto3-efs", "1.28.53" )
+    , ( "pkgs.python3Packages.mypy-boto3-eks", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-elastic-inference", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-elasticache", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-elasticbeanstalk", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-elastictranscoder", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-elb", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-elbv2", "1.28.42" )
+    , ( "pkgs.python3Packages.mypy-boto3-emr", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-emr-containers", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-emr-serverless", "1.28.54" )
+    , ( "pkgs.python3Packages.mypy-boto3-entityresolution", "1.28.48" )
+    , ( "pkgs.python3Packages.mypy-boto3-es", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-events", "1.28.46" )
+    , ( "pkgs.python3Packages.mypy-boto3-evidently", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-finspace", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-finspace-data", "1.28.54" )
+    , ( "pkgs.python3Packages.mypy-boto3-firehose", "1.28.56" )
+    , ( "pkgs.python3Packages.mypy-boto3-fis", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-fms", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-forecast", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-forecastquery", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-frauddetector", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-fsx", "1.28.44" )
+    , ( "pkgs.python3Packages.mypy-boto3-gamelift", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-gamesparks", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-glacier", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-globalaccelerator", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-glue", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-grafana", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-greengrass", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-greengrassv2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-groundstation", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-guardduty", "1.28.53" )
+    , ( "pkgs.python3Packages.mypy-boto3-health", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-healthlake", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-honeycode", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iam", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-identitystore", "1.28.40" )
+    , ( "pkgs.python3Packages.mypy-boto3-imagebuilder", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-importexport", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-inspector", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-inspector2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-internetmonitor", "1.28.47" )
+    , ( "pkgs.python3Packages.mypy-boto3-iot", "1.28.56" )
+    , ( "pkgs.python3Packages.mypy-boto3-iot-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iot-jobs-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iot-roborunner", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iot1click-devices", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iot1click-projects", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotanalytics", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotdeviceadvisor", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotevents", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotevents-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotfleethub", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotfleetwise", "1.28.57" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotsecuretunneling", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotsitewise", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotthingsgraph", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iottwinmaker", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-iotwireless", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ivs", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-ivs-realtime", "1.28.47" )
+    , ( "pkgs.python3Packages.mypy-boto3-ivschat", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kafka", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kafkaconnect", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-kendra", "1.28.46" )
+    , ( "pkgs.python3Packages.mypy-boto3-kendra-ranking", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-keyspaces", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesis", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesis-video-archived-media", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesis-video-media", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesis-video-signaling", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesis-video-webrtc-storage", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesisanalytics", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesisanalyticsv2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-kinesisvideo", "1.28.52" )
+    , ( "pkgs.python3Packages.mypy-boto3-kms", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-lakeformation", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-lambda", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-lex-models", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-lex-runtime", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-lexv2-models", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-lexv2-runtime", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-license-manager", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-license-manager-linux-subscriptions", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-license-manager-user-subscriptions", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-lightsail", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-location", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-logs", "1.28.52" )
+    , ( "pkgs.python3Packages.mypy-boto3-lookoutequipment", "1.28.48" )
+    , ( "pkgs.python3Packages.mypy-boto3-lookoutmetrics", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-lookoutvision", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-m2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-machinelearning", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-macie", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-macie2", "1.28.50" )
+    , ( "pkgs.python3Packages.mypy-boto3-managedblockchain", "1.28.58" )
+    , ( "pkgs.python3Packages.mypy-boto3-managedblockchain-query", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-marketplace-catalog", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-marketplace-entitlement", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-marketplacecommerceanalytics", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediaconnect", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediaconvert", "1.28.53" )
+    , ( "pkgs.python3Packages.mypy-boto3-medialive", "1.28.45" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediapackage", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediapackage-vod", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediapackagev2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediastore", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediastore-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mediatailor", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-medical-imaging", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-memorydb", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-meteringmarketplace", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mgh", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mgn", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-migration-hub-refactor-spaces", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-migrationhub-config", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-migrationhuborchestrator", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-migrationhubstrategy", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mobile", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mq", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mturk", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-mwaa", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-neptune", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-neptunedata", "1.28.43" )
+    , ( "pkgs.python3Packages.mypy-boto3-network-firewall", "1.28.38" )
+    , ( "pkgs.python3Packages.mypy-boto3-networkmanager", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-nimble", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-oam", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-omics", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-opensearch", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-opensearchserverless", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-opsworks", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-opsworkscm", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-organizations", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-osis", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-outposts", "1.28.51" )
+    , ( "pkgs.python3Packages.mypy-boto3-panorama", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-payment-cryptography", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-payment-cryptography-data", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-pca-connector-ad", "1.28.38" )
+    , ( "pkgs.python3Packages.mypy-boto3-personalize", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-personalize-events", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-personalize-runtime", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-pi", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-pinpoint", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-pinpoint-email", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-pinpoint-sms-voice", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-pinpoint-sms-voice-v2", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-pipes", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-polly", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-pricing", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-privatenetworks", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-proton", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-qldb", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-qldb-session", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-quicksight", "1.28.54" )
+    , ( "pkgs.python3Packages.mypy-boto3-ram", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-rbin", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-rds", "1.28.58" )
+    , ( "pkgs.python3Packages.mypy-boto3-rds-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-redshift", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-redshift-data", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-redshift-serverless", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-rekognition", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-resiliencehub", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-resource-explorer-2", "2-1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-resource-groups", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-resourcegroupstaggingapi", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-robomaker", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-rolesanywhere", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-route53", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-route53-recovery-cluster", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-route53-recovery-control-config", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-route53-recovery-readiness", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-route53domains", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-route53resolver", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-rum", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-s3", "1.28.55" )
+    , ( "pkgs.python3Packages.mypy-boto3-s3control", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-s3outposts", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker", "1.28.57" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker-a2i-runtime", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker-edge", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker-featurestore-runtime", "1.28.57" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker-geospatial", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker-metrics", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sagemaker-runtime", "1.28.39" )
+    , ( "pkgs.python3Packages.mypy-boto3-savingsplans", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-scheduler", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-schemas", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sdb", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-secretsmanager", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-securityhub", "1.28.43" )
+    , ( "pkgs.python3Packages.mypy-boto3-securitylake", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-serverlessrepo", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-service-quotas", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-servicecatalog", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-servicecatalog-appregistry", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-servicediscovery", "1.28.52" )
+    , ( "pkgs.python3Packages.mypy-boto3-ses", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sesv2", "1.28.37" )
+    , ( "pkgs.python3Packages.mypy-boto3-shield", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-signer", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-simspaceweaver", "1.28.47" )
+    , ( "pkgs.python3Packages.mypy-boto3-sms", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sms-voice", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-snow-device-management", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-snowball", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sns", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sqs", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ssm", "1.28.54" )
+    , ( "pkgs.python3Packages.mypy-boto3-ssm-contacts", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ssm-incidents", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-ssm-sap", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sso", "1.28.58" )
+    , ( "pkgs.python3Packages.mypy-boto3-sso-admin", "1.28.44" )
+    , ( "pkgs.python3Packages.mypy-boto3-sso-oidc", "1.28.52" )
+    , ( "pkgs.python3Packages.mypy-boto3-stepfunctions", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-storagegateway", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-sts", "1.28.58" )
+    , ( "pkgs.python3Packages.mypy-boto3-support", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-support-app", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-swf", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-synthetics", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-textract", "1.28.56" )
+    , ( "pkgs.python3Packages.mypy-boto3-timestream-query", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-timestream-write", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-tnb", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-transcribe", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-transfer", "1.28.58" )
+    , ( "pkgs.python3Packages.mypy-boto3-translate", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-verifiedpermissions", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-voice-id", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-vpc-lattice", "1.28.41" )
+    , ( "pkgs.python3Packages.mypy-boto3-waf", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-waf-regional", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-wafv2", "1.28.57" )
+    , ( "pkgs.python3Packages.mypy-boto3-wellarchitected", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-wisdom", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-workdocs", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-worklink", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-workmail", "1.28.50" )
+    , ( "pkgs.python3Packages.mypy-boto3-workmailmessageflow", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-workspaces", "1.28.44" )
+    , ( "pkgs.python3Packages.mypy-boto3-workspaces-web", "1.28.36" )
+    , ( "pkgs.python3Packages.mypy-boto3-xray", "1.28.47" )
+    , ( "pkgs.python3Packages.mypy-extensions", "1.0.0" )
+    , ( "pkgs.python3Packages.mypy-protobuf", "3.5.0" )
+    , ( "pkgs.python3Packages.mysql-connector", "8.0.33" )
+    , ( "pkgs.python3Packages.mysqlclient", "2.2.0" )
+    , ( "pkgs.python3Packages.myst-docutils", "2.0.0" )
+    , ( "pkgs.python3Packages.myst-nb", "1.0.0" )
+    , ( "pkgs.python3Packages.myst-parser", "2.0.0" )
+    , ( "pkgs.python3Packages.n3fit", "4.0" )
+    , ( "pkgs.python3Packages.nad-receiver", "0.3.0" )
+    , ( "pkgs.python3Packages.nagiosplugin", "1.3.3" )
+    , ( "pkgs.python3Packages.name-that-hash", "1.11.0" )
+    , ( "pkgs.python3Packages.namedlist", "1.8" )
+    , ( "pkgs.python3Packages.nameparser", "1.1.3" )
+    , ( "pkgs.python3Packages.names", "0.3.0" )
+    , ( "pkgs.python3Packages.nampa", "1.0" )
+    , ( "pkgs.python3Packages.nanoid", "2.0.0" )
+    , ( "pkgs.python3Packages.nanoleaf", "0.4.1" )
+    , ( "pkgs.python3Packages.nanomsg-python", "1.0.20190114" )
+    , ( "pkgs.python3Packages.nanotime", "0.5.2" )
+    , ( "pkgs.python3Packages.napalm", "4.1.0" )
+    , ( "pkgs.python3Packages.napalm-hp-procurve", "0.7.0" )
+    , ( "pkgs.python3Packages.napari", "0.4.18" )
+    , ( "pkgs.python3Packages.napari-console", "0.0.7" )
+    , ( "pkgs.python3Packages.napari-npe2", "0.7.2" )
+    , ( "pkgs.python3Packages.napari-plugin-engine", "0.2.0" )
+    , ( "pkgs.python3Packages.napari-svg", "0.1.6" )
+    , ( "pkgs.python3Packages.nasdaq-data-link", "1.0.4" )
+    , ( "pkgs.python3Packages.natasha", "1.6.0" )
+    , ( "pkgs.python3Packages.nats-py", "2.6.0" )
+    , ( "pkgs.python3Packages.nats-python", "0.8.0" )
+    , ( "pkgs.python3Packages.natsort", "8.4.0" )
+    , ( "pkgs.python3Packages.naturalsort", "1.5.1" )
+    , ( "pkgs.python3Packages.navec", "0.10.0" )
+    , ( "pkgs.python3Packages.nbclassic", "1.0.0" )
+    , ( "pkgs.python3Packages.nbclient", "0.8.0" )
+    , ( "pkgs.python3Packages.nbconflux", "0.7.0" )
+    , ( "pkgs.python3Packages.nbconvert", "7.11.0" )
+    , ( "pkgs.python3Packages.nbdev", "2.3.13" )
+    , ( "pkgs.python3Packages.nbdime", "3.2.1" )
+    , ( "pkgs.python3Packages.nbexec", "0.2.0" )
+    , ( "pkgs.python3Packages.nbformat", "5.9.2" )
+    , ( "pkgs.python3Packages.nbmerge", "0.0.4" )
+    , ( "pkgs.python3Packages.nbsmoke", "0.6.0" )
+    , ( "pkgs.python3Packages.nbsphinx", "0.9.3" )
+    , ( "pkgs.python3Packages.nbtlib", "2.0.4" )
+    , ( "pkgs.python3Packages.nbval", "0.10.0" )
+    , ( "pkgs.python3Packages.nbxmpp", "4.5.3" )
+    , ( "pkgs.python3Packages.nc-dnsapi", "0.1.6" )
+    , ( "pkgs.python3Packages.ncclient", "0.6.13" )
+    , ( "pkgs.python3Packages.nclib", "1.0.5" )
+    , ( "pkgs.python3Packages.ndeflib", "0.3.3" )
+    , ( "pkgs.python3Packages.ndg-httpsclient", "0.5.1" )
+    , ( "pkgs.python3Packages.ndindex", "1.7" )
+    , ( "pkgs.python3Packages.ndjson", "0.3.1" )
+    , ( "pkgs.python3Packages.ndms2-client", "0.1.2" )
+    , ( "pkgs.python3Packages.ndspy", "4.1.0" )
+    , ( "pkgs.python3Packages.ndtypes", "2019-08-01" )
+    , ( "pkgs.python3Packages.nengo", "3.2.0" )
+    , ( "pkgs.python3Packages.neo", "0.12.0" )
+    , ( "pkgs.python3Packages.neo4j", "5.14.1" )
+    , ( "pkgs.python3Packages.nessclient", "1.0.0" )
+    , ( "pkgs.python3Packages.nest", "3.6" )
+    , ( "pkgs.python3Packages.nest-asyncio", "1.5.6" )
+    , ( "pkgs.python3Packages.nested-lookup", "0.2.25" )
+    , ( "pkgs.python3Packages.nestedtext", "3.6" )
+    , ( "pkgs.python3Packages.net2grid", "4.3.0" )
+    , ( "pkgs.python3Packages.netaddr", "0.8.0" )
+    , ( "pkgs.python3Packages.netapp-lib", "2021.6.25" )
+    , ( "pkgs.python3Packages.netapp-ontap", "9.13.1.0" )
+    , ( "pkgs.python3Packages.netcdf4", "1.6.2" )
+    , ( "pkgs.python3Packages.netdata", "1.1.0" )
+    , ( "pkgs.python3Packages.netdisco", "3.0.0" )
+    , ( "pkgs.python3Packages.nethsm", "1.0.0" )
+    , ( "pkgs.python3Packages.netifaces", "0.11.0" )
+    , ( "pkgs.python3Packages.netio", "1.0.13" )
+    , ( "pkgs.python3Packages.netmap", "0.7.0.2" )
+    , ( "pkgs.python3Packages.netmiko", "4.2.0" )
+    , ( "pkgs.python3Packages.nettigo-air-monitor", "2.2.1" )
+    , ( "pkgs.python3Packages.netutils", "1.6.0" )
+    , ( "pkgs.python3Packages.networkx", "3.1" )
+    , ( "pkgs.python3Packages.neuron-full", "8.2.3" )
+    , ( "pkgs.python3Packages.neuronpy", "8.2.3" )
+    , ( "pkgs.python3Packages.nevow", "0.14.5" )
+    , ( "pkgs.python3Packages.newick", "1.9.0" )
+    , ( "pkgs.python3Packages.newversion", "2.0.0" )
+    , ( "pkgs.python3Packages.nexia", "2.0.7" )
+    , ( "pkgs.python3Packages.nextcloudmonitor", "1.4.0" )
+    , ( "pkgs.python3Packages.nextcord", "2.6.1" )
+    , ( "pkgs.python3Packages.nextdns", "2.0.1" )
+    , ( "pkgs.python3Packages.nfcpy", "1.0.4" )
+    , ( "pkgs.python3Packages.nftables", "1.0.9" )
+    , ( "pkgs.python3Packages.nh3", "0.2.13" )
+    , ( "pkgs.python3Packages.niaaml", "1.1.12" )
+    , ( "pkgs.python3Packages.niaarm", "0.3.5" )
+    , ( "pkgs.python3Packages.niaclass", "0.1.4" )
+    , ( "pkgs.python3Packages.nianet", "1.1.4" )
+    , ( "pkgs.python3Packages.niapy", "2.0.5" )
+    , ( "pkgs.python3Packages.nibabel", "5.1.0" )
+    , ( "pkgs.python3Packages.nibe", "2.5.0" )
+    , ( "pkgs.python3Packages.nidaqmx", "0.5.7" )
+    , ( "pkgs.python3Packages.niko-home-control", "0.3.0" )
+    , ( "pkgs.python3Packages.nikola", "8.2.4" )
+    , ( "pkgs.python3Packages.nilearn", "0.10.2" )
+    , ( "pkgs.python3Packages.niluclient", "0.1.2" )
+    , ( "pkgs.python3Packages.nimfa", "1.4.0" )
+    , ( "pkgs.python3Packages.nine", "1.1.0" )
+    , ( "pkgs.python3Packages.ninja", "1.11.1" )
+    , ( "pkgs.python3Packages.ninja-python", "1.11.1" )
+    , ( "pkgs.python3Packages.nipy", "0.5.0" )
+    , ( "pkgs.python3Packages.nipype", "1.8.6" )
+    , ( "pkgs.python3Packages.nitime", "0.10.2" )
+    , ( "pkgs.python3Packages.nitpick", "1.1" )
+    , ( "pkgs.python3Packages.nitransforms", "23.0.1" )
+    , ( "pkgs.python3Packages.nix-kernel", "2020-04-26" )
+    , ( "pkgs.python3Packages.nix-prefetch-github", "7.0.0" )
+    , ( "pkgs.python3Packages.nixpkgs", "0.2.4" )
+    , ( "pkgs.python3Packages.nixpkgs-pytools", "1.3.0" )
+    , ( "pkgs.python3Packages.nkdfu", "0.2" )
+    , ( "pkgs.python3Packages.nlpcloud", "1.1.45" )
+    , ( "pkgs.python3Packages.nltk", "3.8.1" )
+    , ( "pkgs.python3Packages.nmapthon2", "0.1.5" )
+    , ( "pkgs.python3Packages.nnpdf", "4.0.6" )
+    , ( "pkgs.python3Packages.nocasedict", "2.0.1" )
+    , ( "pkgs.python3Packages.nocaselist", "2.0.0" )
+    , ( "pkgs.python3Packages.nocturne", "2022-10-15" )
+    , ( "pkgs.python3Packages.node-semver", "0.9.0" )
+    , ( "pkgs.python3Packages.nodeenv", "1.8.0" )
+    , ( "pkgs.python3Packages.nodepy-runtime", "2.1.5" )
+    , ( "pkgs.python3Packages.noise", "1.2.2" )
+    , ( "pkgs.python3Packages.noiseprotocol", "0.3.1" )
+    , ( "pkgs.python3Packages.nomadnet", "0.4.2" )
+    , ( "pkgs.python3Packages.normality", "2.2.5" )
+    , ( "pkgs.python3Packages.nose", "1.3.7" )
+    , ( "pkgs.python3Packages.nose-cov", "1.6" )
+    , ( "pkgs.python3Packages.nose-cprof", "0.2.1" )
+    , ( "pkgs.python3Packages.nose-exclude", "0.5.0" )
+    , ( "pkgs.python3Packages.nose-pattern-exclude", "0.1.3" )
+    , ( "pkgs.python3Packages.nose-randomly", "1.2.6" )
+    , ( "pkgs.python3Packages.nose-timer", "1.0.1" )
+    , ( "pkgs.python3Packages.nose2", "0.14.0" )
+    , ( "pkgs.python3Packages.nose3", "1.3.8" )
+    , ( "pkgs.python3Packages.nose_warnings_filters", "0.1.5" )
+    , ( "pkgs.python3Packages.nosejs", "0.9.4" )
+    , ( "pkgs.python3Packages.nosexcover", "1.0.11" )
+    , ( "pkgs.python3Packages.notebook", "7.0.3" )
+    , ( "pkgs.python3Packages.notebook-shim", "0.2.3" )
+    , ( "pkgs.python3Packages.notedown", "1.5.1" )
+    , ( "pkgs.python3Packages.notifications-android-tv", "1.0.0" )
+    , ( "pkgs.python3Packages.notifications-python-client", "8.1.0" )
+    , ( "pkgs.python3Packages.notify-events", "1.1.3" )
+    , ( "pkgs.python3Packages.notify-py", "0.3.42" )
+    , ( "pkgs.python3Packages.notify2", "0.3.1" )
+    , ( "pkgs.python3Packages.notion-client", "2.0.0" )
+    , ( "pkgs.python3Packages.notmuch", "0.38" )
+    , ( "pkgs.python3Packages.notmuch2", "0.38" )
+    , ( "pkgs.python3Packages.nototools", "0.2.17" )
+    , ( "pkgs.python3Packages.notus-scanner", "22.6.2" )
+    , ( "pkgs.python3Packages.nox", "2023.04.22" )
+    , ( "pkgs.python3Packages.nplusone", "1.0.0" )
+    , ( "pkgs.python3Packages.nptyping", "2.5.0" )
+    , ( "pkgs.python3Packages.npyscreen", "4.10.5" )
+    , ( "pkgs.python3Packages.nsapi", "3.0.5" )
+    , ( "pkgs.python3Packages.nsz", "4.5.0" )
+    , ( "pkgs.python3Packages.ntc-templates", "3.5.0" )
+    , ( "pkgs.python3Packages.ntplib", "0.4.0" )
+    , ( "pkgs.python3Packages.nuheat", "1.0.1" )
+    , ( "pkgs.python3Packages.nuitka", "1.8.4" )
+    , ( "pkgs.python3Packages.nulltype", "2.3.1" )
+    , ( "pkgs.python3Packages.num2words", "0.5.13" )
+    , ( "pkgs.python3Packages.numba", "0.58.1" )
+    , ( "pkgs.python3Packages.numba-scipy", "0.3.1" )
+    , ( "pkgs.python3Packages.numbaWithCuda", "0.58.1" )
+    , ( "pkgs.python3Packages.numcodecs", "0.11.0" )
+    , ( "pkgs.python3Packages.numdifftools", "0.9.41" )
+    , ( "pkgs.python3Packages.numericalunits", "1.25" )
+    , ( "pkgs.python3Packages.numexpr", "2.8.6" )
+    , ( "pkgs.python3Packages.numpy", "1.26.1" )
+    , ( "pkgs.python3Packages.numpy-stl", "3.0.1" )
+    , ( "pkgs.python3Packages.numpydoc", "1.5.0" )
+    , ( "pkgs.python3Packages.numpyro", "0.13.2" )
+    , ( "pkgs.python3Packages.nunavut", "2.3.1" )
+    , ( "pkgs.python3Packages.nutils", "8.3" )
+    , ( "pkgs.python3Packages.nvchecker", "2.12" )
+    , ( "pkgs.python3Packages.nvidia-ml-py", "12.535.133" )
+    , ( "pkgs.python3Packages.nwdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.nxt-python", "3.2.0" )
+    , ( "pkgs.python3Packages.oasatelematics", "0.3" )
+    , ( "pkgs.python3Packages.oath", "1.4.4" )
+    , ( "pkgs.python3Packages.oauth", "1.0.1" )
+    , ( "pkgs.python3Packages.oauth2", "1.9.0.post1" )
+    , ( "pkgs.python3Packages.oauth2client", "4.1.3" )
+    , ( "pkgs.python3Packages.oauthenticator", "16.1.1" )
+    , ( "pkgs.python3Packages.oauthlib", "3.2.2" )
+    , ( "pkgs.python3Packages.obfsproxy", "0.2.13" )
+    , ( "pkgs.python3Packages.objax", "1.8.0" )
+    , ( "pkgs.python3Packages.objgraph", "3.6.0" )
+    , ( "pkgs.python3Packages.objsize", "0.7.0" )
+    , ( "pkgs.python3Packages.obspy", "1.2.2" )
+    , ( "pkgs.python3Packages.oca-port", "0.14" )
+    , ( "pkgs.python3Packages.ochre", "0.4.0" )
+    , ( "pkgs.python3Packages.oci", "2.113.0" )
+    , ( "pkgs.python3Packages.ocifs", "1.3.0" )
+    , ( "pkgs.python3Packages.ocrmypdf", "15.4.0" )
+    , ( "pkgs.python3Packages.od", "2.0.2" )
+    , ( "pkgs.python3Packages.odfpy", "1.4.1" )
+    , ( "pkgs.python3Packages.odp-amsterdam", "5.3.1" )
+    , ( "pkgs.python3Packages.oelint-parser", "2.12.0" )
+    , ( "pkgs.python3Packages.oemthermostat", "1.1.1" )
+    , ( "pkgs.python3Packages.offtrac", "0.1.0" )
+    , ( "pkgs.python3Packages.ofxclient", "2.0.3" )
+    , ( "pkgs.python3Packages.ofxhome", "0.3.3" )
+    , ( "pkgs.python3Packages.ofxparse", "0.21" )
+    , ( "pkgs.python3Packages.ofxtools", "0.9.5" )
+    , ( "pkgs.python3Packages.okonomiyaki", "1.4.0" )
+    , ( "pkgs.python3Packages.okta", "2.9.3" )
+    , ( "pkgs.python3Packages.oldest-supported-numpy", "2023.8.3" )
+    , ( "pkgs.python3Packages.olefile", "0.46" )
+    , ( "pkgs.python3Packages.oletools", "0.60.1" )
+    , ( "pkgs.python3Packages.ome-zarr", "0.8.0" )
+    , ( "pkgs.python3Packages.omegaconf", "2.3.0" )
+    , ( "pkgs.python3Packages.omemo-dr", "1.0.1" )
+    , ( "pkgs.python3Packages.omnikinverter", "0.9.1" )
+    , ( "pkgs.python3Packages.omnilogic", "0.5.0" )
+    , ( "pkgs.python3Packages.omorfi", "0.9.9" )
+    , ( "pkgs.python3Packages.omrdatasettools", "1.4.0" )
+    , ( "pkgs.python3Packages.ondilo", "0.3.0" )
+    , ( "pkgs.python3Packages.onetimepad", "1.4" )
+    , ( "pkgs.python3Packages.onetimepass", "1.0.1" )
+    , ( "pkgs.python3Packages.onkyo-eiscp", "1.2.7" )
+    , ( "pkgs.python3Packages.online-judge-api-client", "10.10.1" )
+    , ( "pkgs.python3Packages.online-judge-tools", "11.5.1" )
+    , ( "pkgs.python3Packages.onlykey-solo-python", "0.0.32" )
+    , ( "pkgs.python3Packages.onnx", "1.14.1" )
+    , ( "pkgs.python3Packages.onnxconverter-common", "1.14.0" )
+    , ( "pkgs.python3Packages.onnxmltools", "1.11.2" )
+    , ( "pkgs.python3Packages.onnxruntime", "1.15.1" )
+    , ( "pkgs.python3Packages.onnxruntime-tools", "1.7.0" )
+    , ( "pkgs.python3Packages.onvif-zeep-async", "3.1.12" )
+    , ( "pkgs.python3Packages.oocsi", "0.4.3" )
+    , ( "pkgs.python3Packages.opcua-widgets", "0.6.1" )
+    , ( "pkgs.python3Packages.open-garage", "0.2.0" )
+    , ( "pkgs.python3Packages.open-meteo", "0.2.1" )
+    , ( "pkgs.python3Packages.openai", "0.28.1" )
+    , ( "pkgs.python3Packages.openai-triton", "2.0.0" )
+    , ( "pkgs.python3Packages.openai-triton-bin", "2.0.0" )
+    , ( "pkgs.python3Packages.openai-triton-cuda", "2.0.0" )
+    , ( "pkgs.python3Packages.openai-triton-no-cuda", "2.0.0" )
+    , ( "pkgs.python3Packages.openai-whisper", "20231117" )
+    , ( "pkgs.python3Packages.openaiauth", "3.0.0" )
+    , ( "pkgs.python3Packages.openant", "1.2.1" )
+    , ( "pkgs.python3Packages.openapi-core", "0.18.1" )
+    , ( "pkgs.python3Packages.openapi-schema-validator", "0.6.0" )
+    , ( "pkgs.python3Packages.openapi-spec-validator", "0.6.0" )
+    , ( "pkgs.python3Packages.openapi3", "1.8.2" )
+    , ( "pkgs.python3Packages.openbabel-bindings", "3.1.1" )
+    , ( "pkgs.python3Packages.opencensus", "0.11.3" )
+    , ( "pkgs.python3Packages.opencensus-context", "0.1.3" )
+    , ( "pkgs.python3Packages.opencensus-ext-azure", "1.1.11" )
+    , ( "pkgs.python3Packages.opencontainers", "0.0.14" )
+    , ( "pkgs.python3Packages.opencv4", "4.7.0" )
+    , ( "pkgs.python3Packages.openerz-api", "0.2.0" )
+    , ( "pkgs.python3Packages.openevsewifi", "1.1.2" )
+    , ( "pkgs.python3Packages.openhomedevice", "2.2" )
+    , ( "pkgs.python3Packages.openidc-client", "0.6.0" )
+    , ( "pkgs.python3Packages.openllm", "0.4.22" )
+    , ( "pkgs.python3Packages.openllm-client", "0.4.22" )
+    , ( "pkgs.python3Packages.openllm-core", "0.4.22" )
+    , ( "pkgs.python3Packages.openmm", "8.0.0" )
+    , ( "pkgs.python3Packages.openpaperwork-core", "2.2.1" )
+    , ( "pkgs.python3Packages.openpaperwork-gtk", "2.2.1" )
+    , ( "pkgs.python3Packages.openpyxl", "3.1.2" )
+    , ( "pkgs.python3Packages.openrazer", "3.6.1" )
+    , ( "pkgs.python3Packages.openrazer-daemon", "3.6.1" )
+    , ( "pkgs.python3Packages.openrgb-python", "0.2.15" )
+    , ( "pkgs.python3Packages.openrouteservice", "2.3.3" )
+    , ( "pkgs.python3Packages.opensearch-py", "2.4.2" )
+    , ( "pkgs.python3Packages.opensensemap-api", "0.3.1" )
+    , ( "pkgs.python3Packages.opensfm", "2022-03-10" )
+    , ( "pkgs.python3Packages.openshift", "0.13.2" )
+    , ( "pkgs.python3Packages.opensimplex", "0.4.3" )
+    , ( "pkgs.python3Packages.openstackdocstheme", "3.2.0" )
+    , ( "pkgs.python3Packages.openstacksdk", "1.5.0" )
+    , ( "pkgs.python3Packages.openstep-plist", "0.3.0.post1" )
+    , ( "pkgs.python3Packages.opentelemetry-api", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-exporter-otlp", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-exporter-otlp-proto-common", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-exporter-otlp-proto-grpc", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-exporter-otlp-proto-http", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-exporter-prometheus", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-instrumentation", "1.16.0" )
+    , ( "pkgs.python3Packages.opentelemetry-instrumentation-aiohttp-client", "1.16.0" )
+    , ( "pkgs.python3Packages.opentelemetry-instrumentation-asgi", "1.16.0" )
+    , ( "pkgs.python3Packages.opentelemetry-instrumentation-django", "1.16.0" )
+    , ( "pkgs.python3Packages.opentelemetry-instrumentation-grpc", "1.16.0" )
+    , ( "pkgs.python3Packages.opentelemetry-instrumentation-wsgi", "1.16.0" )
+    , ( "pkgs.python3Packages.opentelemetry-proto", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-sdk", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-semantic-conventions", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-test-utils", "1.20.0" )
+    , ( "pkgs.python3Packages.opentelemetry-util-http", "1.16.0" )
+    , ( "pkgs.python3Packages.opentimestamps", "0.4.5" )
+    , ( "pkgs.python3Packages.opentracing", "2.4.0" )
+    , ( "pkgs.python3Packages.opentsne", "1.0.0" )
+    , ( "pkgs.python3Packages.openturns", "1.21.1" )
+    , ( "pkgs.python3Packages.openvino", "2023.0.0" )
+    , ( "pkgs.python3Packages.openwebifpy", "3.2.7" )
+    , ( "pkgs.python3Packages.openwrt-luci-rpc", "1.1.16" )
+    , ( "pkgs.python3Packages.openwrt-ubus-rpc", "0.0.3" )
+    , ( "pkgs.python3Packages.opower", "0.0.39" )
+    , ( "pkgs.python3Packages.opsdroid-get-image-size", "0.2.2" )
+    , ( "pkgs.python3Packages.opsdroid_get_image_size", "0.2.2" )
+    , ( "pkgs.python3Packages.opt-einsum", "3.3.0" )
+    , ( "pkgs.python3Packages.optax", "0.1.7" )
+    , ( "pkgs.python3Packages.optimum", "1.14.1" )
+    , ( "pkgs.python3Packages.optuna", "3.4.0" )
+    , ( "pkgs.python3Packages.opuslib", "3.0.3" )
+    , ( "pkgs.python3Packages.opytimark", "1.0.8" )
+    , ( "pkgs.python3Packages.oracledb", "1.4.2" )
+    , ( "pkgs.python3Packages.oralb-ble", "0.17.6" )
+    , ( "pkgs.python3Packages.orange-canvas-core", "0.1.35" )
+    , ( "pkgs.python3Packages.orange-widget-base", "4.22.0" )
+    , ( "pkgs.python3Packages.orange3", "3.36.2" )
+    , ( "pkgs.python3Packages.ordered-set", "4.1.0" )
+    , ( "pkgs.python3Packages.orderedmultidict", "1.0.1" )
+    , ( "pkgs.python3Packages.orderedset", "2.0.3" )
+    , ( "pkgs.python3Packages.orjson", "3.9.10" )
+    , ( "pkgs.python3Packages.orm", "0.3.1" )
+    , ( "pkgs.python3Packages.ormar", "0.12.2" )
+    , ( "pkgs.python3Packages.ortools", "9.4" )
+    , ( "pkgs.python3Packages.orvibo", "1.1.1" )
+    , ( "pkgs.python3Packages.os-service-types", "1.7.0" )
+    , ( "pkgs.python3Packages.osc", "1.3.1" )
+    , ( "pkgs.python3Packages.osc-lib", "2.8.0" )
+    , ( "pkgs.python3Packages.oscpy", "0.6.0" )
+    , ( "pkgs.python3Packages.oscrypto", "1.3.0" )
+    , ( "pkgs.python3Packages.oset", "0.1.3" )
+    , ( "pkgs.python3Packages.oslo-concurrency", "5.2.0" )
+    , ( "pkgs.python3Packages.oslo-config", "9.2.0" )
+    , ( "pkgs.python3Packages.oslo-context", "5.1.1" )
+    , ( "pkgs.python3Packages.oslo-db", "14.0.0" )
+    , ( "pkgs.python3Packages.oslo-i18n", "6.1.0" )
+    , ( "pkgs.python3Packages.oslo-log", "5.4.0" )
+    , ( "pkgs.python3Packages.oslo-serialization", "5.2.0" )
+    , ( "pkgs.python3Packages.oslo-utils", "6.2.1" )
+    , ( "pkgs.python3Packages.oslotest", "4.5.0" )
+    , ( "pkgs.python3Packages.osmnx", "1.3.0" )
+    , ( "pkgs.python3Packages.osmpythontools", "0.3.5" )
+    , ( "pkgs.python3Packages.ospd", "21.4.4" )
+    , ( "pkgs.python3Packages.osqp", "0.6.3" )
+    , ( "pkgs.python3Packages.oss2", "2.18.3" )
+    , ( "pkgs.python3Packages.ossfs", "2023.8.0" )
+    , ( "pkgs.python3Packages.outcome", "1.2.0" )
+    , ( "pkgs.python3Packages.overly", "0.1.85" )
+    , ( "pkgs.python3Packages.overpy", "0.6" )
+    , ( "pkgs.python3Packages.overrides", "7.4.0" )
+    , ( "pkgs.python3Packages.ovh", "1.1.0" )
+    , ( "pkgs.python3Packages.ovmfvartool", "2022-09-04" )
+    , ( "pkgs.python3Packages.ovoenergy", "1.3.1" )
+    , ( "pkgs.python3Packages.owslib", "0.29.3" )
+    , ( "pkgs.python3Packages.oyaml", "2021-12-03" )
+    , ( "pkgs.python3Packages.p1monitor", "2.3.1" )
+    , ( "pkgs.python3Packages.pa-ringbuffer", "0.1.4" )
+    , ( "pkgs.python3Packages.packageurl-python", "0.11.2" )
+    , ( "pkgs.python3Packages.packaging", "23.1" )
+    , ( "pkgs.python3Packages.packbits", "0.6" )
+    , ( "pkgs.python3Packages.packet-python", "1.44.3" )
+    , ( "pkgs.python3Packages.packvers", "21.5" )
+    , ( "pkgs.python3Packages.pad4pi", "1.1.5" )
+    , ( "pkgs.python3Packages.paddle-bfloat", "0.1.7" )
+    , ( "pkgs.python3Packages.paddle2onnx", "1.1.0" )
+    , ( "pkgs.python3Packages.paddleocr", "2.7.1" )
+    , ( "pkgs.python3Packages.paddlepaddle", "2.5.0" )
+    , ( "pkgs.python3Packages.pagelabels", "1.2.0" )
+    , ( "pkgs.python3Packages.paho-mqtt", "1.6.1" )
+    , ( "pkgs.python3Packages.palace", "0.2.5" )
+    , ( "pkgs.python3Packages.palettable", "3.3.3" )
+    , ( "pkgs.python3Packages.pallets-sphinx-themes", "2.1.1" )
+    , ( "pkgs.python3Packages.pam", "2.0.2" )
+    , ( "pkgs.python3Packages.pamela", "1.1.0" )
+    , ( "pkgs.python3Packages.pamqp", "3.2.1" )
+    , ( "pkgs.python3Packages.panacotta", "0.2" )
+    , ( "pkgs.python3Packages.panasonic-viera", "0.4.0" )
+    , ( "pkgs.python3Packages.pandas", "2.1.1" )
+    , ( "pkgs.python3Packages.pandas-datareader", "0.10.0" )
+    , ( "pkgs.python3Packages.pandas-stubs", "2.0.3.230814" )
+    , ( "pkgs.python3Packages.pandoc-attributes", "0.1.7" )
+    , ( "pkgs.python3Packages.pandoc-xnos", "2.5.0" )
+    , ( "pkgs.python3Packages.pandocfilters", "1.5.0" )
+    , ( "pkgs.python3Packages.panel", "1.2.3" )
+    , ( "pkgs.python3Packages.panflute", "2.3.0" )
+    , ( "pkgs.python3Packages.papermill", "2.4.0" )
+    , ( "pkgs.python3Packages.paperwork-backend", "2.2.1" )
+    , ( "pkgs.python3Packages.paperwork-shell", "2.2.1" )
+    , ( "pkgs.python3Packages.papis", "0.13" )
+    , ( "pkgs.python3Packages.papis-python-rofi", "1.0.3" )
+    , ( "pkgs.python3Packages.para", "0.0.8" )
+    , ( "pkgs.python3Packages.param", "1.13.0" )
+    , ( "pkgs.python3Packages.parameter-expansion-patched", "0.3.1" )
+    , ( "pkgs.python3Packages.parameterized", "0.9.0" )
+    , ( "pkgs.python3Packages.parametrize-from-file", "0.18.0" )
+    , ( "pkgs.python3Packages.paramiko", "3.3.1" )
+    , ( "pkgs.python3Packages.paramz", "0.9.5" )
+    , ( "pkgs.python3Packages.paranoid-crypto", "20220819" )
+    , ( "pkgs.python3Packages.parfive", "2.0.2" )
+    , ( "pkgs.python3Packages.parquet", "1.3.1" )
+    , ( "pkgs.python3Packages.parse", "1.19.1" )
+    , ( "pkgs.python3Packages.parse-type", "0.6.2" )
+    , ( "pkgs.python3Packages.parsedatetime", "2.6" )
+    , ( "pkgs.python3Packages.parsedmarc", "8.6.4" )
+    , ( "pkgs.python3Packages.parsel", "1.8.1" )
+    , ( "pkgs.python3Packages.parsimonious", "0.10.0" )
+    , ( "pkgs.python3Packages.parsley", "1.3" )
+    , ( "pkgs.python3Packages.parso", "0.8.3" )
+    , ( "pkgs.python3Packages.parsy", "2.1" )
+    , ( "pkgs.python3Packages.partd", "1.4.0" )
+    , ( "pkgs.python3Packages.particle", "0.23.0" )
+    , ( "pkgs.python3Packages.parts", "1.7.0" )
+    , ( "pkgs.python3Packages.parver", "0.5" )
+    , ( "pkgs.python3Packages.pasimple", "0.0.2" )
+    , ( "pkgs.python3Packages.passlib", "1.7.4" )
+    , ( "pkgs.python3Packages.paste", "3.7.1" )
+    , ( "pkgs.python3Packages.pastedeploy", "3.0.1" )
+    , ( "pkgs.python3Packages.pastel", "0.2.1" )
+    , ( "pkgs.python3Packages.pastescript", "3.3.0" )
+    , ( "pkgs.python3Packages.patator", "1.0" )
+    , ( "pkgs.python3Packages.patch", "1.16" )
+    , ( "pkgs.python3Packages.patch-ng", "1.17.4" )
+    , ( "pkgs.python3Packages.path", "16.7.1" )
+    , ( "pkgs.python3Packages.path-and-address", "2.0.1" )
+    , ( "pkgs.python3Packages.pathable", "0.4.3" )
+    , ( "pkgs.python3Packages.pathlib", "1.0.1" )
+    , ( "pkgs.python3Packages.pathlib2", "2.3.7.post1" )
+    , ( "pkgs.python3Packages.pathos", "0.3.1" )
+    , ( "pkgs.python3Packages.pathpy", "16.7.1" )
+    , ( "pkgs.python3Packages.pathspec", "0.11.2" )
+    , ( "pkgs.python3Packages.pathtools", "0.1.2" )
+    , ( "pkgs.python3Packages.pathvalidate", "3.1.0" )
+    , ( "pkgs.python3Packages.pathy", "0.10.3" )
+    , ( "pkgs.python3Packages.patiencediff", "0.2.14" )
+    , ( "pkgs.python3Packages.patool", "1.12" )
+    , ( "pkgs.python3Packages.patrowl4py", "1.1.9" )
+    , ( "pkgs.python3Packages.patsy", "0.5.3" )
+    , ( "pkgs.python3Packages.paver", "1.3.4" )
+    , ( "pkgs.python3Packages.paypal-checkout-serversdk", "1.0.1" )
+    , ( "pkgs.python3Packages.paypalhttp", "1.0.0" )
+    , ( "pkgs.python3Packages.paypalrestsdk", "1.13.2" )
+    , ( "pkgs.python3Packages.pbkdf2", "1.3" )
+    , ( "pkgs.python3Packages.pbr", "5.11.1" )
+    , ( "pkgs.python3Packages.pc-ble-driver-py", "0.17.0" )
+    , ( "pkgs.python3Packages.pcapy-ng", "1.0.9" )
+    , ( "pkgs.python3Packages.pcbnew-transition", "0.3.4" )
+    , ( "pkgs.python3Packages.pcodedmp", "1.2.6" )
+    , ( "pkgs.python3Packages.pcpp", "1.30" )
+    , ( "pkgs.python3Packages.pdb2pqr", "3.6.1" )
+    , ( "pkgs.python3Packages.pdbfixer", "1.9" )
+    , ( "pkgs.python3Packages.pdf2docx", "0.5.6" )
+    , ( "pkgs.python3Packages.pdf2image", "1.16.3" )
+    , ( "pkgs.python3Packages.pdfkit", "1.0.0" )
+    , ( "pkgs.python3Packages.pdfminer", "20221105" )
+    , ( "pkgs.python3Packages.pdfminer-six", "20221105" )
+    , ( "pkgs.python3Packages.pdfplumber", "0.10.3" )
+    , ( "pkgs.python3Packages.pdfrw", "0.4" )
+    , ( "pkgs.python3Packages.pdftotext", "2.2.2" )
+    , ( "pkgs.python3Packages.pdfx", "1.4.1" )
+    , ( "pkgs.python3Packages.pdm-backend", "2.1.6" )
+    , ( "pkgs.python3Packages.pdm-pep517", "1.1.4" )
+    , ( "pkgs.python3Packages.pdoc", "14.1.0" )
+    , ( "pkgs.python3Packages.pdoc3", "0.10.0" )
+    , ( "pkgs.python3Packages.pdunehd", "1.3.2" )
+    , ( "pkgs.python3Packages.peaqevcore", "19.5.13" )
+    , ( "pkgs.python3Packages.pebble", "5.0.3" )
+    , ( "pkgs.python3Packages.pecan", "1.5.1" )
+    , ( "pkgs.python3Packages.peco", "0.0.29" )
+    , ( "pkgs.python3Packages.peewee", "3.17.0" )
+    , ( "pkgs.python3Packages.peewee-migrate", "1.12.2" )
+    , ( "pkgs.python3Packages.pefile", "2023.2.7" )
+    , ( "pkgs.python3Packages.peft", "0.6.0" )
+    , ( "pkgs.python3Packages.pegen", "0.3.0" )
+    , ( "pkgs.python3Packages.pelican", "4.8.0" )
+    , ( "pkgs.python3Packages.pem", "23.1.0" )
+    , ( "pkgs.python3Packages.pencompy", "0.0.4" )
+    , ( "pkgs.python3Packages.pendulum", "2.1.2" )
+    , ( "pkgs.python3Packages.pep257", "6.3.0" )
+    , ( "pkgs.python3Packages.pep440", "0.1.2" )
+    , ( "pkgs.python3Packages.pep517", "0.13.1" )
+    , ( "pkgs.python3Packages.pep8", "1.7.1" )
+    , ( "pkgs.python3Packages.pep8-naming", "0.13.3" )
+    , ( "pkgs.python3Packages.peppercorn", "0.6" )
+    , ( "pkgs.python3Packages.percol", "2019-07-24" )
+    , ( "pkgs.python3Packages.perfplot", "0.10.2" )
+    , ( "pkgs.python3Packages.periodictable", "1.6.1" )
+    , ( "pkgs.python3Packages.periodiq", "0.12.1" )
+    , ( "pkgs.python3Packages.permissionedforms", "0.1" )
+    , ( "pkgs.python3Packages.persim", "0.3.2" )
+    , ( "pkgs.python3Packages.persist-queue", "0.8.1" )
+    , ( "pkgs.python3Packages.persistent", "5.1" )
+    , ( "pkgs.python3Packages.persisting-theory", "1.0" )
+    , ( "pkgs.python3Packages.pescea", "1.0.12" )
+    , ( "pkgs.python3Packages.pex", "2.1.153" )
+    , ( "pkgs.python3Packages.pexif", "0.15" )
+    , ( "pkgs.python3Packages.pexpect", "4.8.0" )
+    , ( "pkgs.python3Packages.pfzy", "0.3.4" )
+    , ( "pkgs.python3Packages.pg8000", "1.30.1" )
+    , ( "pkgs.python3Packages.pgcli", "4.0.1" )
+    , ( "pkgs.python3Packages.pglast", "5.5" )
+    , ( "pkgs.python3Packages.pgmpy", "0.1.24" )
+    , ( "pkgs.python3Packages.pgpdump", "1.5" )
+    , ( "pkgs.python3Packages.pgpy", "0.6.0" )
+    , ( "pkgs.python3Packages.pgsanity", "0.2.9" )
+    , ( "pkgs.python3Packages.pgspecial", "2.1.1" )
+    , ( "pkgs.python3Packages.pgvector", "0.2.3" )
+    , ( "pkgs.python3Packages.phe", "1.5.0" )
+    , ( "pkgs.python3Packages.phik", "0.12.3" )
+    , ( "pkgs.python3Packages.phone-modem", "0.1.2" )
+    , ( "pkgs.python3Packages.phonemizer", "3.2.1" )
+    , ( "pkgs.python3Packages.phonenumbers", "8.13.20" )
+    , ( "pkgs.python3Packages.phonopy", "2.20.0" )
+    , ( "pkgs.python3Packages.phpserialize", "1.3" )
+    , ( "pkgs.python3Packages.phx-class-registry", "4.0.6" )
+    , ( "pkgs.python3Packages.pi1wire", "0.3.0" )
+    , ( "pkgs.python3Packages.piano-transcription-inference", "0.0.5" )
+    , ( "pkgs.python3Packages.piccata", "2.0.2" )
+    , ( "pkgs.python3Packages.piccolo-theme", "0.18.0" )
+    , ( "pkgs.python3Packages.pick", "2.2.0" )
+    , ( "pkgs.python3Packages.pickleshare", "0.7.5" )
+    , ( "pkgs.python3Packages.picobox", "3.0.0" )
+    , ( "pkgs.python3Packages.picos", "2.0" )
+    , ( "pkgs.python3Packages.picosvg", "0.22.1" )
+    , ( "pkgs.python3Packages.pid", "3.0.4" )
+    , ( "pkgs.python3Packages.piep", "0.10.0" )
+    , ( "pkgs.python3Packages.piexif", "1.1.3" )
+    , ( "pkgs.python3Packages.pijuice", "1.7" )
+    , ( "pkgs.python3Packages.pika", "1.3.2" )
+    , ( "pkgs.python3Packages.pika-pool", "0.1.3" )
+    , ( "pkgs.python3Packages.pikepdf", "8.4.0" )
+    , ( "pkgs.python3Packages.pilkit", "3.0" )
+    , ( "pkgs.python3Packages.pillow", "10.1.0" )
+    , ( "pkgs.python3Packages.pillow-heif", "0.13.0" )
+    , ( "pkgs.python3Packages.pillow-simd", "9.0.0.post1" )
+    , ( "pkgs.python3Packages.pillowfight", "0.4" )
+    , ( "pkgs.python3Packages.pims", "0.6.1" )
+    , ( "pkgs.python3Packages.pinboard", "2.1.8" )
+    , ( "pkgs.python3Packages.pinecone-client", "2.2.4" )
+    , ( "pkgs.python3Packages.ping3", "4.0.4" )
+    , ( "pkgs.python3Packages.pinocchio", "2.6.20" )
+    , ( "pkgs.python3Packages.pint", "0.22" )
+    , ( "pkgs.python3Packages.pint-pandas", "0.4" )
+    , ( "pkgs.python3Packages.pip", "23.2.1" )
+    , ( "pkgs.python3Packages.pip-api", "0.0.30" )
+    , ( "pkgs.python3Packages.pip-requirements-parser", "32.0.1" )
+    , ( "pkgs.python3Packages.pip-tools", "7.3.0" )
+    , ( "pkgs.python3Packages.pipBuildHook", "" )
+    , ( "pkgs.python3Packages.pipInstallHook", "" )
+    , ( "pkgs.python3Packages.pipdate", "0.5.6" )
+    , ( "pkgs.python3Packages.pipdeptree", "2.13.1" )
+    , ( "pkgs.python3Packages.pipenv-poetry-migrate", "0.5.1" )
+    , ( "pkgs.python3Packages.piper-phonemize", "2023.11.14-4" )
+    , ( "pkgs.python3Packages.pipx", "1.2.1" )
+    , ( "pkgs.python3Packages.pivy", "0.6.8" )
+    , ( "pkgs.python3Packages.pixcat", "0.1.4" )
+    , ( "pkgs.python3Packages.pixel-ring", "0.1.0" )
+    , ( "pkgs.python3Packages.pixelmatch", "0.2.3" )
+    , ( "pkgs.python3Packages.pjsua2", "2.13.1" )
+    , ( "pkgs.python3Packages.pkce", "1.0.3" )
+    , ( "pkgs.python3Packages.pkg-about", "1.0.8" )
+    , ( "pkgs.python3Packages.pkgconfig", "1.5.5" )
+    , ( "pkgs.python3Packages.pkginfo", "1.9.6" )
+    , ( "pkgs.python3Packages.pkginfo2", "30.0.0" )
+    , ( "pkgs.python3Packages.pkgutil-resolve-name", "1.3.10" )
+    , ( "pkgs.python3Packages.pkuseg", "0.0.25" )
+    , ( "pkgs.python3Packages.pkutils", "3.0.2" )
+    , ( "pkgs.python3Packages.plac", "1.4.0" )
+    , ( "pkgs.python3Packages.plaid-python", "18.0.0" )
+    , ( "pkgs.python3Packages.plantuml", "0.3.0" )
+    , ( "pkgs.python3Packages.plantuml-markdown", "3.9.2" )
+    , ( "pkgs.python3Packages.plaster", "1.1.2" )
+    , ( "pkgs.python3Packages.plaster-pastedeploy", "1.0.1" )
+    , ( "pkgs.python3Packages.platformdirs", "3.10.0" )
+    , ( "pkgs.python3Packages.playsound", "1.3.0" )
+    , ( "pkgs.python3Packages.playwright", "1.38.0" )
+    , ( "pkgs.python3Packages.plexapi", "4.15.6" )
+    , ( "pkgs.python3Packages.plexauth", "0.0.6" )
+    , ( "pkgs.python3Packages.plexwebsocket", "0.0.14" )
+    , ( "pkgs.python3Packages.plfit", "0.9.4" )
+    , ( "pkgs.python3Packages.plone-testing", "8.0.3" )
+    , ( "pkgs.python3Packages.plotext", "5.2.8" )
+    , ( "pkgs.python3Packages.plotly", "5.16.1" )
+    , ( "pkgs.python3Packages.plotnine", "0.12.3" )
+    , ( "pkgs.python3Packages.pluggy", "1.3.0" )
+    , ( "pkgs.python3Packages.pluginbase", "1.0.1" )
+    , ( "pkgs.python3Packages.plugincode", "32.0.0" )
+    , ( "pkgs.python3Packages.plugnplay", "0.5.4" )
+    , ( "pkgs.python3Packages.plugwise", "0.35.1" )
+    , ( "pkgs.python3Packages.plum-py", "0.8.6" )
+    , ( "pkgs.python3Packages.plumbum", "1.8.2" )
+    , ( "pkgs.python3Packages.plux", "1.4.0" )
+    , ( "pkgs.python3Packages.ply", "3.11" )
+    , ( "pkgs.python3Packages.plyer", "2.1.0" )
+    , ( "pkgs.python3Packages.plyfile", "1.0.1" )
+    , ( "pkgs.python3Packages.plyplus", "0.7.5" )
+    , ( "pkgs.python3Packages.plyvel", "1.5.0" )
+    , ( "pkgs.python3Packages.pmdarima", "2.0.4" )
+    , ( "pkgs.python3Packages.pmdsky-debug-py", "4.0.0" )
+    , ( "pkgs.python3Packages.pmsensor", "0.4" )
+    , ( "pkgs.python3Packages.pmw", "2.1.1" )
+    , ( "pkgs.python3Packages.pnglatex", "1.1" )
+    , ( "pkgs.python3Packages.pocket", "0.3.6" )
+    , ( "pkgs.python3Packages.podcastparser", "0.6.10" )
+    , ( "pkgs.python3Packages.podcats", "0.5.0" )
+    , ( "pkgs.python3Packages.podman", "4.7.0" )
+    , ( "pkgs.python3Packages.poetry-core", "1.7.0" )
+    , ( "pkgs.python3Packages.poetry-dynamic-versioning", "1.0.1" )
+    , ( "pkgs.python3Packages.poetry-semver", "0.1.0" )
+    , ( "pkgs.python3Packages.polarizationsolver", "2021-11-02" )
+    , ( "pkgs.python3Packages.polars", "0.19.12" )
+    , ( "pkgs.python3Packages.polib", "1.2.0" )
+    , ( "pkgs.python3Packages.policy-sentry", "0.12.10" )
+    , ( "pkgs.python3Packages.policyuniverse", "1.5.1.20230817" )
+    , ( "pkgs.python3Packages.polling", "0.3.0" )
+    , ( "pkgs.python3Packages.polygon3", "3.0.9" )
+    , ( "pkgs.python3Packages.polyline", "2.0.0" )
+    , ( "pkgs.python3Packages.pomegranate", "1.0.0" )
+    , ( "pkgs.python3Packages.pontos", "23.9.1" )
+    , ( "pkgs.python3Packages.pony", "0.7.17" )
+    , ( "pkgs.python3Packages.ponywhoosh", "1.7.8" )
+    , ( "pkgs.python3Packages.pooch", "1.7.0" )
+    , ( "pkgs.python3Packages.pook", "1.1.1" )
+    , ( "pkgs.python3Packages.poolsense", "0.1.0" )
+    , ( "pkgs.python3Packages.poppler-qt5", "21.3.0" )
+    , ( "pkgs.python3Packages.port-for", "0.7.1" )
+    , ( "pkgs.python3Packages.portalocker", "2.7.0" )
+    , ( "pkgs.python3Packages.portend", "3.2.0" )
+    , ( "pkgs.python3Packages.portpicker", "1.6.0" )
+    , ( "pkgs.python3Packages.posix_ipc", "1.1.1" )
+    , ( "pkgs.python3Packages.posthog", "3.0.2" )
+    , ( "pkgs.python3Packages.pot", "0.9.1" )
+    , ( "pkgs.python3Packages.potentials", "0.3.7" )
+    , ( "pkgs.python3Packages.potr", "1.0.2" )
+    , ( "pkgs.python3Packages.power", "1.4" )
+    , ( "pkgs.python3Packages.powerline", "2.8.3" )
+    , ( "pkgs.python3Packages.powerline-mem-segment", "2.4.1" )
+    , ( "pkgs.python3Packages.powerlineMemSegment", "2.4.1" )
+    , ( "pkgs.python3Packages.pox", "0.3.3" )
+    , ( "pkgs.python3Packages.poyo", "0.5.0" )
+    , ( "pkgs.python3Packages.ppdeep", "20200505" )
+    , ( "pkgs.python3Packages.ppft", "1.7.6.7" )
+    , ( "pkgs.python3Packages.pplpy", "0.8.9" )
+    , ( "pkgs.python3Packages.pprintpp", "0.4.0" )
+    , ( "pkgs.python3Packages.pproxy", "2.3.7" )
+    , ( "pkgs.python3Packages.ppscore", "1.3.0" )
+    , ( "pkgs.python3Packages.pq", "1.9.1" )
+    , ( "pkgs.python3Packages.prance", "23.06.21.0" )
+    , ( "pkgs.python3Packages.praw", "7.7.1" )
+    , ( "pkgs.python3Packages.prawcore", "2.4.0" )
+    , ( "pkgs.python3Packages.prayer-times-calculator", "0.0.10" )
+    , ( "pkgs.python3Packages.pre-commit-hooks", "4.5.0" )
+    , ( "pkgs.python3Packages.precis-i18n", "1.1.0" )
+    , ( "pkgs.python3Packages.prefixed", "0.7.0" )
+    , ( "pkgs.python3Packages.preggy", "1.4.4" )
+    , ( "pkgs.python3Packages.premailer", "3.10.0" )
+    , ( "pkgs.python3Packages.preprocess-cancellation", "0.2.0" )
+    , ( "pkgs.python3Packages.preshed", "3.0.9" )
+    , ( "pkgs.python3Packages.pretend", "1.0.9" )
+    , ( "pkgs.python3Packages.prettytable", "3.8.0" )
+    , ( "pkgs.python3Packages.primecountpy", "0.1.0" )
+    , ( "pkgs.python3Packages.primer3", "2.0.1" )
+    , ( "pkgs.python3Packages.priority", "2.0.0" )
+    , ( "pkgs.python3Packages.prison", "0.1.3" )
+    , ( "pkgs.python3Packages.proboscis", "1.2.6.0" )
+    , ( "pkgs.python3Packages.process-tests", "2.1.2" )
+    , ( "pkgs.python3Packages.procmon-parser", "0.3.13" )
+    , ( "pkgs.python3Packages.prodict", "0.8.6" )
+    , ( "pkgs.python3Packages.proglog", "0.1.10" )
+    , ( "pkgs.python3Packages.progress", "1.6" )
+    , ( "pkgs.python3Packages.progressbar", "2.5" )
+    , ( "pkgs.python3Packages.progressbar2", "4.2.0" )
+    , ( "pkgs.python3Packages.progressbar33", "2.4" )
+    , ( "pkgs.python3Packages.prometheus-client", "0.17.1" )
+    , ( "pkgs.python3Packages.prometheus-flask-exporter", "0.22.4" )
+    , ( "pkgs.python3Packages.prometheus-pandas", "0.3.2" )
+    , ( "pkgs.python3Packages.prometheus_client", "0.17.1" )
+    , ( "pkgs.python3Packages.promise", "2.3.0" )
+    , ( "pkgs.python3Packages.prompt-toolkit", "3.0.39" )
+    , ( "pkgs.python3Packages.prompt_toolkit", "3.0.39" )
+    , ( "pkgs.python3Packages.prompthub-py", "4.0.0" )
+    , ( "pkgs.python3Packages.property-manager", "3.0" )
+    , ( "pkgs.python3Packages.prophet", "1.1.5" )
+    , ( "pkgs.python3Packages.propka", "3.5.0" )
+    , ( "pkgs.python3Packages.protego", "0.3.0" )
+    , ( "pkgs.python3Packages.proto-plus", "1.22.3" )
+    , ( "pkgs.python3Packages.protobuf", "4.24.4" )
+    , ( "pkgs.python3Packages.protobuf3", "3.20.3" )
+    , ( "pkgs.python3Packages.protobuf3-to-dict", "0.1.5" )
+    , ( "pkgs.python3Packages.proton-client", "0.7.1" )
+    , ( "pkgs.python3Packages.protonup", "0.2.1" )
+    , ( "pkgs.python3Packages.protonup-ng", "0.2.1" )
+    , ( "pkgs.python3Packages.protonvpn-nm-lib", "3.16.0" )
+    , ( "pkgs.python3Packages.prov", "2.0.0" )
+    , ( "pkgs.python3Packages.prox-tv", "3.3.0" )
+    , ( "pkgs.python3Packages.proxmoxer", "2.0.1" )
+    , ( "pkgs.python3Packages.proxy-db", "0.3.1" )
+    , ( "pkgs.python3Packages.proxy-py", "2.4.3" )
+    , ( "pkgs.python3Packages.proxy-tools", "0.1.0" )
+    , ( "pkgs.python3Packages.proxy_tools", "0.1.0" )
+    , ( "pkgs.python3Packages.psautohint", "2.4.0" )
+    , ( "pkgs.python3Packages.pscript", "0.7.7" )
+    , ( "pkgs.python3Packages.psd-tools", "1.9.28" )
+    , ( "pkgs.python3Packages.psrpcore", "0.2.2" )
+    , ( "pkgs.python3Packages.psutil", "5.9.6" )
+    , ( "pkgs.python3Packages.psutil-home-assistant", "0.0.1" )
+    , ( "pkgs.python3Packages.psychrolib", "2.5.0" )
+    , ( "pkgs.python3Packages.psycopg", "3.1.12" )
+    , ( "pkgs.python3Packages.psycopg2", "2.9.7" )
+    , ( "pkgs.python3Packages.psycopg2cffi", "2.8.1" )
+    , ( "pkgs.python3Packages.psygnal", "0.9.5" )
+    , ( "pkgs.python3Packages.ptable", "2019-06-14" )
+    , ( "pkgs.python3Packages.ptest", "1.7.4" )
+    , ( "pkgs.python3Packages.ptpython", "3.0.23" )
+    , ( "pkgs.python3Packages.ptyprocess", "0.7.0" )
+    , ( "pkgs.python3Packages.publicsuffix", "1.1.1" )
+    , ( "pkgs.python3Packages.publicsuffix2", "2.20191221" )
+    , ( "pkgs.python3Packages.publicsuffixlist", "0.10.0.20231120" )
+    , ( "pkgs.python3Packages.pubnub", "7.3.1" )
+    , ( "pkgs.python3Packages.pubnubsub-handler", "1.0.9" )
+    , ( "pkgs.python3Packages.pudb", "2023.1" )
+    , ( "pkgs.python3Packages.pulp", "2.7.0" )
+    , ( "pkgs.python3Packages.pulsectl", "23.5.2" )
+    , ( "pkgs.python3Packages.pulsectl-asyncio", "1.1.1" )
+    , ( "pkgs.python3Packages.pulumi", "3.90.1" )
+    , ( "pkgs.python3Packages.pulumi-aws", "6.1.0" )
+    , ( "pkgs.python3Packages.pulumi-aws-native", "0.38.0" )
+    , ( "pkgs.python3Packages.pulumi-azure-native", "2.13.0" )
+    , ( "pkgs.python3Packages.pulumi-command", "0.9.0" )
+    , ( "pkgs.python3Packages.pulumi-random", "4.14.0" )
+    , ( "pkgs.python3Packages.pure-cdb", "4.0.0" )
+    , ( "pkgs.python3Packages.pure-eval", "0.2.2" )
+    , ( "pkgs.python3Packages.pure-pcapy3", "1.0.1" )
+    , ( "pkgs.python3Packages.pure-protobuf", "2.3.0" )
+    , ( "pkgs.python3Packages.pure-python-adb", "0.3.0.dev0" )
+    , ( "pkgs.python3Packages.pure-python-adb-homeassistant", "0.1.7.dev0" )
+    , ( "pkgs.python3Packages.puremagic", "1.15" )
+    , ( "pkgs.python3Packages.purepng", "0.2.0" )
+    , ( "pkgs.python3Packages.purl", "1.6" )
+    , ( "pkgs.python3Packages.push-receiver", "0.1.1" )
+    , ( "pkgs.python3Packages.pushbullet", "0.12.0" )
+    , ( "pkgs.python3Packages.pushbullet-py", "0.12.0" )
+    , ( "pkgs.python3Packages.pushover-complete", "1.1.1" )
+    , ( "pkgs.python3Packages.pvextractor", "0.4" )
+    , ( "pkgs.python3Packages.pvlib", "0.10.2" )
+    , ( "pkgs.python3Packages.pvo", "2.0.0" )
+    , ( "pkgs.python3Packages.pweave", "0.30.3" )
+    , ( "pkgs.python3Packages.pwntools", "4.11.1" )
+    , ( "pkgs.python3Packages.pxml", "0.2.13" )
+    , ( "pkgs.python3Packages.py", "1.11.0" )
+    , ( "pkgs.python3Packages.py-air-control", "2.1.0" )
+    , ( "pkgs.python3Packages.py-air-control-exporter", "0.3.1" )
+    , ( "pkgs.python3Packages.py-bip39-bindings", "0.1.11" )
+    , ( "pkgs.python3Packages.py-canary", "0.5.3" )
+    , ( "pkgs.python3Packages.py-cid", "0.3.0" )
+    , ( "pkgs.python3Packages.py-cpuinfo", "9.0.0" )
+    , ( "pkgs.python3Packages.py-deprecate", "0.3.2" )
+    , ( "pkgs.python3Packages.py-desmume", "0.0.5.post0" )
+    , ( "pkgs.python3Packages.py-dmidecode", "0.1.2" )
+    , ( "pkgs.python3Packages.py-dormakaba-dkey", "1.0.5" )
+    , ( "pkgs.python3Packages.py-ecc", "6.0.0" )
+    , ( "pkgs.python3Packages.py-eth-sig-utils", "0.4.0" )
+    , ( "pkgs.python3Packages.py-expression-eval", "0.3.14" )
+    , ( "pkgs.python3Packages.py-libzfs", "22.12.4.2" )
+    , ( "pkgs.python3Packages.py-lru-cache", "0.1.4" )
+    , ( "pkgs.python3Packages.py-multiaddr", "0.0.9" )
+    , ( "pkgs.python3Packages.py-multibase", "1.0.3" )
+    , ( "pkgs.python3Packages.py-multicodec", "0.2.1" )
+    , ( "pkgs.python3Packages.py-multihash", "2.0.1" )
+    , ( "pkgs.python3Packages.py-nextbusnext", "1.0.2" )
+    , ( "pkgs.python3Packages.py-nightscout", "1.3.3" )
+    , ( "pkgs.python3Packages.py-partiql-parser", "0.4.2" )
+    , ( "pkgs.python3Packages.py-pdf-parser", "0.12.0" )
+    , ( "pkgs.python3Packages.py-radix-sr", "1.0.1" )
+    , ( "pkgs.python3Packages.py-serializable", "0.15.0" )
+    , ( "pkgs.python3Packages.py-sneakers", "1.0.1" )
+    , ( "pkgs.python3Packages.py-sonic", "1.0.0" )
+    , ( "pkgs.python3Packages.py-sr25519-bindings", "2023-03-15" )
+    , ( "pkgs.python3Packages.py-stringmatching", "0.4.3" )
+    , ( "pkgs.python3Packages.py-synologydsm-api", "2.3.0" )
+    , ( "pkgs.python3Packages.py-tes", "0.4.2" )
+    , ( "pkgs.python3Packages.py-tree-sitter", "0.20.1" )
+    , ( "pkgs.python3Packages.py-ubjson", "0.16.1" )
+    , ( "pkgs.python3Packages.py-vapid", "1.9.0" )
+    , ( "pkgs.python3Packages.py-zabbix", "1.1.7" )
+    , ( "pkgs.python3Packages.py17track", "2021.12.2" )
+    , ( "pkgs.python3Packages.py2bit", "0.3.0" )
+    , ( "pkgs.python3Packages.py3buddy", "2019-09-29" )
+    , ( "pkgs.python3Packages.py3exiv2", "0.12.0" )
+    , ( "pkgs.python3Packages.py3nvml", "0.2.7" )
+    , ( "pkgs.python3Packages.py3rijndael", "0.3.3" )
+    , ( "pkgs.python3Packages.py3status", "3.54" )
+    , ( "pkgs.python3Packages.py3to2", "1.1.1" )
+    , ( "pkgs.python3Packages.py4j", "0.10.9.7" )
+    , ( "pkgs.python3Packages.py65", "1.1.0" )
+    , ( "pkgs.python3Packages.pyRFC3339", "1.1" )
+    , ( "pkgs.python3Packages.pySmartDL", "1.3.4" )
+    , ( "pkgs.python3Packages.py_scrypt", "0.8.20" )
+    , ( "pkgs.python3Packages.py_stringmatching", "0.4.3" )
+    , ( "pkgs.python3Packages.pyacaia-async", "0.0.10" )
+    , ( "pkgs.python3Packages.pyacoustid", "1.3.0" )
+    , ( "pkgs.python3Packages.pyads", "3.3.9" )
+    , ( "pkgs.python3Packages.pyaehw4a1", "0.3.9" )
+    , ( "pkgs.python3Packages.pyaes", "1.6.1" )
+    , ( "pkgs.python3Packages.pyaftership", "23.1.0" )
+    , ( "pkgs.python3Packages.pyahocorasick", "2.0.0" )
+    , ( "pkgs.python3Packages.pyairnow", "1.2.1" )
+    , ( "pkgs.python3Packages.pyairvisual", "2023.08.1" )
+    , ( "pkgs.python3Packages.pyalgotrade", "0.20" )
+    , ( "pkgs.python3Packages.pyamg", "5.0.1" )
+    , ( "pkgs.python3Packages.pyaml", "23.9.6" )
+    , ( "pkgs.python3Packages.pyannotate", "1.2.0" )
+    , ( "pkgs.python3Packages.pyarlo", "0.2.4" )
+    , ( "pkgs.python3Packages.pyarr", "5.2.0" )
+    , ( "pkgs.python3Packages.pyarrow", "14.0.1" )
+    , ( "pkgs.python3Packages.pyasn", "1.6.2" )
+    , ( "pkgs.python3Packages.pyasn1", "0.5.0" )
+    , ( "pkgs.python3Packages.pyasn1-modules", "0.3.0" )
+    , ( "pkgs.python3Packages.pyatag", "3.5.1" )
+    , ( "pkgs.python3Packages.pyathena", "3.0.10" )
+    , ( "pkgs.python3Packages.pyatmo", "7.6.0" )
+    , ( "pkgs.python3Packages.pyatome", "0.1.2" )
+    , ( "pkgs.python3Packages.pyatspi", "2.46.0" )
+    , ( "pkgs.python3Packages.pyatv", "0.14.4" )
+    , ( "pkgs.python3Packages.pyaudio", "0.2.13" )
+    , ( "pkgs.python3Packages.pyaussiebb", "0.0.18" )
+    , ( "pkgs.python3Packages.pyautogui", "0.9.53" )
+    , ( "pkgs.python3Packages.pyavm", "0.9.5" )
+    , ( "pkgs.python3Packages.pyaxmlparser", "0.3.27" )
+    , ( "pkgs.python3Packages.pybalboa", "1.0.1" )
+    , ( "pkgs.python3Packages.pybars3", "0.9.7" )
+    , ( "pkgs.python3Packages.pybase64", "1.3.1" )
+    , ( "pkgs.python3Packages.pybids", "0.16.3" )
+    , ( "pkgs.python3Packages.pybigwig", "0.3.22" )
+    , ( "pkgs.python3Packages.pybind11", "2.11.1" )
+    , ( "pkgs.python3Packages.pybindgen", "0.22.1" )
+    , ( "pkgs.python3Packages.pyblackbird", "0.6" )
+    , ( "pkgs.python3Packages.pybloom-live", "4.0.0" )
+    , ( "pkgs.python3Packages.pybluez", "2022-01-28" )
+    , ( "pkgs.python3Packages.pybotvac", "0.0.24" )
+    , ( "pkgs.python3Packages.pybox2d", "2.3.10" )
+    , ( "pkgs.python3Packages.pybravia", "0.3.3" )
+    , ( "pkgs.python3Packages.pybrowserid", "0.14.0" )
+    , ( "pkgs.python3Packages.pybtex", "0.24.0" )
+    , ( "pkgs.python3Packages.pybtex-docutils", "1.0.3" )
+    , ( "pkgs.python3Packages.pybullet", "3.2.5" )
+    , ( "pkgs.python3Packages.pycairo", "1.24.0" )
+    , ( "pkgs.python3Packages.pycangjie", "2015-05-03" )
+    , ( "pkgs.python3Packages.pycapnp", "1.1.0" )
+    , ( "pkgs.python3Packages.pycaption", "2.2.0" )
+    , ( "pkgs.python3Packages.pycardano", "0.10.0" )
+    , ( "pkgs.python3Packages.pycares", "4.3.0" )
+    , ( "pkgs.python3Packages.pycarwings2", "2.14" )
+    , ( "pkgs.python3Packages.pycatch22", "0.4.4" )
+    , ( "pkgs.python3Packages.pycategories", "1.2.0" )
+    , ( "pkgs.python3Packages.pycddl", "0.5.2" )
+    , ( "pkgs.python3Packages.pycdio", "2.1.1" )
+    , ( "pkgs.python3Packages.pycec", "0.5.2" )
+    , ( "pkgs.python3Packages.pycep-parser", "0.4.2" )
+    , ( "pkgs.python3Packages.pycfdns", "2.0.1" )
+    , ( "pkgs.python3Packages.pycflow2dot", "0.2.3" )
+    , ( "pkgs.python3Packages.pycfmodel", "0.21.0" )
+    , ( "pkgs.python3Packages.pychannels", "1.2.3" )
+    , ( "pkgs.python3Packages.pychart", "1.39" )
+    , ( "pkgs.python3Packages.pychm", "0.8.6" )
+    , ( "pkgs.python3Packages.pychromecast", "13.0.7" )
+    , ( "pkgs.python3Packages.pycketcasts", "1.0.1" )
+    , ( "pkgs.python3Packages.pyclimacell", "0.18.2" )
+    , ( "pkgs.python3Packages.pyclip", "0.7.0" )
+    , ( "pkgs.python3Packages.pyclipper", "1.3.0.post5" )
+    , ( "pkgs.python3Packages.pycm", "4.0" )
+    , ( "pkgs.python3Packages.pycmarkgfm", "1.2.1" )
+    , ( "pkgs.python3Packages.pycocotools", "2.0.7" )
+    , ( "pkgs.python3Packages.pycodestyle", "2.11.0" )
+    , ( "pkgs.python3Packages.pycognito", "2023.5.0" )
+    , ( "pkgs.python3Packages.pycoin", "0.92.20230326" )
+    , ( "pkgs.python3Packages.pycollada", "0.7.2" )
+    , ( "pkgs.python3Packages.pycomfoconnect", "0.5.1" )
+    , ( "pkgs.python3Packages.pycomposefile", "0.0.30" )
+    , ( "pkgs.python3Packages.pycontracts", "1.8.14" )
+    , ( "pkgs.python3Packages.pycontrol4", "1.1.0" )
+    , ( "pkgs.python3Packages.pycookiecheat", "0.6.0" )
+    , ( "pkgs.python3Packages.pycoolmasternet-async", "0.1.6" )
+    , ( "pkgs.python3Packages.pycosat", "0.6.3" )
+    , ( "pkgs.python3Packages.pycotap", "1.3.1" )
+    , ( "pkgs.python3Packages.pycountry", "22.3.5" )
+    , ( "pkgs.python3Packages.pycparser", "2.21" )
+    , ( "pkgs.python3Packages.pycrc", "1.21" )
+    , ( "pkgs.python3Packages.pycritty", "0.4.0" )
+    , ( "pkgs.python3Packages.pycron", "3.0.0" )
+    , ( "pkgs.python3Packages.pycrypto", "3.18.0" )
+    , ( "pkgs.python3Packages.pycryptodome", "3.18.0" )
+    , ( "pkgs.python3Packages.pycryptodomex", "3.18.0" )
+    , ( "pkgs.python3Packages.pycsdr", "0.18.0" )
+    , ( "pkgs.python3Packages.pyct", "0.5.0" )
+    , ( "pkgs.python3Packages.pyctr", "0.7.1" )
+    , ( "pkgs.python3Packages.pycuda", "2023.1" )
+    , ( "pkgs.python3Packages.pycups", "2.0.1" )
+    , ( "pkgs.python3Packages.pycurl", "7.45.2" )
+    , ( "pkgs.python3Packages.pycxx", "7.1.4" )
+    , ( "pkgs.python3Packages.pycyphal", "1.15.2" )
+    , ( "pkgs.python3Packages.pydaikin", "2.11.1" )
+    , ( "pkgs.python3Packages.pydal", "20230521.1" )
+    , ( "pkgs.python3Packages.pydanfossair", "0.2.0" )
+    , ( "pkgs.python3Packages.pydantic", "1.10.12" )
+    , ( "pkgs.python3Packages.pydantic-core", "2.6.3" )
+    , ( "pkgs.python3Packages.pydantic-extra-types", "2.1.0" )
+    , ( "pkgs.python3Packages.pydantic-scim", "0.0.8" )
+    , ( "pkgs.python3Packages.pydantic-settings", "2.0.3" )
+    , ( "pkgs.python3Packages.pydash", "5.1.1" )
+    , ( "pkgs.python3Packages.pydata-google-auth", "1.8.2" )
+    , ( "pkgs.python3Packages.pydata-sphinx-theme", "0.14.3" )
+    , ( "pkgs.python3Packages.pydateinfer", "0.3.0" )
+    , ( "pkgs.python3Packages.pydbus", "0.6.0" )
+    , ( "pkgs.python3Packages.pydeck", "0.8.0" )
+    , ( "pkgs.python3Packages.pydeconz", "113" )
+    , ( "pkgs.python3Packages.pydelijn", "1.1.0" )
+    , ( "pkgs.python3Packages.pydenticon", "0.3.1" )
+    , ( "pkgs.python3Packages.pydeps", "1.12.17" )
+    , ( "pkgs.python3Packages.pydes", "2019-01-08" )
+    , ( "pkgs.python3Packages.pydevccu", "0.1.7" )
+    , ( "pkgs.python3Packages.pydevd", "2.9.6" )
+    , ( "pkgs.python3Packages.pydevtool", "0.3.0" )
+    , ( "pkgs.python3Packages.pydexcom", "0.3.2" )
+    , ( "pkgs.python3Packages.pydicom", "2.4.3" )
+    , ( "pkgs.python3Packages.pydicom-seg", "0.4.1" )
+    , ( "pkgs.python3Packages.pydigiham", "0.6.0" )
+    , ( "pkgs.python3Packages.pydiscourse", "1.6.1" )
+    , ( "pkgs.python3Packages.pydiscovergy", "2.0.5" )
+    , ( "pkgs.python3Packages.pydispatcher", "2.0.7" )
+    , ( "pkgs.python3Packages.pydmd", "0.4.0.post2302" )
+    , ( "pkgs.python3Packages.pydns", "3.2.1" )
+    , ( "pkgs.python3Packages.pydocstyle", "6.3.0" )
+    , ( "pkgs.python3Packages.pydocumentdb", "2.3.5" )
+    , ( "pkgs.python3Packages.pydoods", "1.0.2" )
+    , ( "pkgs.python3Packages.pydot", "1.4.2" )
+    , ( "pkgs.python3Packages.pydrawise", "2023.11.0" )
+    , ( "pkgs.python3Packages.pydrive2", "1.17.0" )
+    , ( "pkgs.python3Packages.pydroid-ipcam", "2.0.0" )
+    , ( "pkgs.python3Packages.pydruid", "0.6.5" )
+    , ( "pkgs.python3Packages.pydsdl", "1.18.0" )
+    , ( "pkgs.python3Packages.pydub", "0.25.1" )
+    , ( "pkgs.python3Packages.pyduke-energy", "1.0.6" )
+    , ( "pkgs.python3Packages.pyduotecno", "2023.11.1" )
+    , ( "pkgs.python3Packages.pydy", "0.7.1" )
+    , ( "pkgs.python3Packages.pydyf", "0.8.0" )
+    , ( "pkgs.python3Packages.pyeapi", "1.0.2" )
+    , ( "pkgs.python3Packages.pyebus", "1.4.0" )
+    , ( "pkgs.python3Packages.pyechonest", "9.0.0" )
+    , ( "pkgs.python3Packages.pyeclib", "2022-03-11" )
+    , ( "pkgs.python3Packages.pyecoforest", "0.4.0" )
+    , ( "pkgs.python3Packages.pyeconet", "0.1.22" )
+    , ( "pkgs.python3Packages.pyecowitt", "0.21" )
+    , ( "pkgs.python3Packages.pyedimax", "0.2.1" )
+    , ( "pkgs.python3Packages.pyee", "11.0.0" )
+    , ( "pkgs.python3Packages.pyefergy", "22.1.1" )
+    , ( "pkgs.python3Packages.pyeight", "0.3.2" )
+    , ( "pkgs.python3Packages.pyelftools", "0.29" )
+    , ( "pkgs.python3Packages.pyemby", "1.9" )
+    , ( "pkgs.python3Packages.pyemd", "1.0.0" )
+    , ( "pkgs.python3Packages.pyenchant", "3.2.2" )
+    , ( "pkgs.python3Packages.pyenphase", "1.14.3" )
+    , ( "pkgs.python3Packages.pyenvisalink", "4.6" )
+    , ( "pkgs.python3Packages.pyephember", "0.4.0" )
+    , ( "pkgs.python3Packages.pyepsg", "0.4.0" )
+    , ( "pkgs.python3Packages.pyerfa", "2.0.0.3" )
+    , ( "pkgs.python3Packages.pyeverlights", "0.1.0" )
+    , ( "pkgs.python3Packages.pyevilgenius", "2.0.0" )
+    , ( "pkgs.python3Packages.pyevmasm", "0.2.3" )
+    , ( "pkgs.python3Packages.pyexcel", "0.7.0" )
+    , ( "pkgs.python3Packages.pyexcel-io", "0.6.6" )
+    , ( "pkgs.python3Packages.pyexcel-ods", "0.6.0" )
+    , ( "pkgs.python3Packages.pyexcel-xls", "0.7.0" )
+    , ( "pkgs.python3Packages.pyexploitdb", "0.2.9" )
+    , ( "pkgs.python3Packages.pyezviz", "0.2.2.3" )
+    , ( "pkgs.python3Packages.pyface", "8.0.0" )
+    , ( "pkgs.python3Packages.pyfaidx", "0.7.2.2" )
+    , ( "pkgs.python3Packages.pyfakefs", "5.2.4" )
+    , ( "pkgs.python3Packages.pyfakewebcam", "0.1.0" )
+    , ( "pkgs.python3Packages.pyfantom", "2013-12-18" )
+    , ( "pkgs.python3Packages.pyfcm", "1.4.8" )
+    , ( "pkgs.python3Packages.pyfftw", "0.13.1" )
+    , ( "pkgs.python3Packages.pyfibaro", "0.7.6" )
+    , ( "pkgs.python3Packages.pyfido", "2.1.2" )
+    , ( "pkgs.python3Packages.pyfiglet", "1.0.2" )
+    , ( "pkgs.python3Packages.pyfireservicerota", "0.0.43" )
+    , ( "pkgs.python3Packages.pyflakes", "3.1.0" )
+    , ( "pkgs.python3Packages.pyflexit", "0.3" )
+    , ( "pkgs.python3Packages.pyflic", "2.0.3" )
+    , ( "pkgs.python3Packages.pyflick", "0.0.2" )
+    , ( "pkgs.python3Packages.pyfluidsynth", "1.3.2" )
+    , ( "pkgs.python3Packages.pyflume", "0.8.3" )
+    , ( "pkgs.python3Packages.pyflunearyou", "2023.10.0" )
+    , ( "pkgs.python3Packages.pyfma", "0.1.6" )
+    , ( "pkgs.python3Packages.pyfnip", "0.2" )
+    , ( "pkgs.python3Packages.pyfreedompro", "1.1.0" )
+    , ( "pkgs.python3Packages.pyfribidi", "0.12.0" )
+    , ( "pkgs.python3Packages.pyfritzhome", "0.6.9" )
+    , ( "pkgs.python3Packages.pyfronius", "0.7.2" )
+    , ( "pkgs.python3Packages.pyftdi", "0.55.0" )
+    , ( "pkgs.python3Packages.pyftgl", "0.4b" )
+    , ( "pkgs.python3Packages.pyftpdlib", "1.5.9" )
+    , ( "pkgs.python3Packages.pyfttt", "0.3.2" )
+    , ( "pkgs.python3Packages.pyfume", "0.2.25" )
+    , ( "pkgs.python3Packages.pyfuse3", "3.3.0" )
+    , ( "pkgs.python3Packages.pyfxa", "0.7.7" )
+    , ( "pkgs.python3Packages.pyfzf", "0.3.1" )
+    , ( "pkgs.python3Packages.pygal", "3.0.0" )
+    , ( "pkgs.python3Packages.pygame", "2.5.1" )
+    , ( "pkgs.python3Packages.pygame-gui", "069" )
+    , ( "pkgs.python3Packages.pygame_sdl2", "2.1.0-8.1.1" )
+    , ( "pkgs.python3Packages.pygatt", "4.0.5" )
+    , ( "pkgs.python3Packages.pygccxml", "2.4.0" )
+    , ( "pkgs.python3Packages.pygdbmi", "0.11.0.0" )
+    , ( "pkgs.python3Packages.pygeoip", "0.3.2" )
+    , ( "pkgs.python3Packages.pygeos", "0.14" )
+    , ( "pkgs.python3Packages.pygetwindow", "0.0.9" )
+    , ( "pkgs.python3Packages.pygit2", "1.13.0" )
+    , ( "pkgs.python3Packages.pygitguardian", "1.11.0" )
+    , ( "pkgs.python3Packages.pygithub", "2.1.1" )
+    , ( "pkgs.python3Packages.pyglet", "2.0.10" )
+    , ( "pkgs.python3Packages.pyglm", "2.7.1" )
+    , ( "pkgs.python3Packages.pygls", "1.1.2" )
+    , ( "pkgs.python3Packages.pygmars", "0.8.0" )
+    , ( "pkgs.python3Packages.pygments", "2.16.1" )
+    , ( "pkgs.python3Packages.pygments-better-html", "0.1.5" )
+    , ( "pkgs.python3Packages.pygments-markdown-lexer", "0.1.0.dev39" )
+    , ( "pkgs.python3Packages.pygments-style-github", "0.4" )
+    , ( "pkgs.python3Packages.pygmo", "2.19.5" )
+    , ( "pkgs.python3Packages.pygmt", "0.10.0" )
+    , ( "pkgs.python3Packages.pygnmi", "0.8.13" )
+    , ( "pkgs.python3Packages.pygobject-stubs", "2.10.0" )
+    , ( "pkgs.python3Packages.pygobject3", "3.46.0" )
+    , ( "pkgs.python3Packages.pygogo", "0.13.2" )
+    , ( "pkgs.python3Packages.pygpgme", "0.3" )
+    , ( "pkgs.python3Packages.pygraphviz", "1.11" )
+    , ( "pkgs.python3Packages.pygreat", "2019.5.1.dev0" )
+    , ( "pkgs.python3Packages.pygrok", "1.0.0" )
+    , ( "pkgs.python3Packages.pygsl", "2.3.3" )
+    , ( "pkgs.python3Packages.pygtail", "0.8.0" )
+    , ( "pkgs.python3Packages.pygtfs", "0.1.9" )
+    , ( "pkgs.python3Packages.pygti", "0.9.4" )
+    , ( "pkgs.python3Packages.pygtkspellcheck", "5.0.2" )
+    , ( "pkgs.python3Packages.pygtrie", "2.5.0" )
+    , ( "pkgs.python3Packages.pyhamcrest", "2.0.4" )
+    , ( "pkgs.python3Packages.pyhanko", "0.20.0" )
+    , ( "pkgs.python3Packages.pyhanko-certvalidator", "0.23.0" )
+    , ( "pkgs.python3Packages.pyhaversion", "23.1.0" )
+    , ( "pkgs.python3Packages.pyhcl", "0.4.4" )
+    , ( "pkgs.python3Packages.pyheck", "0.1.5" )
+    , ( "pkgs.python3Packages.pyheif", "0.7.1" )
+    , ( "pkgs.python3Packages.pyheos", "0.7.2" )
+    , ( "pkgs.python3Packages.pyhepmc", "2.13.2" )
+    , ( "pkgs.python3Packages.pyhiveapi", "0.5.15" )
+    , ( "pkgs.python3Packages.pyhocon", "0.3.60" )
+    , ( "pkgs.python3Packages.pyhomematic", "0.1.77" )
+    , ( "pkgs.python3Packages.pyhomepilot", "0.0.3" )
+    , ( "pkgs.python3Packages.pyhomeworks", "0.0.6" )
+    , ( "pkgs.python3Packages.pyhs100", "0.3.5.2" )
+    , ( "pkgs.python3Packages.pyhumps", "3.8.0" )
+    , ( "pkgs.python3Packages.pyi2cflash", "0.2.2" )
+    , ( "pkgs.python3Packages.pyialarm", "2.2.0" )
+    , ( "pkgs.python3Packages.pyicloud", "1.0.0" )
+    , ( "pkgs.python3Packages.pyicu", "2.11" )
+    , ( "pkgs.python3Packages.pyimpfuzzy", "0.5" )
+    , ( "pkgs.python3Packages.pyinfra", "2.8" )
+    , ( "pkgs.python3Packages.pyinotify", "0.9.6" )
+    , ( "pkgs.python3Packages.pyinputevent", "2016-10-18" )
+    , ( "pkgs.python3Packages.pyinstaller-versionfile", "2.1.1" )
+    , ( "pkgs.python3Packages.pyinsteon", "1.5.2" )
+    , ( "pkgs.python3Packages.pyinstrument", "4.6.0" )
+    , ( "pkgs.python3Packages.pyintesishome", "1.8.5" )
+    , ( "pkgs.python3Packages.pyipma", "3.0.7" )
+    , ( "pkgs.python3Packages.pyipp", "0.14.4" )
+    , ( "pkgs.python3Packages.pyiqvia", "2023.10.0" )
+    , ( "pkgs.python3Packages.pyisbn", "1.3.1" )
+    , ( "pkgs.python3Packages.pyisy", "3.1.14" )
+    , ( "pkgs.python3Packages.pyixapi", "0.2.1" )
+    , ( "pkgs.python3Packages.pyjet", "1.9.0" )
+    , ( "pkgs.python3Packages.pyjks", "20.0.0" )
+    , ( "pkgs.python3Packages.pyjnius", "1.6.1" )
+    , ( "pkgs.python3Packages.pyjson5", "0.9.14" )
+    , ( "pkgs.python3Packages.pyjsparser", "2.7.1" )
+    , ( "pkgs.python3Packages.pyjwkest", "1.4.2" )
+    , ( "pkgs.python3Packages.pyjwt", "2.8.0" )
+    , ( "pkgs.python3Packages.pykakasi", "2.2.1" )
+    , ( "pkgs.python3Packages.pykaleidescape", "2022.2.3" )
+    , ( "pkgs.python3Packages.pykalman", "0.9.5" )
+    , ( "pkgs.python3Packages.pykdl", "1.5.1" )
+    , ( "pkgs.python3Packages.pykdtree", "1.3.7.post0" )
+    , ( "pkgs.python3Packages.pykeepass", "4.0.6" )
+    , ( "pkgs.python3Packages.pykerberos", "1.2.4" )
+    , ( "pkgs.python3Packages.pykeyatome", "2.1.2" )
+    , ( "pkgs.python3Packages.pykira", "0.1.3" )
+    , ( "pkgs.python3Packages.pykka", "4.0.1" )
+    , ( "pkgs.python3Packages.pykmtronic", "0.3.0" )
+    , ( "pkgs.python3Packages.pykodi", "0.2.7" )
+    , ( "pkgs.python3Packages.pykoplenti", "1.0.0" )
+    , ( "pkgs.python3Packages.pykostalpiko", "1.1.2" )
+    , ( "pkgs.python3Packages.pykrakenapi", "0.3.2" )
+    , ( "pkgs.python3Packages.pykulersky", "0.5.5" )
+    , ( "pkgs.python3Packages.pykwalify", "1.8.0" )
+    , ( "pkgs.python3Packages.pykwb", "0.0.10" )
+    , ( "pkgs.python3Packages.pylacrosse", "0.4" )
+    , ( "pkgs.python3Packages.pylama", "8.4.1" )
+    , ( "pkgs.python3Packages.pylast", "5.2.0" )
+    , ( "pkgs.python3Packages.pylatexenc", "2.10" )
+    , ( "pkgs.python3Packages.pylaunches", "1.4.0" )
+    , ( "pkgs.python3Packages.pyld", "1.0.5" )
+    , ( "pkgs.python3Packages.pylddwrap", "1.2.2" )
+    , ( "pkgs.python3Packages.pyleri", "1.4.2" )
+    , ( "pkgs.python3Packages.pylev", "1.4.0" )
+    , ( "pkgs.python3Packages.pylgnetcast", "0.3.8" )
+    , ( "pkgs.python3Packages.pylibacl", "0.7.0" )
+    , ( "pkgs.python3Packages.pylibconfig2", "0.2.5" )
+    , ( "pkgs.python3Packages.pylibdmtx", "0.1.10" )
+    , ( "pkgs.python3Packages.pylibftdi", "0.21.0" )
+    , ( "pkgs.python3Packages.pylibjpeg-libjpeg", "1.3.4" )
+    , ( "pkgs.python3Packages.pyliblo", "0.10.0" )
+    , ( "pkgs.python3Packages.pylibmc", "1.6.3" )
+    , ( "pkgs.python3Packages.pylink-square", "1.2.0" )
+    , ( "pkgs.python3Packages.pylint", "2.17.5" )
+    , ( "pkgs.python3Packages.pylint-celery", "0.3" )
+    , ( "pkgs.python3Packages.pylint-django", "2.5.3" )
+    , ( "pkgs.python3Packages.pylint-flask", "0.6" )
+    , ( "pkgs.python3Packages.pylint-plugin-utils", "0.7" )
+    , ( "pkgs.python3Packages.pylint-venv", "3.0.3" )
+    , ( "pkgs.python3Packages.pylion", "0.5.3" )
+    , ( "pkgs.python3Packages.pylitterbot", "2023.4.9" )
+    , ( "pkgs.python3Packages.pylnk3", "0.4.2" )
+    , ( "pkgs.python3Packages.pylpsd", "0.1.4" )
+    , ( "pkgs.python3Packages.pylru", "1.2.1" )
+    , ( "pkgs.python3Packages.pyls-flake8", "0.4.0" )
+    , ( "pkgs.python3Packages.pyls-isort", "0.2.2" )
+    , ( "pkgs.python3Packages.pyls-memestra", "0.0.16" )
+    , ( "pkgs.python3Packages.pyls-spyder", "0.4.0" )
+    , ( "pkgs.python3Packages.pylsp-mypy", "0.6.7" )
+    , ( "pkgs.python3Packages.pylsp-rope", "0.1.11" )
+    , ( "pkgs.python3Packages.pylsqpack", "0.3.17" )
+    , ( "pkgs.python3Packages.pylti", "0.7.0" )
+    , ( "pkgs.python3Packages.pylutron", "0.2.10" )
+    , ( "pkgs.python3Packages.pylutron-caseta", "0.18.3" )
+    , ( "pkgs.python3Packages.pylxd", "2.3.1" )
+    , ( "pkgs.python3Packages.pylyrics", "1.1.0" )
+    , ( "pkgs.python3Packages.pylzma", "0.5.0" )
+    , ( "pkgs.python3Packages.pymacaroons", "0.13.0" )
+    , ( "pkgs.python3Packages.pymailgunner", "1.5" )
+    , ( "pkgs.python3Packages.pymanopt", "2.2.0" )
+    , ( "pkgs.python3Packages.pymarshal", "2.2.0" )
+    , ( "pkgs.python3Packages.pymata-express", "1.21" )
+    , ( "pkgs.python3Packages.pymatgen", "2022.3.29" )
+    , ( "pkgs.python3Packages.pymatting", "1.1.2" )
+    , ( "pkgs.python3Packages.pymaven-patch", "0.3.0" )
+    , ( "pkgs.python3Packages.pymavlink", "2.4.40" )
+    , ( "pkgs.python3Packages.pymbolic", "2022.2" )
+    , ( "pkgs.python3Packages.pymc", "5.9.2" )
+    , ( "pkgs.python3Packages.pymc3", "5.9.2" )
+    , ( "pkgs.python3Packages.pymdown-extensions", "10.3" )
+    , ( "pkgs.python3Packages.pymdstat", "0.4.2" )
+    , ( "pkgs.python3Packages.pymediainfo", "6.1.0" )
+    , ( "pkgs.python3Packages.pymediaroom", "0.6.5.4" )
+    , ( "pkgs.python3Packages.pymedio", "0.2.14" )
+    , ( "pkgs.python3Packages.pymeeus", "0.5.12" )
+    , ( "pkgs.python3Packages.pymelcloud", "2.11.0" )
+    , ( "pkgs.python3Packages.pymemcache", "4.0.0" )
+    , ( "pkgs.python3Packages.pymemoize", "1.0.3" )
+    , ( "pkgs.python3Packages.pyment", "0.3.3" )
+    , ( "pkgs.python3Packages.pymeta3", "0.5.1" )
+    , ( "pkgs.python3Packages.pymetar", "1.4" )
+    , ( "pkgs.python3Packages.pymeteireann", "2021.8.0" )
+    , ( "pkgs.python3Packages.pymeteoclimatic", "0.0.6" )
+    , ( "pkgs.python3Packages.pymetno", "0.12.0" )
+    , ( "pkgs.python3Packages.pymfy", "0.11.0" )
+    , ( "pkgs.python3Packages.pymicrobot", "0.0.9" )
+    , ( "pkgs.python3Packages.pymilter", "1.0.5" )
+    , ( "pkgs.python3Packages.pymilvus", "2.3.0" )
+    , ( "pkgs.python3Packages.pymitv", "1.5.0" )
+    , ( "pkgs.python3Packages.pymodbus", "3.5.4" )
+    , ( "pkgs.python3Packages.pymongo", "4.5.0" )
+    , ( "pkgs.python3Packages.pymongo-inmemory", "0.4.0" )
+    , ( "pkgs.python3Packages.pymoo", "0.6.0.1" )
+    , ( "pkgs.python3Packages.pymorphy2", "0.9.1" )
+    , ( "pkgs.python3Packages.pymorphy2-dicts-ru", "2.4.417127.4579844" )
+    , ( "pkgs.python3Packages.pymorphy3", "1.2.1" )
+    , ( "pkgs.python3Packages.pymorphy3-dicts-ru", "2.4.417150.4580142" )
+    , ( "pkgs.python3Packages.pymorphy3-dicts-uk", "2.4.1.1.1663094765" )
+    , ( "pkgs.python3Packages.pympler", "1.0.1" )
+    , ( "pkgs.python3Packages.pymsgbox", "1.0.9" )
+    , ( "pkgs.python3Packages.pymsteams", "0.2.2" )
+    , ( "pkgs.python3Packages.pymumble", "1.6.1" )
+    , ( "pkgs.python3Packages.pymunk", "6.5.2" )
+    , ( "pkgs.python3Packages.pymupdf", "1.23.6" )
+    , ( "pkgs.python3Packages.pymvglive", "1.1.4" )
+    , ( "pkgs.python3Packages.pymyq", "3.1.13" )
+    , ( "pkgs.python3Packages.pymysensors", "0.24.1" )
+    , ( "pkgs.python3Packages.pymysql", "1.0.2" )
+    , ( "pkgs.python3Packages.pymysqlsa", "1.0" )
+    , ( "pkgs.python3Packages.pymystem3", "0.2.0" )
+    , ( "pkgs.python3Packages.pynac", "0.2" )
+    , ( "pkgs.python3Packages.pynacl", "1.5.0" )
+    , ( "pkgs.python3Packages.pynamecheap", "0.0.3" )
+    , ( "pkgs.python3Packages.pynamodb", "5.5.0" )
+    , ( "pkgs.python3Packages.pynanoleaf", "0.1.1" )
+    , ( "pkgs.python3Packages.pync", "2.0.3" )
+    , ( "pkgs.python3Packages.pynello", "2.0.3" )
+    , ( "pkgs.python3Packages.pynest2d", "4.12.0" )
+    , ( "pkgs.python3Packages.pynetbox", "7.2.0" )
+    , ( "pkgs.python3Packages.pynetdicom", "2.0.2" )
+    , ( "pkgs.python3Packages.pynetgear", "0.10.10" )
+    , ( "pkgs.python3Packages.pyngrok", "7.0.1" )
+    , ( "pkgs.python3Packages.pynina", "0.3.3" )
+    , ( "pkgs.python3Packages.pynisher", "1.0.9" )
+    , ( "pkgs.python3Packages.pynmea2", "1.19.0" )
+    , ( "pkgs.python3Packages.pynndescent", "0.5.10" )
+    , ( "pkgs.python3Packages.pynobo", "1.7.0" )
+    , ( "pkgs.python3Packages.pynput", "1.7.6" )
+    , ( "pkgs.python3Packages.pynrrd", "1.0.0" )
+    , ( "pkgs.python3Packages.pynuki", "1.6.2" )
+    , ( "pkgs.python3Packages.pynut2", "2.1.2" )
+    , ( "pkgs.python3Packages.pynvim", "0.4.3" )
+    , ( "pkgs.python3Packages.pynvim-pp", "2023-08-03" )
+    , ( "pkgs.python3Packages.pynvml", "11.5.0" )
+    , ( "pkgs.python3Packages.pynws", "1.6.0" )
+    , ( "pkgs.python3Packages.pynx584", "0.8.1" )
+    , ( "pkgs.python3Packages.pynzb", "0.1.0" )
+    , ( "pkgs.python3Packages.pyobihai", "1.4.2" )
+    , ( "pkgs.python3Packages.pyocd", "0.36.0" )
+    , ( "pkgs.python3Packages.pyocr", "0.8.5" )
+    , ( "pkgs.python3Packages.pyoctoprintapi", "0.1.12" )
+    , ( "pkgs.python3Packages.pyodbc", "4.0.39" )
+    , ( "pkgs.python3Packages.pyogg", "0.6.9a1" )
+    , ( "pkgs.python3Packages.pyombi", "0.1.10" )
+    , ( "pkgs.python3Packages.pyomo", "6.6.2" )
+    , ( "pkgs.python3Packages.pyopencl", "2023.1.4" )
+    , ( "pkgs.python3Packages.pyopengl", "3.1.6" )
+    , ( "pkgs.python3Packages.pyopengl-accelerate", "3.1.7" )
+    , ( "pkgs.python3Packages.pyopenssl", "23.2.0" )
+    , ( "pkgs.python3Packages.pyopenuv", "2023.08.0" )
+    , ( "pkgs.python3Packages.pyopnsense", "0.4.0" )
+    , ( "pkgs.python3Packages.pyoppleio", "1.0.7" )
+    , ( "pkgs.python3Packages.pyorthanc", "1.13.1" )
+    , ( "pkgs.python3Packages.pyosf", "1.0.5" )
+    , ( "pkgs.python3Packages.pyosmium", "3.6.0" )
+    , ( "pkgs.python3Packages.pyotgw", "2.1.3" )
+    , ( "pkgs.python3Packages.pyotp", "2.9.0" )
+    , ( "pkgs.python3Packages.pyoutbreaksnearme", "2023.10.0" )
+    , ( "pkgs.python3Packages.pyoverkiz", "1.13.2" )
+    , ( "pkgs.python3Packages.pyowm", "3.3.0" )
+    , ( "pkgs.python3Packages.pyownet", "0.10.0.post1" )
+    , ( "pkgs.python3Packages.pyp", "1.1.0" )
+    , ( "pkgs.python3Packages.pypaBuildHook", "" )
+    , ( "pkgs.python3Packages.pypaInstallHook", "" )
+    , ( "pkgs.python3Packages.pypamtest", "1.1.3" )
+    , ( "pkgs.python3Packages.pypandoc", "1.10" )
+    , ( "pkgs.python3Packages.pyparser", "1.0" )
+    , ( "pkgs.python3Packages.pyparsing", "3.0.9" )
+    , ( "pkgs.python3Packages.pyparted", "3.13.0" )
+    , ( "pkgs.python3Packages.pypass", "0.2.1" )
+    , ( "pkgs.python3Packages.pypblib", "0.0.4" )
+    , ( "pkgs.python3Packages.pypca", "0.0.13" )
+    , ( "pkgs.python3Packages.pypcap", "1.3.0" )
+    , ( "pkgs.python3Packages.pypck", "0.7.17" )
+    , ( "pkgs.python3Packages.pypdf", "3.16.0" )
+    , ( "pkgs.python3Packages.pypdf2", "3.0.1" )
+    , ( "pkgs.python3Packages.pypdf3", "1.0.6" )
+    , ( "pkgs.python3Packages.pypeg2", "2.15.2" )
+    , ( "pkgs.python3Packages.pypemicro", "0.1.11" )
+    , ( "pkgs.python3Packages.pyperclip", "1.8.2" )
+    , ( "pkgs.python3Packages.pyperf", "2.6.2" )
+    , ( "pkgs.python3Packages.pyperscan", "0.2.2" )
+    , ( "pkgs.python3Packages.pyphen", "0.14.0" )
+    , ( "pkgs.python3Packages.pyphotonfile", "0.2.1" )
+    , ( "pkgs.python3Packages.pypika", "0.48.9" )
+    , ( "pkgs.python3Packages.pypillowfight", "0.3.0" )
+    , ( "pkgs.python3Packages.pypinyin", "0.49.0" )
+    , ( "pkgs.python3Packages.pypiserver", "2.0.1" )
+    , ( "pkgs.python3Packages.pypitoken", "7.0.1" )
+    , ( "pkgs.python3Packages.pyplaato", "0.0.18" )
+    , ( "pkgs.python3Packages.pyplatec", "1.4.0" )
+    , ( "pkgs.python3Packages.pypng", "0.0.21" )
+    , ( "pkgs.python3Packages.pypoint", "2.3.2" )
+    , ( "pkgs.python3Packages.pypoolstation", "0.5.3" )
+    , ( "pkgs.python3Packages.pyppeteer", "1.0.2" )
+    , ( "pkgs.python3Packages.pyprecice", "2.5.0.4" )
+    , ( "pkgs.python3Packages.pypresence", "4.3.0" )
+    , ( "pkgs.python3Packages.pyprind", "2.11.3" )
+    , ( "pkgs.python3Packages.pyprof2calltree", "1.4.5" )
+    , ( "pkgs.python3Packages.pyproj", "3.6.1" )
+    , ( "pkgs.python3Packages.pyproject-api", "1.6.1" )
+    , ( "pkgs.python3Packages.pyproject-hooks", "1.0.0" )
+    , ( "pkgs.python3Packages.pyproject-metadata", "0.7.1" )
+    , ( "pkgs.python3Packages.pyprosegur", "0.0.9" )
+    , ( "pkgs.python3Packages.pyprusalink", "1.1.0" )
+    , ( "pkgs.python3Packages.pypsrp", "0.8.1" )
+    , ( "pkgs.python3Packages.pyptlib", "0.0.6" )
+    , ( "pkgs.python3Packages.pypubsub", "4.0.3" )
+    , ( "pkgs.python3Packages.pypugjs", "5.9.12" )
+    , ( "pkgs.python3Packages.pypykatz", "0.6.9" )
+    , ( "pkgs.python3Packages.pypytools", "0.6.2" )
+    , ( "pkgs.python3Packages.pyqldb", "3.2.3" )
+    , ( "pkgs.python3Packages.pyqrcode", "1.2.1" )
+    , ( "pkgs.python3Packages.pyqt-builder", "1.15.3" )
+    , ( "pkgs.python3Packages.pyqt3d", "5.15.6" )
+    , ( "pkgs.python3Packages.pyqt5", "5.15.9" )
+    , ( "pkgs.python3Packages.pyqt5-stubs", "5.15.6.0" )
+    , ( "pkgs.python3Packages.pyqt5_sip", "12.11.0" )
+    , ( "pkgs.python3Packages.pyqt5_with_qtmultimedia", "5.15.9" )
+    , ( "pkgs.python3Packages.pyqt5_with_qtwebkit", "5.15.9" )
+    , ( "pkgs.python3Packages.pyqt6", "6.6.0" )
+    , ( "pkgs.python3Packages.pyqt6-charts", "6.6.0" )
+    , ( "pkgs.python3Packages.pyqt6-sip", "13.6.0" )
+    , ( "pkgs.python3Packages.pyqt6-webengine", "6.6.0" )
+    , ( "pkgs.python3Packages.pyqtchart", "5.15.6" )
+    , ( "pkgs.python3Packages.pyqtdatavisualization", "5.15.5" )
+    , ( "pkgs.python3Packages.pyqtgraph", "0.13.3" )
+    , ( "pkgs.python3Packages.pyqtwebengine", "5.15.4" )
+    , ( "pkgs.python3Packages.pyquaternion", "0.9.9" )
+    , ( "pkgs.python3Packages.pyquery", "2.0.0" )
+    , ( "pkgs.python3Packages.pyquil", "3.5.4" )
+    , ( "pkgs.python3Packages.pyqvrpro", "0.52" )
+    , ( "pkgs.python3Packages.pyqwikswitch", "0.94" )
+    , ( "pkgs.python3Packages.pyrabbit2", "1.0.7" )
+    , ( "pkgs.python3Packages.pyrad", "2.4" )
+    , ( "pkgs.python3Packages.pyradiomics", "3.1.0" )
+    , ( "pkgs.python3Packages.pyradios", "2.0.0" )
+    , ( "pkgs.python3Packages.pyrainbird", "4.0.0" )
+    , ( "pkgs.python3Packages.pyramid", "2.0.2" )
+    , ( "pkgs.python3Packages.pyramid-beaker", "0.8" )
+    , ( "pkgs.python3Packages.pyramid-chameleon", "0.3" )
+    , ( "pkgs.python3Packages.pyramid-exclog", "1.1" )
+    , ( "pkgs.python3Packages.pyramid-jinja2", "2.10" )
+    , ( "pkgs.python3Packages.pyramid-mako", "1.1.0" )
+    , ( "pkgs.python3Packages.pyramid-multiauth", "1.0.1" )
+    , ( "pkgs.python3Packages.pyramid_beaker", "0.8" )
+    , ( "pkgs.python3Packages.pyramid_chameleon", "0.3" )
+    , ( "pkgs.python3Packages.pyramid_exclog", "1.1" )
+    , ( "pkgs.python3Packages.pyramid_jinja2", "2.10" )
+    , ( "pkgs.python3Packages.pyramid_mako", "1.1.0" )
+    , ( "pkgs.python3Packages.pyramid_multiauth", "1.0.1" )
+    , ( "pkgs.python3Packages.pyrate-limiter", "2.10.0" )
+    , ( "pkgs.python3Packages.pyrdfa3", "3.5.3" )
+    , ( "pkgs.python3Packages.pyre-extensions", "0.0.30" )
+    , ( "pkgs.python3Packages.pyreadability", "0.8.1" )
+    , ( "pkgs.python3Packages.pyreaderwriterlock", "1.0.9" )
+    , ( "pkgs.python3Packages.pyreadstat", "1.2.4" )
+    , ( "pkgs.python3Packages.pyrealsense2", "2.45.0" )
+    , ( "pkgs.python3Packages.pyrealsense2WithCuda", "2.45.0" )
+    , ( "pkgs.python3Packages.pyrealsense2WithoutCuda", "2.45.0" )
+    , ( "pkgs.python3Packages.pyrect", "0.2.0" )
+    , ( "pkgs.python3Packages.pyregion", "2.2.0" )
+    , ( "pkgs.python3Packages.pyrender", "0.1.45" )
+    , ( "pkgs.python3Packages.pyrevolve", "2.2.3" )
+    , ( "pkgs.python3Packages.pyrfxtrx", "0.30.1" )
+    , ( "pkgs.python3Packages.pyric", "0.1.6.3" )
+    , ( "pkgs.python3Packages.pyrisco", "0.5.8" )
+    , ( "pkgs.python3Packages.pyrituals", "0.0.6" )
+    , ( "pkgs.python3Packages.pyrmvtransport", "0.3.3" )
+    , ( "pkgs.python3Packages.pyro-api", "0.1.2" )
+    , ( "pkgs.python3Packages.pyro-ppl", "1.8.6" )
+    , ( "pkgs.python3Packages.pyro4", "4.82" )
+    , ( "pkgs.python3Packages.pyro5", "5.15" )
+    , ( "pkgs.python3Packages.pyrogram", "2.0.106" )
+    , ( "pkgs.python3Packages.pyroma", "3.2" )
+    , ( "pkgs.python3Packages.pyroute2", "0.7.9" )
+    , ( "pkgs.python3Packages.pyrr", "2022-07-22" )
+    , ( "pkgs.python3Packages.pyrsistent", "0.19.3" )
+    , ( "pkgs.python3Packages.pyrss2gen", "1.1" )
+    , ( "pkgs.python3Packages.pyrtlsdr", "0.3.0" )
+    , ( "pkgs.python3Packages.pysabnzbd", "1.1.1" )
+    , ( "pkgs.python3Packages.pysaj", "0.0.16" )
+    , ( "pkgs.python3Packages.pysam", "0.21.0" )
+    , ( "pkgs.python3Packages.pysaml2", "7.4.2" )
+    , ( "pkgs.python3Packages.pysatochip", "0.14.2" )
+    , ( "pkgs.python3Packages.pysbd", "0.3.4" )
+    , ( "pkgs.python3Packages.pysc2", "1.2" )
+    , ( "pkgs.python3Packages.pyscard", "2.0.7" )
+    , ( "pkgs.python3Packages.pyscf", "2.4.0" )
+    , ( "pkgs.python3Packages.pyschedule", "0.2.34" )
+    , ( "pkgs.python3Packages.pyschemes", "2017-11-08" )
+    , ( "pkgs.python3Packages.pyschlage", "2023.11.0" )
+    , ( "pkgs.python3Packages.pyscreenshot", "3.1" )
+    , ( "pkgs.python3Packages.pyscreeze", "0.1.26" )
+    , ( "pkgs.python3Packages.pyscrypt", "1.6.2" )
+    , ( "pkgs.python3Packages.pyscss", "1.4.0" )
+    , ( "pkgs.python3Packages.pysdcp", "1" )
+    , ( "pkgs.python3Packages.pysdl2", "0.9.15" )
+    , ( "pkgs.python3Packages.pysearpc", "3.3-20230626" )
+    , ( "pkgs.python3Packages.pysecuritas", "0.1.6" )
+    , ( "pkgs.python3Packages.pysendfile", "2.0.1" )
+    , ( "pkgs.python3Packages.pysensibo", "1.0.36" )
+    , ( "pkgs.python3Packages.pysensors", "2017-07-13" )
+    , ( "pkgs.python3Packages.pysequoia", "0.1.20" )
+    , ( "pkgs.python3Packages.pyserial", "3.5" )
+    , ( "pkgs.python3Packages.pyserial-asyncio", "0.6" )
+    , ( "pkgs.python3Packages.pyserial-asyncio-fast", "0.11" )
+    , ( "pkgs.python3Packages.pysftp", "0.2.9" )
+    , ( "pkgs.python3Packages.pyshark", "0.6" )
+    , ( "pkgs.python3Packages.pyshp", "2.3.1" )
+    , ( "pkgs.python3Packages.pysiaalarm", "3.1.1" )
+    , ( "pkgs.python3Packages.pyside2", "5.15.11" )
+    , ( "pkgs.python3Packages.pyside2-tools", "5.15.11" )
+    , ( "pkgs.python3Packages.pyside6", "6.6.0" )
+    , ( "pkgs.python3Packages.pysigma", "0.10.6" )
+    , ( "pkgs.python3Packages.pysigma-backend-elasticsearch", "1.0.9" )
+    , ( "pkgs.python3Packages.pysigma-backend-insightidr", "0.2.2" )
+    , ( "pkgs.python3Packages.pysigma-backend-opensearch", "1.0.1" )
+    , ( "pkgs.python3Packages.pysigma-backend-qradar", "0.3.3" )
+    , ( "pkgs.python3Packages.pysigma-backend-splunk", "1.0.3" )
+    , ( "pkgs.python3Packages.pysigma-pipeline-crowdstrike", "1.0.1" )
+    , ( "pkgs.python3Packages.pysigma-pipeline-sysmon", "1.0.3" )
+    , ( "pkgs.python3Packages.pysigma-pipeline-windows", "1.1.1" )
+    , ( "pkgs.python3Packages.pysignalclirestapi", "0.3.21" )
+    , ( "pkgs.python3Packages.pysigset", "0.4.0" )
+    , ( "pkgs.python3Packages.pysim", "2023-08-13" )
+    , ( "pkgs.python3Packages.pysimplegui", "4.60.5" )
+    , ( "pkgs.python3Packages.pysimplesoap", "1.16.2" )
+    , ( "pkgs.python3Packages.pysingleton", "0.2.1" )
+    , ( "pkgs.python3Packages.pyskyqhub", "0.1.9" )
+    , ( "pkgs.python3Packages.pyskyqremote", "0.3.26" )
+    , ( "pkgs.python3Packages.pyslim", "1.0.4" )
+    , ( "pkgs.python3Packages.pyslurm", "23.2.2" )
+    , ( "pkgs.python3Packages.pysma", "0.7.5" )
+    , ( "pkgs.python3Packages.pysmappee", "0.2.29" )
+    , ( "pkgs.python3Packages.pysmart", "1.3.0" )
+    , ( "pkgs.python3Packages.pysmart-smartx", "1.3.0" )
+    , ( "pkgs.python3Packages.pysmartapp", "0.3.5" )
+    , ( "pkgs.python3Packages.pysmartdl", "1.3.4" )
+    , ( "pkgs.python3Packages.pysmartthings", "0.7.8" )
+    , ( "pkgs.python3Packages.pysmb", "1.2.9.1" )
+    , ( "pkgs.python3Packages.pysmbc", "1.0.25.1" )
+    , ( "pkgs.python3Packages.pysmf", "0.1.1" )
+    , ( "pkgs.python3Packages.pysmi", "0.3.4" )
+    , ( "pkgs.python3Packages.pysml", "0.1.1" )
+    , ( "pkgs.python3Packages.pysmt", "0.9.5" )
+    , ( "pkgs.python3Packages.pysnmp", "4.4.12" )
+    , ( "pkgs.python3Packages.pysnmp-pyasn1", "1.1.3" )
+    , ( "pkgs.python3Packages.pysnmp-pysmi", "1.1.10" )
+    , ( "pkgs.python3Packages.pysnmplib", "5.0.21" )
+    , ( "pkgs.python3Packages.pysnooper", "1.2.0" )
+    , ( "pkgs.python3Packages.pysnooz", "0.10.0" )
+    , ( "pkgs.python3Packages.pysnow", "0.7.16" )
+    , ( "pkgs.python3Packages.pysocks", "1.7.1" )
+    , ( "pkgs.python3Packages.pysol-cards", "0.14.3" )
+    , ( "pkgs.python3Packages.pysolcast", "2.0.0" )
+    , ( "pkgs.python3Packages.pysolr", "3.9.0" )
+    , ( "pkgs.python3Packages.pysoma", "0.0.13" )
+    , ( "pkgs.python3Packages.pysonos", "0.0.54" )
+    , ( "pkgs.python3Packages.pysoundfile", "0.12.1" )
+    , ( "pkgs.python3Packages.pyspark", "3.5.0" )
+    , ( "pkgs.python3Packages.pyspcwebgw", "0.7.0" )
+    , ( "pkgs.python3Packages.pyspellchecker", "0.7.2" )
+    , ( "pkgs.python3Packages.pyspf", "2.0.14" )
+    , ( "pkgs.python3Packages.pyspice", "1.5" )
+    , ( "pkgs.python3Packages.pyspiflash", "0.6.3" )
+    , ( "pkgs.python3Packages.pyspinel", "2021-08-19" )
+    , ( "pkgs.python3Packages.pyspnego", "0.9.2" )
+    , ( "pkgs.python3Packages.pysptk", "0.2.2" )
+    , ( "pkgs.python3Packages.pysqlcipher3", "1.2.0" )
+    , ( "pkgs.python3Packages.pysqlitecipher", "0.22" )
+    , ( "pkgs.python3Packages.pysqueezebox", "0.7.1" )
+    , ( "pkgs.python3Packages.pysrim", "0.5.10" )
+    , ( "pkgs.python3Packages.pysrt", "1.1.2" )
+    , ( "pkgs.python3Packages.pyssim", "0.6" )
+    , ( "pkgs.python3Packages.pystache", "0.6.5" )
+    , ( "pkgs.python3Packages.pystardict", "0.8" )
+    , ( "pkgs.python3Packages.pystemd", "0.13.2" )
+    , ( "pkgs.python3Packages.pystemmer", "2.2.0" )
+    , ( "pkgs.python3Packages.pystray", "0.19.2" )
+    , ( "pkgs.python3Packages.pysubs2", "1.6.1" )
+    , ( "pkgs.python3Packages.pysuez", "0.2.0" )
+    , ( "pkgs.python3Packages.pysvg-py3", "0.2.2-post3" )
+    , ( "pkgs.python3Packages.pysvn", "1.9.20" )
+    , ( "pkgs.python3Packages.pyswitchbee", "1.8.0" )
+    , ( "pkgs.python3Packages.pyswitchbot", "0.41.0" )
+    , ( "pkgs.python3Packages.pysychonaut", "0.6.0" )
+    , ( "pkgs.python3Packages.pysyncobj", "0.3.12" )
+    , ( "pkgs.python3Packages.pysyncthru", "0.7.10" )
+    , ( "pkgs.python3Packages.pytabix", "0.1" )
+    , ( "pkgs.python3Packages.pytablewriter", "1.2.0" )
+    , ( "pkgs.python3Packages.pytado", "0.17.2" )
+    , ( "pkgs.python3Packages.pytaglib", "2.0.0" )
+    , ( "pkgs.python3Packages.pytankerkoenig", "0.0.7" )
+    , ( "pkgs.python3Packages.pytap2", "2.3.0" )
+    , ( "pkgs.python3Packages.pytapo", "3.3.6" )
+    , ( "pkgs.python3Packages.pytautulli", "23.1.1" )
+    , ( "pkgs.python3Packages.pyte", "0.8.1" )
+    , ( "pkgs.python3Packages.pytelegrambotapi", "4.14.0" )
+    , ( "pkgs.python3Packages.pytenable", "1.4.13" )
+    , ( "pkgs.python3Packages.pytensor", "2.18.1" )
+    , ( "pkgs.python3Packages.pytesseract", "0.3.13" )
+    , ( "pkgs.python3Packages.pytest", "7.4.3" )
+    , ( "pkgs.python3Packages.pytest-aio", "1.5.0" )
+    , ( "pkgs.python3Packages.pytest-aiohttp", "1.0.5" )
+    , ( "pkgs.python3Packages.pytest-annotate", "1.0.5" )
+    , ( "pkgs.python3Packages.pytest-ansible", "4.1.1" )
+    , ( "pkgs.python3Packages.pytest-arraydiff", "0.5.0" )
+    , ( "pkgs.python3Packages.pytest-astropy", "0.10.0" )
+    , ( "pkgs.python3Packages.pytest-astropy-header", "0.2.2" )
+    , ( "pkgs.python3Packages.pytest-asyncio", "0.21.1" )
+    , ( "pkgs.python3Packages.pytest-base-url", "2.0.0" )
+    , ( "pkgs.python3Packages.pytest-bdd", "6.1.1" )
+    , ( "pkgs.python3Packages.pytest-benchmark", "4.0.0" )
+    , ( "pkgs.python3Packages.pytest-black", "0.3.12" )
+    , ( "pkgs.python3Packages.pytest-cache", "1.0" )
+    , ( "pkgs.python3Packages.pytest-cases", "3.6.14" )
+    , ( "pkgs.python3Packages.pytest-catchlog", "1.2.2" )
+    , ( "pkgs.python3Packages.pytest-celery", "0.1.0" )
+    , ( "pkgs.python3Packages.pytest-check", "2.2.2" )
+    , ( "pkgs.python3Packages.pytest-cid", "1.1.2" )
+    , ( "pkgs.python3Packages.pytest-click", "1.1.0" )
+    , ( "pkgs.python3Packages.pytest-console-scripts", "1.4.1" )
+    , ( "pkgs.python3Packages.pytest-cov", "4.1.0" )
+    , ( "pkgs.python3Packages.pytest-cram", "0.2.2" )
+    , ( "pkgs.python3Packages.pytest-datadir", "1.5.0" )
+    , ( "pkgs.python3Packages.pytest-datafiles", "3.0.0" )
+    , ( "pkgs.python3Packages.pytest-dependency", "0.5.1" )
+    , ( "pkgs.python3Packages.pytest-describe", "2.1.0" )
+    , ( "pkgs.python3Packages.pytest-django", "4.5.2" )
+    , ( "pkgs.python3Packages.pytest-doctestplus", "1.0.0" )
+    , ( "pkgs.python3Packages.pytest-dotenv", "0.5.2" )
+    , ( "pkgs.python3Packages.pytest-emoji", "0.2.0" )
+    , ( "pkgs.python3Packages.pytest-env", "1.0.1" )
+    , ( "pkgs.python3Packages.pytest-error-for-skips", "2.0.2" )
+    , ( "pkgs.python3Packages.pytest-examples", "0.0.10" )
+    , ( "pkgs.python3Packages.pytest-expect", "1.1.0" )
+    , ( "pkgs.python3Packages.pytest-factoryboy", "2.5.1" )
+    , ( "pkgs.python3Packages.pytest-filter-subpackage", "0.1.2" )
+    , ( "pkgs.python3Packages.pytest-fixture-config", "1.7.0" )
+    , ( "pkgs.python3Packages.pytest-flake8", "1.1.1" )
+    , ( "pkgs.python3Packages.pytest-flakes", "4.0.5" )
+    , ( "pkgs.python3Packages.pytest-flask", "1.3.0" )
+    , ( "pkgs.python3Packages.pytest-forked", "1.6.0" )
+    , ( "pkgs.python3Packages.pytest-freezegun", "0.4.2" )
+    , ( "pkgs.python3Packages.pytest-freezer", "0.4.8" )
+    , ( "pkgs.python3Packages.pytest-golden", "0.2.2" )
+    , ( "pkgs.python3Packages.pytest-grpc", "0.8.0" )
+    , ( "pkgs.python3Packages.pytest-helpers-namespace", "2021.12.29" )
+    , ( "pkgs.python3Packages.pytest-html", "4.0.2" )
+    , ( "pkgs.python3Packages.pytest-httpbin", "2.0.0" )
+    , ( "pkgs.python3Packages.pytest-httpserver", "1.0.7" )
+    , ( "pkgs.python3Packages.pytest-httpx", "0.25.0" )
+    , ( "pkgs.python3Packages.pytest-image-diff", "0.0.11" )
+    , ( "pkgs.python3Packages.pytest-instafail", "0.5.0" )
+    , ( "pkgs.python3Packages.pytest-isort", "3.1.0" )
+    , ( "pkgs.python3Packages.pytest-json-report", "1.5.0" )
+    , ( "pkgs.python3Packages.pytest-jupyter", "0.7.0" )
+    , ( "pkgs.python3Packages.pytest-lazy-fixture", "0.6.3" )
+    , ( "pkgs.python3Packages.pytest-localserver", "0.8.0" )
+    , ( "pkgs.python3Packages.pytest-logdog", "0.1.0" )
+    , ( "pkgs.python3Packages.pytest-md-report", "0.5.0" )
+    , ( "pkgs.python3Packages.pytest-metadata", "3.0.0" )
+    , ( "pkgs.python3Packages.pytest-mock", "3.11.1" )
+    , ( "pkgs.python3Packages.pytest-mockito", "0.0.4" )
+    , ( "pkgs.python3Packages.pytest-mockservers", "0.6.0" )
+    , ( "pkgs.python3Packages.pytest-mpl", "0.16.1" )
+    , ( "pkgs.python3Packages.pytest-mypy", "0.10.3" )
+    , ( "pkgs.python3Packages.pytest-mypy-plugins", "3.0.0" )
+    , ( "pkgs.python3Packages.pytest-openfiles", "0.5.0" )
+    , ( "pkgs.python3Packages.pytest-order", "1.1.0" )
+    , ( "pkgs.python3Packages.pytest-parallel", "0.1.1" )
+    , ( "pkgs.python3Packages.pytest-param-files", "0.6.0" )
+    , ( "pkgs.python3Packages.pytest-playwright", "0.4.3" )
+    , ( "pkgs.python3Packages.pytest-plt", "1.1.0" )
+    , ( "pkgs.python3Packages.pytest-postgresql", "5.0.0" )
+    , ( "pkgs.python3Packages.pytest-pudb", "0.7.0" )
+    , ( "pkgs.python3Packages.pytest-pylint", "0.21.0" )
+    , ( "pkgs.python3Packages.pytest-pytestrail", "0.10.5" )
+    , ( "pkgs.python3Packages.pytest-qt", "4.2.0" )
+    , ( "pkgs.python3Packages.pytest-quickcheck", "0.9.0" )
+    , ( "pkgs.python3Packages.pytest-raises", "0.11" )
+    , ( "pkgs.python3Packages.pytest-raisesregexp", "2.1" )
+    , ( "pkgs.python3Packages.pytest-raisin", "0.4" )
+    , ( "pkgs.python3Packages.pytest-random-order", "1.1.0" )
+    , ( "pkgs.python3Packages.pytest-randomly", "3.13.0" )
+    , ( "pkgs.python3Packages.pytest-recording", "0.13.0" )
+    , ( "pkgs.python3Packages.pytest-regressions", "2.5.0" )
+    , ( "pkgs.python3Packages.pytest-relaxed", "2.0.1" )
+    , ( "pkgs.python3Packages.pytest-remotedata", "0.4.0" )
+    , ( "pkgs.python3Packages.pytest-repeat", "0.9.2" )
+    , ( "pkgs.python3Packages.pytest-rerunfailures", "12.0" )
+    , ( "pkgs.python3Packages.pytest-resource-path", "1.3.0" )
+    , ( "pkgs.python3Packages.pytest-reverse", "1.7.0" )
+    , ( "pkgs.python3Packages.pytest-runner", "6.0.0" )
+    , ( "pkgs.python3Packages.pytest-server-fixtures", "1.7.0" )
+    , ( "pkgs.python3Packages.pytest-services", "2.2.1" )
+    , ( "pkgs.python3Packages.pytest-shutil", "1.7.0" )
+    , ( "pkgs.python3Packages.pytest-snapshot", "0.9.0" )
+    , ( "pkgs.python3Packages.pytest-socket", "0.6.0" )
+    , ( "pkgs.python3Packages.pytest-spec", "2023-06-04" )
+    , ( "pkgs.python3Packages.pytest-subprocess", "1.5.0" )
+    , ( "pkgs.python3Packages.pytest-subtesthack", "0.2.0" )
+    , ( "pkgs.python3Packages.pytest-subtests", "0.11.0" )
+    , ( "pkgs.python3Packages.pytest-sugar", "0.9.7" )
+    , ( "pkgs.python3Packages.pytest-tap", "3.3" )
+    , ( "pkgs.python3Packages.pytest-test-utils", "0.0.8" )
+    , ( "pkgs.python3Packages.pytest-testinfra", "10.0.0" )
+    , ( "pkgs.python3Packages.pytest-testmon", "2.1.0" )
+    , ( "pkgs.python3Packages.pytest-timeout", "2.1.0" )
+    , ( "pkgs.python3Packages.pytest-tornado", "0.8.1" )
+    , ( "pkgs.python3Packages.pytest-tornasync", "0.6.0.post2" )
+    , ( "pkgs.python3Packages.pytest-trio", "0.8.0" )
+    , ( "pkgs.python3Packages.pytest-twisted", "1.14.0" )
+    , ( "pkgs.python3Packages.pytest-unordered", "0.5.2" )
+    , ( "pkgs.python3Packages.pytest-vcr", "1.0.2" )
+    , ( "pkgs.python3Packages.pytest-virtualenv", "1.7.0" )
+    , ( "pkgs.python3Packages.pytest-voluptuous", "1.2.0" )
+    , ( "pkgs.python3Packages.pytest-warnings", "0.3.1" )
+    , ( "pkgs.python3Packages.pytest-watch", "4.2.0" )
+    , ( "pkgs.python3Packages.pytest-xdist", "3.3.1" )
+    , ( "pkgs.python3Packages.pytest-xprocess", "0.22.2" )
+    , ( "pkgs.python3Packages.pytest-xvfb", "3.0.0" )
+    , ( "pkgs.python3Packages.pytestCheckHook", "" )
+    , ( "pkgs.python3Packages.pytest_6", "7.4.3" )
+    , ( "pkgs.python3Packages.pytest_xdist", "3.3.1" )
+    , ( "pkgs.python3Packages.pytestcache", "1.0" )
+    , ( "pkgs.python3Packages.pytestcov", "4.1.0" )
+    , ( "pkgs.python3Packages.pytestquickcheck", "0.9.0" )
+    , ( "pkgs.python3Packages.pytestrunner", "6.0.0" )
+    , ( "pkgs.python3Packages.python", "3.11.6" )
+    , ( "pkgs.python3Packages.python-Levenshtein", "0.23.0" )
+    , ( "pkgs.python3Packages.python-arango", "7.8.0" )
+    , ( "pkgs.python3Packages.python-awair", "0.2.4" )
+    , ( "pkgs.python3Packages.python-axolotl", "0.2.3" )
+    , ( "pkgs.python3Packages.python-axolotl-curve25519", "0.4.1.post2" )
+    , ( "pkgs.python3Packages.python-barcode", "0.15.1" )
+    , ( "pkgs.python3Packages.python-baseconv", "1.2.2" )
+    , ( "pkgs.python3Packages.python-benedict", "0.32.1" )
+    , ( "pkgs.python3Packages.python-bidi", "0.4.2" )
+    , ( "pkgs.python3Packages.python-binance", "1.0.17" )
+    , ( "pkgs.python3Packages.python-box", "7.1.1" )
+    , ( "pkgs.python3Packages.python-bsblan", "0.5.16" )
+    , ( "pkgs.python3Packages.python-cinderclient", "9.4.0" )
+    , ( "pkgs.python3Packages.python-codon-tables", "0.1.12" )
+    , ( "pkgs.python3Packages.python-constraint", "1.4.0" )
+    , ( "pkgs.python3Packages.python-creole", "1.4.10" )
+    , ( "pkgs.python3Packages.python-crfsuite", "0.9.9" )
+    , ( "pkgs.python3Packages.python-crontab", "3.0.0" )
+    , ( "pkgs.python3Packages.python-csxcad", "2020-02-18" )
+    , ( "pkgs.python3Packages.python-ctags3", "1.5.0" )
+    , ( "pkgs.python3Packages.python-daemon", "3.0.1" )
+    , ( "pkgs.python3Packages.python-datemath", "1.5.5" )
+    , ( "pkgs.python3Packages.python-dateutil", "2.8.2" )
+    , ( "pkgs.python3Packages.python-dbusmock", "0.29.1" )
+    , ( "pkgs.python3Packages.python-decouple", "3.8" )
+    , ( "pkgs.python3Packages.python-didl-lite", "1.3.2" )
+    , ( "pkgs.python3Packages.python-docs-theme", "2023.9" )
+    , ( "pkgs.python3Packages.python-docx", "0.8.11" )
+    , ( "pkgs.python3Packages.python-doi", "0.1.1" )
+    , ( "pkgs.python3Packages.python-dotenv", "1.0.0" )
+    , ( "pkgs.python3Packages.python-ecobee-api", "0.2.17" )
+    , ( "pkgs.python3Packages.python-editor", "1.0.4" )
+    , ( "pkgs.python3Packages.python-engineio", "4.7.1" )
+    , ( "pkgs.python3Packages.python-etcd", "0.4.5" )
+    , ( "pkgs.python3Packages.python-ethtool", "0.15" )
+    , ( "pkgs.python3Packages.python-ev3dev2", "2.1.0" )
+    , ( "pkgs.python3Packages.python-family-hub-local", "0.0.2" )
+    , ( "pkgs.python3Packages.python-fedora", "1.1.1" )
+    , ( "pkgs.python3Packages.python-flirt", "0.8.6" )
+    , ( "pkgs.python3Packages.python-fontconfig", "0.5.1" )
+    , ( "pkgs.python3Packages.python-frontmatter", "1.0.1" )
+    , ( "pkgs.python3Packages.python-fsutil", "0.11.0" )
+    , ( "pkgs.python3Packages.python-fullykiosk", "0.0.12" )
+    , ( "pkgs.python3Packages.python-fx", "0.3.1" )
+    , ( "pkgs.python3Packages.python-gammu", "3.2.4" )
+    , ( "pkgs.python3Packages.python-gitlab", "3.15.0" )
+    , ( "pkgs.python3Packages.python-glanceclient", "4.4.0" )
+    , ( "pkgs.python3Packages.python-gnupg", "0.5.1" )
+    , ( "pkgs.python3Packages.python-google-nest", "5.1.1" )
+    , ( "pkgs.python3Packages.python-gvm", "23.11.0" )
+    , ( "pkgs.python3Packages.python-heatclient", "3.3.0" )
+    , ( "pkgs.python3Packages.python-hglib", "2.6.2" )
+    , ( "pkgs.python3Packages.python-hl7", "0.4.5" )
+    , ( "pkgs.python3Packages.python-homewizard-energy", "2.1.2" )
+    , ( "pkgs.python3Packages.python-hosts", "1.0.4" )
+    , ( "pkgs.python3Packages.python-hpilo", "4.4.3" )
+    , ( "pkgs.python3Packages.python-http-client", "3.3.7" )
+    , ( "pkgs.python3Packages.python-i18n", "0.3.9" )
+    , ( "pkgs.python3Packages.python-igraph", "0.11.3" )
+    , ( "pkgs.python3Packages.python-ipmi", "0.5.4" )
+    , ( "pkgs.python3Packages.python-ipware", "0.9.0" )
+    , ( "pkgs.python3Packages.python-ironicclient", "5.4.0" )
+    , ( "pkgs.python3Packages.python-izone", "1.2.9" )
+    , ( "pkgs.python3Packages.python-jenkins", "1.8.2" )
+    , ( "pkgs.python3Packages.python-jose", "3.3.0" )
+    , ( "pkgs.python3Packages.python-json-logger", "2.0.7" )
+    , ( "pkgs.python3Packages.python-jsonrpc-server", "0.4.0" )
+    , ( "pkgs.python3Packages.python-juicenet", "1.1.0" )
+    , ( "pkgs.python3Packages.python-kasa", "0.5.4" )
+    , ( "pkgs.python3Packages.python-keycloak", "2.6.0" )
+    , ( "pkgs.python3Packages.python-keystoneclient", "5.2.0" )
+    , ( "pkgs.python3Packages.python-ldap", "3.4.4" )
+    , ( "pkgs.python3Packages.python-ldap-test", "0.3.1" )
+    , ( "pkgs.python3Packages.python-libnmap", "0.7.3" )
+    , ( "pkgs.python3Packages.python-linux-procfs", "0.6.3" )
+    , ( "pkgs.python3Packages.python-logstash", "0.4.8" )
+    , ( "pkgs.python3Packages.python-louvain", "0.16" )
+    , ( "pkgs.python3Packages.python-lsp-black", "1.3.0" )
+    , ( "pkgs.python3Packages.python-lsp-jsonrpc", "1.1.2" )
+    , ( "pkgs.python3Packages.python-lsp-ruff", "1.6.0" )
+    , ( "pkgs.python3Packages.python-lsp-server", "1.9.0" )
+    , ( "pkgs.python3Packages.python-ly", "0.9.7" )
+    , ( "pkgs.python3Packages.python-lz4", "4.3.2" )
+    , ( "pkgs.python3Packages.python-lzf", "0.2.4" )
+    , ( "pkgs.python3Packages.python-lzo", "1.15" )
+    , ( "pkgs.python3Packages.python-magic", "0.4.27" )
+    , ( "pkgs.python3Packages.python-manilaclient", "4.6.0" )
+    , ( "pkgs.python3Packages.python-mapnik", "2020-09-08" )
+    , ( "pkgs.python3Packages.python-markdown-math", "0.8" )
+    , ( "pkgs.python3Packages.python-matter-server", "4.0.2" )
+    , ( "pkgs.python3Packages.python-mbedtls", "2.8.0" )
+    , ( "pkgs.python3Packages.python-memcached", "1.59" )
+    , ( "pkgs.python3Packages.python-miio", "0.5.12" )
+    , ( "pkgs.python3Packages.python-mimeparse", "1.6.0" )
+    , ( "pkgs.python3Packages.python-mnist", "0.7" )
+    , ( "pkgs.python3Packages.python-mpv-jsonipc", "1.2.0" )
+    , ( "pkgs.python3Packages.python-multipart", "0.0.6" )
+    , ( "pkgs.python3Packages.python-musicpd", "0.8.0" )
+    , ( "pkgs.python3Packages.python-myq", "3.1.13" )
+    , ( "pkgs.python3Packages.python-mystrom", "2.2.0" )
+    , ( "pkgs.python3Packages.python-ndn", "0.4.1" )
+    , ( "pkgs.python3Packages.python-nest", "4.2.0" )
+    , ( "pkgs.python3Packages.python-nmap", "0.7.1" )
+    , ( "pkgs.python3Packages.python-nomad", "2.0.0" )
+    , ( "pkgs.python3Packages.python-novaclient", "18.4.0" )
+    , ( "pkgs.python3Packages.python-nvd3", "0.15.0" )
+    , ( "pkgs.python3Packages.python-oauth2", "1.1.1" )
+    , ( "pkgs.python3Packages.python-olm", "3.2.15" )
+    , ( "pkgs.python3Packages.python-on-whales", "0.67.0" )
+    , ( "pkgs.python3Packages.python-opendata-transport", "0.4.0" )
+    , ( "pkgs.python3Packages.python-openems", "2020-02-15" )
+    , ( "pkgs.python3Packages.python-opensky", "0.2.1" )
+    , ( "pkgs.python3Packages.python-openstackclient", "6.3.0" )
+    , ( "pkgs.python3Packages.python-openzwave-mqtt", "1.4.0" )
+    , ( "pkgs.python3Packages.python-osc", "1.8.3" )
+    , ( "pkgs.python3Packages.python-otbr-api", "2.5.0" )
+    , ( "pkgs.python3Packages.python-owasp-zap-v2-4", "4-0.0.18" )
+    , ( "pkgs.python3Packages.python-packer", "0.1.2" )
+    , ( "pkgs.python3Packages.python-pae", "0.1.0" )
+    , ( "pkgs.python3Packages.python-pam", "2.0.2" )
+    , ( "pkgs.python3Packages.python-periphery", "2.4.1" )
+    , ( "pkgs.python3Packages.python-picnic-api", "1.1.0" )
+    , ( "pkgs.python3Packages.python-pidfile", "3.1.1" )
+    , ( "pkgs.python3Packages.python-pipedrive", "0.4.0" )
+    , ( "pkgs.python3Packages.python-pkcs11", "0.7.0" )
+    , ( "pkgs.python3Packages.python-pptx", "0.6.23" )
+    , ( "pkgs.python3Packages.python-prctl", "1.8.1" )
+    , ( "pkgs.python3Packages.python-ptrace", "0.9.8" )
+    , ( "pkgs.python3Packages.python-rabbitair", "0.0.8" )
+    , ( "pkgs.python3Packages.python-rapidjson", "1.11" )
+    , ( "pkgs.python3Packages.python-redis-lock", "4.0.0" )
+    , ( "pkgs.python3Packages.python-registry", "1.4" )
+    , ( "pkgs.python3Packages.python-roborock", "0.35.3" )
+    , ( "pkgs.python3Packages.python-rtmidi", "1.5.7" )
+    , ( "pkgs.python3Packages.python-sat", "0.1.7.dev1" )
+    , ( "pkgs.python3Packages.python-simple-hipchat", "0.4.0" )
+    , ( "pkgs.python3Packages.python-slugify", "8.0.1" )
+    , ( "pkgs.python3Packages.python-smarttub", "0.0.36" )
+    , ( "pkgs.python3Packages.python-snap7", "1.3" )
+    , ( "pkgs.python3Packages.python-snappy", "0.6.1" )
+    , ( "pkgs.python3Packages.python-socketio", "5.9.0" )
+    , ( "pkgs.python3Packages.python-socks", "2.4.2" )
+    , ( "pkgs.python3Packages.python-songpal", "0.16" )
+    , ( "pkgs.python3Packages.python-sql", "1.4.2" )
+    , ( "pkgs.python3Packages.python-status", "1.0.1" )
+    , ( "pkgs.python3Packages.python-stdnum", "1.19" )
+    , ( "pkgs.python3Packages.python-string-utils", "1.0.0" )
+    , ( "pkgs.python3Packages.python-subunit", "1.4.2" )
+    , ( "pkgs.python3Packages.python-swiftclient", "4.4.0" )
+    , ( "pkgs.python3Packages.python-tado", "0.17.2" )
+    , ( "pkgs.python3Packages.python-tds", "1.13.0" )
+    , ( "pkgs.python3Packages.python-telegram", "0.18.0" )
+    , ( "pkgs.python3Packages.python-telegram-bot", "20.6" )
+    , ( "pkgs.python3Packages.python-toolbox", "1.0.10" )
+    , ( "pkgs.python3Packages.python-trovo", "0.1.6" )
+    , ( "pkgs.python3Packages.python-twitch-client", "0.7.1" )
+    , ( "pkgs.python3Packages.python-twitter", "3.5" )
+    , ( "pkgs.python3Packages.python-u2flib-host", "3.0.3" )
+    , ( "pkgs.python3Packages.python-u2flib-server", "5.0.1" )
+    , ( "pkgs.python3Packages.python-uinput", "0.11.2" )
+    , ( "pkgs.python3Packages.python-ulid", "2.2.0" )
+    , ( "pkgs.python3Packages.python-unshare", "2018-05-20" )
+    , ( "pkgs.python3Packages.python-utils", "3.8.1" )
+    , ( "pkgs.python3Packages.python-vagrant", "1.1.0" )
+    , ( "pkgs.python3Packages.python-velbus", "2.1.14" )
+    , ( "pkgs.python3Packages.python-vipaccess", "0.14.1" )
+    , ( "pkgs.python3Packages.python-vlc", "3.0.18122" )
+    , ( "pkgs.python3Packages.python-whois", "0.8.0" )
+    , ( "pkgs.python3Packages.python-wifi", "0.6.1" )
+    , ( "pkgs.python3Packages.python-wink", "1.10.5" )
+    , ( "pkgs.python3Packages.python-xmp-toolkit", "2.0.2" )
+    , ( "pkgs.python3Packages.python-xz", "0.4.0" )
+    , ( "pkgs.python3Packages.python-yate", "0.4.1" )
+    , ( "pkgs.python3Packages.python-youtube", "0.9.2" )
+    , ( "pkgs.python3Packages.python-zbar", "0.23.90" )
+    , ( "pkgs.python3Packages.python3-application", "3.0.6" )
+    , ( "pkgs.python3Packages.python3-eventlib", "0.3.0" )
+    , ( "pkgs.python3Packages.python3-gnutls", "3.1.9" )
+    , ( "pkgs.python3Packages.python3-openid", "3.2.0" )
+    , ( "pkgs.python3Packages.python3-saml", "1.15.0" )
+    , ( "pkgs.python3Packages.pythonCatchConflictsHook", "" )
+    , ( "pkgs.python3Packages.pythonImportsCheckHook", "" )
+    , ( "pkgs.python3Packages.pythonNamespacesHook", "" )
+    , ( "pkgs.python3Packages.pythonOutputDistHook", "" )
+    , ( "pkgs.python3Packages.pythonRecompileBytecodeHook", "" )
+    , ( "pkgs.python3Packages.pythonRelaxDepsHook", "" )
+    , ( "pkgs.python3Packages.pythonRemoveBinBytecodeHook", "" )
+    , ( "pkgs.python3Packages.pythonRemoveTestsDirHook", "" )
+    , ( "pkgs.python3Packages.python_docs_theme", "2023.9" )
+    , ( "pkgs.python3Packages.python_fedora", "1.1.1" )
+    , ( "pkgs.python3Packages.python_magic", "0.4.27" )
+    , ( "pkgs.python3Packages.python_mimeparse", "1.6.0" )
+    , ( "pkgs.python3Packages.python_openzwave", "0.4.19" )
+    , ( "pkgs.python3Packages.python_simple_hipchat", "0.4.0" )
+    , ( "pkgs.python3Packages.pythondialog", "3.5.3" )
+    , ( "pkgs.python3Packages.pythonefl", "1.26.1" )
+    , ( "pkgs.python3Packages.pythonegardia", "1.0.52" )
+    , ( "pkgs.python3Packages.pythonfinder", "2.0.5" )
+    , ( "pkgs.python3Packages.pythonix", "0.1.7" )
+    , ( "pkgs.python3Packages.pythonnet", "3.0.3" )
+    , ( "pkgs.python3Packages.pythonocc-core", "7.6.2" )
+    , ( "pkgs.python3Packages.pythran", "0.13.1" )
+    , ( "pkgs.python3Packages.pytibber", "0.28.2" )
+    , ( "pkgs.python3Packages.pytile", "2023.10.0" )
+    , ( "pkgs.python3Packages.pytimeparse", "1.1.8" )
+    , ( "pkgs.python3Packages.pytimeparse2", "1.7.1" )
+    , ( "pkgs.python3Packages.pytlv", "0.71" )
+    , ( "pkgs.python3Packages.pytm", "1.2.0" )
+    , ( "pkgs.python3Packages.pytmx", "3.31" )
+    , ( "pkgs.python3Packages.pytomlpp", "1.0.13" )
+    , ( "pkgs.python3Packages.pytomorrowio", "0.3.6" )
+    , ( "pkgs.python3Packages.pytoolconfig", "1.2.6" )
+    , ( "pkgs.python3Packages.pytools", "2023.1.1" )
+    , ( "pkgs.python3Packages.pytorch", "2.0.1" )
+    , ( "pkgs.python3Packages.pytorch-bin", "2.0.1" )
+    , ( "pkgs.python3Packages.pytorch-lightning", "2.1.1" )
+    , ( "pkgs.python3Packages.pytorch-metric-learning", "2.3.0" )
+    , ( "pkgs.python3Packages.pytorch-msssim", "1.0.0" )
+    , ( "pkgs.python3Packages.pytorch-pfn-extras", "0.7.2" )
+    , ( "pkgs.python3Packages.pytorchWithCuda", "2.0.1" )
+    , ( "pkgs.python3Packages.pytorchWithoutCuda", "2.0.1" )
+    , ( "pkgs.python3Packages.pytraccar", "1.0.0" )
+    , ( "pkgs.python3Packages.pytradfri", "13.0.0" )
+    , ( "pkgs.python3Packages.pytrafikverket", "0.3.8" )
+    , ( "pkgs.python3Packages.pytransportnsw", "0.1.1" )
+    , ( "pkgs.python3Packages.pytransportnswv2", "0.2.4" )
+    , ( "pkgs.python3Packages.pytrends", "4.9.2" )
+    , ( "pkgs.python3Packages.pytricia", "2019-01-16" )
+    , ( "pkgs.python3Packages.pytrydan", "0.4.0" )
+    , ( "pkgs.python3Packages.pyttsx3", "2.90" )
+    , ( "pkgs.python3Packages.pytube", "15.0.0" )
+    , ( "pkgs.python3Packages.pytun", "2.3.0" )
+    , ( "pkgs.python3Packages.pyturbojpeg", "1.7.2" )
+    , ( "pkgs.python3Packages.pytweening", "1.0.7" )
+    , ( "pkgs.python3Packages.pytwitchapi", "4.0.1" )
+    , ( "pkgs.python3Packages.pytz", "2023.3.post1" )
+    , ( "pkgs.python3Packages.pytz-deprecation-shim", "0.1.0.post0" )
+    , ( "pkgs.python3Packages.pytzdata", "2020.1" )
+    , ( "pkgs.python3Packages.pyu2f", "0.1.5a" )
+    , ( "pkgs.python3Packages.pyuavcan", "1.1.0.dev1" )
+    , ( "pkgs.python3Packages.pyuca", "1.2" )
+    , ( "pkgs.python3Packages.pyudev", "0.24.1" )
+    , ( "pkgs.python3Packages.pyunbound", "1.18.0" )
+    , ( "pkgs.python3Packages.pyunifi", "2.21" )
+    , ( "pkgs.python3Packages.pyunifiprotect", "4.21.0" )
+    , ( "pkgs.python3Packages.pyunpack", "0.3" )
+    , ( "pkgs.python3Packages.pyupdate", "1.4.0" )
+    , ( "pkgs.python3Packages.pyupgrade", "3.3.1" )
+    , ( "pkgs.python3Packages.pyuptimerobot", "23.1.0" )
+    , ( "pkgs.python3Packages.pyusb", "1.2.1" )
+    , ( "pkgs.python3Packages.pyuseragents", "1.0.5" )
+    , ( "pkgs.python3Packages.pyutil", "3.3.6" )
+    , ( "pkgs.python3Packages.pyutilib", "6.0.0" )
+    , ( "pkgs.python3Packages.pyuv", "1.4.0" )
+    , ( "pkgs.python3Packages.pyvcd", "0.4.0" )
+    , ( "pkgs.python3Packages.pyvera", "0.3.15" )
+    , ( "pkgs.python3Packages.pyverilog", "1.3.0" )
+    , ( "pkgs.python3Packages.pyversasense", "0.0.6" )
+    , ( "pkgs.python3Packages.pyvesync", "2.1.10" )
+    , ( "pkgs.python3Packages.pyvex", "9.2.77" )
+    , ( "pkgs.python3Packages.pyvicare", "2.28.1" )
+    , ( "pkgs.python3Packages.pyvips", "2.2.1" )
+    , ( "pkgs.python3Packages.pyvirtualdisplay", "3.0" )
+    , ( "pkgs.python3Packages.pyvis", "0.3.2" )
+    , ( "pkgs.python3Packages.pyvisa", "1.13.0" )
+    , ( "pkgs.python3Packages.pyvisa-py", "0.7.1" )
+    , ( "pkgs.python3Packages.pyvisa-sim", "0.5.1" )
+    , ( "pkgs.python3Packages.pyvista", "0.42.3" )
+    , ( "pkgs.python3Packages.pyviz-comms", "2.2.1" )
+    , ( "pkgs.python3Packages.pyvizio", "0.1.61" )
+    , ( "pkgs.python3Packages.pyvlx", "0.2.20" )
+    , ( "pkgs.python3Packages.pyvmomi", "8.0.2.0.1" )
+    , ( "pkgs.python3Packages.pyvo", "1.4.2" )
+    , ( "pkgs.python3Packages.pyvolumio", "0.1.5" )
+    , ( "pkgs.python3Packages.pyvoro", "1.3.2" )
+    , ( "pkgs.python3Packages.pywal", "3.3.0" )
+    , ( "pkgs.python3Packages.pywatchman", "1.4.1" )
+    , ( "pkgs.python3Packages.pywaterkotte", "0.1.2" )
+    , ( "pkgs.python3Packages.pywavelets", "1.4.1" )
+    , ( "pkgs.python3Packages.pywayland", "0.4.17" )
+    , ( "pkgs.python3Packages.pywaze", "0.5.1" )
+    , ( "pkgs.python3Packages.pywbem", "1.6.2" )
+    , ( "pkgs.python3Packages.pyweatherflowrest", "1.0.11" )
+    , ( "pkgs.python3Packages.pyweatherflowudp", "1.4.5" )
+    , ( "pkgs.python3Packages.pywebpush", "1.14.0" )
+    , ( "pkgs.python3Packages.pywebview", "4.3.3" )
+    , ( "pkgs.python3Packages.pywemo", "1.3.1" )
+    , ( "pkgs.python3Packages.pywerview", "0.5.2" )
+    , ( "pkgs.python3Packages.pywfa", "0.5.1" )
+    , ( "pkgs.python3Packages.pywilight", "0.0.74" )
+    , ( "pkgs.python3Packages.pywinrm", "0.4.3" )
+    , ( "pkgs.python3Packages.pywizlight", "0.5.14" )
+    , ( "pkgs.python3Packages.pywlroots", "0.16.6" )
+    , ( "pkgs.python3Packages.pyworld", "0.3.4" )
+    , ( "pkgs.python3Packages.pyws66i", "1.1" )
+    , ( "pkgs.python3Packages.pyx", "0.16" )
+    , ( "pkgs.python3Packages.pyxattr", "0.8.1" )
+    , ( "pkgs.python3Packages.pyxb", "1.2.6" )
+    , ( "pkgs.python3Packages.pyxbe", "1.0.3" )
+    , ( "pkgs.python3Packages.pyxdg", "0.28" )
+    , ( "pkgs.python3Packages.pyxeoma", "1.4.2" )
+    , ( "pkgs.python3Packages.pyxiaomigateway", "0.14.3" )
+    , ( "pkgs.python3Packages.pyxl3", "1.4" )
+    , ( "pkgs.python3Packages.pyxlsb", "1.0.10" )
+    , ( "pkgs.python3Packages.pyxnat", "1.6" )
+    , ( "pkgs.python3Packages.pyyaml", "6.0.1" )
+    , ( "pkgs.python3Packages.pyyaml-env-tag", "0.1" )
+    , ( "pkgs.python3Packages.pyyaml-include", "1.3.1" )
+    , ( "pkgs.python3Packages.pyyardian", "1.2.0" )
+    , ( "pkgs.python3Packages.pyzbar", "0.1.9" )
+    , ( "pkgs.python3Packages.pyzerproc", "0.4.12" )
+    , ( "pkgs.python3Packages.pyzipper", "0.3.6" )
+    , ( "pkgs.python3Packages.pyzmq", "25.1.1" )
+    , ( "pkgs.python3Packages.pyzufall", "0.13.2" )
+    , ( "pkgs.python3Packages.qasync", "0.26.1" )
+    , ( "pkgs.python3Packages.qbittorrent-api", "2023.10.54" )
+    , ( "pkgs.python3Packages.qcelemental", "0.27.1" )
+    , ( "pkgs.python3Packages.qcengine", "0.29.0" )
+    , ( "pkgs.python3Packages.qcodes", "0.41.1" )
+    , ( "pkgs.python3Packages.qcodes-contrib-drivers", "0.18.0" )
+    , ( "pkgs.python3Packages.qcodes-loop", "0.1.2" )
+    , ( "pkgs.python3Packages.qcs-api-client", "0.23.1" )
+    , ( "pkgs.python3Packages.qdarkstyle", "3.2.3" )
+    , ( "pkgs.python3Packages.qdldl", "0.1.7.post0" )
+    , ( "pkgs.python3Packages.qdrant-client", "1.6.2" )
+    , ( "pkgs.python3Packages.qds-sdk", "1.16.1" )
+    , ( "pkgs.python3Packages.qds_sdk", "1.16.1" )
+    , ( "pkgs.python3Packages.qgrid", "1.3.1" )
+    , ( "pkgs.python3Packages.qiling", "1.4.6" )
+    , ( "pkgs.python3Packages.qimage2ndarray", "1.10.0" )
+    , ( "pkgs.python3Packages.qingping-ble", "0.8.2" )
+    , ( "pkgs.python3Packages.qiskit", "0.41.1" )
+    , ( "pkgs.python3Packages.qiskit-aer", "0.12.2" )
+    , ( "pkgs.python3Packages.qiskit-finance", "0.3.4" )
+    , ( "pkgs.python3Packages.qiskit-ibmq-provider", "0.20.2" )
+    , ( "pkgs.python3Packages.qiskit-ignis", "0.7.1" )
+    , ( "pkgs.python3Packages.qiskit-machine-learning", "0.6.1" )
+    , ( "pkgs.python3Packages.qiskit-nature", "0.6.2" )
+    , ( "pkgs.python3Packages.qiskit-optimization", "0.5.0" )
+    , ( "pkgs.python3Packages.qiskit-terra", "0.25.1" )
+    , ( "pkgs.python3Packages.qmk-dotty-dict", "1.3.0.post1" )
+    , ( "pkgs.python3Packages.qnap-qsw", "0.3.0" )
+    , ( "pkgs.python3Packages.qnapstats", "0.5.0" )
+    , ( "pkgs.python3Packages.qpageview", "0.6.2" )
+    , ( "pkgs.python3Packages.qpsolvers", "4.0.1" )
+    , ( "pkgs.python3Packages.qrcode", "7.4.2" )
+    , ( "pkgs.python3Packages.qreactor", "2018-09-29" )
+    , ( "pkgs.python3Packages.qscintilla", "2.13.2" )
+    , ( "pkgs.python3Packages.qscintilla-qt5", "2.13.2" )
+    , ( "pkgs.python3Packages.qstylizer", "0.2.2" )
+    , ( "pkgs.python3Packages.qt-material", "2.14" )
+    , ( "pkgs.python3Packages.qt5reactor", "0.6.3" )
+    , ( "pkgs.python3Packages.qtawesome", "1.2.3" )
+    , ( "pkgs.python3Packages.qtconsole", "5.4.4" )
+    , ( "pkgs.python3Packages.qtile", "0.23.0" )
+    , ( "pkgs.python3Packages.qtile-extras", "0.23.0" )
+    , ( "pkgs.python3Packages.qtpy", "2.4.0" )
+    , ( "pkgs.python3Packages.quadprog", "0.1.11" )
+    , ( "pkgs.python3Packages.qualysclient", "0.0.4.8.3" )
+    , ( "pkgs.python3Packages.quamash", "0.6.1" )
+    , ( "pkgs.python3Packages.quandl", "3.7.0" )
+    , ( "pkgs.python3Packages.quantile-python", "1.1" )
+    , ( "pkgs.python3Packages.quantiphy", "2.19" )
+    , ( "pkgs.python3Packages.quantiphy-eval", "0.5" )
+    , ( "pkgs.python3Packages.quantities", "0.14.1" )
+    , ( "pkgs.python3Packages.quantulum3", "0.9.0" )
+    , ( "pkgs.python3Packages.quantum-gateway", "0.0.8" )
+    , ( "pkgs.python3Packages.quart", "0.18.4" )
+    , ( "pkgs.python3Packages.quart-cors", "0.7.0" )
+    , ( "pkgs.python3Packages.quaternion", "2022.4.3" )
+    , ( "pkgs.python3Packages.qudida", "0.0.4" )
+    , ( "pkgs.python3Packages.querystring_parser", "1.2.4" )
+    , ( "pkgs.python3Packages.questionary", "2.0.1" )
+    , ( "pkgs.python3Packages.queuelib", "1.6.2" )
+    , ( "pkgs.python3Packages.qutip", "4.7.3" )
+    , ( "pkgs.python3Packages.r2pipe", "1.8.0" )
+    , ( "pkgs.python3Packages.rachiopy", "1.0.3" )
+    , ( "pkgs.python3Packages.radian", "0.6.8" )
+    , ( "pkgs.python3Packages.radicale_infcloud", "2022-04-18" )
+    , ( "pkgs.python3Packages.radio-beam", "0.3.6" )
+    , ( "pkgs.python3Packages.radio_beam", "0.3.6" )
+    , ( "pkgs.python3Packages.radios", "0.3.0" )
+    , ( "pkgs.python3Packages.radiotherm", "2.1.0" )
+    , ( "pkgs.python3Packages.radish-bdd", "0.17.1" )
+    , ( "pkgs.python3Packages.radon", "6.0.1" )
+    , ( "pkgs.python3Packages.railroad-diagrams", "3.0.1" )
+    , ( "pkgs.python3Packages.rainbowstream", "1.5.5" )
+    , ( "pkgs.python3Packages.raincloudy", "1.2.0" )
+    , ( "pkgs.python3Packages.ramlfications", "0.1.9" )
+    , ( "pkgs.python3Packages.random2", "1.0.1" )
+    , ( "pkgs.python3Packages.range-typed-integers", "1.0.1" )
+    , ( "pkgs.python3Packages.rangehttpserver", "1.3.3" )
+    , ( "pkgs.python3Packages.rank-bm25", "0.2.2" )
+    , ( "pkgs.python3Packages.rapidfuzz", "3.5.2" )
+    , ( "pkgs.python3Packages.rapidfuzz-capi", "1.0.5" )
+    , ( "pkgs.python3Packages.rapidgzip", "0.10.3" )
+    , ( "pkgs.python3Packages.rapt-ble", "0.1.2" )
+    , ( "pkgs.python3Packages.rarfile", "4.1" )
+    , ( "pkgs.python3Packages.rasterio", "1.3.9" )
+    , ( "pkgs.python3Packages.ratarmount", "0.14.0" )
+    , ( "pkgs.python3Packages.ratarmountcore", "0.6.0" )
+    , ( "pkgs.python3Packages.ratelim", "0.1.6" )
+    , ( "pkgs.python3Packages.ratelimit", "2.2.1" )
+    , ( "pkgs.python3Packages.rauth", "0.7.2" )
+    , ( "pkgs.python3Packages.raven", "6.10.0" )
+    , ( "pkgs.python3Packages.rawkit", "0.6.0" )
+    , ( "pkgs.python3Packages.ray", "2.7.0" )
+    , ( "pkgs.python3Packages.razdel", "0.5.0" )
+    , ( "pkgs.python3Packages.rbtools", "1.0.2" )
+    , ( "pkgs.python3Packages.rchitect", "0.4.4" )
+    , ( "pkgs.python3Packages.rcssmin", "1.1.2" )
+    , ( "pkgs.python3Packages.rdflib", "7.0.0" )
+    , ( "pkgs.python3Packages.rdkit", "2023.09.1" )
+    , ( "pkgs.python3Packages.re-assert", "1.1.0" )
+    , ( "pkgs.python3Packages.reactivex", "4.0.4" )
+    , ( "pkgs.python3Packages.readability-lxml", "0.8.1" )
+    , ( "pkgs.python3Packages.readchar", "4.0.5" )
+    , ( "pkgs.python3Packages.readlike", "0.1.3" )
+    , ( "pkgs.python3Packages.readmdict", "0.1.1" )
+    , ( "pkgs.python3Packages.readme", "0.7.1" )
+    , ( "pkgs.python3Packages.readme_renderer", "37.3" )
+    , ( "pkgs.python3Packages.readthedocs-sphinx-ext", "2.2.2" )
+    , ( "pkgs.python3Packages.rebulk", "3.2.0" )
+    , ( "pkgs.python3Packages.recipe-scrapers", "14.46.0" )
+    , ( "pkgs.python3Packages.recline", "2023.5" )
+    , ( "pkgs.python3Packages.recoll", "1.36.0" )
+    , ( "pkgs.python3Packages.recommonmark", "0.7.1" )
+    , ( "pkgs.python3Packages.recordlinkage", "0.16" )
+    , ( "pkgs.python3Packages.recurring-ical-events", "2.1.0" )
+    , ( "pkgs.python3Packages.recursivePthLoader", "1.0" )
+    , ( "pkgs.python3Packages.redbaron", "0.9.2" )
+    , ( "pkgs.python3Packages.redis", "5.0.0" )
+    , ( "pkgs.python3Packages.redis-om", "0.2.1" )
+    , ( "pkgs.python3Packages.redshift-connector", "2.0.914" )
+    , ( "pkgs.python3Packages.reedsolo", "1.7.0" )
+    , ( "pkgs.python3Packages.referencing", "0.30.2" )
+    , ( "pkgs.python3Packages.reflink", "0.2.2" )
+    , ( "pkgs.python3Packages.regenmaschine", "2023.08.0" )
+    , ( "pkgs.python3Packages.regex", "2023.8.8" )
+    , ( "pkgs.python3Packages.regional", "1.1.2" )
+    , ( "pkgs.python3Packages.reikna", "0.8.0" )
+    , ( "pkgs.python3Packages.related", "0.7.3" )
+    , ( "pkgs.python3Packages.relatorio", "0.10.1" )
+    , ( "pkgs.python3Packages.releases", "2.1.1" )
+    , ( "pkgs.python3Packages.remarshal", "0.17.1" )
+    , ( "pkgs.python3Packages.remi", "2022.7.27" )
+    , ( "pkgs.python3Packages.remote-pdb", "2.1.0" )
+    , ( "pkgs.python3Packages.remotezip", "0.12.1" )
+    , ( "pkgs.python3Packages.renault-api", "0.2.0" )
+    , ( "pkgs.python3Packages.rencode", "2021-08-10" )
+    , ( "pkgs.python3Packages.reolink", "0053" )
+    , ( "pkgs.python3Packages.reolink-aio", "0.8.0" )
+    , ( "pkgs.python3Packages.reorder-python-imports", "3.12.0" )
+    , ( "pkgs.python3Packages.reparser", "1.4.3" )
+    , ( "pkgs.python3Packages.repath", "0.9.0" )
+    , ( "pkgs.python3Packages.repeated-test", "2.3.3" )
+    , ( "pkgs.python3Packages.repeated_test", "2.3.3" )
+    , ( "pkgs.python3Packages.repocheck", "2015-08-05" )
+    , ( "pkgs.python3Packages.reportengine", "0.31" )
+    , ( "pkgs.python3Packages.reportlab", "4.0.4" )
+    , ( "pkgs.python3Packages.repoze_lru", "0.7" )
+    , ( "pkgs.python3Packages.repoze_sphinx_autointerface", "1.0.0" )
+    , ( "pkgs.python3Packages.repoze_who", "3.0.0" )
+    , ( "pkgs.python3Packages.reproject", "0.12.0" )
+    , ( "pkgs.python3Packages.reprshed", "1.0.6" )
+    , ( "pkgs.python3Packages.reptor", "0.7" )
+    , ( "pkgs.python3Packages.reqif", "0.0.35" )
+    , ( "pkgs.python3Packages.requests", "2.31.0" )
+    , ( "pkgs.python3Packages.requests-aws4auth", "1.2.3" )
+    , ( "pkgs.python3Packages.requests-cache", "1.1.0" )
+    , ( "pkgs.python3Packages.requests-credssp", "2.0.0" )
+    , ( "pkgs.python3Packages.requests-file", "1.5.1" )
+    , ( "pkgs.python3Packages.requests-futures", "1.0.1" )
+    , ( "pkgs.python3Packages.requests-hawk", "1.2.1" )
+    , ( "pkgs.python3Packages.requests-http-signature", "0.7.1" )
+    , ( "pkgs.python3Packages.requests-kerberos", "0.14.0" )
+    , ( "pkgs.python3Packages.requests-mock", "1.11.0" )
+    , ( "pkgs.python3Packages.requests-oauthlib", "1.3.1" )
+    , ( "pkgs.python3Packages.requests-pkcs12", "1.22" )
+    , ( "pkgs.python3Packages.requests-ratelimiter", "0.4.2" )
+    , ( "pkgs.python3Packages.requests-toolbelt", "1.0.0" )
+    , ( "pkgs.python3Packages.requests-unixsocket", "0.3.0" )
+    , ( "pkgs.python3Packages.requests-wsgi-adapter", "0.4.1" )
+    , ( "pkgs.python3Packages.requests_download", "0.1.2" )
+    , ( "pkgs.python3Packages.requests_ntlm", "1.2.0" )
+    , ( "pkgs.python3Packages.requests_oauthlib", "1.3.1" )
+    , ( "pkgs.python3Packages.requests_toolbelt", "1.0.0" )
+    , ( "pkgs.python3Packages.requestsexceptions", "1.4.0" )
+    , ( "pkgs.python3Packages.requirements-detector", "1.2.2" )
+    , ( "pkgs.python3Packages.requirements-parser", "0.5.0" )
+    , ( "pkgs.python3Packages.reretry", "0.11.8" )
+    , ( "pkgs.python3Packages.resampy", "0.4.2" )
+    , ( "pkgs.python3Packages.resize-right", "0.0.2" )
+    , ( "pkgs.python3Packages.resolvelib", "0.5.5" )
+    , ( "pkgs.python3Packages.responses", "0.23.3" )
+    , ( "pkgs.python3Packages.respx", "0.20.2" )
+    , ( "pkgs.python3Packages.restfly", "1.4.7" )
+    , ( "pkgs.python3Packages.restrictedpython", "6.2" )
+    , ( "pkgs.python3Packages.restructuredtext-lint", "1.4.0" )
+    , ( "pkgs.python3Packages.restructuredtext_lint", "1.4.0" )
+    , ( "pkgs.python3Packages.restview", "3.0.1" )
+    , ( "pkgs.python3Packages.result", "0.7.0" )
+    , ( "pkgs.python3Packages.rethinkdb", "2.4.9" )
+    , ( "pkgs.python3Packages.retry", "0.9.2" )
+    , ( "pkgs.python3Packages.retry_decorator", "1.1.1" )
+    , ( "pkgs.python3Packages.retrying", "1.3.4" )
+    , ( "pkgs.python3Packages.returns", "0.22.0" )
+    , ( "pkgs.python3Packages.retworkx", "0.13.1" )
+    , ( "pkgs.python3Packages.rfc3339", "6.2" )
+    , ( "pkgs.python3Packages.rfc3339-validator", "0.1.4" )
+    , ( "pkgs.python3Packages.rfc3986", "2.0.0" )
+    , ( "pkgs.python3Packages.rfc3986-validator", "0.1.1" )
+    , ( "pkgs.python3Packages.rfc3987", "1.3.8" )
+    , ( "pkgs.python3Packages.rfc6555", "0.1.0" )
+    , ( "pkgs.python3Packages.rfc7464", "17.7.0" )
+    , ( "pkgs.python3Packages.rfcat", "2.0.1" )
+    , ( "pkgs.python3Packages.rflink", "0.0.65" )
+    , ( "pkgs.python3Packages.rich", "13.5.2" )
+    , ( "pkgs.python3Packages.rich-argparse", "1.4.0" )
+    , ( "pkgs.python3Packages.rich-argparse-plus", "0.3.1.4" )
+    , ( "pkgs.python3Packages.rich-click", "1.7.1" )
+    , ( "pkgs.python3Packages.rich-pixels", "2.1.1" )
+    , ( "pkgs.python3Packages.rich-rst", "1.1.7" )
+    , ( "pkgs.python3Packages.ring-doorbell", "0.8.1" )
+    , ( "pkgs.python3Packages.ripe-atlas-cousteau", "2.0.0" )
+    , ( "pkgs.python3Packages.ripe-atlas-sagan", "1.3.1" )
+    , ( "pkgs.python3Packages.riprova", "0.3.1" )
+    , ( "pkgs.python3Packages.ripser", "0.6.4" )
+    , ( "pkgs.python3Packages.riscof", "1.25.3" )
+    , ( "pkgs.python3Packages.riscv-config", "3.13.3" )
+    , ( "pkgs.python3Packages.riscv-isac", "0.18.0" )
+    , ( "pkgs.python3Packages.rising", "0.3.0" )
+    , ( "pkgs.python3Packages.ritassist", "0.9.3" )
+    , ( "pkgs.python3Packages.rivet", "3.1.8" )
+    , ( "pkgs.python3Packages.rjpl", "0.3.6" )
+    , ( "pkgs.python3Packages.rjsmin", "1.2.2" )
+    , ( "pkgs.python3Packages.rki-covid-parser", "1.3.3" )
+    , ( "pkgs.python3Packages.rkm-codes", "0.6" )
+    , ( "pkgs.python3Packages.rlax", "0.1.6" )
+    , ( "pkgs.python3Packages.rlp", "3.0.0" )
+    , ( "pkgs.python3Packages.rmcl", "0.4.2" )
+    , ( "pkgs.python3Packages.rmrl", "2022-12-11" )
+    , ( "pkgs.python3Packages.rmsd", "1.5.1" )
+    , ( "pkgs.python3Packages.rnc2rng", "2.6.6" )
+    , ( "pkgs.python3Packages.rnginline", "1.0.0" )
+    , ( "pkgs.python3Packages.rns", "0.6.8" )
+    , ( "pkgs.python3Packages.robomachine", "0.10.0" )
+    , ( "pkgs.python3Packages.robot-detection", "0.4" )
+    , ( "pkgs.python3Packages.robotframework", "6.1.1" )
+    , ( "pkgs.python3Packages.robotframework-databaselibrary", "1.3.1" )
+    , ( "pkgs.python3Packages.robotframework-pythonlibcore", "4.2.0" )
+    , ( "pkgs.python3Packages.robotframework-requests", "0.9.5" )
+    , ( "pkgs.python3Packages.robotframework-selenium2library", "3.0.0" )
+    , ( "pkgs.python3Packages.robotframework-seleniumlibrary", "6.1.2" )
+    , ( "pkgs.python3Packages.robotframework-sshlibrary", "3.8.0" )
+    , ( "pkgs.python3Packages.robotframework-tools", "0.1rc4" )
+    , ( "pkgs.python3Packages.robotstatuschecker", "3.0.1" )
+    , ( "pkgs.python3Packages.robotsuite", "2.3.2" )
+    , ( "pkgs.python3Packages.rocket-errbot", "1.2.5" )
+    , ( "pkgs.python3Packages.roku", "4.1" )
+    , ( "pkgs.python3Packages.rokuecp", "0.18.2" )
+    , ( "pkgs.python3Packages.rollbar", "0.16.3" )
+    , ( "pkgs.python3Packages.roman", "2.0.0" )
+    , ( "pkgs.python3Packages.ronin", "1.1.1" )
+    , ( "pkgs.python3Packages.roombapy", "1.6.9" )
+    , ( "pkgs.python3Packages.roonapi", "0.1.5" )
+    , ( "pkgs.python3Packages.rope", "1.9.0" )
+    , ( "pkgs.python3Packages.ropgadget", "7.4" )
+    , ( "pkgs.python3Packages.ropper", "1.13.8" )
+    , ( "pkgs.python3Packages.rotary-embedding-torch", "0.3.5" )
+    , ( "pkgs.python3Packages.rouge-score", "0.1.2" )
+    , ( "pkgs.python3Packages.routeros-api", "0.17.0" )
+    , ( "pkgs.python3Packages.routes", "2.5.1" )
+    , ( "pkgs.python3Packages.rova", "0.3.0" )
+    , ( "pkgs.python3Packages.rpcq", "3.10.0" )
+    , ( "pkgs.python3Packages.rpdb", "0.1.6" )
+    , ( "pkgs.python3Packages.rpds-py", "0.10.3" )
+    , ( "pkgs.python3Packages.rpi-bad-power", "0.1.0" )
+    , ( "pkgs.python3Packages.rpi-gpio", "0.7.1" )
+    , ( "pkgs.python3Packages.rpi-gpio2", "0.4.0" )
+    , ( "pkgs.python3Packages.rplcd", "1.3.1" )
+    , ( "pkgs.python3Packages.rply", "0.7.7" )
+    , ( "pkgs.python3Packages.rpm", "4.18.1" )
+    , ( "pkgs.python3Packages.rpmfile", "2.0.0" )
+    , ( "pkgs.python3Packages.rpmfluff", "0.5.7.1" )
+    , ( "pkgs.python3Packages.rpy2", "3.5.14" )
+    , ( "pkgs.python3Packages.rpyc", "5.3.1" )
+    , ( "pkgs.python3Packages.rq", "1.15.1" )
+    , ( "pkgs.python3Packages.rsa", "4.9" )
+    , ( "pkgs.python3Packages.rsskey", "0.2.0" )
+    , ( "pkgs.python3Packages.rst2ansi", "0.1.5" )
+    , ( "pkgs.python3Packages.rst2pdf", "0.101" )
+    , ( "pkgs.python3Packages.rstcheck", "6.1.2" )
+    , ( "pkgs.python3Packages.rstcheck-core", "1.0.3" )
+    , ( "pkgs.python3Packages.rtmidi-python", "0.2.2" )
+    , ( "pkgs.python3Packages.rtmixer", "0.1.4" )
+    , ( "pkgs.python3Packages.rtoml", "0.8" )
+    , ( "pkgs.python3Packages.rtp", "0.0.3" )
+    , ( "pkgs.python3Packages.rtree", "1.1.0" )
+    , ( "pkgs.python3Packages.rtslib", "2.1.76" )
+    , ( "pkgs.python3Packages.rtsp-to-webrtc", "0.5.1" )
+    , ( "pkgs.python3Packages.ruamel-base", "1.0.0" )
+    , ( "pkgs.python3Packages.ruamel-yaml", "0.17.32" )
+    , ( "pkgs.python3Packages.ruamel-yaml-clib", "0.2.7" )
+    , ( "pkgs.python3Packages.ruamel_base", "1.0.0" )
+    , ( "pkgs.python3Packages.ruamel_yaml", "0.17.32" )
+    , ( "pkgs.python3Packages.ruamel_yaml_clib", "0.2.7" )
+    , ( "pkgs.python3Packages.rubymarshal", "1.2.7" )
+    , ( "pkgs.python3Packages.ruff-lsp", "0.0.45" )
+    , ( "pkgs.python3Packages.ruffus", "2.8.4" )
+    , ( "pkgs.python3Packages.rules", "3.3.0" )
+    , ( "pkgs.python3Packages.rustworkx", "0.13.1" )
+    , ( "pkgs.python3Packages.ruuvitag-ble", "0.1.2" )
+    , ( "pkgs.python3Packages.ruyaml", "0.91.0" )
+    , ( "pkgs.python3Packages.rx", "3.2.0" )
+    , ( "pkgs.python3Packages.rxv", "0.7.0" )
+    , ( "pkgs.python3Packages.rzpipe", "0.6.0" )
+    , ( "pkgs.python3Packages.s2clientprotocol", "3.19.1.58600.0" )
+    , ( "pkgs.python3Packages.s3-credentials", "0.15" )
+    , ( "pkgs.python3Packages.s3fs", "2023.10.0" )
+    , ( "pkgs.python3Packages.s3transfer", "0.7.0" )
+    , ( "pkgs.python3Packages.sabctools", "7.1.2" )
+    , ( "pkgs.python3Packages.sabyenc", "3.3.6" )
+    , ( "pkgs.python3Packages.sabyenc3", "5.4.4" )
+    , ( "pkgs.python3Packages.sacn", "1.9.0" )
+    , ( "pkgs.python3Packages.sacrebleu", "2.3.1" )
+    , ( "pkgs.python3Packages.sacremoses", "0.0.35" )
+    , ( "pkgs.python3Packages.safe", "0.4" )
+    , ( "pkgs.python3Packages.safe-pysha3", "1.0.4" )
+    , ( "pkgs.python3Packages.safeio", "1.2" )
+    , ( "pkgs.python3Packages.safetensors", "0.3.3" )
+    , ( "pkgs.python3Packages.safety", "2.3.5" )
+    , ( "pkgs.python3Packages.sagemaker", "2.197.0" )
+    , ( "pkgs.python3Packages.salmon-mail", "3.2.0" )
+    , ( "pkgs.python3Packages.sampledata", "0.3.7" )
+    , ( "pkgs.python3Packages.samplerate", "0.1.0" )
+    , ( "pkgs.python3Packages.samsungctl", "0.7.1" )
+    , ( "pkgs.python3Packages.samsungtvws", "2.6.0" )
+    , ( "pkgs.python3Packages.sane", "2.9.1" )
+    , ( "pkgs.python3Packages.saneyaml", "0.6.0" )
+    , ( "pkgs.python3Packages.sanic", "23.6.0" )
+    , ( "pkgs.python3Packages.sanic-auth", "0.3.0" )
+    , ( "pkgs.python3Packages.sanic-routing", "23.6.0" )
+    , ( "pkgs.python3Packages.sanic-testing", "23.6.0" )
+    , ( "pkgs.python3Packages.sansio-multipart", "0.3" )
+    , ( "pkgs.python3Packages.sapi-python-client", "0.7.1" )
+    , ( "pkgs.python3Packages.sarge", "0.1.7.post1" )
+    , ( "pkgs.python3Packages.sarif-om", "1.0.4" )
+    , ( "pkgs.python3Packages.sasmodels", "1.0.7" )
+    , ( "pkgs.python3Packages.scales", "1.0.9" )
+    , ( "pkgs.python3Packages.scancode-toolkit", "32.0.6" )
+    , ( "pkgs.python3Packages.scapy", "2.5.0" )
+    , ( "pkgs.python3Packages.schedule", "1.2.1" )
+    , ( "pkgs.python3Packages.schema", "0.7.5" )
+    , ( "pkgs.python3Packages.schema-salad", "8.4.20230808163024" )
+    , ( "pkgs.python3Packages.schemainspect", "3.1.1663587362" )
+    , ( "pkgs.python3Packages.schemdraw", "0.17" )
+    , ( "pkgs.python3Packages.schiene", "0.26" )
+    , ( "pkgs.python3Packages.schwifty", "2023.6.0" )
+    , ( "pkgs.python3Packages.scikit-bio", "0.5.9" )
+    , ( "pkgs.python3Packages.scikit-build", "0.17.6" )
+    , ( "pkgs.python3Packages.scikit-build-core", "0.5.1" )
+    , ( "pkgs.python3Packages.scikit-fmm", "2023.4.2" )
+    , ( "pkgs.python3Packages.scikit-fuzzy", "2022-11-07" )
+    , ( "pkgs.python3Packages.scikit-hep-testdata", "0.4.34" )
+    , ( "pkgs.python3Packages.scikit-image", "0.21.0" )
+    , ( "pkgs.python3Packages.scikit-learn", "1.3.0" )
+    , ( "pkgs.python3Packages.scikit-learn-extra", "0.3.0" )
+    , ( "pkgs.python3Packages.scikit-misc", "0.3.0" )
+    , ( "pkgs.python3Packages.scikit-optimize", "0.9.0" )
+    , ( "pkgs.python3Packages.scikit-posthocs", "0.7.0" )
+    , ( "pkgs.python3Packages.scikit-rf", "0.29.1" )
+    , ( "pkgs.python3Packages.scikit-survival", "0.22.1" )
+    , ( "pkgs.python3Packages.scikit-tda", "1.0.0" )
+    , ( "pkgs.python3Packages.scikitimage", "0.21.0" )
+    , ( "pkgs.python3Packages.scikitlearn", "1.3.0" )
+    , ( "pkgs.python3Packages.scikits-odes", "2.7.0" )
+    , ( "pkgs.python3Packages.scikits-samplerate", "0.3.3" )
+    , ( "pkgs.python3Packages.scim2-filter-parser", "0.5.0" )
+    , ( "pkgs.python3Packages.scipy", "1.11.3" )
+    , ( "pkgs.python3Packages.scmrepo", "1.4.1" )
+    , ( "pkgs.python3Packages.scooby", "0.9.2" )
+    , ( "pkgs.python3Packages.scour", "0.38.2" )
+    , ( "pkgs.python3Packages.scp", "0.14.5" )
+    , ( "pkgs.python3Packages.scramp", "1.4.4" )
+    , ( "pkgs.python3Packages.scrap-engine", "1.4.0" )
+    , ( "pkgs.python3Packages.scrapy", "2.11.0" )
+    , ( "pkgs.python3Packages.scrapy-deltafetch", "2.0.1" )
+    , ( "pkgs.python3Packages.scrapy-fake-useragent", "1.4.4" )
+    , ( "pkgs.python3Packages.scrapy-splash", "0.9.0" )
+    , ( "pkgs.python3Packages.screed", "1.1.2" )
+    , ( "pkgs.python3Packages.screeninfo", "0.8.1" )
+    , ( "pkgs.python3Packages.screenlogicpy", "0.9.4" )
+    , ( "pkgs.python3Packages.scripttest", "1.3" )
+    , ( "pkgs.python3Packages.scs", "3.2.4" )
+    , ( "pkgs.python3Packages.sdds", "0.4.0" )
+    , ( "pkgs.python3Packages.sdkmanager", "0.6.5" )
+    , ( "pkgs.python3Packages.sdnotify", "0.3.2" )
+    , ( "pkgs.python3Packages.seaborn", "0.13.0" )
+    , ( "pkgs.python3Packages.seabreeze", "1.3.0" )
+    , ( "pkgs.python3Packages.seaserv", "9.0.10" )
+    , ( "pkgs.python3Packages.seasonal", "0.3.1" )
+    , ( "pkgs.python3Packages.seatconnect", "1.1.9" )
+    , ( "pkgs.python3Packages.seccomp", "2.5.4" )
+    , ( "pkgs.python3Packages.secp256k1", "0.14.0" )
+    , ( "pkgs.python3Packages.secretstorage", "3.3.3" )
+    , ( "pkgs.python3Packages.sectools", "1.3.9" )
+    , ( "pkgs.python3Packages.secure", "0.3.0" )
+    , ( "pkgs.python3Packages.securetar", "2023.3.0" )
+    , ( "pkgs.python3Packages.seedir", "0.4.2" )
+    , ( "pkgs.python3Packages.seekpath", "2.0.1" )
+    , ( "pkgs.python3Packages.segments", "2.2.0" )
+    , ( "pkgs.python3Packages.segno", "1.5.3" )
+    , ( "pkgs.python3Packages.segyio", "1.9.11" )
+    , ( "pkgs.python3Packages.selectors2", "2.0.2" )
+    , ( "pkgs.python3Packages.selenium", "4.14.0" )
+    , ( "pkgs.python3Packages.semantic-version", "2.10.0" )
+    , ( "pkgs.python3Packages.semaphore-bot", "0.16.0" )
+    , ( "pkgs.python3Packages.semver", "3.0.1" )
+    , ( "pkgs.python3Packages.send2trash", "1.8.2" )
+    , ( "pkgs.python3Packages.sendgrid", "6.10.0" )
+    , ( "pkgs.python3Packages.sense-energy", "0.12.2" )
+    , ( "pkgs.python3Packages.sensirion-ble", "0.1.1" )
+    , ( "pkgs.python3Packages.sensor-state-data", "2.18.0" )
+    , ( "pkgs.python3Packages.sensorpro-ble", "0.5.3" )
+    , ( "pkgs.python3Packages.sensorpush-ble", "1.5.5" )
+    , ( "pkgs.python3Packages.sentence-splitter", "1.4" )
+    , ( "pkgs.python3Packages.sentence-transformers", "2.2.2" )
+    , ( "pkgs.python3Packages.sentencepiece", "0.1.99" )
+    , ( "pkgs.python3Packages.sentinel", "1.0.0" )
+    , ( "pkgs.python3Packages.sentinels", "1.0.0" )
+    , ( "pkgs.python3Packages.sentry-sdk", "1.35.0" )
+    , ( "pkgs.python3Packages.sepaxml", "2.6.1" )
+    , ( "pkgs.python3Packages.seqdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.seqeval", "1.2.2" )
+    , ( "pkgs.python3Packages.serialio", "2.4.0" )
+    , ( "pkgs.python3Packages.serializable", "2023-07-13" )
+    , ( "pkgs.python3Packages.serpent", "1.41" )
+    , ( "pkgs.python3Packages.serpy", "0.3.1" )
+    , ( "pkgs.python3Packages.servefile", "0.5.4" )
+    , ( "pkgs.python3Packages.serverfiles", "0.3.1" )
+    , ( "pkgs.python3Packages.serverlessrepo", "0.1.10" )
+    , ( "pkgs.python3Packages.service-identity", "23.1.0" )
+    , ( "pkgs.python3Packages.setproctitle", "1.3.2" )
+    , ( "pkgs.python3Packages.setupmeta", "3.5.2" )
+    , ( "pkgs.python3Packages.setuptools", "68.2.2" )
+    , ( "pkgs.python3Packages.setuptools-changelog-shortener", "0.2.0" )
+    , ( "pkgs.python3Packages.setuptools-declarative-requirements", "1.3.0" )
+    , ( "pkgs.python3Packages.setuptools-generate", "0.0.6" )
+    , ( "pkgs.python3Packages.setuptools-gettext", "0.1.5" )
+    , ( "pkgs.python3Packages.setuptools-git", "1.2" )
+    , ( "pkgs.python3Packages.setuptools-git-versioning", "1.13.5" )
+    , ( "pkgs.python3Packages.setuptools-lint", "0.6.0" )
+    , ( "pkgs.python3Packages.setuptools-odoo", "3.2.1" )
+    , ( "pkgs.python3Packages.setuptools-rust", "1.7.0" )
+    , ( "pkgs.python3Packages.setuptools-scm", "7.1.0" )
+    , ( "pkgs.python3Packages.setuptools-scm-git-archive", "1.4" )
+    , ( "pkgs.python3Packages.setuptools-trial", "0.6.0" )
+    , ( "pkgs.python3Packages.setuptoolsBuildHook", "" )
+    , ( "pkgs.python3Packages.setuptoolsCheckHook", "" )
+    , ( "pkgs.python3Packages.setuptoolsRustBuildHook", "" )
+    , ( "pkgs.python3Packages.setuptoolsTrial", "0.6.0" )
+    , ( "pkgs.python3Packages.setuptools_scm", "7.1.0" )
+    , ( "pkgs.python3Packages.seventeentrack", "2022.04.6" )
+    , ( "pkgs.python3Packages.sexpdata", "1.0.1" )
+    , ( "pkgs.python3Packages.sfepy", "2023.1" )
+    , ( "pkgs.python3Packages.sfrbox-api", "0.0.6" )
+    , ( "pkgs.python3Packages.sgmllib3k", "1.0.0" )
+    , ( "pkgs.python3Packages.sgp4", "2.23" )
+    , ( "pkgs.python3Packages.sh", "2.0.6" )
+    , ( "pkgs.python3Packages.shamir-mnemonic", "0.2.2" )
+    , ( "pkgs.python3Packages.shap", "0.43.0" )
+    , ( "pkgs.python3Packages.shapely", "2.0.2" )
+    , ( "pkgs.python3Packages.sharedmem", "0.3.8" )
+    , ( "pkgs.python3Packages.sharkiq", "1.0.2" )
+    , ( "pkgs.python3Packages.sharkiqpy", "1.0.2" )
+    , ( "pkgs.python3Packages.shazamio", "0.4.0.1" )
+    , ( "pkgs.python3Packages.shellescape", "3.8.1" )
+    , ( "pkgs.python3Packages.shellingham", "1.5.1" )
+    , ( "pkgs.python3Packages.shiboken2", "5.15.11" )
+    , ( "pkgs.python3Packages.shiboken6", "6.6.0" )
+    , ( "pkgs.python3Packages.shippai", "0.3.2" )
+    , ( "pkgs.python3Packages.shiv", "1.0.4" )
+    , ( "pkgs.python3Packages.shlib", "1.6" )
+    , ( "pkgs.python3Packages.shodan", "1.30.1" )
+    , ( "pkgs.python3Packages.shortuuid", "1.0.11" )
+    , ( "pkgs.python3Packages.should-dsl", "2.1.2" )
+    , ( "pkgs.python3Packages.shouldbe", "0.1.2" )
+    , ( "pkgs.python3Packages.show-in-file-manager", "1.1.4" )
+    , ( "pkgs.python3Packages.showit", "1.1.4" )
+    , ( "pkgs.python3Packages.shtab", "1.6.4" )
+    , ( "pkgs.python3Packages.shutilwhich", "1.1.0" )
+    , ( "pkgs.python3Packages.sievelib", "1.2.1" )
+    , ( "pkgs.python3Packages.signalslot", "0.2.0" )
+    , ( "pkgs.python3Packages.signedjson", "1.1.4" )
+    , ( "pkgs.python3Packages.signify", "0.5.2" )
+    , ( "pkgs.python3Packages.sigrok", "0.5.2" )
+    , ( "pkgs.python3Packages.sigtools", "4.0.1" )
+    , ( "pkgs.python3Packages.simanneal", "0.5.0" )
+    , ( "pkgs.python3Packages.simber", "0.2.6" )
+    , ( "pkgs.python3Packages.simpful", "2.11.0" )
+    , ( "pkgs.python3Packages.simple-di", "0.1.5" )
+    , ( "pkgs.python3Packages.simple-rest-client", "1.2.1" )
+    , ( "pkgs.python3Packages.simple-rlp", "0.1.3" )
+    , ( "pkgs.python3Packages.simple-salesforce", "1.12.5" )
+    , ( "pkgs.python3Packages.simple-websocket", "1.0.0" )
+    , ( "pkgs.python3Packages.simple-websocket-server", "20180414" )
+    , ( "pkgs.python3Packages.simpleaudio", "1.0.4" )
+    , ( "pkgs.python3Packages.simplebayes", "1.5.8" )
+    , ( "pkgs.python3Packages.simpleeval", "0.9.13" )
+    , ( "pkgs.python3Packages.simplefix", "1.0.17" )
+    , ( "pkgs.python3Packages.simplegeneric", "0.8.1" )
+    , ( "pkgs.python3Packages.simplehound", "0.6" )
+    , ( "pkgs.python3Packages.simpleitk", "2.3.1" )
+    , ( "pkgs.python3Packages.simplejson", "3.19.2" )
+    , ( "pkgs.python3Packages.simplekml", "1.3.6" )
+    , ( "pkgs.python3Packages.simplekv", "0.14.1" )
+    , ( "pkgs.python3Packages.simplemma", "0.9.1" )
+    , ( "pkgs.python3Packages.simplenote", "2.1.4" )
+    , ( "pkgs.python3Packages.simplepush", "2.2.3" )
+    , ( "pkgs.python3Packages.simplesat", "0.8.2" )
+    , ( "pkgs.python3Packages.simplisafe-python", "2023.10.0" )
+    , ( "pkgs.python3Packages.simpy", "4.0.2" )
+    , ( "pkgs.python3Packages.single-source", "0.3.0" )
+    , ( "pkgs.python3Packages.single-version", "1.6.0" )
+    , ( "pkgs.python3Packages.siobrultech-protocols", "0.13.0" )
+    , ( "pkgs.python3Packages.siosocks", "0.3.0" )
+    , ( "pkgs.python3Packages.sip", "6.7.12" )
+    , ( "pkgs.python3Packages.sip_4", "4.19.25" )
+    , ( "pkgs.python3Packages.sipyco", "1.4" )
+    , ( "pkgs.python3Packages.sisyphus-control", "3.1.3" )
+    , ( "pkgs.python3Packages.siuba", "0.4.4" )
+    , ( "pkgs.python3Packages.six", "1.16.0" )
+    , ( "pkgs.python3Packages.sjcl", "0.2.1" )
+    , ( "pkgs.python3Packages.skein", "0.8.2" )
+    , ( "pkgs.python3Packages.skia-pathops", "0.8.0.post1" )
+    , ( "pkgs.python3Packages.skidl", "1.0.0" )
+    , ( "pkgs.python3Packages.skl2onnx", "1.15.0" )
+    , ( "pkgs.python3Packages.sklearn-deap", "0.3.0" )
+    , ( "pkgs.python3Packages.skodaconnect", "1.3.8" )
+    , ( "pkgs.python3Packages.skorch", "0.15.0" )
+    , ( "pkgs.python3Packages.skrl", "1.0.0" )
+    , ( "pkgs.python3Packages.skybellpy", "0.6.3" )
+    , ( "pkgs.python3Packages.skyfield", "1.45" )
+    , ( "pkgs.python3Packages.skytemple-dtef", "1.1.5" )
+    , ( "pkgs.python3Packages.skytemple-eventserver", "1.0.0" )
+    , ( "pkgs.python3Packages.skytemple-files", "1.5.5" )
+    , ( "pkgs.python3Packages.skytemple-icons", "1.3.2" )
+    , ( "pkgs.python3Packages.skytemple-rust", "1.5.3" )
+    , ( "pkgs.python3Packages.skytemple-ssb-debugger", "1.4.4" )
+    , ( "pkgs.python3Packages.slack-bolt", "1.18.0" )
+    , ( "pkgs.python3Packages.slack-sdk", "3.24.0" )
+    , ( "pkgs.python3Packages.slackclient", "3.23.0" )
+    , ( "pkgs.python3Packages.sleekxmpp", "1.3.3" )
+    , ( "pkgs.python3Packages.sleepyq", "0.8.1" )
+    , ( "pkgs.python3Packages.slicedimage", "4.1.1" )
+    , ( "pkgs.python3Packages.slicer", "0.0.7" )
+    , ( "pkgs.python3Packages.slicerator", "1.1.0" )
+    , ( "pkgs.python3Packages.slimit", "2018-08-08" )
+    , ( "pkgs.python3Packages.slither-analyzer", "0.10.0" )
+    , ( "pkgs.python3Packages.slixmpp", "1.8.4" )
+    , ( "pkgs.python3Packages.slob", "2020-06-26" )
+    , ( "pkgs.python3Packages.slovnet", "0.6.0" )
+    , ( "pkgs.python3Packages.slowapi", "0.1.8" )
+    , ( "pkgs.python3Packages.slpp", "1.2.3" )
+    , ( "pkgs.python3Packages.slugid", "2.0.0" )
+    , ( "pkgs.python3Packages.sly", "0.5" )
+    , ( "pkgs.python3Packages.smart-meter-texas", "0.5.3" )
+    , ( "pkgs.python3Packages.smart-open", "6.4.0" )
+    , ( "pkgs.python3Packages.smart_open", "6.4.0" )
+    , ( "pkgs.python3Packages.smarthab", "0.21" )
+    , ( "pkgs.python3Packages.smartypants", "2.0.1" )
+    , ( "pkgs.python3Packages.smbprotocol", "1.11.0" )
+    , ( "pkgs.python3Packages.smbus-cffi", "0.5.1" )
+    , ( "pkgs.python3Packages.smbus2", "0.4.3" )
+    , ( "pkgs.python3Packages.smdebug-rulesconfig", "1.0.1" )
+    , ( "pkgs.python3Packages.smhi-pkg", "1.0.16" )
+    , ( "pkgs.python3Packages.smmap", "5.0.0" )
+    , ( "pkgs.python3Packages.smpp_pdu", "2022-09-02" )
+    , ( "pkgs.python3Packages.smpplib", "2.2.3" )
+    , ( "pkgs.python3Packages.smtpdfix", "0.5.1" )
+    , ( "pkgs.python3Packages.snack", "0.52.23" )
+    , ( "pkgs.python3Packages.snakebite", "2.11.0" )
+    , ( "pkgs.python3Packages.snakeviz", "2.2.0" )
+    , ( "pkgs.python3Packages.snapcast", "2.3.3" )
+    , ( "pkgs.python3Packages.snapshottest", "0.6.0" )
+    , ( "pkgs.python3Packages.snaptime", "0.2.4" )
+    , ( "pkgs.python3Packages.sniffio", "1.3.0" )
+    , ( "pkgs.python3Packages.snitun", "0.36.2" )
+    , ( "pkgs.python3Packages.snorkel", "0.9.9" )
+    , ( "pkgs.python3Packages.snowballstemmer", "2.2.0" )
+    , ( "pkgs.python3Packages.snowflake-connector-python", "3.3.1" )
+    , ( "pkgs.python3Packages.snowflake-sqlalchemy", "1.5.0" )
+    , ( "pkgs.python3Packages.snscrape", "0.7.0.20230622" )
+    , ( "pkgs.python3Packages.snuggs", "1.4.7" )
+    , ( "pkgs.python3Packages.soapysdr", "0.8.1" )
+    , ( "pkgs.python3Packages.soapysdr-with-plugins", "0.8.1" )
+    , ( "pkgs.python3Packages.social-auth-app-django", "5.4.0" )
+    , ( "pkgs.python3Packages.social-auth-core", "4.4.2" )
+    , ( "pkgs.python3Packages.socialscan", "2.0.0" )
+    , ( "pkgs.python3Packages.socid-extractor", "0.0.26" )
+    , ( "pkgs.python3Packages.socketio-client", "0.7.2" )
+    , ( "pkgs.python3Packages.sockio", "0.15.0" )
+    , ( "pkgs.python3Packages.sockjs", "0.11.0" )
+    , ( "pkgs.python3Packages.sockjs-tornado", "1.0.7" )
+    , ( "pkgs.python3Packages.socksio", "1.0.0" )
+    , ( "pkgs.python3Packages.socksipy-branch", "1.01" )
+    , ( "pkgs.python3Packages.soco", "0.29.1" )
+    , ( "pkgs.python3Packages.softlayer", "6.1.10" )
+    , ( "pkgs.python3Packages.solaredge", "0.0.4" )
+    , ( "pkgs.python3Packages.solax", "0.3.2" )
+    , ( "pkgs.python3Packages.solc-select", "1.0.4" )
+    , ( "pkgs.python3Packages.solo-python", "0.1.1" )
+    , ( "pkgs.python3Packages.somajo", "2.3.1" )
+    , ( "pkgs.python3Packages.somfy-mylink-synergy", "1.0.6" )
+    , ( "pkgs.python3Packages.sonarr", "0.3.0" )
+    , ( "pkgs.python3Packages.sonos-websocket", "0.1.2" )
+    , ( "pkgs.python3Packages.sopel", "7.1.9" )
+    , ( "pkgs.python3Packages.sorl-thumbnail", "12.10.0" )
+    , ( "pkgs.python3Packages.sorl_thumbnail", "12.10.0" )
+    , ( "pkgs.python3Packages.sortedcollections", "2.1.0" )
+    , ( "pkgs.python3Packages.sortedcontainers", "2.4.0" )
+    , ( "pkgs.python3Packages.soundcloud-v2", "1.3.1" )
+    , ( "pkgs.python3Packages.sounddevice", "0.4.6" )
+    , ( "pkgs.python3Packages.soundfile", "0.12.1" )
+    , ( "pkgs.python3Packages.soupsieve", "2.5" )
+    , ( "pkgs.python3Packages.sourmash", "4.8.4" )
+    , ( "pkgs.python3Packages.soxr", "0.3.6" )
+    , ( "pkgs.python3Packages.spacy", "3.7.2" )
+    , ( "pkgs.python3Packages.spacy-alignments", "0.9.0" )
+    , ( "pkgs.python3Packages.spacy-legacy", "3.0.12" )
+    , ( "pkgs.python3Packages.spacy-loggers", "1.0.5" )
+    , ( "pkgs.python3Packages.spacy-lookups-data", "1.0.5" )
+    , ( "pkgs.python3Packages.spacy-pkuseg", "0.0.33" )
+    , ( "pkgs.python3Packages.spacy-transformers", "1.3.3" )
+    , ( "pkgs.python3Packages.spake2", "0.8" )
+    , ( "pkgs.python3Packages.spark_parser", "1.8.9" )
+    , ( "pkgs.python3Packages.sparklines", "0.4.2" )
+    , ( "pkgs.python3Packages.sparqlwrapper", "2.0.0" )
+    , ( "pkgs.python3Packages.sparse", "0.14.0" )
+    , ( "pkgs.python3Packages.spdx-tools", "0.8.2" )
+    , ( "pkgs.python3Packages.speaklater", "1.3" )
+    , ( "pkgs.python3Packages.speaklater3", "1.4" )
+    , ( "pkgs.python3Packages.spectral-cube", "0.6.3" )
+    , ( "pkgs.python3Packages.speechbrain", "0.5.16" )
+    , ( "pkgs.python3Packages.speedtest-cli", "2.1.3" )
+    , ( "pkgs.python3Packages.speg", "0.3" )
+    , ( "pkgs.python3Packages.spglib", "2.1.0" )
+    , ( "pkgs.python3Packages.sphfile", "1.0.3" )
+    , ( "pkgs.python3Packages.sphinx", "7.2.6" )
+    , ( "pkgs.python3Packages.sphinx-argparse", "0.4.0" )
+    , ( "pkgs.python3Packages.sphinx-autoapi", "2.1.1" )
+    , ( "pkgs.python3Packages.sphinx-autobuild", "2021.3.14" )
+    , ( "pkgs.python3Packages.sphinx-autodoc-typehints", "1.24.0" )
+    , ( "pkgs.python3Packages.sphinx-automodapi", "0.16.0" )
+    , ( "pkgs.python3Packages.sphinx-basic-ng", "1.0.0.beta2" )
+    , ( "pkgs.python3Packages.sphinx-better-theme", "0.1.5" )
+    , ( "pkgs.python3Packages.sphinx-book-theme", "1.0.1" )
+    , ( "pkgs.python3Packages.sphinx-codeautolink", "0.15.0" )
+    , ( "pkgs.python3Packages.sphinx-comments", "0.0.3" )
+    , ( "pkgs.python3Packages.sphinx-copybutton", "0.5.2" )
+    , ( "pkgs.python3Packages.sphinx-design", "0.5.0" )
+    , ( "pkgs.python3Packages.sphinx-external-toc", "1.0.0" )
+    , ( "pkgs.python3Packages.sphinx-fortran", "2022-03-02" )
+    , ( "pkgs.python3Packages.sphinx-hoverxref", "1.3.0" )
+    , ( "pkgs.python3Packages.sphinx-inline-tabs", "2023.04.21" )
+    , ( "pkgs.python3Packages.sphinx-intl", "2.1.0" )
+    , ( "pkgs.python3Packages.sphinx-issues", "3.0.1" )
+    , ( "pkgs.python3Packages.sphinx-jinja", "2.0.2" )
+    , ( "pkgs.python3Packages.sphinx-jquery", "4.1" )
+    , ( "pkgs.python3Packages.sphinx-jupyterbook-latex", "0.5.2" )
+    , ( "pkgs.python3Packages.sphinx-markdown-parser", "0.2.4" )
+    , ( "pkgs.python3Packages.sphinx-markdown-tables", "0.0.17" )
+    , ( "pkgs.python3Packages.sphinx-material", "0.0.36" )
+    , ( "pkgs.python3Packages.sphinx-mdinclude", "0.5.3" )
+    , ( "pkgs.python3Packages.sphinx-multitoc-numbering", "0.1.3" )
+    , ( "pkgs.python3Packages.sphinx-notfound-page", "1.0.0" )
+    , ( "pkgs.python3Packages.sphinx-prompt", "1.7.0" )
+    , ( "pkgs.python3Packages.sphinx-pytest", "0.2.0" )
+    , ( "pkgs.python3Packages.sphinx-rtd-theme", "1.3.0" )
+    , ( "pkgs.python3Packages.sphinx-serve", "1.0.1" )
+    , ( "pkgs.python3Packages.sphinx-sitemap", "2.5.1" )
+    , ( "pkgs.python3Packages.sphinx-tabs", "3.4.4" )
+    , ( "pkgs.python3Packages.sphinx-testing", "1.0.1" )
+    , ( "pkgs.python3Packages.sphinx-thebe", "0.3.0" )
+    , ( "pkgs.python3Packages.sphinx-togglebutton", "0.3.2" )
+    , ( "pkgs.python3Packages.sphinx-version-warning", "2019-08-10" )
+    , ( "pkgs.python3Packages.sphinxHook", "" )
+    , ( "pkgs.python3Packages.sphinx_rtd_theme", "1.3.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-actdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-apidoc", "0.4.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-applehelp", "1.0.7" )
+    , ( "pkgs.python3Packages.sphinxcontrib-asyncio", "0.3.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-autoapi", "2.1.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib-bayesnet", "0.4" )
+    , ( "pkgs.python3Packages.sphinxcontrib-bibtex", "2.6.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib-blockdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-confluencebuilder", "2.3.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-devhelp", "1.0.5" )
+    , ( "pkgs.python3Packages.sphinxcontrib-excel-table", "1.0.8" )
+    , ( "pkgs.python3Packages.sphinxcontrib-fulltoc", "1.2.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-htmlhelp", "2.0.4" )
+    , ( "pkgs.python3Packages.sphinxcontrib-httpdomain", "1.8.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib-jquery", "4.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib-jsmath", "1.0.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib-katex", "0.9.7" )
+    , ( "pkgs.python3Packages.sphinxcontrib-log-cabinet", "1.0.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib-mscgen", "0.6" )
+    , ( "pkgs.python3Packages.sphinxcontrib-newsfeed", "0.1.4" )
+    , ( "pkgs.python3Packages.sphinxcontrib-nwdiag", "2.0.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-openapi", "0.8.3" )
+    , ( "pkgs.python3Packages.sphinxcontrib-plantuml", "0.27" )
+    , ( "pkgs.python3Packages.sphinxcontrib-programoutput", "0.17" )
+    , ( "pkgs.python3Packages.sphinxcontrib-qthelp", "1.0.6" )
+    , ( "pkgs.python3Packages.sphinxcontrib-seqdiag", "3.0.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-serializinghtml", "1.1.9" )
+    , ( "pkgs.python3Packages.sphinxcontrib-spelling", "8.0.0" )
+    , ( "pkgs.python3Packages.sphinxcontrib-tikz", "0.4.16" )
+    , ( "pkgs.python3Packages.sphinxcontrib-wavedrom", "3.0.4" )
+    , ( "pkgs.python3Packages.sphinxcontrib-websupport", "1.2.6" )
+    , ( "pkgs.python3Packages.sphinxcontrib-youtube", "1.4.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib_httpdomain", "1.8.1" )
+    , ( "pkgs.python3Packages.sphinxcontrib_newsfeed", "0.1.4" )
+    , ( "pkgs.python3Packages.sphinxcontrib_plantuml", "0.27" )
+    , ( "pkgs.python3Packages.sphinxemoji", "0.2.0" )
+    , ( "pkgs.python3Packages.sphinxext-opengraph", "0.9.0" )
+    , ( "pkgs.python3Packages.spiderpy", "1.7.2" )
+    , ( "pkgs.python3Packages.spidev", "3.6" )
+    , ( "pkgs.python3Packages.spinners", "0.0.24" )
+    , ( "pkgs.python3Packages.splinter", "0.19.0" )
+    , ( "pkgs.python3Packages.spotipy", "2.23.0" )
+    , ( "pkgs.python3Packages.spsdk", "1.11.0" )
+    , ( "pkgs.python3Packages.spur", "0.3.23" )
+    , ( "pkgs.python3Packages.spyder", "5.5.0" )
+    , ( "pkgs.python3Packages.spyder-kernels", "2.5.0" )
+    , ( "pkgs.python3Packages.spyse-python", "2.2.3" )
+    , ( "pkgs.python3Packages.sqids", "0.4.1" )
+    , ( "pkgs.python3Packages.sqlalchemy", "2.0.21" )
+    , ( "pkgs.python3Packages.sqlalchemy-citext", "1.8.0" )
+    , ( "pkgs.python3Packages.sqlalchemy-continuum", "1.4.0" )
+    , ( "pkgs.python3Packages.sqlalchemy-i18n", "1.1.0" )
+    , ( "pkgs.python3Packages.sqlalchemy-jsonfield", "1.0.1.post0+2023-04-24" )
+    , ( "pkgs.python3Packages.sqlalchemy-migrate", "0.13.0" )
+    , ( "pkgs.python3Packages.sqlalchemy-mixins", "2.0.5" )
+    , ( "pkgs.python3Packages.sqlalchemy-utils", "0.41.1" )
+    , ( "pkgs.python3Packages.sqlalchemy-views", "0.3.2" )
+    , ( "pkgs.python3Packages.sqlalchemy_migrate", "0.13.0" )
+    , ( "pkgs.python3Packages.sqlbag", "0.1.1617247075" )
+    , ( "pkgs.python3Packages.sqlglot", "17.14.2" )
+    , ( "pkgs.python3Packages.sqlite-fts4", "1.0.3" )
+    , ( "pkgs.python3Packages.sqlite-migrate", "0.1a2" )
+    , ( "pkgs.python3Packages.sqlite-utils", "3.35.2" )
+    , ( "pkgs.python3Packages.sqlitedict", "2.1.0" )
+    , ( "pkgs.python3Packages.sqlmap", "1.7.11" )
+    , ( "pkgs.python3Packages.sqlobject", "3.11.0" )
+    , ( "pkgs.python3Packages.sqlparse", "0.4.4" )
+    , ( "pkgs.python3Packages.sqlsoup", "0.9.1" )
+    , ( "pkgs.python3Packages.sqltrie", "0.8.0" )
+    , ( "pkgs.python3Packages.squarify", "0.4.3" )
+    , ( "pkgs.python3Packages.srp", "1.0.20" )
+    , ( "pkgs.python3Packages.srpenergy", "1.3.6" )
+    , ( "pkgs.python3Packages.srptools", "1.0.1" )
+    , ( "pkgs.python3Packages.srsly", "2.4.8" )
+    , ( "pkgs.python3Packages.srt", "3.5.3" )
+    , ( "pkgs.python3Packages.srvlookup", "3.0.0" )
+    , ( "pkgs.python3Packages.ssdeep", "3.4.1" )
+    , ( "pkgs.python3Packages.ssdp", "1.3.0" )
+    , ( "pkgs.python3Packages.ssdpy", "0.4.1" )
+    , ( "pkgs.python3Packages.sseclient", "0.0.27" )
+    , ( "pkgs.python3Packages.sseclient-py", "1.8.0" )
+    , ( "pkgs.python3Packages.sshfs", "2023.10.0" )
+    , ( "pkgs.python3Packages.sshpubkeys", "3.3.1" )
+    , ( "pkgs.python3Packages.sshtunnel", "0.4.0" )
+    , ( "pkgs.python3Packages.sslib", "0.2.0" )
+    , ( "pkgs.python3Packages.stack-data", "0.2.0" )
+    , ( "pkgs.python3Packages.stanio", "0.3.0" )
+    , ( "pkgs.python3Packages.stanza", "1.6.1" )
+    , ( "pkgs.python3Packages.starkbank-ecdsa", "2.2.0" )
+    , ( "pkgs.python3Packages.starlette", "0.31.1" )
+    , ( "pkgs.python3Packages.starlette-wtf", "0.4.3" )
+    , ( "pkgs.python3Packages.starline", "0.2.0" )
+    , ( "pkgs.python3Packages.stashy", "0.7" )
+    , ( "pkgs.python3Packages.static3", "0.7.0" )
+    , ( "pkgs.python3Packages.staticjinja", "5.0.0" )
+    , ( "pkgs.python3Packages.staticmap", "0.5.7" )
+    , ( "pkgs.python3Packages.statistics", "1.0.3.5" )
+    , ( "pkgs.python3Packages.statmake", "0.6.0" )
+    , ( "pkgs.python3Packages.statsd", "4.0.1" )
+    , ( "pkgs.python3Packages.statsmodels", "0.14.0" )
+    , ( "pkgs.python3Packages.std2", "2023-10-07" )
+    , ( "pkgs.python3Packages.stdenv", "" )
+    , ( "pkgs.python3Packages.stdiomask", "0.0.6" )
+    , ( "pkgs.python3Packages.stdlib-list", "0.10.0" )
+    , ( "pkgs.python3Packages.stdlibs", "2023.11.2" )
+    , ( "pkgs.python3Packages.steamodd", "5.0" )
+    , ( "pkgs.python3Packages.steamship", "2.17.32" )
+    , ( "pkgs.python3Packages.stem", "1.8.2" )
+    , ( "pkgs.python3Packages.stemming", "1.0.1" )
+    , ( "pkgs.python3Packages.stestr", "4.0.1" )
+    , ( "pkgs.python3Packages.stevedore", "5.1.0" )
+    , ( "pkgs.python3Packages.stickytape", "0.2.1" )
+    , ( "pkgs.python3Packages.stim", "1.9.0" )
+    , ( "pkgs.python3Packages.stix2-patterns", "2.0.0" )
+    , ( "pkgs.python3Packages.stm32loader", "0.5.1" )
+    , ( "pkgs.python3Packages.stone", "3.3.1" )
+    , ( "pkgs.python3Packages.stookalert", "0.1.4" )
+    , ( "pkgs.python3Packages.stopit", "1.1.2" )
+    , ( "pkgs.python3Packages.stransi", "0.3.0" )
+    , ( "pkgs.python3Packages.strategies", "0.2.3" )
+    , ( "pkgs.python3Packages.stravalib", "1.5" )
+    , ( "pkgs.python3Packages.strawberry-graphql", "0.215.1" )
+    , ( "pkgs.python3Packages.streamdeck", "0.9.4" )
+    , ( "pkgs.python3Packages.streaming-form-data", "1.13.0" )
+    , ( "pkgs.python3Packages.streamlabswater", "1.0.1" )
+    , ( "pkgs.python3Packages.streamlit", "1.28.1" )
+    , ( "pkgs.python3Packages.streamz", "0.6.4" )
+    , ( "pkgs.python3Packages.strenum", "0.4.15" )
+    , ( "pkgs.python3Packages.strict-rfc3339", "0.7" )
+    , ( "pkgs.python3Packages.strictyaml", "1.7.3" )
+    , ( "pkgs.python3Packages.stringcase", "1.2.0" )
+    , ( "pkgs.python3Packages.stringly", "1.0b2" )
+    , ( "pkgs.python3Packages.stringparser", "0.7" )
+    , ( "pkgs.python3Packages.stripe", "7.5.0" )
+    , ( "pkgs.python3Packages.striprtf", "0.0.26" )
+    , ( "pkgs.python3Packages.structlog", "23.2.0" )
+    , ( "pkgs.python3Packages.stubserver", "1.1" )
+    , ( "pkgs.python3Packages.stumpy", "1.12.0" )
+    , ( "pkgs.python3Packages.stups-cli-support", "1.1.20" )
+    , ( "pkgs.python3Packages.stups-fullstop", "1.1.31" )
+    , ( "pkgs.python3Packages.stups-pierone", "1.1.51" )
+    , ( "pkgs.python3Packages.stups-tokens", "1.1.19" )
+    , ( "pkgs.python3Packages.stups-zign", "1.2" )
+    , ( "pkgs.python3Packages.stytra", "0.8.34" )
+    , ( "pkgs.python3Packages.subarulink", "0.7.9" )
+    , ( "pkgs.python3Packages.subliminal", "2.1.0" )
+    , ( "pkgs.python3Packages.subprocess-tee", "0.4.1" )
+    , ( "pkgs.python3Packages.subunit", "1.4.2" )
+    , ( "pkgs.python3Packages.subunit2sql", "1.10.0" )
+    , ( "pkgs.python3Packages.subzerod", "1.0" )
+    , ( "pkgs.python3Packages.succulent", "0.2.6" )
+    , ( "pkgs.python3Packages.summarytools", "0.2.3" )
+    , ( "pkgs.python3Packages.sumo", "2.3.7" )
+    , ( "pkgs.python3Packages.sumtypes", "0.1a6" )
+    , ( "pkgs.python3Packages.sunpy", "5.0.1" )
+    , ( "pkgs.python3Packages.sunwatcher", "0.2.1" )
+    , ( "pkgs.python3Packages.sunweg", "2.0.0" )
+    , ( "pkgs.python3Packages.superqt", "0.3.8" )
+    , ( "pkgs.python3Packages.supervise-api", "0.6.0" )
+    , ( "pkgs.python3Packages.supervise_api", "0.6.0" )
+    , ( "pkgs.python3Packages.supervisor", "4.2.5" )
+    , ( "pkgs.python3Packages.sure", "2.0.1" )
+    , ( "pkgs.python3Packages.surepy", "0.8.0" )
+    , ( "pkgs.python3Packages.surt", "0.3.1" )
+    , ( "pkgs.python3Packages.survey", "4.5.4" )
+    , ( "pkgs.python3Packages.sv-ttk", "2.5.5" )
+    , ( "pkgs.python3Packages.svg-path", "6.2" )
+    , ( "pkgs.python3Packages.svg2tikz", "2.1.0" )
+    , ( "pkgs.python3Packages.svgelements", "1.9.6" )
+    , ( "pkgs.python3Packages.svglib", "1.5.1" )
+    , ( "pkgs.python3Packages.svgwrite", "1.4.3" )
+    , ( "pkgs.python3Packages.swagger-spec-validator", "2.7.4" )
+    , ( "pkgs.python3Packages.swagger-ui-bundle", "0.0.9" )
+    , ( "pkgs.python3Packages.swift", "2.32.0" )
+    , ( "pkgs.python3Packages.swisshydrodata", "0.1.0" )
+    , ( "pkgs.python3Packages.swspotify", "1.2.3" )
+    , ( "pkgs.python3Packages.sybil", "5.0.0" )
+    , ( "pkgs.python3Packages.symengine", "0.10.0" )
+    , ( "pkgs.python3Packages.sympy", "1.12" )
+    , ( "pkgs.python3Packages.syncedlyrics", "0.6.1" )
+    , ( "pkgs.python3Packages.syncer", "2.0.3" )
+    , ( "pkgs.python3Packages.synergy", "0.5.1" )
+    , ( "pkgs.python3Packages.synologydsm-api", "1.0.2" )
+    , ( "pkgs.python3Packages.syrupy", "4.6.0" )
+    , ( "pkgs.python3Packages.syslog-rfc5424-formatter", "1.2.3" )
+    , ( "pkgs.python3Packages.systembridge", "2.3.1" )
+    , ( "pkgs.python3Packages.systemd", "235" )
+    , ( "pkgs.python3Packages.sysv_ipc", "1.1.0" )
+    , ( "pkgs.python3Packages.tabcmd", "2.0.12" )
+    , ( "pkgs.python3Packages.tableaudocumentapi", "0.11" )
+    , ( "pkgs.python3Packages.tableauserverclient", "0.28" )
+    , ( "pkgs.python3Packages.tabledata", "1.3.3" )
+    , ( "pkgs.python3Packages.tables", "3.8.0" )
+    , ( "pkgs.python3Packages.tablib", "3.5.0" )
+    , ( "pkgs.python3Packages.tabula-py", "2.8.2" )
+    , ( "pkgs.python3Packages.tabulate", "0.9.0" )
+    , ( "pkgs.python3Packages.tabview", "1.4.4" )
+    , ( "pkgs.python3Packages.taco", "2022-08-02" )
+    , ( "pkgs.python3Packages.tadasets", "0.0.4" )
+    , ( "pkgs.python3Packages.tag-expressions", "2.0.0" )
+    , ( "pkgs.python3Packages.tago", "3.1.1" )
+    , ( "pkgs.python3Packages.tagoio-sdk", "4.2.1" )
+    , ( "pkgs.python3Packages.tahoma-api", "0.0.17" )
+    , ( "pkgs.python3Packages.tailer", "0.4.1" )
+    , ( "pkgs.python3Packages.tailscale", "0.6.0" )
+    , ( "pkgs.python3Packages.takethetime", "0.3.1" )
+    , ( "pkgs.python3Packages.tank-utility", "1.5.0" )
+    , ( "pkgs.python3Packages.tappy", "3.1" )
+    , ( "pkgs.python3Packages.tasklib", "2.5.1" )
+    , ( "pkgs.python3Packages.taskw", "2.0.0" )
+    , ( "pkgs.python3Packages.tatsu", "5.8.3" )
+    , ( "pkgs.python3Packages.taxi", "6.2.0" )
+    , ( "pkgs.python3Packages.tbats", "1.1.3" )
+    , ( "pkgs.python3Packages.tblib", "2.0.0" )
+    , ( "pkgs.python3Packages.tblite", "0.3.0" )
+    , ( "pkgs.python3Packages.tbm-utils", "2.6.0" )
+    , ( "pkgs.python3Packages.tcolorpy", "0.1.4" )
+    , ( "pkgs.python3Packages.tcxparser", "2.3.0" )
+    , ( "pkgs.python3Packages.tcxreader", "0.4.4" )
+    , ( "pkgs.python3Packages.teamcity-messages", "1.32" )
+    , ( "pkgs.python3Packages.telegram", "0.0.1" )
+    , ( "pkgs.python3Packages.telegram-text", "0.1.2" )
+    , ( "pkgs.python3Packages.telegraph", "2.2.0" )
+    , ( "pkgs.python3Packages.telepath", "0.3" )
+    , ( "pkgs.python3Packages.telethon", "1.26.1" )
+    , ( "pkgs.python3Packages.telethon-session-sqlalchemy", "0.2.16" )
+    , ( "pkgs.python3Packages.teletype", "1.3.4" )
+    , ( "pkgs.python3Packages.telfhash", "0.9.8" )
+    , ( "pkgs.python3Packages.tellduslive", "0.10.11" )
+    , ( "pkgs.python3Packages.temescal", "0.5" )
+    , ( "pkgs.python3Packages.temperusb", "1.6.0" )
+    , ( "pkgs.python3Packages.tempest", "36.0.0" )
+    , ( "pkgs.python3Packages.tempita", "0.5.3-2016-09-28" )
+    , ( "pkgs.python3Packages.tempora", "5.5.0" )
+    , ( "pkgs.python3Packages.tenacity", "8.2.3" )
+    , ( "pkgs.python3Packages.tensorboard", "2.14.0" )
+    , ( "pkgs.python3Packages.tensorboard-data-server", "0.7.1" )
+    , ( "pkgs.python3Packages.tensorboard-plugin-profile", "2.11.1" )
+    , ( "pkgs.python3Packages.tensorboard-plugin-wit", "1.7.0" )
+    , ( "pkgs.python3Packages.tensorboardx", "2.6.2" )
+    , ( "pkgs.python3Packages.tensorflow", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorflow-bin", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorflow-bin_2", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorflow-build", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorflow-build_2", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorflow-datasets", "4.9.3" )
+    , ( "pkgs.python3Packages.tensorflow-estimator", "2.11.0" )
+    , ( "pkgs.python3Packages.tensorflow-estimator-bin", "2.11.0" )
+    , ( "pkgs.python3Packages.tensorflow-estimator_2", "2.11.0" )
+    , ( "pkgs.python3Packages.tensorflow-metadata", "1.14.0" )
+    , ( "pkgs.python3Packages.tensorflow-probability", "0.21.0" )
+    , ( "pkgs.python3Packages.tensorflow-tensorboard", "2.14.0" )
+    , ( "pkgs.python3Packages.tensorflow-tensorboard_2", "2.14.0" )
+    , ( "pkgs.python3Packages.tensorflowWithCuda", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorflowWithoutCuda", "2.13.0" )
+    , ( "pkgs.python3Packages.tensorly", "0.8.1" )
+    , ( "pkgs.python3Packages.tensorrt", "8.5.3.1" )
+    , ( "pkgs.python3Packages.tensorstore", "0.1.40" )
+    , ( "pkgs.python3Packages.termcolor", "2.3.0" )
+    , ( "pkgs.python3Packages.termgraph", "0.5.3" )
+    , ( "pkgs.python3Packages.terminado", "0.17.1" )
+    , ( "pkgs.python3Packages.terminaltables", "3.1.10" )
+    , ( "pkgs.python3Packages.termplotlib", "0.3.9" )
+    , ( "pkgs.python3Packages.termstyle", "0.1.11" )
+    , ( "pkgs.python3Packages.tern", "2.12.1" )
+    , ( "pkgs.python3Packages.tesla-powerwall", "0.3.19" )
+    , ( "pkgs.python3Packages.tesla-wall-connector", "1.0.2" )
+    , ( "pkgs.python3Packages.teslajsonpy", "3.9.7" )
+    , ( "pkgs.python3Packages.tess", "2019-05-07" )
+    , ( "pkgs.python3Packages.tesserocr", "2.6.2" )
+    , ( "pkgs.python3Packages.test-tube", "0.628" )
+    , ( "pkgs.python3Packages.testbook", "0.4.2" )
+    , ( "pkgs.python3Packages.testcontainers", "3.7.1" )
+    , ( "pkgs.python3Packages.testfixtures", "7.2.0" )
+    , ( "pkgs.python3Packages.testing-common-database", "2.0.3" )
+    , ( "pkgs.python3Packages.testing-postgresql", "2017-10-31" )
+    , ( "pkgs.python3Packages.testpath", "0.6.0" )
+    , ( "pkgs.python3Packages.testrail-api", "1.12.1" )
+    , ( "pkgs.python3Packages.testrepository", "0.0.20" )
+    , ( "pkgs.python3Packages.testresources", "2.0.1" )
+    , ( "pkgs.python3Packages.testscenarios", "0.5.0" )
+    , ( "pkgs.python3Packages.testtools", "2.6.0" )
+    , ( "pkgs.python3Packages.text-unidecode", "1.3" )
+    , ( "pkgs.python3Packages.textacy", "0.13.0" )
+    , ( "pkgs.python3Packages.textdistance", "4.6.0" )
+    , ( "pkgs.python3Packages.textfsm", "1.1.3" )
+    , ( "pkgs.python3Packages.textile", "4.0.2" )
+    , ( "pkgs.python3Packages.textnets", "0.9.3" )
+    , ( "pkgs.python3Packages.textparser", "0.24.0" )
+    , ( "pkgs.python3Packages.texttable", "1.7.0" )
+    , ( "pkgs.python3Packages.textual", "0.41.0" )
+    , ( "pkgs.python3Packages.textual-dev", "1.2.1" )
+    , ( "pkgs.python3Packages.textual-universal-directorytree", "1.0.2" )
+    , ( "pkgs.python3Packages.textwrap3", "0.9.2" )
+    , ( "pkgs.python3Packages.textx", "3.0.0" )
+    , ( "pkgs.python3Packages.tf2onnx", "1.15.1" )
+    , ( "pkgs.python3Packages.tflearn", "0.5.0" )
+    , ( "pkgs.python3Packages.tftpy", "0.8.2" )
+    , ( "pkgs.python3Packages.tgcrypto", "1.2.5" )
+    , ( "pkgs.python3Packages.theano", "1.0.5" )
+    , ( "pkgs.python3Packages.theano-pymc", "1.1.2" )
+    , ( "pkgs.python3Packages.theanoWithCuda", "1.0.5" )
+    , ( "pkgs.python3Packages.theanoWithoutCuda", "1.0.5" )
+    , ( "pkgs.python3Packages.thefuzz", "0.20.0" )
+    , ( "pkgs.python3Packages.thelogrus", "0.7.0" )
+    , ( "pkgs.python3Packages.thermobeacon-ble", "0.6.0" )
+    , ( "pkgs.python3Packages.thermopro-ble", "0.4.5" )
+    , ( "pkgs.python3Packages.thespian", "3.10.7" )
+    , ( "pkgs.python3Packages.thinc", "8.2.1" )
+    , ( "pkgs.python3Packages.thorlabspm100", "1.2.2" )
+    , ( "pkgs.python3Packages.threadloop", "1.0.2" )
+    , ( "pkgs.python3Packages.threadpool", "1.3.2" )
+    , ( "pkgs.python3Packages.threadpoolctl", "3.1.0" )
+    , ( "pkgs.python3Packages.threat9-test-bed", "0.6.0" )
+    , ( "pkgs.python3Packages.three-merge", "0.1.1" )
+    , ( "pkgs.python3Packages.thrift", "0.16.0" )
+    , ( "pkgs.python3Packages.thriftpy2", "0.4.16" )
+    , ( "pkgs.python3Packages.throttler", "1.2.2" )
+    , ( "pkgs.python3Packages.thumborPexif", "0.14.1" )
+    , ( "pkgs.python3Packages.tidalapi", "0.7.3" )
+    , ( "pkgs.python3Packages.tidyexc", "0.10.0" )
+    , ( "pkgs.python3Packages.tidylib", "0.3.2" )
+    , ( "pkgs.python3Packages.tifffile", "2023.8.30" )
+    , ( "pkgs.python3Packages.tika", "2.6.0" )
+    , ( "pkgs.python3Packages.tika-client", "0.5.0" )
+    , ( "pkgs.python3Packages.tiktoken", "0.5.1" )
+    , ( "pkgs.python3Packages.tikzplotlib", "0.10.1" )
+    , ( "pkgs.python3Packages.tiledb", "0.23.0" )
+    , ( "pkgs.python3Packages.tilequant", "0.4.1.post0" )
+    , ( "pkgs.python3Packages.tiler", "0.5.7" )
+    , ( "pkgs.python3Packages.tilestache", "1.51.14" )
+    , ( "pkgs.python3Packages.tilt-ble", "0.2.4" )
+    , ( "pkgs.python3Packages.time-machine", "2.12.0" )
+    , ( "pkgs.python3Packages.timeago", "1.0.16" )
+    , ( "pkgs.python3Packages.timecop", "0.5.0dev" )
+    , ( "pkgs.python3Packages.timelib", "0.3.0" )
+    , ( "pkgs.python3Packages.timeout-decorator", "0.5.0" )
+    , ( "pkgs.python3Packages.timeslot", "0.1.2" )
+    , ( "pkgs.python3Packages.timetagger", "23.11.2" )
+    , ( "pkgs.python3Packages.timezonefinder", "6.2.0" )
+    , ( "pkgs.python3Packages.timm", "0.9.11" )
+    , ( "pkgs.python3Packages.tiny-cuda-nn", "1.6" )
+    , ( "pkgs.python3Packages.tiny-proxy", "0.2.1" )
+    , ( "pkgs.python3Packages.tinycss", "0.4" )
+    , ( "pkgs.python3Packages.tinycss2", "1.2.1" )
+    , ( "pkgs.python3Packages.tinydb", "4.8.0" )
+    , ( "pkgs.python3Packages.tinyobjloader-py", "1.0.7" )
+    , ( "pkgs.python3Packages.tinyrecord", "0.2.0" )
+    , ( "pkgs.python3Packages.tissue", "0.9.2" )
+    , ( "pkgs.python3Packages.titlecase", "2.4" )
+    , ( "pkgs.python3Packages.tkinter", "3.11.6" )
+    , ( "pkgs.python3Packages.tld", "0.13" )
+    , ( "pkgs.python3Packages.tldextract", "5.1.0" )
+    , ( "pkgs.python3Packages.tlds", "2023110300" )
+    , ( "pkgs.python3Packages.tls-parser", "2.0.1" )
+    , ( "pkgs.python3Packages.tlsh", "4.10.0" )
+    , ( "pkgs.python3Packages.tlslite-ng", "0.7.6" )
+    , ( "pkgs.python3Packages.tlv8", "0.10.0" )
+    , ( "pkgs.python3Packages.tmb", "0.1.5" )
+    , ( "pkgs.python3Packages.todoist", "8.1.4" )
+    , ( "pkgs.python3Packages.todoist-api-python", "2.1.3" )
+    , ( "pkgs.python3Packages.toggl-cli", "2.4.3" )
+    , ( "pkgs.python3Packages.token-bucket", "0.3.0" )
+    , ( "pkgs.python3Packages.tokenize-rt", "4.2.1" )
+    , ( "pkgs.python3Packages.tokenizers", "0.14.1" )
+    , ( "pkgs.python3Packages.tokenlib", "0.3.1" )
+    , ( "pkgs.python3Packages.tokentrim", "2023-09-07" )
+    , ( "pkgs.python3Packages.tololib", "0.1.0b4" )
+    , ( "pkgs.python3Packages.toml", "0.10.2" )
+    , ( "pkgs.python3Packages.toml-adapt", "0.2.11" )
+    , ( "pkgs.python3Packages.tomli", "2.0.1" )
+    , ( "pkgs.python3Packages.tomli-w", "1.0.0" )
+    , ( "pkgs.python3Packages.tomlkit", "0.12.1" )
+    , ( "pkgs.python3Packages.toolz", "0.12.0" )
+    , ( "pkgs.python3Packages.toonapi", "0.3.0" )
+    , ( "pkgs.python3Packages.toposort", "1.10" )
+    , ( "pkgs.python3Packages.torch", "2.0.1" )
+    , ( "pkgs.python3Packages.torch-bin", "2.0.1" )
+    , ( "pkgs.python3Packages.torch-tb-profiler", "0.3.1" )
+    , ( "pkgs.python3Packages.torchWithCuda", "2.0.1" )
+    , ( "pkgs.python3Packages.torchWithRocm", "2.0.1" )
+    , ( "pkgs.python3Packages.torchWithoutCuda", "2.0.1" )
+    , ( "pkgs.python3Packages.torchWithoutRocm", "2.0.1" )
+    , ( "pkgs.python3Packages.torchaudio", "2.0.2" )
+    , ( "pkgs.python3Packages.torchaudio-bin", "2.0.2" )
+    , ( "pkgs.python3Packages.torchdiffeq", "0.2.3" )
+    , ( "pkgs.python3Packages.torchgpipe", "0.0.7" )
+    , ( "pkgs.python3Packages.torchinfo", "1.8.0" )
+    , ( "pkgs.python3Packages.torchio", "0.19.1" )
+    , ( "pkgs.python3Packages.torchlibrosa", "0.1.0" )
+    , ( "pkgs.python3Packages.torchmetrics", "1.2.0" )
+    , ( "pkgs.python3Packages.torchsde", "0.2.6" )
+    , ( "pkgs.python3Packages.torchvision", "0.15.2" )
+    , ( "pkgs.python3Packages.torchvision-bin", "0.15.2" )
+    , ( "pkgs.python3Packages.tornado", "6.3.3" )
+    , ( "pkgs.python3Packages.tornado_4", "4.5.3" )
+    , ( "pkgs.python3Packages.tornado_5", "5.1.1" )
+    , ( "pkgs.python3Packages.torpy", "1.1.6" )
+    , ( "pkgs.python3Packages.torrent-parser", "0.4.1" )
+    , ( "pkgs.python3Packages.torrent_parser", "0.4.1" )
+    , ( "pkgs.python3Packages.torrequest", "0.1.0" )
+    , ( "pkgs.python3Packages.total-connect-client", "2023.11" )
+    , ( "pkgs.python3Packages.towncrier", "23.11.0" )
+    , ( "pkgs.python3Packages.tox", "4.11.3" )
+    , ( "pkgs.python3Packages.tplink-omada-client", "1.3.6" )
+    , ( "pkgs.python3Packages.tpm2-pytss", "2.1.0" )
+    , ( "pkgs.python3Packages.tqdm", "4.66.1" )
+    , ( "pkgs.python3Packages.traceback2", "1.4.0" )
+    , ( "pkgs.python3Packages.tracerite", "1.1.0" )
+    , ( "pkgs.python3Packages.tracing", "0.8" )
+    , ( "pkgs.python3Packages.trackpy", "0.6.1" )
+    , ( "pkgs.python3Packages.trailrunner", "1.4.0" )
+    , ( "pkgs.python3Packages.trainer", "0.0.32" )
+    , ( "pkgs.python3Packages.traitlets", "5.10.0" )
+    , ( "pkgs.python3Packages.traits", "6.4.3" )
+    , ( "pkgs.python3Packages.traitsui", "8.0.0" )
+    , ( "pkgs.python3Packages.traittypes", "2019-06-23" )
+    , ( "pkgs.python3Packages.trampoline", "0.1.2" )
+    , ( "pkgs.python3Packages.transaction", "3.1.0" )
+    , ( "pkgs.python3Packages.transformers", "4.35.2" )
+    , ( "pkgs.python3Packages.transforms3d", "0.4.1" )
+    , ( "pkgs.python3Packages.transitions", "0.9.0" )
+    , ( "pkgs.python3Packages.translatehtml", "1.5.2" )
+    , ( "pkgs.python3Packages.translatepy", "2.3" )
+    , ( "pkgs.python3Packages.translationstring", "1.4" )
+    , ( "pkgs.python3Packages.transmission-rpc", "7.0.3" )
+    , ( "pkgs.python3Packages.transmissionrpc", "0.11" )
+    , ( "pkgs.python3Packages.trectools", "0.0.49" )
+    , ( "pkgs.python3Packages.tree-sitter", "0.20.4" )
+    , ( "pkgs.python3Packages.treelib", "1.7.0" )
+    , ( "pkgs.python3Packages.treelog", "1.0" )
+    , ( "pkgs.python3Packages.treeo", "0.4.0" )
+    , ( "pkgs.python3Packages.treex", "0.6.11" )
+    , ( "pkgs.python3Packages.treq", "22.2.0" )
+    , ( "pkgs.python3Packages.trezor", "0.13.8" )
+    , ( "pkgs.python3Packages.trezor_agent", "0.12.0" )
+    , ( "pkgs.python3Packages.trfl", "1.2.0" )
+    , ( "pkgs.python3Packages.trimesh", "4.0.1" )
+    , ( "pkgs.python3Packages.trino-python-client", "0.322.0" )
+    , ( "pkgs.python3Packages.trio", "0.22.2" )
+    , ( "pkgs.python3Packages.trio-asyncio", "0.12.0" )
+    , ( "pkgs.python3Packages.trio-websocket", "0.10.2" )
+    , ( "pkgs.python3Packages.tritonclient", "2.35.0" )
+    , ( "pkgs.python3Packages.troposphere", "4.5.2" )
+    , ( "pkgs.python3Packages.trove-classifiers", "2023.8.7" )
+    , ( "pkgs.python3Packages.trueskill", "0.4.5" )
+    , ( "pkgs.python3Packages.trustme", "1.1.0" )
+    , ( "pkgs.python3Packages.truststore", "0.8.0" )
+    , ( "pkgs.python3Packages.trytond", "6.8.5" )
+    , ( "pkgs.python3Packages.tsfresh", "0.20.1" )
+    , ( "pkgs.python3Packages.tskit", "0.5.6" )
+    , ( "pkgs.python3Packages.ttach", "0.0.3" )
+    , ( "pkgs.python3Packages.ttls", "1.8.1" )
+    , ( "pkgs.python3Packages.ttp", "0.9.5" )
+    , ( "pkgs.python3Packages.ttp-templates", "0.3.5" )
+    , ( "pkgs.python3Packages.ttstokenizer", "1.0.0" )
+    , ( "pkgs.python3Packages.tubes", "0.2.1" )
+    , ( "pkgs.python3Packages.tubeup", "2023.9.19" )
+    , ( "pkgs.python3Packages.tunigo", "1.0.0" )
+    , ( "pkgs.python3Packages.turnt", "1.11.0" )
+    , ( "pkgs.python3Packages.tuya-iot-py-sdk", "0.6.6" )
+    , ( "pkgs.python3Packages.tuyaha", "0.0.11" )
+    , ( "pkgs.python3Packages.tvdb-api", "3.2.0-beta" )
+    , ( "pkgs.python3Packages.tvdb_api", "3.2.0-beta" )
+    , ( "pkgs.python3Packages.tweedledum", "1.1.1" )
+    , ( "pkgs.python3Packages.tweepy", "4.14.0" )
+    , ( "pkgs.python3Packages.twentemilieu", "2.0.1" )
+    , ( "pkgs.python3Packages.twiggy", "0.5.1" )
+    , ( "pkgs.python3Packages.twilio", "8.10.2" )
+    , ( "pkgs.python3Packages.twill", "3.1" )
+    , ( "pkgs.python3Packages.twine", "4.0.2" )
+    , ( "pkgs.python3Packages.twinkly-client", "0.0.3" )
+    , ( "pkgs.python3Packages.twisted", "23.8.0" )
+    , ( "pkgs.python3Packages.twitch-python", "0.0.20" )
+    , ( "pkgs.python3Packages.twitchapi", "4.0.1" )
+    , ( "pkgs.python3Packages.twitter", "1.19.6" )
+    , ( "pkgs.python3Packages.twitter-common-collections", "0.3.11" )
+    , ( "pkgs.python3Packages.twitter-common-confluence", "0.3.11" )
+    , ( "pkgs.python3Packages.twitter-common-dirutil", "0.3.11" )
+    , ( "pkgs.python3Packages.twitter-common-lang", "0.3.11" )
+    , ( "pkgs.python3Packages.twitter-common-log", "0.3.11" )
+    , ( "pkgs.python3Packages.twitter-common-options", "0.3.11" )
+    , ( "pkgs.python3Packages.twitterapi", "2.8.2" )
+    , ( "pkgs.python3Packages.twofish", "0.3.0" )
+    , ( "pkgs.python3Packages.txaio", "23.1.1" )
+    , ( "pkgs.python3Packages.txamqp", "0.8.2" )
+    , ( "pkgs.python3Packages.txdbus", "1.1.2" )
+    , ( "pkgs.python3Packages.txgithub", "15.0.0" )
+    , ( "pkgs.python3Packages.txi2p-tahoe", "0.3.7" )
+    , ( "pkgs.python3Packages.txredisapi", "1.4.9" )
+    , ( "pkgs.python3Packages.txrequests", "0.9.6" )
+    , ( "pkgs.python3Packages.txtai", "6.2.0" )
+    , ( "pkgs.python3Packages.txtorcon", "23.5.0" )
+    , ( "pkgs.python3Packages.txzmq", "1.0.0" )
+    , ( "pkgs.python3Packages.type-infer", "0.0.15" )
+    , ( "pkgs.python3Packages.typechecks", "2023-07-13" )
+    , ( "pkgs.python3Packages.typecode", "30.0.1" )
+    , ( "pkgs.python3Packages.typecode-libmagic", "21.4.4" )
+    , ( "pkgs.python3Packages.typed-ast", "1.5.4" )
+    , ( "pkgs.python3Packages.typed-settings", "23.0.1" )
+    , ( "pkgs.python3Packages.typeguard", "4.1.5" )
+    , ( "pkgs.python3Packages.typepy", "1.3.2" )
+    , ( "pkgs.python3Packages.typer", "0.9.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore", "2.7.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-accessanalyzer", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-account", "2.5.2.post3" )
+    , ( "pkgs.python3Packages.types-aiobotocore-acm", "2.5.4" )
+    , ( "pkgs.python3Packages.types-aiobotocore-acm-pca", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-alexaforbusiness", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-amp", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-amplify", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-amplifybackend", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-amplifyuibuilder", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-apigateway", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-apigatewaymanagementapi", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-apigatewayv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appconfig", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appconfigdata", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appfabric", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appflow", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appintegrations", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-application-autoscaling", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-application-insights", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-applicationcostprofiler", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appmesh", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-apprunner", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appstream", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-appsync", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-arc-zonal-shift", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-athena", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-auditmanager", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-autoscaling", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-autoscaling-plans", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-backup", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-backup-gateway", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-backupstorage", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-batch", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-billingconductor", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-braket", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-budgets", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ce", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-chime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-chime-sdk-identity", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-chime-sdk-media-pipelines", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-chime-sdk-meetings", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-chime-sdk-messaging", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-chime-sdk-voice", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cleanrooms", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloud9", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudcontrol", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-clouddirectory", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudformation", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudfront", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudhsm", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudhsmv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudsearch", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudsearchdomain", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudtrail", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudtrail-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cloudwatch", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codeartifact", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codebuild", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codecatalyst", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codecommit", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codedeploy", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codeguru-reviewer", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codeguru-security", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codeguruprofiler", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codepipeline", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codestar", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codestar-connections", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-codestar-notifications", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cognito-identity", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cognito-idp", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cognito-sync", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-comprehend", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-comprehendmedical", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-compute-optimizer", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-config", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-connect", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-connect-contact-lens", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-connectcampaigns", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-connectcases", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-connectparticipant", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-controltower", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-cur", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-customer-profiles", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-databrew", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-dataexchange", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-datapipeline", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-datasync", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-dax", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-detective", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-devicefarm", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-devops-guru", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-directconnect", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-discovery", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-dlm", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-dms", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-docdb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-docdb-elastic", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-drs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ds", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-dynamodb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-dynamodbstreams", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ebs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ec2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ec2-instance-connect", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ecr", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ecr-public", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ecs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-efs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-eks", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-elastic-inference", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-elasticache", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-elasticbeanstalk", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-elastictranscoder", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-elb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-elbv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-emr", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-emr-containers", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-emr-serverless", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-entityresolution", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-es", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-events", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-evidently", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-finspace", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-finspace-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-firehose", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-fis", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-fms", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-forecast", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-forecastquery", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-frauddetector", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-fsx", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-gamelift", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-gamesparks", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-glacier", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-globalaccelerator", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-glue", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-grafana", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-greengrass", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-greengrassv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-groundstation", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-guardduty", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-health", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-healthlake", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-honeycode", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iam", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-identitystore", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-imagebuilder", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-importexport", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-inspector", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-inspector2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-internetmonitor", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iot", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iot-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iot-jobs-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iot-roborunner", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iot1click-devices", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iot1click-projects", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotanalytics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotdeviceadvisor", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotevents", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotevents-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotfleethub", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotfleetwise", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotsecuretunneling", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotsitewise", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotthingsgraph", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iottwinmaker", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-iotwireless", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ivs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ivs-realtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ivschat", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kafka", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kafkaconnect", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kendra", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kendra-ranking", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-keyspaces", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesis", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesis-video-archived-media", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesis-video-media", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesis-video-signaling", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesis-video-webrtc-storage", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesisanalytics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesisanalyticsv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kinesisvideo", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-kms", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lakeformation", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lambda", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lex-models", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lex-runtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lexv2-models", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lexv2-runtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-license-manager", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-license-manager-linux-subscriptions", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-license-manager-user-subscriptions", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lightsail", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-location", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-logs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lookoutequipment", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lookoutmetrics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-lookoutvision", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-m2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-machinelearning", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-macie", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-macie2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-managedblockchain", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-managedblockchain-query", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-marketplace-catalog", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-marketplace-entitlement", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-marketplacecommerceanalytics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediaconnect", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediaconvert", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-medialive", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediapackage", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediapackage-vod", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediapackagev2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediastore", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediastore-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mediatailor", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-medical-imaging", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-memorydb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-meteringmarketplace", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mgh", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mgn", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-migration-hub-refactor-spaces", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-migrationhub-config", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-migrationhuborchestrator", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-migrationhubstrategy", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mobile", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mq", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mturk", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-mwaa", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-neptune", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-network-firewall", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-networkmanager", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-nimble", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-oam", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-omics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-opensearch", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-opensearchserverless", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-opsworks", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-opsworkscm", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-organizations", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-osis", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-outposts", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-panorama", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-payment-cryptography", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-payment-cryptography-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-personalize", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-personalize-events", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-personalize-runtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pi", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pinpoint", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pinpoint-email", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pinpoint-sms-voice", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pinpoint-sms-voice-v2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pipes", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-polly", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-pricing", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-privatenetworks", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-proton", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-qldb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-qldb-session", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-quicksight", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ram", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-rbin", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-rds", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-rds-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-redshift", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-redshift-data", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-redshift-serverless", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-rekognition", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-resiliencehub", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-resource-explorer-2", "2-2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-resource-groups", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-resourcegroupstaggingapi", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-robomaker", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-rolesanywhere", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-route53", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-route53-recovery-cluster", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-route53-recovery-control-config", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-route53-recovery-readiness", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-route53domains", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-route53resolver", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-rum", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-s3", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-s3control", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-s3outposts", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker-a2i-runtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker-edge", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker-featurestore-runtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker-geospatial", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker-metrics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sagemaker-runtime", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-savingsplans", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-scheduler", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-schemas", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sdb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-secretsmanager", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-securityhub", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-securitylake", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-serverlessrepo", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-service-quotas", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-servicecatalog", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-servicecatalog-appregistry", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-servicediscovery", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ses", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sesv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-shield", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-signer", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-simspaceweaver", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sms", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sms-voice", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-snow-device-management", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-snowball", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sns", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sqs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ssm", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ssm-contacts", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ssm-incidents", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-ssm-sap", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sso", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sso-admin", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sso-oidc", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-stepfunctions", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-storagegateway", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-sts", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-support", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-support-app", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-swf", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-synthetics", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-textract", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-timestream-query", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-timestream-write", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-tnb", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-transcribe", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-transfer", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-translate", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-verifiedpermissions", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-voice-id", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-vpc-lattice", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-waf", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-waf-regional", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-wafv2", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-wellarchitected", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-wisdom", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-workdocs", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-worklink", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-workmail", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-workmailmessageflow", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-workspaces", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-workspaces-web", "2.6.0" )
+    , ( "pkgs.python3Packages.types-aiobotocore-xray", "2.6.0" )
+    , ( "pkgs.python3Packages.types-appdirs", "1.4.3.5" )
+    , ( "pkgs.python3Packages.types-awscrt", "0.19.13" )
+    , ( "pkgs.python3Packages.types-beautifulsoup4", "4.12.0.7" )
+    , ( "pkgs.python3Packages.types-click", "7.1.8" )
+    , ( "pkgs.python3Packages.types-colorama", "0.4.15.12" )
+    , ( "pkgs.python3Packages.types-dateutil", "2.8.19.9" )
+    , ( "pkgs.python3Packages.types-decorator", "5.1.8.4" )
+    , ( "pkgs.python3Packages.types-deprecated", "1.2.9.3" )
+    , ( "pkgs.python3Packages.types-docopt", "0.6.11.4" )
+    , ( "pkgs.python3Packages.types-docutils", "0.20.0.3" )
+    , ( "pkgs.python3Packages.types-enum34", "1.1.8" )
+    , ( "pkgs.python3Packages.types-freezegun", "1.1.10" )
+    , ( "pkgs.python3Packages.types-futures", "3.3.8" )
+    , ( "pkgs.python3Packages.types-html5lib", "1.1.11.15" )
+    , ( "pkgs.python3Packages.types-ipaddress", "1.0.8" )
+    , ( "pkgs.python3Packages.types-mock", "5.1.0.2" )
+    , ( "pkgs.python3Packages.types-pillow", "10.1.0.2" )
+    , ( "pkgs.python3Packages.types-protobuf", "4.24.0.4" )
+    , ( "pkgs.python3Packages.types-psutil", "5.9.5.16" )
+    , ( "pkgs.python3Packages.types-pyopenssl", "23.3.0.0" )
+    , ( "pkgs.python3Packages.types-python-dateutil", "2.8.19.14" )
+    , ( "pkgs.python3Packages.types-pytz", "2023.3.1.1" )
+    , ( "pkgs.python3Packages.types-pyyaml", "6.0.12.11" )
+    , ( "pkgs.python3Packages.types-redis", "4.6.0.10" )
+    , ( "pkgs.python3Packages.types-requests", "2.31.0.10" )
+    , ( "pkgs.python3Packages.types-retry", "0.9.9.4" )
+    , ( "pkgs.python3Packages.types-s3transfer", "0.7.0" )
+    , ( "pkgs.python3Packages.types-setuptools", "68.2.0.1" )
+    , ( "pkgs.python3Packages.types-tabulate", "0.9.0.3" )
+    , ( "pkgs.python3Packages.types-toml", "0.10.8.7" )
+    , ( "pkgs.python3Packages.types-typed-ast", "1.5.8.7" )
+    , ( "pkgs.python3Packages.types-ujson", "5.8.0.1" )
+    , ( "pkgs.python3Packages.types-urllib3", "1.26.25.14" )
+    , ( "pkgs.python3Packages.typesentry", "0.2.7" )
+    , ( "pkgs.python3Packages.typesystem", "0.4.1" )
+    , ( "pkgs.python3Packages.typical", "2.8.1" )
+    , ( "pkgs.python3Packages.typing-extensions", "4.7.1" )
+    , ( "pkgs.python3Packages.typing-inspect", "0.9.0" )
+    , ( "pkgs.python3Packages.typish", "1.9.3" )
+    , ( "pkgs.python3Packages.typogrify", "2.0.7" )
+    , ( "pkgs.python3Packages.tzdata", "2023.3" )
+    , ( "pkgs.python3Packages.tzlocal", "5.0.1" )
+    , ( "pkgs.python3Packages.u-msgpack-python", "2.8.0" )
+    , ( "pkgs.python3Packages.ua-parser", "0.18.0" )
+    , ( "pkgs.python3Packages.uamqp", "1.6.5" )
+    , ( "pkgs.python3Packages.uarray", "0.8.2" )
+    , ( "pkgs.python3Packages.uasiren", "0.0.1" )
+    , ( "pkgs.python3Packages.ubelt", "1.3.4" )
+    , ( "pkgs.python3Packages.uc-micro-py", "1.0.2" )
+    , ( "pkgs.python3Packages.ucsmsdk", "0.9.16" )
+    , ( "pkgs.python3Packages.udatetime", "0.0.17" )
+    , ( "pkgs.python3Packages.ueagle", "0.0.2" )
+    , ( "pkgs.python3Packages.ueberzug", "18.1.9" )
+    , ( "pkgs.python3Packages.ufmt", "2.1.0" )
+    , ( "pkgs.python3Packages.ufo2ft", "2.33.4" )
+    , ( "pkgs.python3Packages.ufoLib2", "0.16.0" )
+    , ( "pkgs.python3Packages.ufonormalizer", "0.6.1" )
+    , ( "pkgs.python3Packages.ufoprocessor", "1.9.0" )
+    , ( "pkgs.python3Packages.uharfbuzz", "0.37.3" )
+    , ( "pkgs.python3Packages.uhi", "0.4.0" )
+    , ( "pkgs.python3Packages.ujson", "5.8.0" )
+    , ( "pkgs.python3Packages.ukkonen", "1.0.1" )
+    , ( "pkgs.python3Packages.ukpostcodeparser", "1.1.2" )
+    , ( "pkgs.python3Packages.ukrainealarm", "0.0.1" )
+    , ( "pkgs.python3Packages.ulid-transform", "0.9.0" )
+    , ( "pkgs.python3Packages.ultraheat-api", "0.5.7" )
+    , ( "pkgs.python3Packages.umalqurra", "0.2" )
+    , ( "pkgs.python3Packages.umap-learn", "0.5.5" )
+    , ( "pkgs.python3Packages.umodbus", "1.0.4" )
+    , ( "pkgs.python3Packages.unasync", "0.5.0" )
+    , ( "pkgs.python3Packages.uncertainties", "3.1.7" )
+    , ( "pkgs.python3Packages.uncompyle6", "3.9.0" )
+    , ( "pkgs.python3Packages.unearth", "0.12.1" )
+    , ( "pkgs.python3Packages.unicode-slugify", "0.1.5" )
+    , ( "pkgs.python3Packages.unicodecsv", "0.14.1" )
+    , ( "pkgs.python3Packages.unicodedata2", "15.1.0" )
+    , ( "pkgs.python3Packages.unicorn", "2.0.1.post1" )
+    , ( "pkgs.python3Packages.unicrypto", "0.0.10" )
+    , ( "pkgs.python3Packages.unicurses", "2.1.3" )
+    , ( "pkgs.python3Packages.unidecode", "1.3.6" )
+    , ( "pkgs.python3Packages.unidic", "1.1.0" )
+    , ( "pkgs.python3Packages.unidic-lite", "1.0.8" )
+    , ( "pkgs.python3Packages.unidiff", "0.7.5" )
+    , ( "pkgs.python3Packages.unifi", "1.2.5" )
+    , ( "pkgs.python3Packages.unifi-discovery", "1.1.7" )
+    , ( "pkgs.python3Packages.unifiled", "1.1" )
+    , ( "pkgs.python3Packages.unify", "0.5" )
+    , ( "pkgs.python3Packages.units", "0.07" )
+    , ( "pkgs.python3Packages.unittest-data-provider", "1.0.1" )
+    , ( "pkgs.python3Packages.unittest-xml-reporting", "3.2.0" )
+    , ( "pkgs.python3Packages.unittestCheckHook", "" )
+    , ( "pkgs.python3Packages.univers", "30.11.0" )
+    , ( "pkgs.python3Packages.universal-pathlib", "0.1.4" )
+    , ( "pkgs.python3Packages.universal-silabs-flasher", "0.0.14" )
+    , ( "pkgs.python3Packages.unpaddedbase64", "2.1.0" )
+    , ( "pkgs.python3Packages.unrardll", "0.1.7" )
+    , ( "pkgs.python3Packages.unrpa", "2.3.0" )
+    , ( "pkgs.python3Packages.unstructured", "0.10.30" )
+    , ( "pkgs.python3Packages.unstructured-api-tools", "0.10.11" )
+    , ( "pkgs.python3Packages.unstructured-inference", "0.7.11" )
+    , ( "pkgs.python3Packages.untangle", "1.2.1" )
+    , ( "pkgs.python3Packages.untokenize", "0.1.1" )
+    , ( "pkgs.python3Packages.uonet-request-signer-hebe", "0.1.1" )
+    , ( "pkgs.python3Packages.upass", "0.2.1" )
+    , ( "pkgs.python3Packages.upb-lib", "0.5.4" )
+    , ( "pkgs.python3Packages.upcloud-api", "2.5.1" )
+    , ( "pkgs.python3Packages.update-copyright", "0.6.2" )
+    , ( "pkgs.python3Packages.update-dotdee", "6.0" )
+    , ( "pkgs.python3Packages.update_checker", "0.18.0" )
+    , ( "pkgs.python3Packages.upnpy", "1.1.8" )
+    , ( "pkgs.python3Packages.uproot", "5.1.2" )
+    , ( "pkgs.python3Packages.uptime", "3.0.1" )
+    , ( "pkgs.python3Packages.uptime-kuma-api", "1.2.1" )
+    , ( "pkgs.python3Packages.uptime-kuma-monitor", "1.0.0" )
+    , ( "pkgs.python3Packages.uqbar", "0.7.0" )
+    , ( "pkgs.python3Packages.uranium", "4.12.0" )
+    , ( "pkgs.python3Packages.uri-template", "1.3.0" )
+    , ( "pkgs.python3Packages.uritemplate", "4.1.1" )
+    , ( "pkgs.python3Packages.uritools", "4.0.2" )
+    , ( "pkgs.python3Packages.url-normalize", "1.4.3" )
+    , ( "pkgs.python3Packages.urlextract", "1.8.0" )
+    , ( "pkgs.python3Packages.urlgrabber", "4.1.0" )
+    , ( "pkgs.python3Packages.urllib3", "2.0.7" )
+    , ( "pkgs.python3Packages.urlman", "2.0.1" )
+    , ( "pkgs.python3Packages.urlpy", "0.5.0" )
+    , ( "pkgs.python3Packages.urwid", "2.2.1" )
+    , ( "pkgs.python3Packages.urwid-mitmproxy", "2.1.2.1" )
+    , ( "pkgs.python3Packages.urwid-readline", "0.13" )
+    , ( "pkgs.python3Packages.urwidtrees", "1.0.3" )
+    , ( "pkgs.python3Packages.us", "3.1.1" )
+    , ( "pkgs.python3Packages.usb-devices", "0.4.1" )
+    , ( "pkgs.python3Packages.usbrelay-py", "1.2.1" )
+    , ( "pkgs.python3Packages.usbtmc", "0.8" )
+    , ( "pkgs.python3Packages.user-agents", "2.2.0" )
+    , ( "pkgs.python3Packages.userpath", "1.9.1" )
+    , ( "pkgs.python3Packages.ush", "3.1.0" )
+    , ( "pkgs.python3Packages.usort", "1.0.7" )
+    , ( "pkgs.python3Packages.utils", "1.0.1" )
+    , ( "pkgs.python3Packages.uuid", "1.30" )
+    , ( "pkgs.python3Packages.uvcclient", "0.11.0" )
+    , ( "pkgs.python3Packages.uvicorn", "0.23.2" )
+    , ( "pkgs.python3Packages.uvloop", "0.19.0" )
+    , ( "pkgs.python3Packages.vaa", "0.2.1" )
+    , ( "pkgs.python3Packages.validate-email", "1.3" )
+    , ( "pkgs.python3Packages.validators", "0.22.0" )
+    , ( "pkgs.python3Packages.validobj", "1.1" )
+    , ( "pkgs.python3Packages.validphys2", "4.0" )
+    , ( "pkgs.python3Packages.vallox-websocket-api", "3.3.0" )
+    , ( "pkgs.python3Packages.vapoursynth", "65" )
+    , ( "pkgs.python3Packages.variants", "0.2.0" )
+    , ( "pkgs.python3Packages.varint", "1.0.2" )
+    , ( "pkgs.python3Packages.vat-moss", "0.11.0" )
+    , ( "pkgs.python3Packages.vcard", "0.15.4" )
+    , ( "pkgs.python3Packages.vcrpy", "5.1.0" )
+    , ( "pkgs.python3Packages.vcver", "0.2.12" )
+    , ( "pkgs.python3Packages.vcversioner", "2.16.0.0" )
+    , ( "pkgs.python3Packages.vdf", "3.4" )
+    , ( "pkgs.python3Packages.vdirsyncer", "0.19.2" )
+    , ( "pkgs.python3Packages.vector", "1.1.1.post1" )
+    , ( "pkgs.python3Packages.vega", "4.0.0" )
+    , ( "pkgs.python3Packages.vega-datasets", "0.9.0" )
+    , ( "pkgs.python3Packages.vega_datasets", "0.9.0" )
+    , ( "pkgs.python3Packages.vehicle", "2.0.0" )
+    , ( "pkgs.python3Packages.velbus-aio", "2023.11.0" )
+    , ( "pkgs.python3Packages.venstarcolortouch", "0.19" )
+    , ( "pkgs.python3Packages.venusian", "3.0.0" )
+    , ( "pkgs.python3Packages.venvShellHook", "" )
+    , ( "pkgs.python3Packages.verboselogs", "1.7" )
+    , ( "pkgs.python3Packages.versioneer", "0.29" )
+    , ( "pkgs.python3Packages.versionfinder", "1.1.1" )
+    , ( "pkgs.python3Packages.versioningit", "2.2.0" )
+    , ( "pkgs.python3Packages.versiontag", "1.2.0" )
+    , ( "pkgs.python3Packages.versiontools", "1.9.1" )
+    , ( "pkgs.python3Packages.verspec", "0.1.0" )
+    , ( "pkgs.python3Packages.vertica-python", "1.3.6" )
+    , ( "pkgs.python3Packages.veryprettytable", "0.8.1" )
+    , ( "pkgs.python3Packages.vg", "2.0.0" )
+    , ( "pkgs.python3Packages.videocr", "0.1.6" )
+    , ( "pkgs.python3Packages.vidstab", "1.7.4" )
+    , ( "pkgs.python3Packages.viennarna", "2.5.1" )
+    , ( "pkgs.python3Packages.viewstate", "0.4.3" )
+    , ( "pkgs.python3Packages.vilfo-api-client", "0.4.1" )
+    , ( "pkgs.python3Packages.vina", "1.2.5" )
+    , ( "pkgs.python3Packages.vincenty", "0.1.4" )
+    , ( "pkgs.python3Packages.vine", "5.1.0" )
+    , ( "pkgs.python3Packages.virtkey", "0.63.0" )
+    , ( "pkgs.python3Packages.virtualenv", "20.24.5" )
+    , ( "pkgs.python3Packages.virtualenv-clone", "0.5.7" )
+    , ( "pkgs.python3Packages.virtualenvwrapper", "4.8.4" )
+    , ( "pkgs.python3Packages.visitor", "0.1.3" )
+    , ( "pkgs.python3Packages.vispy", "0.14.1" )
+    , ( "pkgs.python3Packages.viv-utils", "0.7.9" )
+    , ( "pkgs.python3Packages.vivisect", "1.1.1" )
+    , ( "pkgs.python3Packages.vmprof", "0.4.15" )
+    , ( "pkgs.python3Packages.vncdo", "1.1.0" )
+    , ( "pkgs.python3Packages.vobject", "0.9.6.1" )
+    , ( "pkgs.python3Packages.volatile", "2.1.0" )
+    , ( "pkgs.python3Packages.volkszaehler", "0.4.0" )
+    , ( "pkgs.python3Packages.voluptuous", "0.13.1" )
+    , ( "pkgs.python3Packages.voluptuous-serialize", "2.6.0" )
+    , ( "pkgs.python3Packages.voluptuous-stubs", "0.1.1" )
+    , ( "pkgs.python3Packages.volvooncall", "0.10.4" )
+    , ( "pkgs.python3Packages.vowpalwabbit", "9.9.0" )
+    , ( "pkgs.python3Packages.vpk", "1.4.0" )
+    , ( "pkgs.python3Packages.vqgan-jax", "2022-04-20" )
+    , ( "pkgs.python3Packages.vsts", "0.1.25" )
+    , ( "pkgs.python3Packages.vsts-cd-manager", "1.0.2" )
+    , ( "pkgs.python3Packages.vsure", "2.6.7" )
+    , ( "pkgs.python3Packages.vt-py", "0.17.5" )
+    , ( "pkgs.python3Packages.vtk", "9.2.6" )
+    , ( "pkgs.python3Packages.vulcan-api", "2.3.0" )
+    , ( "pkgs.python3Packages.vultr", "1.0.1" )
+    , ( "pkgs.python3Packages.vulture", "2.9.1" )
+    , ( "pkgs.python3Packages.vxi11", "0.9" )
+    , ( "pkgs.python3Packages.vyper", "0.3.10" )
+    , ( "pkgs.python3Packages.w1thermsensor", "2.3.0" )
+    , ( "pkgs.python3Packages.w3lib", "2.1.2" )
+    , ( "pkgs.python3Packages.wadllib", "1.3.6" )
+    , ( "pkgs.python3Packages.wagtail", "5.1.3" )
+    , ( "pkgs.python3Packages.wagtail-factories", "4.1.0" )
+    , ( "pkgs.python3Packages.wagtail-localize", "1.7" )
+    , ( "pkgs.python3Packages.waitress", "2.1.2" )
+    , ( "pkgs.python3Packages.waitress-django", "1.0.0" )
+    , ( "pkgs.python3Packages.wakeonlan", "3.1.0" )
+    , ( "pkgs.python3Packages.wallbox", "0.5.1" )
+    , ( "pkgs.python3Packages.walrus", "0.9.3" )
+    , ( "pkgs.python3Packages.wand", "0.6.13" )
+    , ( "pkgs.python3Packages.wandb", "0.15.11" )
+    , ( "pkgs.python3Packages.waqiasync", "1.1.0" )
+    , ( "pkgs.python3Packages.warble", "1.2.9" )
+    , ( "pkgs.python3Packages.warcio", "1.7.4" )
+    , ( "pkgs.python3Packages.ward", "0.67.0b0" )
+    , ( "pkgs.python3Packages.warlock", "2.0.1" )
+    , ( "pkgs.python3Packages.warrant", "0.6.1" )
+    , ( "pkgs.python3Packages.warrant-lite", "1.0.4" )
+    , ( "pkgs.python3Packages.wasabi", "1.1.2" )
+    , ( "pkgs.python3Packages.wasmer", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmer-compiler-cranelift", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmer-compiler-llvm", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmer-compiler-singlepass", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmerPackages.wasmer", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmerPackages.wasmer-compiler-cranelift", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmerPackages.wasmer-compiler-llvm", "1.1.0" )
+    , ( "pkgs.python3Packages.wasmerPackages.wasmer-compiler-singlepass", "1.1.0" )
+    , ( "pkgs.python3Packages.wasserstein", "1.1.0" )
+    , ( "pkgs.python3Packages.watchdog", "3.0.0" )
+    , ( "pkgs.python3Packages.watchdog-gevent", "0.1.1" )
+    , ( "pkgs.python3Packages.watchfiles", "0.21.0" )
+    , ( "pkgs.python3Packages.watchgod", "0.8.2" )
+    , ( "pkgs.python3Packages.waterfurnace", "1.1.0" )
+    , ( "pkgs.python3Packages.watermark", "2.4.0" )
+    , ( "pkgs.python3Packages.wavedrom", "2.0.3.post3" )
+    , ( "pkgs.python3Packages.wavefile", "1.5" )
+    , ( "pkgs.python3Packages.wavinsentio", "0.4.0" )
+    , ( "pkgs.python3Packages.wazeroutecalculator", "0.15" )
+    , ( "pkgs.python3Packages.wcag-contrast-ratio", "0.9" )
+    , ( "pkgs.python3Packages.wcmatch", "8.5" )
+    , ( "pkgs.python3Packages.wcwidth", "0.2.6" )
+    , ( "pkgs.python3Packages.weasel", "0.3.4" )
+    , ( "pkgs.python3Packages.weasyprint", "60.1" )
+    , ( "pkgs.python3Packages.weaviate-client", "3.25.3" )
+    , ( "pkgs.python3Packages.web", "0.62" )
+    , ( "pkgs.python3Packages.web-cache", "1.1.0" )
+    , ( "pkgs.python3Packages.web3", "6.5.0" )
+    , ( "pkgs.python3Packages.webargs", "8.3.0" )
+    , ( "pkgs.python3Packages.webassets", "2.0" )
+    , ( "pkgs.python3Packages.webauthn", "1.11.1" )
+    , ( "pkgs.python3Packages.webcolors", "1.13" )
+    , ( "pkgs.python3Packages.webdav4", "0.9.8" )
+    , ( "pkgs.python3Packages.webdavclient3", "3.14.6" )
+    , ( "pkgs.python3Packages.webencodings", "0.5.1" )
+    , ( "pkgs.python3Packages.webexteamssdk", "1.6.1" )
+    , ( "pkgs.python3Packages.webhelpers", "1.3" )
+    , ( "pkgs.python3Packages.webob", "1.8.7" )
+    , ( "pkgs.python3Packages.weboob", "2.0" )
+    , ( "pkgs.python3Packages.webrtc-noise-gain", "1.2.3" )
+    , ( "pkgs.python3Packages.webrtcvad", "2.0.10" )
+    , ( "pkgs.python3Packages.websocket-client", "1.6.3" )
+    , ( "pkgs.python3Packages.websocket_client", "1.6.3" )
+    , ( "pkgs.python3Packages.websockets", "11.0.3" )
+    , ( "pkgs.python3Packages.websockify", "0.11.0" )
+    , ( "pkgs.python3Packages.webssh", "1.6.2" )
+    , ( "pkgs.python3Packages.webtest", "3.0.0" )
+    , ( "pkgs.python3Packages.webtest-aiohttp", "2.0.0" )
+    , ( "pkgs.python3Packages.webthing", "0.15.0" )
+    , ( "pkgs.python3Packages.webthing-ws", "0.2.0" )
+    , ( "pkgs.python3Packages.weconnect", "0.59.5" )
+    , ( "pkgs.python3Packages.weconnect-mqtt", "0.48.3" )
+    , ( "pkgs.python3Packages.werkzeug", "2.3.8" )
+    , ( "pkgs.python3Packages.west", "1.2.0" )
+    , ( "pkgs.python3Packages.wfuzz", "3.1.0" )
+    , ( "pkgs.python3Packages.wget", "3.2" )
+    , ( "pkgs.python3Packages.whatthepatch", "1.0.5" )
+    , ( "pkgs.python3Packages.wheel", "0.41.1" )
+    , ( "pkgs.python3Packages.wheel-filename", "1.4.1" )
+    , ( "pkgs.python3Packages.wheel-inspect", "1.7.1" )
+    , ( "pkgs.python3Packages.wheelUnpackHook", "" )
+    , ( "pkgs.python3Packages.wheezy-captcha", "3.0.2" )
+    , ( "pkgs.python3Packages.wheezy-template", "3.1.0" )
+    , ( "pkgs.python3Packages.whichcraft", "0.6.1" )
+    , ( "pkgs.python3Packages.whirlpool-sixth-sense", "0.18.5" )
+    , ( "pkgs.python3Packages.whisper", "1.1.10" )
+    , ( "pkgs.python3Packages.whispers", "2.2.0" )
+    , ( "pkgs.python3Packages.whitenoise", "6.5.0" )
+    , ( "pkgs.python3Packages.whodap", "0.1.11" )
+    , ( "pkgs.python3Packages.whois", "0.9.27" )
+    , ( "pkgs.python3Packages.whois-api", "1.2.0" )
+    , ( "pkgs.python3Packages.whoosh", "2.7.4" )
+    , ( "pkgs.python3Packages.widgetsnbextension", "4.0.9" )
+    , ( "pkgs.python3Packages.widlparser", "1.0.12" )
+    , ( "pkgs.python3Packages.wiffi", "1.1.2" )
+    , ( "pkgs.python3Packages.wifi", "0.3.5" )
+    , ( "pkgs.python3Packages.wikipedia", "1.4.0" )
+    , ( "pkgs.python3Packages.wikipedia-api", "0.6.0" )
+    , ( "pkgs.python3Packages.wikitextparser", "0.55.5" )
+    , ( "pkgs.python3Packages.willow", "1.6.2" )
+    , ( "pkgs.python3Packages.winacl", "0.1.8" )
+    , ( "pkgs.python3Packages.winsspi", "0.0.11" )
+    , ( "pkgs.python3Packages.withings-api", "2.4.0" )
+    , ( "pkgs.python3Packages.withings-sync", "4.2.1" )
+    , ( "pkgs.python3Packages.wktutils", "1.1.6" )
+    , ( "pkgs.python3Packages.wled", "0.17.0" )
+    , ( "pkgs.python3Packages.wn", "0.9.4" )
+    , ( "pkgs.python3Packages.woob", "3.6" )
+    , ( "pkgs.python3Packages.woodblock", "0.1.7" )
+    , ( "pkgs.python3Packages.wordcloud", "1.9.1.1" )
+    , ( "pkgs.python3Packages.wordfreq", "3.0.2" )
+    , ( "pkgs.python3Packages.worldengine", "0.19.0" )
+    , ( "pkgs.python3Packages.wrapPython", "" )
+    , ( "pkgs.python3Packages.wrapio", "2.0.0" )
+    , ( "pkgs.python3Packages.wrapt", "1.14.1" )
+    , ( "pkgs.python3Packages.wrf-python", "1.3.4.1" )
+    , ( "pkgs.python3Packages.ws4py", "0.5.1" )
+    , ( "pkgs.python3Packages.wsdiscovery", "2.0.0" )
+    , ( "pkgs.python3Packages.wsgi-intercept", "1.12.1" )
+    , ( "pkgs.python3Packages.wsgidav", "4.3.0" )
+    , ( "pkgs.python3Packages.wsgiprox", "1.5.2" )
+    , ( "pkgs.python3Packages.wsgiproxy2", "0.5.1" )
+    , ( "pkgs.python3Packages.wsgitools", "0.3.1" )
+    , ( "pkgs.python3Packages.wsme", "0.11.0" )
+    , ( "pkgs.python3Packages.wsnsimpy", "0.2.5" )
+    , ( "pkgs.python3Packages.wsproto", "1.2.0" )
+    , ( "pkgs.python3Packages.wtf-peewee", "3.0.4" )
+    , ( "pkgs.python3Packages.wtforms", "3.0.1" )
+    , ( "pkgs.python3Packages.wtforms-bootstrap5", "0.3.0" )
+    , ( "pkgs.python3Packages.wurlitzer", "3.0.3" )
+    , ( "pkgs.python3Packages.wxPython_4_2", "4.2.1" )
+    , ( "pkgs.python3Packages.wyoming", "1.2.0" )
+    , ( "pkgs.python3Packages.x-wr-timezone", "0.0.6" )
+    , ( "pkgs.python3Packages.x11-hash", "1.4" )
+    , ( "pkgs.python3Packages.x11_hash", "1.4" )
+    , ( "pkgs.python3Packages.x256", "0.0.3" )
+    , ( "pkgs.python3Packages.xapian", "1.4.24" )
+    , ( "pkgs.python3Packages.xapp", "21" )
+    , ( "pkgs.python3Packages.xarray", "2023.8.0" )
+    , ( "pkgs.python3Packages.xarray-einstats", "0.6.0" )
+    , ( "pkgs.python3Packages.xattr", "0.10.1" )
+    , ( "pkgs.python3Packages.xbox-webapi", "2.0.11" )
+    , ( "pkgs.python3Packages.xboxapi", "2.0.1" )
+    , ( "pkgs.python3Packages.xcffib", "1.5.0" )
+    , ( "pkgs.python3Packages.xdg", "6.0.0" )
+    , ( "pkgs.python3Packages.xdg-base-dirs", "6.0.1" )
+    , ( "pkgs.python3Packages.xdis", "6.0.5" )
+    , ( "pkgs.python3Packages.xdoctest", "1.1.2" )
+    , ( "pkgs.python3Packages.xdot", "1.3" )
+    , ( "pkgs.python3Packages.xformers", "0.0.22.post7" )
+    , ( "pkgs.python3Packages.xgboost", "2.0.1" )
+    , ( "pkgs.python3Packages.xhtml2pdf", "0.2.11" )
+    , ( "pkgs.python3Packages.xiaomi-ble", "0.21.1" )
+    , ( "pkgs.python3Packages.xkbcommon", "0.8" )
+    , ( "pkgs.python3Packages.xkcdpass", "1.19.6" )
+    , ( "pkgs.python3Packages.xknx", "2.11.2" )
+    , ( "pkgs.python3Packages.xknxproject", "3.4.1" )
+    , ( "pkgs.python3Packages.xlib", "0.33" )
+    , ( "pkgs.python3Packages.xlrd", "2.0.1" )
+    , ( "pkgs.python3Packages.xlsx2csv", "0.8.1" )
+    , ( "pkgs.python3Packages.xlsxwriter", "3.1.9" )
+    , ( "pkgs.python3Packages.xlwt", "1.3.0" )
+    , ( "pkgs.python3Packages.xmind", "1.2.0" )
+    , ( "pkgs.python3Packages.xml-marshaller", "1.0.2" )
+    , ( "pkgs.python3Packages.xml2rfc", "3.18.2" )
+    , ( "pkgs.python3Packages.xmldiff", "2.6.3" )
+    , ( "pkgs.python3Packages.xmljson", "0.2.1" )
+    , ( "pkgs.python3Packages.xmlschema", "2.5.0" )
+    , ( "pkgs.python3Packages.xmlsec", "1.3.13" )
+    , ( "pkgs.python3Packages.xmltodict", "0.13.0" )
+    , ( "pkgs.python3Packages.xmodem", "0.4.7" )
+    , ( "pkgs.python3Packages.xnatpy", "0.5.1" )
+    , ( "pkgs.python3Packages.xnd", "2019-08-01" )
+    , ( "pkgs.python3Packages.xpath-expressions", "1.1.0" )
+    , ( "pkgs.python3Packages.xpybutil", "0.0.6" )
+    , ( "pkgs.python3Packages.xsdata", "23.8" )
+    , ( "pkgs.python3Packages.xstatic", "1.0.2" )
+    , ( "pkgs.python3Packages.xstatic-asciinema-player", "2.6.1.1" )
+    , ( "pkgs.python3Packages.xstatic-bootbox", "5.5.1.1" )
+    , ( "pkgs.python3Packages.xstatic-bootstrap", "4.5.3.1" )
+    , ( "pkgs.python3Packages.xstatic-font-awesome", "6.2.1.1" )
+    , ( "pkgs.python3Packages.xstatic-jquery", "3.5.1.1" )
+    , ( "pkgs.python3Packages.xstatic-jquery-file-upload", "10.31.0.1" )
+    , ( "pkgs.python3Packages.xstatic-jquery-ui", "1.13.0.1" )
+    , ( "pkgs.python3Packages.xstatic-pygments", "2.9.0.1" )
+    , ( "pkgs.python3Packages.xtensor-python", "0.26.1" )
+    , ( "pkgs.python3Packages.xvfbwrapper", "0.2.9" )
+    , ( "pkgs.python3Packages.xxhash", "3.3.0" )
+    , ( "pkgs.python3Packages.xyzservices", "2023.7.0" )
+    , ( "pkgs.python3Packages.y-py", "0.6.2" )
+    , ( "pkgs.python3Packages.yabadaba", "0.2.1" )
+    , ( "pkgs.python3Packages.yacs", "0.1.8" )
+    , ( "pkgs.python3Packages.yagry", "0.16.0" )
+    , ( "pkgs.python3Packages.yahooweather", "0.10" )
+    , ( "pkgs.python3Packages.yalesmartalarmclient", "0.3.9" )
+    , ( "pkgs.python3Packages.yalexs", "1.10.0" )
+    , ( "pkgs.python3Packages.yalexs-ble", "2.3.2" )
+    , ( "pkgs.python3Packages.yamale", "4.0.4" )
+    , ( "pkgs.python3Packages.yamlfix", "1.13.0" )
+    , ( "pkgs.python3Packages.yamllint", "1.32.0" )
+    , ( "pkgs.python3Packages.yamlloader", "1.3.2" )
+    , ( "pkgs.python3Packages.yamlordereddictloader", "0.4.2" )
+    , ( "pkgs.python3Packages.yanc", "0.3.3" )
+    , ( "pkgs.python3Packages.yangson", "1.4.19" )
+    , ( "pkgs.python3Packages.yapf", "0.40.1" )
+    , ( "pkgs.python3Packages.yappi", "1.4.0" )
+    , ( "pkgs.python3Packages.yapsy", "1.12.2" )
+    , ( "pkgs.python3Packages.yara-python", "4.3.1" )
+    , ( "pkgs.python3Packages.yaramod", "3.20.2" )
+    , ( "pkgs.python3Packages.yarg", "0.1.9" )
+    , ( "pkgs.python3Packages.yark", "1.2.9" )
+    , ( "pkgs.python3Packages.yarl", "1.9.2" )
+    , ( "pkgs.python3Packages.yasi", "2.1.2" )
+    , ( "pkgs.python3Packages.yaspin", "3.0.1" )
+    , ( "pkgs.python3Packages.yaswfp", "20210331" )
+    , ( "pkgs.python3Packages.yattag", "1.15.2" )
+    , ( "pkgs.python3Packages.ydiff", "1.2" )
+    , ( "pkgs.python3Packages.yeelight", "0.7.13" )
+    , ( "pkgs.python3Packages.yfinance", "0.2.31" )
+    , ( "pkgs.python3Packages.yoda", "1.9.8" )
+    , ( "pkgs.python3Packages.yolink-api", "0.3.1" )
+    , ( "pkgs.python3Packages.youless-api", "1.0.1" )
+    , ( "pkgs.python3Packages.youtube-dl", "2021.12.17" )
+    , ( "pkgs.python3Packages.youtube-dl-light", "2021.12.17" )
+    , ( "pkgs.python3Packages.youtube-search", "2.1.2" )
+    , ( "pkgs.python3Packages.youtube-search-python", "1.6.6" )
+    , ( "pkgs.python3Packages.youtube-transcript-api", "0.6.1" )
+    , ( "pkgs.python3Packages.yowsup", "3.3.0" )
+    , ( "pkgs.python3Packages.yoyo-migrations", "8.2.0" )
+    , ( "pkgs.python3Packages.ypy-websocket", "0.12.4" )
+    , ( "pkgs.python3Packages.yq", "3.2.3" )
+    , ( "pkgs.python3Packages.yt-dlp", "2023.12.30" )
+    , ( "pkgs.python3Packages.yt-dlp-light", "2023.12.30" )
+    , ( "pkgs.python3Packages.yte", "1.5.1" )
+    , ( "pkgs.python3Packages.ytmusicapi", "1.3.2" )
+    , ( "pkgs.python3Packages.yubico", "1.3.2" )
+    , ( "pkgs.python3Packages.yubico-client", "1.13.0" )
+    , ( "pkgs.python3Packages.z3", "4.8.17" )
+    , ( "pkgs.python3Packages.z3c-checkversions", "2.1" )
+    , ( "pkgs.python3Packages.zadnegoale", "0.7.0" )
+    , ( "pkgs.python3Packages.zamg", "0.3.1" )
+    , ( "pkgs.python3Packages.zarr", "2.16.1" )
+    , ( "pkgs.python3Packages.zc-buildout", "3.0.1" )
+    , ( "pkgs.python3Packages.zc-buildout221", "3.0.1" )
+    , ( "pkgs.python3Packages.zc_lockfile", "3.0" )
+    , ( "pkgs.python3Packages.zcbor", "0.7.0" )
+    , ( "pkgs.python3Packages.zconfig", "3.6.1" )
+    , ( "pkgs.python3Packages.zcs", "0.1.25" )
+    , ( "pkgs.python3Packages.zdaemon", "5.0" )
+    , ( "pkgs.python3Packages.zeek", "2023-02-01" )
+    , ( "pkgs.python3Packages.zeep", "4.2.1" )
+    , ( "pkgs.python3Packages.zeitgeist", "1.0.4" )
+    , ( "pkgs.python3Packages.zephyr-python-api", "0.0.3" )
+    , ( "pkgs.python3Packages.zeroc-ice", "3.7.9.1" )
+    , ( "pkgs.python3Packages.zeroconf", "0.119.0" )
+    , ( "pkgs.python3Packages.zerorpc", "0.6.3" )
+    , ( "pkgs.python3Packages.zetup", "0.2.64" )
+    , ( "pkgs.python3Packages.zeversolarlocal", "1.1.0" )
+    , ( "pkgs.python3Packages.zfec", "1.5.7.2" )
+    , ( "pkgs.python3Packages.zha-quirks", "0.0.106" )
+    , ( "pkgs.python3Packages.ziafont", "0.6" )
+    , ( "pkgs.python3Packages.ziamath", "0.8.1" )
+    , ( "pkgs.python3Packages.zict", "3.0.0" )
+    , ( "pkgs.python3Packages.zigpy", "0.58.1" )
+    , ( "pkgs.python3Packages.zigpy-cc", "0.5.2" )
+    , ( "pkgs.python3Packages.zigpy-deconz", "0.21.1" )
+    , ( "pkgs.python3Packages.zigpy-xbee", "0.19.0" )
+    , ( "pkgs.python3Packages.zigpy-zigate", "0.11.0" )
+    , ( "pkgs.python3Packages.zigpy-znp", "0.11.6" )
+    , ( "pkgs.python3Packages.zimports", "0.6.1" )
+    , ( "pkgs.python3Packages.zipfile2", "0.0.12" )
+    , ( "pkgs.python3Packages.zipp", "3.16.2" )
+    , ( "pkgs.python3Packages.zipstream", "1.1.4" )
+    , ( "pkgs.python3Packages.zipstream-new", "1.1.8" )
+    , ( "pkgs.python3Packages.zipstream-ng", "1.7.1" )
+    , ( "pkgs.python3Packages.zm-py", "0.5.2" )
+    , ( "pkgs.python3Packages.zodb", "5.8.0" )
+    , ( "pkgs.python3Packages.zodbpickle", "3.1" )
+    , ( "pkgs.python3Packages.zope-cachedescriptors", "5.0" )
+    , ( "pkgs.python3Packages.zope-component", "6.0" )
+    , ( "pkgs.python3Packages.zope-contenttype", "5.1" )
+    , ( "pkgs.python3Packages.zope-deferredimport", "5.0" )
+    , ( "pkgs.python3Packages.zope-deprecation", "5.0" )
+    , ( "pkgs.python3Packages.zope-dottedname", "6.0" )
+    , ( "pkgs.python3Packages.zope-hookable", "5.4" )
+    , ( "pkgs.python3Packages.zope-i18nmessageid", "6.0.1" )
+    , ( "pkgs.python3Packages.zope-lifecycleevent", "5.0" )
+    , ( "pkgs.python3Packages.zope-proxy", "5.1" )
+    , ( "pkgs.python3Packages.zope-testbrowser", "6.0" )
+    , ( "pkgs.python3Packages.zope_component", "6.0" )
+    , ( "pkgs.python3Packages.zope_configuration", "4.4.1" )
+    , ( "pkgs.python3Packages.zope_contenttype", "5.1" )
+    , ( "pkgs.python3Packages.zope_copy", "4.3" )
+    , ( "pkgs.python3Packages.zope_deprecation", "5.0" )
+    , ( "pkgs.python3Packages.zope_dottedname", "6.0" )
+    , ( "pkgs.python3Packages.zope_event", "4.6" )
+    , ( "pkgs.python3Packages.zope_exceptions", "4.6" )
+    , ( "pkgs.python3Packages.zope_filerepresentation", "6.0" )
+    , ( "pkgs.python3Packages.zope_i18nmessageid", "6.0.1" )
+    , ( "pkgs.python3Packages.zope_interface", "5.5.2" )
+    , ( "pkgs.python3Packages.zope_lifecycleevent", "5.0" )
+    , ( "pkgs.python3Packages.zope_location", "4.3" )
+    , ( "pkgs.python3Packages.zope_proxy", "5.1" )
+    , ( "pkgs.python3Packages.zope_schema", "7.0.1" )
+    , ( "pkgs.python3Packages.zope_size", "4.4" )
+    , ( "pkgs.python3Packages.zope_testing", "5.0.1" )
+    , ( "pkgs.python3Packages.zope_testrunner", "5.6" )
+    , ( "pkgs.python3Packages.zopfli", "0.2.3" )
+    , ( "pkgs.python3Packages.zstandard", "0.21.0" )
+    , ( "pkgs.python3Packages.zstd", "1.5.5.1" )
+    , ( "pkgs.python3Packages.zulip", "0.8.2" )
+    , ( "pkgs.python3Packages.zwave-js-server-python", "0.54.0" )
+    , ( "pkgs.python3Packages.zwave-me-ws", "0.4.3" )
+    , ( "pkgs.python3Packages.zxcvbn", "4.4.28" )
+    , ( "pkgs.python3Packages.zxing-cpp", "2.1.0" )
+    , ( "pkgs.python3Packages.zxing_cpp", "2.1.0" )
     ]

@@ -21,7 +21,7 @@ in
 
     packages_file="src/GeoPackages.elm"
     echo "module GeoPackages exposing (packages)" > $packages_file
-    echo "packages = " >> $packages_file
+    echo "packages = [" >> $packages_file
     nix search --json github:imincik/geospatial-nix  \
       --exclude "all-packages" \
       --exclude "geonix-base-image" \
@@ -29,76 +29,82 @@ in
       --exclude "unwrapped" \
       --exclude "postgresql." \
       --exclude "python.*" \
-      | jq --compact-output 'keys' \
-      | sed 's|\[|\[\n|' \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
     >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
 
 
     packages_file="src/Packages.elm"
     echo "module Packages exposing (packages)" > $packages_file
-    echo "packages = " >> $packages_file
+    echo "packages = [" >> $packages_file
     nix search --json nixpkgs/$nixpkgs_version  \
       --exclude "postgresql.*Packages" \
       --exclude "python.*Packages" \
-      | jq --compact-output 'keys' \
-      | sed 's|\[|\[\n|' \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
     >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
 
 
     packages_file="src/GeoPythonPackages.elm"
     echo "module GeoPythonPackages exposing (packages)" > $packages_file
-    echo "packages = " >> $packages_file
+    echo "packages = [" >> $packages_file
     nix search --json github:imincik/geospatial-nix  \
       "python3-" \
       --exclude "all-packages" \
-      | jq --compact-output 'keys' \
-      | sed 's|\[|\[\n|' \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
     >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
 
 
     packages_file="src/PythonPackages.elm"
     echo "module PythonPackages exposing (packages)" > $packages_file
-    echo "packages = " >> $packages_file
+    echo "packages = [" >> $packages_file
     nix search --json nixpkgs/$nixpkgs_version \
       python''${python_version}Packages \
-      | jq --compact-output 'keys' \
-      | sed 's|\[|\[\n|' \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
       | sed 's|python3..Packages|python3Packages|g' \
     >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
 
 
     packages_file="src/GeoPostgresqlPackages.elm"
     echo "module GeoPostgresqlPackages exposing (packages)" > $packages_file
-    echo "packages = " >> $packages_file
+    echo "packages = [" >> $packages_file
     nix search --json github:imincik/geospatial-nix  \
       "postgresql_''${postgresql_version}" \
       --exclude "all-packages" \
-      | jq --compact-output 'keys' \
-      | sed 's|\[|\[\n|' \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
       | sed 's|postgresql_..|postgresql|g' \
     >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
 
     
     packages_file="src/PostgresqlPackages.elm"
     echo "module PostgresqlPackages exposing (packages)" > $packages_file
-    echo "packages = " >> $packages_file
+    echo "packages = [" >> $packages_file
     nix search --json nixpkgs/$nixpkgs_version \
       postgresql''${postgresql_version}Packages \
-      | jq --compact-output 'keys' \
-      | sed 's|\[|\[\n|' \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
       | sed 's|postgresql..Packages|postgresqlPackages|g' \
     >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
   '';
 

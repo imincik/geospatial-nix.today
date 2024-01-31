@@ -2,50 +2,50 @@ module PostgresqlPackages exposing (packages)
 
 
 packages =
-    [ "pkgs.postgresqlPackages.age"
-    , "pkgs.postgresqlPackages.apache_datasketches"
-    , "pkgs.postgresqlPackages.cstore_fdw"
-    , "pkgs.postgresqlPackages.hypopg"
-    , "pkgs.postgresqlPackages.jsonb_deep_sum"
-    , "pkgs.postgresqlPackages.periods"
-    , "pkgs.postgresqlPackages.pg_auto_failover"
-    , "pkgs.postgresqlPackages.pg_bigm"
-    , "pkgs.postgresqlPackages.pg_cron"
-    , "pkgs.postgresqlPackages.pg_ed25519"
-    , "pkgs.postgresqlPackages.pg_embedding"
-    , "pkgs.postgresqlPackages.pg_hint_plan"
-    , "pkgs.postgresqlPackages.pg_hll"
-    , "pkgs.postgresqlPackages.pg_ivm"
-    , "pkgs.postgresqlPackages.pg_net"
-    , "pkgs.postgresqlPackages.pg_partman"
-    , "pkgs.postgresqlPackages.pg_rational"
-    , "pkgs.postgresqlPackages.pg_relusage"
-    , "pkgs.postgresqlPackages.pg_repack"
-    , "pkgs.postgresqlPackages.pg_safeupdate"
-    , "pkgs.postgresqlPackages.pg_similarity"
-    , "pkgs.postgresqlPackages.pg_topn"
-    , "pkgs.postgresqlPackages.pg_uuidv7"
-    , "pkgs.postgresqlPackages.pgaudit"
-    , "pkgs.postgresqlPackages.pgjwt"
-    , "pkgs.postgresqlPackages.pgroonga"
-    , "pkgs.postgresqlPackages.pgrouting"
-    , "pkgs.postgresqlPackages.pgsql-http"
-    , "pkgs.postgresqlPackages.pgtap"
-    , "pkgs.postgresqlPackages.pgvector"
-    , "pkgs.postgresqlPackages.plpgsql_check"
-    , "pkgs.postgresqlPackages.plr"
-    , "pkgs.postgresqlPackages.plv8"
-    , "pkgs.postgresqlPackages.postgis"
-    , "pkgs.postgresqlPackages.promscale_extension"
-    , "pkgs.postgresqlPackages.repmgr"
-    , "pkgs.postgresqlPackages.rum"
-    , "pkgs.postgresqlPackages.smlar"
-    , "pkgs.postgresqlPackages.tds_fdw"
-    , "pkgs.postgresqlPackages.temporal_tables"
-    , "pkgs.postgresqlPackages.timescaledb"
-    , "pkgs.postgresqlPackages.timescaledb-apache"
-    , "pkgs.postgresqlPackages.timescaledb_toolkit"
-    , "pkgs.postgresqlPackages.tsearch_extras"
-    , "pkgs.postgresqlPackages.tsja"
-    , "pkgs.postgresqlPackages.wal2json"
+    [ ( "pkgs.postgresqlPackages.age", "1.4.0-rc0" )
+    , ( "pkgs.postgresqlPackages.apache_datasketches", "1.6.0" )
+    , ( "pkgs.postgresqlPackages.cstore_fdw", "2022-03-08" )
+    , ( "pkgs.postgresqlPackages.hypopg", "1.4.0" )
+    , ( "pkgs.postgresqlPackages.jsonb_deep_sum", "2021-12-24" )
+    , ( "pkgs.postgresqlPackages.periods", "1.2.2" )
+    , ( "pkgs.postgresqlPackages.pg_auto_failover", "2.0" )
+    , ( "pkgs.postgresqlPackages.pg_bigm", "1.2-20200228" )
+    , ( "pkgs.postgresqlPackages.pg_cron", "1.6.2" )
+    , ( "pkgs.postgresqlPackages.pg_ed25519", "0.2" )
+    , ( "pkgs.postgresqlPackages.pg_embedding", "0.3.6" )
+    , ( "pkgs.postgresqlPackages.pg_hint_plan", "1.5.1" )
+    , ( "pkgs.postgresqlPackages.pg_hll", "2.18" )
+    , ( "pkgs.postgresqlPackages.pg_ivm", "1.7" )
+    , ( "pkgs.postgresqlPackages.pg_net", "0.7.3" )
+    , ( "pkgs.postgresqlPackages.pg_partman", "5.0.0" )
+    , ( "pkgs.postgresqlPackages.pg_rational", "0.0.2" )
+    , ( "pkgs.postgresqlPackages.pg_relusage", "0.0.1" )
+    , ( "pkgs.postgresqlPackages.pg_repack", "1.4.8" )
+    , ( "pkgs.postgresqlPackages.pg_safeupdate", "1.4" )
+    , ( "pkgs.postgresqlPackages.pg_similarity", "1.0" )
+    , ( "pkgs.postgresqlPackages.pg_topn", "2.6.0" )
+    , ( "pkgs.postgresqlPackages.pg_uuidv7", "1.3.0" )
+    , ( "pkgs.postgresqlPackages.pgaudit", "1.7.0" )
+    , ( "pkgs.postgresqlPackages.pgjwt", "2023-03-02" )
+    , ( "pkgs.postgresqlPackages.pgroonga", "3.0.8" )
+    , ( "pkgs.postgresqlPackages.pgrouting", "3.5.1" )
+    , ( "pkgs.postgresqlPackages.pgsql-http", "1.6.0" )
+    , ( "pkgs.postgresqlPackages.pgtap", "1.3.0" )
+    , ( "pkgs.postgresqlPackages.pgvector", "0.5.1" )
+    , ( "pkgs.postgresqlPackages.plpgsql_check", "2.6.1" )
+    , ( "pkgs.postgresqlPackages.plr", "8.4.6" )
+    , ( "pkgs.postgresqlPackages.plv8", "3.1.5" )
+    , ( "pkgs.postgresqlPackages.postgis", "3.4.0" )
+    , ( "pkgs.postgresqlPackages.promscale_extension", "0.8.0" )
+    , ( "pkgs.postgresqlPackages.repmgr", "5.4.1" )
+    , ( "pkgs.postgresqlPackages.rum", "1.3.13" )
+    , ( "pkgs.postgresqlPackages.smlar", "2021-11-08" )
+    , ( "pkgs.postgresqlPackages.tds_fdw", "2023-09-28" )
+    , ( "pkgs.postgresqlPackages.temporal_tables", "1.2.2" )
+    , ( "pkgs.postgresqlPackages.timescaledb", "2.13.0" )
+    , ( "pkgs.postgresqlPackages.timescaledb-apache", "2.13.0" )
+    , ( "pkgs.postgresqlPackages.timescaledb_toolkit", "1.18.0" )
+    , ( "pkgs.postgresqlPackages.tsearch_extras", "0.4" )
+    , ( "pkgs.postgresqlPackages.tsja", "0.5.0" )
+    , ( "pkgs.postgresqlPackages.wal2json", "2.5" )
     ]
