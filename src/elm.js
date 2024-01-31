@@ -66755,7 +66755,7 @@ var $elm$browser$Browser$sandbox = function (impl) {
 			view: impl.view
 		});
 };
-var $author$project$HomePage$configTemplate = '\n{ inputs, config, pkgs, lib, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\nin {\n  name = "<NAME>";\n\n  packages = [ <PACKAGES> ];\n\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);\n  };\n\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: [ <PG-PACKAGES> ];\n  };\n\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n}\n';
+var $author$project$NixConfig$configTemplate = '\n{ inputs, config, pkgs, lib, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\nin {\n  name = "<NAME>";\n\n  packages = [ <PACKAGES> ];\n\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);\n  };\n\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: [ <PG-PACKAGES> ];\n  };\n\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n}\n';
 var $author$project$HomePage$packagesListToNamesList = function (packages) {
 	return A2(
 		$elm$core$List$map,
@@ -66799,7 +66799,7 @@ var $author$project$HomePage$buildConfig = function (model) {
 							$elm$core$String$replace,
 							'<PACKAGES>',
 							A2($elm$core$String$join, ' ', selectedPackages),
-							A3($elm$core$String$replace, '<NAME>', model.name, $author$project$HomePage$configTemplate)))))));
+							A3($elm$core$String$replace, '<NAME>', model.name, $author$project$NixConfig$configTemplate)))))));
 };
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
@@ -66991,7 +66991,7 @@ var $author$project$HomePage$UpdateShellHook = function (a) {
 	return {$: 'UpdateShellHook', a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$HomePage$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environment,\nlovely built to work on any modern Linux machine.\n';
+var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environment,\nlovely built to work on any modern Linux machine.\n';
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -67002,9 +67002,9 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $author$project$HomePage$configTemplateComment = '\n- Copy and paste configuration to geonix.nix file\n';
-var $author$project$HomePage$containerTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- container shell\n\ndocker run --rm -it shell:latest\n';
-var $author$project$HomePage$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
+var $author$project$Texts$configTemplateComment = '\n- Copy and paste configuration to geonix.nix file\n';
+var $author$project$Texts$containerTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- container shell\n\ndocker run --rm -it shell:latest\n';
+var $author$project$Texts$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
@@ -67016,11 +67016,11 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$HomePage$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli init\ngit add *\n';
-var $author$project$HomePage$initTemplateComment = '\n- Run following commands to initalize new project\n';
+var $author$project$Texts$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli init\ngit add *\n';
+var $author$project$Texts$initTemplateComment = '\n- Run following commands to initalize new project\n';
 var $elm$html$Html$input = _VirtualDom_node('input');
-var $author$project$HomePage$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
-var $author$project$HomePage$installNixTemplateComment = '\n- Install Nix (if not already installed)\n';
+var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
+var $author$project$Texts$installNixTemplateComment = '\n- Install Nix (if not already installed)\n';
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 'Normal', a: a};
 };
@@ -67081,10 +67081,10 @@ var $author$project$HomePage$packagesCountText = F2(
 	});
 var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
 var $elm$html$Html$pre = _VirtualDom_node('pre');
-var $author$project$HomePage$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
-var $author$project$HomePage$servicesTemplateComment = '\n- Run following command to launch services\n';
-var $author$project$HomePage$shellTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- shell\n';
-var $author$project$HomePage$shellTemplateComment = '\n- Run following command to enter shell environment\n';
+var $author$project$Texts$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
+var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
+var $author$project$Texts$shellTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- shell\n';
+var $author$project$Texts$shellTemplateComment = '\n- Run following command to enter shell environment\n';
 var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
 var $author$project$HomePage$showMorePackagesButton = function (filterLimit) {
 	return A2(
@@ -67638,7 +67638,7 @@ var $author$project$HomePage$view = function (model) {
 												_List_Nil,
 												_List_fromArray(
 													[
-														$elm$html$Html$text($author$project$HomePage$installNixTemplateComment)
+														$elm$html$Html$text($author$project$Texts$installNixTemplateComment)
 													])),
 												A2(
 												$elm$html$Html$span,
@@ -67648,7 +67648,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text($author$project$HomePage$installNixTemplate)
+														$elm$html$Html$text($author$project$Texts$installNixTemplate)
 													]))
 											])),
 										A2(
@@ -67668,7 +67668,7 @@ var $author$project$HomePage$view = function (model) {
 												_List_Nil,
 												_List_fromArray(
 													[
-														$elm$html$Html$text($author$project$HomePage$initTemplateComment)
+														$elm$html$Html$text($author$project$Texts$initTemplateComment)
 													])),
 												A2(
 												$elm$html$Html$span,
@@ -67678,7 +67678,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text($author$project$HomePage$initTemplate)
+														$elm$html$Html$text($author$project$Texts$initTemplate)
 													]))
 											])),
 										A2(
@@ -67698,7 +67698,7 @@ var $author$project$HomePage$view = function (model) {
 												_List_Nil,
 												_List_fromArray(
 													[
-														$elm$html$Html$text($author$project$HomePage$configTemplateComment)
+														$elm$html$Html$text($author$project$Texts$configTemplateComment)
 													])),
 												A2(
 												$elm$html$Html$span,
@@ -67728,7 +67728,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$aboutText)
+												$elm$html$Html$text($author$project$Texts$aboutText)
 											])),
 										A2(
 										$elm$html$Html$h3,
@@ -67848,7 +67848,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$shellTemplateComment)
+												$elm$html$Html$text($author$project$Texts$shellTemplateComment)
 											])),
 										A2(
 										$elm$html$Html$span,
@@ -67858,7 +67858,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$shellTemplate)
+												$elm$html$Html$text($author$project$Texts$shellTemplate)
 											]))
 									])),
 								A2(
@@ -67878,7 +67878,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$servicesTemplateComment)
+												$elm$html$Html$text($author$project$Texts$servicesTemplateComment)
 											])),
 										A2(
 										$elm$html$Html$span,
@@ -67888,7 +67888,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$servicesTemplate)
+												$elm$html$Html$text($author$project$Texts$servicesTemplate)
 											]))
 									])),
 								A2(
@@ -67908,7 +67908,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$containerTemplateComment)
+												$elm$html$Html$text($author$project$Texts$containerTemplateComment)
 											])),
 										A2(
 										$elm$html$Html$span,
@@ -67918,7 +67918,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text($author$project$HomePage$containerTemplate)
+												$elm$html$Html$text($author$project$Texts$containerTemplate)
 											]))
 									]))
 							]))
