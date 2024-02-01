@@ -67341,7 +67341,26 @@ var $author$project$HomePage$view = function (model) {
 								_List_Nil,
 								_List_fromArray(
 									[
-										$elm$html$Html$text('GEOSPATIAL NIX - the environment builder')
+										A2(
+										$elm$html$Html$span,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'margin-right', '10px')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('GEOSPATIAL NIX')
+											])),
+										A2(
+										$elm$html$Html$span,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('fs-2 text-decoration-underline text-secondary')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('the environment builder')
+											]))
 									]))
 							]))
 					])),

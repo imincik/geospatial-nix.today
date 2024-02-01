@@ -175,7 +175,10 @@ view model =
     div [ class "container" ]
         [ div [ class "row" ]
             [ div [ class "col-md-12 border fw-bold fs-1 py-3 my-3" ]
-                [ p [] [ text "GEOSPATIAL NIX - the environment builder" ]
+                [ p []
+                    [ span [ style "margin-right" "10px" ] [ text "GEOSPATIAL NIX" ]
+                    , span [ class "fs-2 text-decoration-underline text-secondary" ] [ text "the environment builder" ]
+                    ]
                 ]
             ]
 
