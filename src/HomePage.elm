@@ -173,8 +173,11 @@ initialModel =
 view : Model -> Html Msg
 view model =
     div [ class "container" ]
-        [ h1 [] [ text "GEOSPATIAL NIX - the environment builder" ]
-        , hr [] []
+        [ div [ class "row" ]
+            [ div [ class "col-md-12 border fw-bold fs-1 py-3 my-3" ]
+                [ p [] [ text "GEOSPATIAL NIX - the environment builder" ]
+                ]
+            ]
 
         -- options
         , div [ class "row" ]

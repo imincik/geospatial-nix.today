@@ -67007,7 +67007,6 @@ var $author$project$Texts$containerTemplate = '\nnix run github:imincik/geospati
 var $author$project$Texts$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $author$project$Texts$futurePlansText = '\nWhat you see here, is only very early start of something great. Many more\nfeatures like configuration options for languages and services, geospatial\nspecific modules and user experience improvements are on the way.\n';
-var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$hr = _VirtualDom_node('hr');
@@ -67322,13 +67321,30 @@ var $author$project$HomePage$view = function (model) {
 		_List_fromArray(
 			[
 				A2(
-				$elm$html$Html$h1,
-				_List_Nil,
+				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$text('GEOSPATIAL NIX - the environment builder')
+						$elm$html$Html$Attributes$class('row')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('col-md-12 border fw-bold fs-1 py-3 my-3')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$p,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$text('GEOSPATIAL NIX - the environment builder')
+									]))
+							]))
 					])),
-				A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
