@@ -28,18 +28,15 @@ allPgPackages =
 
 
 -- MODEL
+-- packages
 
 
 type alias Package =
     ( String, String )
 
 
-
--- packages
-
-
 type alias Packages =
-    List String
+    List Package
 
 
 
@@ -48,7 +45,7 @@ type alias Packages =
 
 type alias LanguagePython =
     { enabled : Bool
-    , packages : List String
+    , packages : Packages
     }
 
 
@@ -65,7 +62,7 @@ type alias Languages =
 
 type alias ServicePostgres =
     { enabled : Bool
-    , packages : List String
+    , packages : Packages
     }
 
 
