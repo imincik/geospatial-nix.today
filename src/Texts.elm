@@ -1,4 +1,4 @@
-module Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shellTemplate, shellTemplateComment)
+module Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
 
 
 aboutText =
@@ -43,7 +43,7 @@ mkdir my-project && cd my-project
 
 git init
 nix run github:imincik/geospatial-nix#geonixcli init
-git add *
+git add flake.nix geonix.nix
 """
 
 
@@ -88,4 +88,25 @@ containerTemplate =
 nix run github:imincik/geospatial-nix#geonixcli -- container shell
 
 docker run --rm -it shell:latest
+"""
+
+
+shareTemplateComment =
+    """
+- Add environment lock file to git and push project to repository
+"""
+
+
+shareTemplate =
+    """
+git add flake.lock
+git commit -m "My Geospatial NIX project environment"
+git push
+"""
+
+
+shareTemplateComment2 =
+    """
+- Now, all your project collaborators can use exactly same environment
+  containing exactly same versions of software
 """

@@ -11,7 +11,7 @@ import NixConfig exposing (configTemplate)
 import Packages
 import PostgresqlPackages
 import PythonPackages
-import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shellTemplate, shellTemplateComment)
+import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
 
 
 allPackages =
@@ -243,6 +243,8 @@ view model =
                         , pre [] [ span [] [ text servicesTemplateComment ], span [ class "text-warning" ] [ text servicesTemplate ] ]
                         , h2 [] [ text "RUN IN CONTAINER" ]
                         , pre [] [ span [] [ text containerTemplateComment ], span [ class "text-warning" ] [ text containerTemplate ] ]
+                        , h2 [] [ text "SHARE ENVIRONMENT" ]
+                        , pre [] [ span [] [ text shareTemplateComment ], span [ class "text-warning" ] [ text shareTemplate ], span [] [ text shareTemplateComment2 ] ]
                         ]
 
                   else

@@ -67017,7 +67017,7 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$Texts$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli init\ngit add *\n';
+var $author$project$Texts$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli init\ngit add flake.nix geonix.nix\n';
 var $author$project$Texts$initTemplateComment = '\n- Run following commands to initalize new project\n';
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
@@ -67084,6 +67084,9 @@ var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProp
 var $elm$html$Html$pre = _VirtualDom_node('pre');
 var $author$project$Texts$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
 var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
+var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My Geospatial NIX project environment"\ngit push\n';
+var $author$project$Texts$shareTemplateComment = '\n- Add environment lock file to git and push project to repository\n';
+var $author$project$Texts$shareTemplateComment2 = '\n- Now, all your project collaborators can use exactly same environment\n  containing exactly same versions of software\n';
 var $author$project$Texts$shellTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- shell\n';
 var $author$project$Texts$shellTemplateComment = '\n- Run following command to enter shell environment\n';
 var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
@@ -67800,6 +67803,43 @@ var $author$project$HomePage$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$text($author$project$Texts$containerTemplate)
+													]))
+											])),
+										A2(
+										$elm$html$Html$h2,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('SHARE ENVIRONMENT')
+											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_Nil,
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$span,
+												_List_Nil,
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$shareTemplateComment)
+													])),
+												A2(
+												$elm$html$Html$span,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('text-warning')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$shareTemplate)
+													])),
+												A2(
+												$elm$html$Html$span,
+												_List_Nil,
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$shareTemplateComment2)
 													]))
 											]))
 									])) : A2(
