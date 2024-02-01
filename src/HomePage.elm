@@ -14,18 +14,6 @@ import PythonPackages
 import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
 
 
-allPackages =
-    GeoPackages.packages ++ Packages.packages
-
-
-allPyPackages =
-    GeoPythonPackages.packages ++ PythonPackages.packages
-
-
-allPgPackages =
-    GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
-
-
 
 -- MODEL
 -- packages
@@ -37,6 +25,21 @@ type alias Package =
 
 type alias Packages =
     List Package
+
+
+allPackages : Packages
+allPackages =
+    GeoPackages.packages ++ Packages.packages
+
+
+allPyPackages : Packages
+allPyPackages =
+    GeoPythonPackages.packages ++ PythonPackages.packages
+
+
+allPgPackages : Packages
+allPgPackages =
+    GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
 
 
 
