@@ -189,10 +189,10 @@ view model =
                         [ text "packages"
                         , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
                         ]
-                    , toHtmlListAdd model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
+                    , packagesHtmlList model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
                     , p [ class "text-secondary" ]
                         [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
-                        , showMorePackagesButton model.filterLimit
+                        , morePackagesButton model.filterLimit
                         ]
                     ]
                 , div [ class "languages" ]
@@ -203,10 +203,10 @@ view model =
                         [ text "packages"
                         , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
                         ]
-                    , toHtmlListAdd model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
+                    , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
                     , p [ class "text-secondary" ]
                         [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
-                        , showMorePackagesButton model.filterLimit
+                        , morePackagesButton model.filterLimit
                         ]
                     ]
                 , div [ class "services" ]
@@ -217,10 +217,10 @@ view model =
                         [ text "packages"
                         , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
                         ]
-                    , toHtmlListAdd model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
+                    , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
                     , p [ class "text-secondary" ]
                         [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
-                        , showMorePackagesButton model.filterLimit
+                        , morePackagesButton model.filterLimit
                         ]
                     ]
                 , div [ class "shell-hook" ]
@@ -282,18 +282,8 @@ view model =
         ]
 
 
-packagesListToNamesList : List Package -> List String
-packagesListToNamesList packages =
-    List.map (\item -> Tuple.first item) packages
-
-
-packagesCountText : Int -> Int -> Html Msg
-packagesCountText packagesCount selectedCount =
-    text ("Total packages: " ++ String.fromInt packagesCount ++ " , selected: " ++ String.fromInt selectedCount)
-
-
-toHtmlListAdd : List Package -> List Package -> String -> Int -> (Package -> Msg) -> Html Msg
-toHtmlListAdd availableItems selectedItems filter filterLimit onClickAction =
+packagesHtmlList : List Package -> List Package -> String -> Int -> (Package -> Msg) -> Html Msg
+packagesHtmlList availableItems selectedItems filter filterLimit onClickAction =
     let
         filteredItems =
             -- filter items
@@ -301,11 +291,11 @@ toHtmlListAdd availableItems selectedItems filter filterLimit onClickAction =
                 -- show only first x items
                 |> List.take filterLimit
     in
-    ul [ class "list-group" ] (List.map (toLiAdd selectedItems onClickAction) filteredItems)
+    ul [ class "list-group" ] (List.map (packageHtmlItem selectedItems onClickAction) filteredItems)
 
 
-toLiAdd : List Package -> (Package -> Msg) -> Package -> Html Msg
-toLiAdd selectedItems onClickAction item =
+packageHtmlItem : List Package -> (Package -> Msg) -> Package -> Html Msg
+packageHtmlItem selectedItems onClickAction item =
     let
         buttonLabel =
             ">"
@@ -326,8 +316,13 @@ toLiAdd selectedItems onClickAction item =
         ]
 
 
-showMorePackagesButton : Int -> Html Msg
-showMorePackagesButton filterLimit =
+packagesCountText : Int -> Int -> Html Msg
+packagesCountText packagesCount selectedCount =
+    text ("Available packages: " ++ String.fromInt packagesCount ++ " , selected: " ++ String.fromInt selectedCount)
+
+
+morePackagesButton : Int -> Html Msg
+morePackagesButton filterLimit =
     button [ class "btn btn-sm btn-link", onClick UpdateFilterLimit ]
         [ if filterLimit < 15 then
             text "show more"
@@ -335,6 +330,11 @@ showMorePackagesButton filterLimit =
           else
             text "show less"
         ]
+
+
+packagesListToNamesList : List Package -> List String
+packagesListToNamesList packages =
+    List.map (\item -> Tuple.first item) packages
 
 
 type Msg

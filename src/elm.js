@@ -67022,6 +67022,7 @@ var $author$project$Texts$initTemplateComment = '\n- Run following commands to i
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
 var $author$project$Texts$installNixTemplateComment = '\n- Install Nix (if not already installed)\n';
+var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 'Normal', a: a};
 };
@@ -67038,6 +67039,21 @@ var $elm$html$Html$Events$onClick = function (msg) {
 		$elm$html$Html$Events$on,
 		'click',
 		$elm$json$Json$Decode$succeed(msg));
+};
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$HomePage$morePackagesButton = function (filterLimit) {
+	return A2(
+		$elm$html$Html$button,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('btn btn-sm btn-link'),
+				$elm$html$Html$Events$onClick($author$project$HomePage$UpdateFilterLimit)
+			]),
+		_List_fromArray(
+			[
+				(filterLimit < 15) ? $elm$html$Html$text('show more') : $elm$html$Html$text('show less')
+			]));
 };
 var $elm$html$Html$Events$alwaysStop = function (x) {
 	return _Utils_Tuple2(x, true);
@@ -67073,41 +67089,68 @@ var $elm$html$Html$Events$onInput = function (tagger) {
 			A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetValue)));
 };
 var $elm$html$Html$p = _VirtualDom_node('p');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$HomePage$packagesCountText = F2(
 	function (packagesCount, selectedCount) {
 		return $elm$html$Html$text(
-			'Total packages: ' + ($elm$core$String$fromInt(packagesCount) + (' , selected: ' + $elm$core$String$fromInt(selectedCount))));
+			'Available packages: ' + ($elm$core$String$fromInt(packagesCount) + (' , selected: ' + $elm$core$String$fromInt(selectedCount))));
 	});
-var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
-var $elm$html$Html$pre = _VirtualDom_node('pre');
-var $author$project$Texts$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
-var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
-var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My Geospatial NIX project environment"\ngit push\n';
-var $author$project$Texts$shareTemplateComment = '\n- Add environment lock file to git and push project to repository\n';
-var $author$project$Texts$shareTemplateComment2 = '\n- Now, all your project collaborators can use exactly same environment\n  containing exactly same versions of software\n';
-var $author$project$Texts$shellTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- shell\n';
-var $author$project$Texts$shellTemplateComment = '\n- Run following command to enter shell environment\n';
-var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
-var $author$project$HomePage$showMorePackagesButton = function (filterLimit) {
-	return A2(
-		$elm$html$Html$button,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('btn btn-sm btn-link'),
-				$elm$html$Html$Events$onClick($author$project$HomePage$UpdateFilterLimit)
-			]),
-		_List_fromArray(
-			[
-				(filterLimit < 15) ? $elm$html$Html$text('show more') : $elm$html$Html$text('show less')
-			]));
+var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $elm$html$Html$li = _VirtualDom_node('li');
+var $elm$core$Tuple$second = function (_v0) {
+	var y = _v0.b;
+	return y;
 };
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
-var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
-var $elm$html$Html$textarea = _VirtualDom_node('textarea');
+var $author$project$HomePage$packageHtmlItem = F3(
+	function (selectedItems, onClickAction, item) {
+		var buttonLabel = '>';
+		var buttonClass = (!A2($elm$core$List$member, item, selectedItems)) ? 'btn btn-secondary btn-sm' : 'btn btn-success btn-sm';
+		return A2(
+			$elm$html$Html$li,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('list-group-item d-flex justify-content-between align-items-center')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$p,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('fs-5')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text(item.a),
+							A2(
+							$elm$html$Html$span,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('text-secondary fs-6')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('  v' + item.b)
+								]))
+						])),
+					A2(
+					$elm$html$Html$button,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class(buttonClass),
+							A2($elm$html$Html$Attributes$style, 'margin', '10px'),
+							$elm$html$Html$Events$onClick(
+							onClickAction(item)),
+							$elm$html$Html$Attributes$id('packagesList')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text(buttonLabel)
+						]))
+				]));
+	});
 var $elm$core$List$takeReverse = F3(
 	function (n, list, kept) {
 		takeReverse:
@@ -67234,62 +67277,8 @@ var $elm$core$List$take = F2(
 	function (n, list) {
 		return A3($elm$core$List$takeFast, 0, n, list);
 	});
-var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
-var $elm$html$Html$li = _VirtualDom_node('li');
-var $elm$core$Tuple$second = function (_v0) {
-	var y = _v0.b;
-	return y;
-};
-var $author$project$HomePage$toLiAdd = F3(
-	function (selectedItems, onClickAction, item) {
-		var buttonLabel = '>';
-		var buttonClass = (!A2($elm$core$List$member, item, selectedItems)) ? 'btn btn-secondary btn-sm' : 'btn btn-success btn-sm';
-		return A2(
-			$elm$html$Html$li,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('list-group-item d-flex justify-content-between align-items-center')
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$p,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('fs-5')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text(item.a),
-							A2(
-							$elm$html$Html$span,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('text-secondary fs-6')
-								]),
-							_List_fromArray(
-								[
-									$elm$html$Html$text('  v' + item.b)
-								]))
-						])),
-					A2(
-					$elm$html$Html$button,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class(buttonClass),
-							A2($elm$html$Html$Attributes$style, 'margin', '10px'),
-							$elm$html$Html$Events$onClick(
-							onClickAction(item)),
-							$elm$html$Html$Attributes$id('packagesList')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text(buttonLabel)
-						]))
-				]));
-	});
 var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $author$project$HomePage$toHtmlListAdd = F5(
+var $author$project$HomePage$packagesHtmlList = F5(
 	function (availableItems, selectedItems, filter, filterLimit, onClickAction) {
 		var filteredItems = A2(
 			$elm$core$List$take,
@@ -67308,9 +67297,20 @@ var $author$project$HomePage$toHtmlListAdd = F5(
 				]),
 			A2(
 				$elm$core$List$map,
-				A2($author$project$HomePage$toLiAdd, selectedItems, onClickAction),
+				A2($author$project$HomePage$packageHtmlItem, selectedItems, onClickAction),
 				filteredItems));
 	});
+var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
+var $elm$html$Html$pre = _VirtualDom_node('pre');
+var $author$project$Texts$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
+var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
+var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My Geospatial NIX project environment"\ngit push\n';
+var $author$project$Texts$shareTemplateComment = '\n- Add environment lock file to git and push project to repository\n';
+var $author$project$Texts$shareTemplateComment2 = '\n- Now, all your project collaborators can use exactly same environment\n  containing exactly same versions of software\n';
+var $author$project$Texts$shellTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- shell\n';
+var $author$project$Texts$shellTemplateComment = '\n- Run following command to enter shell environment\n';
+var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $elm$html$Html$textarea = _VirtualDom_node('textarea');
 var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
 var $author$project$HomePage$view = function (model) {
 	return A2(
@@ -67406,7 +67406,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$toHtmlListAdd, model.availablePackages, model.selectedPackages, model.filterPackages, model.filterLimit, $author$project$HomePage$AddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.availablePackages, model.selectedPackages, model.filterPackages, model.filterLimit, $author$project$HomePage$AddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67419,7 +67419,7 @@ var $author$project$HomePage$view = function (model) {
 												$author$project$HomePage$packagesCountText,
 												$elm$core$List$length(model.availablePackages),
 												$elm$core$List$length(model.selectedPackages)),
-												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
+												$author$project$HomePage$morePackagesButton(model.filterLimit)
 											]))
 									])),
 								A2(
@@ -67484,7 +67484,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$toHtmlListAdd, model.availablePyPackages, model.selectedPyPackages, model.filterPyPackages, model.filterLimit, $author$project$HomePage$AddPyPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.availablePyPackages, model.selectedPyPackages, model.filterPyPackages, model.filterLimit, $author$project$HomePage$AddPyPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67497,7 +67497,7 @@ var $author$project$HomePage$view = function (model) {
 												$author$project$HomePage$packagesCountText,
 												$elm$core$List$length(model.availablePyPackages),
 												$elm$core$List$length(model.selectedPyPackages)),
-												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
+												$author$project$HomePage$morePackagesButton(model.filterLimit)
 											]))
 									])),
 								A2(
@@ -67562,7 +67562,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$toHtmlListAdd, model.availablePgPackages, model.selectedPgPackages, model.filterPgPackages, model.filterLimit, $author$project$HomePage$AddPgPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.availablePgPackages, model.selectedPgPackages, model.filterPgPackages, model.filterLimit, $author$project$HomePage$AddPgPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67575,7 +67575,7 @@ var $author$project$HomePage$view = function (model) {
 												$author$project$HomePage$packagesCountText,
 												$elm$core$List$length(model.availablePgPackages),
 												$elm$core$List$length(model.selectedPgPackages)),
-												$author$project$HomePage$showMorePackagesButton(model.filterLimit)
+												$author$project$HomePage$morePackagesButton(model.filterLimit)
 											]))
 									])),
 								A2(
