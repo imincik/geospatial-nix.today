@@ -1,4 +1,4 @@
-module Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shellTemplate, shellTemplateComment)
+module Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shellTemplate, shellTemplateComment)
 
 
 aboutText =
@@ -6,6 +6,14 @@ aboutText =
 In a world of horrendously complex software developed by myriads of authors,
 be smart, use Nix and create isolated and reproducible geospatial environment,
 lovely built to work on any modern Linux machine.
+"""
+
+
+futurePlansText =
+    """
+What you see here, is only very early start of something great. Many more
+features like configuration options for languages and services, geospatial
+specific modules and user experience improvements are on the way.
 """
 
 

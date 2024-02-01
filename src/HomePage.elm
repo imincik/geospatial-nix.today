@@ -11,7 +11,7 @@ import NixConfig exposing (configTemplate)
 import Packages
 import PostgresqlPackages
 import PythonPackages
-import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shellTemplate, shellTemplateComment)
+import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shellTemplate, shellTemplateComment)
 
 
 allPackages =
@@ -243,6 +243,12 @@ view model =
                     div []
                         [ h2 [] [ text "ABOUT" ]
                         , p [] [ text aboutText ]
+                        , h3 [] [ text "FUTURE PLANS" ]
+                        , p [] [ text futurePlansText ]
+                        , p []
+                            [ text "If you have some ideas, please "
+                            , a [ href "https://github.com/imincik/geospatial-nix.today/issues/new", target "_blank" ] [ text "share them with us." ]
+                            ]
                         , h3 [] [ text "USED TECHNOLOGIES" ]
                         , p []
                             [ a [ href "https://github.com/imincik/geospatial-nix", target "_blank" ] [ text "Geospatial NIX" ]

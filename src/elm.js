@@ -67006,6 +67006,7 @@ var $author$project$Texts$configTemplateComment = '\n- Copy and paste configurat
 var $author$project$Texts$containerTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- container shell\n\ndocker run --rm -it shell:latest\n';
 var $author$project$Texts$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $author$project$Texts$futurePlansText = '\nWhat you see here, is only very early start of something great. Many more\nfeatures like configuration options for languages and services, geospatial\nspecific modules and user experience improvements are on the way.\n';
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
@@ -67729,6 +67730,38 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text($author$project$Texts$aboutText)
+											])),
+										A2(
+										$elm$html$Html$h3,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('FUTURE PLANS')
+											])),
+										A2(
+										$elm$html$Html$p,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$futurePlansText)
+											])),
+										A2(
+										$elm$html$Html$p,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('If you have some ideas, please '),
+												A2(
+												$elm$html$Html$a,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href('https://github.com/imincik/geospatial-nix.today/issues/new'),
+														$elm$html$Html$Attributes$target('_blank')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text('share them with us.')
+													]))
 											])),
 										A2(
 										$elm$html$Html$h3,
