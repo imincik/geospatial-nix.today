@@ -67711,6 +67711,96 @@ var $author$project$HomePage$view = function (model) {
 													[
 														$elm$html$Html$text(model.nixConfig)
 													]))
+											])),
+										A2(
+										$elm$html$Html$h2,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('ENTER ENVIRONMENT')
+											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_Nil,
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$span,
+												_List_Nil,
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$shellTemplateComment)
+													])),
+												A2(
+												$elm$html$Html$span,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('text-warning')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$shellTemplate)
+													]))
+											])),
+										A2(
+										$elm$html$Html$h2,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('LAUNCH SERVICES')
+											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_Nil,
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$span,
+												_List_Nil,
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$servicesTemplateComment)
+													])),
+												A2(
+												$elm$html$Html$span,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('text-warning')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$servicesTemplate)
+													]))
+											])),
+										A2(
+										$elm$html$Html$h2,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('RUN IN CONTAINER')
+											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_Nil,
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$span,
+												_List_Nil,
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$containerTemplateComment)
+													])),
+												A2(
+												$elm$html$Html$span,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('text-warning')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text($author$project$Texts$containerTemplate)
+													]))
 											]))
 									])) : A2(
 								$elm$html$Html$div,
@@ -67847,115 +67937,7 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$text('.')
 									]))
 							]))
-					])),
-				(!$elm$core$String$isEmpty(model.nixConfig)) ? A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('row')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$div,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('col-md-12 border bg-dark text-white py-3 my-3')
-							]),
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$h2,
-								_List_Nil,
-								_List_fromArray(
-									[
-										$elm$html$Html$text('ENTER ENVIRONMENT')
-									])),
-								A2(
-								$elm$html$Html$pre,
-								_List_Nil,
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$span,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$elm$html$Html$text($author$project$Texts$shellTemplateComment)
-											])),
-										A2(
-										$elm$html$Html$span,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('text-warning')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text($author$project$Texts$shellTemplate)
-											]))
-									])),
-								A2(
-								$elm$html$Html$h2,
-								_List_Nil,
-								_List_fromArray(
-									[
-										$elm$html$Html$text('LAUNCH SERVICES')
-									])),
-								A2(
-								$elm$html$Html$pre,
-								_List_Nil,
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$span,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$elm$html$Html$text($author$project$Texts$servicesTemplateComment)
-											])),
-										A2(
-										$elm$html$Html$span,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('text-warning')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text($author$project$Texts$servicesTemplate)
-											]))
-									])),
-								A2(
-								$elm$html$Html$h2,
-								_List_Nil,
-								_List_fromArray(
-									[
-										$elm$html$Html$text('RUN IN CONTAINER')
-									])),
-								A2(
-								$elm$html$Html$pre,
-								_List_Nil,
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$span,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$elm$html$Html$text($author$project$Texts$containerTemplateComment)
-											])),
-										A2(
-										$elm$html$Html$span,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('text-warning')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text($author$project$Texts$containerTemplate)
-											]))
-									]))
-							]))
-					])) : A2($elm$html$Html$div, _List_Nil, _List_Nil)
+					]))
 			]));
 };
 var $author$project$HomePage$main = $elm$browser$Browser$sandbox(

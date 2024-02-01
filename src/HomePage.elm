@@ -237,6 +237,12 @@ view model =
                         , pre [] [ span [] [ text initTemplateComment ], span [ class "text-warning" ] [ text initTemplate ] ]
                         , h2 [] [ text "CONFIGURATION" ]
                         , pre [] [ span [] [ text configTemplateComment ], span [ class "text-warning" ] [ text model.nixConfig ] ]
+                        , h2 [] [ text "ENTER ENVIRONMENT" ]
+                        , pre [] [ span [] [ text shellTemplateComment ], span [ class "text-warning" ] [ text shellTemplate ] ]
+                        , h2 [] [ text "LAUNCH SERVICES" ]
+                        , pre [] [ span [] [ text servicesTemplateComment ], span [ class "text-warning" ] [ text servicesTemplate ] ]
+                        , h2 [] [ text "RUN IN CONTAINER" ]
+                        , pre [] [ span [] [ text containerTemplateComment ], span [ class "text-warning" ] [ text containerTemplate ] ]
                         ]
 
                   else
@@ -268,22 +274,6 @@ view model =
                         ]
                 ]
             ]
-
-        -- usage
-        , if not (String.isEmpty model.nixConfig) then
-            div [ class "row" ]
-                [ div [ class "col-md-12 border bg-dark text-white py-3 my-3" ]
-                    [ h2 [] [ text "ENTER ENVIRONMENT" ]
-                    , pre [] [ span [] [ text shellTemplateComment ], span [ class "text-warning" ] [ text shellTemplate ] ]
-                    , h2 [] [ text "LAUNCH SERVICES" ]
-                    , pre [] [ span [] [ text servicesTemplateComment ], span [ class "text-warning" ] [ text servicesTemplate ] ]
-                    , h2 [] [ text "RUN IN CONTAINER" ]
-                    , pre [] [ span [] [ text containerTemplateComment ], span [ class "text-warning" ] [ text containerTemplate ] ]
-                    ]
-                ]
-
-          else
-            div [] []
         ]
 
 
