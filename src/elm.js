@@ -67003,7 +67003,7 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $author$project$Texts$configTemplateComment = '\n- Copy and paste configuration to geonix.nix file\n';
-var $author$project$Texts$containerTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- container shell\n\ndocker run --rm -it shell:latest\n';
+var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
 var $author$project$Texts$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $author$project$Texts$futurePlansText = '\nWhat you see here, is only very early start of something great. Many more\nfeatures like configuration options for languages and services, geospatial\nspecific modules and user experience improvements are on the way.\n';
@@ -67016,7 +67016,7 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$Texts$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli init\ngit add flake.nix geonix.nix\n';
+var $author$project$Texts$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$Texts$initTemplateComment = '\n- Run following commands to initalize new project\n';
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
@@ -67301,12 +67301,12 @@ var $author$project$HomePage$packagesHtmlList = F5(
 	});
 var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
 var $elm$html$Html$pre = _VirtualDom_node('pre');
-var $author$project$Texts$servicesTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- up\n';
+var $author$project$Texts$servicesTemplate = '\nnix run .#geonixcli -- up\n';
 var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
 var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My Geospatial NIX project environment"\ngit push\n';
 var $author$project$Texts$shareTemplateComment = '\n- Add environment lock file to git and push project to repository\n';
 var $author$project$Texts$shareTemplateComment2 = '\n- Now, all your project collaborators can use exactly same environment\n  containing exactly same versions of software\n';
-var $author$project$Texts$shellTemplate = '\nnix run github:imincik/geospatial-nix#geonixcli -- shell\n';
+var $author$project$Texts$shellTemplate = '\nnix run .#geonixcli -- shell\n';
 var $author$project$Texts$shellTemplateComment = '\n- Run following command to enter shell environment\n';
 var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
 var $elm$html$Html$textarea = _VirtualDom_node('textarea');

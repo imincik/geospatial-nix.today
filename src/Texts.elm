@@ -42,7 +42,7 @@ initTemplate =
 mkdir my-project && cd my-project
 
 git init
-nix run github:imincik/geospatial-nix#geonixcli init
+nix run github:imincik/geospatial-nix#geonixcli -- init
 git add flake.nix geonix.nix
 """
 
@@ -61,7 +61,7 @@ shellTemplateComment =
 
 shellTemplate =
     """
-nix run github:imincik/geospatial-nix#geonixcli -- shell
+nix run .#geonixcli -- shell
 """
 
 
@@ -73,7 +73,7 @@ servicesTemplateComment =
 
 servicesTemplate =
     """
-nix run github:imincik/geospatial-nix#geonixcli -- up
+nix run .#geonixcli -- up
 """
 
 
@@ -85,8 +85,7 @@ containerTemplateComment =
 
 containerTemplate =
     """
-nix run github:imincik/geospatial-nix#geonixcli -- container shell
-
+nix run .#geonixcli -- container shell
 docker run --rm -it shell:latest
 """
 
