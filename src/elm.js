@@ -66019,8 +66019,9 @@ var $author$project$HomePage$initialModel = {
 	filterPackages: '',
 	filterPgPackages: '',
 	filterPyPackages: '',
-	name: '',
+	name: 'My geospatial environment',
 	nixConfig: '',
+	nixInit: '',
 	postgresEnabled: 'false',
 	pythonEnabled: 'false',
 	selectedPackages: _List_Nil,
@@ -66756,6 +66757,18 @@ var $elm$browser$Browser$sandbox = function (impl) {
 		});
 };
 var $author$project$NixConfig$configTemplate = '\n{ inputs, config, pkgs, lib, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\nin {\n  name = "<NAME>";\n\n  packages = [ <PACKAGES> ];\n\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);\n  };\n\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: [ <PG-PACKAGES> ];\n  };\n\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n}\n';
+var $elm$core$String$replace = F3(
+	function (before, after, string) {
+		return A2(
+			$elm$core$String$join,
+			after,
+			A2($elm$core$String$split, before, string));
+	});
+var $elm$core$String$toLower = _String_toLower;
+var $author$project$HomePage$environmentName = function (name) {
+	return $elm$core$String$toLower(
+		A3($elm$core$String$replace, ' ', '-', name));
+};
 var $author$project$HomePage$packagesListToNamesList = function (packages) {
 	return A2(
 		$elm$core$List$map,
@@ -66764,14 +66777,7 @@ var $author$project$HomePage$packagesListToNamesList = function (packages) {
 		},
 		packages);
 };
-var $elm$core$String$replace = F3(
-	function (before, after, string) {
-		return A2(
-			$elm$core$String$join,
-			after,
-			A2($elm$core$String$split, before, string));
-	});
-var $author$project$HomePage$buildConfig = function (model) {
+var $author$project$HomePage$buildNixConfig = function (model) {
 	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPyPackages);
 	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPgPackages);
 	var selectedPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPackages);
@@ -66799,7 +66805,19 @@ var $author$project$HomePage$buildConfig = function (model) {
 							$elm$core$String$replace,
 							'<PACKAGES>',
 							A2($elm$core$String$join, ' ', selectedPackages),
-							A3($elm$core$String$replace, '<NAME>', model.name, $author$project$NixConfig$configTemplate)))))));
+							A3(
+								$elm$core$String$replace,
+								'<NAME>',
+								$author$project$HomePage$environmentName(model.name),
+								$author$project$NixConfig$configTemplate)))))));
+};
+var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
+var $author$project$HomePage$buildNixInit = function (model) {
+	return A3(
+		$elm$core$String$replace,
+		'<NAME>',
+		$author$project$HomePage$environmentName(model.name),
+		$author$project$Texts$initTemplate);
 };
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
@@ -66959,7 +66977,8 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						nixConfig: $author$project$HomePage$buildConfig(model)
+						nixConfig: $author$project$HomePage$buildNixConfig(model),
+						nixInit: $author$project$HomePage$buildNixInit(model)
 					});
 		}
 	});
@@ -66972,7 +66991,7 @@ var $author$project$HomePage$AddPgPackage = function (a) {
 var $author$project$HomePage$AddPyPackage = function (a) {
 	return {$: 'AddPyPackage', a: a};
 };
-var $author$project$HomePage$BuildConfig = {$: 'BuildConfig'};
+var $author$project$HomePage$CreateEnvironment = {$: 'CreateEnvironment'};
 var $author$project$HomePage$EnablePostgres = {$: 'EnablePostgres'};
 var $author$project$HomePage$EnablePython = {$: 'EnablePython'};
 var $author$project$HomePage$FilterPackages = function (a) {
@@ -67016,7 +67035,6 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$Texts$initTemplate = '\nmkdir my-project && cd my-project\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$Texts$initTemplateComment = '\n- Run following commands to initalize new project\n';
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
@@ -67303,7 +67321,7 @@ var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProp
 var $elm$html$Html$pre = _VirtualDom_node('pre');
 var $author$project$Texts$servicesTemplate = '\nnix run .#geonixcli -- up\n';
 var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
-var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My Geospatial NIX project environment"\ngit push\n';
+var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My geospatial environment"\ngit push\n';
 var $author$project$Texts$shareTemplateComment = '\n- Add environment lock file to git and push project to repository\n';
 var $author$project$Texts$shareTemplateComment2 = '\n- Now, all your project collaborators can use exactly same environment\n  containing exactly same versions of software\n';
 var $author$project$Texts$shellTemplate = '\nnix run .#geonixcli -- shell\n';
@@ -67404,7 +67422,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$class('btn btn-primary btn-lg'),
-												$elm$html$Html$Events$onClick($author$project$HomePage$BuildConfig)
+												$elm$html$Html$Events$onClick($author$project$HomePage$CreateEnvironment)
 											]),
 										_List_fromArray(
 											[
@@ -67717,7 +67735,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text($author$project$Texts$initTemplate)
+														$elm$html$Html$text(model.nixInit)
 													]))
 											])),
 										A2(
