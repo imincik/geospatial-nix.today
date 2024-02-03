@@ -39,7 +39,7 @@ initTemplateComment =
 
 initTemplate =
     """
-mkdir my-project && cd my-project
+mkdir <NAME> && cd <NAME>
 
 git init
 nix run github:imincik/geospatial-nix#geonixcli -- init
@@ -99,7 +99,7 @@ shareTemplateComment =
 shareTemplate =
     """
 git add flake.lock
-git commit -m "My Geospatial NIX project environment"
+git commit -m "My geospatial environment"
 git push
 """
 

@@ -117,13 +117,14 @@ type alias Model =
 
     -- config
     , config : Config
+    , nixInit : String
     , nixConfig : String
     }
 
 
 initialModel : Model
 initialModel =
-    { name = ""
+    { name = "My geospatial environment"
 
     -- packages
     , availablePackages = allPackages
@@ -162,6 +163,7 @@ initialModel =
             }
         , enterShell = ""
         }
+    , nixInit = ""
     , nixConfig = ""
     }
 
@@ -187,7 +189,7 @@ view model =
             [ div [ class "col-md-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
                     [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.name, onInput UpdateName ] []
-                    , button [ class "btn btn-primary btn-lg", onClick BuildConfig ] [ text "Create" ]
+                    , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
                 , div [ class "packages" ]
                     [ hr [] []
@@ -243,7 +245,7 @@ view model =
                         [ h2 [] [ text "INSTALL NIX" ]
                         , pre [] [ span [] [ text installNixTemplateComment ], span [ class "text-warning" ] [ text installNixTemplate ] ]
                         , h2 [] [ text "START PROJECT" ]
-                        , pre [] [ span [] [ text initTemplateComment ], span [ class "text-warning" ] [ text initTemplate ] ]
+                        , pre [] [ span [] [ text initTemplateComment ], span [ class "text-warning" ] [ text model.nixInit ] ]
                         , h2 [] [ text "CONFIGURATION" ]
                         , pre [] [ span [] [ text configTemplateComment ], span [ class "text-warning" ] [ text model.nixConfig ] ]
                         , h2 [] [ text "ENTER ENVIRONMENT" ]
@@ -338,6 +340,11 @@ morePackagesButton filterLimit =
         ]
 
 
+environmentName : String -> String
+environmentName name =
+    String.toLower (String.replace " " "-" name)
+
+
 packagesListToNamesList : List Package -> List String
 packagesListToNamesList packages =
     List.map (\item -> Tuple.first item) packages
@@ -355,15 +362,20 @@ type Msg
     | FilterPyPackages String
     | FilterPgPackages String
     | UpdateFilterLimit
-    | BuildConfig
+    | CreateEnvironment
 
 
 
 -- UPDATE
 
 
-buildConfig : Model -> String
-buildConfig model =
+buildNixInit : Model -> String
+buildNixInit model =
+    String.replace "<NAME>" (environmentName model.name) initTemplate
+
+
+buildNixConfig : Model -> String
+buildNixConfig model =
     let
         selectedPackages =
             packagesListToNamesList model.selectedPackages
@@ -374,7 +386,7 @@ buildConfig model =
         selectedPgPackages =
             packagesListToNamesList model.selectedPgPackages
     in
-    String.replace "<NAME>" model.name configTemplate
+    String.replace "<NAME>" (environmentName model.name) configTemplate
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
         |> String.replace "<PYTHON-ENABLED>" model.pythonEnabled
         |> String.replace "<PY-PACKAGES>" (String.join " " selectedPyPackages)
@@ -453,8 +465,8 @@ update msg model =
                         5
             }
 
-        BuildConfig ->
-            { model | nixConfig = buildConfig model }
+        CreateEnvironment ->
+            { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
 
 
 
