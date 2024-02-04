@@ -7,7 +7,7 @@ import GeoPythonPackages
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-import NixConfig exposing (configTemplate)
+import NixConfig
 import Packages
 import PostgresqlPackages
 import PythonPackages
@@ -340,6 +340,15 @@ morePackagesButton filterLimit =
         ]
 
 
+optionalString : Bool -> String -> String
+optionalString condition string =
+    if condition then
+        string
+
+    else
+        ""
+
+
 environmentName : String -> String
 environmentName name =
     String.toLower (String.replace " " "-" name)
@@ -385,13 +394,23 @@ buildNixConfig model =
 
         selectedPgPackages =
             packagesListToNamesList model.selectedPgPackages
+
+        nixConfigBody =
+            NixConfig.configNameTemplate
+                ++ NixConfig.configPackagesTemplate
+                ++ optionalString (model.pythonEnabled == "true") NixConfig.configPythonTemplate
+                ++ optionalString (model.postgresEnabled == "true") NixConfig.configPostgresTemplate
+                ++ optionalString (model.config.enterShell /= "") NixConfig.configEnterShellTemplate
+
+        nixConfig =
+            String.replace "<CONFIG-BODY>" nixConfigBody NixConfig.configTemplate
     in
-    String.replace "<NAME>" (environmentName model.name) configTemplate
+    String.replace "<NAME>" (environmentName model.name) nixConfig
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
         |> String.replace "<PYTHON-ENABLED>" model.pythonEnabled
-        |> String.replace "<PY-PACKAGES>" (String.join " " selectedPyPackages)
+        |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
         |> String.replace "<POSTGRES-ENABLED>" model.postgresEnabled
-        |> String.replace "<PG-PACKAGES>" (String.join " " selectedPgPackages)
+        |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<SHELL-HOOK>" model.config.enterShell
 
 

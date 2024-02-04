@@ -66756,7 +66756,12 @@ var $elm$browser$Browser$sandbox = function (impl) {
 			view: impl.view
 		});
 };
-var $author$project$NixConfig$configTemplate = '\n{ inputs, config, pkgs, lib, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\nin {\n  name = "<NAME>";\n\n  packages = [ <PACKAGES> ];\n\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);\n  };\n\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: [ <PG-PACKAGES> ];\n  };\n\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n}\n';
+var $author$project$NixConfig$configEnterShellTemplate = '\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n';
+var $author$project$NixConfig$configNameTemplate = '\n  name = "<NAME>";\n';
+var $author$project$NixConfig$configPackagesTemplate = '\n  packages = [ <PACKAGES> ];\n';
+var $author$project$NixConfig$configPostgresTemplate = '\n  services.postgres = {\n    enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;\n    extensions = e: [ <POSTGRES-PACKAGES> ];\n  };\n';
+var $author$project$NixConfig$configPythonTemplate = '\n  languages.python = {\n    enable = <PYTHON-ENABLED>;\n    package = pkgs.python3.withPackages (p: [ <PYTHON-PACKAGES> ]);\n  };\n';
+var $author$project$NixConfig$configTemplate = '\n{ inputs, config, lib, pkgs, ... }:\n\nlet\n  geopkgs = inputs.geonix.packages.${pkgs.system};\n\nin {\n  <CONFIG-BODY>\n}\n';
 var $elm$core$String$replace = F3(
 	function (before, after, string) {
 		return A2(
@@ -66769,6 +66774,11 @@ var $author$project$HomePage$environmentName = function (name) {
 	return $elm$core$String$toLower(
 		A3($elm$core$String$replace, ' ', '-', name));
 };
+var $elm$core$Basics$neq = _Utils_notEqual;
+var $author$project$HomePage$optionalString = F2(
+	function (condition, string) {
+		return condition ? string : '';
+	});
 var $author$project$HomePage$packagesListToNamesList = function (packages) {
 	return A2(
 		$elm$core$List$map,
@@ -66781,13 +66791,23 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPyPackages);
 	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPgPackages);
 	var selectedPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPackages);
+	var nixConfigBody = _Utils_ap(
+		$author$project$NixConfig$configNameTemplate,
+		_Utils_ap(
+			$author$project$NixConfig$configPackagesTemplate,
+			_Utils_ap(
+				A2($author$project$HomePage$optionalString, model.pythonEnabled === 'true', $author$project$NixConfig$configPythonTemplate),
+				_Utils_ap(
+					A2($author$project$HomePage$optionalString, model.postgresEnabled === 'true', $author$project$NixConfig$configPostgresTemplate),
+					A2($author$project$HomePage$optionalString, model.config.enterShell !== '', $author$project$NixConfig$configEnterShellTemplate)))));
+	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return A3(
 		$elm$core$String$replace,
 		'<SHELL-HOOK>',
 		model.config.enterShell,
 		A3(
 			$elm$core$String$replace,
-			'<PG-PACKAGES>',
+			'<POSTGRES-PACKAGES>',
 			A2($elm$core$String$join, ' ', selectedPgPackages),
 			A3(
 				$elm$core$String$replace,
@@ -66795,7 +66815,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 				model.postgresEnabled,
 				A3(
 					$elm$core$String$replace,
-					'<PY-PACKAGES>',
+					'<PYTHON-PACKAGES>',
 					A2($elm$core$String$join, ' ', selectedPyPackages),
 					A3(
 						$elm$core$String$replace,
@@ -66809,7 +66829,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 								$elm$core$String$replace,
 								'<NAME>',
 								$author$project$HomePage$environmentName(model.name),
-								$author$project$NixConfig$configTemplate)))))));
+								nixConfig)))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$HomePage$buildNixInit = function (model) {
@@ -66860,7 +66880,6 @@ var $elm$core$List$member = F2(
 			},
 			xs);
 	});
-var $elm$core$Basics$neq = _Utils_notEqual;
 var $elm$core$Basics$not = _Basics_not;
 var $author$project$HomePage$update = F2(
 	function (msg, model) {
