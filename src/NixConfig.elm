@@ -1,30 +1,52 @@
-module NixConfig exposing (configTemplate)
+module NixConfig exposing (configEnterShellTemplate, configNameTemplate, configPackagesTemplate, configPostgresTemplate, configPythonTemplate, configTemplate)
 
 
 configTemplate =
     """
-{ inputs, config, pkgs, lib, ... }:
+{ inputs, config, lib, pkgs, ... }:
 
 let
   geopkgs = inputs.geonix.packages.${pkgs.system};
 
 in {
+  <CONFIG-BODY>
+}
+"""
+
+
+configNameTemplate =
+    """
   name = "<NAME>";
+"""
 
+
+configPackagesTemplate =
+    """
   packages = [ <PACKAGES> ];
+"""
 
+
+configPythonTemplate =
+    """
   languages.python = {
     enable = <PYTHON-ENABLED>;
-    package = pkgs.python3.withPackages (p: [ <PY-PACKAGES> ]);
+    package = pkgs.python3.withPackages (p: [ <PYTHON-PACKAGES> ]);
   };
+"""
 
+
+configPostgresTemplate =
+    """
   services.postgres = {
     enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;
-    extensions = e: [ <PG-PACKAGES> ];
+    extensions = e: [ <POSTGRES-PACKAGES> ];
   };
+"""
 
+
+configEnterShellTemplate =
+    """
   enterShell = ''
     <SHELL-HOOK>
   '';
-}
 """
