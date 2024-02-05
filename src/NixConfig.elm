@@ -1,4 +1,4 @@
-module NixConfig exposing (configEnterShellTemplate, configNameTemplate, configPackagesTemplate, configPostgresTemplate, configPythonTemplate, configTemplate)
+module NixConfig exposing (configCustomProcessTemplate, configEnterShellTemplate, configNameTemplate, configPackagesTemplate, configPostgresTemplate, configPythonTemplate, configTemplate)
 
 
 configTemplate =
@@ -41,6 +41,14 @@ configPostgresTemplate =
     enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;
     extensions = e: [ <POSTGRES-PACKAGES> ];
   };
+"""
+
+
+configCustomProcessTemplate =
+    """
+  processes.custom.exec = ''
+    <CUSTOM-PROCESS>
+  '';
 """
 
 

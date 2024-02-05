@@ -77,6 +77,22 @@ type alias Services =
 
 
 
+-- processes
+
+
+type alias ProcessCustom =
+    { exec : String
+    }
+
+
+type alias Processes =
+    { custom : ProcessCustom
+
+    -- , xy: ProcessXY
+    }
+
+
+
 -- shell hook
 
 
@@ -88,6 +104,7 @@ type alias Config =
     { packages : Packages
     , languages : Languages
     , services : Services
+    , processes : Processes
     , enterShell : EnterShell
     }
 
@@ -161,6 +178,11 @@ initialModel =
                 , packages = []
                 }
             }
+        , processes =
+            { custom =
+                { exec = ""
+                }
+            }
         , enterShell = ""
         }
     , nixInit = ""
@@ -230,11 +252,16 @@ view model =
                         [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
                         , morePackagesButton model.filterLimit
                         ]
+                    , hr [] []
+                    , p [ class "fw-bold fs-3" ] [ text "custom process" ]
+                    , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.config.processes.custom.exec, onInput AddCustomProcess ] []
+                    , br [] []
                     ]
                 , div [ class "shell-hook" ]
-                    [ hr [] []
+                    [ p [ class "fw-bold fs-2" ] [ text "ON ENTRY" ]
+                    , hr [] []
                     , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                    , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput UpdateShellHook ] []
+                    , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput AddShellHook ] []
                     ]
                 ]
 
@@ -366,7 +393,8 @@ type Msg
     | AddPyPackage Package
     | EnablePostgres
     | AddPgPackage Package
-    | UpdateShellHook String
+    | AddCustomProcess String
+    | AddShellHook String
     | FilterPackages String
     | FilterPyPackages String
     | FilterPgPackages String
@@ -400,6 +428,7 @@ buildNixConfig model =
                 ++ NixConfig.configPackagesTemplate
                 ++ optionalString (model.pythonEnabled == "true") NixConfig.configPythonTemplate
                 ++ optionalString (model.postgresEnabled == "true") NixConfig.configPostgresTemplate
+                ++ optionalString (model.config.processes.custom.exec /= "") NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.config.enterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
@@ -411,6 +440,7 @@ buildNixConfig model =
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
         |> String.replace "<POSTGRES-ENABLED>" model.postgresEnabled
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
+        |> String.replace "<CUSTOM-PROCESS>" model.config.processes.custom.exec
         |> String.replace "<SHELL-HOOK>" model.config.enterShell
 
 
@@ -470,7 +500,10 @@ update msg model =
         FilterPgPackages pkg ->
             { model | filterPgPackages = pkg }
 
-        UpdateShellHook script ->
+        AddCustomProcess script ->
+            { model | config = (\p -> { p | processes = { custom = { exec = script } } }) model.config }
+
+        AddShellHook script ->
             { model | config = (\p -> { p | enterShell = script }) model.config }
 
         UpdateFilterLimit ->
