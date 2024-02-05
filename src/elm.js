@@ -66011,6 +66011,9 @@ var $author$project$HomePage$initialModel = {
 			python: {enabled: false, packages: _List_Nil}
 		},
 		packages: _List_Nil,
+		processes: {
+			custom: {exec: ''}
+		},
 		services: {
 			postgres: {enabled: false, packages: _List_Nil}
 		}
@@ -66756,6 +66759,7 @@ var $elm$browser$Browser$sandbox = function (impl) {
 			view: impl.view
 		});
 };
+var $author$project$NixConfig$configCustomProcessTemplate = '\n  processes.custom.exec = \'\'\n    <CUSTOM-PROCESS>\n  \'\';\n';
 var $author$project$NixConfig$configEnterShellTemplate = '\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n';
 var $author$project$NixConfig$configNameTemplate = '\n  name = "<NAME>";\n';
 var $author$project$NixConfig$configPackagesTemplate = '\n  packages = [ <PACKAGES> ];\n';
@@ -66799,7 +66803,9 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 				A2($author$project$HomePage$optionalString, model.pythonEnabled === 'true', $author$project$NixConfig$configPythonTemplate),
 				_Utils_ap(
 					A2($author$project$HomePage$optionalString, model.postgresEnabled === 'true', $author$project$NixConfig$configPostgresTemplate),
-					A2($author$project$HomePage$optionalString, model.config.enterShell !== '', $author$project$NixConfig$configEnterShellTemplate)))));
+					_Utils_ap(
+						A2($author$project$HomePage$optionalString, model.config.processes.custom.exec !== '', $author$project$NixConfig$configCustomProcessTemplate),
+						A2($author$project$HomePage$optionalString, model.config.enterShell !== '', $author$project$NixConfig$configEnterShellTemplate))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return A3(
 		$elm$core$String$replace,
@@ -66807,29 +66813,33 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 		model.config.enterShell,
 		A3(
 			$elm$core$String$replace,
-			'<POSTGRES-PACKAGES>',
-			A2($elm$core$String$join, ' ', selectedPgPackages),
+			'<CUSTOM-PROCESS>',
+			model.config.processes.custom.exec,
 			A3(
 				$elm$core$String$replace,
-				'<POSTGRES-ENABLED>',
-				model.postgresEnabled,
+				'<POSTGRES-PACKAGES>',
+				A2($elm$core$String$join, ' ', selectedPgPackages),
 				A3(
 					$elm$core$String$replace,
-					'<PYTHON-PACKAGES>',
-					A2($elm$core$String$join, ' ', selectedPyPackages),
+					'<POSTGRES-ENABLED>',
+					model.postgresEnabled,
 					A3(
 						$elm$core$String$replace,
-						'<PYTHON-ENABLED>',
-						model.pythonEnabled,
+						'<PYTHON-PACKAGES>',
+						A2($elm$core$String$join, ' ', selectedPyPackages),
 						A3(
 							$elm$core$String$replace,
-							'<PACKAGES>',
-							A2($elm$core$String$join, ' ', selectedPackages),
+							'<PYTHON-ENABLED>',
+							model.pythonEnabled,
 							A3(
 								$elm$core$String$replace,
-								'<NAME>',
-								$author$project$HomePage$environmentName(model.name),
-								nixConfig)))))));
+								'<PACKAGES>',
+								A2($elm$core$String$join, ' ', selectedPackages),
+								A3(
+									$elm$core$String$replace,
+									'<NAME>',
+									$author$project$HomePage$environmentName(model.name),
+									nixConfig))))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$HomePage$buildNixInit = function (model) {
@@ -66975,7 +66985,22 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{filterPgPackages: pkg});
-			case 'UpdateShellHook':
+			case 'AddCustomProcess':
+				var script = msg.a;
+				return _Utils_update(
+					model,
+					{
+						config: function (p) {
+							return _Utils_update(
+								p,
+								{
+									processes: {
+										custom: {exec: script}
+									}
+								});
+						}(model.config)
+					});
+			case 'AddShellHook':
 				var script = msg.a;
 				return _Utils_update(
 					model,
@@ -67001,6 +67026,9 @@ var $author$project$HomePage$update = F2(
 					});
 		}
 	});
+var $author$project$HomePage$AddCustomProcess = function (a) {
+	return {$: 'AddCustomProcess', a: a};
+};
 var $author$project$HomePage$AddPackage = function (a) {
 	return {$: 'AddPackage', a: a};
 };
@@ -67009,6 +67037,9 @@ var $author$project$HomePage$AddPgPackage = function (a) {
 };
 var $author$project$HomePage$AddPyPackage = function (a) {
 	return {$: 'AddPyPackage', a: a};
+};
+var $author$project$HomePage$AddShellHook = function (a) {
+	return {$: 'AddShellHook', a: a};
 };
 var $author$project$HomePage$CreateEnvironment = {$: 'CreateEnvironment'};
 var $author$project$HomePage$EnablePostgres = {$: 'EnablePostgres'};
@@ -67025,11 +67056,9 @@ var $author$project$HomePage$FilterPyPackages = function (a) {
 var $author$project$HomePage$UpdateName = function (a) {
 	return {$: 'UpdateName', a: a};
 };
-var $author$project$HomePage$UpdateShellHook = function (a) {
-	return {$: 'UpdateShellHook', a: a};
-};
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environment,\nlovely built to work on any modern Linux machine.\n';
+var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -67648,7 +67677,29 @@ var $author$project$HomePage$view = function (model) {
 												$elm$core$List$length(model.availablePgPackages),
 												$elm$core$List$length(model.selectedPgPackages)),
 												$author$project$HomePage$morePackagesButton(model.filterLimit)
-											]))
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('fw-bold fs-3')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('custom process')
+											])),
+										A2(
+										$elm$html$Html$textarea,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('form-control form-control-lg'),
+												$elm$html$Html$Attributes$placeholder('python -m http.server'),
+												$elm$html$Html$Attributes$value(model.config.processes.custom.exec),
+												$elm$html$Html$Events$onInput($author$project$HomePage$AddCustomProcess)
+											]),
+										_List_Nil),
+										A2($elm$html$Html$br, _List_Nil, _List_Nil)
 									])),
 								A2(
 								$elm$html$Html$div,
@@ -67658,6 +67709,16 @@ var $author$project$HomePage$view = function (model) {
 									]),
 								_List_fromArray(
 									[
+										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('fw-bold fs-2')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('ON ENTRY')
+											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$p,
@@ -67676,7 +67737,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												$elm$html$Html$Attributes$placeholder('echo hello'),
 												$elm$html$Html$Attributes$value(model.config.enterShell),
-												$elm$html$Html$Events$onInput($author$project$HomePage$UpdateShellHook)
+												$elm$html$Html$Events$onInput($author$project$HomePage$AddShellHook)
 											]),
 										_List_Nil)
 									]))
