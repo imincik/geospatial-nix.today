@@ -66029,7 +66029,8 @@ var $author$project$HomePage$initialModel = {
 	pythonEnabled: 'false',
 	selectedPackages: _List_Nil,
 	selectedPgPackages: _List_Nil,
-	selectedPyPackages: _List_Nil
+	selectedPyPackages: _List_Nil,
+	ui: {activeCategoryTab: 'packages'}
 };
 var $elm$core$Result$Err = function (a) {
 	return {$: 'Err', a: a};
@@ -66894,6 +66895,17 @@ var $elm$core$Basics$not = _Basics_not;
 var $author$project$HomePage$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
+			case 'SetActiveCategoryTab':
+				var tab = msg.a;
+				return _Utils_update(
+					model,
+					{
+						ui: function (p) {
+							return _Utils_update(
+								p,
+								{activeCategoryTab: tab});
+						}(model.ui)
+					});
 			case 'UpdateName':
 				var name = msg.a;
 				return _Utils_update(
@@ -67087,7 +67099,9 @@ var $author$project$Texts$initTemplateComment = '\n- Run following commands to i
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
 var $author$project$Texts$installNixTemplateComment = '\n- Install Nix (if not already installed)\n';
-var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
+var $author$project$HomePage$SetActiveCategoryTab = function (a) {
+	return {$: 'SetActiveCategoryTab', a: a};
+};
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 'Normal', a: a};
 };
@@ -67107,6 +67121,29 @@ var $elm$html$Html$Events$onClick = function (msg) {
 };
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$HomePage$mainCategoryHtmlTab = F2(
+	function (buttons, activeButton) {
+		var buttonItem = function (item) {
+			return A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class(
+						'btn btn-lg ' + (_Utils_eq(
+							$elm$core$String$toLower(item),
+							activeButton) ? 'btn-dark' : 'btn-secondary')),
+						$elm$html$Html$Events$onClick(
+						$author$project$HomePage$SetActiveCategoryTab(
+							$elm$core$String$toLower(item)))
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(item)
+					]));
+		};
+		return A2($elm$core$List$map, buttonItem, buttons);
+	});
+var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
 var $author$project$HomePage$morePackagesButton = function (filterLimit) {
 	return A2(
 		$elm$html$Html$button,
@@ -67479,6 +67516,24 @@ var $author$project$HomePage$view = function (model) {
 									])),
 								A2(
 								$elm$html$Html$div,
+								_List_Nil,
+								_List_fromArray(
+									[
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil)
+									])),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('d-flex btn-group align-items-center')
+									]),
+								A2(
+									$author$project$HomePage$mainCategoryHtmlTab,
+									_List_fromArray(
+										['PACKAGES', 'LANGUAGES', 'SERVICES', 'OTHER']),
+									model.ui.activeCategoryTab)),
+								(model.ui.activeCategoryTab === 'packages') ? A2(
+								$elm$html$Html$div,
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$class('packages')
@@ -67522,8 +67577,8 @@ var $author$project$HomePage$view = function (model) {
 												$elm$core$List$length(model.selectedPackages)),
 												$author$project$HomePage$morePackagesButton(model.filterLimit)
 											]))
-									])),
-								A2(
+									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
+								(model.ui.activeCategoryTab === 'languages') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67531,16 +67586,6 @@ var $author$project$HomePage$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										A2(
-										$elm$html$Html$p,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('fw-bold fs-2')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text('LANGUAGES')
-											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$p,
@@ -67600,8 +67645,8 @@ var $author$project$HomePage$view = function (model) {
 												$elm$core$List$length(model.selectedPyPackages)),
 												$author$project$HomePage$morePackagesButton(model.filterLimit)
 											]))
-									])),
-								A2(
+									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
+								(model.ui.activeCategoryTab === 'services') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67609,16 +67654,6 @@ var $author$project$HomePage$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										A2(
-										$elm$html$Html$p,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('fw-bold fs-2')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text('SERVICES')
-											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$p,
@@ -67700,8 +67735,8 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_Nil),
 										A2($elm$html$Html$br, _List_Nil, _List_Nil)
-									])),
-								A2(
+									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
+								(model.ui.activeCategoryTab === 'other') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67709,16 +67744,6 @@ var $author$project$HomePage$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										A2(
-										$elm$html$Html$p,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('fw-bold fs-2')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text('ON ENTRY')
-											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$p,
@@ -67740,7 +67765,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Events$onInput($author$project$HomePage$AddShellHook)
 											]),
 										_List_Nil)
-									]))
+									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil)
 							])),
 						A2(
 						$elm$html$Html$div,

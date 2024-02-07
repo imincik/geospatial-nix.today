@@ -109,6 +109,15 @@ type alias Config =
     }
 
 
+
+-- ui
+
+
+type alias UI =
+    { activeCategoryTab : String
+    }
+
+
 type alias Model =
     { name : String
 
@@ -136,6 +145,7 @@ type alias Model =
     , config : Config
     , nixInit : String
     , nixConfig : String
+    , ui : UI
     }
 
 
@@ -187,6 +197,11 @@ initialModel =
         }
     , nixInit = ""
     , nixConfig = ""
+
+    -- ui
+    , ui =
+        { activeCategoryTab = "packages"
+        }
     }
 
 
@@ -206,63 +221,91 @@ view model =
                 ]
             ]
 
-        -- options
+        -- configuration options
         , div [ class "row" ]
             [ div [ class "col-md-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
                     [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.name, onInput UpdateName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
-                , div [ class "packages" ]
-                    [ hr [] []
-                    , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
-                        [ text "packages"
-                        , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
+
+                -- separator
+                , div [] [ hr [] [] ]
+
+                -- tabs
+                , div [ class "d-flex btn-group align-items-center" ]
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.ui.activeCategoryTab)
+
+                -- packages
+                , if model.ui.activeCategoryTab == "packages" then
+                    div [ class "packages" ]
+                        [ hr [] []
+                        , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                            [ text "packages"
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
+                            ]
+                        , packagesHtmlList model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
+                        , p [ class "text-secondary" ]
+                            [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
+                            , morePackagesButton model.filterLimit
+                            ]
                         ]
-                    , packagesHtmlList model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
-                    , p [ class "text-secondary" ]
-                        [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
-                        , morePackagesButton model.filterLimit
+
+                  else
+                    div [] []
+
+                -- languages
+                , if model.ui.activeCategoryTab == "languages" then
+                    div [ class "languages" ]
+                        [ hr [] []
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text model.pythonEnabled ] ]
+                        , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                            [ text "packages"
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
+                            ]
+                        , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
+                        , p [ class "text-secondary" ]
+                            [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
+                            , morePackagesButton model.filterLimit
+                            ]
                         ]
-                    ]
-                , div [ class "languages" ]
-                    [ p [ class "fw-bold fs-2" ] [ text "LANGUAGES" ]
-                    , hr [] []
-                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text model.pythonEnabled ] ]
-                    , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
-                        [ text "packages"
-                        , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
+
+                  else
+                    div [] []
+
+                -- services
+                , if model.ui.activeCategoryTab == "services" then
+                    div [ class "services" ]
+                        [ hr [] []
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text model.postgresEnabled ] ]
+                        , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                            [ text "packages"
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
+                            ]
+                        , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
+                        , p [ class "text-secondary" ]
+                            [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
+                            , morePackagesButton model.filterLimit
+                            ]
+                        , hr [] []
+                        , p [ class "fw-bold fs-3" ] [ text "custom process" ]
+                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.config.processes.custom.exec, onInput AddCustomProcess ] []
+                        , br [] []
                         ]
-                    , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
-                    , p [ class "text-secondary" ]
-                        [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
-                        , morePackagesButton model.filterLimit
+
+                  else
+                    div [] []
+
+                -- other
+                , if model.ui.activeCategoryTab == "other" then
+                    div [ class "shell-hook" ]
+                        [ hr [] []
+                        , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
+                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput AddShellHook ] []
                         ]
-                    ]
-                , div [ class "services" ]
-                    [ p [ class "fw-bold fs-2" ] [ text "SERVICES" ]
-                    , hr [] []
-                    , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text model.postgresEnabled ] ]
-                    , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
-                        [ text "packages"
-                        , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
-                        ]
-                    , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
-                    , p [ class "text-secondary" ]
-                        [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
-                        , morePackagesButton model.filterLimit
-                        ]
-                    , hr [] []
-                    , p [ class "fw-bold fs-3" ] [ text "custom process" ]
-                    , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.config.processes.custom.exec, onInput AddCustomProcess ] []
-                    , br [] []
-                    ]
-                , div [ class "shell-hook" ]
-                    [ p [ class "fw-bold fs-2" ] [ text "ON ENTRY" ]
-                    , hr [] []
-                    , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                    , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput AddShellHook ] []
-                    ]
+
+                  else
+                    div [] []
                 ]
 
             -- configuration
@@ -315,6 +358,28 @@ view model =
                 ]
             ]
         ]
+
+
+mainCategoryHtmlTab : List String -> String -> List (Html Msg)
+mainCategoryHtmlTab buttons activeButton =
+    let
+        buttonItem =
+            \item ->
+                button
+                    [ class
+                        ("btn btn-lg "
+                            ++ (if String.toLower item == activeButton then
+                                    "btn-dark"
+
+                                else
+                                    "btn-secondary"
+                               )
+                        )
+                    , onClick (SetActiveCategoryTab (String.toLower item))
+                    ]
+                    [ text item ]
+    in
+    List.map buttonItem buttons
 
 
 packagesHtmlList : List Package -> List Package -> String -> Int -> (Package -> Msg) -> Html Msg
@@ -387,7 +452,8 @@ packagesListToNamesList packages =
 
 
 type Msg
-    = UpdateName String
+    = SetActiveCategoryTab String
+    | UpdateName String
     | AddPackage Package
     | EnablePython
     | AddPyPackage Package
@@ -447,6 +513,9 @@ buildNixConfig model =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
+        SetActiveCategoryTab tab ->
+            { model | ui = (\p -> { p | activeCategoryTab = tab }) model.ui }
+
         UpdateName name ->
             { model | name = name }
 
