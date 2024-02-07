@@ -67458,11 +67458,11 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$span,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('fs-2 text-decoration-underline text-secondary')
+												$elm$html$Html$Attributes$class('fs-2 text-secondary')
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('the environment builder')
+												$elm$html$Html$text('create, use and deploy today ...')
 											]))
 									]))
 							]))

@@ -216,7 +216,7 @@ view model =
             [ div [ class "col-md-12 border fw-bold fs-1 py-3 my-3" ]
                 [ p []
                     [ span [ style "margin-right" "10px" ] [ text "GEOSPATIAL NIX" ]
-                    , span [ class "fs-2 text-decoration-underline text-secondary" ] [ text "the environment builder" ]
+                    , span [ class "fs-2 text-secondary" ] [ text "create, use and deploy today ..." ]
                     ]
                 ]
             ]
