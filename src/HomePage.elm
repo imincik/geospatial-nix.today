@@ -213,7 +213,7 @@ view : Model -> Html Msg
 view model =
     div [ class "container" ]
         [ div [ class "row" ]
-            [ div [ class "col-md-12 border fw-bold fs-1 py-3 my-3" ]
+            [ div [ class "col-lg-12 border fw-bold fs-1 py-3 my-3" ]
                 [ p []
                     [ span [ style "margin-right" "10px" ] [ text "GEOSPATIAL NIX" ]
                     , span [ class "fs-2 text-secondary" ] [ text "create, use and deploy today ..." ]
@@ -223,7 +223,7 @@ view model =
 
         -- configuration options
         , div [ class "row" ]
-            [ div [ class "col-md-6 border bg-light py-3 my-3" ]
+            [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
                     [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.name, onInput UpdateName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
@@ -309,7 +309,7 @@ view model =
                 ]
 
             -- configuration
-            , div [ class "col-md-6 bg-dark text-white py-3 my-3" ]
+            , div [ class "col-lg-6 bg-dark text-white py-3 my-3" ]
                 [ if not (String.isEmpty model.nixConfig) then
                     div [ class "configuration" ]
                         [ h2 [] [ text "INSTALL NIX" ]

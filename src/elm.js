@@ -67435,7 +67435,7 @@ var $author$project$HomePage$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-md-12 border fw-bold fs-1 py-3 my-3')
+								$elm$html$Html$Attributes$class('col-lg-12 border fw-bold fs-1 py-3 my-3')
 							]),
 						_List_fromArray(
 							[
@@ -67479,7 +67479,7 @@ var $author$project$HomePage$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-md-6 border bg-light py-3 my-3')
+								$elm$html$Html$Attributes$class('col-lg-6 border bg-light py-3 my-3')
 							]),
 						_List_fromArray(
 							[
@@ -67771,7 +67771,7 @@ var $author$project$HomePage$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-md-6 bg-dark text-white py-3 my-3')
+								$elm$html$Html$Attributes$class('col-lg-6 bg-dark text-white py-3 my-3')
 							]),
 						_List_fromArray(
 							[
