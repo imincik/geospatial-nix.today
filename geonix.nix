@@ -10,7 +10,7 @@ in
     pkgs.fswatch
   ];
 
-  scripts.make-package-files.exec = ''
+  scripts.make-packages-db.exec = ''
     nixpkgs_version=$(nix flake metadata --json github:imincik/geospatial-nix \
       | jq --raw-output '.locks.nodes.nixpkgs.locked.rev')
 
