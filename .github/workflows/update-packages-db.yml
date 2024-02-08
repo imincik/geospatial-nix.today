@@ -39,4 +39,4 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           assignees: imincik
           # reviewers: imincik
-          token: ${{ secrets.FLAKE_AUTOUPDATE_TOKEN }}
+          token: ${{ secrets.PACKAGES_AUTOUPDATE_TOKEN }}
