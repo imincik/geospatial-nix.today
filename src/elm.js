@@ -67350,7 +67350,7 @@ var $author$project$HomePage$UpdateName = function (a) {
 	return {$: 'UpdateName', a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environment,\nlovely built to work on any modern Linux machine.\n';
+var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
 var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -67362,9 +67362,9 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $author$project$Texts$configTemplateComment = '\n- Copy and paste configuration to geonix.nix file\n';
+var $author$project$Texts$configTemplateComment = '\nCopy and paste configuration to geonix.nix file\n';
 var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
-var $author$project$Texts$containerTemplateComment = '\n- Run following commands to build and run environment in container\n';
+var $author$project$Texts$containerTemplateComment = '\nRun following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $author$project$Texts$futurePlansText = '\nWhat you see here, is only very early start of something great. Many more\nfeatures like configuration options for languages and services, geospatial\nspecific modules and user experience improvements are on the way.\n';
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
@@ -67376,10 +67376,27 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$Texts$initTemplateComment = '\n- Run following commands to initalize new project\n';
+var $author$project$Texts$initTemplateComment = '\nRun following commands to initalize a new project\n';
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
-var $author$project$Texts$installNixTemplateComment = '\n- Install Nix (if not already installed)\n';
+var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Texts$installNixTemplateComment = _List_fromArray(
+	[
+		$elm$html$Html$text('Install Nix '),
+		A2(
+		$elm$html$Html$a,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$href('https://zero-to-nix.com/start/install'),
+				$elm$html$Html$Attributes$target('_blank')
+			]),
+		_List_fromArray(
+			[
+				$elm$html$Html$text('(learn more about this installer)')
+			]))
+	]);
 var $author$project$HomePage$SetActiveCategoryTab = function (a) {
 	return {$: 'SetActiveCategoryTab', a: a};
 };
@@ -67400,8 +67417,6 @@ var $elm$html$Html$Events$onClick = function (msg) {
 		'click',
 		$elm$json$Json$Decode$succeed(msg));
 };
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$HomePage$mainCategoryHtmlTab = F2(
 	function (buttons, activeButton) {
 		var buttonItem = function (item) {
@@ -67686,13 +67701,12 @@ var $author$project$HomePage$packagesHtmlList = F5(
 var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
 var $elm$html$Html$pre = _VirtualDom_node('pre');
 var $author$project$Texts$servicesTemplate = '\nnix run .#geonixcli -- up\n';
-var $author$project$Texts$servicesTemplateComment = '\n- Run following command to launch services\n';
+var $author$project$Texts$servicesTemplateComment = '\nRun following command to launch services\n';
 var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My geospatial environment"\ngit push\n';
-var $author$project$Texts$shareTemplateComment = '\n- Add environment lock file to git and push project to repository\n';
-var $author$project$Texts$shareTemplateComment2 = '\n- Now, all your project collaborators can use exactly same environment\n  containing exactly same versions of software\n';
+var $author$project$Texts$shareTemplateComment = '\nAdd environment lock file to git and push project to repository\n';
+var $author$project$Texts$shareTemplateComment2 = '\nNow, all your project collaborators can use exactly same environment\n  containing exactly same versions of software.\n';
 var $author$project$Texts$shellTemplate = '\nnix run .#geonixcli -- shell\n';
-var $author$project$Texts$shellTemplateComment = '\n- Run following command to enter shell environment\n';
-var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $author$project$Texts$shellTemplateComment = '\nRun following command to enter shell environment\n';
 var $elm$html$Html$textarea = _VirtualDom_node('textarea');
 var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
 var $author$project$HomePage$view = function (model) {
@@ -68072,28 +68086,23 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('INSTALL NIX')
 											])),
 										A2(
-										$elm$html$Html$pre,
-										_List_Nil,
+										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$installNixTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$installNixTemplate)
-													]))
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										$author$project$Texts$installNixTemplateComment),
+										A2(
+										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$installNixTemplate)
 											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
 										_List_Nil,
@@ -68102,28 +68111,26 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('START PROJECT')
 											])),
 										A2(
-										$elm$html$Html$pre,
-										_List_Nil,
+										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$initTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text(model.nixInit)
-													]))
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$initTemplateComment)
 											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text(model.nixInit)
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
 										_List_Nil,
@@ -68132,28 +68139,26 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('CONFIGURATION')
 											])),
 										A2(
-										$elm$html$Html$pre,
-										_List_Nil,
+										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$configTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text(model.nixConfig)
-													]))
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$configTemplateComment)
 											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text(model.nixConfig)
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
 										_List_Nil,
@@ -68162,28 +68167,26 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('ENTER ENVIRONMENT')
 											])),
 										A2(
-										$elm$html$Html$pre,
-										_List_Nil,
+										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$shellTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$shellTemplate)
-													]))
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$shellTemplateComment)
 											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$shellTemplate)
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
 										_List_Nil,
@@ -68192,28 +68195,26 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('LAUNCH SERVICES')
 											])),
 										A2(
-										$elm$html$Html$pre,
-										_List_Nil,
+										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$servicesTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$servicesTemplate)
-													]))
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$servicesTemplateComment)
 											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$servicesTemplate)
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
 										_List_Nil,
@@ -68222,28 +68223,26 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('RUN IN CONTAINER')
 											])),
 										A2(
-										$elm$html$Html$pre,
-										_List_Nil,
+										$elm$html$Html$p,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$containerTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$containerTemplate)
-													]))
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$containerTemplateComment)
 											])),
+										A2(
+										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$containerTemplate)
+											])),
+										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
 										_List_Nil,
@@ -68252,34 +68251,31 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('SHARE ENVIRONMENT')
 											])),
 										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$shareTemplateComment)
+											])),
+										A2(
 										$elm$html$Html$pre,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('text-warning')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text($author$project$Texts$shareTemplate)
+											])),
+										A2(
+										$elm$html$Html$span,
 										_List_Nil,
 										_List_fromArray(
 											[
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$shareTemplateComment)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('text-warning')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$shareTemplate)
-													])),
-												A2(
-												$elm$html$Html$span,
-												_List_Nil,
-												_List_fromArray(
-													[
-														$elm$html$Html$text($author$project$Texts$shareTemplateComment2)
-													]))
+												$elm$html$Html$text($author$project$Texts$shareTemplateComment2)
 											]))
 									])) : A2(
 								$elm$html$Html$div,

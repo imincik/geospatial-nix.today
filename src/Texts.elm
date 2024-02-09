@@ -1,10 +1,13 @@
 module Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
 
+import Html exposing (a, text)
+import Html.Attributes exposing (href, target)
+
 
 aboutText =
     """
 In a world of horrendously complex software developed by myriads of authors,
-be smart, use Nix and create isolated and reproducible geospatial environment,
+be smart, use Nix and create isolated and reproducible geospatial environments,
 lovely built to work on any modern Linux machine.
 """
 
@@ -18,9 +21,10 @@ specific modules and user experience improvements are on the way.
 
 
 installNixTemplateComment =
-    """
-- Install Nix (if not already installed)
-"""
+    [ text "Install Nix "
+    , a [ href "https://zero-to-nix.com/start/install", target "_blank" ]
+        [ text "(learn more about this installer)" ]
+    ]
 
 
 installNixTemplate =
@@ -33,7 +37,7 @@ curl --proto '=https' --tlsv1.2 -sSf \\
 
 initTemplateComment =
     """
-- Run following commands to initalize new project
+Run following commands to initalize a new project
 """
 
 
@@ -49,13 +53,13 @@ git add flake.nix geonix.nix
 
 configTemplateComment =
     """
-- Copy and paste configuration to geonix.nix file
+Copy and paste configuration to geonix.nix file
 """
 
 
 shellTemplateComment =
     """
-- Run following command to enter shell environment
+Run following command to enter shell environment
 """
 
 
@@ -67,7 +71,7 @@ nix run .#geonixcli -- shell
 
 servicesTemplateComment =
     """
-- Run following command to launch services
+Run following command to launch services
 """
 
 
@@ -79,7 +83,7 @@ nix run .#geonixcli -- up
 
 containerTemplateComment =
     """
-- Run following commands to build and run environment in container
+Run following commands to build and run environment in container
 """
 
 
@@ -92,7 +96,7 @@ docker run --rm -it shell:latest
 
 shareTemplateComment =
     """
-- Add environment lock file to git and push project to repository
+Add environment lock file to git and push project to repository
 """
 
 
@@ -106,6 +110,6 @@ git push
 
 shareTemplateComment2 =
     """
-- Now, all your project collaborators can use exactly same environment
-  containing exactly same versions of software
+Now, all your project collaborators can use exactly same environment
+  containing exactly same versions of software.
 """
