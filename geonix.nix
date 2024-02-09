@@ -132,7 +132,7 @@ in
       name = "elm-make";
       description = "Run elm-make";
       pass_filenames = false;
-      entry = "${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --output src/elm.js";
+      entry = "${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --optimize --output src/elm.js";
     };
   };
 }

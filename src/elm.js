@@ -77,7 +77,7 @@ function A9(fun, a, b, c, d, e, f, g, h, i) {
   return fun.a === 9 ? fun.f(a, b, c, d, e, f, g, h, i) : fun(a)(b)(c)(d)(e)(f)(g)(h)(i);
 }
 
-console.warn('Compiled in DEV mode. Follow the advice at https://elm-lang.org/0.19.1/optimize for better performance and smaller assets.');
+
 
 
 var _JsArray_empty = [];
@@ -234,12 +234,12 @@ var _JsArray_appendN = F3(function(n, dest, source)
 
 // LOG
 
-var _Debug_log_UNUSED = F2(function(tag, value)
+var _Debug_log = F2(function(tag, value)
 {
 	return value;
 });
 
-var _Debug_log = F2(function(tag, value)
+var _Debug_log_UNUSED = F2(function(tag, value)
 {
 	console.log(tag + ': ' + _Debug_toString(value));
 	return value;
@@ -265,12 +265,12 @@ function _Debug_todoCase(moduleName, region, value)
 
 // TO STRING
 
-function _Debug_toString_UNUSED(value)
+function _Debug_toString(value)
 {
 	return '<internals>';
 }
 
-function _Debug_toString(value)
+function _Debug_toString_UNUSED(value)
 {
 	return _Debug_toAnsiString(false, value);
 }
@@ -455,13 +455,13 @@ function _Debug_toHexDigit(n)
 // CRASH
 
 
-function _Debug_crash_UNUSED(identifier)
+function _Debug_crash(identifier)
 {
 	throw new Error('https://github.com/elm/core/blob/1.0.0/hints/' + identifier + '.md');
 }
 
 
-function _Debug_crash(identifier, fact1, fact2, fact3, fact4)
+function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 {
 	switch(identifier)
 	{
@@ -519,11 +519,11 @@ function _Debug_crash(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.start.line === region.end.line)
+	if (region.af.R === region.ak.R)
 	{
-		return 'on line ' + region.start.line;
+		return 'on line ' + region.af.R;
 	}
-	return 'on lines ' + region.start.line + ' through ' + region.end.line;
+	return 'on lines ' + region.af.R + ' through ' + region.ak.R;
 }
 
 
@@ -561,7 +561,7 @@ function _Utils_eqHelp(x, y, depth, stack)
 		return true;
 	}
 
-	/**/
+	/**_UNUSED/
 	if (x.$ === 'Set_elm_builtin')
 	{
 		x = $elm$core$Set$toList(x);
@@ -574,7 +574,7 @@ function _Utils_eqHelp(x, y, depth, stack)
 	}
 	//*/
 
-	/**_UNUSED/
+	/**/
 	if (x.$ < 0)
 	{
 		x = $elm$core$Dict$toList(x);
@@ -609,7 +609,7 @@ function _Utils_cmp(x, y, ord)
 		return x === y ? /*EQ*/ 0 : x < y ? /*LT*/ -1 : /*GT*/ 1;
 	}
 
-	/**/
+	/**_UNUSED/
 	if (x instanceof String)
 	{
 		var a = x.valueOf();
@@ -618,10 +618,10 @@ function _Utils_cmp(x, y, ord)
 	}
 	//*/
 
-	/**_UNUSED/
+	/**/
 	if (typeof x.$ === 'undefined')
 	//*/
-	/**/
+	/**_UNUSED/
 	if (x.$[0] === '#')
 	//*/
 	{
@@ -651,17 +651,17 @@ var _Utils_compare = F2(function(x, y)
 
 // COMMON VALUES
 
-var _Utils_Tuple0_UNUSED = 0;
-var _Utils_Tuple0 = { $: '#0' };
+var _Utils_Tuple0 = 0;
+var _Utils_Tuple0_UNUSED = { $: '#0' };
 
-function _Utils_Tuple2_UNUSED(a, b) { return { a: a, b: b }; }
-function _Utils_Tuple2(a, b) { return { $: '#2', a: a, b: b }; }
+function _Utils_Tuple2(a, b) { return { a: a, b: b }; }
+function _Utils_Tuple2_UNUSED(a, b) { return { $: '#2', a: a, b: b }; }
 
-function _Utils_Tuple3_UNUSED(a, b, c) { return { a: a, b: b, c: c }; }
-function _Utils_Tuple3(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
+function _Utils_Tuple3(a, b, c) { return { a: a, b: b, c: c }; }
+function _Utils_Tuple3_UNUSED(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
 
-function _Utils_chr_UNUSED(c) { return c; }
-function _Utils_chr(c) { return new String(c); }
+function _Utils_chr(c) { return c; }
+function _Utils_chr_UNUSED(c) { return new String(c); }
 
 
 // RECORDS
@@ -712,11 +712,11 @@ function _Utils_ap(xs, ys)
 
 
 
-var _List_Nil_UNUSED = { $: 0 };
-var _List_Nil = { $: '[]' };
+var _List_Nil = { $: 0 };
+var _List_Nil_UNUSED = { $: '[]' };
 
-function _List_Cons_UNUSED(hd, tl) { return { $: 1, a: hd, b: tl }; }
-function _List_Cons(hd, tl) { return { $: '::', a: hd, b: tl }; }
+function _List_Cons(hd, tl) { return { $: 1, a: hd, b: tl }; }
+function _List_Cons_UNUSED(hd, tl) { return { $: '::', a: hd, b: tl }; }
 
 
 var _List_cons = F2(_List_Cons);
@@ -1212,7 +1212,7 @@ function _Char_toLocaleLower(char)
 
 
 
-/**/
+/**_UNUSED/
 function _Json_errorToString(error)
 {
 	return $elm$json$Json$Decode$errorToString(error);
@@ -1616,11 +1616,11 @@ var _Json_encode = F2(function(indentLevel, value)
 	return JSON.stringify(_Json_unwrap(value), null, indentLevel) + '';
 });
 
-function _Json_wrap(value) { return { $: 0, a: value }; }
-function _Json_unwrap(value) { return value.a; }
+function _Json_wrap_UNUSED(value) { return { $: 0, a: value }; }
+function _Json_unwrap_UNUSED(value) { return value.a; }
 
-function _Json_wrap_UNUSED(value) { return value; }
-function _Json_unwrap_UNUSED(value) { return value; }
+function _Json_wrap(value) { return value; }
+function _Json_unwrap(value) { return value; }
 
 function _Json_emptyArray() { return []; }
 function _Json_emptyObject() { return {}; }
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.init,
-		impl.update,
-		impl.subscriptions,
+		impl.aU,
+		impl.a$,
+		impl.aZ,
 		function() { return function() {} }
 	);
 });
@@ -1872,7 +1872,7 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 function _Platform_initialize(flagDecoder, args, init, update, subscriptions, stepperBuilder)
 {
 	var result = A2(_Json_run, flagDecoder, _Json_wrap(args ? args['flags'] : undefined));
-	$elm$core$Result$isOk(result) || _Debug_crash(2 /**/, _Json_errorToString(result.a) /**/);
+	$elm$core$Result$isOk(result) || _Debug_crash(2 /**_UNUSED/, _Json_errorToString(result.a) /**/);
 	var managers = {};
 	var initPair = init(result.a);
 	var model = initPair.a;
@@ -2316,7 +2316,7 @@ function _Platform_setupIncomingPort(name, sendToApp)
 //
 
 
-function _Platform_export_UNUSED(exports)
+function _Platform_export(exports)
 {
 	scope['Elm']
 		? _Platform_mergeExportsProd(scope['Elm'], exports)
@@ -2337,7 +2337,7 @@ function _Platform_mergeExportsProd(obj, exports)
 }
 
 
-function _Platform_export(exports)
+function _Platform_export_UNUSED(exports)
 {
 	scope['Elm']
 		? _Platform_mergeExportsDebug('Elm', scope['Elm'], exports)
@@ -2377,10 +2377,10 @@ var _VirtualDom_init = F4(function(virtualNode, flagDecoder, debugMetadata, args
 {
 	// NOTE: this function needs _Platform_export available to work
 
-	/**_UNUSED/
+	/**/
 	var node = args['node'];
 	//*/
-	/**/
+	/**_UNUSED/
 	var node = args && args['node'] ? args['node'] : _Debug_crash(0);
 	//*/
 
@@ -2655,14 +2655,14 @@ function _VirtualDom_noInnerHtmlOrFormAction(key)
 function _VirtualDom_noJavaScriptUri(value)
 {
 	return _VirtualDom_RE_js.test(value)
-		? /**_UNUSED/''//*//**/'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'//*/
+		? /**/''//*//**_UNUSED/'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'//*/
 		: value;
 }
 
 function _VirtualDom_noJavaScriptOrHtmlUri(value)
 {
 	return _VirtualDom_RE_js_html.test(value)
-		? /**_UNUSED/''//*//**/'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'//*/
+		? /**/''//*//**_UNUSED/'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'//*/
 		: value;
 }
 
@@ -2670,7 +2670,7 @@ function _VirtualDom_noJavaScriptOrHtmlJson(value)
 {
 	return (typeof _Json_unwrap(value) === 'string' && _VirtualDom_RE_js_html.test(_Json_unwrap(value)))
 		? _Json_wrap(
-			/**_UNUSED/''//*//**/'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'//*/
+			/**/''//*//**_UNUSED/'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'//*/
 		) : value;
 }
 
@@ -2719,9 +2719,9 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		message: func(record.message),
-		stopPropagation: record.stopPropagation,
-		preventDefault: record.preventDefault
+		v: func(record.v),
+		ag: record.ag,
+		ad: record.ad
 	}
 });
 
@@ -2989,11 +2989,11 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.message;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.stopPropagation;
+		var message = !tag ? value : tag < 3 ? value.a : value.v;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.ag;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.preventDefault) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.ad) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3943,15 +3943,15 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.init,
-		impl.update,
-		impl.subscriptions,
+		impl.aU,
+		impl.a$,
+		impl.aZ,
 		function(sendToApp, initialModel) {
-			var view = impl.view;
-			/**_UNUSED/
+			var view = impl.a0;
+			/**/
 			var domNode = args['node'];
 			//*/
-			/**/
+			/**_UNUSED/
 			var domNode = args && args['node'] ? args['node'] : _Debug_crash(0);
 			//*/
 			var currNode = _VirtualDom_virtualize(domNode);
@@ -3979,12 +3979,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.init,
-		impl.update,
-		impl.subscriptions,
+		impl.aU,
+		impl.a$,
+		impl.aZ,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.setup && impl.setup(sendToApp)
-			var view = impl.view;
+			var divertHrefToApp = impl.ae && impl.ae(sendToApp)
+			var view = impl.a0;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3992,12 +3992,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.body);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aN);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.title) && (_VirtualDom_doc.title = title = doc.title);
+				(title !== doc.a_) && (_VirtualDom_doc.title = title = doc.a_);
 			});
 		}
 	);
@@ -4053,12 +4053,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.onUrlChange;
-	var onUrlRequest = impl.onUrlRequest;
+	var onUrlChange = impl.aV;
+	var onUrlRequest = impl.aW;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		setup: function(sendToApp)
+		ae: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4074,9 +4074,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.protocol === next.protocol
-							&& curr.host === next.host
-							&& curr.port_.a === next.port_.a
+							&& curr.ay === next.ay
+							&& curr.ao === next.ao
+							&& curr.av.a === next.av.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4084,13 +4084,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		init: function(flags)
+		aU: function(flags)
 		{
-			return A3(impl.init, flags, _Browser_getUrl(), key);
+			return A3(impl.aU, flags, _Browser_getUrl(), key);
 		},
-		view: impl.view,
-		update: impl.update,
-		subscriptions: impl.subscriptions
+		a0: impl.a0,
+		a$: impl.a$,
+		aZ: impl.aZ
 	});
 }
 
@@ -4156,17 +4156,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { hidden: 'hidden', change: 'visibilitychange' }
+		? { aS: 'hidden', aO: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { hidden: 'mozHidden', change: 'mozvisibilitychange' }
+		? { aS: 'mozHidden', aO: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { hidden: 'msHidden', change: 'msvisibilitychange' }
+		? { aS: 'msHidden', aO: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { hidden: 'webkitHidden', change: 'webkitvisibilitychange' }
-		: { hidden: 'hidden', change: 'visibilitychange' };
+		? { aS: 'webkitHidden', aO: 'webkitvisibilitychange' }
+		: { aS: 'hidden', aO: 'visibilitychange' };
 }
 
 
@@ -4247,12 +4247,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		scene: _Browser_getScene(),
-		viewport: {
-			x: _Browser_window.pageXOffset,
-			y: _Browser_window.pageYOffset,
-			width: _Browser_doc.documentElement.clientWidth,
-			height: _Browser_doc.documentElement.clientHeight
+		aD: _Browser_getScene(),
+		aH: {
+			aJ: _Browser_window.pageXOffset,
+			aK: _Browser_window.pageYOffset,
+			aI: _Browser_doc.documentElement.clientWidth,
+			an: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4262,8 +4262,8 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		width: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		height: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		aI: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		an: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4286,15 +4286,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			scene: {
-				width: node.scrollWidth,
-				height: node.scrollHeight
+			aD: {
+				aI: node.scrollWidth,
+				an: node.scrollHeight
 			},
-			viewport: {
-				x: node.scrollLeft,
-				y: node.scrollTop,
-				width: node.clientWidth,
-				height: node.clientHeight
+			aH: {
+				aJ: node.scrollLeft,
+				aK: node.scrollTop,
+				aI: node.clientWidth,
+				an: node.clientHeight
 			}
 		};
 	});
@@ -4324,18 +4324,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			scene: _Browser_getScene(),
-			viewport: {
-				x: x,
-				y: y,
-				width: _Browser_doc.documentElement.clientWidth,
-				height: _Browser_doc.documentElement.clientHeight
+			aD: _Browser_getScene(),
+			aH: {
+				aJ: x,
+				aK: y,
+				aI: _Browser_doc.documentElement.clientWidth,
+				an: _Browser_doc.documentElement.clientHeight
 			},
-			element: {
-				x: x + rect.left,
-				y: y + rect.top,
-				width: rect.width,
-				height: rect.height
+			aQ: {
+				aJ: x + rect.left,
+				aK: y + rect.top,
+				aI: rect.width,
+				an: rect.height
 			}
 		};
 	});
@@ -4378,7 +4378,7 @@ var $elm$core$Array$foldr = F3(
 		var tail = _v0.d;
 		var helper = F2(
 			function (node, acc) {
-				if (node.$ === 'SubTree') {
+				if (!node.$) {
 					var subTree = node.a;
 					return A3($elm$core$Elm$JsArray$foldr, helper, acc, subTree);
 				} else {
@@ -4399,7 +4399,7 @@ var $elm$core$Dict$foldr = F3(
 	function (func, acc, t) {
 		foldr:
 		while (true) {
-			if (t.$ === 'RBEmpty_elm_builtin') {
+			if (t.$ === -2) {
 				return acc;
 			} else {
 				var key = t.b;
@@ -4444,13 +4444,13 @@ var $elm$core$Dict$keys = function (dict) {
 		dict);
 };
 var $elm$core$Set$toList = function (_v0) {
-	var dict = _v0.a;
+	var dict = _v0;
 	return $elm$core$Dict$keys(dict);
 };
-var $elm$core$Basics$EQ = {$: 'EQ'};
-var $elm$core$Basics$GT = {$: 'GT'};
-var $elm$core$Basics$LT = {$: 'LT'};
-var $elm$core$Basics$False = {$: 'False'};
+var $elm$core$Basics$EQ = 1;
+var $elm$core$Basics$GT = 2;
+var $elm$core$Basics$LT = 0;
+var $elm$core$Basics$False = 1;
 var $elm$core$Basics$append = _Utils_append;
 var $author$project$GeoPackages$packages = _List_fromArray(
 	[
@@ -66283,62 +66283,62 @@ var $author$project$PythonPackages$packages = _List_fromArray(
 	]);
 var $author$project$HomePage$allPyPackages = _Utils_ap($author$project$GeoPythonPackages$packages, $author$project$PythonPackages$packages);
 var $author$project$HomePage$initialModel = {
-	availablePackages: $author$project$HomePage$allPackages,
-	availablePgPackages: $author$project$HomePage$allPgPackages,
-	availablePyPackages: $author$project$HomePage$allPyPackages,
-	config: {
-		enterShell: '',
-		languages: {
-			python: {enabled: false, packages: _List_Nil}
+	X: $author$project$HomePage$allPackages,
+	Y: $author$project$HomePage$allPgPackages,
+	Z: $author$project$HomePage$allPyPackages,
+	g: {
+		G: '',
+		aq: {
+			az: {_: false, J: _List_Nil}
 		},
-		packages: _List_Nil,
-		processes: {
-			custom: {exec: ''}
+		J: _List_Nil,
+		K: {
+			E: {H: ''}
 		},
-		services: {
-			postgres: {enabled: false, packages: _List_Nil}
+		aE: {
+			aw: {_: false, J: _List_Nil}
 		}
 	},
-	filterLimit: 5,
-	filterPackages: '',
-	filterPgPackages: '',
-	filterPyPackages: '',
-	name: 'My geospatial environment',
-	nixConfig: '',
-	nixInit: '',
-	postgresEnabled: 'false',
-	pythonEnabled: 'false',
-	selectedPackages: _List_Nil,
-	selectedPgPackages: _List_Nil,
-	selectedPyPackages: _List_Nil,
-	ui: {activeCategoryTab: 'packages'}
+	j: 5,
+	O: '',
+	P: '',
+	Q: '',
+	I: 'My geospatial environment',
+	S: '',
+	aa: '',
+	x: 'false',
+	y: 'false',
+	n: _List_Nil,
+	o: _List_Nil,
+	p: _List_Nil,
+	r: {t: 'packages'}
 };
 var $elm$core$Result$Err = function (a) {
-	return {$: 'Err', a: a};
+	return {$: 1, a: a};
 };
 var $elm$json$Json$Decode$Failure = F2(
 	function (a, b) {
-		return {$: 'Failure', a: a, b: b};
+		return {$: 3, a: a, b: b};
 	});
 var $elm$json$Json$Decode$Field = F2(
 	function (a, b) {
-		return {$: 'Field', a: a, b: b};
+		return {$: 0, a: a, b: b};
 	});
 var $elm$json$Json$Decode$Index = F2(
 	function (a, b) {
-		return {$: 'Index', a: a, b: b};
+		return {$: 1, a: a, b: b};
 	});
 var $elm$core$Result$Ok = function (a) {
-	return {$: 'Ok', a: a};
+	return {$: 0, a: a};
 };
 var $elm$json$Json$Decode$OneOf = function (a) {
-	return {$: 'OneOf', a: a};
+	return {$: 2, a: a};
 };
 var $elm$core$Basics$add = _Basics_add;
 var $elm$core$Maybe$Just = function (a) {
-	return {$: 'Just', a: a};
+	return {$: 0, a: a};
 };
-var $elm$core$Maybe$Nothing = {$: 'Nothing'};
+var $elm$core$Maybe$Nothing = {$: 1};
 var $elm$core$String$all = _String_all;
 var $elm$core$Basics$and = _Basics_and;
 var $elm$json$Json$Encode$encode = _Json_encode;
@@ -66462,12 +66462,12 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 		errorToStringHelp:
 		while (true) {
 			switch (error.$) {
-				case 'Field':
+				case 0:
 					var f = error.a;
 					var err = error.b;
 					var isSimple = function () {
 						var _v1 = $elm$core$String$uncons(f);
-						if (_v1.$ === 'Nothing') {
+						if (_v1.$ === 1) {
 							return false;
 						} else {
 							var _v2 = _v1.a;
@@ -66482,7 +66482,7 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 					error = $temp$error;
 					context = $temp$context;
 					continue errorToStringHelp;
-				case 'Index':
+				case 1:
 					var i = error.a;
 					var err = error.b;
 					var indexName = '[' + ($elm$core$String$fromInt(i) + ']');
@@ -66491,7 +66491,7 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 					error = $temp$error;
 					context = $temp$context;
 					continue errorToStringHelp;
-				case 'OneOf':
+				case 2:
 					var errors = error.a;
 					if (!errors.b) {
 						return 'Ran into a Json.Decode.oneOf with no possibilities' + function () {
@@ -66555,7 +66555,7 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 var $elm$core$Array$branchFactor = 32;
 var $elm$core$Array$Array_elm_builtin = F4(
 	function (a, b, c, d) {
-		return {$: 'Array_elm_builtin', a: a, b: b, c: c, d: d};
+		return {$: 0, a: a, b: b, c: c, d: d};
 	});
 var $elm$core$Elm$JsArray$empty = _JsArray_empty;
 var $elm$core$Basics$ceiling = _Basics_ceiling;
@@ -66570,7 +66570,7 @@ var $elm$core$Array$shiftStep = $elm$core$Basics$ceiling(
 var $elm$core$Array$empty = A4($elm$core$Array$Array_elm_builtin, 0, $elm$core$Array$shiftStep, $elm$core$Elm$JsArray$empty, $elm$core$Elm$JsArray$empty);
 var $elm$core$Elm$JsArray$initialize = _JsArray_initialize;
 var $elm$core$Array$Leaf = function (a) {
-	return {$: 'Leaf', a: a};
+	return {$: 1, a: a};
 };
 var $elm$core$Basics$apL = F2(
 	function (f, x) {
@@ -66590,7 +66590,7 @@ var $elm$core$Basics$max = F2(
 	});
 var $elm$core$Basics$mul = _Basics_mul;
 var $elm$core$Array$SubTree = function (a) {
-	return {$: 'SubTree', a: a};
+	return {$: 0, a: a};
 };
 var $elm$core$Elm$JsArray$initializeFromList = _JsArray_initializeFromList;
 var $elm$core$Array$compressNodes = F2(
@@ -66637,25 +66637,25 @@ var $elm$core$Array$treeFromBuilder = F2(
 	});
 var $elm$core$Array$builderToArray = F2(
 	function (reverseNodeList, builder) {
-		if (!builder.nodeListSize) {
+		if (!builder.a) {
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.tail),
+				$elm$core$Elm$JsArray$length(builder.c),
 				$elm$core$Array$shiftStep,
 				$elm$core$Elm$JsArray$empty,
-				builder.tail);
+				builder.c);
 		} else {
-			var treeLen = builder.nodeListSize * $elm$core$Array$branchFactor;
+			var treeLen = builder.a * $elm$core$Array$branchFactor;
 			var depth = $elm$core$Basics$floor(
 				A2($elm$core$Basics$logBase, $elm$core$Array$branchFactor, treeLen - 1));
-			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.nodeList) : builder.nodeList;
-			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.nodeListSize);
+			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.d) : builder.d;
+			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.a);
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.tail) + treeLen,
+				$elm$core$Elm$JsArray$length(builder.c) + treeLen,
 				A2($elm$core$Basics$max, 5, depth * $elm$core$Array$shiftStep),
 				tree,
-				builder.tail);
+				builder.c);
 		}
 	});
 var $elm$core$Basics$idiv = _Basics_idiv;
@@ -66668,7 +66668,7 @@ var $elm$core$Array$initializeHelp = F5(
 				return A2(
 					$elm$core$Array$builderToArray,
 					false,
-					{nodeList: nodeList, nodeListSize: (len / $elm$core$Array$branchFactor) | 0, tail: tail});
+					{d: nodeList, a: (len / $elm$core$Array$branchFactor) | 0, c: tail});
 			} else {
 				var leaf = $elm$core$Array$Leaf(
 					A3($elm$core$Elm$JsArray$initialize, $elm$core$Array$branchFactor, fromIndex, fn));
@@ -66698,9 +66698,9 @@ var $elm$core$Array$initialize = F2(
 			return A5($elm$core$Array$initializeHelp, fn, initialFromIndex, len, _List_Nil, tail);
 		}
 	});
-var $elm$core$Basics$True = {$: 'True'};
+var $elm$core$Basics$True = 0;
 var $elm$core$Result$isOk = function (result) {
-	if (result.$ === 'Ok') {
+	if (!result.$) {
 		return true;
 	} else {
 		return false;
@@ -66711,33 +66711,31 @@ var $elm$json$Json$Decode$map2 = _Json_map2;
 var $elm$json$Json$Decode$succeed = _Json_succeed;
 var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 	switch (handler.$) {
-		case 'Normal':
+		case 0:
 			return 0;
-		case 'MayStopPropagation':
+		case 1:
 			return 1;
-		case 'MayPreventDefault':
+		case 2:
 			return 2;
 		default:
 			return 3;
 	}
 };
 var $elm$browser$Browser$External = function (a) {
-	return {$: 'External', a: a};
+	return {$: 1, a: a};
 };
 var $elm$browser$Browser$Internal = function (a) {
-	return {$: 'Internal', a: a};
+	return {$: 0, a: a};
 };
 var $elm$core$Basics$identity = function (x) {
 	return x;
 };
-var $elm$browser$Browser$Dom$NotFound = function (a) {
-	return {$: 'NotFound', a: a};
-};
-var $elm$url$Url$Http = {$: 'Http'};
-var $elm$url$Url$Https = {$: 'Https'};
+var $elm$browser$Browser$Dom$NotFound = $elm$core$Basics$identity;
+var $elm$url$Url$Http = 0;
+var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {fragment: fragment, host: host, path: path, port_: port_, protocol: protocol, query: query};
+		return {am: fragment, ao: host, at: path, av: port_, ay: protocol, aA: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -66773,7 +66771,7 @@ var $elm$url$Url$chompBeforePath = F5(
 					var i = _v0.a;
 					var _v1 = $elm$core$String$toInt(
 						A2($elm$core$String$dropLeft, i + 1, str));
-					if (_v1.$ === 'Nothing') {
+					if (_v1.$ === 1) {
 						return $elm$core$Maybe$Nothing;
 					} else {
 						var port_ = _v1;
@@ -66856,26 +66854,24 @@ var $elm$core$String$startsWith = _String_startsWith;
 var $elm$url$Url$fromString = function (str) {
 	return A2($elm$core$String$startsWith, 'http://', str) ? A2(
 		$elm$url$Url$chompAfterProtocol,
-		$elm$url$Url$Http,
+		0,
 		A2($elm$core$String$dropLeft, 7, str)) : (A2($elm$core$String$startsWith, 'https://', str) ? A2(
 		$elm$url$Url$chompAfterProtocol,
-		$elm$url$Url$Https,
+		1,
 		A2($elm$core$String$dropLeft, 8, str)) : $elm$core$Maybe$Nothing);
 };
 var $elm$core$Basics$never = function (_v0) {
 	never:
 	while (true) {
-		var nvr = _v0.a;
+		var nvr = _v0;
 		var $temp$_v0 = nvr;
 		_v0 = $temp$_v0;
 		continue never;
 	}
 };
-var $elm$core$Task$Perform = function (a) {
-	return {$: 'Perform', a: a};
-};
+var $elm$core$Task$Perform = $elm$core$Basics$identity;
 var $elm$core$Task$succeed = _Scheduler_succeed;
-var $elm$core$Task$init = $elm$core$Task$succeed(_Utils_Tuple0);
+var $elm$core$Task$init = $elm$core$Task$succeed(0);
 var $elm$core$List$foldrHelper = F4(
 	function (fn, acc, ctr, ls) {
 		if (!ls.b) {
@@ -66981,7 +66977,7 @@ var $elm$core$Task$sequence = function (tasks) {
 var $elm$core$Platform$sendToApp = _Platform_sendToApp;
 var $elm$core$Task$spawnCmd = F2(
 	function (router, _v0) {
-		var task = _v0.a;
+		var task = _v0;
 		return _Scheduler_spawn(
 			A2(
 				$elm$core$Task$andThen,
@@ -66993,7 +66989,7 @@ var $elm$core$Task$onEffects = F3(
 		return A2(
 			$elm$core$Task$map,
 			function (_v0) {
-				return _Utils_Tuple0;
+				return 0;
 			},
 			$elm$core$Task$sequence(
 				A2(
@@ -67003,21 +66999,19 @@ var $elm$core$Task$onEffects = F3(
 	});
 var $elm$core$Task$onSelfMsg = F3(
 	function (_v0, _v1, _v2) {
-		return $elm$core$Task$succeed(_Utils_Tuple0);
+		return $elm$core$Task$succeed(0);
 	});
 var $elm$core$Task$cmdMap = F2(
 	function (tagger, _v0) {
-		var task = _v0.a;
-		return $elm$core$Task$Perform(
-			A2($elm$core$Task$map, tagger, task));
+		var task = _v0;
+		return A2($elm$core$Task$map, tagger, task);
 	});
 _Platform_effectManagers['Task'] = _Platform_createManager($elm$core$Task$init, $elm$core$Task$onEffects, $elm$core$Task$onSelfMsg, $elm$core$Task$cmdMap);
 var $elm$core$Task$command = _Platform_leaf('Task');
 var $elm$core$Task$perform = F2(
 	function (toMessage, task) {
 		return $elm$core$Task$command(
-			$elm$core$Task$Perform(
-				A2($elm$core$Task$map, toMessage, task)));
+			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
@@ -67026,19 +67020,19 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $elm$browser$Browser$sandbox = function (impl) {
 	return _Browser_element(
 		{
-			init: function (_v0) {
-				return _Utils_Tuple2(impl.init, $elm$core$Platform$Cmd$none);
+			aU: function (_v0) {
+				return _Utils_Tuple2(impl.aU, $elm$core$Platform$Cmd$none);
 			},
-			subscriptions: function (_v1) {
+			aZ: function (_v1) {
 				return $elm$core$Platform$Sub$none;
 			},
-			update: F2(
+			a$: F2(
 				function (msg, model) {
 					return _Utils_Tuple2(
-						A2(impl.update, msg, model),
+						A2(impl.a$, msg, model),
 						$elm$core$Platform$Cmd$none);
 				}),
-			view: impl.view
+			a0: impl.a0
 		});
 };
 var $author$project$NixConfig$configCustomProcessTemplate = '\n  processes.custom.exec = \'\'\n    <CUSTOM-PROCESS>\n  \'\';\n';
@@ -67074,29 +67068,29 @@ var $author$project$HomePage$packagesListToNamesList = function (packages) {
 		packages);
 };
 var $author$project$HomePage$buildNixConfig = function (model) {
-	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPyPackages);
-	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPgPackages);
-	var selectedPackages = $author$project$HomePage$packagesListToNamesList(model.selectedPackages);
+	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.p);
+	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.o);
+	var selectedPackages = $author$project$HomePage$packagesListToNamesList(model.n);
 	var nixConfigBody = _Utils_ap(
 		$author$project$NixConfig$configNameTemplate,
 		_Utils_ap(
 			$author$project$NixConfig$configPackagesTemplate,
 			_Utils_ap(
-				A2($author$project$HomePage$optionalString, model.pythonEnabled === 'true', $author$project$NixConfig$configPythonTemplate),
+				A2($author$project$HomePage$optionalString, model.y === 'true', $author$project$NixConfig$configPythonTemplate),
 				_Utils_ap(
-					A2($author$project$HomePage$optionalString, model.postgresEnabled === 'true', $author$project$NixConfig$configPostgresTemplate),
+					A2($author$project$HomePage$optionalString, model.x === 'true', $author$project$NixConfig$configPostgresTemplate),
 					_Utils_ap(
-						A2($author$project$HomePage$optionalString, model.config.processes.custom.exec !== '', $author$project$NixConfig$configCustomProcessTemplate),
-						A2($author$project$HomePage$optionalString, model.config.enterShell !== '', $author$project$NixConfig$configEnterShellTemplate))))));
+						A2($author$project$HomePage$optionalString, model.g.K.E.H !== '', $author$project$NixConfig$configCustomProcessTemplate),
+						A2($author$project$HomePage$optionalString, model.g.G !== '', $author$project$NixConfig$configEnterShellTemplate))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return A3(
 		$elm$core$String$replace,
 		'<SHELL-HOOK>',
-		model.config.enterShell,
+		model.g.G,
 		A3(
 			$elm$core$String$replace,
 			'<CUSTOM-PROCESS>',
-			model.config.processes.custom.exec,
+			model.g.K.E.H,
 			A3(
 				$elm$core$String$replace,
 				'<POSTGRES-PACKAGES>',
@@ -67104,7 +67098,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 				A3(
 					$elm$core$String$replace,
 					'<POSTGRES-ENABLED>',
-					model.postgresEnabled,
+					model.x,
 					A3(
 						$elm$core$String$replace,
 						'<PYTHON-PACKAGES>',
@@ -67112,7 +67106,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 						A3(
 							$elm$core$String$replace,
 							'<PYTHON-ENABLED>',
-							model.pythonEnabled,
+							model.y,
 							A3(
 								$elm$core$String$replace,
 								'<PACKAGES>',
@@ -67120,7 +67114,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 								A3(
 									$elm$core$String$replace,
 									'<NAME>',
-									$author$project$HomePage$environmentName(model.name),
+									$author$project$HomePage$environmentName(model.I),
 									nixConfig))))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
@@ -67128,7 +67122,7 @@ var $author$project$HomePage$buildNixInit = function (model) {
 	return A3(
 		$elm$core$String$replace,
 		'<NAME>',
-		$author$project$HomePage$environmentName(model.name),
+		$author$project$HomePage$environmentName(model.I),
 		$author$project$Texts$initTemplate);
 };
 var $elm$core$List$filter = F2(
@@ -67176,178 +67170,178 @@ var $elm$core$Basics$not = _Basics_not;
 var $author$project$HomePage$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
-			case 'SetActiveCategoryTab':
+			case 0:
 				var tab = msg.a;
 				return _Utils_update(
 					model,
 					{
-						ui: function (p) {
+						r: function (p) {
 							return _Utils_update(
 								p,
-								{activeCategoryTab: tab});
-						}(model.ui)
+								{t: tab});
+						}(model.r)
 					});
-			case 'UpdateName':
+			case 1:
 				var name = msg.a;
 				return _Utils_update(
 					model,
-					{name: name});
-			case 'AddPackage':
+					{I: name});
+			case 2:
 				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.selectedPackages)) ? _Utils_update(
+				return (!A2($elm$core$List$member, pkg, model.n)) ? _Utils_update(
 					model,
 					{
-						selectedPackages: _Utils_ap(
-							model.selectedPackages,
+						n: _Utils_ap(
+							model.n,
 							_List_fromArray(
 								[pkg]))
 					}) : _Utils_update(
 					model,
 					{
-						selectedPackages: A2(
+						n: A2(
 							$elm$core$List$filter,
 							function (x) {
 								return !_Utils_eq(x, pkg);
 							},
-							model.selectedPackages)
+							model.n)
 					});
-			case 'FilterPackages':
+			case 9:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{filterPackages: pkg});
-			case 'EnablePython':
+					{O: pkg});
+			case 3:
 				return _Utils_update(
 					model,
 					{
-						pythonEnabled: (model.pythonEnabled === 'false') ? 'true' : 'false'
+						y: (model.y === 'false') ? 'true' : 'false'
 					});
-			case 'AddPyPackage':
+			case 4:
 				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.selectedPyPackages)) ? _Utils_update(
+				return (!A2($elm$core$List$member, pkg, model.p)) ? _Utils_update(
 					model,
 					{
-						pythonEnabled: 'true',
-						selectedPyPackages: _Utils_ap(
-							model.selectedPyPackages,
+						y: 'true',
+						p: _Utils_ap(
+							model.p,
 							_List_fromArray(
 								[pkg]))
 					}) : _Utils_update(
 					model,
 					{
-						selectedPyPackages: A2(
+						p: A2(
 							$elm$core$List$filter,
 							function (x) {
 								return !_Utils_eq(x, pkg);
 							},
-							model.selectedPyPackages)
+							model.p)
 					});
-			case 'FilterPyPackages':
+			case 10:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{filterPyPackages: pkg});
-			case 'EnablePostgres':
+					{Q: pkg});
+			case 5:
 				return _Utils_update(
 					model,
 					{
-						postgresEnabled: (model.postgresEnabled === 'false') ? 'true' : 'false'
+						x: (model.x === 'false') ? 'true' : 'false'
 					});
-			case 'AddPgPackage':
+			case 6:
 				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.selectedPgPackages)) ? _Utils_update(
+				return (!A2($elm$core$List$member, pkg, model.o)) ? _Utils_update(
 					model,
 					{
-						postgresEnabled: 'true',
-						selectedPgPackages: _Utils_ap(
-							model.selectedPgPackages,
+						x: 'true',
+						o: _Utils_ap(
+							model.o,
 							_List_fromArray(
 								[pkg]))
 					}) : _Utils_update(
 					model,
 					{
-						selectedPgPackages: A2(
+						o: A2(
 							$elm$core$List$filter,
 							function (x) {
 								return !_Utils_eq(x, pkg);
 							},
-							model.selectedPgPackages)
+							model.o)
 					});
-			case 'FilterPgPackages':
+			case 11:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{filterPgPackages: pkg});
-			case 'AddCustomProcess':
+					{P: pkg});
+			case 7:
 				var script = msg.a;
 				return _Utils_update(
 					model,
 					{
-						config: function (p) {
+						g: function (p) {
 							return _Utils_update(
 								p,
 								{
-									processes: {
-										custom: {exec: script}
+									K: {
+										E: {H: script}
 									}
 								});
-						}(model.config)
+						}(model.g)
 					});
-			case 'AddShellHook':
+			case 8:
 				var script = msg.a;
 				return _Utils_update(
 					model,
 					{
-						config: function (p) {
+						g: function (p) {
 							return _Utils_update(
 								p,
-								{enterShell: script});
-						}(model.config)
+								{G: script});
+						}(model.g)
 					});
-			case 'UpdateFilterLimit':
+			case 12:
 				return _Utils_update(
 					model,
 					{
-						filterLimit: (model.filterLimit < 15) ? (model.filterLimit + 5) : 5
+						j: (model.j < 15) ? (model.j + 5) : 5
 					});
 			default:
 				return _Utils_update(
 					model,
 					{
-						nixConfig: $author$project$HomePage$buildNixConfig(model),
-						nixInit: $author$project$HomePage$buildNixInit(model)
+						S: $author$project$HomePage$buildNixConfig(model),
+						aa: $author$project$HomePage$buildNixInit(model)
 					});
 		}
 	});
 var $author$project$HomePage$AddCustomProcess = function (a) {
-	return {$: 'AddCustomProcess', a: a};
+	return {$: 7, a: a};
 };
 var $author$project$HomePage$AddPackage = function (a) {
-	return {$: 'AddPackage', a: a};
+	return {$: 2, a: a};
 };
 var $author$project$HomePage$AddPgPackage = function (a) {
-	return {$: 'AddPgPackage', a: a};
+	return {$: 6, a: a};
 };
 var $author$project$HomePage$AddPyPackage = function (a) {
-	return {$: 'AddPyPackage', a: a};
+	return {$: 4, a: a};
 };
 var $author$project$HomePage$AddShellHook = function (a) {
-	return {$: 'AddShellHook', a: a};
+	return {$: 8, a: a};
 };
-var $author$project$HomePage$CreateEnvironment = {$: 'CreateEnvironment'};
-var $author$project$HomePage$EnablePostgres = {$: 'EnablePostgres'};
-var $author$project$HomePage$EnablePython = {$: 'EnablePython'};
+var $author$project$HomePage$CreateEnvironment = {$: 13};
+var $author$project$HomePage$EnablePostgres = {$: 5};
+var $author$project$HomePage$EnablePython = {$: 3};
 var $author$project$HomePage$FilterPackages = function (a) {
-	return {$: 'FilterPackages', a: a};
+	return {$: 9, a: a};
 };
 var $author$project$HomePage$FilterPgPackages = function (a) {
-	return {$: 'FilterPgPackages', a: a};
+	return {$: 11, a: a};
 };
 var $author$project$HomePage$FilterPyPackages = function (a) {
-	return {$: 'FilterPyPackages', a: a};
+	return {$: 10, a: a};
 };
 var $author$project$HomePage$UpdateName = function (a) {
-	return {$: 'UpdateName', a: a};
+	return {$: 1, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
@@ -67398,10 +67392,10 @@ var $author$project$Texts$installNixTemplateComment = _List_fromArray(
 			]))
 	]);
 var $author$project$HomePage$SetActiveCategoryTab = function (a) {
-	return {$: 'SetActiveCategoryTab', a: a};
+	return {$: 0, a: a};
 };
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
-	return {$: 'Normal', a: a};
+	return {$: 0, a: a};
 };
 var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
 var $elm$html$Html$Events$on = F2(
@@ -67439,7 +67433,7 @@ var $author$project$HomePage$mainCategoryHtmlTab = F2(
 		};
 		return A2($elm$core$List$map, buttonItem, buttons);
 	});
-var $author$project$HomePage$UpdateFilterLimit = {$: 'UpdateFilterLimit'};
+var $author$project$HomePage$UpdateFilterLimit = {$: 12};
 var $author$project$HomePage$morePackagesButton = function (filterLimit) {
 	return A2(
 		$elm$html$Html$button,
@@ -67457,7 +67451,7 @@ var $elm$html$Html$Events$alwaysStop = function (x) {
 	return _Utils_Tuple2(x, true);
 };
 var $elm$virtual_dom$VirtualDom$MayStopPropagation = function (a) {
-	return {$: 'MayStopPropagation', a: a};
+	return {$: 1, a: a};
 };
 var $elm$html$Html$Events$stopPropagationOn = F2(
 	function (event, decoder) {
@@ -67793,7 +67787,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												A2($elm$html$Html$Attributes$style, 'margin', '10px'),
 												$elm$html$Html$Attributes$placeholder('Environment name ...'),
-												$elm$html$Html$Attributes$value(model.name),
+												$elm$html$Html$Attributes$value(model.I),
 												$elm$html$Html$Events$onInput($author$project$HomePage$UpdateName)
 											]),
 										_List_Nil),
@@ -67826,8 +67820,8 @@ var $author$project$HomePage$view = function (model) {
 									$author$project$HomePage$mainCategoryHtmlTab,
 									_List_fromArray(
 										['PACKAGES', 'LANGUAGES', 'SERVICES', 'OTHER']),
-									model.ui.activeCategoryTab)),
-								(model.ui.activeCategoryTab === 'packages') ? A2(
+									model.r.t)),
+								(model.r.t === 'packages') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67852,12 +67846,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for packages ...'),
-														$elm$html$Html$Attributes$value(model.filterPackages),
+														$elm$html$Html$Attributes$value(model.O),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.availablePackages, model.selectedPackages, model.filterPackages, model.filterLimit, $author$project$HomePage$AddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.X, model.n, model.O, model.j, $author$project$HomePage$AddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67868,12 +67862,12 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.availablePackages),
-												$elm$core$List$length(model.selectedPackages)),
-												$author$project$HomePage$morePackagesButton(model.filterLimit)
+												$elm$core$List$length(model.X),
+												$elm$core$List$length(model.n)),
+												$author$project$HomePage$morePackagesButton(model.j)
 											]))
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.ui.activeCategoryTab === 'languages') ? A2(
+								(model.r.t === 'languages') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67901,7 +67895,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text(model.pythonEnabled)
+														$elm$html$Html$text(model.y)
 													]))
 											])),
 										A2(
@@ -67920,12 +67914,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-														$elm$html$Html$Attributes$value(model.filterPyPackages),
+														$elm$html$Html$Attributes$value(model.Q),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPyPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.availablePyPackages, model.selectedPyPackages, model.filterPyPackages, model.filterLimit, $author$project$HomePage$AddPyPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.Z, model.p, model.Q, model.j, $author$project$HomePage$AddPyPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67936,12 +67930,12 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.availablePyPackages),
-												$elm$core$List$length(model.selectedPyPackages)),
-												$author$project$HomePage$morePackagesButton(model.filterLimit)
+												$elm$core$List$length(model.Z),
+												$elm$core$List$length(model.p)),
+												$author$project$HomePage$morePackagesButton(model.j)
 											]))
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.ui.activeCategoryTab === 'services') ? A2(
+								(model.r.t === 'services') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67969,7 +67963,7 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text(model.postgresEnabled)
+														$elm$html$Html$text(model.x)
 													]))
 											])),
 										A2(
@@ -67988,12 +67982,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
-														$elm$html$Html$Attributes$value(model.filterPgPackages),
+														$elm$html$Html$Attributes$value(model.P),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPgPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.availablePgPackages, model.selectedPgPackages, model.filterPgPackages, model.filterLimit, $author$project$HomePage$AddPgPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.Y, model.o, model.P, model.j, $author$project$HomePage$AddPgPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -68004,9 +67998,9 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.availablePgPackages),
-												$elm$core$List$length(model.selectedPgPackages)),
-												$author$project$HomePage$morePackagesButton(model.filterLimit)
+												$elm$core$List$length(model.Y),
+												$elm$core$List$length(model.o)),
+												$author$project$HomePage$morePackagesButton(model.j)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68025,13 +68019,13 @@ var $author$project$HomePage$view = function (model) {
 											[
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												$elm$html$Html$Attributes$placeholder('python -m http.server'),
-												$elm$html$Html$Attributes$value(model.config.processes.custom.exec),
+												$elm$html$Html$Attributes$value(model.g.K.E.H),
 												$elm$html$Html$Events$onInput($author$project$HomePage$AddCustomProcess)
 											]),
 										_List_Nil),
 										A2($elm$html$Html$br, _List_Nil, _List_Nil)
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.ui.activeCategoryTab === 'other') ? A2(
+								(model.r.t === 'other') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68056,7 +68050,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												$elm$html$Html$Attributes$placeholder('echo hello'),
-												$elm$html$Html$Attributes$value(model.config.enterShell),
+												$elm$html$Html$Attributes$value(model.g.G),
 												$elm$html$Html$Events$onInput($author$project$HomePage$AddShellHook)
 											]),
 										_List_Nil)
@@ -68070,7 +68064,7 @@ var $author$project$HomePage$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								(!$elm$core$String$isEmpty(model.nixConfig)) ? A2(
+								(!$elm$core$String$isEmpty(model.S)) ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68128,7 +68122,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.nixInit)
+												$elm$html$Html$text(model.aa)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68156,7 +68150,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.nixConfig)
+												$elm$html$Html$text(model.S)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68416,6 +68410,6 @@ var $author$project$HomePage$view = function (model) {
 			]));
 };
 var $author$project$HomePage$main = $elm$browser$Browser$sandbox(
-	{init: $author$project$HomePage$initialModel, update: $author$project$HomePage$update, view: $author$project$HomePage$view});
+	{aU: $author$project$HomePage$initialModel, a$: $author$project$HomePage$update, a0: $author$project$HomePage$view});
 _Platform_export({'HomePage':{'init':$author$project$HomePage$main(
-	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
+	$elm$json$Json$Decode$succeed(0))(0)}});}(this));
