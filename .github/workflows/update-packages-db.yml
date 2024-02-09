@@ -26,8 +26,10 @@ jobs:
       - name: Build website
         run: nix develop --accept-flake-config --impure --command make-elm-site-prod
 
-      - name: Disable pre-commit hooks
-        run: rm -f .pre-commit-config.yaml
+      - name: Commit changes (with pre-commit hooks disabled)
+        run: |
+          git add --all
+          git commit --no-verify -m "pkgs: automatic update of packages database"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
