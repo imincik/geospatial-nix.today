@@ -23,6 +23,9 @@ jobs:
       - name: Make packages database
         run: nix develop --accept-flake-config --impure --command make-packages-db
 
+      - name: Build website
+        run: nix develop --accept-flake-config --impure --command make-elm-site-prod
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
