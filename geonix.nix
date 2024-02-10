@@ -108,12 +108,8 @@ in
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
   '';
 
-  scripts.develop-elm-site.exec = ''
-    fswatch -o src/HomePage.elm | xargs -I{} elm make src/HomePage.elm --output src/elm.js
-  '';
-
-  scripts.make-elm-site.exec = ''
-    elm make src/HomePage.elm --output src/elm.js
+  scripts.make-elm-site-dev.exec = ''
+    fswatch -o src/*.elm | xargs -I{} elm make src/HomePage.elm --output src/elm.js
   '';
 
   scripts.make-elm-site-prod.exec = ''
@@ -132,7 +128,7 @@ in
       name = "elm-make";
       description = "Run elm-make";
       pass_filenames = false;
-      entry = "${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --optimize --output src/elm.js";
+      entry = config.scripts.make-elm-site-prod.exec;
     };
   };
 }
