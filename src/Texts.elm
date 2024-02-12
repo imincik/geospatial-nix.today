@@ -1,4 +1,21 @@
-module Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
+module Texts exposing
+    ( aboutText
+    , configTemplateComment
+    , containerTemplate
+    , containerTemplateComment
+    , futurePlansText
+    , initTemplate
+    , initTemplateComment
+    , installNixTemplate
+    , installNixTemplateComment
+    , servicesTemplate
+    , servicesTemplateComment
+    , shareTemplate
+    , shareTemplateComment
+    , shareTemplateComment2
+    , shellTemplate
+    , shellTemplateComment
+    )
 
 import Html exposing (a, text)
 import Html.Attributes exposing (href, target)

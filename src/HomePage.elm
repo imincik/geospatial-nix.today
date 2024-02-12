@@ -11,7 +11,25 @@ import NixConfig
 import Packages
 import PostgresqlPackages
 import PythonPackages
-import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
+import Texts
+    exposing
+        ( aboutText
+        , configTemplateComment
+        , containerTemplate
+        , containerTemplateComment
+        , futurePlansText
+        , initTemplate
+        , initTemplateComment
+        , installNixTemplate
+        , installNixTemplateComment
+        , servicesTemplate
+        , servicesTemplateComment
+        , shareTemplate
+        , shareTemplateComment
+        , shareTemplateComment2
+        , shellTemplate
+        , shellTemplateComment
+        )
 
 
 
@@ -258,7 +276,10 @@ view model =
                 , if model.ui.activeCategoryTab == "languages" then
                     div [ class "languages" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text (boolToString model.pythonEnabled) ] ]
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ text "python.enabled"
+                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text (boolToString model.pythonEnabled) ]
+                            ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
@@ -277,7 +298,10 @@ view model =
                 , if model.ui.activeCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text (boolToString model.postgresEnabled) ] ]
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ text "postgres.enabled"
+                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text (boolToString model.postgresEnabled) ]
+                            ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
