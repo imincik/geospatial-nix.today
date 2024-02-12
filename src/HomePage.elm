@@ -11,7 +11,25 @@ import NixConfig
 import Packages
 import PostgresqlPackages
 import PythonPackages
-import Texts exposing (aboutText, configTemplateComment, containerTemplate, containerTemplateComment, futurePlansText, initTemplate, initTemplateComment, installNixTemplate, installNixTemplateComment, servicesTemplate, servicesTemplateComment, shareTemplate, shareTemplateComment, shareTemplateComment2, shellTemplate, shellTemplateComment)
+import Texts
+    exposing
+        ( aboutText
+        , configTemplateComment
+        , containerTemplate
+        , containerTemplateComment
+        , futurePlansText
+        , initTemplate
+        , initTemplateComment
+        , installNixTemplate
+        , installNixTemplateComment
+        , servicesTemplate
+        , servicesTemplateComment
+        , shareTemplate
+        , shareTemplateComment
+        , shareTemplateComment2
+        , shellTemplate
+        , shellTemplateComment
+        )
 
 
 
