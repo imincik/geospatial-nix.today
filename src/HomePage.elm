@@ -278,7 +278,7 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "PYTHON"
-                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text (boolToEnabledString model.pythonEnabled) ]
+                            , isEnabledButton model.pythonEnabled EnablePython
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
@@ -300,7 +300,7 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "POSTGRESQL"
-                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text (boolToEnabledString model.postgresEnabled) ]
+                            , isEnabledButton model.postgresEnabled EnablePostgres
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
@@ -398,6 +398,10 @@ view model =
         ]
 
 
+
+-- HTML functions
+
+
 mainCategoryHtmlTab : List String -> String -> List (Html Msg)
 mainCategoryHtmlTab buttons activeButton =
     let
@@ -468,6 +472,28 @@ morePackagesButton filterLimit =
           else
             text "show less"
         ]
+
+
+isEnabledButton : Bool -> Msg -> Html Msg
+isEnabledButton isEnabled onClickAction =
+    button
+        [ class
+            ("btn btn-sm "
+                ++ (if isEnabled then
+                        "btn-success"
+
+                    else
+                        "btn-secondary"
+                   )
+            )
+        , style "margin" "5px"
+        , onClick onClickAction
+        ]
+        [ text (boolToEnabledString isEnabled) ]
+
+
+
+-- NON-HTML functions
 
 
 optionalString : Bool -> String -> String

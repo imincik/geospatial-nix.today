@@ -67348,9 +67348,6 @@ var $author$project$HomePage$UpdateName = function (a) {
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
-var $author$project$HomePage$boolToEnabledString = function (value) {
-	return value ? 'enabled' : 'disabled';
-};
 var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -67397,8 +67394,8 @@ var $author$project$Texts$installNixTemplateComment = _List_fromArray(
 				$elm$html$Html$text('(learn more about this installer)')
 			]))
 	]);
-var $author$project$HomePage$SetActiveCategoryTab = function (a) {
-	return {$: 0, a: a};
+var $author$project$HomePage$boolToEnabledString = function (value) {
+	return value ? 'enabled' : 'disabled';
 };
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 0, a: a};
@@ -67416,6 +67413,28 @@ var $elm$html$Html$Events$onClick = function (msg) {
 		$elm$html$Html$Events$on,
 		'click',
 		$elm$json$Json$Decode$succeed(msg));
+};
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $author$project$HomePage$isEnabledButton = F2(
+	function (isEnabled, onClickAction) {
+		return A2(
+			$elm$html$Html$button,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class(
+					'btn btn-sm ' + (isEnabled ? 'btn-success' : 'btn-secondary')),
+					A2($elm$html$Html$Attributes$style, 'margin', '5px'),
+					$elm$html$Html$Events$onClick(onClickAction)
+				]),
+			_List_fromArray(
+				[
+					$elm$html$Html$text(
+					$author$project$HomePage$boolToEnabledString(isEnabled))
+				]));
+	});
+var $author$project$HomePage$SetActiveCategoryTab = function (a) {
+	return {$: 0, a: a};
 };
 var $author$project$HomePage$mainCategoryHtmlTab = F2(
 	function (buttons, activeButton) {
@@ -67499,8 +67518,6 @@ var $elm$core$Tuple$second = function (_v0) {
 	return y;
 };
 var $elm$html$Html$span = _VirtualDom_node('span');
-var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
-var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $author$project$HomePage$packageHtmlItem = F3(
 	function (selectedItems, onClickAction, item) {
 		var buttonLabel = '>';
@@ -67891,19 +67908,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('PYTHON'),
-												A2(
-												$elm$html$Html$button,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('btn btn-info btn-sm'),
-														A2($elm$html$Html$Attributes$style, 'margin', '5px'),
-														$elm$html$Html$Events$onClick($author$project$HomePage$EnablePython)
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text(
-														$author$project$HomePage$boolToEnabledString(model.y))
-													]))
+												A2($author$project$HomePage$isEnabledButton, model.y, $author$project$HomePage$EnablePython)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -67960,19 +67965,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('POSTGRESQL'),
-												A2(
-												$elm$html$Html$button,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('btn btn-info btn-sm'),
-														A2($elm$html$Html$Attributes$style, 'margin', '5px'),
-														$elm$html$Html$Events$onClick($author$project$HomePage$EnablePostgres)
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text(
-														$author$project$HomePage$boolToEnabledString(model.x))
-													]))
+												A2($author$project$HomePage$isEnabledButton, model.x, $author$project$HomePage$EnablePostgres)
 											])),
 										A2(
 										$elm$html$Html$p,
