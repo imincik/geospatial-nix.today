@@ -127,15 +127,6 @@ type alias Config =
     }
 
 
-
--- ui
-
-
-type alias UI =
-    { activeCategoryTab : String
-    }
-
-
 type alias Model =
     { name : String
 
@@ -153,17 +144,19 @@ type alias Model =
     , availablePgPackages : List Package
     , selectedPgPackages : List Package
 
+    -- config
+    , config : Config
+    , nixInit : String
+    , nixConfig : String
+
+    -- UI section
+    , activeCategoryTab : String
+
     -- filters
     , filterLimit : Int
     , filterPackages : String
     , filterPyPackages : String
     , filterPgPackages : String
-
-    -- config
-    , config : Config
-    , nixInit : String
-    , nixConfig : String
-    , ui : UI
     }
 
 
@@ -184,12 +177,6 @@ initialModel =
     , postgresEnabled = False
     , availablePgPackages = allPgPackages
     , selectedPgPackages = []
-
-    -- filters
-    , filterLimit = 5
-    , filterPackages = ""
-    , filterPyPackages = ""
-    , filterPgPackages = ""
 
     -- config
     , config =
@@ -216,10 +203,14 @@ initialModel =
     , nixInit = ""
     , nixConfig = ""
 
-    -- ui
-    , ui =
-        { activeCategoryTab = "packages"
-        }
+    -- UI section
+    , activeCategoryTab = "packages"
+
+    -- filters
+    , filterLimit = 5
+    , filterPackages = ""
+    , filterPyPackages = ""
+    , filterPgPackages = ""
     }
 
 
@@ -252,10 +243,10 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.ui.activeCategoryTab)
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.activeCategoryTab)
 
                 -- packages
-                , if model.ui.activeCategoryTab == "packages" then
+                , if model.activeCategoryTab == "packages" then
                     div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
@@ -273,7 +264,7 @@ view model =
                     div [] []
 
                 -- languages
-                , if model.ui.activeCategoryTab == "languages" then
+                , if model.activeCategoryTab == "languages" then
                     div [ class "languages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -295,7 +286,7 @@ view model =
                     div [] []
 
                 -- services
-                , if model.ui.activeCategoryTab == "services" then
+                , if model.activeCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -321,7 +312,7 @@ view model =
                     div [] []
 
                 -- other
-                , if model.ui.activeCategoryTab == "other" then
+                , if model.activeCategoryTab == "other" then
                     div [ class "shell-hook" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
@@ -595,9 +586,6 @@ buildNixConfig model =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        SetActiveCategoryTab tab ->
-            { model | ui = (\p -> { p | activeCategoryTab = tab }) model.ui }
-
         UpdateName name ->
             { model | name = name }
 
@@ -607,9 +595,6 @@ update msg model =
 
             else
                 { model | selectedPackages = List.filter (\x -> x /= pkg) model.selectedPackages }
-
-        FilterPackages pkg ->
-            { model | filterPackages = pkg }
 
         EnablePython ->
             { model
@@ -628,9 +613,6 @@ update msg model =
             else
                 { model | selectedPyPackages = List.filter (\x -> x /= pkg) model.selectedPyPackages }
 
-        FilterPyPackages pkg ->
-            { model | filterPyPackages = pkg }
-
         EnablePostgres ->
             { model
                 | postgresEnabled =
@@ -648,14 +630,18 @@ update msg model =
             else
                 { model | selectedPgPackages = List.filter (\x -> x /= pkg) model.selectedPgPackages }
 
-        FilterPgPackages pkg ->
-            { model | filterPgPackages = pkg }
-
         AddCustomProcess script ->
             { model | config = (\p -> { p | processes = { custom = { exec = script } } }) model.config }
 
         AddShellHook script ->
             { model | config = (\p -> { p | enterShell = script }) model.config }
+
+        CreateEnvironment ->
+            { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
+
+        -- UI section
+        SetActiveCategoryTab tab ->
+            { model | activeCategoryTab = tab }
 
         UpdateFilterLimit ->
             { model
@@ -668,8 +654,14 @@ update msg model =
                         5
             }
 
-        CreateEnvironment ->
-            { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
+        FilterPackages pkg ->
+            { model | filterPackages = pkg }
+
+        FilterPyPackages pkg ->
+            { model | filterPyPackages = pkg }
+
+        FilterPgPackages pkg ->
+            { model | filterPgPackages = pkg }
 
 
 
