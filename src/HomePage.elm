@@ -277,8 +277,8 @@ view model =
                     div [ class "languages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ text "python.enabled"
-                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text (boolToString model.pythonEnabled) ]
+                            [ text "PYTHON"
+                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text (boolToEnabledString model.pythonEnabled) ]
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
@@ -299,8 +299,8 @@ view model =
                     div [ class "services" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ text "postgres.enabled"
-                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text (boolToString model.postgresEnabled) ]
+                            [ text "POSTGRESQL"
+                            , button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text (boolToEnabledString model.postgresEnabled) ]
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
@@ -312,7 +312,7 @@ view model =
                             , morePackagesButton model.filterLimit
                             ]
                         , hr [] []
-                        , p [ class "fw-bold fs-3" ] [ text "custom process" ]
+                        , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
                         , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.config.processes.custom.exec, onInput AddCustomProcess ] []
                         , br [] []
                         ]
@@ -496,6 +496,15 @@ boolToString value =
 
     else
         "false"
+
+
+boolToEnabledString : Bool -> String
+boolToEnabledString value =
+    if value then
+        "enabled"
+
+    else
+        "disabled"
 
 
 type Msg

@@ -67348,6 +67348,9 @@ var $author$project$HomePage$UpdateName = function (a) {
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
+var $author$project$HomePage$boolToEnabledString = function (value) {
+	return value ? 'enabled' : 'disabled';
+};
 var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -67887,7 +67890,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('python.enabled'),
+												$elm$html$Html$text('PYTHON'),
 												A2(
 												$elm$html$Html$button,
 												_List_fromArray(
@@ -67899,7 +67902,7 @@ var $author$project$HomePage$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$text(
-														$author$project$HomePage$boolToString(model.y))
+														$author$project$HomePage$boolToEnabledString(model.y))
 													]))
 											])),
 										A2(
@@ -67956,7 +67959,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('postgres.enabled'),
+												$elm$html$Html$text('POSTGRESQL'),
 												A2(
 												$elm$html$Html$button,
 												_List_fromArray(
@@ -67968,7 +67971,7 @@ var $author$project$HomePage$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$text(
-														$author$project$HomePage$boolToString(model.x))
+														$author$project$HomePage$boolToEnabledString(model.x))
 													]))
 											])),
 										A2(
@@ -68016,7 +68019,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('custom process')
+												$elm$html$Html$text('CUSTOM PROCESS')
 											])),
 										A2(
 										$elm$html$Html$textarea,
