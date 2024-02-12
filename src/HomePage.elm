@@ -126,12 +126,12 @@ type alias Model =
     , selectedPackages : List Package
 
     -- python
-    , pythonEnabled : String
+    , pythonEnabled : Bool
     , availablePyPackages : List Package
     , selectedPyPackages : List Package
 
     -- postgresql
-    , postgresEnabled : String
+    , postgresEnabled : Bool
     , availablePgPackages : List Package
     , selectedPgPackages : List Package
 
@@ -158,12 +158,12 @@ initialModel =
     , selectedPackages = []
 
     -- python
-    , pythonEnabled = "false"
+    , pythonEnabled = False
     , availablePyPackages = allPyPackages
     , selectedPyPackages = []
 
     -- postgresql
-    , postgresEnabled = "false"
+    , postgresEnabled = False
     , availablePgPackages = allPgPackages
     , selectedPgPackages = []
 
@@ -258,7 +258,7 @@ view model =
                 , if model.ui.activeCategoryTab == "languages" then
                     div [ class "languages" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text model.pythonEnabled ] ]
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "python.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePython ] [ text (boolToString model.pythonEnabled) ] ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
@@ -277,7 +277,7 @@ view model =
                 , if model.ui.activeCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text model.postgresEnabled ] ]
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ] [ text "postgres.enabled", button [ class "btn btn-info btn-sm", style "margin" "5px", onClick EnablePostgres ] [ text (boolToString model.postgresEnabled) ] ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
@@ -465,6 +465,15 @@ packagesListToNamesList packages =
     List.map (\item -> Tuple.first item) packages
 
 
+boolToString : Bool -> String
+boolToString value =
+    if value then
+        "true"
+
+    else
+        "false"
+
+
 type Msg
     = SetActiveCategoryTab String
     | UpdateName String
@@ -506,8 +515,8 @@ buildNixConfig model =
         nixConfigBody =
             NixConfig.configNameTemplate
                 ++ NixConfig.configPackagesTemplate
-                ++ optionalString (model.pythonEnabled == "true") NixConfig.configPythonTemplate
-                ++ optionalString (model.postgresEnabled == "true") NixConfig.configPostgresTemplate
+                ++ optionalString model.pythonEnabled NixConfig.configPythonTemplate
+                ++ optionalString model.postgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString (model.config.processes.custom.exec /= "") NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.config.enterShell /= "") NixConfig.configEnterShellTemplate
 
@@ -516,9 +525,9 @@ buildNixConfig model =
     in
     String.replace "<NAME>" (environmentName model.name) nixConfig
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
-        |> String.replace "<PYTHON-ENABLED>" model.pythonEnabled
+        |> String.replace "<PYTHON-ENABLED>" (boolToString model.pythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
-        |> String.replace "<POSTGRES-ENABLED>" model.postgresEnabled
+        |> String.replace "<POSTGRES-ENABLED>" (boolToString model.postgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<CUSTOM-PROCESS>" model.config.processes.custom.exec
         |> String.replace "<SHELL-HOOK>" model.config.enterShell
@@ -546,16 +555,16 @@ update msg model =
         EnablePython ->
             { model
                 | pythonEnabled =
-                    if model.pythonEnabled == "false" then
-                        "true"
+                    if not model.pythonEnabled then
+                        True
 
                     else
-                        "false"
+                        False
             }
 
         AddPyPackage pkg ->
             if not (List.member pkg model.selectedPyPackages) then
-                { model | selectedPyPackages = model.selectedPyPackages ++ [ pkg ], pythonEnabled = "true" }
+                { model | selectedPyPackages = model.selectedPyPackages ++ [ pkg ], pythonEnabled = True }
 
             else
                 { model | selectedPyPackages = List.filter (\x -> x /= pkg) model.selectedPyPackages }
@@ -566,16 +575,16 @@ update msg model =
         EnablePostgres ->
             { model
                 | postgresEnabled =
-                    if model.postgresEnabled == "false" then
-                        "true"
+                    if not model.postgresEnabled then
+                        True
 
                     else
-                        "false"
+                        False
             }
 
         AddPgPackage pkg ->
             if not (List.member pkg model.selectedPgPackages) then
-                { model | selectedPgPackages = model.selectedPgPackages ++ [ pkg ], postgresEnabled = "true" }
+                { model | selectedPgPackages = model.selectedPgPackages ++ [ pkg ], postgresEnabled = True }
 
             else
                 { model | selectedPgPackages = List.filter (\x -> x /= pkg) model.selectedPgPackages }

@@ -66306,8 +66306,8 @@ var $author$project$HomePage$initialModel = {
 	I: 'My geospatial environment',
 	S: '',
 	aa: '',
-	x: 'false',
-	y: 'false',
+	x: false,
+	y: false,
 	n: _List_Nil,
 	o: _List_Nil,
 	p: _List_Nil,
@@ -67035,6 +67035,9 @@ var $elm$browser$Browser$sandbox = function (impl) {
 			a0: impl.a0
 		});
 };
+var $author$project$HomePage$boolToString = function (value) {
+	return value ? 'true' : 'false';
+};
 var $author$project$NixConfig$configCustomProcessTemplate = '\n  processes.custom.exec = \'\'\n    <CUSTOM-PROCESS>\n  \'\';\n';
 var $author$project$NixConfig$configEnterShellTemplate = '\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n';
 var $author$project$NixConfig$configNameTemplate = '\n  name = "<NAME>";\n';
@@ -67076,9 +67079,9 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 		_Utils_ap(
 			$author$project$NixConfig$configPackagesTemplate,
 			_Utils_ap(
-				A2($author$project$HomePage$optionalString, model.y === 'true', $author$project$NixConfig$configPythonTemplate),
+				A2($author$project$HomePage$optionalString, model.y, $author$project$NixConfig$configPythonTemplate),
 				_Utils_ap(
-					A2($author$project$HomePage$optionalString, model.x === 'true', $author$project$NixConfig$configPostgresTemplate),
+					A2($author$project$HomePage$optionalString, model.x, $author$project$NixConfig$configPostgresTemplate),
 					_Utils_ap(
 						A2($author$project$HomePage$optionalString, model.g.K.E.H !== '', $author$project$NixConfig$configCustomProcessTemplate),
 						A2($author$project$HomePage$optionalString, model.g.G !== '', $author$project$NixConfig$configEnterShellTemplate))))));
@@ -67098,7 +67101,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 				A3(
 					$elm$core$String$replace,
 					'<POSTGRES-ENABLED>',
-					model.x,
+					$author$project$HomePage$boolToString(model.x),
 					A3(
 						$elm$core$String$replace,
 						'<PYTHON-PACKAGES>',
@@ -67106,7 +67109,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 						A3(
 							$elm$core$String$replace,
 							'<PYTHON-ENABLED>',
-							model.y,
+							$author$project$HomePage$boolToString(model.y),
 							A3(
 								$elm$core$String$replace,
 								'<PACKAGES>',
@@ -67214,14 +67217,14 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						y: (model.y === 'false') ? 'true' : 'false'
+						y: (!model.y) ? true : false
 					});
 			case 4:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.p)) ? _Utils_update(
 					model,
 					{
-						y: 'true',
+						y: true,
 						p: _Utils_ap(
 							model.p,
 							_List_fromArray(
@@ -67245,14 +67248,14 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						x: (model.x === 'false') ? 'true' : 'false'
+						x: (!model.x) ? true : false
 					});
 			case 6:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.o)) ? _Utils_update(
 					model,
 					{
-						x: 'true',
+						x: true,
 						o: _Utils_ap(
 							model.o,
 							_List_fromArray(
@@ -67895,7 +67898,8 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text(model.y)
+														$elm$html$Html$text(
+														$author$project$HomePage$boolToString(model.y))
 													]))
 											])),
 										A2(
@@ -67963,7 +67967,8 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text(model.x)
+														$elm$html$Html$text(
+														$author$project$HomePage$boolToString(model.x))
 													]))
 											])),
 										A2(
