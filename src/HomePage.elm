@@ -50,176 +50,90 @@ allPackages =
     GeoPackages.packages ++ Packages.packages
 
 
-allPyPackages : Packages
-allPyPackages =
+allPythonPackages : Packages
+allPythonPackages =
     GeoPythonPackages.packages ++ PythonPackages.packages
 
 
-allPgPackages : Packages
-allPgPackages =
+allPostgresPackages : Packages
+allPostgresPackages =
     GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
 
 
-
--- languages
-
-
-type alias LanguagePython =
-    { enabled : Bool
-    , packages : Packages
-    }
-
-
-type alias Languages =
-    { python : LanguagePython
-
-    -- , xy: LanguageXY
-    }
-
-
-
--- services
-
-
-type alias ServicePostgres =
-    { enabled : Bool
-    , packages : Packages
-    }
-
-
-type alias Services =
-    { postgres : ServicePostgres
-
-    -- , xy: ServiceXY
-    }
-
-
-
--- processes
-
-
-type alias ProcessCustom =
-    { exec : String
-    }
-
-
-type alias Processes =
-    { custom : ProcessCustom
-
-    -- , xy: ProcessXY
-    }
-
-
-
--- shell hook
-
-
-type alias EnterShell =
-    String
-
-
-type alias Config =
-    { packages : Packages
-    , languages : Languages
-    , services : Services
-    , processes : Processes
-    , enterShell : EnterShell
-    }
-
-
-
--- ui
-
-
-type alias UI =
-    { activeCategoryTab : String
-    }
-
-
 type alias Model =
-    { name : String
+    { configName : String
 
     -- packages
-    , availablePackages : List Package
-    , selectedPackages : List Package
+    , packagesAvailable : List Package
+    , configPackages : List Package
 
     -- python
-    , pythonEnabled : Bool
-    , availablePyPackages : List Package
-    , selectedPyPackages : List Package
+    , packagesPythonAvailable : List Package
+    , configPythonEnabled : Bool
+    , configPythonPackages : List Package
 
     -- postgresql
-    , postgresEnabled : Bool
-    , availablePgPackages : List Package
-    , selectedPgPackages : List Package
+    , packagesPostgresAvailable : List Package
+    , configPostgresEnabled : Bool
+    , configPostgresPackages : List Package
 
-    -- filters
-    , filterLimit : Int
-    , filterPackages : String
-    , filterPyPackages : String
-    , filterPgPackages : String
+    -- custom process
+    , configCustomProcessExec : String
 
-    -- config
-    , config : Config
+    -- other
+    , configEnterShell : String
+
+    -- nix config
     , nixInit : String
     , nixConfig : String
-    , ui : UI
+
+    -- UI section
+    , uiActiveCategoryTab : String
+
+    -- filters
+    , uiFilterLimit : Int
+    , uiFilterPackages : String
+    , uiFilterPyPackages : String
+    , uiFilterPgPackages : String
     }
 
 
 initialModel : Model
 initialModel =
-    { name = "My geospatial environment"
+    { configName = "My geospatial environment"
 
     -- packages
-    , availablePackages = allPackages
-    , selectedPackages = []
+    , packagesAvailable = allPackages
+    , configPackages = []
 
     -- python
-    , pythonEnabled = False
-    , availablePyPackages = allPyPackages
-    , selectedPyPackages = []
+    , packagesPythonAvailable = allPythonPackages
+    , configPythonEnabled = False
+    , configPythonPackages = []
 
     -- postgresql
-    , postgresEnabled = False
-    , availablePgPackages = allPgPackages
-    , selectedPgPackages = []
+    , packagesPostgresAvailable = allPostgresPackages
+    , configPostgresEnabled = False
+    , configPostgresPackages = []
 
-    -- filters
-    , filterLimit = 5
-    , filterPackages = ""
-    , filterPyPackages = ""
-    , filterPgPackages = ""
+    -- custom process
+    , configCustomProcessExec = ""
 
-    -- config
-    , config =
-        { packages = []
-        , languages =
-            { python =
-                { enabled = False
-                , packages = []
-                }
-            }
-        , services =
-            { postgres =
-                { enabled = False
-                , packages = []
-                }
-            }
-        , processes =
-            { custom =
-                { exec = ""
-                }
-            }
-        , enterShell = ""
-        }
+    -- other
+    , configEnterShell = ""
+
+    -- nix config
     , nixInit = ""
     , nixConfig = ""
 
-    -- ui
-    , ui =
-        { activeCategoryTab = "packages"
-        }
+    -- UI section
+    , uiActiveCategoryTab = "packages"
+
+    -- filters
+    , uiFilterLimit = 5
+    , uiFilterPackages = ""
+    , uiFilterPyPackages = ""
+    , uiFilterPgPackages = ""
     }
 
 
@@ -243,7 +157,7 @@ view model =
         , div [ class "row" ]
             [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
-                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.name, onInput UpdateName ] []
+                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigSetName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
 
@@ -252,20 +166,20 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.ui.activeCategoryTab)
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
 
                 -- packages
-                , if model.ui.activeCategoryTab == "packages" then
+                , if model.uiActiveCategoryTab == "packages" then
                     div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
                             ]
-                        , packagesHtmlList model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
+                        , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
-                            , morePackagesButton model.filterLimit
+                            [ packagesCountText (List.length model.packagesAvailable) (List.length model.configPackages)
+                            , morePackagesButton model.uiFilterLimit
                             ]
                         ]
 
@@ -273,21 +187,21 @@ view model =
                     div [] []
 
                 -- languages
-                , if model.ui.activeCategoryTab == "languages" then
+                , if model.uiActiveCategoryTab == "languages" then
                     div [ class "languages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "PYTHON"
-                            , isEnabledButton model.pythonEnabled EnablePython
+                            , isEnabledButton model.configPythonEnabled ConfigPythonEnable
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput UiFilterPythonPackages ] []
                             ]
-                        , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
+                        , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit ConfigPythonAddPackage
                         , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
-                            , morePackagesButton model.filterLimit
+                            [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
+                            , morePackagesButton model.uiFilterLimit
                             ]
                         ]
 
@@ -295,25 +209,25 @@ view model =
                     div [] []
 
                 -- services
-                , if model.ui.activeCategoryTab == "services" then
+                , if model.uiActiveCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "POSTGRESQL"
-                            , isEnabledButton model.postgresEnabled EnablePostgres
+                            , isEnabledButton model.configPostgresEnabled ConfigPostgresEnable
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput UiFilterPostgresPackages ] []
                             ]
-                        , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
+                        , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit ConfigPostgresAddPackage
                         , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
-                            , morePackagesButton model.filterLimit
+                            [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
+                            , morePackagesButton model.uiFilterLimit
                             ]
                         , hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.config.processes.custom.exec, onInput AddCustomProcess ] []
+                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.configCustomProcessExec, onInput ConfigCustomProcessEnable ] []
                         , br [] []
                         ]
 
@@ -321,11 +235,11 @@ view model =
                     div [] []
 
                 -- other
-                , if model.ui.activeCategoryTab == "other" then
+                , if model.uiActiveCategoryTab == "other" then
                     div [ class "shell-hook" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput AddShellHook ] []
+                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.configEnterShell, onInput ConfgiShellHookEnable ] []
                         ]
 
                   else
@@ -417,7 +331,7 @@ mainCategoryHtmlTab buttons activeButton =
                                     "btn-secondary"
                                )
                         )
-                    , onClick (SetActiveCategoryTab (String.toLower item))
+                    , onClick (UiSetActiveCategoryTab (String.toLower item))
                     ]
                     [ text item ]
     in
@@ -465,7 +379,7 @@ packagesCountText packagesCount selectedCount =
 
 morePackagesButton : Int -> Html Msg
 morePackagesButton filterLimit =
-    button [ class "btn btn-sm btn-link", onClick UpdateFilterLimit ]
+    button [ class "btn btn-sm btn-link", onClick UiUpdateFilterLimit ]
         [ if filterLimit < 15 then
             text "show more"
 
@@ -534,20 +448,22 @@ boolToEnabledString value =
 
 
 type Msg
-    = SetActiveCategoryTab String
-    | UpdateName String
-    | AddPackage Package
-    | EnablePython
-    | AddPyPackage Package
-    | EnablePostgres
-    | AddPgPackage Package
-    | AddCustomProcess String
-    | AddShellHook String
-    | FilterPackages String
-    | FilterPyPackages String
-    | FilterPgPackages String
-    | UpdateFilterLimit
+    = ConfigSetName String
+    | ConfigAddPackage Package
+    | ConfigPythonEnable
+    | ConfigPythonAddPackage Package
+    | ConfigPostgresEnable
+    | ConfigPostgresAddPackage Package
+    | ConfigCustomProcessEnable String
+    | ConfgiShellHookEnable String
+      -- nix config
     | CreateEnvironment
+      -- ui
+    | UiSetActiveCategoryTab String
+    | UiFilterPackages String
+    | UiFilterPythonPackages String
+    | UiFilterPostgresPackages String
+    | UiUpdateFilterLimit
 
 
 
@@ -556,120 +472,121 @@ type Msg
 
 buildNixInit : Model -> String
 buildNixInit model =
-    String.replace "<NAME>" (environmentName model.name) initTemplate
+    String.replace "<NAME>" (environmentName model.configName) initTemplate
 
 
 buildNixConfig : Model -> String
 buildNixConfig model =
     let
         selectedPackages =
-            packagesListToNamesList model.selectedPackages
+            packagesListToNamesList model.configPackages
 
         selectedPyPackages =
-            packagesListToNamesList model.selectedPyPackages
+            packagesListToNamesList model.configPythonPackages
 
         selectedPgPackages =
-            packagesListToNamesList model.selectedPgPackages
+            packagesListToNamesList model.configPostgresPackages
 
         nixConfigBody =
             NixConfig.configNameTemplate
                 ++ NixConfig.configPackagesTemplate
-                ++ optionalString model.pythonEnabled NixConfig.configPythonTemplate
-                ++ optionalString model.postgresEnabled NixConfig.configPostgresTemplate
-                ++ optionalString (model.config.processes.custom.exec /= "") NixConfig.configCustomProcessTemplate
-                ++ optionalString (model.config.enterShell /= "") NixConfig.configEnterShellTemplate
+                ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
+                ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
+                ++ optionalString (model.configCustomProcessExec /= "") NixConfig.configCustomProcessTemplate
+                ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
             String.replace "<CONFIG-BODY>" nixConfigBody NixConfig.configTemplate
     in
-    String.replace "<NAME>" (environmentName model.name) nixConfig
+    String.replace "<NAME>" (environmentName model.configName) nixConfig
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
-        |> String.replace "<PYTHON-ENABLED>" (boolToString model.pythonEnabled)
+        |> String.replace "<PYTHON-ENABLED>" (boolToString model.configPythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
-        |> String.replace "<POSTGRES-ENABLED>" (boolToString model.postgresEnabled)
+        |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
-        |> String.replace "<CUSTOM-PROCESS>" model.config.processes.custom.exec
-        |> String.replace "<SHELL-HOOK>" model.config.enterShell
+        |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
+        |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
 
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        SetActiveCategoryTab tab ->
-            { model | ui = (\p -> { p | activeCategoryTab = tab }) model.ui }
+        ConfigSetName name ->
+            { model | configName = name }
 
-        UpdateName name ->
-            { model | name = name }
-
-        AddPackage pkg ->
-            if not (List.member pkg model.selectedPackages) then
-                { model | selectedPackages = model.selectedPackages ++ [ pkg ] }
+        ConfigAddPackage pkg ->
+            if not (List.member pkg model.configPackages) then
+                { model | configPackages = model.configPackages ++ [ pkg ] }
 
             else
-                { model | selectedPackages = List.filter (\x -> x /= pkg) model.selectedPackages }
+                { model | configPackages = List.filter (\x -> x /= pkg) model.configPackages }
 
-        FilterPackages pkg ->
-            { model | filterPackages = pkg }
-
-        EnablePython ->
+        ConfigPythonEnable ->
             { model
-                | pythonEnabled =
-                    if not model.pythonEnabled then
+                | configPythonEnabled =
+                    if not model.configPythonEnabled then
                         True
 
                     else
                         False
             }
 
-        AddPyPackage pkg ->
-            if not (List.member pkg model.selectedPyPackages) then
-                { model | selectedPyPackages = model.selectedPyPackages ++ [ pkg ], pythonEnabled = True }
+        ConfigPythonAddPackage pkg ->
+            if not (List.member pkg model.configPythonPackages) then
+                { model | configPythonPackages = model.configPythonPackages ++ [ pkg ], configPythonEnabled = True }
 
             else
-                { model | selectedPyPackages = List.filter (\x -> x /= pkg) model.selectedPyPackages }
+                { model | configPythonPackages = List.filter (\x -> x /= pkg) model.configPythonPackages }
 
-        FilterPyPackages pkg ->
-            { model | filterPyPackages = pkg }
-
-        EnablePostgres ->
+        ConfigPostgresEnable ->
             { model
-                | postgresEnabled =
-                    if not model.postgresEnabled then
+                | configPostgresEnabled =
+                    if not model.configPostgresEnabled then
                         True
 
                     else
                         False
             }
 
-        AddPgPackage pkg ->
-            if not (List.member pkg model.selectedPgPackages) then
-                { model | selectedPgPackages = model.selectedPgPackages ++ [ pkg ], postgresEnabled = True }
+        ConfigPostgresAddPackage pkg ->
+            if not (List.member pkg model.configPostgresPackages) then
+                { model | configPostgresPackages = model.configPostgresPackages ++ [ pkg ], configPostgresEnabled = True }
 
             else
-                { model | selectedPgPackages = List.filter (\x -> x /= pkg) model.selectedPgPackages }
+                { model | configPostgresPackages = List.filter (\x -> x /= pkg) model.configPostgresPackages }
 
-        FilterPgPackages pkg ->
-            { model | filterPgPackages = pkg }
+        ConfigCustomProcessEnable script ->
+            { model | configCustomProcessExec = script }
 
-        AddCustomProcess script ->
-            { model | config = (\p -> { p | processes = { custom = { exec = script } } }) model.config }
+        ConfgiShellHookEnable script ->
+            { model | configEnterShell = script }
 
-        AddShellHook script ->
-            { model | config = (\p -> { p | enterShell = script }) model.config }
+        CreateEnvironment ->
+            { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
 
-        UpdateFilterLimit ->
+        -- UI section
+        UiSetActiveCategoryTab tab ->
+            { model | uiActiveCategoryTab = tab }
+
+        UiUpdateFilterLimit ->
             { model
-                | filterLimit =
+                | uiFilterLimit =
                     -- allow to increase limit up to 15 items
-                    if model.filterLimit < 15 then
-                        model.filterLimit + 5
+                    if model.uiFilterLimit < 15 then
+                        model.uiFilterLimit + 5
 
                     else
                         5
             }
 
-        CreateEnvironment ->
-            { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
+        UiFilterPackages pkg ->
+            { model | uiFilterPackages = pkg }
+
+        UiFilterPythonPackages pkg ->
+            { model | uiFilterPyPackages = pkg }
+
+        UiFilterPostgresPackages pkg ->
+            { model | uiFilterPgPackages = pkg }
 
 
 
