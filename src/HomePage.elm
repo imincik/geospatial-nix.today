@@ -85,6 +85,7 @@ type alias Model =
     , configPostgresSettings : String
 
     -- custom process
+    , configCustomProcessEnabled : Bool
     , configCustomProcessExec : String
 
     -- other
@@ -130,6 +131,7 @@ initialModel =
     , configPostgresSettings = NixModules.postgres.settings.default
 
     -- custom process
+    , configCustomProcessEnabled = False
     , configCustomProcessExec = ""
 
     -- other
@@ -229,6 +231,8 @@ view model =
                 , if model.uiActiveCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
+
+                        -- postgres
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "POSTGRESQL"
                             , isEnabledButton model.configPostgresEnabled ConfigPostgresEnable
@@ -265,9 +269,18 @@ view model =
                             [ text "port"
                             , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
                             ]
+
+                        -- custom process
                         , hr [] []
-                        , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.configCustomProcessExec, onInput ConfigCustomProcessEnable ] []
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ text "CUSTOM PROCESS"
+                            , isEnabledButton model.configCustomProcessEnabled ConfigCustomProcessEnable
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "command"
+                            , useExampleButton ConfigCustomProcessExec NixModules.customProcess.exec.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
+                            ]
                         , br [] []
                         ]
 
@@ -505,7 +518,8 @@ type Msg
     | ConfigPostgresListenAddresses String
     | ConfigPostgresListenPort String
     | ConfigPostgresSettings String
-    | ConfigCustomProcessEnable String
+    | ConfigCustomProcessEnable
+    | ConfigCustomProcessExec String
     | ConfgiShellHookEnable String
       -- nix config
     | CreateEnvironment
@@ -543,7 +557,7 @@ buildNixConfig model =
                 ++ NixConfig.configPackagesTemplate
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
-                ++ optionalString (model.configCustomProcessExec /= "") NixConfig.configCustomProcessTemplate
+                ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
@@ -644,8 +658,18 @@ update msg model =
         ConfigPostgresSettings val ->
             { model | configPostgresSettings = val }
 
-        ConfigCustomProcessEnable script ->
-            { model | configCustomProcessExec = script }
+        ConfigCustomProcessEnable ->
+            { model
+                | configCustomProcessEnabled =
+                    if not model.configCustomProcessEnabled then
+                        True
+
+                    else
+                        False
+            }
+
+        ConfigCustomProcessExec script ->
+            { model | configCustomProcessExec = script, configCustomProcessEnabled = True }
 
         ConfgiShellHookEnable script ->
             { model | configEnterShell = script }

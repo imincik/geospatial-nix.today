@@ -519,11 +519,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.ak.R === region.ap.R)
+	if (region.al.S === region.aq.S)
 	{
-		return 'on line ' + region.ak.R;
+		return 'on line ' + region.al.S;
 	}
-	return 'on lines ' + region.ak.R + ' through ' + region.ap.R;
+	return 'on lines ' + region.al.S + ' through ' + region.aq.S;
 }
 
 
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aY,
+		impl.a_,
+		impl.a6,
 		impl.a4,
-		impl.a2,
 		function() { return function() {} }
 	);
 });
@@ -2720,8 +2720,8 @@ var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
 		v: func(record.v),
-		al: record.al,
-		ah: record.ah
+		am: record.am,
+		ai: record.ai
 	}
 });
 
@@ -2990,10 +2990,10 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 
 		var value = result.a;
 		var message = !tag ? value : tag < 3 ? value.a : value.v;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.al;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.am;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.ah) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.ai) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3943,11 +3943,11 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aY,
+		impl.a_,
+		impl.a6,
 		impl.a4,
-		impl.a2,
 		function(sendToApp, initialModel) {
-			var view = impl.a5;
+			var view = impl.a7;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3979,12 +3979,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aY,
+		impl.a_,
+		impl.a6,
 		impl.a4,
-		impl.a2,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.aj && impl.aj(sendToApp)
-			var view = impl.a5;
+			var divertHrefToApp = impl.ak && impl.ak(sendToApp)
+			var view = impl.a7;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3992,12 +3992,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aR);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aT);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.a3) && (_VirtualDom_doc.title = title = doc.a3);
+				(title !== doc.a5) && (_VirtualDom_doc.title = title = doc.a5);
 			});
 		}
 	);
@@ -4053,12 +4053,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.a_;
-	var onUrlRequest = impl.a$;
+	var onUrlChange = impl.a0;
+	var onUrlRequest = impl.a1;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		aj: function(sendToApp)
+		ak: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4074,9 +4074,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.aE === next.aE
-							&& curr.at === next.at
-							&& curr.aB.a === next.aB.a
+							&& curr.aG === next.aG
+							&& curr.av === next.av
+							&& curr.aD.a === next.aD.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4084,13 +4084,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		aY: function(flags)
+		a_: function(flags)
 		{
-			return A3(impl.aY, flags, _Browser_getUrl(), key);
+			return A3(impl.a_, flags, _Browser_getUrl(), key);
 		},
-		a5: impl.a5,
-		a4: impl.a4,
-		a2: impl.a2
+		a7: impl.a7,
+		a6: impl.a6,
+		a4: impl.a4
 	});
 }
 
@@ -4156,17 +4156,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { aW: 'hidden', aS: 'visibilitychange' }
+		? { aY: 'hidden', aU: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { aW: 'mozHidden', aS: 'mozvisibilitychange' }
+		? { aY: 'mozHidden', aU: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { aW: 'msHidden', aS: 'msvisibilitychange' }
+		? { aY: 'msHidden', aU: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { aW: 'webkitHidden', aS: 'webkitvisibilitychange' }
-		: { aW: 'hidden', aS: 'visibilitychange' };
+		? { aY: 'webkitHidden', aU: 'webkitvisibilitychange' }
+		: { aY: 'hidden', aU: 'visibilitychange' };
 }
 
 
@@ -4247,12 +4247,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		aI: _Browser_getScene(),
-		aL: {
-			aN: _Browser_window.pageXOffset,
-			aO: _Browser_window.pageYOffset,
-			aM: _Browser_doc.documentElement.clientWidth,
-			as: _Browser_doc.documentElement.clientHeight
+		aK: _Browser_getScene(),
+		aN: {
+			aP: _Browser_window.pageXOffset,
+			aQ: _Browser_window.pageYOffset,
+			aO: _Browser_doc.documentElement.clientWidth,
+			au: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4262,8 +4262,8 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		aM: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		as: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		aO: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		au: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4286,15 +4286,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			aI: {
-				aM: node.scrollWidth,
-				as: node.scrollHeight
+			aK: {
+				aO: node.scrollWidth,
+				au: node.scrollHeight
 			},
-			aL: {
-				aN: node.scrollLeft,
-				aO: node.scrollTop,
-				aM: node.clientWidth,
-				as: node.clientHeight
+			aN: {
+				aP: node.scrollLeft,
+				aQ: node.scrollTop,
+				aO: node.clientWidth,
+				au: node.clientHeight
 			}
 		};
 	});
@@ -4324,18 +4324,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			aI: _Browser_getScene(),
-			aL: {
-				aN: x,
-				aO: y,
-				aM: _Browser_doc.documentElement.clientWidth,
-				as: _Browser_doc.documentElement.clientHeight
+			aK: _Browser_getScene(),
+			aN: {
+				aP: x,
+				aQ: y,
+				aO: _Browser_doc.documentElement.clientWidth,
+				au: _Browser_doc.documentElement.clientHeight
 			},
-			aU: {
-				aN: x + rect.left,
-				aO: y + rect.top,
-				aM: rect.width,
-				as: rect.height
+			aW: {
+				aP: x + rect.left,
+				aQ: y + rect.top,
+				aO: rect.width,
+				au: rect.height
 			}
 		};
 	});
@@ -66283,13 +66283,13 @@ var $author$project$PythonPackages$packages = _List_fromArray(
 	]);
 var $author$project$HomePage$allPythonPackages = _Utils_ap($author$project$GeoPythonPackages$packages, $author$project$PythonPackages$packages);
 var $author$project$NixModules$postgres = {
-	au: {Q: '"--locale=C"\n"--encoding=UTF8\"', u: ''},
-	ad: {Q: '', u: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
-	ae: {Q: '', u: '0.0.0.0'},
-	aw: {Q: '5432', u: ''},
-	ai: {Q: '', u: 'log_connections = true;\nlog_statement = "all";'}
+	aw: {R: '"--locale=C"\n"--encoding=UTF8\"', n: ''},
+	ae: {R: '', n: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
+	af: {R: '', n: '0.0.0.0'},
+	ay: {R: '5432', n: ''},
+	aj: {R: '', n: 'log_connections = true;\nlog_statement = "all";'}
 };
-var $author$project$HomePage$initialModel = {E: '', F: '', G: 'My geospatial environment', k: _List_Nil, t: false, L: $author$project$NixModules$postgres.au.Q, M: $author$project$NixModules$postgres.ad.Q, N: $author$project$NixModules$postgres.ae.Q, O: $author$project$NixModules$postgres.aw.Q, l: _List_Nil, P: $author$project$NixModules$postgres.ai.Q, p: false, m: _List_Nil, z: false, S: '', _: '', aa: $author$project$HomePage$allPackages, ab: $author$project$HomePage$allPostgresPackages, ac: $author$project$HomePage$allPythonPackages, x: 'packages', j: 5, W: '', X: '', Y: ''};
+var $author$project$HomePage$initialModel = {z: false, L: '', F: '', G: 'My geospatial environment', k: _List_Nil, u: false, M: $author$project$NixModules$postgres.aw.R, N: $author$project$NixModules$postgres.ae.R, O: $author$project$NixModules$postgres.af.R, P: $author$project$NixModules$postgres.ay.R, l: _List_Nil, Q: $author$project$NixModules$postgres.aj.R, q: false, m: _List_Nil, A: false, T: '', aa: '', ab: $author$project$HomePage$allPackages, ac: $author$project$HomePage$allPostgresPackages, ad: $author$project$HomePage$allPythonPackages, x: 'packages', j: 5, X: '', Y: '', Z: ''};
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
 };
@@ -66712,7 +66712,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {ar: fragment, at: host, az: path, aB: port_, aE: protocol, aF: query};
+		return {at: fragment, av: host, aB: path, aD: port_, aG: protocol, aH: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -66997,19 +66997,19 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $elm$browser$Browser$sandbox = function (impl) {
 	return _Browser_element(
 		{
-			aY: function (_v0) {
-				return _Utils_Tuple2(impl.aY, $elm$core$Platform$Cmd$none);
+			a_: function (_v0) {
+				return _Utils_Tuple2(impl.a_, $elm$core$Platform$Cmd$none);
 			},
-			a2: function (_v1) {
+			a4: function (_v1) {
 				return $elm$core$Platform$Sub$none;
 			},
-			a4: F2(
+			a6: F2(
 				function (msg, model) {
 					return _Utils_Tuple2(
-						A2(impl.a4, msg, model),
+						A2(impl.a6, msg, model),
 						$elm$core$Platform$Cmd$none);
 				}),
-			a5: impl.a5
+			a7: impl.a7
 		});
 };
 var $author$project$HomePage$boolToString = function (value) {
@@ -67056,11 +67056,11 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 		_Utils_ap(
 			$author$project$NixConfig$configPackagesTemplate,
 			_Utils_ap(
-				A2($author$project$HomePage$optionalString, model.p, $author$project$NixConfig$configPythonTemplate),
+				A2($author$project$HomePage$optionalString, model.q, $author$project$NixConfig$configPythonTemplate),
 				_Utils_ap(
-					A2($author$project$HomePage$optionalString, model.t, $author$project$NixConfig$configPostgresTemplate),
+					A2($author$project$HomePage$optionalString, model.u, $author$project$NixConfig$configPostgresTemplate),
 					_Utils_ap(
-						A2($author$project$HomePage$optionalString, model.E !== '', $author$project$NixConfig$configCustomProcessTemplate),
+						A2($author$project$HomePage$optionalString, model.z, $author$project$NixConfig$configCustomProcessTemplate),
 						A2($author$project$HomePage$optionalString, model.F !== '', $author$project$NixConfig$configEnterShellTemplate))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return A3(
@@ -67070,27 +67070,27 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 		A3(
 			$elm$core$String$replace,
 			'<CUSTOM-PROCESS>',
-			model.E,
+			model.L,
 			A3(
 				$elm$core$String$replace,
 				'<POSTGRES-SETTINGS>',
-				A3($elm$core$String$replace, '\n', ' ', model.P),
+				A3($elm$core$String$replace, '\n', ' ', model.Q),
 				A3(
 					$elm$core$String$replace,
 					'<POSTGRES-LISTEN-PORT>',
-					model.O,
+					model.P,
 					A3(
 						$elm$core$String$replace,
 						'<POSTGRES-LISTEN-ADDRESSES>',
-						model.N,
+						model.O,
 						A3(
 							$elm$core$String$replace,
 							'<POSTGRES-INITIAL-SCRIPT>',
-							A3($elm$core$String$replace, '\n', ' ', model.M),
+							A3($elm$core$String$replace, '\n', ' ', model.N),
 							A3(
 								$elm$core$String$replace,
 								'<POSTGRES-INITDB-ARGS>',
-								A3($elm$core$String$replace, '\n', ' ', model.L),
+								A3($elm$core$String$replace, '\n', ' ', model.M),
 								A3(
 									$elm$core$String$replace,
 									'<POSTGRES-PACKAGES>',
@@ -67098,11 +67098,11 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 									A3(
 										$elm$core$String$replace,
 										'<POSTGRES-ENABLED>',
-										$author$project$HomePage$boolToString(model.t),
+										$author$project$HomePage$boolToString(model.u),
 										A3(
 											$elm$core$String$replace,
 											'<PYTHON-POETRY-ENABLED>',
-											$author$project$HomePage$boolToString(model.z),
+											$author$project$HomePage$boolToString(model.A),
 											A3(
 												$elm$core$String$replace,
 												'<PYTHON-PACKAGES>',
@@ -67110,7 +67110,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 												A3(
 													$elm$core$String$replace,
 													'<PYTHON-ENABLED>',
-													$author$project$HomePage$boolToString(model.p),
+													$author$project$HomePage$boolToString(model.q),
 													A3(
 														$elm$core$String$replace,
 														'<PACKAGES>',
@@ -67202,14 +67202,14 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						p: (!model.p) ? true : false
+						q: (!model.q) ? true : false
 					});
 			case 3:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.m)) ? _Utils_update(
 					model,
 					{
-						p: true,
+						q: true,
 						m: _Utils_ap(
 							model.m,
 							_List_fromArray(
@@ -67228,21 +67228,21 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						p: (!model.z) ? true : true,
-						z: (!model.z) ? true : false
+						q: (!model.A) ? true : true,
+						A: (!model.A) ? true : false
 					});
 			case 5:
 				return _Utils_update(
 					model,
 					{
-						t: (!model.t) ? true : false
+						u: (!model.u) ? true : false
 					});
 			case 6:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.l)) ? _Utils_update(
 					model,
 					{
-						t: true,
+						u: true,
 						l: _Utils_ap(
 							model.l,
 							_List_fromArray(
@@ -67261,80 +67261,87 @@ var $author$project$HomePage$update = F2(
 				var val = msg.a;
 				return _Utils_update(
 					model,
-					{L: val});
+					{M: val});
 			case 8:
 				var val = msg.a;
 				return _Utils_update(
 					model,
-					{M: val});
+					{N: val});
 			case 9:
 				var val = msg.a;
 				return _Utils_update(
 					model,
-					{N: val});
+					{O: val});
 			case 10:
 				var val = msg.a;
 				return _Utils_update(
 					model,
-					{O: val});
+					{P: val});
 			case 11:
 				var val = msg.a;
 				return _Utils_update(
 					model,
-					{P: val});
+					{Q: val});
 			case 12:
-				var script = msg.a;
 				return _Utils_update(
 					model,
-					{E: script});
+					{
+						z: (!model.z) ? true : false
+					});
 			case 13:
 				var script = msg.a;
 				return _Utils_update(
 					model,
-					{F: script});
+					{z: true, L: script});
 			case 14:
+				var script = msg.a;
+				return _Utils_update(
+					model,
+					{F: script});
+			case 15:
 				return _Utils_update(
 					model,
 					{
-						S: $author$project$HomePage$buildNixConfig(model),
-						_: $author$project$HomePage$buildNixInit(model)
+						T: $author$project$HomePage$buildNixConfig(model),
+						aa: $author$project$HomePage$buildNixInit(model)
 					});
-			case 15:
+			case 16:
 				var tab = msg.a;
 				return _Utils_update(
 					model,
 					{x: tab});
-			case 19:
+			case 20:
 				return _Utils_update(
 					model,
 					{
 						j: (model.j < 15) ? (model.j + 5) : 5
 					});
-			case 16:
-				var pkg = msg.a;
-				return _Utils_update(
-					model,
-					{W: pkg});
 			case 17:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{Y: pkg});
+					{X: pkg});
+			case 18:
+				var pkg = msg.a;
+				return _Utils_update(
+					model,
+					{Z: pkg});
 			default:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{X: pkg});
+					{Y: pkg});
 		}
 	});
 var $author$project$HomePage$ConfgiShellHookEnable = function (a) {
-	return {$: 13, a: a};
+	return {$: 14, a: a};
 };
 var $author$project$HomePage$ConfigAddPackage = function (a) {
 	return {$: 1, a: a};
 };
-var $author$project$HomePage$ConfigCustomProcessEnable = function (a) {
-	return {$: 12, a: a};
+var $author$project$HomePage$ConfigCustomProcessEnable = {$: 12};
+var $author$project$HomePage$ConfigCustomProcessExec = function (a) {
+	return {$: 13, a: a};
 };
 var $author$project$HomePage$ConfigName = function (a) {
 	return {$: 0, a: a};
@@ -67363,15 +67370,15 @@ var $author$project$HomePage$ConfigPythonAddPackage = function (a) {
 };
 var $author$project$HomePage$ConfigPythonEnable = {$: 2};
 var $author$project$HomePage$ConfigPythonPoetryEnable = {$: 4};
-var $author$project$HomePage$CreateEnvironment = {$: 14};
+var $author$project$HomePage$CreateEnvironment = {$: 15};
 var $author$project$HomePage$UiFilterPackages = function (a) {
-	return {$: 16, a: a};
+	return {$: 17, a: a};
 };
 var $author$project$HomePage$UiFilterPostgresPackages = function (a) {
-	return {$: 18, a: a};
+	return {$: 19, a: a};
 };
 var $author$project$HomePage$UiFilterPythonPackages = function (a) {
-	return {$: 17, a: a};
+	return {$: 18, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
@@ -67389,6 +67396,9 @@ var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('
 var $author$project$Texts$configTemplateComment = '\nCopy and paste configuration to geonix.nix file\n';
 var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
 var $author$project$Texts$containerTemplateComment = '\nRun following commands to build and run environment in container\n';
+var $author$project$NixModules$customProcess = {
+	as: {R: '', n: 'python -m http.server'}
+};
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $author$project$Texts$futurePlansText = '\nWhat you see here, is only very early start of something great. Many more\nfeatures like configuration options for languages and services, geospatial\nspecific modules and user experience improvements are on the way.\n';
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
@@ -67461,7 +67471,7 @@ var $author$project$HomePage$isEnabledButton = F2(
 				]));
 	});
 var $author$project$HomePage$UiSetActiveCategoryTab = function (a) {
-	return {$: 15, a: a};
+	return {$: 16, a: a};
 };
 var $author$project$HomePage$mainCategoryHtmlTab = F2(
 	function (buttons, activeButton) {
@@ -67485,7 +67495,7 @@ var $author$project$HomePage$mainCategoryHtmlTab = F2(
 		};
 		return A2($elm$core$List$map, buttonItem, buttons);
 	});
-var $author$project$HomePage$UiUpdateFilterLimit = {$: 19};
+var $author$project$HomePage$UiUpdateFilterLimit = {$: 20};
 var $author$project$HomePage$morePackagesButton = function (filterLimit) {
 	return A2(
 		$elm$html$Html$button,
@@ -67911,12 +67921,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for packages ...'),
-														$elm$html$Html$Attributes$value(model.W),
+														$elm$html$Html$Attributes$value(model.X),
 														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.aa, model.k, model.W, model.j, $author$project$HomePage$ConfigAddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.ab, model.k, model.X, model.j, $author$project$HomePage$ConfigAddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67927,7 +67937,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.aa),
+												$elm$core$List$length(model.ab),
 												$elm$core$List$length(model.k)),
 												$author$project$HomePage$morePackagesButton(model.j)
 											]))
@@ -67950,7 +67960,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('PYTHON'),
-												A2($author$project$HomePage$isEnabledButton, model.p, $author$project$HomePage$ConfigPythonEnable)
+												A2($author$project$HomePage$isEnabledButton, model.q, $author$project$HomePage$ConfigPythonEnable)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -67968,12 +67978,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-														$elm$html$Html$Attributes$value(model.Y),
+														$elm$html$Html$Attributes$value(model.Z),
 														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPythonPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.ac, model.m, model.Y, model.j, $author$project$HomePage$ConfigPythonAddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.ad, model.m, model.Z, model.j, $author$project$HomePage$ConfigPythonAddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67984,7 +67994,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.ac),
+												$elm$core$List$length(model.ad),
 												$elm$core$List$length(model.m)),
 												$author$project$HomePage$morePackagesButton(model.j)
 											])),
@@ -67997,7 +68007,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('poetry'),
-												A2($author$project$HomePage$isEnabledButton, model.z, $author$project$HomePage$ConfigPythonPoetryEnable)
+												A2($author$project$HomePage$isEnabledButton, model.A, $author$project$HomePage$ConfigPythonPoetryEnable)
 											]))
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
 								(model.x === 'services') ? A2(
@@ -68018,7 +68028,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('POSTGRESQL'),
-												A2($author$project$HomePage$isEnabledButton, model.t, $author$project$HomePage$ConfigPostgresEnable)
+												A2($author$project$HomePage$isEnabledButton, model.u, $author$project$HomePage$ConfigPostgresEnable)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -68036,12 +68046,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
-														$elm$html$Html$Attributes$value(model.X),
+														$elm$html$Html$Attributes$value(model.Y),
 														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPostgresPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.ab, model.l, model.X, model.j, $author$project$HomePage$ConfigPostgresAddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.ac, model.l, model.Y, model.j, $author$project$HomePage$ConfigPostgresAddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -68052,7 +68062,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.ab),
+												$elm$core$List$length(model.ac),
 												$elm$core$List$length(model.l)),
 												$author$project$HomePage$morePackagesButton(model.j)
 											])),
@@ -68070,8 +68080,8 @@ var $author$project$HomePage$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.au.u),
-														$elm$html$Html$Attributes$value(model.L),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aw.n),
+														$elm$html$Html$Attributes$value(model.M),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitdbArgs)
 													]),
 												_List_Nil)
@@ -68085,14 +68095,14 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('initial script'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.ad.u),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.ae.n),
 												A2(
 												$elm$html$Html$textarea,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ad.u),
-														$elm$html$Html$Attributes$value(model.M),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ae.n),
+														$elm$html$Html$Attributes$value(model.N),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitialScript)
 													]),
 												_List_Nil)
@@ -68106,14 +68116,14 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('settings'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.ai.u),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.aj.n),
 												A2(
 												$elm$html$Html$textarea,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ai.u),
-														$elm$html$Html$Attributes$value(model.P),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aj.n),
+														$elm$html$Html$Attributes$value(model.Q),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresSettings)
 													]),
 												_List_Nil)
@@ -68127,14 +68137,14 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('listen addresses'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresListenAddresses, $author$project$NixModules$postgres.ae.u),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresListenAddresses, $author$project$NixModules$postgres.af.n),
 												A2(
 												$elm$html$Html$input,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ae.u),
-														$elm$html$Html$Attributes$value(model.N),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.af.n),
+														$elm$html$Html$Attributes$value(model.O),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenAddresses)
 													]),
 												_List_Nil)
@@ -68153,8 +68163,8 @@ var $author$project$HomePage$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aw.u),
-														$elm$html$Html$Attributes$value(model.O),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ay.n),
+														$elm$html$Html$Attributes$value(model.P),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenPort)
 													]),
 												_List_Nil)
@@ -68164,22 +68174,34 @@ var $author$project$HomePage$view = function (model) {
 										$elm$html$Html$p,
 										_List_fromArray(
 											[
+												$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text('CUSTOM PROCESS'),
+												A2($author$project$HomePage$isEnabledButton, model.z, $author$project$HomePage$ConfigCustomProcessEnable)
+											])),
+										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
 												$elm$html$Html$Attributes$class('fw-bold fs-3')
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('CUSTOM PROCESS')
+												$elm$html$Html$text('command'),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.as.n),
+												A2(
+												$elm$html$Html$textarea,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('form-control form-control-lg'),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.as.n),
+														$elm$html$Html$Attributes$value(model.L),
+														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessExec)
+													]),
+												_List_Nil)
 											])),
-										A2(
-										$elm$html$Html$textarea,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('form-control form-control-lg'),
-												$elm$html$Html$Attributes$placeholder('python -m http.server'),
-												$elm$html$Html$Attributes$value(model.E),
-												$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessEnable)
-											]),
-										_List_Nil),
 										A2($elm$html$Html$br, _List_Nil, _List_Nil)
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
 								(model.x === 'other') ? A2(
@@ -68221,7 +68243,7 @@ var $author$project$HomePage$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								(!$elm$core$String$isEmpty(model.S)) ? A2(
+								(!$elm$core$String$isEmpty(model.T)) ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68279,7 +68301,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model._)
+												$elm$html$Html$text(model.aa)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68307,7 +68329,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.S)
+												$elm$html$Html$text(model.T)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68567,6 +68589,6 @@ var $author$project$HomePage$view = function (model) {
 			]));
 };
 var $author$project$HomePage$main = $elm$browser$Browser$sandbox(
-	{aY: $author$project$HomePage$initialModel, a4: $author$project$HomePage$update, a5: $author$project$HomePage$view});
+	{a_: $author$project$HomePage$initialModel, a6: $author$project$HomePage$update, a7: $author$project$HomePage$view});
 _Platform_export({'HomePage':{'init':$author$project$HomePage$main(
 	$elm$json$Json$Decode$succeed(0))(0)}});}(this));

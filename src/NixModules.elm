@@ -1,4 +1,4 @@
-module NixModules exposing (postgres)
+module NixModules exposing (customProcess, postgres)
 
 
 postgres =
@@ -24,5 +24,13 @@ SELECT PostGIS_Full_Version();"""
         { default = ""
         , example = """log_connections = true;
 log_statement = "all";"""
+        }
+    }
+
+
+customProcess =
+    { exec =
+        { default = ""
+        , example = "python -m http.server"
         }
     }
