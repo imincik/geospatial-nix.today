@@ -94,35 +94,10 @@ type alias Services =
     }
 
 
-
--- processes
-
-
-type alias ProcessCustom =
-    { exec : String
-    }
-
-
-type alias Processes =
-    { custom : ProcessCustom
-
-    -- , xy: ProcessXY
-    }
-
-
-
--- shell hook
-
-
-type alias EnterShell =
-    String
-
-
 type alias Config =
     { packages : Packages
     , languages : Languages
     , services : Services
-    , processes : Processes
     }
 
 
@@ -142,6 +117,9 @@ type alias Model =
     , postgresEnabled : Bool
     , availablePgPackages : List Package
     , selectedPgPackages : List Package
+
+    -- custom process
+    , configCustomProcessExec : String
 
     -- other
     , configEnterShell : String
@@ -180,6 +158,9 @@ initialModel =
     , availablePgPackages = allPgPackages
     , selectedPgPackages = []
 
+    -- custom process
+    , configCustomProcessExec = ""
+
     -- other
     , configEnterShell = ""
 
@@ -196,11 +177,6 @@ initialModel =
             { postgres =
                 { enabled = False
                 , packages = []
-                }
-            }
-        , processes =
-            { custom =
-                { exec = ""
                 }
             }
         }
@@ -308,7 +284,7 @@ view model =
                             ]
                         , hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.config.processes.custom.exec, onInput AddCustomProcess ] []
+                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.configCustomProcessExec, onInput AddCustomProcess ] []
                         , br [] []
                         ]
 
@@ -571,7 +547,7 @@ buildNixConfig model =
                 ++ NixConfig.configPackagesTemplate
                 ++ optionalString model.pythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.postgresEnabled NixConfig.configPostgresTemplate
-                ++ optionalString (model.config.processes.custom.exec /= "") NixConfig.configCustomProcessTemplate
+                ++ optionalString (model.configCustomProcessExec /= "") NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
@@ -583,7 +559,7 @@ buildNixConfig model =
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.postgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
-        |> String.replace "<CUSTOM-PROCESS>" model.config.processes.custom.exec
+        |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
 
@@ -635,7 +611,7 @@ update msg model =
                 { model | selectedPgPackages = List.filter (\x -> x /= pkg) model.selectedPgPackages }
 
         AddCustomProcess script ->
-            { model | config = (\p -> { p | processes = { custom = { exec = script } } }) model.config }
+            { model | configCustomProcessExec = script }
 
         AddShellHook script ->
             { model | configEnterShell = script }
