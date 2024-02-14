@@ -1,4 +1,12 @@
-module NixConfig exposing (configCustomProcessTemplate, configEnterShellTemplate, configNameTemplate, configPackagesTemplate, configPostgresTemplate, configPythonTemplate, configTemplate)
+module NixConfig exposing
+    ( configCustomProcessTemplate
+    , configEnterShellTemplate
+    , configNameTemplate
+    , configPackagesTemplate
+    , configPostgresTemplate
+    , configPythonTemplate
+    , configTemplate
+    )
 
 
 configTemplate =
