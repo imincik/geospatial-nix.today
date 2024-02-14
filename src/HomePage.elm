@@ -150,13 +150,13 @@ type alias Model =
     , nixConfig : String
 
     -- UI section
-    , activeCategoryTab : String
+    , uiActiveCategoryTab : String
 
     -- filters
-    , filterLimit : Int
-    , filterPackages : String
-    , filterPyPackages : String
-    , filterPgPackages : String
+    , uiFilterLimit : Int
+    , uiFilterPackages : String
+    , uiFilterPyPackages : String
+    , uiFilterPgPackages : String
     }
 
 
@@ -204,13 +204,13 @@ initialModel =
     , nixConfig = ""
 
     -- UI section
-    , activeCategoryTab = "packages"
+    , uiActiveCategoryTab = "packages"
 
     -- filters
-    , filterLimit = 5
-    , filterPackages = ""
-    , filterPyPackages = ""
-    , filterPgPackages = ""
+    , uiFilterLimit = 5
+    , uiFilterPackages = ""
+    , uiFilterPyPackages = ""
+    , uiFilterPgPackages = ""
     }
 
 
@@ -243,20 +243,20 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.activeCategoryTab)
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
 
                 -- packages
-                , if model.activeCategoryTab == "packages" then
+                , if model.uiActiveCategoryTab == "packages" then
                     div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.filterPackages, onInput FilterPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput FilterPackages ] []
                             ]
-                        , packagesHtmlList model.availablePackages model.selectedPackages model.filterPackages model.filterLimit AddPackage
+                        , packagesHtmlList model.availablePackages model.selectedPackages model.uiFilterPackages model.uiFilterLimit AddPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
-                            , morePackagesButton model.filterLimit
+                            , morePackagesButton model.uiFilterLimit
                             ]
                         ]
 
@@ -264,7 +264,7 @@ view model =
                     div [] []
 
                 -- languages
-                , if model.activeCategoryTab == "languages" then
+                , if model.uiActiveCategoryTab == "languages" then
                     div [ class "languages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -273,12 +273,12 @@ view model =
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.filterPyPackages, onInput FilterPyPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput FilterPyPackages ] []
                             ]
-                        , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.filterPyPackages model.filterLimit AddPyPackage
+                        , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.uiFilterPyPackages model.uiFilterLimit AddPyPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
-                            , morePackagesButton model.filterLimit
+                            , morePackagesButton model.uiFilterLimit
                             ]
                         ]
 
@@ -286,7 +286,7 @@ view model =
                     div [] []
 
                 -- services
-                , if model.activeCategoryTab == "services" then
+                , if model.uiActiveCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -295,12 +295,12 @@ view model =
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.filterPgPackages, onInput FilterPgPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput FilterPgPackages ] []
                             ]
-                        , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.filterPgPackages model.filterLimit AddPgPackage
+                        , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.uiFilterPgPackages model.uiFilterLimit AddPgPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
-                            , morePackagesButton model.filterLimit
+                            , morePackagesButton model.uiFilterLimit
                             ]
                         , hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
@@ -312,7 +312,7 @@ view model =
                     div [] []
 
                 -- other
-                , if model.activeCategoryTab == "other" then
+                , if model.uiActiveCategoryTab == "other" then
                     div [ class "shell-hook" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
@@ -641,27 +641,27 @@ update msg model =
 
         -- UI section
         SetActiveCategoryTab tab ->
-            { model | activeCategoryTab = tab }
+            { model | uiActiveCategoryTab = tab }
 
         UpdateFilterLimit ->
             { model
-                | filterLimit =
+                | uiFilterLimit =
                     -- allow to increase limit up to 15 items
-                    if model.filterLimit < 15 then
-                        model.filterLimit + 5
+                    if model.uiFilterLimit < 15 then
+                        model.uiFilterLimit + 5
 
                     else
                         5
             }
 
         FilterPackages pkg ->
-            { model | filterPackages = pkg }
+            { model | uiFilterPackages = pkg }
 
         FilterPyPackages pkg ->
-            { model | filterPyPackages = pkg }
+            { model | uiFilterPyPackages = pkg }
 
         FilterPgPackages pkg ->
-            { model | filterPgPackages = pkg }
+            { model | uiFilterPgPackages = pkg }
 
 
 

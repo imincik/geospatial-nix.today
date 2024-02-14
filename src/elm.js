@@ -519,11 +519,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.ae.Q === region.aj.Q)
+	if (region.ae.N === region.aj.N)
 	{
-		return 'on line ' + region.ae.Q;
+		return 'on line ' + region.ae.N;
 	}
-	return 'on lines ' + region.ae.Q + ' through ' + region.aj.Q;
+	return 'on lines ' + region.ae.N + ' through ' + region.aj.N;
 }
 
 
@@ -2719,7 +2719,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		u: func(record.u),
+		t: func(record.t),
 		af: record.af,
 		ac: record.ac
 	}
@@ -2989,7 +2989,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.u;
+		var message = !tag ? value : tag < 3 ? value.a : value.t;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.af;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -66283,7 +66283,6 @@ var $author$project$PythonPackages$packages = _List_fromArray(
 	]);
 var $author$project$HomePage$allPyPackages = _Utils_ap($author$project$GeoPythonPackages$packages, $author$project$PythonPackages$packages);
 var $author$project$HomePage$initialModel = {
-	s: 'packages',
 	W: $author$project$HomePage$allPackages,
 	X: $author$project$HomePage$allPgPackages,
 	Y: $author$project$HomePage$allPyPackages,
@@ -66300,18 +66299,19 @@ var $author$project$HomePage$initialModel = {
 			av: {Z: false, I: _List_Nil}
 		}
 	},
-	j: 5,
-	N: '',
-	O: '',
-	P: '',
 	H: 'My geospatial environment',
-	R: '',
+	O: '',
 	_: '',
+	v: false,
 	w: false,
-	x: false,
 	n: _List_Nil,
 	o: _List_Nil,
-	p: _List_Nil
+	p: _List_Nil,
+	x: 'packages',
+	k: 5,
+	S: '',
+	T: '',
+	U: ''
 };
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
@@ -67079,9 +67079,9 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 		_Utils_ap(
 			$author$project$NixConfig$configPackagesTemplate,
 			_Utils_ap(
-				A2($author$project$HomePage$optionalString, model.x, $author$project$NixConfig$configPythonTemplate),
+				A2($author$project$HomePage$optionalString, model.w, $author$project$NixConfig$configPythonTemplate),
 				_Utils_ap(
-					A2($author$project$HomePage$optionalString, model.w, $author$project$NixConfig$configPostgresTemplate),
+					A2($author$project$HomePage$optionalString, model.v, $author$project$NixConfig$configPostgresTemplate),
 					_Utils_ap(
 						A2($author$project$HomePage$optionalString, model.g.J.D.G !== '', $author$project$NixConfig$configCustomProcessTemplate),
 						A2($author$project$HomePage$optionalString, model.g.F !== '', $author$project$NixConfig$configEnterShellTemplate))))));
@@ -67101,7 +67101,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 				A3(
 					$elm$core$String$replace,
 					'<POSTGRES-ENABLED>',
-					$author$project$HomePage$boolToString(model.w),
+					$author$project$HomePage$boolToString(model.v),
 					A3(
 						$elm$core$String$replace,
 						'<PYTHON-PACKAGES>',
@@ -67109,7 +67109,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 						A3(
 							$elm$core$String$replace,
 							'<PYTHON-ENABLED>',
-							$author$project$HomePage$boolToString(model.x),
+							$author$project$HomePage$boolToString(model.w),
 							A3(
 								$elm$core$String$replace,
 								'<PACKAGES>',
@@ -67201,14 +67201,14 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						x: (!model.x) ? true : false
+						w: (!model.w) ? true : false
 					});
 			case 4:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.p)) ? _Utils_update(
 					model,
 					{
-						x: true,
+						w: true,
 						p: _Utils_ap(
 							model.p,
 							_List_fromArray(
@@ -67227,14 +67227,14 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						w: (!model.w) ? true : false
+						v: (!model.v) ? true : false
 					});
 			case 6:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.o)) ? _Utils_update(
 					model,
 					{
-						w: true,
+						v: true,
 						o: _Utils_ap(
 							model.o,
 							_List_fromArray(
@@ -67279,35 +67279,35 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						R: $author$project$HomePage$buildNixConfig(model),
+						O: $author$project$HomePage$buildNixConfig(model),
 						_: $author$project$HomePage$buildNixInit(model)
 					});
 			case 0:
 				var tab = msg.a;
 				return _Utils_update(
 					model,
-					{s: tab});
+					{x: tab});
 			case 12:
 				return _Utils_update(
 					model,
 					{
-						j: (model.j < 15) ? (model.j + 5) : 5
+						k: (model.k < 15) ? (model.k + 5) : 5
 					});
 			case 9:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{N: pkg});
+					{S: pkg});
 			case 10:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{P: pkg});
+					{U: pkg});
 			default:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{O: pkg});
+					{T: pkg});
 		}
 	});
 var $author$project$HomePage$AddCustomProcess = function (a) {
@@ -67837,8 +67837,8 @@ var $author$project$HomePage$view = function (model) {
 									$author$project$HomePage$mainCategoryHtmlTab,
 									_List_fromArray(
 										['PACKAGES', 'LANGUAGES', 'SERVICES', 'OTHER']),
-									model.s)),
-								(model.s === 'packages') ? A2(
+									model.x)),
+								(model.x === 'packages') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67863,12 +67863,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for packages ...'),
-														$elm$html$Html$Attributes$value(model.N),
+														$elm$html$Html$Attributes$value(model.S),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.W, model.n, model.N, model.j, $author$project$HomePage$AddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.W, model.n, model.S, model.k, $author$project$HomePage$AddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67881,10 +67881,10 @@ var $author$project$HomePage$view = function (model) {
 												$author$project$HomePage$packagesCountText,
 												$elm$core$List$length(model.W),
 												$elm$core$List$length(model.n)),
-												$author$project$HomePage$morePackagesButton(model.j)
+												$author$project$HomePage$morePackagesButton(model.k)
 											]))
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.s === 'languages') ? A2(
+								(model.x === 'languages') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67902,7 +67902,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('PYTHON'),
-												A2($author$project$HomePage$isEnabledButton, model.x, $author$project$HomePage$EnablePython)
+												A2($author$project$HomePage$isEnabledButton, model.w, $author$project$HomePage$EnablePython)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -67920,12 +67920,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-														$elm$html$Html$Attributes$value(model.P),
+														$elm$html$Html$Attributes$value(model.U),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPyPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.Y, model.p, model.P, model.j, $author$project$HomePage$AddPyPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.Y, model.p, model.U, model.k, $author$project$HomePage$AddPyPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67938,10 +67938,10 @@ var $author$project$HomePage$view = function (model) {
 												$author$project$HomePage$packagesCountText,
 												$elm$core$List$length(model.Y),
 												$elm$core$List$length(model.p)),
-												$author$project$HomePage$morePackagesButton(model.j)
+												$author$project$HomePage$morePackagesButton(model.k)
 											]))
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.s === 'services') ? A2(
+								(model.x === 'services') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -67959,7 +67959,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('POSTGRESQL'),
-												A2($author$project$HomePage$isEnabledButton, model.w, $author$project$HomePage$EnablePostgres)
+												A2($author$project$HomePage$isEnabledButton, model.v, $author$project$HomePage$EnablePostgres)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -67977,12 +67977,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
-														$elm$html$Html$Attributes$value(model.O),
+														$elm$html$Html$Attributes$value(model.T),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPgPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.X, model.o, model.O, model.j, $author$project$HomePage$AddPgPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.X, model.o, model.T, model.k, $author$project$HomePage$AddPgPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67995,7 +67995,7 @@ var $author$project$HomePage$view = function (model) {
 												$author$project$HomePage$packagesCountText,
 												$elm$core$List$length(model.X),
 												$elm$core$List$length(model.o)),
-												$author$project$HomePage$morePackagesButton(model.j)
+												$author$project$HomePage$morePackagesButton(model.k)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68020,7 +68020,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_Nil),
 										A2($elm$html$Html$br, _List_Nil, _List_Nil)
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.s === 'other') ? A2(
+								(model.x === 'other') ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68059,7 +68059,7 @@ var $author$project$HomePage$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								(!$elm$core$String$isEmpty(model.R)) ? A2(
+								(!$elm$core$String$isEmpty(model.O)) ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68145,7 +68145,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.R)
+												$elm$html$Html$text(model.O)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
