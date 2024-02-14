@@ -77,6 +77,16 @@ type alias Model =
     , packagesPostgresAvailable : List Package
     , configPostgresEnabled : Bool
     , configPostgresPackages : List Package
+    , configPostgresInitdbArgs : String
+    , configPostgresInitdbArgsEx : String
+    , configPostgresInitialScript : String
+    , configPostgresInitialScriptEx : String
+    , configPostgresListenAddresses : String
+    , configPostgresListenAddressesEx : String
+    , configPostgresPort : String
+    , configPostgresPortEx : String
+    , configPostgresSettings : String
+    , configPostgresSettingsEx : String
 
     -- custom process
     , configCustomProcessExec : String
@@ -117,6 +127,19 @@ initialModel =
     , packagesPostgresAvailable = allPostgresPackages
     , configPostgresEnabled = False
     , configPostgresPackages = []
+    , configPostgresInitdbArgs = """"--locale=C"
+"--encoding=UTF8\""""
+    , configPostgresInitdbArgsEx = ""
+    , configPostgresInitialScript = ""
+    , configPostgresInitialScriptEx = """CREATE EXTENSION postgis;
+SELECT PostGIS_Full_Version();"""
+    , configPostgresListenAddresses = ""
+    , configPostgresListenAddressesEx = "0.0.0.0"
+    , configPostgresPort = "5432"
+    , configPostgresPortEx = ""
+    , configPostgresSettings = ""
+    , configPostgresSettingsEx = """log_connections = true;
+log_statement = "all";"""
 
     -- custom process
     , configCustomProcessExec = ""
@@ -159,7 +182,7 @@ view model =
         , div [ class "row" ]
             [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
-                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigSetName ] []
+                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
 
@@ -230,6 +253,29 @@ view model =
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
                             , morePackagesButton model.uiFilterLimit
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "initdb arguments"
+                            , textarea [ class "form-control form-control-lg", placeholder model.configPostgresInitdbArgsEx, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "initial script"
+                            , useExampleButton ConfigPostgresInitialScript model.configPostgresInitialScriptEx
+                            , textarea [ class "form-control form-control-lg", placeholder model.configPostgresInitialScriptEx, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "settings"
+                            , useExampleButton ConfigPostgresSettings model.configPostgresSettingsEx
+                            , textarea [ class "form-control form-control-lg", placeholder model.configPostgresSettingsEx, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "listen addresses"
+                            , useExampleButton ConfigPostgresListenAddresses model.configPostgresListenAddressesEx
+                            , input [ class "form-control form-control-lg", placeholder model.configPostgresListenAddressesEx, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "port"
+                            , input [ class "form-control form-control-lg", placeholder model.configPostgresPortEx, value model.configPostgresPort, onInput ConfigPostgresPort ] []
                             ]
                         , hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
@@ -394,6 +440,11 @@ morePackagesButton filterLimit =
         ]
 
 
+useExampleButton : (String -> Msg) -> String -> Html Msg
+useExampleButton onClickAction value =
+    button [ class "btn btn-sm btn-link", onClick (onClickAction value) ] [ text "use example" ]
+
+
 isEnabledButton : Bool -> Msg -> Html Msg
 isEnabledButton isEnabled onClickAction =
     button
@@ -454,13 +505,18 @@ boolToEnabledString value =
 
 
 type Msg
-    = ConfigSetName String
+    = ConfigName String
     | ConfigAddPackage Package
     | ConfigPythonEnable
     | ConfigPythonAddPackage Package
     | ConfigPythonPoetryEnable
     | ConfigPostgresEnable
     | ConfigPostgresAddPackage Package
+    | ConfigPostgresInitdbArgs String
+    | ConfigPostgresInitialScript String
+    | ConfigPostgresListenAddresses String
+    | ConfigPostgresPort String
+    | ConfigPostgresSettings String
     | ConfigCustomProcessEnable String
     | ConfgiShellHookEnable String
       -- nix config
@@ -512,6 +568,11 @@ buildNixConfig model =
         |> String.replace "<PYTHON-POETRY-ENABLED>" (boolToString model.configPythonPoetryEnabled)
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
+        |> String.replace "<POSTGRES-INITDB-ARGS>" (String.replace "\n" " " model.configPostgresInitdbArgs)
+        |> String.replace "<POSTGRES-INITIAL-SCRIPT>" (String.replace "\n" " " model.configPostgresInitialScript)
+        |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
+        |> String.replace "<POSTGRES-PORT>" model.configPostgresPort
+        |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
@@ -519,7 +580,7 @@ buildNixConfig model =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        ConfigSetName name ->
+        ConfigName name ->
             { model | configName = name }
 
         ConfigAddPackage pkg ->
@@ -579,6 +640,21 @@ update msg model =
 
             else
                 { model | configPostgresPackages = List.filter (\x -> x /= pkg) model.configPostgresPackages }
+
+        ConfigPostgresInitdbArgs val ->
+            { model | configPostgresInitdbArgs = val }
+
+        ConfigPostgresInitialScript val ->
+            { model | configPostgresInitialScript = val }
+
+        ConfigPostgresListenAddresses val ->
+            { model | configPostgresListenAddresses = val }
+
+        ConfigPostgresPort val ->
+            { model | configPostgresPort = val }
+
+        ConfigPostgresSettings val ->
+            { model | configPostgresSettings = val }
 
         ConfigCustomProcessEnable script ->
             { model | configCustomProcessExec = script }

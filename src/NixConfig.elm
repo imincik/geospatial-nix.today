@@ -44,6 +44,11 @@ configPostgresTemplate =
   services.postgres = {
     enable = if config.container.isBuilding then false else <POSTGRES-ENABLED>;
     extensions = e: [ <POSTGRES-PACKAGES> ];
+    initdbArgs = [ <POSTGRES-INITDB-ARGS> ];
+    initialScript = "<POSTGRES-INITIAL-SCRIPT>";
+    listen_addresses = "<POSTGRES-LISTEN-ADDRESSES>";
+    port = <POSTGRES-PORT>;
+    settings = { <POSTGRES-SETTINGS> };
   };
 """
 
