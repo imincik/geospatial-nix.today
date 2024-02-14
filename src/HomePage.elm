@@ -157,7 +157,7 @@ view model =
         , div [ class "row" ]
             [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
-                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput UpdateName ] []
+                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigSetName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
 
@@ -174,9 +174,9 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput FilterPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
                             ]
-                        , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit AddPackage
+                        , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesAvailable) (List.length model.configPackages)
                             , morePackagesButton model.uiFilterLimit
@@ -192,13 +192,13 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "PYTHON"
-                            , isEnabledButton model.configPythonEnabled EnablePython
+                            , isEnabledButton model.configPythonEnabled ConfigPythonEnable
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput FilterPyPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput UiFilterPythonPackages ] []
                             ]
-                        , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit AddPyPackage
+                        , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit ConfigPythonAddPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
                             , morePackagesButton model.uiFilterLimit
@@ -214,20 +214,20 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "POSTGRESQL"
-                            , isEnabledButton model.configPostgresEnabled EnablePostgres
+                            , isEnabledButton model.configPostgresEnabled ConfigPostgresEnable
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput FilterPgPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput UiFilterPostgresPackages ] []
                             ]
-                        , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit AddPgPackage
+                        , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit ConfigPostgresAddPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
                             , morePackagesButton model.uiFilterLimit
                             ]
                         , hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.configCustomProcessExec, onInput AddCustomProcess ] []
+                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.configCustomProcessExec, onInput ConfigCustomProcessEnable ] []
                         , br [] []
                         ]
 
@@ -239,7 +239,7 @@ view model =
                     div [ class "shell-hook" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.configEnterShell, onInput AddShellHook ] []
+                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.configEnterShell, onInput ConfgiShellHookEnable ] []
                         ]
 
                   else
@@ -331,7 +331,7 @@ mainCategoryHtmlTab buttons activeButton =
                                     "btn-secondary"
                                )
                         )
-                    , onClick (SetActiveCategoryTab (String.toLower item))
+                    , onClick (UiSetActiveCategoryTab (String.toLower item))
                     ]
                     [ text item ]
     in
@@ -379,7 +379,7 @@ packagesCountText packagesCount selectedCount =
 
 morePackagesButton : Int -> Html Msg
 morePackagesButton filterLimit =
-    button [ class "btn btn-sm btn-link", onClick UpdateFilterLimit ]
+    button [ class "btn btn-sm btn-link", onClick UiUpdateFilterLimit ]
         [ if filterLimit < 15 then
             text "show more"
 
@@ -448,20 +448,22 @@ boolToEnabledString value =
 
 
 type Msg
-    = SetActiveCategoryTab String
-    | UpdateName String
-    | AddPackage Package
-    | EnablePython
-    | AddPyPackage Package
-    | EnablePostgres
-    | AddPgPackage Package
-    | AddCustomProcess String
-    | AddShellHook String
-    | FilterPackages String
-    | FilterPyPackages String
-    | FilterPgPackages String
-    | UpdateFilterLimit
+    = ConfigSetName String
+    | ConfigAddPackage Package
+    | ConfigPythonEnable
+    | ConfigPythonAddPackage Package
+    | ConfigPostgresEnable
+    | ConfigPostgresAddPackage Package
+    | ConfigCustomProcessEnable String
+    | ConfgiShellHookEnable String
+      -- nix config
     | CreateEnvironment
+      -- ui
+    | UiSetActiveCategoryTab String
+    | UiFilterPackages String
+    | UiFilterPythonPackages String
+    | UiFilterPostgresPackages String
+    | UiUpdateFilterLimit
 
 
 
@@ -509,17 +511,17 @@ buildNixConfig model =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        UpdateName name ->
+        ConfigSetName name ->
             { model | configName = name }
 
-        AddPackage pkg ->
+        ConfigAddPackage pkg ->
             if not (List.member pkg model.configPackages) then
                 { model | configPackages = model.configPackages ++ [ pkg ] }
 
             else
                 { model | configPackages = List.filter (\x -> x /= pkg) model.configPackages }
 
-        EnablePython ->
+        ConfigPythonEnable ->
             { model
                 | configPythonEnabled =
                     if not model.configPythonEnabled then
@@ -529,14 +531,14 @@ update msg model =
                         False
             }
 
-        AddPyPackage pkg ->
+        ConfigPythonAddPackage pkg ->
             if not (List.member pkg model.configPythonPackages) then
                 { model | configPythonPackages = model.configPythonPackages ++ [ pkg ], configPythonEnabled = True }
 
             else
                 { model | configPythonPackages = List.filter (\x -> x /= pkg) model.configPythonPackages }
 
-        EnablePostgres ->
+        ConfigPostgresEnable ->
             { model
                 | configPostgresEnabled =
                     if not model.configPostgresEnabled then
@@ -546,27 +548,27 @@ update msg model =
                         False
             }
 
-        AddPgPackage pkg ->
+        ConfigPostgresAddPackage pkg ->
             if not (List.member pkg model.configPostgresPackages) then
                 { model | configPostgresPackages = model.configPostgresPackages ++ [ pkg ], configPostgresEnabled = True }
 
             else
                 { model | configPostgresPackages = List.filter (\x -> x /= pkg) model.configPostgresPackages }
 
-        AddCustomProcess script ->
+        ConfigCustomProcessEnable script ->
             { model | configCustomProcessExec = script }
 
-        AddShellHook script ->
+        ConfgiShellHookEnable script ->
             { model | configEnterShell = script }
 
         CreateEnvironment ->
             { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
 
         -- UI section
-        SetActiveCategoryTab tab ->
+        UiSetActiveCategoryTab tab ->
             { model | uiActiveCategoryTab = tab }
 
-        UpdateFilterLimit ->
+        UiUpdateFilterLimit ->
             { model
                 | uiFilterLimit =
                     -- allow to increase limit up to 15 items
@@ -577,13 +579,13 @@ update msg model =
                         5
             }
 
-        FilterPackages pkg ->
+        UiFilterPackages pkg ->
             { model | uiFilterPackages = pkg }
 
-        FilterPyPackages pkg ->
+        UiFilterPythonPackages pkg ->
             { model | uiFilterPyPackages = pkg }
 
-        FilterPgPackages pkg ->
+        UiFilterPostgresPackages pkg ->
             { model | uiFilterPgPackages = pkg }
 
 

@@ -67143,12 +67143,12 @@ var $elm$core$Basics$not = _Basics_not;
 var $author$project$HomePage$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
-			case 1:
+			case 0:
 				var name = msg.a;
 				return _Utils_update(
 					model,
 					{E: name});
-			case 2:
+			case 1:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.k)) ? _Utils_update(
 					model,
@@ -67167,13 +67167,13 @@ var $author$project$HomePage$update = F2(
 							},
 							model.k)
 					});
-			case 3:
+			case 2:
 				return _Utils_update(
 					model,
 					{
 						t: (!model.t) ? true : false
 					});
-			case 4:
+			case 3:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.m)) ? _Utils_update(
 					model,
@@ -67193,13 +67193,13 @@ var $author$project$HomePage$update = F2(
 							},
 							model.m)
 					});
-			case 5:
+			case 4:
 				return _Utils_update(
 					model,
 					{
 						s: (!model.s) ? true : false
 					});
-			case 6:
+			case 5:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.l)) ? _Utils_update(
 					model,
@@ -67219,40 +67219,40 @@ var $author$project$HomePage$update = F2(
 							},
 							model.l)
 					});
-			case 7:
+			case 6:
 				var script = msg.a;
 				return _Utils_update(
 					model,
 					{C: script});
-			case 8:
+			case 7:
 				var script = msg.a;
 				return _Utils_update(
 					model,
 					{D: script});
-			case 13:
+			case 8:
 				return _Utils_update(
 					model,
 					{
 						K: $author$project$HomePage$buildNixConfig(model),
 						S: $author$project$HomePage$buildNixInit(model)
 					});
-			case 0:
+			case 9:
 				var tab = msg.a;
 				return _Utils_update(
 					model,
 					{w: tab});
-			case 12:
+			case 13:
 				return _Utils_update(
 					model,
 					{
 						j: (model.j < 15) ? (model.j + 5) : 5
 					});
-			case 9:
+			case 10:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
 					{O: pkg});
-			case 10:
+			case 11:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
@@ -67264,35 +67264,35 @@ var $author$project$HomePage$update = F2(
 					{P: pkg});
 		}
 	});
-var $author$project$HomePage$AddCustomProcess = function (a) {
+var $author$project$HomePage$ConfgiShellHookEnable = function (a) {
 	return {$: 7, a: a};
 };
-var $author$project$HomePage$AddPackage = function (a) {
-	return {$: 2, a: a};
+var $author$project$HomePage$ConfigAddPackage = function (a) {
+	return {$: 1, a: a};
 };
-var $author$project$HomePage$AddPgPackage = function (a) {
+var $author$project$HomePage$ConfigCustomProcessEnable = function (a) {
 	return {$: 6, a: a};
 };
-var $author$project$HomePage$AddPyPackage = function (a) {
-	return {$: 4, a: a};
+var $author$project$HomePage$ConfigPostgresAddPackage = function (a) {
+	return {$: 5, a: a};
 };
-var $author$project$HomePage$AddShellHook = function (a) {
-	return {$: 8, a: a};
+var $author$project$HomePage$ConfigPostgresEnable = {$: 4};
+var $author$project$HomePage$ConfigPythonAddPackage = function (a) {
+	return {$: 3, a: a};
 };
-var $author$project$HomePage$CreateEnvironment = {$: 13};
-var $author$project$HomePage$EnablePostgres = {$: 5};
-var $author$project$HomePage$EnablePython = {$: 3};
-var $author$project$HomePage$FilterPackages = function (a) {
-	return {$: 9, a: a};
+var $author$project$HomePage$ConfigPythonEnable = {$: 2};
+var $author$project$HomePage$ConfigSetName = function (a) {
+	return {$: 0, a: a};
 };
-var $author$project$HomePage$FilterPgPackages = function (a) {
-	return {$: 11, a: a};
-};
-var $author$project$HomePage$FilterPyPackages = function (a) {
+var $author$project$HomePage$CreateEnvironment = {$: 8};
+var $author$project$HomePage$UiFilterPackages = function (a) {
 	return {$: 10, a: a};
 };
-var $author$project$HomePage$UpdateName = function (a) {
-	return {$: 1, a: a};
+var $author$project$HomePage$UiFilterPostgresPackages = function (a) {
+	return {$: 12, a: a};
+};
+var $author$project$HomePage$UiFilterPythonPackages = function (a) {
+	return {$: 11, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
@@ -67381,8 +67381,8 @@ var $author$project$HomePage$isEnabledButton = F2(
 					$author$project$HomePage$boolToEnabledString(isEnabled))
 				]));
 	});
-var $author$project$HomePage$SetActiveCategoryTab = function (a) {
-	return {$: 0, a: a};
+var $author$project$HomePage$UiSetActiveCategoryTab = function (a) {
+	return {$: 9, a: a};
 };
 var $author$project$HomePage$mainCategoryHtmlTab = F2(
 	function (buttons, activeButton) {
@@ -67396,7 +67396,7 @@ var $author$project$HomePage$mainCategoryHtmlTab = F2(
 							$elm$core$String$toLower(item),
 							activeButton) ? 'btn-dark' : 'btn-secondary')),
 						$elm$html$Html$Events$onClick(
-						$author$project$HomePage$SetActiveCategoryTab(
+						$author$project$HomePage$UiSetActiveCategoryTab(
 							$elm$core$String$toLower(item)))
 					]),
 				_List_fromArray(
@@ -67406,14 +67406,14 @@ var $author$project$HomePage$mainCategoryHtmlTab = F2(
 		};
 		return A2($elm$core$List$map, buttonItem, buttons);
 	});
-var $author$project$HomePage$UpdateFilterLimit = {$: 12};
+var $author$project$HomePage$UiUpdateFilterLimit = {$: 13};
 var $author$project$HomePage$morePackagesButton = function (filterLimit) {
 	return A2(
 		$elm$html$Html$button,
 		_List_fromArray(
 			[
 				$elm$html$Html$Attributes$class('btn btn-sm btn-link'),
-				$elm$html$Html$Events$onClick($author$project$HomePage$UpdateFilterLimit)
+				$elm$html$Html$Events$onClick($author$project$HomePage$UiUpdateFilterLimit)
 			]),
 		_List_fromArray(
 			[
@@ -67759,7 +67759,7 @@ var $author$project$HomePage$view = function (model) {
 												A2($elm$html$Html$Attributes$style, 'margin', '10px'),
 												$elm$html$Html$Attributes$placeholder('Environment name ...'),
 												$elm$html$Html$Attributes$value(model.E),
-												$elm$html$Html$Events$onInput($author$project$HomePage$UpdateName)
+												$elm$html$Html$Events$onInput($author$project$HomePage$ConfigSetName)
 											]),
 										_List_Nil),
 										A2(
@@ -67818,11 +67818,11 @@ var $author$project$HomePage$view = function (model) {
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for packages ...'),
 														$elm$html$Html$Attributes$value(model.O),
-														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPackages)
+														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.T, model.k, model.O, model.j, $author$project$HomePage$AddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.T, model.k, model.O, model.j, $author$project$HomePage$ConfigAddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67856,7 +67856,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('PYTHON'),
-												A2($author$project$HomePage$isEnabledButton, model.t, $author$project$HomePage$EnablePython)
+												A2($author$project$HomePage$isEnabledButton, model.t, $author$project$HomePage$ConfigPythonEnable)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -67875,11 +67875,11 @@ var $author$project$HomePage$view = function (model) {
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
 														$elm$html$Html$Attributes$value(model.Q),
-														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPyPackages)
+														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPythonPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.V, model.m, model.Q, model.j, $author$project$HomePage$AddPyPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.V, model.m, model.Q, model.j, $author$project$HomePage$ConfigPythonAddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67913,7 +67913,7 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('POSTGRESQL'),
-												A2($author$project$HomePage$isEnabledButton, model.s, $author$project$HomePage$EnablePostgres)
+												A2($author$project$HomePage$isEnabledButton, model.s, $author$project$HomePage$ConfigPostgresEnable)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -67932,11 +67932,11 @@ var $author$project$HomePage$view = function (model) {
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
 														$elm$html$Html$Attributes$value(model.P),
-														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPgPackages)
+														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPostgresPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.U, model.l, model.P, model.j, $author$project$HomePage$AddPgPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.U, model.l, model.P, model.j, $author$project$HomePage$ConfigPostgresAddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67969,7 +67969,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												$elm$html$Html$Attributes$placeholder('python -m http.server'),
 												$elm$html$Html$Attributes$value(model.C),
-												$elm$html$Html$Events$onInput($author$project$HomePage$AddCustomProcess)
+												$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessEnable)
 											]),
 										_List_Nil),
 										A2($elm$html$Html$br, _List_Nil, _List_Nil)
@@ -68000,7 +68000,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												$elm$html$Html$Attributes$placeholder('echo hello'),
 												$elm$html$Html$Attributes$value(model.D),
-												$elm$html$Html$Events$onInput($author$project$HomePage$AddShellHook)
+												$elm$html$Html$Events$onInput($author$project$HomePage$ConfgiShellHookEnable)
 											]),
 										_List_Nil)
 									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil)
