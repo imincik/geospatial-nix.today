@@ -61,21 +61,21 @@ allPgPackages =
 
 
 type alias Model =
-    { name : String
+    { configName : String
 
     -- packages
-    , availablePackages : List Package
-    , selectedPackages : List Package
+    , packagesAvailable : List Package
+    , configPackages : List Package
 
     -- python
-    , pythonEnabled : Bool
-    , availablePyPackages : List Package
-    , selectedPyPackages : List Package
+    , packagesPythonAvailable : List Package
+    , configPythonEnabled : Bool
+    , configPythonPackages : List Package
 
     -- postgresql
-    , postgresEnabled : Bool
-    , availablePgPackages : List Package
-    , selectedPgPackages : List Package
+    , packagesPostgresAvailable : List Package
+    , configPostgresEnabled : Bool
+    , configPostgresPackages : List Package
 
     -- custom process
     , configCustomProcessExec : String
@@ -100,21 +100,21 @@ type alias Model =
 
 initialModel : Model
 initialModel =
-    { name = "My geospatial environment"
+    { configName = "My geospatial environment"
 
     -- packages
-    , availablePackages = allPackages
-    , selectedPackages = []
+    , packagesAvailable = allPackages
+    , configPackages = []
 
     -- python
-    , pythonEnabled = False
-    , availablePyPackages = allPyPackages
-    , selectedPyPackages = []
+    , packagesPythonAvailable = allPyPackages
+    , configPythonEnabled = False
+    , configPythonPackages = []
 
     -- postgresql
-    , postgresEnabled = False
-    , availablePgPackages = allPgPackages
-    , selectedPgPackages = []
+    , packagesPostgresAvailable = allPgPackages
+    , configPostgresEnabled = False
+    , configPostgresPackages = []
 
     -- custom process
     , configCustomProcessExec = ""
@@ -157,7 +157,7 @@ view model =
         , div [ class "row" ]
             [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
-                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.name, onInput UpdateName ] []
+                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput UpdateName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
 
@@ -176,9 +176,9 @@ view model =
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput FilterPackages ] []
                             ]
-                        , packagesHtmlList model.availablePackages model.selectedPackages model.uiFilterPackages model.uiFilterLimit AddPackage
+                        , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit AddPackage
                         , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.availablePackages) (List.length model.selectedPackages)
+                            [ packagesCountText (List.length model.packagesAvailable) (List.length model.configPackages)
                             , morePackagesButton model.uiFilterLimit
                             ]
                         ]
@@ -192,15 +192,15 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "PYTHON"
-                            , isEnabledButton model.pythonEnabled EnablePython
+                            , isEnabledButton model.configPythonEnabled EnablePython
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput FilterPyPackages ] []
                             ]
-                        , packagesHtmlList model.availablePyPackages model.selectedPyPackages model.uiFilterPyPackages model.uiFilterLimit AddPyPackage
+                        , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit AddPyPackage
                         , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.availablePyPackages) (List.length model.selectedPyPackages)
+                            [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
                             , morePackagesButton model.uiFilterLimit
                             ]
                         ]
@@ -214,15 +214,15 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "POSTGRESQL"
-                            , isEnabledButton model.postgresEnabled EnablePostgres
+                            , isEnabledButton model.configPostgresEnabled EnablePostgres
                             ]
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput FilterPgPackages ] []
                             ]
-                        , packagesHtmlList model.availablePgPackages model.selectedPgPackages model.uiFilterPgPackages model.uiFilterLimit AddPgPackage
+                        , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit AddPgPackage
                         , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.availablePgPackages) (List.length model.selectedPgPackages)
+                            [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
                             , morePackagesButton model.uiFilterLimit
                             ]
                         , hr [] []
@@ -470,37 +470,37 @@ type Msg
 
 buildNixInit : Model -> String
 buildNixInit model =
-    String.replace "<NAME>" (environmentName model.name) initTemplate
+    String.replace "<NAME>" (environmentName model.configName) initTemplate
 
 
 buildNixConfig : Model -> String
 buildNixConfig model =
     let
         selectedPackages =
-            packagesListToNamesList model.selectedPackages
+            packagesListToNamesList model.configPackages
 
         selectedPyPackages =
-            packagesListToNamesList model.selectedPyPackages
+            packagesListToNamesList model.configPythonPackages
 
         selectedPgPackages =
-            packagesListToNamesList model.selectedPgPackages
+            packagesListToNamesList model.configPostgresPackages
 
         nixConfigBody =
             NixConfig.configNameTemplate
                 ++ NixConfig.configPackagesTemplate
-                ++ optionalString model.pythonEnabled NixConfig.configPythonTemplate
-                ++ optionalString model.postgresEnabled NixConfig.configPostgresTemplate
+                ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
+                ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString (model.configCustomProcessExec /= "") NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
             String.replace "<CONFIG-BODY>" nixConfigBody NixConfig.configTemplate
     in
-    String.replace "<NAME>" (environmentName model.name) nixConfig
+    String.replace "<NAME>" (environmentName model.configName) nixConfig
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
-        |> String.replace "<PYTHON-ENABLED>" (boolToString model.pythonEnabled)
+        |> String.replace "<PYTHON-ENABLED>" (boolToString model.configPythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
-        |> String.replace "<POSTGRES-ENABLED>" (boolToString model.postgresEnabled)
+        |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
@@ -510,19 +510,19 @@ update : Msg -> Model -> Model
 update msg model =
     case msg of
         UpdateName name ->
-            { model | name = name }
+            { model | configName = name }
 
         AddPackage pkg ->
-            if not (List.member pkg model.selectedPackages) then
-                { model | selectedPackages = model.selectedPackages ++ [ pkg ] }
+            if not (List.member pkg model.configPackages) then
+                { model | configPackages = model.configPackages ++ [ pkg ] }
 
             else
-                { model | selectedPackages = List.filter (\x -> x /= pkg) model.selectedPackages }
+                { model | configPackages = List.filter (\x -> x /= pkg) model.configPackages }
 
         EnablePython ->
             { model
-                | pythonEnabled =
-                    if not model.pythonEnabled then
+                | configPythonEnabled =
+                    if not model.configPythonEnabled then
                         True
 
                     else
@@ -530,16 +530,16 @@ update msg model =
             }
 
         AddPyPackage pkg ->
-            if not (List.member pkg model.selectedPyPackages) then
-                { model | selectedPyPackages = model.selectedPyPackages ++ [ pkg ], pythonEnabled = True }
+            if not (List.member pkg model.configPythonPackages) then
+                { model | configPythonPackages = model.configPythonPackages ++ [ pkg ], configPythonEnabled = True }
 
             else
-                { model | selectedPyPackages = List.filter (\x -> x /= pkg) model.selectedPyPackages }
+                { model | configPythonPackages = List.filter (\x -> x /= pkg) model.configPythonPackages }
 
         EnablePostgres ->
             { model
-                | postgresEnabled =
-                    if not model.postgresEnabled then
+                | configPostgresEnabled =
+                    if not model.configPostgresEnabled then
                         True
 
                     else
@@ -547,11 +547,11 @@ update msg model =
             }
 
         AddPgPackage pkg ->
-            if not (List.member pkg model.selectedPgPackages) then
-                { model | selectedPgPackages = model.selectedPgPackages ++ [ pkg ], postgresEnabled = True }
+            if not (List.member pkg model.configPostgresPackages) then
+                { model | configPostgresPackages = model.configPostgresPackages ++ [ pkg ], configPostgresEnabled = True }
 
             else
-                { model | selectedPgPackages = List.filter (\x -> x /= pkg) model.selectedPgPackages }
+                { model | configPostgresPackages = List.filter (\x -> x /= pkg) model.configPostgresPackages }
 
         AddCustomProcess script ->
             { model | configCustomProcessExec = script }
