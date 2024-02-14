@@ -60,47 +60,6 @@ allPgPackages =
     GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
 
 
-
--- languages
-
-
-type alias LanguagePython =
-    { enabled : Bool
-    , packages : Packages
-    }
-
-
-type alias Languages =
-    { python : LanguagePython
-
-    -- , xy: LanguageXY
-    }
-
-
-
--- services
-
-
-type alias ServicePostgres =
-    { enabled : Bool
-    , packages : Packages
-    }
-
-
-type alias Services =
-    { postgres : ServicePostgres
-
-    -- , xy: ServiceXY
-    }
-
-
-type alias Config =
-    { packages : Packages
-    , languages : Languages
-    , services : Services
-    }
-
-
 type alias Model =
     { name : String
 
@@ -124,8 +83,7 @@ type alias Model =
     -- other
     , configEnterShell : String
 
-    -- config
-    , config : Config
+    -- nix config
     , nixInit : String
     , nixConfig : String
 
@@ -164,22 +122,7 @@ initialModel =
     -- other
     , configEnterShell = ""
 
-    -- config
-    , config =
-        { packages = []
-        , languages =
-            { python =
-                { enabled = False
-                , packages = []
-                }
-            }
-        , services =
-            { postgres =
-                { enabled = False
-                , packages = []
-                }
-            }
-        }
+    -- nix config
     , nixInit = ""
     , nixConfig = ""
 

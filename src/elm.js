@@ -519,11 +519,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.ab.K === region.ah.K)
+	if (region._.J === region.ae.J)
 	{
-		return 'on line ' + region.ab.K;
+		return 'on line ' + region._.J;
 	}
-	return 'on lines ' + region.ab.K + ' through ' + region.ah.K;
+	return 'on lines ' + region._.J + ' through ' + region.ae.J;
 }
 
 
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
+		impl.aL,
 		impl.aS,
-		impl.aZ,
-		impl.aX,
+		impl.aQ,
 		function() { return function() {} }
 	);
 });
@@ -2720,8 +2720,8 @@ var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
 		s: func(record.s),
-		ac: record.ac,
-		_: record._
+		aa: record.aa,
+		Y: record.Y
 	}
 });
 
@@ -2990,10 +2990,10 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 
 		var value = result.a;
 		var message = !tag ? value : tag < 3 ? value.a : value.s;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.ac;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aa;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value._) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.Y) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3943,11 +3943,11 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
+		impl.aL,
 		impl.aS,
-		impl.aZ,
-		impl.aX,
+		impl.aQ,
 		function(sendToApp, initialModel) {
-			var view = impl.a_;
+			var view = impl.aT;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3979,12 +3979,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
+		impl.aL,
 		impl.aS,
-		impl.aZ,
-		impl.aX,
+		impl.aQ,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.aa && impl.aa(sendToApp)
-			var view = impl.a_;
+			var divertHrefToApp = impl.Z && impl.Z(sendToApp)
+			var view = impl.aT;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3992,12 +3992,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aL);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aE);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.aY) && (_VirtualDom_doc.title = title = doc.aY);
+				(title !== doc.aR) && (_VirtualDom_doc.title = title = doc.aR);
 			});
 		}
 	);
@@ -4053,12 +4053,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.aT;
-	var onUrlRequest = impl.aU;
+	var onUrlChange = impl.aM;
+	var onUrlRequest = impl.aN;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		aa: function(sendToApp)
+		Z: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4074,9 +4074,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.aw === next.aw
-							&& curr.al === next.al
-							&& curr.as.a === next.as.a
+							&& curr.ar === next.ar
+							&& curr.ai === next.ai
+							&& curr.ao.a === next.ao.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4084,13 +4084,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		aS: function(flags)
+		aL: function(flags)
 		{
-			return A3(impl.aS, flags, _Browser_getUrl(), key);
+			return A3(impl.aL, flags, _Browser_getUrl(), key);
 		},
-		a_: impl.a_,
-		aZ: impl.aZ,
-		aX: impl.aX
+		aT: impl.aT,
+		aS: impl.aS,
+		aQ: impl.aQ
 	});
 }
 
@@ -4156,17 +4156,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { aQ: 'hidden', aM: 'visibilitychange' }
+		? { aJ: 'hidden', aF: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { aQ: 'mozHidden', aM: 'mozvisibilitychange' }
+		? { aJ: 'mozHidden', aF: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { aQ: 'msHidden', aM: 'msvisibilitychange' }
+		? { aJ: 'msHidden', aF: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { aQ: 'webkitHidden', aM: 'webkitvisibilitychange' }
-		: { aQ: 'hidden', aM: 'visibilitychange' };
+		? { aJ: 'webkitHidden', aF: 'webkitvisibilitychange' }
+		: { aJ: 'hidden', aF: 'visibilitychange' };
 }
 
 
@@ -4247,12 +4247,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		aB: _Browser_getScene(),
-		aF: {
-			aH: _Browser_window.pageXOffset,
-			aI: _Browser_window.pageYOffset,
-			aG: _Browser_doc.documentElement.clientWidth,
-			ak: _Browser_doc.documentElement.clientHeight
+		av: _Browser_getScene(),
+		ay: {
+			aA: _Browser_window.pageXOffset,
+			aB: _Browser_window.pageYOffset,
+			az: _Browser_doc.documentElement.clientWidth,
+			ah: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4262,8 +4262,8 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		aG: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		ak: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		az: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		ah: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4286,15 +4286,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			aB: {
-				aG: node.scrollWidth,
-				ak: node.scrollHeight
+			av: {
+				az: node.scrollWidth,
+				ah: node.scrollHeight
 			},
-			aF: {
-				aH: node.scrollLeft,
-				aI: node.scrollTop,
-				aG: node.clientWidth,
-				ak: node.clientHeight
+			ay: {
+				aA: node.scrollLeft,
+				aB: node.scrollTop,
+				az: node.clientWidth,
+				ah: node.clientHeight
 			}
 		};
 	});
@@ -4324,18 +4324,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			aB: _Browser_getScene(),
-			aF: {
-				aH: x,
-				aI: y,
-				aG: _Browser_doc.documentElement.clientWidth,
-				ak: _Browser_doc.documentElement.clientHeight
+			av: _Browser_getScene(),
+			ay: {
+				aA: x,
+				aB: y,
+				az: _Browser_doc.documentElement.clientWidth,
+				ah: _Browser_doc.documentElement.clientHeight
 			},
-			aO: {
-				aH: x + rect.left,
-				aI: y + rect.top,
-				aG: rect.width,
-				ak: rect.height
+			aH: {
+				aA: x + rect.left,
+				aB: y + rect.top,
+				az: rect.width,
+				ah: rect.height
 			}
 		};
 	});
@@ -66282,35 +66282,7 @@ var $author$project$PythonPackages$packages = _List_fromArray(
 		_Utils_Tuple2('pkgs.python3Packages.zxing_cpp', '2.1.0')
 	]);
 var $author$project$HomePage$allPyPackages = _Utils_ap($author$project$GeoPythonPackages$packages, $author$project$PythonPackages$packages);
-var $author$project$HomePage$initialModel = {
-	T: $author$project$HomePage$allPackages,
-	U: $author$project$HomePage$allPgPackages,
-	V: $author$project$HomePage$allPyPackages,
-	af: {
-		an: {
-			ax: {W: false, G: _List_Nil}
-		},
-		G: _List_Nil,
-		aC: {
-			at: {W: false, G: _List_Nil}
-		}
-	},
-	C: '',
-	D: '',
-	F: 'My geospatial environment',
-	L: '',
-	X: '',
-	u: false,
-	v: false,
-	m: _List_Nil,
-	n: _List_Nil,
-	o: _List_Nil,
-	w: 'packages',
-	j: 5,
-	P: '',
-	Q: '',
-	R: ''
-};
+var $author$project$HomePage$initialModel = {S: $author$project$HomePage$allPackages, T: $author$project$HomePage$allPgPackages, U: $author$project$HomePage$allPyPackages, C: '', D: '', F: 'My geospatial environment', K: '', V: '', u: false, v: false, m: _List_Nil, n: _List_Nil, o: _List_Nil, w: 'packages', j: 5, O: '', P: '', Q: ''};
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
 };
@@ -66733,7 +66705,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {aj: fragment, al: host, aq: path, as: port_, aw: protocol, ay: query};
+		return {ag: fragment, ai: host, am: path, ao: port_, ar: protocol, as: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -67018,19 +66990,19 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $elm$browser$Browser$sandbox = function (impl) {
 	return _Browser_element(
 		{
-			aS: function (_v0) {
-				return _Utils_Tuple2(impl.aS, $elm$core$Platform$Cmd$none);
+			aL: function (_v0) {
+				return _Utils_Tuple2(impl.aL, $elm$core$Platform$Cmd$none);
 			},
-			aX: function (_v1) {
+			aQ: function (_v1) {
 				return $elm$core$Platform$Sub$none;
 			},
-			aZ: F2(
+			aS: F2(
 				function (msg, model) {
 					return _Utils_Tuple2(
-						A2(impl.aZ, msg, model),
+						A2(impl.aS, msg, model),
 						$elm$core$Platform$Cmd$none);
 				}),
-			a_: impl.a_
+			aT: impl.aT
 		});
 };
 var $author$project$HomePage$boolToString = function (value) {
@@ -67261,8 +67233,8 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						L: $author$project$HomePage$buildNixConfig(model),
-						X: $author$project$HomePage$buildNixInit(model)
+						K: $author$project$HomePage$buildNixConfig(model),
+						V: $author$project$HomePage$buildNixInit(model)
 					});
 			case 0:
 				var tab = msg.a;
@@ -67279,17 +67251,17 @@ var $author$project$HomePage$update = F2(
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{P: pkg});
+					{O: pkg});
 			case 10:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{R: pkg});
+					{Q: pkg});
 			default:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{Q: pkg});
+					{P: pkg});
 		}
 	});
 var $author$project$HomePage$AddCustomProcess = function (a) {
@@ -67845,12 +67817,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for packages ...'),
-														$elm$html$Html$Attributes$value(model.P),
+														$elm$html$Html$Attributes$value(model.O),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.T, model.m, model.P, model.j, $author$project$HomePage$AddPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.S, model.m, model.O, model.j, $author$project$HomePage$AddPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67861,7 +67833,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.T),
+												$elm$core$List$length(model.S),
 												$elm$core$List$length(model.m)),
 												$author$project$HomePage$morePackagesButton(model.j)
 											]))
@@ -67902,12 +67874,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-														$elm$html$Html$Attributes$value(model.R),
+														$elm$html$Html$Attributes$value(model.Q),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPyPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.V, model.o, model.R, model.j, $author$project$HomePage$AddPyPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.U, model.o, model.Q, model.j, $author$project$HomePage$AddPyPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67918,7 +67890,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.V),
+												$elm$core$List$length(model.U),
 												$elm$core$List$length(model.o)),
 												$author$project$HomePage$morePackagesButton(model.j)
 											]))
@@ -67959,12 +67931,12 @@ var $author$project$HomePage$view = function (model) {
 														$elm$html$Html$Attributes$class('form-control form-control-md'),
 														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 														$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
-														$elm$html$Html$Attributes$value(model.Q),
+														$elm$html$Html$Attributes$value(model.P),
 														$elm$html$Html$Events$onInput($author$project$HomePage$FilterPgPackages)
 													]),
 												_List_Nil)
 											])),
-										A5($author$project$HomePage$packagesHtmlList, model.U, model.n, model.Q, model.j, $author$project$HomePage$AddPgPackage),
+										A5($author$project$HomePage$packagesHtmlList, model.T, model.n, model.P, model.j, $author$project$HomePage$AddPgPackage),
 										A2(
 										$elm$html$Html$p,
 										_List_fromArray(
@@ -67975,7 +67947,7 @@ var $author$project$HomePage$view = function (model) {
 											[
 												A2(
 												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.U),
+												$elm$core$List$length(model.T),
 												$elm$core$List$length(model.n)),
 												$author$project$HomePage$morePackagesButton(model.j)
 											])),
@@ -68041,7 +68013,7 @@ var $author$project$HomePage$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								(!$elm$core$String$isEmpty(model.L)) ? A2(
+								(!$elm$core$String$isEmpty(model.K)) ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68099,7 +68071,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.X)
+												$elm$html$Html$text(model.V)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68127,7 +68099,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.L)
+												$elm$html$Html$text(model.K)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68387,6 +68359,6 @@ var $author$project$HomePage$view = function (model) {
 			]));
 };
 var $author$project$HomePage$main = $elm$browser$Browser$sandbox(
-	{aS: $author$project$HomePage$initialModel, aZ: $author$project$HomePage$update, a_: $author$project$HomePage$view});
+	{aL: $author$project$HomePage$initialModel, aS: $author$project$HomePage$update, aT: $author$project$HomePage$view});
 _Platform_export({'HomePage':{'init':$author$project$HomePage$main(
 	$elm$json$Json$Decode$succeed(0))(0)}});}(this));
