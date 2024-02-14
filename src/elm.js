@@ -58355,7 +58355,7 @@ var $author$project$PostgresqlPackages$packages = _List_fromArray(
 		_Utils_Tuple2('pkgs.postgresqlPackages.tsja', '0.5.0'),
 		_Utils_Tuple2('pkgs.postgresqlPackages.wal2json', '2.5')
 	]);
-var $author$project$HomePage$allPgPackages = _Utils_ap($author$project$GeoPostgresqlPackages$packages, $author$project$PostgresqlPackages$packages);
+var $author$project$HomePage$allPostgresPackages = _Utils_ap($author$project$GeoPostgresqlPackages$packages, $author$project$PostgresqlPackages$packages);
 var $author$project$GeoPythonPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.python3-fiona', '1.9.5'),
@@ -66281,8 +66281,8 @@ var $author$project$PythonPackages$packages = _List_fromArray(
 		_Utils_Tuple2('pkgs.python3Packages.zxing-cpp', '2.1.0'),
 		_Utils_Tuple2('pkgs.python3Packages.zxing_cpp', '2.1.0')
 	]);
-var $author$project$HomePage$allPyPackages = _Utils_ap($author$project$GeoPythonPackages$packages, $author$project$PythonPackages$packages);
-var $author$project$HomePage$initialModel = {C: '', D: '', E: 'My geospatial environment', k: _List_Nil, s: false, l: _List_Nil, t: false, m: _List_Nil, K: '', S: '', T: $author$project$HomePage$allPackages, U: $author$project$HomePage$allPgPackages, V: $author$project$HomePage$allPyPackages, w: 'packages', j: 5, O: '', P: '', Q: ''};
+var $author$project$HomePage$allPythonPackages = _Utils_ap($author$project$GeoPythonPackages$packages, $author$project$PythonPackages$packages);
+var $author$project$HomePage$initialModel = {C: '', D: '', E: 'My geospatial environment', k: _List_Nil, s: false, l: _List_Nil, t: false, m: _List_Nil, K: '', S: '', T: $author$project$HomePage$allPackages, U: $author$project$HomePage$allPostgresPackages, V: $author$project$HomePage$allPythonPackages, w: 'packages', j: 5, O: '', P: '', Q: ''};
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
 };

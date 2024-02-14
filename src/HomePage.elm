@@ -50,13 +50,13 @@ allPackages =
     GeoPackages.packages ++ Packages.packages
 
 
-allPyPackages : Packages
-allPyPackages =
+allPythonPackages : Packages
+allPythonPackages =
     GeoPythonPackages.packages ++ PythonPackages.packages
 
 
-allPgPackages : Packages
-allPgPackages =
+allPostgresPackages : Packages
+allPostgresPackages =
     GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
 
 
@@ -107,12 +107,12 @@ initialModel =
     , configPackages = []
 
     -- python
-    , packagesPythonAvailable = allPyPackages
+    , packagesPythonAvailable = allPythonPackages
     , configPythonEnabled = False
     , configPythonPackages = []
 
     -- postgresql
-    , packagesPostgresAvailable = allPgPackages
+    , packagesPostgresAvailable = allPostgresPackages
     , configPostgresEnabled = False
     , configPostgresPackages = []
 
