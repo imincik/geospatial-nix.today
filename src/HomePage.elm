@@ -8,6 +8,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import NixConfig
+import NixModules
 import Packages
 import PostgresqlPackages
 import PythonPackages
@@ -78,15 +79,10 @@ type alias Model =
     , configPostgresEnabled : Bool
     , configPostgresPackages : List Package
     , configPostgresInitdbArgs : String
-    , configPostgresInitdbArgsEx : String
     , configPostgresInitialScript : String
-    , configPostgresInitialScriptEx : String
     , configPostgresListenAddresses : String
-    , configPostgresListenAddressesEx : String
-    , configPostgresPort : String
-    , configPostgresPortEx : String
+    , configPostgresListenPort : String
     , configPostgresSettings : String
-    , configPostgresSettingsEx : String
 
     -- custom process
     , configCustomProcessExec : String
@@ -127,19 +123,11 @@ initialModel =
     , packagesPostgresAvailable = allPostgresPackages
     , configPostgresEnabled = False
     , configPostgresPackages = []
-    , configPostgresInitdbArgs = """"--locale=C"
-"--encoding=UTF8\""""
-    , configPostgresInitdbArgsEx = ""
-    , configPostgresInitialScript = ""
-    , configPostgresInitialScriptEx = """CREATE EXTENSION postgis;
-SELECT PostGIS_Full_Version();"""
-    , configPostgresListenAddresses = ""
-    , configPostgresListenAddressesEx = "0.0.0.0"
-    , configPostgresPort = "5432"
-    , configPostgresPortEx = ""
-    , configPostgresSettings = ""
-    , configPostgresSettingsEx = """log_connections = true;
-log_statement = "all";"""
+    , configPostgresInitdbArgs = NixModules.postgres.initdbArgs.default
+    , configPostgresInitialScript = NixModules.postgres.initialScript.default
+    , configPostgresListenAddresses = NixModules.postgres.listenAddresses.default
+    , configPostgresListenPort = NixModules.postgres.listenPort.default
+    , configPostgresSettings = NixModules.postgres.settings.default
 
     -- custom process
     , configCustomProcessExec = ""
@@ -256,26 +244,26 @@ view model =
                             ]
                         , p [ class "fw-bold fs-3" ]
                             [ text "initdb arguments"
-                            , textarea [ class "form-control form-control-lg", placeholder model.configPostgresInitdbArgsEx, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initdbArgs.example, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
                             ]
                         , p [ class "fw-bold fs-3" ]
                             [ text "initial script"
-                            , useExampleButton ConfigPostgresInitialScript model.configPostgresInitialScriptEx
-                            , textarea [ class "form-control form-control-lg", placeholder model.configPostgresInitialScriptEx, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
+                            , useExampleButton ConfigPostgresInitialScript NixModules.postgres.initialScript.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initialScript.example, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
                             ]
                         , p [ class "fw-bold fs-3" ]
                             [ text "settings"
-                            , useExampleButton ConfigPostgresSettings model.configPostgresSettingsEx
-                            , textarea [ class "form-control form-control-lg", placeholder model.configPostgresSettingsEx, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
+                            , useExampleButton ConfigPostgresSettings NixModules.postgres.settings.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.settings.example, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
                             ]
                         , p [ class "fw-bold fs-3" ]
                             [ text "listen addresses"
-                            , useExampleButton ConfigPostgresListenAddresses model.configPostgresListenAddressesEx
-                            , input [ class "form-control form-control-lg", placeholder model.configPostgresListenAddressesEx, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
+                            , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
+                            , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
                             ]
                         , p [ class "fw-bold fs-3" ]
                             [ text "port"
-                            , input [ class "form-control form-control-lg", placeholder model.configPostgresPortEx, value model.configPostgresPort, onInput ConfigPostgresPort ] []
+                            , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
                             ]
                         , hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
@@ -515,7 +503,7 @@ type Msg
     | ConfigPostgresInitdbArgs String
     | ConfigPostgresInitialScript String
     | ConfigPostgresListenAddresses String
-    | ConfigPostgresPort String
+    | ConfigPostgresListenPort String
     | ConfigPostgresSettings String
     | ConfigCustomProcessEnable String
     | ConfgiShellHookEnable String
@@ -571,7 +559,7 @@ buildNixConfig model =
         |> String.replace "<POSTGRES-INITDB-ARGS>" (String.replace "\n" " " model.configPostgresInitdbArgs)
         |> String.replace "<POSTGRES-INITIAL-SCRIPT>" (String.replace "\n" " " model.configPostgresInitialScript)
         |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
-        |> String.replace "<POSTGRES-PORT>" model.configPostgresPort
+        |> String.replace "<POSTGRES-LISTEN-PORT>" model.configPostgresListenPort
         |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
@@ -650,8 +638,8 @@ update msg model =
         ConfigPostgresListenAddresses val ->
             { model | configPostgresListenAddresses = val }
 
-        ConfigPostgresPort val ->
-            { model | configPostgresPort = val }
+        ConfigPostgresListenPort val ->
+            { model | configPostgresListenPort = val }
 
         ConfigPostgresSettings val ->
             { model | configPostgresSettings = val }

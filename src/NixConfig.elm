@@ -47,7 +47,7 @@ configPostgresTemplate =
     initdbArgs = [ <POSTGRES-INITDB-ARGS> ];
     initialScript = "<POSTGRES-INITIAL-SCRIPT>";
     listen_addresses = "<POSTGRES-LISTEN-ADDRESSES>";
-    port = <POSTGRES-PORT>;
+    port = <POSTGRES-LISTEN-PORT>;
     settings = { <POSTGRES-SETTINGS> };
   };
 """
