@@ -123,7 +123,6 @@ type alias Config =
     , languages : Languages
     , services : Services
     , processes : Processes
-    , enterShell : EnterShell
     }
 
 
@@ -143,6 +142,9 @@ type alias Model =
     , postgresEnabled : Bool
     , availablePgPackages : List Package
     , selectedPgPackages : List Package
+
+    -- other
+    , configEnterShell : String
 
     -- config
     , config : Config
@@ -178,6 +180,9 @@ initialModel =
     , availablePgPackages = allPgPackages
     , selectedPgPackages = []
 
+    -- other
+    , configEnterShell = ""
+
     -- config
     , config =
         { packages = []
@@ -198,7 +203,6 @@ initialModel =
                 { exec = ""
                 }
             }
-        , enterShell = ""
         }
     , nixInit = ""
     , nixConfig = ""
@@ -316,7 +320,7 @@ view model =
                     div [ class "shell-hook" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.config.enterShell, onInput AddShellHook ] []
+                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.configEnterShell, onInput AddShellHook ] []
                         ]
 
                   else
@@ -568,7 +572,7 @@ buildNixConfig model =
                 ++ optionalString model.pythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.postgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString (model.config.processes.custom.exec /= "") NixConfig.configCustomProcessTemplate
-                ++ optionalString (model.config.enterShell /= "") NixConfig.configEnterShellTemplate
+                ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
             String.replace "<CONFIG-BODY>" nixConfigBody NixConfig.configTemplate
@@ -580,7 +584,7 @@ buildNixConfig model =
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.postgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<CUSTOM-PROCESS>" model.config.processes.custom.exec
-        |> String.replace "<SHELL-HOOK>" model.config.enterShell
+        |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
 
 update : Msg -> Model -> Model
@@ -634,7 +638,7 @@ update msg model =
             { model | config = (\p -> { p | processes = { custom = { exec = script } } }) model.config }
 
         AddShellHook script ->
-            { model | config = (\p -> { p | enterShell = script }) model.config }
+            { model | configEnterShell = script }
 
         CreateEnvironment ->
             { model | nixInit = buildNixInit model, nixConfig = buildNixConfig model }
