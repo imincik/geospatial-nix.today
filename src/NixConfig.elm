@@ -31,6 +31,10 @@ configPythonTemplate =
   languages.python = {
     enable = <PYTHON-ENABLED>;
     package = pkgs.python3.withPackages (p: [ <PYTHON-PACKAGES> ]);
+    poetry = {
+      enable = <PYTHON-POETRY-ENABLED>;
+      activate.enable = <PYTHON-POETRY-ENABLED>;
+    };
   };
 """
 

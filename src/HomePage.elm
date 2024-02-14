@@ -71,6 +71,7 @@ type alias Model =
     , packagesPythonAvailable : List Package
     , configPythonEnabled : Bool
     , configPythonPackages : List Package
+    , configPythonPoetryEnabled : Bool
 
     -- postgresql
     , packagesPostgresAvailable : List Package
@@ -110,6 +111,7 @@ initialModel =
     , packagesPythonAvailable = allPythonPackages
     , configPythonEnabled = False
     , configPythonPackages = []
+    , configPythonPoetryEnabled = False
 
     -- postgresql
     , packagesPostgresAvailable = allPostgresPackages
@@ -202,6 +204,10 @@ view model =
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
                             , morePackagesButton model.uiFilterLimit
+                            ]
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ text "poetry"
+                            , isEnabledButton model.configPythonPoetryEnabled ConfigPythonPoetryEnable
                             ]
                         ]
 
@@ -452,6 +458,7 @@ type Msg
     | ConfigAddPackage Package
     | ConfigPythonEnable
     | ConfigPythonAddPackage Package
+    | ConfigPythonPoetryEnable
     | ConfigPostgresEnable
     | ConfigPostgresAddPackage Package
     | ConfigCustomProcessEnable String
@@ -502,6 +509,7 @@ buildNixConfig model =
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
         |> String.replace "<PYTHON-ENABLED>" (boolToString model.configPythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
+        |> String.replace "<PYTHON-POETRY-ENABLED>" (boolToString model.configPythonPoetryEnabled)
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
@@ -537,6 +545,23 @@ update msg model =
 
             else
                 { model | configPythonPackages = List.filter (\x -> x /= pkg) model.configPythonPackages }
+
+        ConfigPythonPoetryEnable ->
+            { model
+                | configPythonPoetryEnabled =
+                    if not model.configPythonPoetryEnabled then
+                        True
+
+                    else
+                        False
+                , configPythonEnabled =
+                    if not model.configPythonPoetryEnabled then
+                        True
+
+                    else
+                        -- not a typo, don't disable python when disabling poetry
+                        True
+            }
 
         ConfigPostgresEnable ->
             { model
