@@ -291,8 +291,11 @@ view model =
                 , if model.uiActiveCategoryTab == "other" then
                     div [ class "shell-hook" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "shell hook"
+                            , useExampleButton ConfgiShellHookEnable NixModules.shellHook.enterShell.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                            ]
                         ]
 
                   else

@@ -1,4 +1,4 @@
-module NixModules exposing (customProcess, packages, postgres, python)
+module NixModules exposing (customProcess, packages, postgres, python, shellHook)
 
 -- default and example configuration values
 
@@ -53,5 +53,13 @@ customProcess =
     , exec =
         { default = ""
         , example = "python -m http.server"
+        }
+    }
+
+
+shellHook =
+    { enterShell =
+        { default = ""
+        , example = """echo "$USER, welcome to the ${config.name} environment !\""""
         }
     }
