@@ -279,7 +279,7 @@ view model =
                         , p [ class "fw-bold fs-3" ]
                             [ text "command"
                             , useExampleButton ConfigCustomProcessExec NixModules.customProcess.exec.example
-                            , textarea [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
+                            , input [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
                             ]
                         , br [] []
                         ]

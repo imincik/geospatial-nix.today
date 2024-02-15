@@ -68197,7 +68197,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$text('command'),
 												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.af.n),
 												A2(
-												$elm$html$Html$textarea,
+												$elm$html$Html$input,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
