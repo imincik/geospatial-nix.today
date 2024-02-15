@@ -1,8 +1,26 @@
-module NixModules exposing (customProcess, postgres)
+module NixModules exposing (customProcess, packages, postgres, python)
+
+-- default and example configuration values
+
+
+packages =
+    { packages = []
+    }
+
+
+python =
+    { enabled = False
+    , packages = []
+    , poetryEnabled = False
+    }
 
 
 postgres =
-    { initdbArgs =
+    { enabled = False
+    , packages = []
+
+    -- configuration
+    , initdbArgs =
         { default = """"--locale=C"
 "--encoding=UTF8\""""
         , example = ""
@@ -29,7 +47,10 @@ log_statement = "all";"""
 
 
 customProcess =
-    { exec =
+    { enabled = False
+
+    -- configuration
+    , exec =
         { default = ""
         , example = "python -m http.server"
         }

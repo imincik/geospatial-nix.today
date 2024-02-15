@@ -112,18 +112,18 @@ initialModel =
 
     -- packages
     , packagesAvailable = allPackages
-    , configPackages = []
+    , configPackages = NixModules.packages.packages
 
     -- python
     , packagesPythonAvailable = allPythonPackages
-    , configPythonEnabled = False
-    , configPythonPackages = []
-    , configPythonPoetryEnabled = False
+    , configPythonEnabled = NixModules.python.enabled
+    , configPythonPackages = NixModules.python.packages
+    , configPythonPoetryEnabled = NixModules.python.poetryEnabled
 
     -- postgresql
     , packagesPostgresAvailable = allPostgresPackages
-    , configPostgresEnabled = False
-    , configPostgresPackages = []
+    , configPostgresEnabled = NixModules.postgres.enabled
+    , configPostgresPackages = NixModules.postgres.packages
     , configPostgresInitdbArgs = NixModules.postgres.initdbArgs.default
     , configPostgresInitialScript = NixModules.postgres.initialScript.default
     , configPostgresListenAddresses = NixModules.postgres.listenAddresses.default
@@ -131,8 +131,8 @@ initialModel =
     , configPostgresSettings = NixModules.postgres.settings.default
 
     -- custom process
-    , configCustomProcessEnabled = False
-    , configCustomProcessExec = ""
+    , configCustomProcessEnabled = NixModules.customProcess.enabled
+    , configCustomProcessExec = NixModules.customProcess.exec.default
 
     -- other
     , configEnterShell = ""
