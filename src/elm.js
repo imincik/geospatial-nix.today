@@ -600,11 +600,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.ao.S === region.at.S)
+	if (region.ap.S === region.au.S)
 	{
-		return 'on line ' + region.ao.S;
+		return 'on line ' + region.ap.S;
 	}
-	return 'on lines ' + region.ao.S + ' through ' + region.at.S;
+	return 'on lines ' + region.ap.S + ' through ' + region.au.S;
 }
 
 
@@ -2720,8 +2720,8 @@ var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
 		v: func(record.v),
-		ap: record.ap,
-		al: record.al
+		aq: record.aq,
+		am: record.am
 	}
 });
 
@@ -2990,10 +2990,10 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 
 		var value = result.a;
 		var message = !tag ? value : tag < 3 ? value.a : value.v;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.ap;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aq;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.al) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.am) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3983,7 +3983,7 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 		impl.ba,
 		impl.a8,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.an && impl.an(sendToApp)
+			var divertHrefToApp = impl.ao && impl.ao(sendToApp)
 			var view = impl.bb;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
@@ -4058,7 +4058,7 @@ function _Browser_application(impl)
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		an: function(sendToApp)
+		ao: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -66284,20 +66284,23 @@ var $author$project$HomePage$allPythonPackages = _Utils_ap($author$project$GeoPy
 var $elm$core$Basics$False = 1;
 var $author$project$NixModules$customProcess = {
 	ae: false,
-	af: {H: '', g: 'python -m http.server'}
+	ag: {B: '', g: 'python -m http.server'}
 };
-var $author$project$NixModules$packages = {ak: _List_Nil};
+var $author$project$NixModules$packages = {al: _List_Nil};
 var $author$project$NixModules$postgres = {
 	ae: false,
-	az: {H: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
-	ag: {H: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
-	ah: {H: '', g: '0.0.0.0'},
-	aB: {H: '5432', g: ''},
-	ak: _List_Nil,
-	am: {H: '', g: 'log_connections = true;\nlog_statement = "all";'}
+	az: {B: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
+	ah: {B: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
+	ai: {B: '', g: '0.0.0.0'},
+	aB: {B: '5432', g: ''},
+	al: _List_Nil,
+	an: {B: '', g: 'log_connections = true;\nlog_statement = "all";'}
 };
-var $author$project$NixModules$python = {ae: false, ak: _List_Nil, a6: false};
-var $author$project$HomePage$initialModel = {z: $author$project$NixModules$customProcess.ae, M: $author$project$NixModules$customProcess.af.H, F: '', G: 'My geospatial environment', l: $author$project$NixModules$packages.ak, u: $author$project$NixModules$postgres.ae, N: $author$project$NixModules$postgres.az.H, O: $author$project$NixModules$postgres.ag.H, P: $author$project$NixModules$postgres.ah.H, Q: $author$project$NixModules$postgres.aB.H, m: $author$project$NixModules$postgres.ak, R: $author$project$NixModules$postgres.am.H, q: $author$project$NixModules$python.ae, n: $author$project$NixModules$python.ak, A: $author$project$NixModules$python.a6, T: '', aa: '', ab: $author$project$HomePage$allPackages, ac: $author$project$HomePage$allPostgresPackages, ad: $author$project$HomePage$allPythonPackages, x: 'packages', k: 5, X: '', Y: '', Z: ''};
+var $author$project$NixModules$python = {ae: false, al: _List_Nil, a6: false};
+var $author$project$NixModules$shellHook = {
+	af: {B: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
+};
+var $author$project$HomePage$initialModel = {z: $author$project$NixModules$customProcess.ae, M: $author$project$NixModules$customProcess.ag.B, G: $author$project$NixModules$shellHook.af.B, H: 'My geospatial environment', l: $author$project$NixModules$packages.al, u: $author$project$NixModules$postgres.ae, N: $author$project$NixModules$postgres.az.B, O: $author$project$NixModules$postgres.ah.B, P: $author$project$NixModules$postgres.ai.B, Q: $author$project$NixModules$postgres.aB.B, m: $author$project$NixModules$postgres.al, R: $author$project$NixModules$postgres.an.B, q: $author$project$NixModules$python.ae, n: $author$project$NixModules$python.al, A: $author$project$NixModules$python.a6, T: '', aa: '', ab: $author$project$HomePage$allPackages, ac: $author$project$HomePage$allPostgresPackages, ad: $author$project$HomePage$allPythonPackages, x: 'packages', k: 5, X: '', Y: '', Z: ''};
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
 };
@@ -67069,12 +67072,12 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 					A2($author$project$HomePage$optionalString, model.u, $author$project$NixConfig$configPostgresTemplate),
 					_Utils_ap(
 						A2($author$project$HomePage$optionalString, model.z, $author$project$NixConfig$configCustomProcessTemplate),
-						A2($author$project$HomePage$optionalString, model.F !== '', $author$project$NixConfig$configEnterShellTemplate))))));
+						A2($author$project$HomePage$optionalString, model.G !== '', $author$project$NixConfig$configEnterShellTemplate))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return A3(
 		$elm$core$String$replace,
 		'<SHELL-HOOK>',
-		model.F,
+		model.G,
 		A3(
 			$elm$core$String$replace,
 			'<CUSTOM-PROCESS>',
@@ -67126,7 +67129,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 														A3(
 															$elm$core$String$replace,
 															'<NAME>',
-															$author$project$HomePage$environmentName(model.G),
+															$author$project$HomePage$environmentName(model.H),
 															nixConfig))))))))))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix#geonixcli -- init\ngit add flake.nix geonix.nix\n';
@@ -67134,7 +67137,7 @@ var $author$project$HomePage$buildNixInit = function (model) {
 	return A3(
 		$elm$core$String$replace,
 		'<NAME>',
-		$author$project$HomePage$environmentName(model.G),
+		$author$project$HomePage$environmentName(model.H),
 		$author$project$Texts$initTemplate);
 };
 var $elm$core$List$filter = F2(
@@ -67186,7 +67189,7 @@ var $author$project$HomePage$update = F2(
 				var name = msg.a;
 				return _Utils_update(
 					model,
-					{G: name});
+					{H: name});
 			case 1:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.l)) ? _Utils_update(
@@ -67305,7 +67308,7 @@ var $author$project$HomePage$update = F2(
 				var script = msg.a;
 				return _Utils_update(
 					model,
-					{F: script});
+					{G: script});
 			case 15:
 				return _Utils_update(
 					model,
@@ -67764,9 +67767,6 @@ var $author$project$Texts$servicesTemplateComment = '\nRun following command to 
 var $author$project$Texts$shareTemplate = '\ngit add flake.lock\ngit commit -m "My geospatial environment"\ngit push\n';
 var $author$project$Texts$shareTemplateComment = '\nAdd environment lock file to git and push project to repository\n';
 var $author$project$Texts$shareTemplateComment2 = '\nNow, all your project collaborators can use exactly same environment\n  containing exactly same versions of software.\n';
-var $author$project$NixModules$shellHook = {
-	au: {H: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
-};
 var $author$project$Texts$shellTemplate = '\nnix run .#geonixcli -- shell\n';
 var $author$project$Texts$shellTemplateComment = '\nRun following command to enter shell environment\n';
 var $elm$html$Html$textarea = _VirtualDom_node('textarea');
@@ -67870,7 +67870,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												A2($elm$html$Html$Attributes$style, 'margin', '10px'),
 												$elm$html$Html$Attributes$placeholder('Environment name ...'),
-												$elm$html$Html$Attributes$value(model.G),
+												$elm$html$Html$Attributes$value(model.H),
 												$elm$html$Html$Events$onInput($author$project$HomePage$ConfigName)
 											]),
 										_List_Nil),
@@ -68103,13 +68103,13 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('initial script'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.ag.g),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.ah.g),
 												A2(
 												$elm$html$Html$textarea,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ag.g),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ah.g),
 														$elm$html$Html$Attributes$value(model.O),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitialScript)
 													]),
@@ -68124,13 +68124,13 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('settings'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.am.g),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.an.g),
 												A2(
 												$elm$html$Html$textarea,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.am.g),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.an.g),
 														$elm$html$Html$Attributes$value(model.R),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresSettings)
 													]),
@@ -68145,13 +68145,13 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('listen addresses'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresListenAddresses, $author$project$NixModules$postgres.ah.g),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresListenAddresses, $author$project$NixModules$postgres.ai.g),
 												A2(
 												$elm$html$Html$input,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ah.g),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ai.g),
 														$elm$html$Html$Attributes$value(model.P),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenAddresses)
 													]),
@@ -68198,13 +68198,13 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('command'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.af.g),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.ag.g),
 												A2(
 												$elm$html$Html$input,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.af.g),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.ag.g),
 														$elm$html$Html$Attributes$value(model.M),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessExec)
 													]),
@@ -68230,14 +68230,14 @@ var $author$project$HomePage$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$text('shell hook'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfgiShellHookEnable, $author$project$NixModules$shellHook.au.g),
+												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfgiShellHookEnable, $author$project$NixModules$shellHook.af.g),
 												A2(
 												$elm$html$Html$textarea,
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.au.g),
-														$elm$html$Html$Attributes$value(model.F),
+														$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.af.g),
+														$elm$html$Html$Attributes$value(model.G),
 														$elm$html$Html$Events$onInput($author$project$HomePage$ConfgiShellHookEnable)
 													]),
 												_List_Nil)

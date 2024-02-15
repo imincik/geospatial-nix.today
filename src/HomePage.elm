@@ -135,7 +135,7 @@ initialModel =
     , configCustomProcessExec = NixModules.customProcess.exec.default
 
     -- other
-    , configEnterShell = ""
+    , configEnterShell = NixModules.shellHook.enterShell.default
 
     -- nix config
     , nixInit = ""
