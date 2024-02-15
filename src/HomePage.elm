@@ -8,6 +8,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import NixConfig
+import NixModules
 import Packages
 import PostgresqlPackages
 import PythonPackages
@@ -71,13 +72,20 @@ type alias Model =
     , packagesPythonAvailable : List Package
     , configPythonEnabled : Bool
     , configPythonPackages : List Package
+    , configPythonPoetryEnabled : Bool
 
     -- postgresql
     , packagesPostgresAvailable : List Package
     , configPostgresEnabled : Bool
     , configPostgresPackages : List Package
+    , configPostgresInitdbArgs : String
+    , configPostgresInitialScript : String
+    , configPostgresListenAddresses : String
+    , configPostgresListenPort : String
+    , configPostgresSettings : String
 
     -- custom process
+    , configCustomProcessEnabled : Bool
     , configCustomProcessExec : String
 
     -- other
@@ -104,20 +112,27 @@ initialModel =
 
     -- packages
     , packagesAvailable = allPackages
-    , configPackages = []
+    , configPackages = NixModules.packages.packages
 
     -- python
     , packagesPythonAvailable = allPythonPackages
-    , configPythonEnabled = False
-    , configPythonPackages = []
+    , configPythonEnabled = NixModules.python.enabled
+    , configPythonPackages = NixModules.python.packages
+    , configPythonPoetryEnabled = NixModules.python.poetryEnabled
 
     -- postgresql
     , packagesPostgresAvailable = allPostgresPackages
-    , configPostgresEnabled = False
-    , configPostgresPackages = []
+    , configPostgresEnabled = NixModules.postgres.enabled
+    , configPostgresPackages = NixModules.postgres.packages
+    , configPostgresInitdbArgs = NixModules.postgres.initdbArgs.default
+    , configPostgresInitialScript = NixModules.postgres.initialScript.default
+    , configPostgresListenAddresses = NixModules.postgres.listenAddresses.default
+    , configPostgresListenPort = NixModules.postgres.listenPort.default
+    , configPostgresSettings = NixModules.postgres.settings.default
 
     -- custom process
-    , configCustomProcessExec = ""
+    , configCustomProcessEnabled = NixModules.customProcess.enabled
+    , configCustomProcessExec = NixModules.customProcess.exec.default
 
     -- other
     , configEnterShell = ""
@@ -157,7 +172,7 @@ view model =
         , div [ class "row" ]
             [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
-                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigSetName ] []
+                    [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
                     ]
 
@@ -203,6 +218,10 @@ view model =
                             [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
                             , morePackagesButton model.uiFilterLimit
                             ]
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ text "poetry"
+                            , isEnabledButton model.configPythonPoetryEnabled ConfigPythonPoetryEnable
+                            ]
                         ]
 
                   else
@@ -212,6 +231,8 @@ view model =
                 , if model.uiActiveCategoryTab == "services" then
                     div [ class "services" ]
                         [ hr [] []
+
+                        -- postgres
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "POSTGRESQL"
                             , isEnabledButton model.configPostgresEnabled ConfigPostgresEnable
@@ -225,9 +246,41 @@ view model =
                             [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
                             , morePackagesButton model.uiFilterLimit
                             ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "initdb arguments"
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initdbArgs.example, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "initial script"
+                            , useExampleButton ConfigPostgresInitialScript NixModules.postgres.initialScript.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initialScript.example, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "settings"
+                            , useExampleButton ConfigPostgresSettings NixModules.postgres.settings.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.settings.example, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "listen addresses"
+                            , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
+                            , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "port"
+                            , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
+                            ]
+
+                        -- custom process
                         , hr [] []
-                        , p [ class "fw-bold fs-3" ] [ text "CUSTOM PROCESS" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "python -m http.server", value model.configCustomProcessExec, onInput ConfigCustomProcessEnable ] []
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ text "CUSTOM PROCESS"
+                            , isEnabledButton model.configCustomProcessEnabled ConfigCustomProcessEnable
+                            ]
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "command"
+                            , useExampleButton ConfigCustomProcessExec NixModules.customProcess.exec.example
+                            , input [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
+                            ]
                         , br [] []
                         ]
 
@@ -238,8 +291,11 @@ view model =
                 , if model.uiActiveCategoryTab == "other" then
                     div [ class "shell-hook" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3" ] [ text "shell hook" ]
-                        , textarea [ class "form-control form-control-lg", placeholder "echo hello", value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                        , p [ class "fw-bold fs-3" ]
+                            [ text "shell hook"
+                            , useExampleButton ConfgiShellHookEnable NixModules.shellHook.enterShell.example
+                            , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                            ]
                         ]
 
                   else
@@ -388,6 +444,11 @@ morePackagesButton filterLimit =
         ]
 
 
+useExampleButton : (String -> Msg) -> String -> Html Msg
+useExampleButton onClickAction value =
+    button [ class "btn btn-sm btn-link", onClick (onClickAction value) ] [ text "use example" ]
+
+
 isEnabledButton : Bool -> Msg -> Html Msg
 isEnabledButton isEnabled onClickAction =
     button
@@ -448,13 +509,20 @@ boolToEnabledString value =
 
 
 type Msg
-    = ConfigSetName String
+    = ConfigName String
     | ConfigAddPackage Package
     | ConfigPythonEnable
     | ConfigPythonAddPackage Package
+    | ConfigPythonPoetryEnable
     | ConfigPostgresEnable
     | ConfigPostgresAddPackage Package
-    | ConfigCustomProcessEnable String
+    | ConfigPostgresInitdbArgs String
+    | ConfigPostgresInitialScript String
+    | ConfigPostgresListenAddresses String
+    | ConfigPostgresListenPort String
+    | ConfigPostgresSettings String
+    | ConfigCustomProcessEnable
+    | ConfigCustomProcessExec String
     | ConfgiShellHookEnable String
       -- nix config
     | CreateEnvironment
@@ -492,7 +560,7 @@ buildNixConfig model =
                 ++ NixConfig.configPackagesTemplate
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
-                ++ optionalString (model.configCustomProcessExec /= "") NixConfig.configCustomProcessTemplate
+                ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
@@ -502,8 +570,14 @@ buildNixConfig model =
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
         |> String.replace "<PYTHON-ENABLED>" (boolToString model.configPythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
+        |> String.replace "<PYTHON-POETRY-ENABLED>" (boolToString model.configPythonPoetryEnabled)
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
+        |> String.replace "<POSTGRES-INITDB-ARGS>" (String.replace "\n" " " model.configPostgresInitdbArgs)
+        |> String.replace "<POSTGRES-INITIAL-SCRIPT>" (String.replace "\n" " " model.configPostgresInitialScript)
+        |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
+        |> String.replace "<POSTGRES-LISTEN-PORT>" model.configPostgresListenPort
+        |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
@@ -511,7 +585,7 @@ buildNixConfig model =
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        ConfigSetName name ->
+        ConfigName name ->
             { model | configName = name }
 
         ConfigAddPackage pkg ->
@@ -538,6 +612,23 @@ update msg model =
             else
                 { model | configPythonPackages = List.filter (\x -> x /= pkg) model.configPythonPackages }
 
+        ConfigPythonPoetryEnable ->
+            { model
+                | configPythonPoetryEnabled =
+                    if not model.configPythonPoetryEnabled then
+                        True
+
+                    else
+                        False
+                , configPythonEnabled =
+                    if not model.configPythonPoetryEnabled then
+                        True
+
+                    else
+                        -- not a typo, don't disable python when disabling poetry
+                        True
+            }
+
         ConfigPostgresEnable ->
             { model
                 | configPostgresEnabled =
@@ -555,8 +646,33 @@ update msg model =
             else
                 { model | configPostgresPackages = List.filter (\x -> x /= pkg) model.configPostgresPackages }
 
-        ConfigCustomProcessEnable script ->
-            { model | configCustomProcessExec = script }
+        ConfigPostgresInitdbArgs val ->
+            { model | configPostgresInitdbArgs = val }
+
+        ConfigPostgresInitialScript val ->
+            { model | configPostgresInitialScript = val }
+
+        ConfigPostgresListenAddresses val ->
+            { model | configPostgresListenAddresses = val }
+
+        ConfigPostgresListenPort val ->
+            { model | configPostgresListenPort = val }
+
+        ConfigPostgresSettings val ->
+            { model | configPostgresSettings = val }
+
+        ConfigCustomProcessEnable ->
+            { model
+                | configCustomProcessEnabled =
+                    if not model.configCustomProcessEnabled then
+                        True
+
+                    else
+                        False
+            }
+
+        ConfigCustomProcessExec script ->
+            { model | configCustomProcessExec = script, configCustomProcessEnabled = True }
 
         ConfgiShellHookEnable script ->
             { model | configEnterShell = script }
