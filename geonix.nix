@@ -7,7 +7,6 @@ in
 {
   packages = [
     geopkgs.geonixcli
-    pkgs.fswatch
   ];
 
   scripts.make-packages-db.exec = ''
@@ -109,11 +108,11 @@ in
   '';
 
   scripts.make-elm-site-dev.exec = ''
-    fswatch -o src/*.elm | xargs -I{} elm make src/HomePage.elm --output src/elm.js
+    ${pkgs.fswatch}/bin/fswatch -o src/*.elm | xargs -I{} ${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --output src/elm.js
   '';
 
   scripts.make-elm-site-prod.exec = ''
-    elm make src/HomePage.elm --optimize --output src/elm.js
+    ${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --optimize --output src/elm.js
   '';
   
   languages.elm.enable = true;
