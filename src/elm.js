@@ -67560,6 +67560,10 @@ var $elm$html$Html$Events$onInput = function (tagger) {
 			$elm$html$Html$Events$alwaysStop,
 			A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetValue)));
 };
+var $author$project$HomePage$optionalHtmlDiv = F2(
+	function (condition, divElement) {
+		return condition ? divElement : A2($elm$html$Html$div, _List_Nil, _List_Nil);
+	});
 var $author$project$HomePage$optionalHtmlDivElements = F3(
 	function (condition, first, second) {
 		return condition ? _Utils_ap(first, second) : first;
@@ -67918,390 +67922,402 @@ var $author$project$HomePage$view = function (model) {
 									_List_fromArray(
 										['PACKAGES', 'LANGUAGES', 'SERVICES', 'OTHER']),
 									model.y)),
-								(model.y === 'packages') ? A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('packages')
-									]),
-								_List_fromArray(
-									[
-										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
-										A2(
-										$elm$html$Html$p,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text('packages'),
-												A2(
-												$elm$html$Html$input,
+								A2(
+								$author$project$HomePage$optionalHtmlDiv,
+								model.y === 'packages',
+								A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('packages')
+										]),
+									_List_fromArray(
+										[
+											A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+											A2(
+											$elm$html$Html$p,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text('packages'),
+													A2(
+													$elm$html$Html$input,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('form-control form-control-md'),
+															A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
+															$elm$html$Html$Attributes$placeholder('Search for packages ...'),
+															$elm$html$Html$Attributes$value(model.X),
+															$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPackages)
+														]),
+													_List_Nil)
+												])),
+											A5($author$project$HomePage$packagesHtmlList, model.ab, model.l, model.X, model.k, $author$project$HomePage$ConfigAddPackage),
+											A2(
+											$elm$html$Html$p,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('text-secondary')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$author$project$HomePage$packagesCountText,
+													$elm$core$List$length(model.ab),
+													$elm$core$List$length(model.l)),
+													$author$project$HomePage$morePackagesButton(model.k)
+												]))
+										]))),
+								A2(
+								$author$project$HomePage$optionalHtmlDiv,
+								model.y === 'languages',
+								A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('languages')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('python')
+												]),
+											A3(
+												$author$project$HomePage$optionalHtmlDivElements,
+												model.n,
 												_List_fromArray(
 													[
-														$elm$html$Html$Attributes$class('form-control form-control-md'),
-														A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
-														$elm$html$Html$Attributes$placeholder('Search for packages ...'),
-														$elm$html$Html$Attributes$value(model.X),
-														$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPackages)
+														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('PYTHON'),
+																A2($author$project$HomePage$isEnabledButton, model.n, $author$project$HomePage$ConfigPythonEnable)
+															]))
 													]),
-												_List_Nil)
-											])),
-										A5($author$project$HomePage$packagesHtmlList, model.ab, model.l, model.X, model.k, $author$project$HomePage$ConfigAddPackage),
-										A2(
-										$elm$html$Html$p,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('text-secondary')
-											]),
-										_List_fromArray(
-											[
-												A2(
-												$author$project$HomePage$packagesCountText,
-												$elm$core$List$length(model.ab),
-												$elm$core$List$length(model.l)),
-												$author$project$HomePage$morePackagesButton(model.k)
-											]))
-									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.y === 'languages') ? A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('languages')
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('python')
-											]),
-										A3(
-											$author$project$HomePage$optionalHtmlDivElements,
-											model.n,
-											_List_fromArray(
-												[
-													A2($elm$html$Html$hr, _List_Nil, _List_Nil),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('PYTHON'),
-															A2($author$project$HomePage$isEnabledButton, model.n, $author$project$HomePage$ConfigPythonEnable)
-														]))
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('packages'),
-															A2(
-															$elm$html$Html$input,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-md'),
-																	A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
-																	$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-																	$elm$html$Html$Attributes$value(model.Z),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPythonPackages)
-																]),
-															_List_Nil)
-														])),
-													A5($author$project$HomePage$packagesHtmlList, model.ad, model.o, model.Z, model.k, $author$project$HomePage$ConfigPythonAddPackage),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('text-secondary')
-														]),
-													_List_fromArray(
-														[
-															A2(
-															$author$project$HomePage$packagesCountText,
-															$elm$core$List$length(model.ad),
-															$elm$core$List$length(model.o)),
-															$author$project$HomePage$morePackagesButton(model.k)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('poetry'),
-															A2($author$project$HomePage$isEnabledButton, model.A, $author$project$HomePage$ConfigPythonPoetryEnable)
-														]))
-												])))
-									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.y === 'services') ? A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('services')
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('postgres')
-											]),
-										A3(
-											$author$project$HomePage$optionalHtmlDivElements,
-											model.r,
-											_List_fromArray(
-												[
-													A2($elm$html$Html$hr, _List_Nil, _List_Nil),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('POSTGRESQL'),
-															A2($author$project$HomePage$isEnabledButton, model.r, $author$project$HomePage$ConfigPostgresEnable)
-														]))
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('packages'),
-															A2(
-															$elm$html$Html$input,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-md'),
-																	A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
-																	$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
-																	$elm$html$Html$Attributes$value(model.Y),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPostgresPackages)
-																]),
-															_List_Nil)
-														])),
-													A5($author$project$HomePage$packagesHtmlList, model.ac, model.m, model.Y, model.k, $author$project$HomePage$ConfigPostgresAddPackage),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('text-secondary')
-														]),
-													_List_fromArray(
-														[
-															A2(
-															$author$project$HomePage$packagesCountText,
-															$elm$core$List$length(model.ac),
-															$elm$core$List$length(model.m)),
-															$author$project$HomePage$morePackagesButton(model.k)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('initdb arguments'),
-															A2(
-															$elm$html$Html$textarea,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.az.g),
-																	$elm$html$Html$Attributes$value(model.N),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitdbArgs)
-																]),
-															_List_Nil)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('initial script'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.ah.g),
-															A2(
-															$elm$html$Html$textarea,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ah.g),
-																	$elm$html$Html$Attributes$value(model.O),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitialScript)
-																]),
-															_List_Nil)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('settings'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.an.g),
-															A2(
-															$elm$html$Html$textarea,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.an.g),
-																	$elm$html$Html$Attributes$value(model.R),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresSettings)
-																]),
-															_List_Nil)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('listen addresses'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresListenAddresses, $author$project$NixModules$postgres.ai.g),
-															A2(
-															$elm$html$Html$input,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ai.g),
-																	$elm$html$Html$Attributes$value(model.P),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenAddresses)
-																]),
-															_List_Nil)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('port'),
-															A2(
-															$elm$html$Html$input,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aB.g),
-																	$elm$html$Html$Attributes$value(model.Q),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenPort)
-																]),
-															_List_Nil)
-														]))
-												]))),
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('custom-process')
-											]),
-										A3(
-											$author$project$HomePage$optionalHtmlDivElements,
-											model.v,
-											_List_fromArray(
-												[
-													A2($elm$html$Html$hr, _List_Nil, _List_Nil),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('CUSTOM PROCESS'),
-															A2($author$project$HomePage$isEnabledButton, model.v, $author$project$HomePage$ConfigCustomProcessEnable)
-														]))
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fw-bold fs-3')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('command'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.ag.g),
-															A2(
-															$elm$html$Html$input,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.ag.g),
-																	$elm$html$Html$Attributes$value(model.M),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessExec)
-																]),
-															_List_Nil)
-														])),
-													A2($elm$html$Html$br, _List_Nil, _List_Nil)
-												])))
-									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil),
-								(model.y === 'other') ? A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('shell-hook')
-									]),
-								_List_fromArray(
-									[
-										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
-										A2(
-										$elm$html$Html$p,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('fw-bold fs-3')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text('shell hook'),
-												A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfgiShellHookEnable, $author$project$NixModules$shellHook.af.g),
-												A2(
-												$elm$html$Html$textarea,
 												_List_fromArray(
 													[
-														$elm$html$Html$Attributes$class('form-control form-control-lg'),
-														$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.af.g),
-														$elm$html$Html$Attributes$value(model.G),
-														$elm$html$Html$Events$onInput($author$project$HomePage$ConfgiShellHookEnable)
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('packages'),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-md'),
+																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
+																		$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
+																		$elm$html$Html$Attributes$value(model.Z),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPythonPackages)
+																	]),
+																_List_Nil)
+															])),
+														A5($author$project$HomePage$packagesHtmlList, model.ad, model.o, model.Z, model.k, $author$project$HomePage$ConfigPythonAddPackage),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('text-secondary')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$author$project$HomePage$packagesCountText,
+																$elm$core$List$length(model.ad),
+																$elm$core$List$length(model.o)),
+																$author$project$HomePage$morePackagesButton(model.k)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('poetry'),
+																A2($author$project$HomePage$isEnabledButton, model.A, $author$project$HomePage$ConfigPythonPoetryEnable)
+															]))
+													])))
+										]))),
+								A2(
+								$author$project$HomePage$optionalHtmlDiv,
+								model.y === 'services',
+								A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('services')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('postgres')
+												]),
+											A3(
+												$author$project$HomePage$optionalHtmlDivElements,
+												model.r,
+												_List_fromArray(
+													[
+														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('POSTGRESQL'),
+																A2($author$project$HomePage$isEnabledButton, model.r, $author$project$HomePage$ConfigPostgresEnable)
+															]))
 													]),
-												_List_Nil)
-											]))
-									])) : A2($elm$html$Html$div, _List_Nil, _List_Nil)
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('packages'),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-md'),
+																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
+																		$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
+																		$elm$html$Html$Attributes$value(model.Y),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPostgresPackages)
+																	]),
+																_List_Nil)
+															])),
+														A5($author$project$HomePage$packagesHtmlList, model.ac, model.m, model.Y, model.k, $author$project$HomePage$ConfigPostgresAddPackage),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('text-secondary')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$author$project$HomePage$packagesCountText,
+																$elm$core$List$length(model.ac),
+																$elm$core$List$length(model.m)),
+																$author$project$HomePage$morePackagesButton(model.k)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('initdb arguments'),
+																A2(
+																$elm$html$Html$textarea,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.az.g),
+																		$elm$html$Html$Attributes$value(model.N),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitdbArgs)
+																	]),
+																_List_Nil)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('initial script'),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.ah.g),
+																A2(
+																$elm$html$Html$textarea,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ah.g),
+																		$elm$html$Html$Attributes$value(model.O),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitialScript)
+																	]),
+																_List_Nil)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('settings'),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.an.g),
+																A2(
+																$elm$html$Html$textarea,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.an.g),
+																		$elm$html$Html$Attributes$value(model.R),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresSettings)
+																	]),
+																_List_Nil)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('listen addresses'),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresListenAddresses, $author$project$NixModules$postgres.ai.g),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.ai.g),
+																		$elm$html$Html$Attributes$value(model.P),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenAddresses)
+																	]),
+																_List_Nil)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('port'),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aB.g),
+																		$elm$html$Html$Attributes$value(model.Q),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenPort)
+																	]),
+																_List_Nil)
+															]))
+													]))),
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('custom-process')
+												]),
+											A3(
+												$author$project$HomePage$optionalHtmlDivElements,
+												model.v,
+												_List_fromArray(
+													[
+														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('CUSTOM PROCESS'),
+																A2($author$project$HomePage$isEnabledButton, model.v, $author$project$HomePage$ConfigCustomProcessEnable)
+															]))
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('command'),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.ag.g),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.ag.g),
+																		$elm$html$Html$Attributes$value(model.M),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessExec)
+																	]),
+																_List_Nil)
+															])),
+														A2($elm$html$Html$br, _List_Nil, _List_Nil)
+													])))
+										]))),
+								A2(
+								$author$project$HomePage$optionalHtmlDiv,
+								model.y === 'other',
+								A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('shell-hook')
+										]),
+									_List_fromArray(
+										[
+											A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+											A2(
+											$elm$html$Html$p,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('fw-bold fs-3')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text('shell hook'),
+													A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfgiShellHookEnable, $author$project$NixModules$shellHook.af.g),
+													A2(
+													$elm$html$Html$textarea,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('form-control form-control-lg'),
+															$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.af.g),
+															$elm$html$Html$Attributes$value(model.G),
+															$elm$html$Html$Events$onInput($author$project$HomePage$ConfgiShellHookEnable)
+														]),
+													_List_Nil)
+												]))
+										])))
 							])),
 						A2(
 						$elm$html$Html$div,

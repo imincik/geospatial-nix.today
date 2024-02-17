@@ -184,8 +184,8 @@ view model =
                     (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
 
                 -- packages
-                , if model.uiActiveCategoryTab == "packages" then
-                    div [ class "packages" ]
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
+                    (div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                             [ text "packages"
@@ -197,13 +197,11 @@ view model =
                             , morePackagesButton model.uiFilterLimit
                             ]
                         ]
-
-                  else
-                    div [] []
+                    )
 
                 -- languages
-                , if model.uiActiveCategoryTab == "languages" then
-                    div [ class "languages" ]
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "languages")
+                    (div [ class "languages" ]
                         [ -- python
                           div [ class "python" ]
                             (optionalHtmlDivElements model.configPythonEnabled
@@ -229,13 +227,11 @@ view model =
                                 ]
                             )
                         ]
-
-                  else
-                    div [] []
+                    )
 
                 -- services
-                , if model.uiActiveCategoryTab == "services" then
-                    div [ class "services" ]
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "services")
+                    (div [ class "services" ]
                         [ -- postgres
                           div [ class "postgres" ]
                             (optionalHtmlDivElements model.configPostgresEnabled
@@ -298,13 +294,11 @@ view model =
                                 ]
                             )
                         ]
-
-                  else
-                    div [] []
+                    )
 
                 -- other
-                , if model.uiActiveCategoryTab == "other" then
-                    div [ class "shell-hook" ]
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "other")
+                    (div [ class "shell-hook" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3" ]
                             [ text "shell hook"
@@ -312,9 +306,7 @@ view model =
                             , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
                             ]
                         ]
-
-                  else
-                    div [] []
+                    )
                 ]
 
             -- configuration
@@ -407,6 +399,15 @@ mainCategoryHtmlTab buttons activeButton =
                     [ text item ]
     in
     List.map buttonItem buttons
+
+
+optionalHtmlDiv : Bool -> Html Msg -> Html Msg
+optionalHtmlDiv condition divElement =
+    if condition then
+        divElement
+
+    else
+        div [] []
 
 
 optionalHtmlDivElements : Bool -> List a -> List a -> List a
