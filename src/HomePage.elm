@@ -204,24 +204,30 @@ view model =
                 -- languages
                 , if model.uiActiveCategoryTab == "languages" then
                     div [ class "languages" ]
-                        [ hr [] []
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ text "PYTHON"
-                            , isEnabledButton model.configPythonEnabled ConfigPythonEnable
-                            ]
-                        , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
-                            [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput UiFilterPythonPackages ] []
-                            ]
-                        , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit ConfigPythonAddPackage
-                        , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
-                            , morePackagesButton model.uiFilterLimit
-                            ]
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ text "poetry"
-                            , isEnabledButton model.configPythonPoetryEnabled ConfigPythonPoetryEnable
-                            ]
+                        [ -- python
+                          div [ class "python" ]
+                            (optionalHtmlDivElements model.configPythonEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "PYTHON"
+                                    , isEnabledButton model.configPythonEnabled ConfigPythonEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "packages"
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput UiFilterPythonPackages ] []
+                                    ]
+                                , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit ConfigPythonAddPackage
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
+                                    , morePackagesButton model.uiFilterLimit
+                                    ]
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "poetry"
+                                    , isEnabledButton model.configPythonPoetryEnabled ConfigPythonPoetryEnable
+                                    ]
+                                ]
+                            )
                         ]
 
                   else
@@ -230,58 +236,67 @@ view model =
                 -- services
                 , if model.uiActiveCategoryTab == "services" then
                     div [ class "services" ]
-                        [ hr [] []
-
-                        -- postgres
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ text "POSTGRESQL"
-                            , isEnabledButton model.configPostgresEnabled ConfigPostgresEnable
-                            ]
-                        , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
-                            [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput UiFilterPostgresPackages ] []
-                            ]
-                        , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit ConfigPostgresAddPackage
-                        , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
-                            , morePackagesButton model.uiFilterLimit
-                            ]
-                        , p [ class "fw-bold fs-3" ]
-                            [ text "initdb arguments"
-                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initdbArgs.example, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
-                            ]
-                        , p [ class "fw-bold fs-3" ]
-                            [ text "initial script"
-                            , useExampleButton ConfigPostgresInitialScript NixModules.postgres.initialScript.example
-                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initialScript.example, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
-                            ]
-                        , p [ class "fw-bold fs-3" ]
-                            [ text "settings"
-                            , useExampleButton ConfigPostgresSettings NixModules.postgres.settings.example
-                            , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.settings.example, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
-                            ]
-                        , p [ class "fw-bold fs-3" ]
-                            [ text "listen addresses"
-                            , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
-                            , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
-                            ]
-                        , p [ class "fw-bold fs-3" ]
-                            [ text "port"
-                            , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
-                            ]
+                        [ -- postgres
+                          div [ class "postgres" ]
+                            (optionalHtmlDivElements model.configPostgresEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "POSTGRESQL"
+                                    , isEnabledButton model.configPostgresEnabled ConfigPostgresEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "packages"
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput UiFilterPostgresPackages ] []
+                                    ]
+                                , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit ConfigPostgresAddPackage
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
+                                    , morePackagesButton model.uiFilterLimit
+                                    ]
+                                , p [ class "fw-bold fs-3" ]
+                                    [ text "initdb arguments"
+                                    , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initdbArgs.example, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
+                                    ]
+                                , p [ class "fw-bold fs-3" ]
+                                    [ text "initial script"
+                                    , useExampleButton ConfigPostgresInitialScript NixModules.postgres.initialScript.example
+                                    , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initialScript.example, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
+                                    ]
+                                , p [ class "fw-bold fs-3" ]
+                                    [ text "settings"
+                                    , useExampleButton ConfigPostgresSettings NixModules.postgres.settings.example
+                                    , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.settings.example, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
+                                    ]
+                                , p [ class "fw-bold fs-3" ]
+                                    [ text "listen addresses"
+                                    , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
+                                    , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
+                                    ]
+                                , p [ class "fw-bold fs-3" ]
+                                    [ text "port"
+                                    , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
+                                    ]
+                                ]
+                            )
 
                         -- custom process
-                        , hr [] []
-                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ text "CUSTOM PROCESS"
-                            , isEnabledButton model.configCustomProcessEnabled ConfigCustomProcessEnable
-                            ]
-                        , p [ class "fw-bold fs-3" ]
-                            [ text "command"
-                            , useExampleButton ConfigCustomProcessExec NixModules.customProcess.exec.example
-                            , input [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
-                            ]
-                        , br [] []
+                        , div [ class "custom-process" ]
+                            (optionalHtmlDivElements model.configCustomProcessEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "CUSTOM PROCESS"
+                                    , isEnabledButton model.configCustomProcessEnabled ConfigCustomProcessEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-3" ]
+                                    [ text "command"
+                                    , useExampleButton ConfigCustomProcessExec NixModules.customProcess.exec.example
+                                    , input [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
+                                    ]
+                                , br [] []
+                                ]
+                            )
                         ]
 
                   else
@@ -392,6 +407,15 @@ mainCategoryHtmlTab buttons activeButton =
                     [ text item ]
     in
     List.map buttonItem buttons
+
+
+optionalHtmlDivElements : Bool -> List a -> List a -> List a
+optionalHtmlDivElements condition first second =
+    if condition then
+        first ++ second
+
+    else
+        first
 
 
 packagesHtmlList : List Package -> List Package -> String -> Int -> (Package -> Msg) -> Html Msg
