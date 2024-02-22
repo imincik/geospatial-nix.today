@@ -66297,8 +66297,9 @@ var $author$project$NixModules$customProcess = {
 	ag: {B: '', g: 'python -m http.server'}
 };
 var $author$project$NixModules$packages = {al: _List_Nil};
+var $elm$core$Basics$True = 0;
 var $author$project$NixModules$postgres = {
-	ae: false,
+	ae: true,
 	az: {B: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
 	ah: {B: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
 	ai: {B: '', g: '0.0.0.0'},
@@ -66306,7 +66307,7 @@ var $author$project$NixModules$postgres = {
 	al: _List_Nil,
 	an: {B: '', g: 'log_connections = true;\nlog_statement = "all";'}
 };
-var $author$project$NixModules$python = {ae: false, al: _List_Nil, a6: false};
+var $author$project$NixModules$python = {ae: true, al: _List_Nil, a6: false};
 var $author$project$NixModules$shellHook = {
 	af: {B: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
 };
@@ -66696,7 +66697,6 @@ var $elm$core$Array$initialize = F2(
 			return A5($elm$core$Array$initializeHelp, fn, initialFromIndex, len, _List_Nil, tail);
 		}
 	});
-var $elm$core$Basics$True = 0;
 var $elm$core$Result$isOk = function (result) {
 	if (!result.$) {
 		return true;
