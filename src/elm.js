@@ -67409,7 +67409,7 @@ var $author$project$HomePage$UiFilterPythonPackages = function (a) {
 	return {$: 18, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Texts$aboutText = '\nIn a world of horrendously complex software developed by myriads of authors,\nbe smart, use Nix and create isolated and reproducible geospatial environments,\nlovely built to work on any modern Linux machine.\n';
+var $author$project$Texts$aboutText = '\nChoose from 50k of general purpose packages, dozens of geospatial packages,\nPython modules or services for your new idea. Create isolated environment\nrunning on any Linux machine, build something great and deploy it in containers.\n';
 var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -67425,7 +67425,7 @@ var $author$project$Texts$configTemplateComment = '\nCopy and paste configuratio
 var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
 var $author$project$Texts$containerTemplateComment = '\nRun following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $author$project$Texts$futurePlansText = '\nWhat you see here, is only very early start of something great. Many more\nfeatures like configuration options for languages and services, geospatial\nspecific modules and user experience improvements are on the way.\n';
+var $author$project$Texts$futurePlansText = '\nThis is just very early start of a new tool which allows you to gain super\npowers of Nix in your software development process. Many more configuration\noptions, services, user experience improvements and MacOS support are on the\nway.\n';
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$hr = _VirtualDom_node('hr');

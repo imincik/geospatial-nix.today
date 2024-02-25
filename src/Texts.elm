@@ -23,17 +23,18 @@ import Html.Attributes exposing (href, target)
 
 aboutText =
     """
-In a world of horrendously complex software developed by myriads of authors,
-be smart, use Nix and create isolated and reproducible geospatial environments,
-lovely built to work on any modern Linux machine.
+Choose from 50k of general purpose packages, dozens of geospatial packages,
+Python modules or services for your new idea. Create isolated environment
+running on any Linux machine, build something great and deploy it in containers.
 """
 
 
 futurePlansText =
     """
-What you see here, is only very early start of something great. Many more
-features like configuration options for languages and services, geospatial
-specific modules and user experience improvements are on the way.
+This is just very early start of a new tool which allows you to gain super
+powers of Nix in your software development process. Many more configuration
+options, services, user experience improvements and MacOS support are on the
+way.
 """
 
 
