@@ -33,8 +33,8 @@ futurePlansText =
     """
 This is just very early start of a new tool which allows you to gain super
 powers of Nix in your software development process. Many more configuration
-options, services, user experience improvements and MacOS support are on the
-way.
+options, services, user experience improvements, MacOS and Kubernetes support
+are on the way.
 """
 
 
