@@ -13,7 +13,7 @@ packages =
     , ( "geopkgs.nixGL", "" )
     , ( "geopkgs.pdal", "2.6.3" )
     , ( "geopkgs.proj", "9.3.1" )
-    , ( "geopkgs.qgis", "3.34.3" )
+    , ( "geopkgs.qgis", "3.36.0" )
     , ( "geopkgs.qgis-ltr", "3.28.15" )
     , ( "geopkgs.tiledb", "2.18.2" )
     ]
