@@ -171,7 +171,7 @@ view model =
     div [ class "container" ]
         -- header
         [ div [ class "row" ]
-            [ div [ class "col-lg-12 border fw-bold fs-1 py-3 my-3" ]
+            [ div [ class "col-xl-12 border fw-bold fs-1 py-3 my-3" ]
                 [ p []
                     [ span [ style "margin-right" "10px" ] [ text "GEOSPATIAL NIX" ]
                     , span [ class "fs-2 text-secondary" ] [ text "create, use and deploy today ..." ]
@@ -181,7 +181,7 @@ view model =
 
         -- configuration options
         , div [ class "row" ]
-            [ div [ class "col-lg-6 border bg-light py-3 my-3" ]
+            [ div [ class "col-xl-6 border bg-light py-3 my-3" ]
                 [ div [ class "name d-flex justify-content-between align-items-center" ]
                     [ input [ class "form-control form-control-lg", style "margin" "10px", placeholder "Environment name ...", value model.configName, onInput ConfigName ] []
                     , button [ class "btn btn-primary btn-lg", onClick CreateEnvironment ] [ text "Create" ]
@@ -192,7 +192,7 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "DATABASES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
 
                 -- geospatial packages
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
@@ -257,9 +257,9 @@ view model =
                         ]
                     )
 
-                -- services
-                , optionalHtmlDiv (model.uiActiveCategoryTab == "services")
-                    (div [ class "services" ]
+                -- databases
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "databases")
+                    (div [ class "databases" ]
                         [ -- postgres
                           div [ class "postgres" ]
                             (optionalHtmlDivElements model.configPostgresEnabled
@@ -303,9 +303,14 @@ view model =
                                     ]
                                 ]
                             )
+                        ]
+                    )
 
-                        -- custom process
-                        , div [ class "custom-process" ]
+                -- services
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "services")
+                    (div [ class "services" ]
+                        [ -- custom process
+                          div [ class "custom-process" ]
                             (optionalHtmlDivElements model.configCustomProcessEnabled
                                 [ hr [] []
                                 , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -338,7 +343,7 @@ view model =
                 ]
 
             -- configuration
-            , div [ class "col-lg-6 bg-dark text-white py-3 my-3" ]
+            , div [ class "col-xl-6 bg-dark text-white py-3 my-3" ]
                 [ if not (String.isEmpty model.nixConfig) then
                     div [ class "configuration" ]
                         [ h2 [] [ text "INSTALL NIX" ]
