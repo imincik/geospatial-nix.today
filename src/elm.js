@@ -2719,7 +2719,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		w: func(record.w),
+		x: func(record.x),
 		aq: record.aq,
 		am: record.am
 	}
@@ -2989,7 +2989,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.w;
+		var message = !tag ? value : tag < 3 ? value.a : value.x;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aq;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -66335,7 +66335,7 @@ var $author$project$NixModules$python = {ae: true, al: _List_Nil, a6: false};
 var $author$project$NixModules$shellHook = {
 	af: {B: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
 };
-var $author$project$HomePage$initialModel = {v: $author$project$NixModules$customProcess.ae, M: $author$project$NixModules$customProcess.ag.B, G: $author$project$NixModules$shellHook.af.B, H: 'My geospatial environment', l: $author$project$NixModules$packages.al, r: $author$project$NixModules$postgres.ae, N: $author$project$NixModules$postgres.az.B, O: $author$project$NixModules$postgres.ah.B, P: $author$project$NixModules$postgres.ai.B, Q: $author$project$NixModules$postgres.aB.B, m: $author$project$NixModules$postgres.al, R: $author$project$NixModules$postgres.an.B, n: $author$project$NixModules$python.ae, o: $author$project$NixModules$python.al, A: $author$project$NixModules$python.a6, T: '', aa: '', ab: $author$project$HomePage$allPackages, ac: $author$project$HomePage$allPostgresPackages, ad: $author$project$HomePage$allPythonPackages, y: 'packages', k: 5, X: '', Y: '', Z: ''};
+var $author$project$HomePage$initialModel = {w: $author$project$NixModules$customProcess.ae, M: $author$project$NixModules$customProcess.ag.B, G: $author$project$NixModules$shellHook.af.B, H: 'My geospatial environment', l: $author$project$NixModules$packages.al, r: $author$project$NixModules$postgres.ae, N: $author$project$NixModules$postgres.az.B, O: $author$project$NixModules$postgres.ah.B, P: $author$project$NixModules$postgres.ai.B, Q: $author$project$NixModules$postgres.aB.B, m: $author$project$NixModules$postgres.al, R: $author$project$NixModules$postgres.an.B, n: $author$project$NixModules$python.ae, o: $author$project$NixModules$python.al, A: $author$project$NixModules$python.a6, T: '', aa: '', ab: $author$project$HomePage$allPackages, ac: $author$project$HomePage$allPostgresPackages, ad: $author$project$HomePage$allPythonPackages, t: 'packages', k: 5, X: '', Y: '', Z: ''};
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
 };
@@ -67105,7 +67105,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 				_Utils_ap(
 					A2($author$project$HomePage$optionalString, model.r, $author$project$NixConfig$configPostgresTemplate),
 					_Utils_ap(
-						A2($author$project$HomePage$optionalString, model.v, $author$project$NixConfig$configCustomProcessTemplate),
+						A2($author$project$HomePage$optionalString, model.w, $author$project$NixConfig$configCustomProcessTemplate),
 						A2($author$project$HomePage$optionalString, model.G !== '', $author$project$NixConfig$configEnterShellTemplate))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return A3(
@@ -67331,13 +67331,13 @@ var $author$project$HomePage$update = F2(
 				return _Utils_update(
 					model,
 					{
-						v: (!model.v) ? true : false
+						w: (!model.w) ? true : false
 					});
 			case 13:
 				var script = msg.a;
 				return _Utils_update(
 					model,
-					{v: true, M: script});
+					{w: true, M: script});
 			case 14:
 				var script = msg.a;
 				return _Utils_update(
@@ -67354,7 +67354,7 @@ var $author$project$HomePage$update = F2(
 				var tab = msg.a;
 				return _Utils_update(
 					model,
-					{y: tab});
+					{t: tab});
 			case 20:
 				return _Utils_update(
 					model,
@@ -67849,7 +67849,7 @@ var $author$project$HomePage$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-lg-12 border fw-bold fs-1 py-3 my-3')
+								$elm$html$Html$Attributes$class('col-xl-12 border fw-bold fs-1 py-3 my-3')
 							]),
 						_List_fromArray(
 							[
@@ -67893,7 +67893,7 @@ var $author$project$HomePage$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-lg-6 border bg-light py-3 my-3')
+								$elm$html$Html$Attributes$class('col-xl-6 border bg-light py-3 my-3')
 							]),
 						_List_fromArray(
 							[
@@ -67944,11 +67944,11 @@ var $author$project$HomePage$view = function (model) {
 								A2(
 									$author$project$HomePage$mainCategoryHtmlTab,
 									_List_fromArray(
-										['PACKAGES', 'LANGUAGES', 'SERVICES', 'OTHER']),
-									model.y)),
+										['PACKAGES', 'LANGUAGES', 'DATABASES', 'SERVICES', 'OTHER']),
+									model.t)),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.y === 'packages',
+								model.t === 'packages',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -67997,7 +67997,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.y === 'languages',
+								model.t === 'languages',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -68083,12 +68083,12 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.y === 'services',
+								model.t === 'databases',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('services')
+											$elm$html$Html$Attributes$class('databases')
 										]),
 									_List_fromArray(
 										[
@@ -68257,7 +68257,19 @@ var $author$project$HomePage$view = function (model) {
 																	]),
 																_List_Nil)
 															]))
-													]))),
+													])))
+										]))),
+								A2(
+								$author$project$HomePage$optionalHtmlDiv,
+								model.t === 'services',
+								A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('services')
+										]),
+									_List_fromArray(
+										[
 											A2(
 											$elm$html$Html$div,
 											_List_fromArray(
@@ -68266,7 +68278,7 @@ var $author$project$HomePage$view = function (model) {
 												]),
 											A3(
 												$author$project$HomePage$optionalHtmlDivElements,
-												model.v,
+												model.w,
 												_List_fromArray(
 													[
 														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
@@ -68279,7 +68291,7 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('CUSTOM PROCESS'),
-																A2($author$project$HomePage$isEnabledButton, model.v, $author$project$HomePage$ConfigCustomProcessEnable)
+																A2($author$project$HomePage$isEnabledButton, model.w, $author$project$HomePage$ConfigCustomProcessEnable)
 															]))
 													]),
 												_List_fromArray(
@@ -68310,7 +68322,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.y === 'other',
+								model.t === 'other',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -68347,7 +68359,7 @@ var $author$project$HomePage$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-lg-6 bg-dark text-white py-3 my-3')
+								$elm$html$Html$Attributes$class('col-xl-6 bg-dark text-white py-3 my-3')
 							]),
 						_List_fromArray(
 							[
