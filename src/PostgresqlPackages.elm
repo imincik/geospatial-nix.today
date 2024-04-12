@@ -34,7 +34,7 @@ packages =
     , ( "pkgs.postgresqlPackages.pgvector", "0.5.1" )
     , ( "pkgs.postgresqlPackages.plpgsql_check", "2.6.1" )
     , ( "pkgs.postgresqlPackages.plr", "8.4.6" )
-    , ( "pkgs.postgresqlPackages.plv8", "3.1.5" )
+    , ( "pkgs.postgresqlPackages.plv8", "3.1.10" )
     , ( "pkgs.postgresqlPackages.postgis", "3.4.0" )
     , ( "pkgs.postgresqlPackages.promscale_extension", "0.8.0" )
     , ( "pkgs.postgresqlPackages.repmgr", "5.4.1" )
