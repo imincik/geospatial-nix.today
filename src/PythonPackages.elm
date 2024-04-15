@@ -5164,7 +5164,6 @@ packages =
     , ( "pkgs.python3Packages.pyoverkiz", "1.13.2" )
     , ( "pkgs.python3Packages.pyowm", "3.3.0" )
     , ( "pkgs.python3Packages.pyownet", "0.10.0.post1" )
-    , ( "pkgs.python3Packages.pyp", "1.1.0" )
     , ( "pkgs.python3Packages.pypaBuildHook", "" )
     , ( "pkgs.python3Packages.pypaInstallHook", "" )
     , ( "pkgs.python3Packages.pypamtest", "1.1.3" )
