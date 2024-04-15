@@ -5,9 +5,7 @@ let
 
 in
 {
-  packages = [
-    geopkgs.geonixcli
-  ];
+  packages = [ ];
 
   scripts.make-packages-db.exec = ''
     nixpkgs_version=$(nix flake metadata --json github:imincik/geospatial-nix \
