@@ -357,9 +357,9 @@ view model =
                         , p []
                             [ a [ href "https://github.com/imincik/geospatial-nix", target "_blank" ] [ text "Geospatial NIX" ]
                             , text " , "
-                            , a [ href "https://nixos.org", target "_blank" ] [ text "Nix and Nixpkgs" ]
+                            , a [ href "https://github.com/imincik/geospatial-nix.env", target "_blank" ] [ text "Geospatial NIX.env" ]
                             , text " , "
-                            , a [ href "https://devenv.sh/", target "_blank" ] [ text "Devenv" ]
+                            , a [ href "https://nixos.org", target "_blank" ] [ text "Nix and Nixpkgs" ]
                             , text " ."
                             , text " Read more about Nix at "
                             , a [ href "https://nix.dev", target "_blank" ] [ text "nix.dev" ]
