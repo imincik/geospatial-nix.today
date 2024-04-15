@@ -66572,6 +66572,30 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $author$project$Texts$configTemplateComment = '\nCopy and paste configuration to geonix.nix file\n';
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
+var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Texts$configTemplateCommentDocs = _List_fromArray(
+	[
+		$elm$html$Html$text('For more configuration options '),
+		A2(
+		$elm$html$Html$a,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$href('https://imincik.github.io/geospatial-nix.env/configuration-options'),
+				$elm$html$Html$Attributes$target('_blank')
+			]),
+		_List_fromArray(
+			[
+				$elm$html$Html$text('check out documentation.')
+			]))
+	]);
 var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
 var $author$project$Texts$containerTemplateComment = '\nRun following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
@@ -66579,18 +66603,9 @@ var $author$project$Texts$futurePlansText = '\nThis is just very early start of 
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$hr = _VirtualDom_node('hr');
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
 var $author$project$Texts$initTemplateComment = '\nRun following commands to initalize a new project\n';
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $author$project$Texts$installNixTemplate = '\ncurl --proto \'=https\' --tlsv1.2 -sSf \\\n    -L https://install.determinate.systems/nix \\\n    | sh -s -- install\n';
-var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Texts$installNixTemplateComment = _List_fromArray(
 	[
 		$elm$html$Html$text('Install Nix '),
@@ -67572,6 +67587,13 @@ var $author$project$HomePage$view = function (model) {
 											[
 												$elm$html$Html$text(model.T)
 											])),
+										A2(
+										$elm$html$Html$p,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'margin-bottom', '0em')
+											]),
+										$author$project$Texts$configTemplateCommentDocs),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
 										$elm$html$Html$h2,
@@ -67747,50 +67769,26 @@ var $author$project$HomePage$view = function (model) {
 										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$text('USED TECHNOLOGIES')
+												$elm$html$Html$text('DOCUMENTATION')
 											])),
 										A2(
 										$elm$html$Html$p,
 										_List_Nil,
 										_List_fromArray(
 											[
+												$elm$html$Html$text('Check out our '),
 												A2(
 												$elm$html$Html$a,
 												_List_fromArray(
 													[
-														$elm$html$Html$Attributes$href('https://github.com/imincik/geospatial-nix'),
+														$elm$html$Html$Attributes$href('https://imincik.github.io/geospatial-nix.env'),
 														$elm$html$Html$Attributes$target('_blank')
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text('Geospatial NIX')
+														$elm$html$Html$text('documentation')
 													])),
-												$elm$html$Html$text(' , '),
-												A2(
-												$elm$html$Html$a,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$href('https://github.com/imincik/geospatial-nix.env'),
-														$elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text('Geospatial NIX.env')
-													])),
-												$elm$html$Html$text(' , '),
-												A2(
-												$elm$html$Html$a,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$href('https://nixos.org'),
-														$elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text('Nix and Nixpkgs')
-													])),
-												$elm$html$Html$text(' .'),
-												$elm$html$Html$text(' Read more about Nix at '),
+												$elm$html$Html$text(' and read more about Nix at '),
 												A2(
 												$elm$html$Html$a,
 												_List_fromArray(
@@ -67800,9 +67798,8 @@ var $author$project$HomePage$view = function (model) {
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text('nix.dev')
-													])),
-												$elm$html$Html$text(' .')
+														$elm$html$Html$text('nix.dev.')
+													]))
 											])),
 										A2(
 										$elm$html$Html$h3,
@@ -67825,6 +67822,71 @@ var $author$project$HomePage$view = function (model) {
 											])),
 										$elm$html$Html$text('.')
 									]))
+							]))
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('col-sm-12')
+					]),
+				_List_fromArray(
+					[
+						A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('text-center')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$span,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('text-secondary fs-6')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Powered by ')
+									])),
+								A2(
+								$elm$html$Html$a,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$href('https://github.com/imincik/geospatial-nix'),
+										$elm$html$Html$Attributes$target('_blank')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Geospatial NIX')
+									])),
+								$elm$html$Html$text(' , '),
+								A2(
+								$elm$html$Html$a,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$href('https://github.com/imincik/geospatial-nix.env'),
+										$elm$html$Html$Attributes$target('_blank')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Geospatial NIX.env')
+									])),
+								$elm$html$Html$text(' , '),
+								A2(
+								$elm$html$Html$a,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$href('https://nixos.org'),
+										$elm$html$Html$Attributes$target('_blank')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Nix and Nixpkgs')
+									])),
+								$elm$html$Html$text(' .')
 							]))
 					]))
 			]));

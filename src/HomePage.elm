@@ -16,6 +16,7 @@ import Texts
     exposing
         ( aboutText
         , configTemplateComment
+        , configTemplateCommentDocs
         , containerTemplate
         , containerTemplateComment
         , futurePlansText
@@ -159,6 +160,7 @@ initialModel =
 view : Model -> Html Msg
 view model =
     div [ class "container" ]
+        -- header
         [ div [ class "row" ]
             [ div [ class "col-lg-12 border fw-bold fs-1 py-3 my-3" ]
                 [ p []
@@ -324,6 +326,7 @@ view model =
                         , h2 [] [ text "CONFIGURATION" ]
                         , p [ style "margin-bottom" "0em" ] [ text configTemplateComment ]
                         , pre [ class "text-warning" ] [ text model.nixConfig ]
+                        , p [ style "margin-bottom" "0em" ] configTemplateCommentDocs
                         , hr [] []
                         , h2 [] [ text "ENTER ENVIRONMENT" ]
                         , p [ style "margin-bottom" "0em" ] [ text shellTemplateComment ]
@@ -353,23 +356,32 @@ view model =
                             [ text "If you have some ideas, please "
                             , a [ href "https://github.com/imincik/geospatial-nix.today/issues/new", target "_blank" ] [ text "share them with us." ]
                             ]
-                        , h3 [] [ text "USED TECHNOLOGIES" ]
+                        , h3 [] [ text "DOCUMENTATION" ]
                         , p []
-                            [ a [ href "https://github.com/imincik/geospatial-nix", target "_blank" ] [ text "Geospatial NIX" ]
-                            , text " , "
-                            , a [ href "https://github.com/imincik/geospatial-nix.env", target "_blank" ] [ text "Geospatial NIX.env" ]
-                            , text " , "
-                            , a [ href "https://nixos.org", target "_blank" ] [ text "Nix and Nixpkgs" ]
-                            , text " ."
-                            , text " Read more about Nix at "
-                            , a [ href "https://nix.dev", target "_blank" ] [ text "nix.dev" ]
-                            , text " ."
+                            [ text "Check out our "
+                            , a [ href "https://imincik.github.io/geospatial-nix.env", target "_blank" ] [ text "documentation" ]
+                            , text " and read more about Nix at "
+                            , a [ href "https://nix.dev", target "_blank" ] [ text "nix.dev." ]
                             ]
                         , h3 [] [ text "AUTHORS" ]
                         , text "Created by "
                         , a [ href "https://github.com/imincik", target "_blank" ] [ text "Ivan Mincik, @imincik" ]
                         , text "."
                         ]
+                ]
+            ]
+
+        -- footer
+        , div [ class "col-sm-12" ]
+            [ hr [] []
+            , p [ class "text-center" ]
+                [ span [ class "text-secondary fs-6" ] [ text "Powered by " ]
+                , a [ href "https://github.com/imincik/geospatial-nix", target "_blank" ] [ text "Geospatial NIX" ]
+                , text " , "
+                , a [ href "https://github.com/imincik/geospatial-nix.env", target "_blank" ] [ text "Geospatial NIX.env" ]
+                , text " , "
+                , a [ href "https://nixos.org", target "_blank" ] [ text "Nix and Nixpkgs" ]
+                , text " ."
                 ]
             ]
         ]

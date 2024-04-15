@@ -1,6 +1,7 @@
 module Texts exposing
     ( aboutText
     , configTemplateComment
+    , configTemplateCommentDocs
     , containerTemplate
     , containerTemplateComment
     , futurePlansText
@@ -73,6 +74,13 @@ configTemplateComment =
     """
 Copy and paste configuration to geonix.nix file
 """
+
+
+configTemplateCommentDocs =
+    [ text "For more configuration options "
+    , a [ href "https://imincik.github.io/geospatial-nix.env/configuration-options", target "_blank" ]
+        [ text "check out documentation." ]
+    ]
 
 
 shellTemplateComment =
