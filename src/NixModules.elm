@@ -9,14 +9,14 @@ packages =
 
 
 python =
-    { enabled = True
+    { enabled = False
     , packages = []
     , poetryEnabled = False
     }
 
 
 postgres =
-    { enabled = True
+    { enabled = False
     , packages = []
 
     -- configuration
