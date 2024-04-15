@@ -68809,24 +68809,24 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$a,
 												_List_fromArray(
 													[
-														$elm$html$Html$Attributes$href('https://nixos.org'),
+														$elm$html$Html$Attributes$href('https://github.com/imincik/geospatial-nix.env'),
 														$elm$html$Html$Attributes$target('_blank')
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text('Nix and Nixpkgs')
+														$elm$html$Html$text('Geospatial NIX.env')
 													])),
 												$elm$html$Html$text(' , '),
 												A2(
 												$elm$html$Html$a,
 												_List_fromArray(
 													[
-														$elm$html$Html$Attributes$href('https://devenv.sh/'),
+														$elm$html$Html$Attributes$href('https://nixos.org'),
 														$elm$html$Html$Attributes$target('_blank')
 													]),
 												_List_fromArray(
 													[
-														$elm$html$Html$text('Devenv')
+														$elm$html$Html$text('Nix and Nixpkgs')
 													])),
 												$elm$html$Html$text(' .'),
 												$elm$html$Html$text(' Read more about Nix at '),
