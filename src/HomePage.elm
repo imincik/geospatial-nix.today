@@ -92,6 +92,10 @@ type alias Model =
     , configPostgresListenPort : String
     , configPostgresSettings : String
 
+    -- pg_featureserv
+    , configPgFeatureservEnabled : Bool
+    , configPgFeatureservSettings : String
+
     -- custom process
     , configCustomProcessEnabled : Bool
     , configCustomProcessExec : String
@@ -139,6 +143,10 @@ initialModel =
     , configPostgresListenAddresses = NixModules.postgres.listenAddresses.default
     , configPostgresListenPort = NixModules.postgres.listenPort.default
     , configPostgresSettings = NixModules.postgres.settings.default
+
+    -- pg_featureserv
+    , configPgFeatureservEnabled = NixModules.pg_featureserv.enabled
+    , configPgFeatureservSettings = NixModules.pg_featureserv.settings.default
 
     -- custom process
     , configCustomProcessEnabled = NixModules.customProcess.enabled
@@ -309,8 +317,26 @@ view model =
                 -- services
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "services")
                     (div [ class "services" ]
-                        [ -- custom process
-                          div [ class "custom-process" ]
+                        [ -- pg-featureserv
+                          div [ class "pg-featureserv" ]
+                            (optionalHtmlDivElements model.configPgFeatureservEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "PG-FEATURESERVER"
+                                    , isEnabledButton model.configPgFeatureservEnabled ConfigPgFeatureservEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-3" ]
+                                    [ text "settings"
+                                    , useExampleButton ConfigPgFeatureservSettings NixModules.pg_featureserv.settings.example
+                                    , textarea [ class "form-control form-control-lg", placeholder NixModules.pg_featureserv.settings.example, value model.configPgFeatureservSettings, onInput ConfigPgFeatureservSettings ] []
+                                    ]
+                                , br [] []
+                                ]
+                            )
+
+                        -- custom-process
+                        , div [ class "custom-process" ]
                             (optionalHtmlDivElements model.configCustomProcessEnabled
                                 [ hr [] []
                                 , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -590,6 +616,8 @@ type Msg
     | ConfigPostgresListenAddresses String
     | ConfigPostgresListenPort String
     | ConfigPostgresSettings String
+    | ConfigPgFeatureservEnable
+    | ConfigPgFeatureservSettings String
     | ConfigCustomProcessEnable
     | ConfigCustomProcessExec String
     | ConfgiShellHookEnable String
@@ -629,6 +657,7 @@ buildNixConfig model =
                 ++ NixConfig.configPackagesTemplate
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
+                ++ optionalString model.configPgFeatureservEnabled NixConfig.configPgFeatureservTemplate
                 ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
@@ -647,6 +676,8 @@ buildNixConfig model =
         |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
         |> String.replace "<POSTGRES-LISTEN-PORT>" model.configPostgresListenPort
         |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
+        |> String.replace "<PG_FEATURESERV-ENABLED>" (boolToString model.configPgFeatureservEnabled)
+        |> String.replace "<PG_FEATURESERV-SETTINGS>" (String.replace "\n" " " model.configPgFeatureservSettings)
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
@@ -736,6 +767,27 @@ update msg model =
 
         ConfigPostgresSettings val ->
             { model | configPostgresSettings = val }
+
+        ConfigPgFeatureservEnable ->
+            { model
+                | configPgFeatureservEnabled =
+                    if not model.configPgFeatureservEnabled then
+                        True
+
+                    else
+                        False
+
+                -- TODO: enable postgres and postgis
+                -- , configPostgresEnabled =
+                --     if not model.configPgFeatureservEnabled then
+                --         True
+                --     else
+                --         -- not a typo, don't disable postgres when disabling pg_featureserv
+                --         True
+            }
+
+        ConfigPgFeatureservSettings val ->
+            { model | configPgFeatureservSettings = val }
 
         ConfigCustomProcessEnable ->
             { model

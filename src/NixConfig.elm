@@ -3,6 +3,7 @@ module NixConfig exposing
     , configEnterShellTemplate
     , configNameTemplate
     , configPackagesTemplate
+    , configPgFeatureservTemplate
     , configPostgresTemplate
     , configPythonTemplate
     , configTemplate
@@ -57,6 +58,16 @@ configPostgresTemplate =
     listen_addresses = "<POSTGRES-LISTEN-ADDRESSES>";
     port = <POSTGRES-LISTEN-PORT>;
     settings = { <POSTGRES-SETTINGS> };
+  };
+"""
+
+
+configPgFeatureservTemplate =
+    """
+  services.pg_featureserv = {
+    enable = <PG_FEATURESERV-ENABLED>;
+    package = geopkgs.pg_featureserv;
+    settings = { <PG_FEATURESERV-SETTINGS> };
   };
 """
 

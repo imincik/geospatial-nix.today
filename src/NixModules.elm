@@ -1,4 +1,4 @@
-module NixModules exposing (customProcess, packages, postgres, python, shellHook)
+module NixModules exposing (customProcess, packages, pg_featureserv, postgres, python, shellHook)
 
 -- default and example configuration values
 
@@ -42,6 +42,21 @@ SELECT PostGIS_Full_Version();"""
         { default = ""
         , example = """log_connections = true;
 log_statement = "all";"""
+        }
+    }
+
+
+pg_featureserv =
+    { enabled = False
+
+    -- configuration
+    , postgresDatabase =
+        { default = "postgres"
+        }
+    , settings =
+        { default = ""
+        , example = """Server.HttpPort = 9001;
+Paging.LimitMax = 1000;"""
         }
     }
 
