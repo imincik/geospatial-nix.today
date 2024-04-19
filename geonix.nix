@@ -8,21 +8,17 @@ in
   packages = [ ];
 
   scripts.make-packages-db.exec = ''
-    nixpkgs_version=$(nix flake metadata --json github:imincik/geospatial-nix \
-      | jq --raw-output '.locks.nodes.nixpkgs.locked.rev')
-
+    geonix_url="github:imincik/geospatial-nix/latest"
+    nixpkgs_version="${inputs.geonix.inputs.nixpkgs.rev}"
     python_version=$(echo ${pkgs.python3.pythonVersion} | sed 's|\.||')
-
     postgresql_version=$(echo ${pkgs.postgresql.version} | sed 's|\..*||')
 
 
     packages_file="src/GeoPackages.elm"
     echo "module GeoPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
-    nix search --json github:imincik/geospatial-nix  \
+    nix search --json $geonix_url  \
       --exclude "all-packages" \
-      --exclude "geonix-base-image" \
-      --exclude "geonixcli" \
       --exclude "unwrapped" \
       --exclude "postgresql." \
       --exclude "python.*" \
@@ -51,7 +47,7 @@ in
     packages_file="src/GeoPythonPackages.elm"
     echo "module GeoPythonPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
-    nix search --json github:imincik/geospatial-nix  \
+    nix search --json $geonix_url  \
       "python3-" \
       --exclude "all-packages" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
@@ -79,7 +75,7 @@ in
     packages_file="src/GeoPostgresqlPackages.elm"
     echo "module GeoPostgresqlPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
-    nix search --json github:imincik/geospatial-nix  \
+    nix search --json $geonix_url  \
       "postgresql_''${postgresql_version}" \
       --exclude "all-packages" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
