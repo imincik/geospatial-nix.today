@@ -4,6 +4,7 @@ module GeoPackages exposing (packages)
 packages =
     [ ( "geopkgs.gdal", "3.8.5" )
     , ( "geopkgs.gdal-minimal", "3.8.5" )
+    , ( "geopkgs.geonixcli", "0.1.0" )
     , ( "geopkgs.geos", "3.12.1" )
     , ( "geopkgs.grass", "8.3.2" )
     , ( "geopkgs.libgeotiff", "1.7.1" )
