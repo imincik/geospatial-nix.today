@@ -9,6 +9,6 @@ packages =
     , ( "geopkgs.python3-psycopg", "3.1.12" )
     , ( "geopkgs.python3-pyproj", "3.6.1" )
     , ( "geopkgs.python3-pyqt5", "5.15.9" )
-    , ( "geopkgs.python3-rasterio", "1.3.9" )
-    , ( "geopkgs.python3-shapely", "2.0.3" )
+    , ( "geopkgs.python3-rasterio", "1.3.10" )
+    , ( "geopkgs.python3-shapely", "2.0.4" )
     ]
