@@ -57531,8 +57531,8 @@ var $author$project$GeoPythonPackages$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.python3-psycopg', '3.1.12'),
 		_Utils_Tuple2('geopkgs.python3-pyproj', '3.6.1'),
 		_Utils_Tuple2('geopkgs.python3-pyqt5', '5.15.9'),
-		_Utils_Tuple2('geopkgs.python3-rasterio', '1.3.9'),
-		_Utils_Tuple2('geopkgs.python3-shapely', '2.0.3')
+		_Utils_Tuple2('geopkgs.python3-rasterio', '1.3.10'),
+		_Utils_Tuple2('geopkgs.python3-shapely', '2.0.4')
 	]);
 var $author$project$PythonPackages$packages = _List_fromArray(
 	[
