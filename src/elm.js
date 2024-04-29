@@ -4466,8 +4466,8 @@ var $author$project$GeoPackages$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.pg_featureserv', '1.3.1'),
 		_Utils_Tuple2('geopkgs.pg_tileserv', '1.0.11'),
 		_Utils_Tuple2('geopkgs.proj', '9.4.0'),
-		_Utils_Tuple2('geopkgs.qgis', '3.36.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr', '3.34.5'),
+		_Utils_Tuple2('geopkgs.qgis', '3.36.2'),
+		_Utils_Tuple2('geopkgs.qgis-ltr', '3.34.6'),
 		_Utils_Tuple2('geopkgs.tiledb', '2.18.2')
 	]);
 var $author$project$Packages$packages = _List_fromArray(
