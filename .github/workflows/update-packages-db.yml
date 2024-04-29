@@ -13,6 +13,13 @@ jobs:
   update-packages-db:
     runs-on: ubuntu-latest
 
+    # `Settings > Actions > General > Allow GH Actions to create and approve
+    # PRs` must be enabled.
+    permissions:
+      contents: write
+      pull-requests: write
+
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -26,6 +33,9 @@ jobs:
       - name: Build website
         run: nix develop --accept-flake-config --impure --command make-elm-site-prod
 
+      - name: DEBUG
+        run: echo "debug" > README.md
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
@@ -33,10 +43,7 @@ jobs:
           body: |
             Update packages database to the current version used by Geospatial NIX.
           branch: update-packages-db-pr
-          delete-branch: true
           commit-message: "pkgs: automatic update of packages database"
-          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           assignees: imincik
-          # reviewers: imincik
-          token: ${{ secrets.PACKAGES_AUTOUPDATE_TOKEN }}
+          reviewers: imincik
+          delete-branch: true
