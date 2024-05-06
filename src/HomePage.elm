@@ -49,7 +49,12 @@ type alias Packages =
 
 allPackages : Packages
 allPackages =
-    GeoPackages.packages ++ Packages.packages
+    Packages.packages
+
+
+allGeoPackages : Packages
+allGeoPackages =
+    GeoPackages.packages
 
 
 allPythonPackages : Packages
@@ -67,7 +72,9 @@ type alias Model =
 
     -- packages
     , packagesAvailable : List Package
+    , packagesGeoAvailable : List Package
     , configPackages : List Package
+    , configGeoPackages : List Package
 
     -- python
     , packagesPythonAvailable : List Package
@@ -113,7 +120,9 @@ initialModel =
 
     -- packages
     , packagesAvailable = allPackages
+    , packagesGeoAvailable = allGeoPackages
     , configPackages = NixModules.packages.packages
+    , configGeoPackages = NixModules.packages.packages
 
     -- python
     , packagesPythonAvailable = allPythonPackages
@@ -185,13 +194,30 @@ view model =
                 , div [ class "d-flex btn-group align-items-center" ]
                     (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
 
+                -- geospatial packages
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
+                    (div [ class "packages" ]
+                        [ hr [] []
+                        , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                            [ input [ class "form-control form-control-md", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
+                            ]
+                        , p [ class "fw-bold fs-4" ]
+                            [ text "geospatial packages"
+                            ]
+                        , packagesHtmlList model.packagesGeoAvailable model.configGeoPackages model.uiFilterPackages model.uiFilterLimit ConfigAddGeoPackage
+                        , p [ class "text-secondary" ]
+                            [ packagesCountText (List.length model.packagesGeoAvailable) (List.length model.configGeoPackages)
+                            , morePackagesButton model.uiFilterLimit
+                            ]
+                        ]
+                    )
+
                 -- packages
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
                     (div [ class "packages" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
-                            [ text "packages"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
+                        , p [ class "fw-bold fs-4" ]
+                            [ text "nixpkgs packages"
                             ]
                         , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
@@ -548,6 +574,7 @@ boolToEnabledString value =
 type Msg
     = ConfigName String
     | ConfigAddPackage Package
+    | ConfigAddGeoPackage Package
     | ConfigPythonEnable
     | ConfigPythonAddPackage Package
     | ConfigPythonPoetryEnable
@@ -584,7 +611,7 @@ buildNixConfig : Model -> String
 buildNixConfig model =
     let
         selectedPackages =
-            packagesListToNamesList model.configPackages
+            packagesListToNamesList model.configGeoPackages ++ packagesListToNamesList model.configPackages
 
         selectedPyPackages =
             packagesListToNamesList model.configPythonPackages
@@ -631,6 +658,13 @@ update msg model =
 
             else
                 { model | configPackages = List.filter (\x -> x /= pkg) model.configPackages }
+
+        ConfigAddGeoPackage pkg ->
+            if not (List.member pkg model.configGeoPackages) then
+                { model | configGeoPackages = model.configGeoPackages ++ [ pkg ] }
+
+            else
+                { model | configGeoPackages = List.filter (\x -> x /= pkg) model.configGeoPackages }
 
         ConfigPythonEnable ->
             { model
