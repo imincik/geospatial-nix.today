@@ -57526,7 +57526,7 @@ var $author$project$GeoPythonPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.python3-fiona', '1.9.6'),
 		_Utils_Tuple2('geopkgs.python3-gdal', '3.8.5'),
-		_Utils_Tuple2('geopkgs.python3-geopandas', '0.14.3'),
+		_Utils_Tuple2('geopkgs.python3-geopandas', '0.14.4'),
 		_Utils_Tuple2('geopkgs.python3-owslib', '0.30.0'),
 		_Utils_Tuple2('geopkgs.python3-psycopg', '3.1.12'),
 		_Utils_Tuple2('geopkgs.python3-pyproj', '3.6.1'),
