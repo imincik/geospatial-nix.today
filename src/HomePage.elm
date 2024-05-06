@@ -222,7 +222,7 @@ view model =
                                     [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
                                     , morePackagesButton model.uiFilterLimit
                                     ]
-                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "poetry"
                                     , isEnabledButton model.configPythonPoetryEnabled ConfigPythonPoetryEnable
                                     ]
@@ -252,26 +252,26 @@ view model =
                                     [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
                                     , morePackagesButton model.uiFilterLimit
                                     ]
-                                , p [ class "fw-bold fs-3" ]
+                                , p [ class "fw-bold fs-4" ]
                                     [ text "initdb arguments"
                                     , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initdbArgs.example, value model.configPostgresInitdbArgs, onInput ConfigPostgresInitdbArgs ] []
                                     ]
-                                , p [ class "fw-bold fs-3" ]
+                                , p [ class "fw-bold fs-4" ]
                                     [ text "initial script"
                                     , useExampleButton ConfigPostgresInitialScript NixModules.postgres.initialScript.example
                                     , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.initialScript.example, value model.configPostgresInitialScript, onInput ConfigPostgresInitialScript ] []
                                     ]
-                                , p [ class "fw-bold fs-3" ]
+                                , p [ class "fw-bold fs-4" ]
                                     [ text "settings"
                                     , useExampleButton ConfigPostgresSettings NixModules.postgres.settings.example
                                     , textarea [ class "form-control form-control-lg", placeholder NixModules.postgres.settings.example, value model.configPostgresSettings, onInput ConfigPostgresSettings ] []
                                     ]
-                                , p [ class "fw-bold fs-3" ]
+                                , p [ class "fw-bold fs-4" ]
                                     [ text "listen addresses"
                                     , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
                                     , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
                                     ]
-                                , p [ class "fw-bold fs-3" ]
+                                , p [ class "fw-bold fs-4" ]
                                     [ text "port"
                                     , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
                                     ]
@@ -287,7 +287,7 @@ view model =
                                     , isEnabledButton model.configCustomProcessEnabled ConfigCustomProcessEnable
                                     ]
                                 ]
-                                [ p [ class "fw-bold fs-3" ]
+                                [ p [ class "fw-bold fs-4" ]
                                     [ text "command"
                                     , useExampleButton ConfigCustomProcessExec NixModules.customProcess.exec.example
                                     , input [ class "form-control form-control-lg", placeholder NixModules.customProcess.exec.example, value model.configCustomProcessExec, onInput ConfigCustomProcessExec ] []
@@ -302,7 +302,7 @@ view model =
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "other")
                     (div [ class "shell-hook" ]
                         [ hr [] []
-                        , p [ class "fw-bold fs-3" ]
+                        , p [ class "fw-bold fs-4" ]
                             [ text "shell hook"
                             , useExampleButton ConfgiShellHookEnable NixModules.shellHook.enterShell.example
                             , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
