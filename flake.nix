@@ -4,11 +4,9 @@
   nixConfig = {
     extra-substituters = [
       "https://geonix.cachix.org"
-      "https://devenv.cachix.org"
     ];
     extra-trusted-public-keys = [
       "geonix.cachix.org-1:iyhIXkDLYLXbMhL3X3qOLBtRF8HEyAbhPXjjPeYsCl0="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
     ];
     bash-prompt = "\\[\\033[1m\\][geonix]\\[\\033\[m\\]\\040\\w >\\040";
   };
@@ -44,7 +42,7 @@
           ];
         };
 
-        packages.geonixcli = inputs.geonix.packages.${system}.geonixcli;
+        packages.geonixcli = inputs.geoenv.packages.${system}.geonixcli;
       };
 
       flake = {
