@@ -1,4 +1,4 @@
-module NixModules exposing (customProcess, packages, postgres, python, shellHook)
+module NixModules exposing (customProcess, openGL, packages, postgres, python, shellHook)
 
 -- default and example configuration values
 
@@ -55,6 +55,10 @@ customProcess =
         , example = "python -m http.server"
         }
     }
+
+
+openGL =
+    { enabled = False }
 
 
 shellHook =

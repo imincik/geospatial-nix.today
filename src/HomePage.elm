@@ -97,6 +97,7 @@ type alias Model =
     , configCustomProcessExec : String
 
     -- other
+    , configOpenGLEnabled : Bool
     , configEnterShell : String
 
     -- nix config
@@ -145,6 +146,7 @@ initialModel =
     , configCustomProcessExec = NixModules.customProcess.exec.default
 
     -- other
+    , configOpenGLEnabled = NixModules.openGL.enabled
     , configEnterShell = NixModules.shellHook.enterShell.default
 
     -- nix config
@@ -326,12 +328,24 @@ view model =
 
                 -- other
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "other")
-                    (div [ class "shell-hook" ]
-                        [ hr [] []
-                        , p [ class "fw-bold fs-4" ]
-                            [ text "shell hook"
-                            , useExampleButton ConfgiShellHookEnable NixModules.shellHook.enterShell.example
-                            , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                    (div [ class "other" ]
+                        [ -- openGL
+                          div [ class "opengl" ]
+                            [ hr [] []
+                            , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                [ text "openGL"
+                                , isEnabledButton model.configOpenGLEnabled ConfigOpenGLEnable
+                                ]
+                            ]
+
+                        -- shell hook
+                        , div [ class "shell-hook" ]
+                            [ hr [] []
+                            , p [ class "fw-bold fs-4" ]
+                                [ text "shell hook"
+                                , useExampleButton ConfgiShellHookEnable NixModules.shellHook.enterShell.example
+                                , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                                ]
                             ]
                         ]
                     )
@@ -587,6 +601,7 @@ type Msg
     | ConfigPostgresSettings String
     | ConfigCustomProcessEnable
     | ConfigCustomProcessExec String
+    | ConfigOpenGLEnable
     | ConfgiShellHookEnable String
       -- nix config
     | CreateEnvironment
@@ -625,6 +640,7 @@ buildNixConfig model =
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
+                ++ optionalString model.configOpenGLEnabled NixConfig.configOpenGLTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
         nixConfig =
@@ -744,6 +760,16 @@ update msg model =
 
         ConfigCustomProcessExec script ->
             { model | configCustomProcessExec = script, configCustomProcessEnabled = True }
+
+        ConfigOpenGLEnable ->
+            { model
+                | configOpenGLEnabled =
+                    if not model.configOpenGLEnabled then
+                        True
+
+                    else
+                        False
+            }
 
         ConfgiShellHookEnable script ->
             { model | configEnterShell = script }
