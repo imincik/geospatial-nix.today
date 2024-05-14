@@ -2,6 +2,7 @@ module NixConfig exposing
     ( configCustomProcessTemplate
     , configEnterShellTemplate
     , configNameTemplate
+    , configOpenGLTemplate
     , configPackagesTemplate
     , configPostgresTemplate
     , configPythonTemplate
@@ -66,6 +67,12 @@ configCustomProcessTemplate =
   processes.custom.exec = ''
     <CUSTOM-PROCESS>
   '';
+"""
+
+
+configOpenGLTemplate =
+    """
+  nixgl.enable = true;
 """
 
 
