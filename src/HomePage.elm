@@ -343,8 +343,8 @@ view model =
                             [ hr [] []
                             , p [ class "fw-bold fs-4" ]
                                 [ text "shell hook"
-                                , useExampleButton ConfgiShellHookEnable NixModules.shellHook.enterShell.example
-                                , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfgiShellHookEnable ] []
+                                , useExampleButton ConfigShellHookEnable NixModules.shellHook.enterShell.example
+                                , textarea [ class "form-control form-control-lg", placeholder NixModules.shellHook.enterShell.example, value model.configEnterShell, onInput ConfigShellHookEnable ] []
                                 ]
                             ]
                         ]
@@ -602,7 +602,7 @@ type Msg
     | ConfigCustomProcessEnable
     | ConfigCustomProcessExec String
     | ConfigOpenGLEnable
-    | ConfgiShellHookEnable String
+    | ConfigShellHookEnable String
       -- nix config
     | CreateEnvironment
       -- ui
@@ -771,7 +771,7 @@ update msg model =
                         False
             }
 
-        ConfgiShellHookEnable script ->
+        ConfigShellHookEnable script ->
             { model | configEnterShell = script }
 
         CreateEnvironment ->

@@ -66558,9 +66558,6 @@ var $author$project$HomePage$update = F2(
 					{_: pkg});
 		}
 	});
-var $author$project$HomePage$ConfgiShellHookEnable = function (a) {
-	return {$: 16, a: a};
-};
 var $author$project$HomePage$ConfigAddGeoPackage = function (a) {
 	return {$: 2, a: a};
 };
@@ -66599,6 +66596,9 @@ var $author$project$HomePage$ConfigPythonAddPackage = function (a) {
 };
 var $author$project$HomePage$ConfigPythonEnable = {$: 3};
 var $author$project$HomePage$ConfigPythonPoetryEnable = {$: 5};
+var $author$project$HomePage$ConfigShellHookEnable = function (a) {
+	return {$: 16, a: a};
+};
 var $author$project$HomePage$CreateEnvironment = {$: 17};
 var $author$project$HomePage$UiFilterPackages = function (a) {
 	return {$: 19, a: a};
@@ -67603,7 +67603,7 @@ var $author$project$HomePage$view = function (model) {
 													_List_fromArray(
 														[
 															$elm$html$Html$text('shell hook'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfgiShellHookEnable, $author$project$NixModules$shellHook.aj.h),
+															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigShellHookEnable, $author$project$NixModules$shellHook.aj.h),
 															A2(
 															$elm$html$Html$textarea,
 															_List_fromArray(
@@ -67611,7 +67611,7 @@ var $author$project$HomePage$view = function (model) {
 																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
 																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.aj.h),
 																	$elm$html$Html$Attributes$value(model.H),
-																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfgiShellHookEnable)
+																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigShellHookEnable)
 																]),
 															_List_Nil)
 														]))
