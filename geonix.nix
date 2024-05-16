@@ -22,6 +22,8 @@ in
       --exclude "unwrapped" \
       --exclude "postgresql." \
       --exclude "python.*" \
+      --exclude "qgis-plugin.*" \
+      --exclude "qgis-ltr-plugin.*" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
     >> $packages_file
