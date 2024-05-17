@@ -15,7 +15,5 @@ packages =
     , ( "geopkgs.pg_featureserv", "1.3.1" )
     , ( "geopkgs.pg_tileserv", "1.0.11" )
     , ( "geopkgs.proj", "9.4.0" )
-    , ( "geopkgs.qgis", "3.36.2" )
-    , ( "geopkgs.qgis-ltr", "3.34.6" )
     , ( "geopkgs.tiledb", "2.18.2" )
     ]

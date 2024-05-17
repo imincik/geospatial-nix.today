@@ -12,6 +12,8 @@ import NixModules
 import Packages
 import PostgresqlPackages
 import PythonPackages
+import QGISPackages
+import QGISPlugins
 import Texts
     exposing
         ( aboutText
@@ -57,6 +59,16 @@ allGeoPackages =
     GeoPackages.packages
 
 
+allQGISPackages : Packages
+allQGISPackages =
+    QGISPackages.packages
+
+
+allQGISPlugins : Packages
+allQGISPlugins =
+    QGISPlugins.packages
+
+
 allPythonPackages : Packages
 allPythonPackages =
     GeoPythonPackages.packages ++ PythonPackages.packages
@@ -75,6 +87,14 @@ type alias Model =
     , packagesGeoAvailable : List Package
     , configPackages : List Package
     , configGeoPackages : List Package
+
+    -- apps
+    , packagesQGISAvailable : List Package
+    , packagesQGISPluginsAvailable : List Package
+    , configQGISEnabled : Bool
+    , configQGISPackage : Package
+    , configQGISPythonPackages : List Package
+    , configQGISPlugins : List Package
 
     -- python
     , packagesPythonAvailable : List Package
@@ -110,6 +130,9 @@ type alias Model =
     -- filters
     , uiFilterLimit : Int
     , uiFilterPackages : String
+    , uiFilterQGISPackages : String
+    , uiFilterQGISPyPackages : String
+    , uiFilterQGISPlugins : String
     , uiFilterPyPackages : String
     , uiFilterPgPackages : String
     }
@@ -124,6 +147,14 @@ initialModel =
     , packagesGeoAvailable = allGeoPackages
     , configPackages = NixModules.packages.packages
     , configGeoPackages = NixModules.packages.packages
+
+    -- apps
+    , packagesQGISAvailable = allQGISPackages
+    , packagesQGISPluginsAvailable = allQGISPlugins
+    , configQGISEnabled = NixModules.qgis.enabled
+    , configQGISPackage = Maybe.withDefault ( "", "" ) (List.head allQGISPackages)
+    , configQGISPythonPackages = NixModules.qgis.pythonPackages
+    , configQGISPlugins = NixModules.qgis.plugins
 
     -- python
     , packagesPythonAvailable = allPythonPackages
@@ -159,6 +190,9 @@ initialModel =
     -- filters
     , uiFilterLimit = 5
     , uiFilterPackages = ""
+    , uiFilterQGISPackages = ""
+    , uiFilterQGISPyPackages = ""
+    , uiFilterQGISPlugins = ""
     , uiFilterPyPackages = ""
     , uiFilterPgPackages = ""
     }
@@ -196,15 +230,59 @@ view model =
                 , div [ class "d-flex btn-group align-items-center" ]
                     (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
 
+                -- qgis app
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
+                    (div [ class "apps" ]
+                        [ -- qgis
+                          div [ class "qgis" ]
+                            (optionalHtmlDivElements model.configQGISEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "QGIS"
+                                    , isEnabledButton model.configQGISEnabled ConfigQGISEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "package"
+                                    ]
+                                , packagesHtmlList model.packagesQGISAvailable [ model.configQGISPackage ] model.uiFilterQGISPackages model.uiFilterLimit ConfigQGISSetPackage
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesQGISAvailable) (List.length [ model.configQGISPackage ])
+                                    , morePackagesButton model.uiFilterLimit
+                                    ]
+                                , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "python"
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterQGISPyPackages, onInput UiFilterQGISPythonPackages ] []
+                                    ]
+                                , packagesHtmlList model.packagesPythonAvailable model.configQGISPythonPackages model.uiFilterQGISPyPackages model.uiFilterLimit ConfigQGISAddPythonPackage
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configQGISPythonPackages)
+                                    , morePackagesButton model.uiFilterLimit
+                                    ]
+                                , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "plugins"
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for plugins ...", value model.uiFilterQGISPlugins, onInput UiFilterQGISPlugins ] []
+                                    ]
+                                , packagesHtmlList model.packagesQGISPluginsAvailable model.configQGISPlugins model.uiFilterQGISPlugins model.uiFilterLimit ConfigQGISAddPlugin
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesQGISPluginsAvailable) (List.length model.configQGISPlugins)
+                                    , morePackagesButton model.uiFilterLimit
+                                    ]
+                                ]
+                            )
+                        ]
+                    )
+
                 -- geospatial packages
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
                     (div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
-                            [ input [ class "form-control form-control-md", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
+                            [ text "PACKAGES"
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
                             ]
                         , p [ class "fw-bold fs-4" ]
-                            [ text "geospatial packages"
+                            [ text "geospatial"
                             ]
                         , packagesHtmlList model.packagesGeoAvailable model.configGeoPackages model.uiFilterPackages model.uiFilterLimit ConfigAddGeoPackage
                         , p [ class "text-secondary" ]
@@ -217,9 +295,8 @@ view model =
                 -- packages
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
                     (div [ class "packages" ]
-                        [ hr [] []
-                        , p [ class "fw-bold fs-4" ]
-                            [ text "nixpkgs packages"
+                        [ p [ class "fw-bold fs-4" ]
+                            [ text "nixpkgs"
                             ]
                         , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
@@ -562,9 +639,14 @@ environmentName name =
     String.toLower (String.replace " " "-" name)
 
 
+packageToName : Package -> String
+packageToName package =
+    Tuple.first package
+
+
 packagesListToNamesList : List Package -> List String
 packagesListToNamesList packages =
-    List.map (\item -> Tuple.first item) packages
+    List.map (\item -> packageToName item) packages
 
 
 boolToString : Bool -> String
@@ -589,6 +671,10 @@ type Msg
     = ConfigName String
     | ConfigAddPackage Package
     | ConfigAddGeoPackage Package
+    | ConfigQGISEnable
+    | ConfigQGISSetPackage Package
+    | ConfigQGISAddPythonPackage Package
+    | ConfigQGISAddPlugin Package
     | ConfigPythonEnable
     | ConfigPythonAddPackage Package
     | ConfigPythonPoetryEnable
@@ -608,6 +694,8 @@ type Msg
       -- ui
     | UiSetActiveCategoryTab String
     | UiFilterPackages String
+    | UiFilterQGISPythonPackages String
+    | UiFilterQGISPlugins String
     | UiFilterPythonPackages String
     | UiFilterPostgresPackages String
     | UiUpdateFilterLimit
@@ -628,6 +716,15 @@ buildNixConfig model =
         selectedPackages =
             packagesListToNamesList model.configGeoPackages ++ packagesListToNamesList model.configPackages
 
+        selectedQGISPackage =
+            packageToName model.configQGISPackage
+
+        selectedQGISPythonPackages =
+            packagesListToNamesList model.configQGISPythonPackages
+
+        selectedQGISPlugins =
+            packagesListToNamesList model.configQGISPlugins
+
         selectedPyPackages =
             packagesListToNamesList model.configPythonPackages
 
@@ -637,6 +734,7 @@ buildNixConfig model =
         nixConfigBody =
             NixConfig.configNameTemplate
                 ++ NixConfig.configPackagesTemplate
+                ++ optionalString model.configQGISEnabled NixConfig.configQGISTemplate
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
@@ -647,10 +745,18 @@ buildNixConfig model =
             String.replace "<CONFIG-BODY>" nixConfigBody NixConfig.configTemplate
     in
     String.replace "<NAME>" (environmentName model.configName) nixConfig
+        -- packages
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
+        -- qgis
+        |> String.replace "<QGIS-ENABLED>" (boolToString model.configQGISEnabled)
+        |> String.replace "<QGIS-PACKAGE>" selectedQGISPackage
+        |> String.replace "<QGIS-PYTHON-PACKAGES>" (String.join " " selectedQGISPythonPackages)
+        |> String.replace "<QGIS-PLUGINS>" (String.join " " selectedQGISPlugins)
+        -- python
         |> String.replace "<PYTHON-ENABLED>" (boolToString model.configPythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
         |> String.replace "<PYTHON-POETRY-ENABLED>" (boolToString model.configPythonPoetryEnabled)
+        -- postgres
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
         |> String.replace "<POSTGRES-INITDB-ARGS>" (String.replace "\n" " " model.configPostgresInitdbArgs)
@@ -658,6 +764,7 @@ buildNixConfig model =
         |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
         |> String.replace "<POSTGRES-LISTEN-PORT>" model.configPostgresListenPort
         |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
+        -- other
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
 
@@ -681,6 +788,33 @@ update msg model =
 
             else
                 { model | configGeoPackages = List.filter (\x -> x /= pkg) model.configGeoPackages }
+
+        ConfigQGISEnable ->
+            { model
+                | configQGISEnabled =
+                    if not model.configQGISEnabled then
+                        True
+
+                    else
+                        False
+            }
+
+        ConfigQGISSetPackage pkg ->
+            { model | configQGISPackage = pkg }
+
+        ConfigQGISAddPythonPackage pkg ->
+            if not (List.member pkg model.configQGISPythonPackages) then
+                { model | configQGISPythonPackages = model.configQGISPythonPackages ++ [ pkg ] }
+
+            else
+                { model | configQGISPythonPackages = List.filter (\x -> x /= pkg) model.configQGISPythonPackages }
+
+        ConfigQGISAddPlugin pkg ->
+            if not (List.member pkg model.configQGISPlugins) then
+                { model | configQGISPlugins = model.configQGISPlugins ++ [ pkg ] }
+
+            else
+                { model | configQGISPlugins = List.filter (\x -> x /= pkg) model.configQGISPlugins }
 
         ConfigPythonEnable ->
             { model
@@ -800,6 +934,12 @@ update msg model =
 
         UiFilterPostgresPackages pkg ->
             { model | uiFilterPgPackages = pkg }
+
+        UiFilterQGISPythonPackages pkg ->
+            { model | uiFilterQGISPyPackages = pkg }
+
+        UiFilterQGISPlugins pkg ->
+            { model | uiFilterQGISPlugins = pkg }
 
 
 

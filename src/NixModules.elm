@@ -1,6 +1,13 @@
-module NixModules exposing (customProcess, openGL, packages, postgres, python, shellHook)
+module NixModules exposing (customProcess, openGL, packages, postgres, python, qgis, shellHook)
 
 -- default and example configuration values
+
+
+qgis =
+    { enabled = False
+    , pythonPackages = []
+    , plugins = []
+    }
 
 
 packages =

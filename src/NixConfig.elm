@@ -6,6 +6,7 @@ module NixConfig exposing
     , configPackagesTemplate
     , configPostgresTemplate
     , configPythonTemplate
+    , configQGISTemplate
     , configTemplate
     )
 
@@ -32,6 +33,17 @@ configNameTemplate =
 configPackagesTemplate =
     """
   packages = [ <PACKAGES> ];
+"""
+
+
+configQGISTemplate =
+    """
+  applications.qgis = {
+    enable = <QGIS-ENABLED>;
+    package = <QGIS-PACKAGE>;
+    pythonPackages = p: [ <QGIS-PYTHON-PACKAGES> ];
+    plugins = p: [ <QGIS-PLUGINS> ];
+  };
 """
 
 
