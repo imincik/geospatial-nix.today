@@ -129,6 +129,7 @@ type alias Model =
 
     -- filters
     , uiFilterLimit : Int
+    , uiFilterLimitDefault : Int
     , uiFilterPackages : String
     , uiFilterQGISPackages : String
     , uiFilterQGISPyPackages : String
@@ -188,7 +189,8 @@ initialModel =
     , uiActiveCategoryTab = "packages"
 
     -- filters
-    , uiFilterLimit = 5
+    , uiFilterLimit = 3
+    , uiFilterLimitDefault = 3
     , uiFilterPackages = ""
     , uiFilterQGISPackages = ""
     , uiFilterQGISPyPackages = ""
@@ -248,7 +250,7 @@ view model =
                                 , packagesHtmlList model.packagesQGISAvailable [ model.configQGISPackage ] model.uiFilterQGISPackages model.uiFilterLimit ConfigQGISSetPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesQGISAvailable) (List.length [ model.configQGISPackage ])
-                                    , morePackagesButton model.uiFilterLimit
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "python"
@@ -257,7 +259,7 @@ view model =
                                 , packagesHtmlList model.packagesPythonAvailable model.configQGISPythonPackages model.uiFilterQGISPyPackages model.uiFilterLimit ConfigQGISAddPythonPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configQGISPythonPackages)
-                                    , morePackagesButton model.uiFilterLimit
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "plugins"
@@ -266,7 +268,7 @@ view model =
                                 , packagesHtmlList model.packagesQGISPluginsAvailable model.configQGISPlugins model.uiFilterQGISPlugins model.uiFilterLimit ConfigQGISAddPlugin
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesQGISPluginsAvailable) (List.length model.configQGISPlugins)
-                                    , morePackagesButton model.uiFilterLimit
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 ]
                             )
@@ -287,7 +289,7 @@ view model =
                         , packagesHtmlList model.packagesGeoAvailable model.configGeoPackages model.uiFilterPackages model.uiFilterLimit ConfigAddGeoPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesGeoAvailable) (List.length model.configGeoPackages)
-                            , morePackagesButton model.uiFilterLimit
+                            , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                             ]
                         ]
                     )
@@ -301,7 +303,7 @@ view model =
                         , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesAvailable) (List.length model.configPackages)
-                            , morePackagesButton model.uiFilterLimit
+                            , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                             ]
                         ]
                     )
@@ -325,7 +327,7 @@ view model =
                                 , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit ConfigPythonAddPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
-                                    , morePackagesButton model.uiFilterLimit
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "poetry"
@@ -355,7 +357,7 @@ view model =
                                 , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit ConfigPostgresAddPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
-                                    , morePackagesButton model.uiFilterLimit
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 , p [ class "fw-bold fs-4" ]
                                     [ text "initdb arguments"
@@ -587,10 +589,10 @@ packagesCountText packagesCount selectedCount =
     text ("Available packages: " ++ String.fromInt packagesCount ++ " , selected: " ++ String.fromInt selectedCount)
 
 
-morePackagesButton : Int -> Html Msg
-morePackagesButton filterLimit =
+morePackagesButton : Int -> Int -> Html Msg
+morePackagesButton filterLimit filterLimitDefault =
     button [ class "btn btn-sm btn-link", onClick UiUpdateFilterLimit ]
-        [ if filterLimit < 15 then
+        [ if filterLimit < 4 * filterLimitDefault then
             text "show more"
 
           else
@@ -918,12 +920,12 @@ update msg model =
         UiUpdateFilterLimit ->
             { model
                 | uiFilterLimit =
-                    -- allow to increase limit up to 15 items
-                    if model.uiFilterLimit < 15 then
-                        model.uiFilterLimit + 5
+                    -- allow to increase limit up to 4 times default items
+                    if model.uiFilterLimit < 4 * model.uiFilterLimitDefault then
+                        2 * model.uiFilterLimit
 
                     else
-                        5
+                        model.uiFilterLimitDefault
             }
 
         UiFilterPackages pkg ->
