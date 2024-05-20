@@ -38059,8 +38059,6 @@ packages =
     , ( "pkgs.qemu_xen_4_15-light", "8.1.5" )
     , ( "pkgs.qes", "0.0.2" )
     , ( "pkgs.qflipper", "1.3.3" )
-    , ( "pkgs.qgis", "3.34.1" )
-    , ( "pkgs.qgis-ltr", "3.28.13" )
     , ( "pkgs.qgit", "2.10" )
     , ( "pkgs.qgnomeplatform", "0.8.4" )
     , ( "pkgs.qgnomeplatform-qt6", "0.8.4" )
