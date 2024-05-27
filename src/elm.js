@@ -65464,9 +65464,7 @@ var $author$project$HomePage$allPythonPackages = _Utils_ap($author$project$GeoPy
 var $author$project$QGISPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.qgis', '3.36.3'),
-		_Utils_Tuple2('geopkgs.qgis-ltr', '3.34.7'),
-		_Utils_Tuple2('pkgs.qgis', '3.34.1'),
-		_Utils_Tuple2('pkgs.qgis-ltr', '3.28.13')
+		_Utils_Tuple2('geopkgs.qgis-ltr', '3.34.7')
 	]);
 var $author$project$HomePage$allQGISPackages = $author$project$QGISPackages$packages;
 var $author$project$QGISPlugins$packages = _List_fromArray(
