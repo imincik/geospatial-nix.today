@@ -132,13 +132,19 @@ in
   '';
 
   scripts.make-elm-site-dev.exec = ''
-    ${pkgs.fswatch}/bin/fswatch -o src/*.elm | xargs -I{} ${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --output src/elm.js
+    find src/ -name "*.elm" \
+      | ${pkgs.entr}/bin/entr -rn ${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --output src/elm.js
   '';
 
   scripts.make-elm-site-prod.exec = ''
     ${lib.getExe pkgs.elmPackages.elm} make src/HomePage.elm --optimize --output src/elm.js
   '';
   
+  processes.make-elm-site-dev.exec = ''
+    echo -e "Open the app at $(pwd)/src/index.html .\n"
+    ${config.scripts.make-elm-site-dev.exec}
+  '';
+
   languages.elm.enable = true;
 
   pre-commit.hooks = {
