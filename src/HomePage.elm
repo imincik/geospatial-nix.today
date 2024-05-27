@@ -212,7 +212,7 @@ view model =
             [ div [ class "col-lg-12 border fw-bold fs-1 py-3 my-3" ]
                 [ p []
                     [ span [ style "margin-right" "10px" ] [ text "GEOSPATIAL NIX" ]
-                    , span [ class "fs-2 text-secondary" ] [ text "create, use and deploy today ..." ]
+                    , span [ class "fs-2 text-secondary" ] [ text "the reproducible geospatial environment" ]
                     ]
                 ]
             ]

@@ -24,9 +24,9 @@ import Html.Attributes exposing (href, target)
 
 aboutText =
     """
-Choose from 50k of general purpose packages, dozens of geospatial packages,
-Python modules or services for your new idea. Create isolated environment
-running on any Linux machine, build something great and deploy it in containers.
+Choose from a collection of 50k software packages and dozens of services for
+your new idea. Create isolated reproducible environment for any Linux machine,
+build something great and run it locally or in a container.
 """
 
 
