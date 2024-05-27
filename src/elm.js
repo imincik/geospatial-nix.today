@@ -66964,7 +66964,7 @@ var $author$project$HomePage$UiFilterQGISPythonPackages = function (a) {
 	return {$: 24, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Texts$aboutText = '\nChoose from 50k of general purpose packages, dozens of geospatial packages,\nPython modules or services for your new idea. Create isolated environment\nrunning on any Linux machine, build something great and deploy it in containers.\n';
+var $author$project$Texts$aboutText = '\nChoose from a collection of 50k software packages and dozens of services for\nyour new idea. Create isolated reproducible environment for any Linux machine,\nbuild something great and run it locally or in a container.\n';
 var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -67430,7 +67430,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text('create, use and deploy today ...')
+												$elm$html$Html$text('the reproducible geospatial environment')
 											]))
 									]))
 							]))
