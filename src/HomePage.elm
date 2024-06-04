@@ -123,6 +123,9 @@ type alias Model =
     , configCustomProcessEnabled : Bool
     , configCustomProcessExec : String
 
+    -- data
+    , configDataFromUrlDatasets : String
+
     -- other
     , configOpenGLEnabled : Bool
     , configEnterShell : String
@@ -192,6 +195,9 @@ initialModel =
     , configCustomProcessEnabled = NixModules.customProcess.enabled
     , configCustomProcessExec = NixModules.customProcess.exec.default
 
+    -- data
+    , configDataFromUrlDatasets = NixModules.dataFromUrl.datasets.default
+
     -- other
     , configOpenGLEnabled = NixModules.openGL.enabled
     , configEnterShell = NixModules.shellHook.enterShell.default
@@ -246,7 +252,7 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "DATA", "OTHER" ] model.uiActiveCategoryTab)
 
                 -- qgis app
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
@@ -452,6 +458,20 @@ view model =
                                 , br [] []
                                 ]
                             )
+                        ]
+                    )
+
+                -- data
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "data")
+                    (div [ class "data" ]
+                        [ div [ class "data-from-url" ]
+                            [ hr [] []
+                            , p [ class "fw-bold fs-4" ]
+                                [ text "from URL"
+                                , useExampleButton ConfigDataFromUrlEnable NixModules.dataFromUrl.datasets.example
+                                , textarea [ class "form-control form-control-lg", placeholder NixModules.dataFromUrl.datasets.example, value model.configDataFromUrlDatasets, onInput ConfigDataFromUrlEnable ] []
+                                ]
+                            ]
                         ]
                     )
 
@@ -744,6 +764,7 @@ type Msg
     | ConfigPostgresSettings String
     | ConfigCustomProcessEnable
     | ConfigCustomProcessExec String
+    | ConfigDataFromUrlEnable String
     | ConfigOpenGLEnable
     | ConfigShellHookEnable String
       -- nix config
@@ -800,6 +821,7 @@ buildNixConfig model =
                 ++ optionalString model.configJupyterEnabled NixConfig.configJupyterTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
+                ++ optionalString (model.configDataFromUrlDatasets /= "") NixConfig.configDataFromUrlTemplate
                 ++ optionalString model.configOpenGLEnabled NixConfig.configOpenGLTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
@@ -832,6 +854,8 @@ buildNixConfig model =
         |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
         |> String.replace "<POSTGRES-LISTEN-PORT>" model.configPostgresListenPort
         |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
+        -- data
+        |> String.replace "<DATA-FROM-URL-DATASETS>" (String.replace "\n" " " model.configDataFromUrlDatasets)
         -- other
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
@@ -988,6 +1012,9 @@ update msg model =
 
         ConfigCustomProcessExec script ->
             { model | configCustomProcessExec = script, configCustomProcessEnabled = True }
+
+        ConfigDataFromUrlEnable datasets ->
+            { model | configDataFromUrlDatasets = datasets }
 
         ConfigOpenGLEnable ->
             { model

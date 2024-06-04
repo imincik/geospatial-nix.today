@@ -1,4 +1,4 @@
-module NixModules exposing (customProcess, jupyter, openGL, packages, postgres, python, qgis, shellHook)
+module NixModules exposing (customProcess, dataFromUrl, jupyter, openGL, packages, postgres, python, qgis, shellHook)
 
 -- default and example configuration values
 
@@ -81,6 +81,18 @@ customProcess =
     , exec =
         { default = ""
         , example = "python -m http.server"
+        }
+    }
+
+
+dataFromUrl =
+    { enabled = False
+
+    -- configuration
+    , datasets =
+        { default = ""
+        , example = """{ url = "https://geospatial-nix.today/ex/data1.csv"; hash = ""; }
+{ url = "https://geospatial-nix.today/ex/data2.csv"; hash = ""; }"""
         }
     }
 

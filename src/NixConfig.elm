@@ -1,5 +1,6 @@
 module NixConfig exposing
     ( configCustomProcessTemplate
+    , configDataFromUrlTemplate
     , configEnterShellTemplate
     , configJupyterTemplate
     , configNameTemplate
@@ -116,6 +117,15 @@ configCustomProcessTemplate =
   processes.custom.exec = ''
     <CUSTOM-PROCESS>
   '';
+"""
+
+
+configDataFromUrlTemplate =
+    """
+  data.fromUrl = {
+    enable = true;
+    datasets = [ <DATA-FROM-URL-DATASETS> ];
+  };
 """
 
 
