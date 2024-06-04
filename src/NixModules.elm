@@ -1,4 +1,4 @@
-module NixModules exposing (customProcess, openGL, packages, postgres, python, qgis, shellHook)
+module NixModules exposing (customProcess, jupyter, openGL, packages, postgres, python, qgis, shellHook)
 
 -- default and example configuration values
 
@@ -19,6 +19,27 @@ python =
     { enabled = False
     , packages = []
     , poetryEnabled = False
+    }
+
+
+jupyter =
+    { enabled = False
+
+    -- configuration
+    , pythonPackages = []
+    , listenAddress =
+        { default = "localhost"
+        , example = ""
+        }
+    , listenPort =
+        { default = "8888"
+        , example = ""
+        }
+    , rawConfig =
+        { default = ""
+        , example = """c.ServerApp.answer_yes = False
+c.ServerApp.open_browser = False"""
+        }
     }
 
 

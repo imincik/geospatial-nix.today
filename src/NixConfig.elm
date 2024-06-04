@@ -1,6 +1,7 @@
 module NixConfig exposing
     ( configCustomProcessTemplate
     , configEnterShellTemplate
+    , configJupyterTemplate
     , configNameTemplate
     , configOpenGLTemplate
     , configPackagesTemplate
@@ -56,6 +57,42 @@ configPythonTemplate =
       enable = <PYTHON-POETRY-ENABLED>;
       activate.enable = <PYTHON-POETRY-ENABLED>;
     };
+  };
+"""
+
+
+configJupyterTemplate =
+    """
+  services.jupyter = {
+    enable = <JUPYTER-ENABLED>;
+    kernels = {
+      geospatial =
+        let
+          env = (pkgs.python3.withPackages (p: [
+            pkgs.python3Packages.ipykernel
+            <JUPYTER-PYTHON-PACKAGES>
+          ]));
+          logoPath = "${env}/${env.sitePackages}/ipykernel/resources";
+        in
+        {
+          displayName = "Geospatial Python kernel";
+          language = "python";
+          argv = [
+            "${env.interpreter}"
+            "-m"
+            "ipykernel_launcher"
+            "-f"
+            "{connection_file}"
+          ];
+          logo32 = "${logoPath}/logo-32x32.png";
+          logo64 = "${logoPath}/logo-64x64.png";
+        };
+    };
+    ip = "<JUPYTER-LISTEN-ADDRESS>";
+    port = <JUPYTER-LISTEN-PORT>;
+    rawConfig = ''
+      <JUPYTER-RAW-CONFIG>
+    '';
   };
 """
 
