@@ -59,8 +59,8 @@ postgres =
 SELECT PostGIS_Full_Version();"""
         }
     , listenAddresses =
-        { default = ""
-        , example = "0.0.0.0"
+        { default = "localhost"
+        , example = ""
         }
     , listenPort =
         { default = "5432"

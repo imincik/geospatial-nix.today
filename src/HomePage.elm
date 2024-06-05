@@ -431,12 +431,11 @@ view model =
                                     ]
                                 , p [ class "fw-bold fs-4" ]
                                     [ text "listen addresses"
-                                    , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
-                                    , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
+                                    , input [ class "form-control form-control-lg", value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
                                     ]
                                 , p [ class "fw-bold fs-4" ]
                                     [ text "port"
-                                    , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
+                                    , input [ class "form-control form-control-lg", value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
                                     ]
                                 ]
                             )
