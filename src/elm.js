@@ -65661,10 +65661,10 @@ var $author$project$HomePage$allQGISPlugins = $author$project$QGISPlugins$packag
 var $elm$core$Basics$False = 1;
 var $author$project$NixModules$customProcess = {
 	U: false,
-	aB: {l: '', g: 'python -m http.server'}
+	aB: {m: '', g: 'python -m http.server'}
 };
 var $author$project$NixModules$dataFromUrl = {
-	az: {l: '', g: '{ url = "https://geospatial-nix.today/ex/data1.csv"; hash = ""; }\n{ url = "https://geospatial-nix.today/ex/data2.csv"; hash = ""; }'},
+	az: {m: '', g: '{ url = "https://geospatial-nix.today/ex/data1.csv"; hash = ""; }\n{ url = "https://geospatial-nix.today/ex/data2.csv"; hash = ""; }'},
 	U: false
 };
 var $elm$core$Maybe$Just = function (a) {
@@ -65682,26 +65682,26 @@ var $elm$core$List$head = function (list) {
 };
 var $author$project$NixModules$jupyter = {
 	U: false,
-	bo: {l: 'localhost', g: ''},
-	aW: {l: '8888', g: ''},
+	bo: {m: 'localhost', g: ''},
+	aW: {m: '8888', g: ''},
 	a3: _List_Nil,
-	aG: {l: '', g: 'c.ServerApp.answer_yes = False\nc.ServerApp.open_browser = False'}
+	aG: {m: '', g: 'c.ServerApp.answer_yes = False\nc.ServerApp.open_browser = False'}
 };
 var $author$project$NixModules$openGL = {U: false};
 var $author$project$NixModules$packages = {at: _List_Nil};
 var $author$project$NixModules$postgres = {
 	U: false,
-	aU: {l: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
-	aC: {l: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
-	bp: {l: 'localhost', g: ''},
-	aW: {l: '5432', g: ''},
+	aU: {m: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
+	aC: {m: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
+	bp: {m: 'localhost', g: ''},
+	aW: {m: '5432', g: ''},
 	at: _List_Nil,
-	aH: {l: '', g: 'log_connections = true;\nlog_statement = "all";'}
+	aH: {m: '', g: 'log_connections = true;\nlog_statement = "all";'}
 };
 var $author$project$NixModules$python = {U: false, at: _List_Nil, bv: false};
 var $author$project$NixModules$qgis = {U: false, bu: _List_Nil, a3: _List_Nil};
 var $author$project$NixModules$shellHook = {
-	aA: {l: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
+	aA: {m: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
 };
 var $elm$core$Maybe$withDefault = F2(
 	function (_default, maybe) {
@@ -65714,25 +65714,25 @@ var $elm$core$Maybe$withDefault = F2(
 	});
 var $author$project$HomePage$initialModel = {
 	D: $author$project$NixModules$customProcess.U,
-	Z: $author$project$NixModules$customProcess.aB.l,
-	O: $author$project$NixModules$dataFromUrl.az.l,
-	P: $author$project$NixModules$shellHook.aA.l,
-	o: $author$project$NixModules$packages.at,
+	Z: $author$project$NixModules$customProcess.aB.m,
+	O: $author$project$NixModules$dataFromUrl.az.m,
+	P: $author$project$NixModules$shellHook.aA.m,
+	p: $author$project$NixModules$packages.at,
 	y: $author$project$NixModules$jupyter.U,
-	_: $author$project$NixModules$jupyter.bo.l,
-	aa: $author$project$NixModules$jupyter.aW.l,
-	p: $author$project$NixModules$jupyter.a3,
-	ab: $author$project$NixModules$jupyter.aG.l,
+	_: $author$project$NixModules$jupyter.bo.m,
+	aa: $author$project$NixModules$jupyter.aW.m,
+	l: $author$project$NixModules$jupyter.a3,
+	ab: $author$project$NixModules$jupyter.aG.m,
 	Q: 'My geospatial environment',
 	R: $author$project$NixModules$openGL.U,
 	q: $author$project$NixModules$packages.at,
 	z: $author$project$NixModules$postgres.U,
-	ac: $author$project$NixModules$postgres.aU.l,
-	ad: $author$project$NixModules$postgres.aC.l,
-	ae: $author$project$NixModules$postgres.bp.l,
-	af: $author$project$NixModules$postgres.aW.l,
+	ac: $author$project$NixModules$postgres.aU.m,
+	ad: $author$project$NixModules$postgres.aC.m,
+	ae: $author$project$NixModules$postgres.bp.m,
+	af: $author$project$NixModules$postgres.aW.m,
 	r: $author$project$NixModules$postgres.at,
-	ag: $author$project$NixModules$postgres.aH.l,
+	ag: $author$project$NixModules$postgres.aH.m,
 	s: $author$project$NixModules$python.U,
 	t: $author$project$NixModules$python.at,
 	J: $author$project$NixModules$python.bv,
@@ -65751,7 +65751,7 @@ var $author$project$HomePage$initialModel = {
 	G: $author$project$HomePage$allPythonPackages,
 	ax: $author$project$HomePage$allQGISPackages,
 	ay: $author$project$HomePage$allQGISPlugins,
-	n: 'packages',
+	o: 'packages',
 	am: '',
 	a: 3,
 	k: 3,
@@ -66486,7 +66486,8 @@ var $author$project$HomePage$boolToString = function (value) {
 var $author$project$NixConfig$configCustomProcessTemplate = '\n  processes.custom.exec = \'\'\n    <CUSTOM-PROCESS>\n  \'\';\n';
 var $author$project$NixConfig$configDataFromUrlTemplate = '\n  data.fromUrl = {\n    enable = true;\n    datasets = [ <DATA-FROM-URL-DATASETS> ];\n  };\n';
 var $author$project$NixConfig$configEnterShellTemplate = '\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n';
-var $author$project$NixConfig$configJupyterTemplate = '\n  services.jupyter = {\n    enable = <JUPYTER-ENABLED>;\n    kernels = {\n      geospatial =\n        let\n          env = (pkgs.python3.withPackages (p: [\n            pkgs.python3Packages.ipykernel\n            <JUPYTER-PYTHON-PACKAGES>\n          ]));\n          logoPath = "${env}/${env.sitePackages}/ipykernel/resources";\n        in\n        {\n          displayName = "Geospatial Python kernel";\n          language = "python";\n          argv = [\n            "${env.interpreter}"\n            "-m"\n            "ipykernel_launcher"\n            "-f"\n            "{connection_file}"\n          ];\n          logo32 = "${logoPath}/logo-32x32.png";\n          logo64 = "${logoPath}/logo-64x64.png";\n        };\n    };\n    ip = "<JUPYTER-LISTEN-ADDRESS>";\n    port = <JUPYTER-LISTEN-PORT>;\n    rawConfig = \'\'\n      <JUPYTER-RAW-CONFIG>\n    \'\';\n  };\n';
+var $author$project$NixConfig$configJupyterKernelsTemplate = '\n    kernels = {\n      geospatial =\n        let\n          env = (pkgs.python3.withPackages (p: [\n            pkgs.python3Packages.ipykernel\n            <JUPYTER-PYTHON-PACKAGES>\n          ]));\n          logoPath = "${env}/${env.sitePackages}/ipykernel/resources";\n        in\n        {\n          displayName = "Geospatial Python kernel";\n          language = "python";\n          argv = [\n            "${env.interpreter}"\n            "-m"\n            "ipykernel_launcher"\n            "-f"\n            "{connection_file}"\n          ];\n          logo32 = "${logoPath}/logo-32x32.png";\n          logo64 = "${logoPath}/logo-64x64.png";\n        };\n    };\n';
+var $author$project$NixConfig$configJupyterTemplate = '\n  services.jupyter = {\n    enable = <JUPYTER-ENABLED>;\n    <JUPYTER-KERNELS>\n    ip = "<JUPYTER-LISTEN-ADDRESS>";\n    port = <JUPYTER-LISTEN-PORT>;\n    rawConfig = \'\'\n      <JUPYTER-RAW-CONFIG>\n    \'\';\n  };\n';
 var $author$project$NixConfig$configNameTemplate = '\n  name = "<NAME>";\n';
 var $author$project$NixConfig$configOpenGLTemplate = '\n  nixgl.enable = true;\n';
 var $author$project$NixConfig$configPackagesTemplate = '\n  packages = [ <PACKAGES> ];\n';
@@ -66529,9 +66530,10 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.t);
 	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.r);
 	var selectedPackages = _Utils_ap(
-		$author$project$HomePage$packagesListToNamesList(model.o),
+		$author$project$HomePage$packagesListToNamesList(model.p),
 		$author$project$HomePage$packagesListToNamesList(model.q));
-	var selectedJupyterPythonPackages = $author$project$HomePage$packagesListToNamesList(model.p);
+	var selectedJupyterPythonPackages = $author$project$HomePage$packagesListToNamesList(model.l);
+	var selectedJupyterPythonKernels = ($elm$core$List$length(model.l) > 0) ? $author$project$NixConfig$configJupyterKernelsTemplate : '';
 	var nixConfigBody = _Utils_ap(
 		$author$project$NixConfig$configNameTemplate,
 		_Utils_ap(
@@ -66610,45 +66612,49 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 															A2($elm$core$String$join, ' ', selectedJupyterPythonPackages),
 															A3(
 																$elm$core$String$replace,
-																'<JUPYTER-ENABLED>',
-																$author$project$HomePage$boolToString(model.y),
+																'<JUPYTER-KERNELS>',
+																selectedJupyterPythonKernels,
 																A3(
 																	$elm$core$String$replace,
-																	'<PYTHON-POETRY-ENABLED>',
-																	$author$project$HomePage$boolToString(model.J),
+																	'<JUPYTER-ENABLED>',
+																	$author$project$HomePage$boolToString(model.y),
 																	A3(
 																		$elm$core$String$replace,
-																		'<PYTHON-PACKAGES>',
-																		A2($elm$core$String$join, ' ', selectedPyPackages),
+																		'<PYTHON-POETRY-ENABLED>',
+																		$author$project$HomePage$boolToString(model.J),
 																		A3(
 																			$elm$core$String$replace,
-																			'<PYTHON-ENABLED>',
-																			$author$project$HomePage$boolToString(model.s),
+																			'<PYTHON-PACKAGES>',
+																			A2($elm$core$String$join, ' ', selectedPyPackages),
 																			A3(
 																				$elm$core$String$replace,
-																				'<QGIS-PLUGINS>',
-																				A2($elm$core$String$join, ' ', selectedQGISPlugins),
+																				'<PYTHON-ENABLED>',
+																				$author$project$HomePage$boolToString(model.s),
 																				A3(
 																					$elm$core$String$replace,
-																					'<QGIS-PYTHON-PACKAGES>',
-																					A2($elm$core$String$join, ' ', selectedQGISPythonPackages),
+																					'<QGIS-PLUGINS>',
+																					A2($elm$core$String$join, ' ', selectedQGISPlugins),
 																					A3(
 																						$elm$core$String$replace,
-																						'<QGIS-PACKAGE>',
-																						selectedQGISPackage,
+																						'<QGIS-PYTHON-PACKAGES>',
+																						A2($elm$core$String$join, ' ', selectedQGISPythonPackages),
 																						A3(
 																							$elm$core$String$replace,
-																							'<QGIS-ENABLED>',
-																							$author$project$HomePage$boolToString(model.E),
+																							'<QGIS-PACKAGE>',
+																							selectedQGISPackage,
 																							A3(
 																								$elm$core$String$replace,
-																								'<PACKAGES>',
-																								A2($elm$core$String$join, ' ', selectedPackages),
+																								'<QGIS-ENABLED>',
+																								$author$project$HomePage$boolToString(model.E),
 																								A3(
 																									$elm$core$String$replace,
-																									'<NAME>',
-																									$author$project$HomePage$environmentName(model.Q),
-																									nixConfig))))))))))))))))))))))));
+																									'<PACKAGES>',
+																									A2($elm$core$String$join, ' ', selectedPackages),
+																									A3(
+																										$elm$core$String$replace,
+																										'<NAME>',
+																										$author$project$HomePage$environmentName(model.Q),
+																										nixConfig)))))))))))))))))))))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix.env/latest#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$HomePage$buildNixInit = function (model) {
@@ -66729,22 +66735,22 @@ var $author$project$HomePage$update = F2(
 					});
 			case 2:
 				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.o)) ? _Utils_update(
+				return (!A2($elm$core$List$member, pkg, model.p)) ? _Utils_update(
 					model,
 					{
-						o: _Utils_ap(
-							model.o,
+						p: _Utils_ap(
+							model.p,
 							_List_fromArray(
 								[pkg]))
 					}) : _Utils_update(
 					model,
 					{
-						o: A2(
+						p: A2(
 							$elm$core$List$filter,
 							function (x) {
 								return !_Utils_eq(x, pkg);
 							},
-							model.o)
+							model.p)
 					});
 			case 3:
 				return _Utils_update(
@@ -66836,23 +66842,23 @@ var $author$project$HomePage$update = F2(
 					});
 			case 11:
 				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.p)) ? _Utils_update(
+				return (!A2($elm$core$List$member, pkg, model.l)) ? _Utils_update(
 					model,
 					{
 						y: true,
-						p: _Utils_ap(
-							model.p,
+						l: _Utils_ap(
+							model.l,
 							_List_fromArray(
 								[pkg]))
 					}) : _Utils_update(
 					model,
 					{
-						p: A2(
+						l: A2(
 							$elm$core$List$filter,
 							function (x) {
 								return !_Utils_eq(x, pkg);
 							},
-							model.p)
+							model.l)
 					});
 			case 12:
 				var val = msg.a;
@@ -66958,7 +66964,7 @@ var $author$project$HomePage$update = F2(
 				var tab = msg.a;
 				return _Utils_update(
 					model,
-					{n: tab});
+					{o: tab});
 			case 35:
 				return _Utils_update(
 					model,
@@ -67619,10 +67625,10 @@ var $author$project$HomePage$view = function (model) {
 									$author$project$HomePage$mainCategoryHtmlTab,
 									_List_fromArray(
 										['PACKAGES', 'LANGUAGES', 'SERVICES', 'DATA', 'OTHER']),
-									model.n)),
+									model.o)),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'packages',
+								model.o === 'packages',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -67767,7 +67773,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'packages',
+								model.o === 'packages',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -67808,7 +67814,7 @@ var $author$project$HomePage$view = function (model) {
 												[
 													$elm$html$Html$text('geospatial')
 												])),
-											A5($author$project$HomePage$packagesHtmlList, model.av, model.o, model.W, model.a, $author$project$HomePage$ConfigAddGeoPackage),
+											A5($author$project$HomePage$packagesHtmlList, model.av, model.p, model.W, model.a, $author$project$HomePage$ConfigAddGeoPackage),
 											A2(
 											$elm$html$Html$p,
 											_List_fromArray(
@@ -67820,13 +67826,13 @@ var $author$project$HomePage$view = function (model) {
 													A2(
 													$author$project$HomePage$packagesCountText,
 													$elm$core$List$length(model.av),
-													$elm$core$List$length(model.o)),
+													$elm$core$List$length(model.p)),
 													A2($author$project$HomePage$morePackagesButton, model.a, model.k)
 												]))
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'packages',
+								model.o === 'packages',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -67863,7 +67869,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'languages',
+								model.o === 'languages',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -67949,7 +67955,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'services',
+								model.o === 'services',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -68005,7 +68011,7 @@ var $author$project$HomePage$view = function (model) {
 																	]),
 																_List_Nil)
 															])),
-														A5($author$project$HomePage$packagesHtmlList, model.G, model.p, model.am, model.a, $author$project$HomePage$ConfigJupyterAddPythonPackage),
+														A5($author$project$HomePage$packagesHtmlList, model.G, model.l, model.am, model.a, $author$project$HomePage$ConfigJupyterAddPythonPackage),
 														A2(
 														$elm$html$Html$p,
 														_List_fromArray(
@@ -68017,7 +68023,7 @@ var $author$project$HomePage$view = function (model) {
 																A2(
 																$author$project$HomePage$packagesCountText,
 																$elm$core$List$length(model.G),
-																$elm$core$List$length(model.p)),
+																$elm$core$List$length(model.l)),
 																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
 															])),
 														A2(
@@ -68295,7 +68301,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'data',
+								model.o === 'data',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -68338,7 +68344,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.n === 'other',
+								model.o === 'other',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(

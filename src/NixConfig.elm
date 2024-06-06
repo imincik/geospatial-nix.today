@@ -2,6 +2,7 @@ module NixConfig exposing
     ( configCustomProcessTemplate
     , configDataFromUrlTemplate
     , configEnterShellTemplate
+    , configJupyterKernelsTemplate
     , configJupyterTemplate
     , configNameTemplate
     , configOpenGLTemplate
@@ -66,6 +67,18 @@ configJupyterTemplate =
     """
   services.jupyter = {
     enable = <JUPYTER-ENABLED>;
+    <JUPYTER-KERNELS>
+    ip = "<JUPYTER-LISTEN-ADDRESS>";
+    port = <JUPYTER-LISTEN-PORT>;
+    rawConfig = ''
+      <JUPYTER-RAW-CONFIG>
+    '';
+  };
+"""
+
+
+configJupyterKernelsTemplate =
+    """
     kernels = {
       geospatial =
         let
@@ -89,12 +102,6 @@ configJupyterTemplate =
           logo64 = "${logoPath}/logo-64x64.png";
         };
     };
-    ip = "<JUPYTER-LISTEN-ADDRESS>";
-    port = <JUPYTER-LISTEN-PORT>;
-    rawConfig = ''
-      <JUPYTER-RAW-CONFIG>
-    '';
-  };
 """
 
 

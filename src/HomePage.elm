@@ -806,6 +806,13 @@ buildNixConfig model =
         selectedPyPackages =
             packagesListToNamesList model.configPythonPackages
 
+        selectedJupyterPythonKernels =
+            if List.length model.configJupyterPythonPackages > 0 then
+                NixConfig.configJupyterKernelsTemplate
+
+            else
+                ""
+
         selectedJupyterPythonPackages =
             packagesListToNamesList model.configJupyterPythonPackages
 
@@ -841,6 +848,7 @@ buildNixConfig model =
         |> String.replace "<PYTHON-POETRY-ENABLED>" (boolToString model.configPythonPoetryEnabled)
         -- jupyter
         |> String.replace "<JUPYTER-ENABLED>" (boolToString model.configJupyterEnabled)
+        |> String.replace "<JUPYTER-KERNELS>" selectedJupyterPythonKernels
         |> String.replace "<JUPYTER-PYTHON-PACKAGES>" (String.join " " selectedJupyterPythonPackages)
         |> String.replace "<JUPYTER-LISTEN-ADDRESS>" model.configJupyterListenAddress
         |> String.replace "<JUPYTER-LISTEN-PORT>" model.configJupyterListenPort
