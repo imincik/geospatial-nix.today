@@ -24,17 +24,17 @@ import Html.Attributes exposing (href, target)
 
 aboutText =
     """
-Create an isolated reproducible environment containing all software, services
-and data declaratively configured in a single file. Run it on any Linux machine
-or scale it with containers.
+Create an isolated, reproducible environment with all software, services
+and data declared in a single configuration file. Run it on any Linux machine or
+scale it with containers.
 """
 
 
 futurePlansText =
     """
-This is just very early start of a new tool which allows you to use very unique
-features of Nix to power your geospatial projects. Many more features, services,
-user experience improvements, MacOS and Kubernetes integration are on the way.
+This is just the beginning of a new tool, which allows you to use very unique
+features of Nix to power your geospatial projects. Many more features and user
+experience improvements are on the way.
 """
 
 

@@ -67090,7 +67090,7 @@ var $author$project$HomePage$UiFilterQGISPythonPackages = function (a) {
 	return {$: 30, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Texts$aboutText = '\nCreate an isolated reproducible environment containing all software, services\nand data declaratively configured in a single file. Run it on any Linux machine\nor scale it with containers.\n';
+var $author$project$Texts$aboutText = '\nCreate an isolated, reproducible environment with all software, services\nand data declared in a single configuration file. Run it on any Linux machine or\nscale it with containers.\n';
 var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -67130,7 +67130,7 @@ var $author$project$Texts$configTemplateCommentDocs = _List_fromArray(
 var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
 var $author$project$Texts$containerTemplateComment = '\nRun following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $author$project$Texts$futurePlansText = '\nThis is just very early start of a new tool which allows you to use very unique\nfeatures of Nix to power your geospatial projects. Many more features, services,\nuser experience improvements, MacOS and Kubernetes integration are on the way.\n';
+var $author$project$Texts$futurePlansText = '\nThis is just the beginning of a new tool, which allows you to use very unique\nfeatures of Nix to power your geospatial projects. Many more features and user\nexperience improvements are on the way.\n';
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$hr = _VirtualDom_node('hr');
