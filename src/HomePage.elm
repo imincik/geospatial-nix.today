@@ -102,6 +102,13 @@ type alias Model =
     , configPythonPackages : List Package
     , configPythonPoetryEnabled : Bool
 
+    -- jupyter
+    , configJupyterEnabled : Bool
+    , configJupyterPythonPackages : List Package
+    , configJupyterListenAddress : String
+    , configJupyterListenPort : String
+    , configJupyterRawConfig : String
+
     -- postgresql
     , packagesPostgresAvailable : List Package
     , configPostgresEnabled : Bool
@@ -115,6 +122,9 @@ type alias Model =
     -- custom process
     , configCustomProcessEnabled : Bool
     , configCustomProcessExec : String
+
+    -- data
+    , configDataFromUrlDatasets : String
 
     -- other
     , configOpenGLEnabled : Bool
@@ -135,6 +145,7 @@ type alias Model =
     , uiFilterQGISPyPackages : String
     , uiFilterQGISPlugins : String
     , uiFilterPyPackages : String
+    , uiFilterJupyterPyPackages : String
     , uiFilterPgPackages : String
     }
 
@@ -163,6 +174,13 @@ initialModel =
     , configPythonPackages = NixModules.python.packages
     , configPythonPoetryEnabled = NixModules.python.poetryEnabled
 
+    -- jupyter
+    , configJupyterEnabled = NixModules.jupyter.enabled
+    , configJupyterPythonPackages = NixModules.jupyter.pythonPackages
+    , configJupyterListenAddress = NixModules.jupyter.listenAddress.default
+    , configJupyterListenPort = NixModules.jupyter.listenPort.default
+    , configJupyterRawConfig = NixModules.jupyter.rawConfig.default
+
     -- postgresql
     , packagesPostgresAvailable = allPostgresPackages
     , configPostgresEnabled = NixModules.postgres.enabled
@@ -176,6 +194,9 @@ initialModel =
     -- custom process
     , configCustomProcessEnabled = NixModules.customProcess.enabled
     , configCustomProcessExec = NixModules.customProcess.exec.default
+
+    -- data
+    , configDataFromUrlDatasets = NixModules.dataFromUrl.datasets.default
 
     -- other
     , configOpenGLEnabled = NixModules.openGL.enabled
@@ -196,6 +217,7 @@ initialModel =
     , uiFilterQGISPyPackages = ""
     , uiFilterQGISPlugins = ""
     , uiFilterPyPackages = ""
+    , uiFilterJupyterPyPackages = ""
     , uiFilterPgPackages = ""
     }
 
@@ -230,7 +252,7 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "OTHER" ] model.uiActiveCategoryTab)
+                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "DATA", "OTHER" ] model.uiActiveCategoryTab)
 
                 -- qgis app
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
@@ -341,8 +363,42 @@ view model =
                 -- services
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "services")
                     (div [ class "services" ]
-                        [ -- postgres
-                          div [ class "postgres" ]
+                        [ -- jupyter
+                          div [ class "jupyter" ]
+                            (optionalHtmlDivElements model.configJupyterEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "JUPYTER"
+                                    , isEnabledButton model.configJupyterEnabled ConfigJupyterEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "python"
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterJupyterPyPackages, onInput UiFilterJupyterPackages ] []
+                                    ]
+                                , packagesHtmlList model.packagesPythonAvailable model.configJupyterPythonPackages model.uiFilterJupyterPyPackages model.uiFilterLimit ConfigJupyterAddPythonPackage
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configJupyterPythonPackages)
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
+                                    ]
+                                , p [ class "fw-bold fs-4" ]
+                                    [ text "raw config"
+                                    , useExampleButton ConfigJupyterRawConfig NixModules.jupyter.rawConfig.example
+                                    , textarea [ class "form-control form-control-lg", placeholder NixModules.jupyter.rawConfig.example, value model.configJupyterRawConfig, onInput ConfigJupyterRawConfig ] []
+                                    ]
+                                , p [ class "fw-bold fs-4" ]
+                                    [ text "listen address"
+                                    , input [ class "form-control form-control-lg", value model.configJupyterListenAddress, onInput ConfigJupyterListenAddress ] []
+                                    ]
+                                , p [ class "fw-bold fs-4" ]
+                                    [ text "port"
+                                    , input [ class "form-control form-control-lg", value model.configJupyterListenPort, onInput ConfigJupyterListenPort ] []
+                                    ]
+                                ]
+                            )
+
+                        -- postgres
+                        , div [ class "postgres" ]
                             (optionalHtmlDivElements model.configPostgresEnabled
                                 [ hr [] []
                                 , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -375,12 +431,11 @@ view model =
                                     ]
                                 , p [ class "fw-bold fs-4" ]
                                     [ text "listen addresses"
-                                    , useExampleButton ConfigPostgresListenAddresses NixModules.postgres.listenAddresses.example
-                                    , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenAddresses.example, value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
+                                    , input [ class "form-control form-control-lg", value model.configPostgresListenAddresses, onInput ConfigPostgresListenAddresses ] []
                                     ]
                                 , p [ class "fw-bold fs-4" ]
                                     [ text "port"
-                                    , input [ class "form-control form-control-lg", placeholder NixModules.postgres.listenPort.example, value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
+                                    , input [ class "form-control form-control-lg", value model.configPostgresListenPort, onInput ConfigPostgresListenPort ] []
                                     ]
                                 ]
                             )
@@ -402,6 +457,20 @@ view model =
                                 , br [] []
                                 ]
                             )
+                        ]
+                    )
+
+                -- data
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "data")
+                    (div [ class "data" ]
+                        [ div [ class "data-from-url" ]
+                            [ hr [] []
+                            , p [ class "fw-bold fs-4" ]
+                                [ text "from URL"
+                                , useExampleButton ConfigDataFromUrlEnable NixModules.dataFromUrl.datasets.example
+                                , textarea [ class "form-control form-control-lg", placeholder NixModules.dataFromUrl.datasets.example, value model.configDataFromUrlDatasets, onInput ConfigDataFromUrlEnable ] []
+                                ]
+                            ]
                         ]
                     )
 
@@ -680,6 +749,11 @@ type Msg
     | ConfigPythonEnable
     | ConfigPythonAddPackage Package
     | ConfigPythonPoetryEnable
+    | ConfigJupyterEnable
+    | ConfigJupyterAddPythonPackage Package
+    | ConfigJupyterListenAddress String
+    | ConfigJupyterListenPort String
+    | ConfigJupyterRawConfig String
     | ConfigPostgresEnable
     | ConfigPostgresAddPackage Package
     | ConfigPostgresInitdbArgs String
@@ -689,6 +763,7 @@ type Msg
     | ConfigPostgresSettings String
     | ConfigCustomProcessEnable
     | ConfigCustomProcessExec String
+    | ConfigDataFromUrlEnable String
     | ConfigOpenGLEnable
     | ConfigShellHookEnable String
       -- nix config
@@ -699,6 +774,7 @@ type Msg
     | UiFilterQGISPythonPackages String
     | UiFilterQGISPlugins String
     | UiFilterPythonPackages String
+    | UiFilterJupyterPackages String
     | UiFilterPostgresPackages String
     | UiUpdateFilterLimit
 
@@ -730,6 +806,16 @@ buildNixConfig model =
         selectedPyPackages =
             packagesListToNamesList model.configPythonPackages
 
+        selectedJupyterPythonKernels =
+            if List.length model.configJupyterPythonPackages > 0 then
+                NixConfig.configJupyterKernelsTemplate
+
+            else
+                ""
+
+        selectedJupyterPythonPackages =
+            packagesListToNamesList model.configJupyterPythonPackages
+
         selectedPgPackages =
             packagesListToNamesList model.configPostgresPackages
 
@@ -738,8 +824,10 @@ buildNixConfig model =
                 ++ NixConfig.configPackagesTemplate
                 ++ optionalString model.configQGISEnabled NixConfig.configQGISTemplate
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
+                ++ optionalString model.configJupyterEnabled NixConfig.configJupyterTemplate
                 ++ optionalString model.configPostgresEnabled NixConfig.configPostgresTemplate
                 ++ optionalString model.configCustomProcessEnabled NixConfig.configCustomProcessTemplate
+                ++ optionalString (model.configDataFromUrlDatasets /= "") NixConfig.configDataFromUrlTemplate
                 ++ optionalString model.configOpenGLEnabled NixConfig.configOpenGLTemplate
                 ++ optionalString (model.configEnterShell /= "") NixConfig.configEnterShellTemplate
 
@@ -758,6 +846,13 @@ buildNixConfig model =
         |> String.replace "<PYTHON-ENABLED>" (boolToString model.configPythonEnabled)
         |> String.replace "<PYTHON-PACKAGES>" (String.join " " selectedPyPackages)
         |> String.replace "<PYTHON-POETRY-ENABLED>" (boolToString model.configPythonPoetryEnabled)
+        -- jupyter
+        |> String.replace "<JUPYTER-ENABLED>" (boolToString model.configJupyterEnabled)
+        |> String.replace "<JUPYTER-KERNELS>" selectedJupyterPythonKernels
+        |> String.replace "<JUPYTER-PYTHON-PACKAGES>" (String.join " " selectedJupyterPythonPackages)
+        |> String.replace "<JUPYTER-LISTEN-ADDRESS>" model.configJupyterListenAddress
+        |> String.replace "<JUPYTER-LISTEN-PORT>" model.configJupyterListenPort
+        |> String.replace "<JUPYTER-RAW-CONFIG>" (String.replace "\n" "\n      " model.configJupyterRawConfig)
         -- postgres
         |> String.replace "<POSTGRES-ENABLED>" (boolToString model.configPostgresEnabled)
         |> String.replace "<POSTGRES-PACKAGES>" (String.join " " selectedPgPackages)
@@ -766,6 +861,8 @@ buildNixConfig model =
         |> String.replace "<POSTGRES-LISTEN-ADDRESSES>" model.configPostgresListenAddresses
         |> String.replace "<POSTGRES-LISTEN-PORT>" model.configPostgresListenPort
         |> String.replace "<POSTGRES-SETTINGS>" (String.replace "\n" " " model.configPostgresSettings)
+        -- data
+        |> String.replace "<DATA-FROM-URL-DATASETS>" (String.replace "\n" " " model.configDataFromUrlDatasets)
         -- other
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
@@ -852,6 +949,32 @@ update msg model =
                         True
             }
 
+        ConfigJupyterEnable ->
+            { model
+                | configJupyterEnabled =
+                    if not model.configJupyterEnabled then
+                        True
+
+                    else
+                        False
+            }
+
+        ConfigJupyterAddPythonPackage pkg ->
+            if not (List.member pkg model.configJupyterPythonPackages) then
+                { model | configJupyterPythonPackages = model.configJupyterPythonPackages ++ [ pkg ], configJupyterEnabled = True }
+
+            else
+                { model | configJupyterPythonPackages = List.filter (\x -> x /= pkg) model.configJupyterPythonPackages }
+
+        ConfigJupyterListenAddress val ->
+            { model | configJupyterListenAddress = val }
+
+        ConfigJupyterListenPort val ->
+            { model | configJupyterListenPort = val }
+
+        ConfigJupyterRawConfig val ->
+            { model | configJupyterRawConfig = val }
+
         ConfigPostgresEnable ->
             { model
                 | configPostgresEnabled =
@@ -897,6 +1020,9 @@ update msg model =
         ConfigCustomProcessExec script ->
             { model | configCustomProcessExec = script, configCustomProcessEnabled = True }
 
+        ConfigDataFromUrlEnable datasets ->
+            { model | configDataFromUrlDatasets = datasets }
+
         ConfigOpenGLEnable ->
             { model
                 | configOpenGLEnabled =
@@ -933,6 +1059,9 @@ update msg model =
 
         UiFilterPythonPackages pkg ->
             { model | uiFilterPyPackages = pkg }
+
+        UiFilterJupyterPackages pkg ->
+            { model | uiFilterJupyterPyPackages = pkg }
 
         UiFilterPostgresPackages pkg ->
             { model | uiFilterPgPackages = pkg }

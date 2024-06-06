@@ -1,4 +1,4 @@
-module NixModules exposing (customProcess, openGL, packages, postgres, python, qgis, shellHook)
+module NixModules exposing (customProcess, dataFromUrl, jupyter, openGL, packages, postgres, python, qgis, shellHook)
 
 -- default and example configuration values
 
@@ -22,6 +22,27 @@ python =
     }
 
 
+jupyter =
+    { enabled = False
+
+    -- configuration
+    , pythonPackages = []
+    , listenAddress =
+        { default = "localhost"
+        , example = ""
+        }
+    , listenPort =
+        { default = "8888"
+        , example = ""
+        }
+    , rawConfig =
+        { default = ""
+        , example = """c.ServerApp.answer_yes = False
+c.ServerApp.open_browser = False"""
+        }
+    }
+
+
 postgres =
     { enabled = False
     , packages = []
@@ -38,8 +59,8 @@ postgres =
 SELECT PostGIS_Full_Version();"""
         }
     , listenAddresses =
-        { default = ""
-        , example = "0.0.0.0"
+        { default = "localhost"
+        , example = ""
         }
     , listenPort =
         { default = "5432"
@@ -60,6 +81,18 @@ customProcess =
     , exec =
         { default = ""
         , example = "python -m http.server"
+        }
+    }
+
+
+dataFromUrl =
+    { enabled = False
+
+    -- configuration
+    , datasets =
+        { default = ""
+        , example = """{ url = "https://geospatial-nix.today/ex/data1.csv"; hash = ""; }
+{ url = "https://geospatial-nix.today/ex/data2.csv"; hash = ""; }"""
         }
     }
 

@@ -1,6 +1,9 @@
 module NixConfig exposing
     ( configCustomProcessTemplate
+    , configDataFromUrlTemplate
     , configEnterShellTemplate
+    , configJupyterKernelsTemplate
+    , configJupyterTemplate
     , configNameTemplate
     , configOpenGLTemplate
     , configPackagesTemplate
@@ -60,6 +63,48 @@ configPythonTemplate =
 """
 
 
+configJupyterTemplate =
+    """
+  services.jupyter = {
+    enable = <JUPYTER-ENABLED>;
+    <JUPYTER-KERNELS>
+    ip = "<JUPYTER-LISTEN-ADDRESS>";
+    port = <JUPYTER-LISTEN-PORT>;
+    rawConfig = ''
+      <JUPYTER-RAW-CONFIG>
+    '';
+  };
+"""
+
+
+configJupyterKernelsTemplate =
+    """
+    kernels = {
+      geospatial =
+        let
+          env = (pkgs.python3.withPackages (p: [
+            pkgs.python3Packages.ipykernel
+            <JUPYTER-PYTHON-PACKAGES>
+          ]));
+          logoPath = "${env}/${env.sitePackages}/ipykernel/resources";
+        in
+        {
+          displayName = "Geospatial Python kernel";
+          language = "python";
+          argv = [
+            "${env.interpreter}"
+            "-m"
+            "ipykernel_launcher"
+            "-f"
+            "{connection_file}"
+          ];
+          logo32 = "${logoPath}/logo-32x32.png";
+          logo64 = "${logoPath}/logo-64x64.png";
+        };
+    };
+"""
+
+
 configPostgresTemplate =
     """
   services.postgres = {
@@ -79,6 +124,15 @@ configCustomProcessTemplate =
   processes.custom.exec = ''
     <CUSTOM-PROCESS>
   '';
+"""
+
+
+configDataFromUrlTemplate =
+    """
+  data.fromUrl = {
+    enable = true;
+    datasets = [ <DATA-FROM-URL-DATASETS> ];
+  };
 """
 
 
