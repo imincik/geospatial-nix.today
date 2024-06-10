@@ -3,7 +3,7 @@ module GeoPackages exposing (packages)
 
 packages =
     [ ( "geopkgs.gdal", "3.8.5" )
-    , ( "geopkgs.gdal-master", "0890073" )
+    , ( "geopkgs.gdal-master", "0b1f77f" )
     , ( "geopkgs.gdal-minimal", "3.8.5" )
     , ( "geopkgs.gdal_3_9", "3.9.0" )
     , ( "geopkgs.geos", "3.12.1" )
@@ -16,6 +16,6 @@ packages =
     , ( "geopkgs.pdal", "2.7.1" )
     , ( "geopkgs.pg_featureserv", "1.3.1" )
     , ( "geopkgs.pg_tileserv", "1.0.11" )
-    , ( "geopkgs.proj", "9.4.0" )
+    , ( "geopkgs.proj", "9.4.1" )
     , ( "geopkgs.tiledb", "2.18.2" )
     ]
