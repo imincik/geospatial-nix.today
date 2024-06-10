@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.bn,
-		impl.bz,
-		impl.bx,
+		impl.bp,
+		impl.bF,
+		impl.bD,
 		function() { return function() {} }
 	);
 });
@@ -3943,11 +3943,11 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.bn,
-		impl.bz,
-		impl.bx,
+		impl.bp,
+		impl.bF,
+		impl.bD,
 		function(sendToApp, initialModel) {
-			var view = impl.bA;
+			var view = impl.bG;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3979,12 +3979,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.bn,
-		impl.bz,
-		impl.bx,
+		impl.bp,
+		impl.bF,
+		impl.bD,
 		function(sendToApp, initialModel) {
 			var divertHrefToApp = impl.aI && impl.aI(sendToApp)
-			var view = impl.bA;
+			var view = impl.bG;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3997,7 +3997,7 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.by) && (_VirtualDom_doc.title = title = doc.by);
+				(title !== doc.bE) && (_VirtualDom_doc.title = title = doc.bE);
 			});
 		}
 	);
@@ -4053,8 +4053,8 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.br;
-	var onUrlRequest = impl.bs;
+	var onUrlChange = impl.bw;
+	var onUrlRequest = impl.bx;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
@@ -4084,13 +4084,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		bn: function(flags)
+		bp: function(flags)
 		{
-			return A3(impl.bn, flags, _Browser_getUrl(), key);
+			return A3(impl.bp, flags, _Browser_getUrl(), key);
 		},
-		bA: impl.bA,
-		bz: impl.bz,
-		bx: impl.bx
+		bG: impl.bG,
+		bF: impl.bF,
+		bD: impl.bD
 	});
 }
 
@@ -4156,17 +4156,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { bl: 'hidden', bh: 'visibilitychange' }
+		? { bm: 'hidden', bi: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { bl: 'mozHidden', bh: 'mozvisibilitychange' }
+		? { bm: 'mozHidden', bi: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { bl: 'msHidden', bh: 'msvisibilitychange' }
+		? { bm: 'msHidden', bi: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { bl: 'webkitHidden', bh: 'webkitvisibilitychange' }
-		: { bl: 'hidden', bh: 'visibilitychange' };
+		? { bm: 'webkitHidden', bi: 'webkitvisibilitychange' }
+		: { bm: 'hidden', bi: 'visibilitychange' };
 }
 
 
@@ -4331,7 +4331,7 @@ function _Browser_getElement(id)
 				bb: _Browser_doc.documentElement.clientWidth,
 				aS: _Browser_doc.documentElement.clientHeight
 			},
-			bj: {
+			bk: {
 				bc: x + rect.left,
 				bd: y + rect.top,
 				bb: rect.width,
@@ -4370,6 +4370,107 @@ function _Browser_load(url)
 		}
 	}));
 }
+
+
+// CREATE
+
+var _Regex_never = /.^/;
+
+var _Regex_fromStringWith = F2(function(options, string)
+{
+	var flags = 'g';
+	if (options.bt) { flags += 'm'; }
+	if (options.bh) { flags += 'i'; }
+
+	try
+	{
+		return $elm$core$Maybe$Just(new RegExp(string, flags));
+	}
+	catch(error)
+	{
+		return $elm$core$Maybe$Nothing;
+	}
+});
+
+
+// USE
+
+var _Regex_contains = F2(function(re, string)
+{
+	return string.match(re) !== null;
+});
+
+
+var _Regex_findAtMost = F3(function(n, re, str)
+{
+	var out = [];
+	var number = 0;
+	var string = str;
+	var lastIndex = re.lastIndex;
+	var prevLastIndex = -1;
+	var result;
+	while (number++ < n && (result = re.exec(string)))
+	{
+		if (prevLastIndex == re.lastIndex) break;
+		var i = result.length - 1;
+		var subs = new Array(i);
+		while (i > 0)
+		{
+			var submatch = result[i];
+			subs[--i] = submatch
+				? $elm$core$Maybe$Just(submatch)
+				: $elm$core$Maybe$Nothing;
+		}
+		out.push(A4($elm$regex$Regex$Match, result[0], result.index, number, _List_fromArray(subs)));
+		prevLastIndex = re.lastIndex;
+	}
+	re.lastIndex = lastIndex;
+	return _List_fromArray(out);
+});
+
+
+var _Regex_replaceAtMost = F4(function(n, re, replacer, string)
+{
+	var count = 0;
+	function jsReplacer(match)
+	{
+		if (count++ >= n)
+		{
+			return match;
+		}
+		var i = arguments.length - 3;
+		var submatches = new Array(i);
+		while (i > 0)
+		{
+			var submatch = arguments[i];
+			submatches[--i] = submatch
+				? $elm$core$Maybe$Just(submatch)
+				: $elm$core$Maybe$Nothing;
+		}
+		return replacer(A4($elm$regex$Regex$Match, match, arguments[arguments.length - 2], count, _List_fromArray(submatches)));
+	}
+	return string.replace(re, jsReplacer);
+});
+
+var _Regex_splitAtMost = F3(function(n, re, str)
+{
+	var string = str;
+	var out = [];
+	var start = re.lastIndex;
+	var restoreLastIndex = re.lastIndex;
+	while (n--)
+	{
+		var result = re.exec(string);
+		if (!result) break;
+		out.push(string.slice(start, result.index));
+		start = re.lastIndex;
+	}
+	out.push(string.slice(start));
+	re.lastIndex = restoreLastIndex;
+	return _List_fromArray(out);
+});
+
+var _Regex_infinity = Infinity;
 var $elm$core$Basics$EQ = 1;
 var $elm$core$Basics$LT = 0;
 var $elm$core$List$cons = _List_cons;
@@ -65682,7 +65783,7 @@ var $elm$core$List$head = function (list) {
 };
 var $author$project$NixModules$jupyter = {
 	U: false,
-	bo: {m: 'localhost', g: ''},
+	bq: {m: 'localhost', g: ''},
 	aW: {m: '8888', g: ''},
 	a3: _List_Nil,
 	aG: {m: '', g: 'c.ServerApp.answer_yes = False\nc.ServerApp.open_browser = False'}
@@ -65693,13 +65794,13 @@ var $author$project$NixModules$postgres = {
 	U: false,
 	aU: {m: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
 	aC: {m: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
-	bp: {m: 'localhost', g: ''},
+	br: {m: 'localhost', g: ''},
 	aW: {m: '5432', g: ''},
 	at: _List_Nil,
 	aH: {m: '', g: 'log_connections = true;\nlog_statement = "all";'}
 };
-var $author$project$NixModules$python = {U: false, at: _List_Nil, bv: false};
-var $author$project$NixModules$qgis = {U: false, bu: _List_Nil, a3: _List_Nil};
+var $author$project$NixModules$python = {U: false, at: _List_Nil, bA: false};
+var $author$project$NixModules$qgis = {U: false, bz: _List_Nil, a3: _List_Nil};
 var $author$project$NixModules$shellHook = {
 	aA: {m: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
 };
@@ -65719,7 +65820,7 @@ var $author$project$HomePage$initialModel = {
 	P: $author$project$NixModules$shellHook.aA.m,
 	p: $author$project$NixModules$packages.at,
 	y: $author$project$NixModules$jupyter.U,
-	_: $author$project$NixModules$jupyter.bo.m,
+	_: $author$project$NixModules$jupyter.bq.m,
 	aa: $author$project$NixModules$jupyter.aW.m,
 	l: $author$project$NixModules$jupyter.a3,
 	ab: $author$project$NixModules$jupyter.aG.m,
@@ -65729,19 +65830,19 @@ var $author$project$HomePage$initialModel = {
 	z: $author$project$NixModules$postgres.U,
 	ac: $author$project$NixModules$postgres.aU.m,
 	ad: $author$project$NixModules$postgres.aC.m,
-	ae: $author$project$NixModules$postgres.bp.m,
+	ae: $author$project$NixModules$postgres.br.m,
 	af: $author$project$NixModules$postgres.aW.m,
 	r: $author$project$NixModules$postgres.at,
 	ag: $author$project$NixModules$postgres.aH.m,
 	s: $author$project$NixModules$python.U,
 	t: $author$project$NixModules$python.at,
-	J: $author$project$NixModules$python.bv,
+	J: $author$project$NixModules$python.bA,
 	E: $author$project$NixModules$qgis.U,
 	S: A2(
 		$elm$core$Maybe$withDefault,
 		_Utils_Tuple2('', ''),
 		$elm$core$List$head($author$project$HomePage$allQGISPackages)),
-	u: $author$project$NixModules$qgis.bu,
+	u: $author$project$NixModules$qgis.bz,
 	v: $author$project$NixModules$qgis.a3,
 	ai: '',
 	as: '',
@@ -66465,19 +66566,19 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $elm$browser$Browser$sandbox = function (impl) {
 	return _Browser_element(
 		{
-			bn: function (_v0) {
-				return _Utils_Tuple2(impl.bn, $elm$core$Platform$Cmd$none);
+			bp: function (_v0) {
+				return _Utils_Tuple2(impl.bp, $elm$core$Platform$Cmd$none);
 			},
-			bx: function (_v1) {
+			bD: function (_v1) {
 				return $elm$core$Platform$Sub$none;
 			},
-			bz: F2(
+			bF: F2(
 				function (msg, model) {
 					return _Utils_Tuple2(
-						A2(impl.bz, msg, model),
+						A2(impl.bF, msg, model),
 						$elm$core$Platform$Cmd$none);
 				}),
-			bA: impl.bA
+			bG: impl.bG
 		});
 };
 var $author$project$HomePage$boolToString = function (value) {
@@ -66508,6 +66609,36 @@ var $author$project$HomePage$environmentName = function (name) {
 		A3($elm$core$String$replace, ' ', '-', name));
 };
 var $elm$core$Basics$neq = _Utils_notEqual;
+var $elm$regex$Regex$Match = F4(
+	function (match, index, number, submatches) {
+		return {bo: index, bs: match, bv: number, bC: submatches};
+	});
+var $elm$regex$Regex$fromStringWith = _Regex_fromStringWith;
+var $elm$regex$Regex$fromString = function (string) {
+	return A2(
+		$elm$regex$Regex$fromStringWith,
+		{bh: false, bt: false},
+		string);
+};
+var $elm$regex$Regex$never = _Regex_never;
+var $elm$regex$Regex$replace = _Regex_replaceAtMost(_Regex_infinity);
+var $elm$core$Tuple$second = function (_v0) {
+	var y = _v0.b;
+	return y;
+};
+var $author$project$HomePage$nixCodeCleanup = function (code) {
+	var emptyMultiLineString = $elm$regex$Regex$fromString('\'\'\\n.*\n.*\'\';');
+	var emptyMultiLineStringRx = _Utils_Tuple2(
+		A2($elm$core$Maybe$withDefault, $elm$regex$Regex$never, emptyMultiLineString),
+		'\"\";');
+	return A3(
+		$elm$regex$Regex$replace,
+		emptyMultiLineStringRx.a,
+		function (_v0) {
+			return emptyMultiLineStringRx.b;
+		},
+		code);
+};
 var $author$project$HomePage$optionalString = F2(
 	function (condition, string) {
 		return condition ? string : '';
@@ -66554,107 +66685,108 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 										A2($author$project$HomePage$optionalString, model.R, $author$project$NixConfig$configOpenGLTemplate),
 										A2($author$project$HomePage$optionalString, model.P !== '', $author$project$NixConfig$configEnterShellTemplate))))))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
-	return A3(
-		$elm$core$String$replace,
-		'<SHELL-HOOK>',
-		model.P,
+	return $author$project$HomePage$nixCodeCleanup(
 		A3(
 			$elm$core$String$replace,
-			'<CUSTOM-PROCESS>',
-			model.Z,
+			'<SHELL-HOOK>',
+			model.P,
 			A3(
 				$elm$core$String$replace,
-				'<DATA-FROM-URL-DATASETS>',
-				A3($elm$core$String$replace, '\n', ' ', model.O),
+				'<CUSTOM-PROCESS>',
+				model.Z,
 				A3(
 					$elm$core$String$replace,
-					'<POSTGRES-SETTINGS>',
-					A3($elm$core$String$replace, '\n', ' ', model.ag),
+					'<DATA-FROM-URL-DATASETS>',
+					A3($elm$core$String$replace, '\n', ' ', model.O),
 					A3(
 						$elm$core$String$replace,
-						'<POSTGRES-LISTEN-PORT>',
-						model.af,
+						'<POSTGRES-SETTINGS>',
+						A3($elm$core$String$replace, '\n', ' ', model.ag),
 						A3(
 							$elm$core$String$replace,
-							'<POSTGRES-LISTEN-ADDRESSES>',
-							model.ae,
+							'<POSTGRES-LISTEN-PORT>',
+							model.af,
 							A3(
 								$elm$core$String$replace,
-								'<POSTGRES-INITIAL-SCRIPT>',
-								A3($elm$core$String$replace, '\n', ' ', model.ad),
+								'<POSTGRES-LISTEN-ADDRESSES>',
+								model.ae,
 								A3(
 									$elm$core$String$replace,
-									'<POSTGRES-INITDB-ARGS>',
-									A3($elm$core$String$replace, '\n', ' ', model.ac),
+									'<POSTGRES-INITIAL-SCRIPT>',
+									A3($elm$core$String$replace, '\n', ' ', model.ad),
 									A3(
 										$elm$core$String$replace,
-										'<POSTGRES-PACKAGES>',
-										A2($elm$core$String$join, ' ', selectedPgPackages),
+										'<POSTGRES-INITDB-ARGS>',
+										A3($elm$core$String$replace, '\n', ' ', model.ac),
 										A3(
 											$elm$core$String$replace,
-											'<POSTGRES-ENABLED>',
-											$author$project$HomePage$boolToString(model.z),
+											'<POSTGRES-PACKAGES>',
+											A2($elm$core$String$join, ' ', selectedPgPackages),
 											A3(
 												$elm$core$String$replace,
-												'<JUPYTER-RAW-CONFIG>',
-												A3($elm$core$String$replace, '\n', '\n      ', model.ab),
+												'<POSTGRES-ENABLED>',
+												$author$project$HomePage$boolToString(model.z),
 												A3(
 													$elm$core$String$replace,
-													'<JUPYTER-LISTEN-PORT>',
-													model.aa,
+													'<JUPYTER-RAW-CONFIG>',
+													A3($elm$core$String$replace, '\n', '\n      ', model.ab),
 													A3(
 														$elm$core$String$replace,
-														'<JUPYTER-LISTEN-ADDRESS>',
-														model._,
+														'<JUPYTER-LISTEN-PORT>',
+														model.aa,
 														A3(
 															$elm$core$String$replace,
-															'<JUPYTER-PYTHON-PACKAGES>',
-															A2($elm$core$String$join, ' ', selectedJupyterPythonPackages),
+															'<JUPYTER-LISTEN-ADDRESS>',
+															model._,
 															A3(
 																$elm$core$String$replace,
-																'<JUPYTER-KERNELS>',
-																selectedJupyterPythonKernels,
+																'<JUPYTER-PYTHON-PACKAGES>',
+																A2($elm$core$String$join, ' ', selectedJupyterPythonPackages),
 																A3(
 																	$elm$core$String$replace,
-																	'<JUPYTER-ENABLED>',
-																	$author$project$HomePage$boolToString(model.y),
+																	'<JUPYTER-KERNELS>',
+																	selectedJupyterPythonKernels,
 																	A3(
 																		$elm$core$String$replace,
-																		'<PYTHON-POETRY-ENABLED>',
-																		$author$project$HomePage$boolToString(model.J),
+																		'<JUPYTER-ENABLED>',
+																		$author$project$HomePage$boolToString(model.y),
 																		A3(
 																			$elm$core$String$replace,
-																			'<PYTHON-PACKAGES>',
-																			A2($elm$core$String$join, ' ', selectedPyPackages),
+																			'<PYTHON-POETRY-ENABLED>',
+																			$author$project$HomePage$boolToString(model.J),
 																			A3(
 																				$elm$core$String$replace,
-																				'<PYTHON-ENABLED>',
-																				$author$project$HomePage$boolToString(model.s),
+																				'<PYTHON-PACKAGES>',
+																				A2($elm$core$String$join, ' ', selectedPyPackages),
 																				A3(
 																					$elm$core$String$replace,
-																					'<QGIS-PLUGINS>',
-																					A2($elm$core$String$join, ' ', selectedQGISPlugins),
+																					'<PYTHON-ENABLED>',
+																					$author$project$HomePage$boolToString(model.s),
 																					A3(
 																						$elm$core$String$replace,
-																						'<QGIS-PYTHON-PACKAGES>',
-																						A2($elm$core$String$join, ' ', selectedQGISPythonPackages),
+																						'<QGIS-PLUGINS>',
+																						A2($elm$core$String$join, ' ', selectedQGISPlugins),
 																						A3(
 																							$elm$core$String$replace,
-																							'<QGIS-PACKAGE>',
-																							selectedQGISPackage,
+																							'<QGIS-PYTHON-PACKAGES>',
+																							A2($elm$core$String$join, ' ', selectedQGISPythonPackages),
 																							A3(
 																								$elm$core$String$replace,
-																								'<QGIS-ENABLED>',
-																								$author$project$HomePage$boolToString(model.E),
+																								'<QGIS-PACKAGE>',
+																								selectedQGISPackage,
 																								A3(
 																									$elm$core$String$replace,
-																									'<PACKAGES>',
-																									A2($elm$core$String$join, ' ', selectedPackages),
+																									'<QGIS-ENABLED>',
+																									$author$project$HomePage$boolToString(model.E),
 																									A3(
 																										$elm$core$String$replace,
-																										'<NAME>',
-																										$author$project$HomePage$environmentName(model.Q),
-																										nixConfig)))))))))))))))))))))))));
+																										'<PACKAGES>',
+																										A2($elm$core$String$join, ' ', selectedPackages),
+																										A3(
+																											$elm$core$String$replace,
+																											'<NAME>',
+																											$author$project$HomePage$environmentName(model.Q),
+																											nixConfig))))))))))))))))))))))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix.env/latest#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$HomePage$buildNixInit = function (model) {
@@ -67280,10 +67412,6 @@ var $author$project$HomePage$packagesCountText = F2(
 	});
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
 var $elm$html$Html$li = _VirtualDom_node('li');
-var $elm$core$Tuple$second = function (_v0) {
-	var y = _v0.b;
-	return y;
-};
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $author$project$HomePage$packageHtmlItem = F3(
 	function (selectedItems, onClickAction, item) {
@@ -68808,6 +68936,6 @@ var $author$project$HomePage$view = function (model) {
 			]));
 };
 var $author$project$HomePage$main = $elm$browser$Browser$sandbox(
-	{bn: $author$project$HomePage$initialModel, bz: $author$project$HomePage$update, bA: $author$project$HomePage$view});
+	{bp: $author$project$HomePage$initialModel, bF: $author$project$HomePage$update, bG: $author$project$HomePage$view});
 _Platform_export({'HomePage':{'init':$author$project$HomePage$main(
 	$elm$json$Json$Decode$succeed(0))(0)}});}(this));

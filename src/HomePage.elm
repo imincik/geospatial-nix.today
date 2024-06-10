@@ -14,6 +14,7 @@ import PostgresqlPackages
 import PythonPackages
 import QGISPackages
 import QGISPlugins
+import Regex
 import Texts
     exposing
         ( aboutText
@@ -738,6 +739,23 @@ boolToEnabledString value =
         "disabled"
 
 
+nixCodeCleanup : String -> String
+nixCodeCleanup code =
+    let
+        -- empty multiline string
+        -- someConfig = ''
+        --
+        -- '';
+        emptyMultiLineString =
+            Regex.fromString "''\\n.*\n.*'';"
+
+        emptyMultiLineStringRx =
+            ( Maybe.withDefault Regex.never emptyMultiLineString, "\"\";" )
+    in
+    -- replace empty multiline string with ""
+    Regex.replace (Tuple.first emptyMultiLineStringRx) (\_ -> Tuple.second emptyMultiLineStringRx) code
+
+
 type Msg
     = ConfigName String
     | ConfigAddPackage Package
@@ -866,6 +884,8 @@ buildNixConfig model =
         -- other
         |> String.replace "<CUSTOM-PROCESS>" model.configCustomProcessExec
         |> String.replace "<SHELL-HOOK>" model.configEnterShell
+        -- nix code cleanup
+        |> nixCodeCleanup
 
 
 update : Msg -> Model -> Model
