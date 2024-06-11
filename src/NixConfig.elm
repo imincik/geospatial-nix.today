@@ -82,10 +82,7 @@ configJupyterKernelsTemplate =
     kernels = {
       geospatial =
         let
-          env = pkgs.python3.withPackages (p: [
-            pkgs.python3Packages.ipykernel
-            <JUPYTER-PYTHON-PACKAGES>
-          ]);
+          env = pkgs.python3.withPackages (p: [ pkgs.python3Packages.ipykernel <JUPYTER-PYTHON-PACKAGES> ]);
           logoPath = "${env}/${env.sitePackages}/ipykernel/resources";
         in
         {
