@@ -141,6 +141,8 @@ in
   '';
   
   processes.make-elm-site-dev.exec = ''
+    trap "${config.scripts.make-elm-site-prod.exec}" SIGTERM
+
     echo -e "Open the app at $(pwd)/src/index.html .\n"
     ${config.scripts.make-elm-site-dev.exec}
   '';
