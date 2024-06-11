@@ -12,7 +12,6 @@ packages =
     , ( "geopkgs.librttopo", "1.1.0" )
     , ( "geopkgs.libspatialindex", "1.9.3" )
     , ( "geopkgs.libspatialite", "5.1.0" )
-    , ( "geopkgs.nixGL", "" )
     , ( "geopkgs.pdal", "2.7.1" )
     , ( "geopkgs.pg_featureserv", "1.3.1" )
     , ( "geopkgs.pg_tileserv", "1.0.11" )
