@@ -51,6 +51,7 @@ in
       --exclude "postgresql." \
       --exclude "python.*" \
       --exclude "qgis.*" \
+      --exclude "nixGL" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
     >> $packages_file
