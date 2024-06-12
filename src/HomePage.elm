@@ -1,12 +1,14 @@
 module HomePage exposing (main)
 
 import Browser
+import Dict exposing (Dict)
 import GeoPackages
 import GeoPostgresqlPackages
 import GeoPythonPackages
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
+import Maybe exposing (withDefault)
 import NixConfig
 import NixModules
 import Packages
@@ -141,13 +143,7 @@ type alias Model =
     -- filters
     , uiFilterLimit : Int
     , uiFilterLimitDefault : Int
-    , uiFilterPackages : String
-    , uiFilterQGISPackages : String
-    , uiFilterQGISPyPackages : String
-    , uiFilterQGISPlugins : String
-    , uiFilterPyPackages : String
-    , uiFilterJupyterPyPackages : String
-    , uiFilterPgPackages : String
+    , uiFilterPackages : Dict String String
     }
 
 
@@ -213,13 +209,7 @@ initialModel =
     -- filters
     , uiFilterLimit = 3
     , uiFilterLimitDefault = 3
-    , uiFilterPackages = ""
-    , uiFilterQGISPackages = ""
-    , uiFilterQGISPyPackages = ""
-    , uiFilterQGISPlugins = ""
-    , uiFilterPyPackages = ""
-    , uiFilterJupyterPyPackages = ""
-    , uiFilterPgPackages = ""
+    , uiFilterPackages = Dict.empty
     }
 
 
@@ -270,25 +260,25 @@ view model =
                                 [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "package"
                                     ]
-                                , packagesHtmlList model.packagesQGISAvailable [ model.configQGISPackage ] model.uiFilterQGISPackages model.uiFilterLimit ConfigQGISSetPackage
+                                , packagesHtmlList model.packagesQGISAvailable [ model.configQGISPackage ] model.uiFilterPackages "qgis" model.uiFilterLimit ConfigQGISSetPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesQGISAvailable) (List.length [ model.configQGISPackage ])
                                     , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "python"
-                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterQGISPyPackages, onInput UiFilterQGISPythonPackages ] []
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value (getFilterPackagesText model.uiFilterPackages "qgis-python-packages"), onInput (UiFilterPackages "qgis-python-packages") ] []
                                     ]
-                                , packagesHtmlList model.packagesPythonAvailable model.configQGISPythonPackages model.uiFilterQGISPyPackages model.uiFilterLimit ConfigQGISAddPythonPackage
+                                , packagesHtmlList model.packagesPythonAvailable model.configQGISPythonPackages model.uiFilterPackages "qgis-python-packages" model.uiFilterLimit ConfigQGISAddPythonPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configQGISPythonPackages)
                                     , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
                                     ]
                                 , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "plugins"
-                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for plugins ...", value model.uiFilterQGISPlugins, onInput UiFilterQGISPlugins ] []
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for plugins ...", value (getFilterPackagesText model.uiFilterPackages "qgis-python-plugins"), onInput (UiFilterPackages "qgis-python-plugins") ] []
                                     ]
-                                , packagesHtmlList model.packagesQGISPluginsAvailable model.configQGISPlugins model.uiFilterQGISPlugins model.uiFilterLimit ConfigQGISAddPlugin
+                                , packagesHtmlList model.packagesQGISPluginsAvailable model.configQGISPlugins model.uiFilterPackages "qgis-python-plugins" model.uiFilterLimit ConfigQGISAddPlugin
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesQGISPluginsAvailable) (List.length model.configQGISPlugins)
                                     , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
@@ -304,12 +294,12 @@ view model =
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "PACKAGES"
-                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
+                            , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value (getFilterPackagesText model.uiFilterPackages "packages"), onInput (UiFilterPackages "packages") ] []
                             ]
                         , p [ class "fw-bold fs-4" ]
                             [ text "geospatial"
                             ]
-                        , packagesHtmlList model.packagesGeoAvailable model.configGeoPackages model.uiFilterPackages model.uiFilterLimit ConfigAddGeoPackage
+                        , packagesHtmlList model.packagesGeoAvailable model.configGeoPackages model.uiFilterPackages "packages" model.uiFilterLimit ConfigAddGeoPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesGeoAvailable) (List.length model.configGeoPackages)
                             , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
@@ -323,7 +313,7 @@ view model =
                         [ p [ class "fw-bold fs-4" ]
                             [ text "nixpkgs"
                             ]
-                        , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
+                        , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages "packages" model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
                             [ packagesCountText (List.length model.packagesAvailable) (List.length model.configPackages)
                             , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
@@ -345,9 +335,9 @@ view model =
                                 ]
                                 [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "packages"
-                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterPyPackages, onInput UiFilterPythonPackages ] []
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value (getFilterPackagesText model.uiFilterPackages "python"), onInput (UiFilterPackages "python") ] []
                                     ]
-                                , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPyPackages model.uiFilterLimit ConfigPythonAddPackage
+                                , packagesHtmlList model.packagesPythonAvailable model.configPythonPackages model.uiFilterPackages "python" model.uiFilterLimit ConfigPythonAddPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configPythonPackages)
                                     , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
@@ -375,9 +365,9 @@ view model =
                                 ]
                                 [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "python"
-                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value model.uiFilterJupyterPyPackages, onInput UiFilterJupyterPackages ] []
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for Python packages ...", value (getFilterPackagesText model.uiFilterPackages "jupyter-python-packages"), onInput (UiFilterPackages "jupyter-python-packages") ] []
                                     ]
-                                , packagesHtmlList model.packagesPythonAvailable model.configJupyterPythonPackages model.uiFilterJupyterPyPackages model.uiFilterLimit ConfigJupyterAddPythonPackage
+                                , packagesHtmlList model.packagesPythonAvailable model.configJupyterPythonPackages model.uiFilterPackages "jupyter-python-packages" model.uiFilterLimit ConfigJupyterAddPythonPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPythonAvailable) (List.length model.configJupyterPythonPackages)
                                     , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
@@ -409,9 +399,9 @@ view model =
                                 ]
                                 [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
                                     [ text "packages"
-                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value model.uiFilterPgPackages, onInput UiFilterPostgresPackages ] []
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for PostgreSQL packages ...", value (getFilterPackagesText model.uiFilterPackages "postgres-packages"), onInput (UiFilterPackages "postgres-packages") ] []
                                     ]
-                                , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPgPackages model.uiFilterLimit ConfigPostgresAddPackage
+                                , packagesHtmlList model.packagesPostgresAvailable model.configPostgresPackages model.uiFilterPackages "postgres-packages" model.uiFilterLimit ConfigPostgresAddPackage
                                 , p [ class "text-secondary" ]
                                     [ packagesCountText (List.length model.packagesPostgresAvailable) (List.length model.configPostgresPackages)
                                     , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
@@ -620,9 +610,12 @@ optionalHtmlDivElements condition first second =
         first
 
 
-packagesHtmlList : List Package -> List Package -> String -> Int -> (Package -> Msg) -> Html Msg
-packagesHtmlList availableItems selectedItems filter filterLimit onClickAction =
+packagesHtmlList : List Package -> List Package -> Dict String String -> String -> Int -> (Package -> Msg) -> Html Msg
+packagesHtmlList availableItems selectedItems filterDict filterCategory filterLimit onClickAction =
     let
+        filter =
+            withDefault "" (Dict.get filterCategory filterDict)
+
         filteredItems =
             -- filter items
             List.filter (\item -> String.contains filter (Tuple.first item)) availableItems
@@ -739,6 +732,11 @@ boolToEnabledString value =
         "disabled"
 
 
+getFilterPackagesText : Dict String String -> String -> String
+getFilterPackagesText filterDict filterCategory =
+    withDefault "" (Dict.get filterCategory filterDict)
+
+
 nixCodeCleanup : String -> String
 nixCodeCleanup code =
     let
@@ -788,12 +786,7 @@ type Msg
     | CreateEnvironment
       -- ui
     | UiSetActiveCategoryTab String
-    | UiFilterPackages String
-    | UiFilterQGISPythonPackages String
-    | UiFilterQGISPlugins String
-    | UiFilterPythonPackages String
-    | UiFilterJupyterPackages String
-    | UiFilterPostgresPackages String
+    | UiFilterPackages String String
     | UiUpdateFilterLimit
 
 
@@ -1074,23 +1067,8 @@ update msg model =
                         model.uiFilterLimitDefault
             }
 
-        UiFilterPackages pkg ->
-            { model | uiFilterPackages = pkg }
-
-        UiFilterPythonPackages pkg ->
-            { model | uiFilterPyPackages = pkg }
-
-        UiFilterJupyterPackages pkg ->
-            { model | uiFilterJupyterPyPackages = pkg }
-
-        UiFilterPostgresPackages pkg ->
-            { model | uiFilterPgPackages = pkg }
-
-        UiFilterQGISPythonPackages pkg ->
-            { model | uiFilterQGISPyPackages = pkg }
-
-        UiFilterQGISPlugins pkg ->
-            { model | uiFilterQGISPlugins = pkg }
+        UiFilterPackages category filter ->
+            { model | uiFilterPackages = Dict.insert category filter model.uiFilterPackages }
 
 
 
