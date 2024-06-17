@@ -4554,7 +4554,7 @@ var $elm$core$Basics$GT = 2;
 var $author$project$GeoPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.gdal', '3.8.5'),
-		_Utils_Tuple2('geopkgs.gdal-master', '0b1f77f'),
+		_Utils_Tuple2('geopkgs.gdal-master', '064ea59'),
 		_Utils_Tuple2('geopkgs.gdal-minimal', '3.8.5'),
 		_Utils_Tuple2('geopkgs.gdal_3_9', '3.9.0'),
 		_Utils_Tuple2('geopkgs.geos', '3.12.1'),
@@ -65575,6 +65575,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-ArcheoCAD', '3.2.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Azimuth-and-Distance-Calculator', '2.0.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Azimuth-and-Distance-Plugin', '0.9.19'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Buffer-by-Percentage', '0.3.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Calculate-Geometry', '0.6.9'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Clip-Multiple-Layers', '3.2.0'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Clipper', '1.2'),
@@ -65602,7 +65603,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lat-Lon-Tools', '3.6.20'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Layers-menu-from-project', '2.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-LecoS---Landscape-Ecology-Statistics', '--Landscape-Ecology-Statistics-3.0.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lizmap', '4.3.15'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lizmap', '4.3.16'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Map-Library', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-MapSwipe-Tool', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-MapTiler', '3.3'),
@@ -65662,12 +65663,13 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-go2streetview', '8.8'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-mmqgis', '2021.9.10'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-qProf', '0.5.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-qgis2web', '3.20.0'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-qgis2web', '3.21.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-AcATaMa', '23.4'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-AnotherDXFImporter', '1.3.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-ArcheoCAD', '3.2.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Azimuth-and-Distance-Calculator', '2.0.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Azimuth-and-Distance-Plugin', '0.9.19'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Buffer-by-Percentage', '0.3.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Calculate-Geometry', '0.6.9'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Clip-Multiple-Layers', '3.2.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Clipper', '1.2'),
@@ -65695,7 +65697,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-Lat-Lon-Tools', '3.6.20'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Layers-menu-from-project', '2.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-LecoS---Landscape-Ecology-Statistics', '--Landscape-Ecology-Statistics-3.0.1'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-Lizmap', '4.3.15'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Lizmap', '4.3.16'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Map-Library', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-MapSwipe-Tool', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-MapTiler', '3.3'),
@@ -65755,7 +65757,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-go2streetview', '10.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-mmqgis', '2021.9.10'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-qProf', '0.5.1'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-qgis2web', '3.20.0')
+		_Utils_Tuple2('geopkgs.qgis-plugin-qgis2web', '3.21.0')
 	]);
 var $author$project$HomePage$allQGISPlugins = $author$project$QGISPlugins$packages;
 var $elm$core$Basics$False = 1;
