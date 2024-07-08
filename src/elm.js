@@ -4553,9 +4553,9 @@ var $elm$core$Set$toList = function (_v0) {
 var $elm$core$Basics$GT = 2;
 var $author$project$GeoPackages$packages = _List_fromArray(
 	[
-		_Utils_Tuple2('geopkgs.gdal', '3.9.0'),
+		_Utils_Tuple2('geopkgs.gdal', '3.9.1'),
 		_Utils_Tuple2('geopkgs.gdal-master', ''),
-		_Utils_Tuple2('geopkgs.gdal-minimal', '3.9.0'),
+		_Utils_Tuple2('geopkgs.gdal-minimal', '3.9.1'),
 		_Utils_Tuple2('geopkgs.geos', '3.12.2'),
 		_Utils_Tuple2('geopkgs.grass', '8.3.2'),
 		_Utils_Tuple2('geopkgs.libgeotiff', '1.7.3'),
@@ -57638,7 +57638,7 @@ var $author$project$HomePage$allPostgresPackages = _Utils_ap($author$project$Geo
 var $author$project$GeoPythonPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.python3-fiona', '1.9.6'),
-		_Utils_Tuple2('geopkgs.python3-gdal', '3.9.0'),
+		_Utils_Tuple2('geopkgs.python3-gdal', '3.9.1'),
 		_Utils_Tuple2('geopkgs.python3-geopandas', '0.14.4'),
 		_Utils_Tuple2('geopkgs.python3-owslib', '0.31.0'),
 		_Utils_Tuple2('geopkgs.python3-psycopg', '3.1.12'),
@@ -65564,7 +65564,7 @@ var $author$project$HomePage$allPythonPackages = _Utils_ap($author$project$GeoPy
 var $author$project$QGISPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.qgis', '3.36.3'),
-		_Utils_Tuple2('geopkgs.qgis-ltr', '3.34.7'),
+		_Utils_Tuple2('geopkgs.qgis-ltr', '3.34.8'),
 		_Utils_Tuple2('geopkgs.qgis-next', '3.38.0')
 	]);
 var $author$project$HomePage$allQGISPackages = $author$project$QGISPackages$packages;
@@ -65603,7 +65603,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lat-Lon-Tools', '3.6.20'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Layers-menu-from-project', '2.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-LecoS---Landscape-Ecology-Statistics', '--Landscape-Ecology-Statistics-3.0.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lizmap', '4.3.17'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lizmap', '4.3.19'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Map-Library', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-MapSwipe-Tool', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-MapTiler', '3.3'),
@@ -65621,10 +65621,11 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-OSM-place-search', '1.4.5'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-OSMDownloader', '1.0.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-OSMInfo', '0.8.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-PDOK-services-plugin', '5.0.1'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-PDOK-services-plugin', '5.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Planet_Explorer', '2.3.3'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Plugin-Builder-3', '3-3.2.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Plugin-Reloader', '0.9.4'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Pobieracz-danych-GUGiK', '1.2.0'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Pobieracz-danych-GUGiK', '1.2.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Point-sampling-tool', '0.5.4'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-PostGIS-geoprocessing-tools', '0.9'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Processing-Saga-NextGen-Provider', '1.0.0'),
@@ -65658,7 +65659,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-WFS-2-0-Client', '2-0-Client-0.9.11'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Wtyczka-GIS-Support', '2.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-autoSaver', '2.9'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-cadastre', '1.19.1'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-cadastre', '1.19.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-dzetsaka---Classification-tool', '--Classification-tool-3.70'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-geopunt4Qgis', '2.4.0.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-go2streetview', '8.8'),
@@ -65698,7 +65699,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-Lat-Lon-Tools', '3.6.20'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Layers-menu-from-project', '2.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-LecoS---Landscape-Ecology-Statistics', '--Landscape-Ecology-Statistics-3.0.1'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-Lizmap', '4.3.17'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Lizmap', '4.3.19'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Map-Library', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-MapSwipe-Tool', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-MapTiler', '3.3'),
@@ -65716,10 +65717,11 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-OSM-place-search', '1.4.5'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-OSMDownloader', '1.0.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-OSMInfo', '0.8.1'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-PDOK-services-plugin', '5.0.1'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-PDOK-services-plugin', '5.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Planet_Explorer', '2.3.3'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Plugin-Builder-3', '3-3.2.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Plugin-Reloader', '0.9.4'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-Pobieracz-danych-GUGiK', '1.2.0'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Pobieracz-danych-GUGiK', '1.2.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Point-sampling-tool', '0.5.4'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-PostGIS-geoprocessing-tools', '0.9'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Processing-Saga-NextGen-Provider', '1.0.0'),
@@ -65753,7 +65755,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-WFS-2-0-Client', '2-0-Client-0.9.11'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Wtyczka-GIS-Support', '2.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-autoSaver', '2.9'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-cadastre', '1.19.1'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-cadastre', '1.19.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-dzetsaka---Classification-tool', '--Classification-tool-3.70'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-geopunt4Qgis', '2.4.0.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-go2streetview', '10.0'),
