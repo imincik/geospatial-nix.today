@@ -6,7 +6,7 @@ packages =
     , ( "geopkgs.gdal-master", "" )
     , ( "geopkgs.gdal-minimal", "3.9.1" )
     , ( "geopkgs.geos", "3.12.2" )
-    , ( "geopkgs.grass", "8.3.2" )
+    , ( "geopkgs.grass", "8.4.0" )
     , ( "geopkgs.libgeotiff", "1.7.3" )
     , ( "geopkgs.librttopo", "1.1.0" )
     , ( "geopkgs.libspatialindex", "1.9.3" )
