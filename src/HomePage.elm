@@ -1,6 +1,8 @@
 module HomePage exposing (main)
 
 import Browser
+import GRASSPackages
+import GRASSPlugins
 import GeoPackages
 import GeoPostgresqlPackages
 import GeoPythonPackages
@@ -60,6 +62,16 @@ allGeoPackages =
     GeoPackages.packages
 
 
+allGRASSPackages : Packages
+allGRASSPackages =
+    GRASSPackages.packages
+
+
+allGRASSPlugins : Packages
+allGRASSPlugins =
+    GRASSPlugins.packages
+
+
 allQGISPackages : Packages
 allQGISPackages =
     QGISPackages.packages
@@ -89,7 +101,14 @@ type alias Model =
     , configPackages : List Package
     , configGeoPackages : List Package
 
-    -- apps
+    -- grass
+    , packagesGRASSAvailable : List Package
+    , packagesGRASSPluginsAvailable : List Package
+    , configGRASSEnabled : Bool
+    , configGRASSPackage : Package
+    , configGRASSPlugins : List Package
+
+    -- qgis
     , packagesQGISAvailable : List Package
     , packagesQGISPluginsAvailable : List Package
     , configQGISEnabled : Bool
@@ -142,6 +161,8 @@ type alias Model =
     , uiFilterLimit : Int
     , uiFilterLimitDefault : Int
     , uiFilterPackages : String
+    , uiFilterGRASSPackages : String
+    , uiFilterGRASSPlugins : String
     , uiFilterQGISPackages : String
     , uiFilterQGISPyPackages : String
     , uiFilterQGISPlugins : String
@@ -161,7 +182,14 @@ initialModel =
     , configPackages = NixModules.packages.packages
     , configGeoPackages = NixModules.packages.packages
 
-    -- apps
+    -- grass
+    , packagesGRASSAvailable = allGRASSPackages
+    , packagesGRASSPluginsAvailable = allGRASSPlugins
+    , configGRASSEnabled = NixModules.grass.enabled
+    , configGRASSPackage = Maybe.withDefault ( "", "" ) (List.head allGRASSPackages)
+    , configGRASSPlugins = NixModules.grass.plugins
+
+    -- qgis
     , packagesQGISAvailable = allQGISPackages
     , packagesQGISPluginsAvailable = allQGISPlugins
     , configQGISEnabled = NixModules.qgis.enabled
@@ -214,6 +242,8 @@ initialModel =
     , uiFilterLimit = 3
     , uiFilterLimitDefault = 3
     , uiFilterPackages = ""
+    , uiFilterGRASSPackages = ""
+    , uiFilterGRASSPlugins = ""
     , uiFilterQGISPackages = ""
     , uiFilterQGISPyPackages = ""
     , uiFilterQGISPlugins = ""
@@ -254,12 +284,39 @@ view model =
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
                     (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "DATA", "OTHER" ] model.uiActiveCategoryTab)
-
-                -- qgis app
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
                     (div [ class "apps" ]
-                        [ -- qgis
-                          div [ class "qgis" ]
+                        [ -- grass
+                          div [ class "grass" ]
+                            (optionalHtmlDivElements model.configGRASSEnabled
+                                [ hr [] []
+                                , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
+                                    [ text "GRASS GIS"
+                                    , isEnabledButton model.configGRASSEnabled ConfigGRASSEnable
+                                    ]
+                                ]
+                                [ p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "package"
+                                    ]
+                                , packagesHtmlList model.packagesGRASSAvailable [ model.configGRASSPackage ] model.uiFilterGRASSPackages model.uiFilterLimit ConfigGRASSSetPackage
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesGRASSAvailable) (List.length [ model.configGRASSPackage ])
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
+                                    ]
+                                , p [ class "fw-bold fs-4 d-flex justify-content-between align-items-center" ]
+                                    [ text "plugins"
+                                    , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for plugins ...", value model.uiFilterGRASSPlugins, onInput UiFilterGRASSPlugins ] []
+                                    ]
+                                , packagesHtmlList model.packagesGRASSPluginsAvailable model.configGRASSPlugins model.uiFilterGRASSPlugins model.uiFilterLimit ConfigGRASSAddPlugin
+                                , p [ class "text-secondary" ]
+                                    [ packagesCountText (List.length model.packagesGRASSPluginsAvailable) (List.length model.configGRASSPlugins)
+                                    , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
+                                    ]
+                                ]
+                            )
+
+                        -- qgis
+                        , div [ class "qgis" ]
                             (optionalHtmlDivElements model.configQGISEnabled
                                 [ hr [] []
                                 , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -760,6 +817,9 @@ type Msg
     = ConfigName String
     | ConfigAddPackage Package
     | ConfigAddGeoPackage Package
+    | ConfigGRASSEnable
+    | ConfigGRASSSetPackage Package
+    | ConfigGRASSAddPlugin Package
     | ConfigQGISEnable
     | ConfigQGISSetPackage Package
     | ConfigQGISAddPythonPackage Package
@@ -789,6 +849,7 @@ type Msg
       -- ui
     | UiSetActiveCategoryTab String
     | UiFilterPackages String
+    | UiFilterGRASSPlugins String
     | UiFilterQGISPythonPackages String
     | UiFilterQGISPlugins String
     | UiFilterPythonPackages String
@@ -811,6 +872,12 @@ buildNixConfig model =
     let
         selectedPackages =
             packagesListToNamesList model.configGeoPackages ++ packagesListToNamesList model.configPackages
+
+        selectedGRASSPackage =
+            packageToName model.configGRASSPackage
+
+        selectedGRASSPlugins =
+            packagesListToNamesList model.configGRASSPlugins
 
         selectedQGISPackage =
             packageToName model.configQGISPackage
@@ -840,6 +907,7 @@ buildNixConfig model =
         nixConfigBody =
             NixConfig.configNameTemplate
                 ++ NixConfig.configPackagesTemplate
+                ++ optionalString model.configGRASSEnabled NixConfig.configGRASSTemplate
                 ++ optionalString model.configQGISEnabled NixConfig.configQGISTemplate
                 ++ optionalString model.configPythonEnabled NixConfig.configPythonTemplate
                 ++ optionalString model.configJupyterEnabled NixConfig.configJupyterTemplate
@@ -855,6 +923,10 @@ buildNixConfig model =
     String.replace "<NAME>" (environmentName model.configName) nixConfig
         -- packages
         |> String.replace "<PACKAGES>" (String.join " " selectedPackages)
+        -- grass
+        |> String.replace "<GRASS-ENABLED>" (boolToString model.configGRASSEnabled)
+        |> String.replace "<GRASS-PACKAGE>" selectedGRASSPackage
+        |> String.replace "<GRASS-PLUGINS>" (String.join " " selectedGRASSPlugins)
         -- qgis
         |> String.replace "<QGIS-ENABLED>" (boolToString model.configQGISEnabled)
         |> String.replace "<QGIS-PACKAGE>" selectedQGISPackage
@@ -907,6 +979,26 @@ update msg model =
 
             else
                 { model | configGeoPackages = List.filter (\x -> x /= pkg) model.configGeoPackages }
+
+        ConfigGRASSEnable ->
+            { model
+                | configGRASSEnabled =
+                    if not model.configGRASSEnabled then
+                        True
+
+                    else
+                        False
+            }
+
+        ConfigGRASSSetPackage pkg ->
+            { model | configGRASSPackage = pkg }
+
+        ConfigGRASSAddPlugin pkg ->
+            if not (List.member pkg model.configGRASSPlugins) then
+                { model | configGRASSPlugins = model.configGRASSPlugins ++ [ pkg ] }
+
+            else
+                { model | configGRASSPlugins = List.filter (\x -> x /= pkg) model.configGRASSPlugins }
 
         ConfigQGISEnable ->
             { model
@@ -1085,6 +1177,9 @@ update msg model =
 
         UiFilterPostgresPackages pkg ->
             { model | uiFilterPgPackages = pkg }
+
+        UiFilterGRASSPlugins pkg ->
+            { model | uiFilterGRASSPlugins = pkg }
 
         UiFilterQGISPythonPackages pkg ->
             { model | uiFilterQGISPyPackages = pkg }
