@@ -236,7 +236,7 @@ initialModel =
     , nixConfig = ""
 
     -- UI section
-    , uiActiveCategoryTab = "packages"
+    , uiActiveCategoryTab = "apps"
 
     -- filters
     , uiFilterLimit = 3
@@ -283,8 +283,8 @@ view model =
 
                 -- tabs
                 , div [ class "d-flex btn-group align-items-center" ]
-                    (mainCategoryHtmlTab [ "PACKAGES", "LANGUAGES", "SERVICES", "DATA", "OTHER" ] model.uiActiveCategoryTab)
-                , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
+                    (mainCategoryHtmlTab [ "APPS", "LANGUAGES", "SERVICES", "DATA", "OTHER" ] model.uiActiveCategoryTab)
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "apps")
                     (div [ class "apps" ]
                         [ -- grass
                           div [ class "grass" ]
@@ -356,7 +356,7 @@ view model =
                     )
 
                 -- geospatial packages
-                , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "apps")
                     (div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
@@ -375,7 +375,7 @@ view model =
                     )
 
                 -- packages
-                , optionalHtmlDiv (model.uiActiveCategoryTab == "packages")
+                , optionalHtmlDiv (model.uiActiveCategoryTab == "apps")
                     (div [ class "packages" ]
                         [ p [ class "fw-bold fs-4" ]
                             [ text "nixpkgs"
