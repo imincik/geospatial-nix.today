@@ -66224,7 +66224,7 @@ var $author$project$HomePage$initialModel = {
 	I: $author$project$HomePage$allPythonPackages,
 	aD: $author$project$HomePage$allQGISPackages,
 	aE: $author$project$HomePage$allQGISPlugins,
-	o: 'packages',
+	o: 'apps',
 	aR: '',
 	ap: '',
 	aq: '',
@@ -68188,11 +68188,11 @@ var $author$project$HomePage$view = function (model) {
 								A2(
 									$author$project$HomePage$mainCategoryHtmlTab,
 									_List_fromArray(
-										['PACKAGES', 'LANGUAGES', 'SERVICES', 'DATA', 'OTHER']),
+										['APPS', 'LANGUAGES', 'SERVICES', 'DATA', 'OTHER']),
 									model.o)),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.o === 'packages',
+								model.o === 'apps',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -68434,7 +68434,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.o === 'packages',
+								model.o === 'apps',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
@@ -68493,7 +68493,7 @@ var $author$project$HomePage$view = function (model) {
 										]))),
 								A2(
 								$author$project$HomePage$optionalHtmlDiv,
-								model.o === 'packages',
+								model.o === 'apps',
 								A2(
 									$elm$html$Html$div,
 									_List_fromArray(
