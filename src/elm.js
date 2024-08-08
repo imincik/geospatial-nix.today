@@ -600,11 +600,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.aJ.ah === region.aP.ah)
+	if (region.aP.ak === region.aW.ak)
 	{
-		return 'on line ' + region.aJ.ah;
+		return 'on line ' + region.aP.ak;
 	}
-	return 'on lines ' + region.aJ.ah + ' through ' + region.aP.ah;
+	return 'on lines ' + region.aP.ak + ' through ' + region.aW.ak;
 }
 
 
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.bp,
-		impl.bF,
-		impl.bD,
+		impl.bx,
+		impl.bM,
+		impl.bK,
 		function() { return function() {} }
 	);
 });
@@ -2719,9 +2719,9 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		F: func(record.F),
-		aK: record.aK,
-		aF: record.aF
+		H: func(record.H),
+		aQ: record.aQ,
+		aL: record.aL
 	}
 });
 
@@ -2989,11 +2989,11 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.F;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aK;
+		var message = !tag ? value : tag < 3 ? value.a : value.H;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aQ;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.aF) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.aL) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3943,11 +3943,11 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.bp,
-		impl.bF,
-		impl.bD,
+		impl.bx,
+		impl.bM,
+		impl.bK,
 		function(sendToApp, initialModel) {
-			var view = impl.bG;
+			var view = impl.bN;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3979,12 +3979,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.bp,
-		impl.bF,
-		impl.bD,
+		impl.bx,
+		impl.bM,
+		impl.bK,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.aI && impl.aI(sendToApp)
-			var view = impl.bG;
+			var divertHrefToApp = impl.aO && impl.aO(sendToApp)
+			var view = impl.bN;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3992,12 +3992,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.bg);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.bo);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.bE) && (_VirtualDom_doc.title = title = doc.bE);
+				(title !== doc.bL) && (_VirtualDom_doc.title = title = doc.bL);
 			});
 		}
 	);
@@ -4053,12 +4053,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.bw;
-	var onUrlRequest = impl.bx;
+	var onUrlChange = impl.bE;
+	var onUrlRequest = impl.bF;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		aI: function(sendToApp)
+		aO: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4074,9 +4074,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.a2 === next.a2
-							&& curr.aT === next.aT
-							&& curr.a$.a === next.a$.a
+							&& curr.ba === next.ba
+							&& curr.a_ === next.a_
+							&& curr.a7.a === next.a7.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4084,13 +4084,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		bp: function(flags)
+		bx: function(flags)
 		{
-			return A3(impl.bp, flags, _Browser_getUrl(), key);
+			return A3(impl.bx, flags, _Browser_getUrl(), key);
 		},
-		bG: impl.bG,
-		bF: impl.bF,
-		bD: impl.bD
+		bN: impl.bN,
+		bM: impl.bM,
+		bK: impl.bK
 	});
 }
 
@@ -4156,17 +4156,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { bm: 'hidden', bi: 'visibilitychange' }
+		? { bu: 'hidden', bq: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { bm: 'mozHidden', bi: 'mozvisibilitychange' }
+		? { bu: 'mozHidden', bq: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { bm: 'msHidden', bi: 'msvisibilitychange' }
+		? { bu: 'msHidden', bq: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { bm: 'webkitHidden', bi: 'webkitvisibilitychange' }
-		: { bm: 'hidden', bi: 'visibilitychange' };
+		? { bu: 'webkitHidden', bq: 'webkitvisibilitychange' }
+		: { bu: 'hidden', bq: 'visibilitychange' };
 }
 
 
@@ -4247,12 +4247,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		a7: _Browser_getScene(),
-		ba: {
-			bc: _Browser_window.pageXOffset,
-			bd: _Browser_window.pageYOffset,
-			bb: _Browser_doc.documentElement.clientWidth,
-			aS: _Browser_doc.documentElement.clientHeight
+		bf: _Browser_getScene(),
+		bi: {
+			bk: _Browser_window.pageXOffset,
+			bl: _Browser_window.pageYOffset,
+			bj: _Browser_doc.documentElement.clientWidth,
+			aZ: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4262,8 +4262,8 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		bb: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		aS: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		bj: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		aZ: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4286,15 +4286,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			a7: {
-				bb: node.scrollWidth,
-				aS: node.scrollHeight
+			bf: {
+				bj: node.scrollWidth,
+				aZ: node.scrollHeight
 			},
-			ba: {
-				bc: node.scrollLeft,
-				bd: node.scrollTop,
-				bb: node.clientWidth,
-				aS: node.clientHeight
+			bi: {
+				bk: node.scrollLeft,
+				bl: node.scrollTop,
+				bj: node.clientWidth,
+				aZ: node.clientHeight
 			}
 		};
 	});
@@ -4324,18 +4324,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			a7: _Browser_getScene(),
-			ba: {
-				bc: x,
-				bd: y,
-				bb: _Browser_doc.documentElement.clientWidth,
-				aS: _Browser_doc.documentElement.clientHeight
+			bf: _Browser_getScene(),
+			bi: {
+				bk: x,
+				bl: y,
+				bj: _Browser_doc.documentElement.clientWidth,
+				aZ: _Browser_doc.documentElement.clientHeight
 			},
-			bk: {
-				bc: x + rect.left,
-				bd: y + rect.top,
-				bb: rect.width,
-				aS: rect.height
+			bs: {
+				bk: x + rect.left,
+				bl: y + rect.top,
+				bj: rect.width,
+				aZ: rect.height
 			}
 		};
 	});
@@ -4379,8 +4379,8 @@ var _Regex_never = /.^/;
 var _Regex_fromStringWith = F2(function(options, string)
 {
 	var flags = 'g';
-	if (options.bt) { flags += 'm'; }
-	if (options.bh) { flags += 'i'; }
+	if (options.bB) { flags += 'm'; }
+	if (options.bp) { flags += 'i'; }
 
 	try
 	{
@@ -4551,6 +4551,361 @@ var $elm$core$Set$toList = function (_v0) {
 	return $elm$core$Dict$keys(dict);
 };
 var $elm$core$Basics$GT = 2;
+var $author$project$GRASSPackages$packages = _List_fromArray(
+	[
+		_Utils_Tuple2('geopkgs.grass', '8.4.0')
+	]);
+var $author$project$HomePage$allGRASSPackages = $author$project$GRASSPackages$packages;
+var $author$project$GRASSPlugins$packages = _List_fromArray(
+	[
+		_Utils_Tuple2('geopkgs.grass-plugin-d-explanation-plot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-d-frame', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-d-mon2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-d-region-grid', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-d-vect-thematic2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-db-join', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-citation', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-compare-md5', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-copyall', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-download-location', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-isis3mt', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-proj-all', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-proj-identify', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-projpicker', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-g-rename-many', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-ann-maskrcnn', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-cutlines', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-cva', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-destripe', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-eb-deltat', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-eb-hsebal95', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-eb-z0m', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-eb-z0m0', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-edge', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-eodag', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-evapo-potrad', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-evapo-senay', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-evapo-zk', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-feotio2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-gabor', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-gcp', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-gravity', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-histo-match', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-image-bathymetry', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-in-probav', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-landsat', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-landsat8-swlst', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-lmf', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-lswt', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-modis', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-nightlights-intercalibration', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-ortho-corr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-points-auto', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-pysptools-unmix', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-rh', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-rotate', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-sar-speckle', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-segment-gsoc', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-segment-stats', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-segment-uspo', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-sentinel', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-signature-copy', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-signature-list', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-signature-remove', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-spec-sam', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-spec-unmix', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-superpixels-slic', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-theilsen', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-variance', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-water', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-wavelet', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-wi', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-i-zero2null', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-cdo-download', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-crawl-thredds', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-csv-clean', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-gcp-filter', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-printws', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-prism-download', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-m-tnm-download', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-accumulate', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-agent', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-area', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-area-createweight', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-basin', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-bearing-distance', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-bioclim', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-bitpattern', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-boxplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-catchment', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-category-trim', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-cell-area', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-centroids', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-change-info', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-clip', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-colors-contrastbrightness', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-colors-cubehelix', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-colors-matplotlib', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-colors-out_sld', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-confusionmatrix', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-connectivity', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-convergence', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-cpt2grass', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-crater', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-damflood', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-denoise', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-divergence', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-diversity', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-droka', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-edm-eval', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-euro-ecosystem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-exdet', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-extract', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-fidimo', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-fill-category', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-findtheriver', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-flexure', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-flip', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-flowaccumulation', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-flowfill', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-forcircular', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-forestfrag', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-fusion', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-futures', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-fuzzy-logic', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-fuzzy-set', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-fuzzy-system', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-gdd', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-gradient', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-green', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-gsflow-hydrodem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-gwr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-hants', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-hazard-flood', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-houghtransform', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-hydro-flatten', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-hydrodem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-hypso', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-in-ahn', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-in-nasadem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-in-pdal', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-in-srtm-region', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-in-usgs', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-in-wcs', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-jpdf', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-lake-series', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-landscape-evol', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-landscape-evol-old', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-le-pixel', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-learn-ml', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-learn-ml2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-local-relief', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mapcalc-tiled', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-massmov', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-maxent-lambdas', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-maxent-predict', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-maxent-train', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mblend', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-ahp', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-electre', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-input', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-output', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-promethee', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-roughset', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mcda-topsis', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-meb', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mess', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mregression-series', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-mwprecip', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-neighborhoodmatrix', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-niche-similarity', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-northerness-easterness', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-null-all', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-object-activelearning', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-object-spatialautocor', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-object-thickness', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-out-kde', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-out-legend', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-out-maxent_swd', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-out-ntv2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-out-tiff', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-patch-smooth', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-popgrowth', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-pops-spread', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-prominence', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-quantile-ref', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-random-walk', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-random-weight', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-recode-attr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-regression-series', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-resamp-tps', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-richdem-breachdepressions', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-richdem-filldepressions', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-richdem-flowaccumulation', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-richdem-resolveflats', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-richdem-terrainattribute', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-rock-stability', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-roughness-vector', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-sample-category', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-scatterplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-seasons', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-series-boxplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-series-decompose', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-series-diversity', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-series-filter', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-series-lwr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-shaded-pca', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-shalstab', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-sim-terrain', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-sim-water-mp', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-skyline', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-skyview', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-slope-direction', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-smooth-seg', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-soillossbare', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-soils-texture', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-basins', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-channel', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-distance', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-order', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-segment', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-slope', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-snap', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-stats', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-variables', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-stream-watersheds', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-subdayprecip-design', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-suitability-regions', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-sun-daily', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-sun-hourly', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-surf-idw2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-surf-nnbathy', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-survey', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-terrain-texture', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-texture-tiled', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-threshold', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-to-vect-lines', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-to-vect-tiled', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-tpi', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-traveltime', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-tri', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-univar2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-valley-bottom', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-vect-stats', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-vector-ruggedness', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-viewshed-cva', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-viewshed-exposure', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-vif', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-vol-dem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-wateroutlet-lessmem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-width-funct', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-windfetch', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r-zonal-classes', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r3-count-categories', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r3-forestfrag', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r3-profile', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r3-scatterplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r3-to-group', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-r3-what', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-boxplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-import-netcdf', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-kappa', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-line', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-null', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-out-xyz', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-patch', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-what-aggr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-t-rast-whatcsv', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-area-weigh', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-boxplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-build-pg', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-centerline', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-centerpoint', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-class-mlR', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-class-mlpy', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-clean-ogr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-colors2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-concave-hull', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-convert', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-convert-all', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-db-pyupdate', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-delaunay3d', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-ellipse', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-explode', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-external-all', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-faultdirections', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-fixed-segmentpoints', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-flexure', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-greedycolors', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-export', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-gravres', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-grid', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-hruparams', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-mapdata', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-reaches', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-gsflow-segments', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-habitat-dem', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-histogram', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-csv', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-gbif', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-geopaparazzi', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-gns', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-gps', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-natura2000', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-osm', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-ply', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-pygbif', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-redlist', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-survey', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-in-wfs2', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-isochrones', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-krige', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-kriging', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-label-sa', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-lidar-mcc', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-link-precip', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-mapcalc', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-maxent-swd', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-median', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-mrmr', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-multi2singlepart', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-neighborhoodmatrix', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-net-curvedarcs', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-net-salesman-opt', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-nnstat', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-out-gps', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-out-ply', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-out-png', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-percolate', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-ply-rectify', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-profile-points', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-rast-bufferstats', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-rast-move', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-scatterplot', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-sort-points', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-strds-stats', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-stream-inbasin', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-stream-network', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-stream-order', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-stream-profiler', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-surf-icw', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-surf-mass', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-surf-nnbathy', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-surf-tps', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-tin-to-rast', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-to-rast-multi', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-transects', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-vect-stats-multi', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-vol-idw', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-what-rast-label', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-what-rast-multi', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-what-spoly', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-v-what-strds-timestamp', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-wx-metadata', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-wx-stream', '6e961b3'),
+		_Utils_Tuple2('geopkgs.grass-plugin-wx-wms', '6e961b3')
+	]);
+var $author$project$HomePage$allGRASSPlugins = $author$project$GRASSPlugins$packages;
 var $author$project$GeoPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.gdal', '3.9.1'),
@@ -66115,13 +66470,14 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 var $author$project$HomePage$allQGISPlugins = $author$project$QGISPlugins$packages;
 var $elm$core$Basics$False = 1;
 var $author$project$NixModules$customProcess = {
-	U: false,
-	aB: {m: '', g: 'python -m http.server'}
+	M: false,
+	aH: {m: '', h: 'python -m http.server'}
 };
 var $author$project$NixModules$dataFromUrl = {
-	az: {m: '', g: '{ url = "https://geospatial-nix.today/ex/data1.csv"; hash = ""; }\n{ url = "https://geospatial-nix.today/ex/data2.csv"; hash = ""; }'},
-	U: false
+	aF: {m: '', h: '{ url = "https://geospatial-nix.today/ex/data1.csv"; hash = ""; }\n{ url = "https://geospatial-nix.today/ex/data2.csv"; hash = ""; }'},
+	M: false
 };
+var $author$project$NixModules$grass = {M: false, a6: _List_Nil};
 var $elm$core$Maybe$Just = function (a) {
 	return {$: 0, a: a};
 };
@@ -66136,27 +66492,27 @@ var $elm$core$List$head = function (list) {
 	}
 };
 var $author$project$NixModules$jupyter = {
-	U: false,
-	bq: {m: 'localhost', g: ''},
-	aW: {m: '8888', g: ''},
-	a3: _List_Nil,
-	aG: {m: '', g: 'c.ServerApp.answer_yes = False\nc.ServerApp.open_browser = False'}
+	M: false,
+	by: {m: 'localhost', h: ''},
+	a1: {m: '8888', h: ''},
+	bb: _List_Nil,
+	aM: {m: '', h: 'c.ServerApp.answer_yes = False\nc.ServerApp.open_browser = False'}
 };
-var $author$project$NixModules$openGL = {U: false};
-var $author$project$NixModules$packages = {at: _List_Nil};
+var $author$project$NixModules$openGL = {M: false};
+var $author$project$NixModules$packages = {ax: _List_Nil};
 var $author$project$NixModules$postgres = {
-	U: false,
-	aU: {m: '"--locale=C"\n"--encoding=UTF8\"', g: ''},
-	aC: {m: '', g: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
-	br: {m: 'localhost', g: ''},
-	aW: {m: '5432', g: ''},
-	at: _List_Nil,
-	aH: {m: '', g: 'log_connections = true;\nlog_statement = "all";'}
+	M: false,
+	a$: {m: '"--locale=C"\n"--encoding=UTF8\"', h: ''},
+	aI: {m: '', h: 'CREATE EXTENSION postgis;\nSELECT PostGIS_Full_Version();'},
+	bz: {m: 'localhost', h: ''},
+	a1: {m: '5432', h: ''},
+	ax: _List_Nil,
+	aN: {m: '', h: 'log_connections = true;\nlog_statement = "all";'}
 };
-var $author$project$NixModules$python = {U: false, at: _List_Nil, bA: false};
-var $author$project$NixModules$qgis = {U: false, bz: _List_Nil, a3: _List_Nil};
+var $author$project$NixModules$python = {M: false, ax: _List_Nil, bH: false};
+var $author$project$NixModules$qgis = {M: false, a6: _List_Nil, bb: _List_Nil};
 var $author$project$NixModules$shellHook = {
-	aA: {m: '', g: 'echo "$USER, welcome to the ${config.name} environment !\"'}
+	aG: {m: '', h: 'echo "$USER, welcome to the ${config.name} environment !\"'}
 };
 var $elm$core$Maybe$withDefault = F2(
 	function (_default, maybe) {
@@ -66168,54 +66524,64 @@ var $elm$core$Maybe$withDefault = F2(
 		}
 	});
 var $author$project$HomePage$initialModel = {
-	D: $author$project$NixModules$customProcess.U,
-	Z: $author$project$NixModules$customProcess.aB.m,
-	O: $author$project$NixModules$dataFromUrl.az.m,
-	P: $author$project$NixModules$shellHook.aA.m,
-	p: $author$project$NixModules$packages.at,
-	y: $author$project$NixModules$jupyter.U,
-	_: $author$project$NixModules$jupyter.bq.m,
-	aa: $author$project$NixModules$jupyter.aW.m,
-	l: $author$project$NixModules$jupyter.a3,
-	ab: $author$project$NixModules$jupyter.aG.m,
-	Q: 'My geospatial environment',
-	R: $author$project$NixModules$openGL.U,
-	q: $author$project$NixModules$packages.at,
-	z: $author$project$NixModules$postgres.U,
-	ac: $author$project$NixModules$postgres.aU.m,
-	ad: $author$project$NixModules$postgres.aC.m,
-	ae: $author$project$NixModules$postgres.br.m,
-	af: $author$project$NixModules$postgres.aW.m,
-	r: $author$project$NixModules$postgres.at,
-	ag: $author$project$NixModules$postgres.aH.m,
-	s: $author$project$NixModules$python.U,
-	t: $author$project$NixModules$python.at,
-	J: $author$project$NixModules$python.bA,
-	E: $author$project$NixModules$qgis.U,
-	S: A2(
+	E: $author$project$NixModules$customProcess.M,
+	ab: $author$project$NixModules$customProcess.aH.m,
+	R: $author$project$NixModules$dataFromUrl.aF.m,
+	S: $author$project$NixModules$shellHook.aG.m,
+	F: $author$project$NixModules$grass.M,
+	T: A2(
+		$elm$core$Maybe$withDefault,
+		_Utils_Tuple2('', ''),
+		$elm$core$List$head($author$project$HomePage$allGRASSPackages)),
+	p: $author$project$NixModules$grass.a6,
+	q: $author$project$NixModules$packages.ax,
+	z: $author$project$NixModules$jupyter.M,
+	ac: $author$project$NixModules$jupyter.by.m,
+	ad: $author$project$NixModules$jupyter.a1.m,
+	l: $author$project$NixModules$jupyter.bb,
+	ae: $author$project$NixModules$jupyter.aM.m,
+	U: 'My geospatial environment',
+	V: $author$project$NixModules$openGL.M,
+	r: $author$project$NixModules$packages.ax,
+	A: $author$project$NixModules$postgres.M,
+	af: $author$project$NixModules$postgres.a$.m,
+	ag: $author$project$NixModules$postgres.aI.m,
+	ah: $author$project$NixModules$postgres.bz.m,
+	ai: $author$project$NixModules$postgres.a1.m,
+	s: $author$project$NixModules$postgres.ax,
+	aj: $author$project$NixModules$postgres.aN.m,
+	t: $author$project$NixModules$python.M,
+	u: $author$project$NixModules$python.ax,
+	L: $author$project$NixModules$python.bH,
+	G: $author$project$NixModules$qgis.M,
+	W: A2(
 		$elm$core$Maybe$withDefault,
 		_Utils_Tuple2('', ''),
 		$elm$core$List$head($author$project$HomePage$allQGISPackages)),
-	u: $author$project$NixModules$qgis.bz,
-	v: $author$project$NixModules$qgis.a3,
-	ai: '',
-	as: '',
-	au: $author$project$HomePage$allPackages,
-	av: $author$project$HomePage$allGeoPackages,
-	aw: $author$project$HomePage$allPostgresPackages,
-	G: $author$project$HomePage$allPythonPackages,
-	ax: $author$project$HomePage$allQGISPackages,
-	ay: $author$project$HomePage$allQGISPlugins,
+	v: $author$project$NixModules$qgis.a6,
+	w: $author$project$NixModules$qgis.bb,
+	al: '',
+	aw: '',
+	ay: $author$project$HomePage$allPackages,
+	az: $author$project$HomePage$allGRASSPackages,
+	aA: $author$project$HomePage$allGRASSPlugins,
+	aB: $author$project$HomePage$allGeoPackages,
+	aC: $author$project$HomePage$allPostgresPackages,
+	I: $author$project$HomePage$allPythonPackages,
+	aD: $author$project$HomePage$allQGISPackages,
+	aE: $author$project$HomePage$allQGISPlugins,
 	o: 'packages',
-	am: '',
-	a: 3,
-	k: 3,
-	W: '',
-	an: '',
-	ao: '',
-	aL: '',
+	aR: '',
 	ap: '',
-	aq: ''
+	aq: '',
+	a: 3,
+	g: 3,
+	Z: '',
+	ar: '',
+	as: '',
+	aS: '',
+	at: '',
+	au: ''
 };
 var $elm$core$Result$Err = function (a) {
 	return {$: 1, a: a};
@@ -66635,7 +67001,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {aR: fragment, aT: host, aZ: path, a$: port_, a2: protocol, a4: query};
+		return {aY: fragment, a_: host, a4: path, a7: port_, ba: protocol, bc: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -66920,19 +67286,19 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $elm$browser$Browser$sandbox = function (impl) {
 	return _Browser_element(
 		{
-			bp: function (_v0) {
-				return _Utils_Tuple2(impl.bp, $elm$core$Platform$Cmd$none);
+			bx: function (_v0) {
+				return _Utils_Tuple2(impl.bx, $elm$core$Platform$Cmd$none);
 			},
-			bD: function (_v1) {
+			bK: function (_v1) {
 				return $elm$core$Platform$Sub$none;
 			},
-			bF: F2(
+			bM: F2(
 				function (msg, model) {
 					return _Utils_Tuple2(
-						A2(impl.bF, msg, model),
+						A2(impl.bM, msg, model),
 						$elm$core$Platform$Cmd$none);
 				}),
-			bG: impl.bG
+			bN: impl.bN
 		});
 };
 var $author$project$HomePage$boolToString = function (value) {
@@ -66941,6 +67307,7 @@ var $author$project$HomePage$boolToString = function (value) {
 var $author$project$NixConfig$configCustomProcessTemplate = '\n  processes.custom.exec = \'\'\n    <CUSTOM-PROCESS>\n  \'\';\n';
 var $author$project$NixConfig$configDataFromUrlTemplate = '\n  data.fromUrl = {\n    enable = true;\n    datasets = [ <DATA-FROM-URL-DATASETS> ];\n  };\n';
 var $author$project$NixConfig$configEnterShellTemplate = '\n  enterShell = \'\'\n    <SHELL-HOOK>\n  \'\';\n';
+var $author$project$NixConfig$configGRASSTemplate = '\n  applications.grass = {\n    enable = <GRASS-ENABLED>;\n    package = <GRASS-PACKAGE>;\n    plugins = p: [ <GRASS-PLUGINS> ];\n  };\n';
 var $author$project$NixConfig$configJupyterKernelsTemplate = '\n    kernels = {\n      geospatial =\n        let\n          env = pkgs.python3.withPackages (p: [ pkgs.python3Packages.ipykernel <JUPYTER-PYTHON-PACKAGES> ]);\n          logoPath = "${env}/${env.sitePackages}/ipykernel/resources";\n        in\n        {\n          displayName = "Geospatial Python kernel";\n          language = "python";\n          argv = [\n            "${env.interpreter}"\n            "-m"\n            "ipykernel_launcher"\n            "-f"\n            "{connection_file}"\n          ];\n          logo32 = "${logoPath}/logo-32x32.png";\n          logo64 = "${logoPath}/logo-64x64.png";\n        };\n    };\n';
 var $author$project$NixConfig$configJupyterTemplate = '\n  services.jupyter = {\n    enable = <JUPYTER-ENABLED>;\n    <JUPYTER-KERNELS>\n    ip = "<JUPYTER-LISTEN-ADDRESS>";\n    port = <JUPYTER-LISTEN-PORT>;\n    rawConfig = \'\'\n      <JUPYTER-RAW-CONFIG>\n    \'\';\n  };\n';
 var $author$project$NixConfig$configNameTemplate = '\n  name = "<NAME>";\n';
@@ -66965,13 +67332,13 @@ var $author$project$HomePage$environmentName = function (name) {
 var $elm$core$Basics$neq = _Utils_notEqual;
 var $elm$regex$Regex$Match = F4(
 	function (match, index, number, submatches) {
-		return {bo: index, bs: match, bv: number, bC: submatches};
+		return {bw: index, bA: match, bD: number, bJ: submatches};
 	});
 var $elm$regex$Regex$fromStringWith = _Regex_fromStringWith;
 var $elm$regex$Regex$fromString = function (string) {
 	return A2(
 		$elm$regex$Regex$fromStringWith,
-		{bh: false, bt: false},
+		{bp: false, bB: false},
 		string);
 };
 var $elm$regex$Regex$never = _Regex_never;
@@ -67009,69 +67376,73 @@ var $author$project$HomePage$packagesListToNamesList = function (packages) {
 		packages);
 };
 var $author$project$HomePage$buildNixConfig = function (model) {
-	var selectedQGISPythonPackages = $author$project$HomePage$packagesListToNamesList(model.v);
-	var selectedQGISPlugins = $author$project$HomePage$packagesListToNamesList(model.u);
-	var selectedQGISPackage = $author$project$HomePage$packageToName(model.S);
-	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.t);
-	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.r);
+	var selectedQGISPythonPackages = $author$project$HomePage$packagesListToNamesList(model.w);
+	var selectedQGISPlugins = $author$project$HomePage$packagesListToNamesList(model.v);
+	var selectedQGISPackage = $author$project$HomePage$packageToName(model.W);
+	var selectedPyPackages = $author$project$HomePage$packagesListToNamesList(model.u);
+	var selectedPgPackages = $author$project$HomePage$packagesListToNamesList(model.s);
 	var selectedPackages = _Utils_ap(
-		$author$project$HomePage$packagesListToNamesList(model.p),
-		$author$project$HomePage$packagesListToNamesList(model.q));
+		$author$project$HomePage$packagesListToNamesList(model.q),
+		$author$project$HomePage$packagesListToNamesList(model.r));
 	var selectedJupyterPythonPackages = $author$project$HomePage$packagesListToNamesList(model.l);
 	var selectedJupyterPythonKernels = ($elm$core$List$length(model.l) > 0) ? $author$project$NixConfig$configJupyterKernelsTemplate : '';
+	var selectedGRASSPlugins = $author$project$HomePage$packagesListToNamesList(model.p);
+	var selectedGRASSPackage = $author$project$HomePage$packageToName(model.T);
 	var nixConfigBody = _Utils_ap(
 		$author$project$NixConfig$configNameTemplate,
 		_Utils_ap(
 			$author$project$NixConfig$configPackagesTemplate,
 			_Utils_ap(
-				A2($author$project$HomePage$optionalString, model.E, $author$project$NixConfig$configQGISTemplate),
+				A2($author$project$HomePage$optionalString, model.F, $author$project$NixConfig$configGRASSTemplate),
 				_Utils_ap(
-					A2($author$project$HomePage$optionalString, model.s, $author$project$NixConfig$configPythonTemplate),
+					A2($author$project$HomePage$optionalString, model.G, $author$project$NixConfig$configQGISTemplate),
 					_Utils_ap(
-						A2($author$project$HomePage$optionalString, model.y, $author$project$NixConfig$configJupyterTemplate),
+						A2($author$project$HomePage$optionalString, model.t, $author$project$NixConfig$configPythonTemplate),
 						_Utils_ap(
-							A2($author$project$HomePage$optionalString, model.z, $author$project$NixConfig$configPostgresTemplate),
+							A2($author$project$HomePage$optionalString, model.z, $author$project$NixConfig$configJupyterTemplate),
 							_Utils_ap(
-								A2($author$project$HomePage$optionalString, model.D, $author$project$NixConfig$configCustomProcessTemplate),
+								A2($author$project$HomePage$optionalString, model.A, $author$project$NixConfig$configPostgresTemplate),
 								_Utils_ap(
-									A2($author$project$HomePage$optionalString, model.O !== '', $author$project$NixConfig$configDataFromUrlTemplate),
+									A2($author$project$HomePage$optionalString, model.E, $author$project$NixConfig$configCustomProcessTemplate),
 									_Utils_ap(
-										A2($author$project$HomePage$optionalString, model.R, $author$project$NixConfig$configOpenGLTemplate),
-										A2($author$project$HomePage$optionalString, model.P !== '', $author$project$NixConfig$configEnterShellTemplate))))))))));
+										A2($author$project$HomePage$optionalString, model.R !== '', $author$project$NixConfig$configDataFromUrlTemplate),
+										_Utils_ap(
+											A2($author$project$HomePage$optionalString, model.V, $author$project$NixConfig$configOpenGLTemplate),
+											A2($author$project$HomePage$optionalString, model.S !== '', $author$project$NixConfig$configEnterShellTemplate)))))))))));
 	var nixConfig = A3($elm$core$String$replace, '<CONFIG-BODY>', nixConfigBody, $author$project$NixConfig$configTemplate);
 	return $author$project$HomePage$nixCodeCleanup(
 		A3(
 			$elm$core$String$replace,
 			'<SHELL-HOOK>',
-			model.P,
+			model.S,
 			A3(
 				$elm$core$String$replace,
 				'<CUSTOM-PROCESS>',
-				model.Z,
+				model.ab,
 				A3(
 					$elm$core$String$replace,
 					'<DATA-FROM-URL-DATASETS>',
-					A3($elm$core$String$replace, '\n', ' ', model.O),
+					A3($elm$core$String$replace, '\n', ' ', model.R),
 					A3(
 						$elm$core$String$replace,
 						'<POSTGRES-SETTINGS>',
-						A3($elm$core$String$replace, '\n', ' ', model.ag),
+						A3($elm$core$String$replace, '\n', ' ', model.aj),
 						A3(
 							$elm$core$String$replace,
 							'<POSTGRES-LISTEN-PORT>',
-							model.af,
+							model.ai,
 							A3(
 								$elm$core$String$replace,
 								'<POSTGRES-LISTEN-ADDRESSES>',
-								model.ae,
+								model.ah,
 								A3(
 									$elm$core$String$replace,
 									'<POSTGRES-INITIAL-SCRIPT>',
-									A3($elm$core$String$replace, '\n', ' ', model.ad),
+									A3($elm$core$String$replace, '\n', ' ', model.ag),
 									A3(
 										$elm$core$String$replace,
 										'<POSTGRES-INITDB-ARGS>',
-										A3($elm$core$String$replace, '\n', ' ', model.ac),
+										A3($elm$core$String$replace, '\n', ' ', model.af),
 										A3(
 											$elm$core$String$replace,
 											'<POSTGRES-PACKAGES>',
@@ -67079,19 +67450,19 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 											A3(
 												$elm$core$String$replace,
 												'<POSTGRES-ENABLED>',
-												$author$project$HomePage$boolToString(model.z),
+												$author$project$HomePage$boolToString(model.A),
 												A3(
 													$elm$core$String$replace,
 													'<JUPYTER-RAW-CONFIG>',
-													A3($elm$core$String$replace, '\n', '\n      ', model.ab),
+													A3($elm$core$String$replace, '\n', '\n      ', model.ae),
 													A3(
 														$elm$core$String$replace,
 														'<JUPYTER-LISTEN-PORT>',
-														model.aa,
+														model.ad,
 														A3(
 															$elm$core$String$replace,
 															'<JUPYTER-LISTEN-ADDRESS>',
-															model._,
+															model.ac,
 															A3(
 																$elm$core$String$replace,
 																'<JUPYTER-PYTHON-PACKAGES>',
@@ -67103,11 +67474,11 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 																	A3(
 																		$elm$core$String$replace,
 																		'<JUPYTER-ENABLED>',
-																		$author$project$HomePage$boolToString(model.y),
+																		$author$project$HomePage$boolToString(model.z),
 																		A3(
 																			$elm$core$String$replace,
 																			'<PYTHON-POETRY-ENABLED>',
-																			$author$project$HomePage$boolToString(model.J),
+																			$author$project$HomePage$boolToString(model.L),
 																			A3(
 																				$elm$core$String$replace,
 																				'<PYTHON-PACKAGES>',
@@ -67115,7 +67486,7 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 																				A3(
 																					$elm$core$String$replace,
 																					'<PYTHON-ENABLED>',
-																					$author$project$HomePage$boolToString(model.s),
+																					$author$project$HomePage$boolToString(model.t),
 																					A3(
 																						$elm$core$String$replace,
 																						'<QGIS-PLUGINS>',
@@ -67131,23 +67502,35 @@ var $author$project$HomePage$buildNixConfig = function (model) {
 																								A3(
 																									$elm$core$String$replace,
 																									'<QGIS-ENABLED>',
-																									$author$project$HomePage$boolToString(model.E),
+																									$author$project$HomePage$boolToString(model.G),
 																									A3(
 																										$elm$core$String$replace,
-																										'<PACKAGES>',
-																										A2($elm$core$String$join, ' ', selectedPackages),
+																										'<GRASS-PLUGINS>',
+																										A2($elm$core$String$join, ' ', selectedGRASSPlugins),
 																										A3(
 																											$elm$core$String$replace,
-																											'<NAME>',
-																											$author$project$HomePage$environmentName(model.Q),
-																											nixConfig))))))))))))))))))))))))));
+																											'<GRASS-PACKAGE>',
+																											selectedGRASSPackage,
+																											A3(
+																												$elm$core$String$replace,
+																												'<GRASS-ENABLED>',
+																												$author$project$HomePage$boolToString(model.F),
+																												A3(
+																													$elm$core$String$replace,
+																													'<PACKAGES>',
+																													A2($elm$core$String$join, ' ', selectedPackages),
+																													A3(
+																														$elm$core$String$replace,
+																														'<NAME>',
+																														$author$project$HomePage$environmentName(model.U),
+																														nixConfig)))))))))))))))))))))))))))));
 };
 var $author$project$Texts$initTemplate = '\nmkdir <NAME> && cd <NAME>\n\ngit init\nnix run github:imincik/geospatial-nix.env/latest#geonixcli -- init\ngit add flake.nix geonix.nix\n';
 var $author$project$HomePage$buildNixInit = function (model) {
 	return A3(
 		$elm$core$String$replace,
 		'<NAME>',
-		$author$project$HomePage$environmentName(model.Q),
+		$author$project$HomePage$environmentName(model.U),
 		$author$project$Texts$initTemplate);
 };
 var $elm$core$List$filter = F2(
@@ -67199,8 +67582,27 @@ var $author$project$HomePage$update = F2(
 				var name = msg.a;
 				return _Utils_update(
 					model,
-					{Q: name});
+					{U: name});
 			case 1:
+				var pkg = msg.a;
+				return (!A2($elm$core$List$member, pkg, model.r)) ? _Utils_update(
+					model,
+					{
+						r: _Utils_ap(
+							model.r,
+							_List_fromArray(
+								[pkg]))
+					}) : _Utils_update(
+					model,
+					{
+						r: A2(
+							$elm$core$List$filter,
+							function (x) {
+								return !_Utils_eq(x, pkg);
+							},
+							model.r)
+					});
+			case 2:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.q)) ? _Utils_update(
 					model,
@@ -67219,7 +67621,18 @@ var $author$project$HomePage$update = F2(
 							},
 							model.q)
 					});
-			case 2:
+			case 3:
+				return _Utils_update(
+					model,
+					{
+						F: (!model.F) ? true : false
+					});
+			case 4:
+				var pkg = msg.a;
+				return _Utils_update(
+					model,
+					{T: pkg});
+			case 5:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.p)) ? _Utils_update(
 					model,
@@ -67238,18 +67651,37 @@ var $author$project$HomePage$update = F2(
 							},
 							model.p)
 					});
-			case 3:
+			case 6:
 				return _Utils_update(
 					model,
 					{
-						E: (!model.E) ? true : false
+						G: (!model.G) ? true : false
 					});
-			case 4:
+			case 7:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{S: pkg});
-			case 5:
+					{W: pkg});
+			case 8:
+				var pkg = msg.a;
+				return (!A2($elm$core$List$member, pkg, model.w)) ? _Utils_update(
+					model,
+					{
+						w: _Utils_ap(
+							model.w,
+							_List_fromArray(
+								[pkg]))
+					}) : _Utils_update(
+					model,
+					{
+						w: A2(
+							$elm$core$List$filter,
+							function (x) {
+								return !_Utils_eq(x, pkg);
+							},
+							model.w)
+					});
+			case 9:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.v)) ? _Utils_update(
 					model,
@@ -67268,11 +67700,18 @@ var $author$project$HomePage$update = F2(
 							},
 							model.v)
 					});
-			case 6:
+			case 10:
+				return _Utils_update(
+					model,
+					{
+						t: (!model.t) ? true : false
+					});
+			case 11:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.u)) ? _Utils_update(
 					model,
 					{
+						t: true,
 						u: _Utils_ap(
 							model.u,
 							_List_fromArray(
@@ -67287,51 +67726,25 @@ var $author$project$HomePage$update = F2(
 							},
 							model.u)
 					});
-			case 7:
+			case 12:
 				return _Utils_update(
 					model,
 					{
-						s: (!model.s) ? true : false
+						t: (!model.L) ? true : true,
+						L: (!model.L) ? true : false
 					});
-			case 8:
-				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.t)) ? _Utils_update(
-					model,
-					{
-						s: true,
-						t: _Utils_ap(
-							model.t,
-							_List_fromArray(
-								[pkg]))
-					}) : _Utils_update(
-					model,
-					{
-						t: A2(
-							$elm$core$List$filter,
-							function (x) {
-								return !_Utils_eq(x, pkg);
-							},
-							model.t)
-					});
-			case 9:
+			case 13:
 				return _Utils_update(
 					model,
 					{
-						s: (!model.J) ? true : true,
-						J: (!model.J) ? true : false
+						z: (!model.z) ? true : false
 					});
-			case 10:
-				return _Utils_update(
-					model,
-					{
-						y: (!model.y) ? true : false
-					});
-			case 11:
+			case 14:
 				var pkg = msg.a;
 				return (!A2($elm$core$List$member, pkg, model.l)) ? _Utils_update(
 					model,
 					{
-						y: true,
+						z: true,
 						l: _Utils_ap(
 							model.l,
 							_List_fromArray(
@@ -67346,62 +67759,47 @@ var $author$project$HomePage$update = F2(
 							},
 							model.l)
 					});
-			case 12:
-				var val = msg.a;
-				return _Utils_update(
-					model,
-					{_: val});
-			case 13:
-				var val = msg.a;
-				return _Utils_update(
-					model,
-					{aa: val});
-			case 14:
-				var val = msg.a;
-				return _Utils_update(
-					model,
-					{ab: val});
 			case 15:
+				var val = msg.a;
+				return _Utils_update(
+					model,
+					{ac: val});
+			case 16:
+				var val = msg.a;
+				return _Utils_update(
+					model,
+					{ad: val});
+			case 17:
+				var val = msg.a;
+				return _Utils_update(
+					model,
+					{ae: val});
+			case 18:
 				return _Utils_update(
 					model,
 					{
-						z: (!model.z) ? true : false
+						A: (!model.A) ? true : false
 					});
-			case 16:
+			case 19:
 				var pkg = msg.a;
-				return (!A2($elm$core$List$member, pkg, model.r)) ? _Utils_update(
+				return (!A2($elm$core$List$member, pkg, model.s)) ? _Utils_update(
 					model,
 					{
-						z: true,
-						r: _Utils_ap(
-							model.r,
+						A: true,
+						s: _Utils_ap(
+							model.s,
 							_List_fromArray(
 								[pkg]))
 					}) : _Utils_update(
 					model,
 					{
-						r: A2(
+						s: A2(
 							$elm$core$List$filter,
 							function (x) {
 								return !_Utils_eq(x, pkg);
 							},
-							model.r)
+							model.s)
 					});
-			case 17:
-				var val = msg.a;
-				return _Utils_update(
-					model,
-					{ac: val});
-			case 18:
-				var val = msg.a;
-				return _Utils_update(
-					model,
-					{ad: val});
-			case 19:
-				var val = msg.a;
-				return _Utils_update(
-					model,
-					{ae: val});
 			case 20:
 				var val = msg.a;
 				return _Utils_update(
@@ -67413,80 +67811,100 @@ var $author$project$HomePage$update = F2(
 					model,
 					{ag: val});
 			case 22:
+				var val = msg.a;
 				return _Utils_update(
 					model,
-					{
-						D: (!model.D) ? true : false
-					});
+					{ah: val});
 			case 23:
-				var script = msg.a;
+				var val = msg.a;
 				return _Utils_update(
 					model,
-					{D: true, Z: script});
+					{ai: val});
 			case 24:
-				var datasets = msg.a;
+				var val = msg.a;
 				return _Utils_update(
 					model,
-					{O: datasets});
+					{aj: val});
 			case 25:
 				return _Utils_update(
 					model,
 					{
-						R: (!model.R) ? true : false
+						E: (!model.E) ? true : false
 					});
 			case 26:
 				var script = msg.a;
 				return _Utils_update(
 					model,
-					{P: script});
+					{E: true, ab: script});
 			case 27:
+				var datasets = msg.a;
+				return _Utils_update(
+					model,
+					{R: datasets});
+			case 28:
 				return _Utils_update(
 					model,
 					{
-						ai: $author$project$HomePage$buildNixConfig(model),
-						as: $author$project$HomePage$buildNixInit(model)
+						V: (!model.V) ? true : false
 					});
-			case 28:
+			case 29:
+				var script = msg.a;
+				return _Utils_update(
+					model,
+					{S: script});
+			case 30:
+				return _Utils_update(
+					model,
+					{
+						al: $author$project$HomePage$buildNixConfig(model),
+						aw: $author$project$HomePage$buildNixInit(model)
+					});
+			case 31:
 				var tab = msg.a;
 				return _Utils_update(
 					model,
 					{o: tab});
-			case 35:
+			case 39:
 				return _Utils_update(
 					model,
 					{
-						a: (_Utils_cmp(model.a, 4 * model.k) < 0) ? (2 * model.a) : model.k
+						a: (_Utils_cmp(model.a, 4 * model.g) < 0) ? (2 * model.a) : model.g
 					});
-			case 29:
-				var pkg = msg.a;
-				return _Utils_update(
-					model,
-					{W: pkg});
 			case 32:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{ao: pkg});
-			case 33:
+					{Z: pkg});
+			case 36:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
-					{am: pkg});
-			case 34:
-				var pkg = msg.a;
-				return _Utils_update(
-					model,
-					{an: pkg});
-			case 30:
+					{as: pkg});
+			case 37:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
 					{aq: pkg});
-			default:
+			case 38:
+				var pkg = msg.a;
+				return _Utils_update(
+					model,
+					{ar: pkg});
+			case 33:
 				var pkg = msg.a;
 				return _Utils_update(
 					model,
 					{ap: pkg});
+			case 34:
+				var pkg = msg.a;
+				return _Utils_update(
+					model,
+					{au: pkg});
+			default:
+				var pkg = msg.a;
+				return _Utils_update(
+					model,
+					{at: pkg});
 		}
 	});
 var $author$project$HomePage$ConfigAddGeoPackage = function (a) {
@@ -67495,85 +67913,95 @@ var $author$project$HomePage$ConfigAddGeoPackage = function (a) {
 var $author$project$HomePage$ConfigAddPackage = function (a) {
 	return {$: 1, a: a};
 };
-var $author$project$HomePage$ConfigCustomProcessEnable = {$: 22};
+var $author$project$HomePage$ConfigCustomProcessEnable = {$: 25};
 var $author$project$HomePage$ConfigCustomProcessExec = function (a) {
-	return {$: 23, a: a};
+	return {$: 26, a: a};
 };
 var $author$project$HomePage$ConfigDataFromUrlEnable = function (a) {
-	return {$: 24, a: a};
+	return {$: 27, a: a};
+};
+var $author$project$HomePage$ConfigGRASSAddPlugin = function (a) {
+	return {$: 5, a: a};
+};
+var $author$project$HomePage$ConfigGRASSEnable = {$: 3};
+var $author$project$HomePage$ConfigGRASSSetPackage = function (a) {
+	return {$: 4, a: a};
 };
 var $author$project$HomePage$ConfigJupyterAddPythonPackage = function (a) {
-	return {$: 11, a: a};
+	return {$: 14, a: a};
 };
-var $author$project$HomePage$ConfigJupyterEnable = {$: 10};
+var $author$project$HomePage$ConfigJupyterEnable = {$: 13};
 var $author$project$HomePage$ConfigJupyterListenAddress = function (a) {
-	return {$: 12, a: a};
+	return {$: 15, a: a};
 };
 var $author$project$HomePage$ConfigJupyterListenPort = function (a) {
-	return {$: 13, a: a};
+	return {$: 16, a: a};
 };
 var $author$project$HomePage$ConfigJupyterRawConfig = function (a) {
-	return {$: 14, a: a};
+	return {$: 17, a: a};
 };
 var $author$project$HomePage$ConfigName = function (a) {
 	return {$: 0, a: a};
 };
-var $author$project$HomePage$ConfigOpenGLEnable = {$: 25};
+var $author$project$HomePage$ConfigOpenGLEnable = {$: 28};
 var $author$project$HomePage$ConfigPostgresAddPackage = function (a) {
-	return {$: 16, a: a};
-};
-var $author$project$HomePage$ConfigPostgresEnable = {$: 15};
-var $author$project$HomePage$ConfigPostgresInitdbArgs = function (a) {
-	return {$: 17, a: a};
-};
-var $author$project$HomePage$ConfigPostgresInitialScript = function (a) {
-	return {$: 18, a: a};
-};
-var $author$project$HomePage$ConfigPostgresListenAddresses = function (a) {
 	return {$: 19, a: a};
 };
-var $author$project$HomePage$ConfigPostgresListenPort = function (a) {
+var $author$project$HomePage$ConfigPostgresEnable = {$: 18};
+var $author$project$HomePage$ConfigPostgresInitdbArgs = function (a) {
 	return {$: 20, a: a};
 };
-var $author$project$HomePage$ConfigPostgresSettings = function (a) {
+var $author$project$HomePage$ConfigPostgresInitialScript = function (a) {
 	return {$: 21, a: a};
 };
-var $author$project$HomePage$ConfigPythonAddPackage = function (a) {
-	return {$: 8, a: a};
+var $author$project$HomePage$ConfigPostgresListenAddresses = function (a) {
+	return {$: 22, a: a};
 };
-var $author$project$HomePage$ConfigPythonEnable = {$: 7};
-var $author$project$HomePage$ConfigPythonPoetryEnable = {$: 9};
+var $author$project$HomePage$ConfigPostgresListenPort = function (a) {
+	return {$: 23, a: a};
+};
+var $author$project$HomePage$ConfigPostgresSettings = function (a) {
+	return {$: 24, a: a};
+};
+var $author$project$HomePage$ConfigPythonAddPackage = function (a) {
+	return {$: 11, a: a};
+};
+var $author$project$HomePage$ConfigPythonEnable = {$: 10};
+var $author$project$HomePage$ConfigPythonPoetryEnable = {$: 12};
 var $author$project$HomePage$ConfigQGISAddPlugin = function (a) {
-	return {$: 6, a: a};
+	return {$: 9, a: a};
 };
 var $author$project$HomePage$ConfigQGISAddPythonPackage = function (a) {
-	return {$: 5, a: a};
+	return {$: 8, a: a};
 };
-var $author$project$HomePage$ConfigQGISEnable = {$: 3};
+var $author$project$HomePage$ConfigQGISEnable = {$: 6};
 var $author$project$HomePage$ConfigQGISSetPackage = function (a) {
-	return {$: 4, a: a};
+	return {$: 7, a: a};
 };
 var $author$project$HomePage$ConfigShellHookEnable = function (a) {
-	return {$: 26, a: a};
-};
-var $author$project$HomePage$CreateEnvironment = {$: 27};
-var $author$project$HomePage$UiFilterJupyterPackages = function (a) {
-	return {$: 33, a: a};
-};
-var $author$project$HomePage$UiFilterPackages = function (a) {
 	return {$: 29, a: a};
 };
-var $author$project$HomePage$UiFilterPostgresPackages = function (a) {
-	return {$: 34, a: a};
+var $author$project$HomePage$CreateEnvironment = {$: 30};
+var $author$project$HomePage$UiFilterGRASSPlugins = function (a) {
+	return {$: 33, a: a};
 };
-var $author$project$HomePage$UiFilterPythonPackages = function (a) {
+var $author$project$HomePage$UiFilterJupyterPackages = function (a) {
+	return {$: 37, a: a};
+};
+var $author$project$HomePage$UiFilterPackages = function (a) {
 	return {$: 32, a: a};
 };
+var $author$project$HomePage$UiFilterPostgresPackages = function (a) {
+	return {$: 38, a: a};
+};
+var $author$project$HomePage$UiFilterPythonPackages = function (a) {
+	return {$: 36, a: a};
+};
 var $author$project$HomePage$UiFilterQGISPlugins = function (a) {
-	return {$: 31, a: a};
+	return {$: 35, a: a};
 };
 var $author$project$HomePage$UiFilterQGISPythonPackages = function (a) {
-	return {$: 30, a: a};
+	return {$: 34, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Texts$aboutText = '\nCreate an isolated, reproducible environment with all software, services\nand data declared in a single configuration file. Run it on any Linux machine or\nscale it with containers.\n';
@@ -67678,7 +68106,7 @@ var $author$project$HomePage$isEnabledButton = F2(
 				]));
 	});
 var $author$project$HomePage$UiSetActiveCategoryTab = function (a) {
-	return {$: 28, a: a};
+	return {$: 31, a: a};
 };
 var $author$project$HomePage$mainCategoryHtmlTab = F2(
 	function (buttons, activeButton) {
@@ -67702,7 +68130,7 @@ var $author$project$HomePage$mainCategoryHtmlTab = F2(
 		};
 		return A2($elm$core$List$map, buttonItem, buttons);
 	});
-var $author$project$HomePage$UiUpdateFilterLimit = {$: 35};
+var $author$project$HomePage$UiUpdateFilterLimit = {$: 39};
 var $author$project$HomePage$morePackagesButton = F2(
 	function (filterLimit, filterLimitDefault) {
 		return A2(
@@ -68074,7 +68502,7 @@ var $author$project$HomePage$view = function (model) {
 												$elm$html$Html$Attributes$class('form-control form-control-lg'),
 												A2($elm$html$Html$Attributes$style, 'margin', '10px'),
 												$elm$html$Html$Attributes$placeholder('Environment name ...'),
-												$elm$html$Html$Attributes$value(model.Q),
+												$elm$html$Html$Attributes$value(model.U),
 												$elm$html$Html$Events$onInput($author$project$HomePage$ConfigName)
 											]),
 										_List_Nil),
@@ -68123,11 +68551,11 @@ var $author$project$HomePage$view = function (model) {
 											$elm$html$Html$div,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('qgis')
+													$elm$html$Html$Attributes$class('grass')
 												]),
 											A3(
 												$author$project$HomePage$optionalHtmlDivElements,
-												model.E,
+												model.F,
 												_List_fromArray(
 													[
 														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
@@ -68139,8 +68567,8 @@ var $author$project$HomePage$view = function (model) {
 															]),
 														_List_fromArray(
 															[
-																$elm$html$Html$text('QGIS'),
-																A2($author$project$HomePage$isEnabledButton, model.E, $author$project$HomePage$ConfigQGISEnable)
+																$elm$html$Html$text('GRASS GIS'),
+																A2($author$project$HomePage$isEnabledButton, model.F, $author$project$HomePage$ConfigGRASSEnable)
 															]))
 													]),
 												_List_fromArray(
@@ -68157,12 +68585,12 @@ var $author$project$HomePage$view = function (model) {
 															])),
 														A5(
 														$author$project$HomePage$packagesHtmlList,
-														model.ax,
+														model.az,
 														_List_fromArray(
-															[model.S]),
-														model.aL,
+															[model.T]),
+														model.aR,
 														model.a,
-														$author$project$HomePage$ConfigQGISSetPackage),
+														$author$project$HomePage$ConfigGRASSSetPackage),
 														A2(
 														$elm$html$Html$p,
 														_List_fromArray(
@@ -68173,47 +68601,11 @@ var $author$project$HomePage$view = function (model) {
 															[
 																A2(
 																$author$project$HomePage$packagesCountText,
-																$elm$core$List$length(model.ax),
+																$elm$core$List$length(model.az),
 																$elm$core$List$length(
 																	_List_fromArray(
-																		[model.S]))),
-																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
-															])),
-														A2(
-														$elm$html$Html$p,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
-															]),
-														_List_fromArray(
-															[
-																$elm$html$Html$text('python'),
-																A2(
-																$elm$html$Html$input,
-																_List_fromArray(
-																	[
-																		$elm$html$Html$Attributes$class('form-control form-control-md'),
-																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
-																		$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-																		$elm$html$Html$Attributes$value(model.aq),
-																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterQGISPythonPackages)
-																	]),
-																_List_Nil)
-															])),
-														A5($author$project$HomePage$packagesHtmlList, model.G, model.v, model.aq, model.a, $author$project$HomePage$ConfigQGISAddPythonPackage),
-														A2(
-														$elm$html$Html$p,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$class('text-secondary')
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$author$project$HomePage$packagesCountText,
-																$elm$core$List$length(model.G),
-																$elm$core$List$length(model.v)),
-																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+																		[model.T]))),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 															])),
 														A2(
 														$elm$html$Html$p,
@@ -68232,11 +68624,11 @@ var $author$project$HomePage$view = function (model) {
 																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 																		$elm$html$Html$Attributes$placeholder('Search for plugins ...'),
 																		$elm$html$Html$Attributes$value(model.ap),
-																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterQGISPlugins)
+																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterGRASSPlugins)
 																	]),
 																_List_Nil)
 															])),
-														A5($author$project$HomePage$packagesHtmlList, model.ay, model.u, model.ap, model.a, $author$project$HomePage$ConfigQGISAddPlugin),
+														A5($author$project$HomePage$packagesHtmlList, model.aA, model.p, model.ap, model.a, $author$project$HomePage$ConfigGRASSAddPlugin),
 														A2(
 														$elm$html$Html$p,
 														_List_fromArray(
@@ -68247,9 +68639,142 @@ var $author$project$HomePage$view = function (model) {
 															[
 																A2(
 																$author$project$HomePage$packagesCountText,
-																$elm$core$List$length(model.ay),
-																$elm$core$List$length(model.u)),
-																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+																$elm$core$List$length(model.aA),
+																$elm$core$List$length(model.p)),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
+															]))
+													]))),
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('qgis')
+												]),
+											A3(
+												$author$project$HomePage$optionalHtmlDivElements,
+												model.G,
+												_List_fromArray(
+													[
+														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-3 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('QGIS'),
+																A2($author$project$HomePage$isEnabledButton, model.G, $author$project$HomePage$ConfigQGISEnable)
+															]))
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('package')
+															])),
+														A5(
+														$author$project$HomePage$packagesHtmlList,
+														model.aD,
+														_List_fromArray(
+															[model.W]),
+														model.aS,
+														model.a,
+														$author$project$HomePage$ConfigQGISSetPackage),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('text-secondary')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$author$project$HomePage$packagesCountText,
+																$elm$core$List$length(model.aD),
+																$elm$core$List$length(
+																	_List_fromArray(
+																		[model.W]))),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('python'),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-md'),
+																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
+																		$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
+																		$elm$html$Html$Attributes$value(model.au),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterQGISPythonPackages)
+																	]),
+																_List_Nil)
+															])),
+														A5($author$project$HomePage$packagesHtmlList, model.I, model.w, model.au, model.a, $author$project$HomePage$ConfigQGISAddPythonPackage),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('text-secondary')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$author$project$HomePage$packagesCountText,
+																$elm$core$List$length(model.I),
+																$elm$core$List$length(model.w)),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
+															])),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('fw-bold fs-4 d-flex justify-content-between align-items-center')
+															]),
+														_List_fromArray(
+															[
+																$elm$html$Html$text('plugins'),
+																A2(
+																$elm$html$Html$input,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('form-control form-control-md'),
+																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
+																		$elm$html$Html$Attributes$placeholder('Search for plugins ...'),
+																		$elm$html$Html$Attributes$value(model.at),
+																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterQGISPlugins)
+																	]),
+																_List_Nil)
+															])),
+														A5($author$project$HomePage$packagesHtmlList, model.aE, model.v, model.at, model.a, $author$project$HomePage$ConfigQGISAddPlugin),
+														A2(
+														$elm$html$Html$p,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('text-secondary')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$author$project$HomePage$packagesCountText,
+																$elm$core$List$length(model.aE),
+																$elm$core$List$length(model.v)),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 															]))
 													])))
 										]))),
@@ -68281,7 +68806,7 @@ var $author$project$HomePage$view = function (model) {
 															$elm$html$Html$Attributes$class('form-control form-control-md'),
 															A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 															$elm$html$Html$Attributes$placeholder('Search for packages ...'),
-															$elm$html$Html$Attributes$value(model.W),
+															$elm$html$Html$Attributes$value(model.Z),
 															$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPackages)
 														]),
 													_List_Nil)
@@ -68296,7 +68821,7 @@ var $author$project$HomePage$view = function (model) {
 												[
 													$elm$html$Html$text('geospatial')
 												])),
-											A5($author$project$HomePage$packagesHtmlList, model.av, model.p, model.W, model.a, $author$project$HomePage$ConfigAddGeoPackage),
+											A5($author$project$HomePage$packagesHtmlList, model.aB, model.q, model.Z, model.a, $author$project$HomePage$ConfigAddGeoPackage),
 											A2(
 											$elm$html$Html$p,
 											_List_fromArray(
@@ -68307,9 +68832,9 @@ var $author$project$HomePage$view = function (model) {
 												[
 													A2(
 													$author$project$HomePage$packagesCountText,
-													$elm$core$List$length(model.av),
-													$elm$core$List$length(model.p)),
-													A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+													$elm$core$List$length(model.aB),
+													$elm$core$List$length(model.q)),
+													A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 												]))
 										]))),
 								A2(
@@ -68333,7 +68858,7 @@ var $author$project$HomePage$view = function (model) {
 												[
 													$elm$html$Html$text('nixpkgs')
 												])),
-											A5($author$project$HomePage$packagesHtmlList, model.au, model.q, model.W, model.a, $author$project$HomePage$ConfigAddPackage),
+											A5($author$project$HomePage$packagesHtmlList, model.ay, model.r, model.Z, model.a, $author$project$HomePage$ConfigAddPackage),
 											A2(
 											$elm$html$Html$p,
 											_List_fromArray(
@@ -68344,9 +68869,9 @@ var $author$project$HomePage$view = function (model) {
 												[
 													A2(
 													$author$project$HomePage$packagesCountText,
-													$elm$core$List$length(model.au),
-													$elm$core$List$length(model.q)),
-													A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+													$elm$core$List$length(model.ay),
+													$elm$core$List$length(model.r)),
+													A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 												]))
 										]))),
 								A2(
@@ -68368,7 +68893,7 @@ var $author$project$HomePage$view = function (model) {
 												]),
 											A3(
 												$author$project$HomePage$optionalHtmlDivElements,
-												model.s,
+												model.t,
 												_List_fromArray(
 													[
 														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
@@ -68381,7 +68906,7 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('PYTHON'),
-																A2($author$project$HomePage$isEnabledButton, model.s, $author$project$HomePage$ConfigPythonEnable)
+																A2($author$project$HomePage$isEnabledButton, model.t, $author$project$HomePage$ConfigPythonEnable)
 															]))
 													]),
 												_List_fromArray(
@@ -68402,12 +68927,12 @@ var $author$project$HomePage$view = function (model) {
 																		$elm$html$Html$Attributes$class('form-control form-control-md'),
 																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 																		$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-																		$elm$html$Html$Attributes$value(model.ao),
+																		$elm$html$Html$Attributes$value(model.as),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPythonPackages)
 																	]),
 																_List_Nil)
 															])),
-														A5($author$project$HomePage$packagesHtmlList, model.G, model.t, model.ao, model.a, $author$project$HomePage$ConfigPythonAddPackage),
+														A5($author$project$HomePage$packagesHtmlList, model.I, model.u, model.as, model.a, $author$project$HomePage$ConfigPythonAddPackage),
 														A2(
 														$elm$html$Html$p,
 														_List_fromArray(
@@ -68418,9 +68943,9 @@ var $author$project$HomePage$view = function (model) {
 															[
 																A2(
 																$author$project$HomePage$packagesCountText,
-																$elm$core$List$length(model.G),
-																$elm$core$List$length(model.t)),
-																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+																$elm$core$List$length(model.I),
+																$elm$core$List$length(model.u)),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 															])),
 														A2(
 														$elm$html$Html$p,
@@ -68431,7 +68956,7 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('poetry'),
-																A2($author$project$HomePage$isEnabledButton, model.J, $author$project$HomePage$ConfigPythonPoetryEnable)
+																A2($author$project$HomePage$isEnabledButton, model.L, $author$project$HomePage$ConfigPythonPoetryEnable)
 															]))
 													])))
 										]))),
@@ -68454,7 +68979,7 @@ var $author$project$HomePage$view = function (model) {
 												]),
 											A3(
 												$author$project$HomePage$optionalHtmlDivElements,
-												model.y,
+												model.z,
 												_List_fromArray(
 													[
 														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
@@ -68467,7 +68992,7 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('JUPYTER'),
-																A2($author$project$HomePage$isEnabledButton, model.y, $author$project$HomePage$ConfigJupyterEnable)
+																A2($author$project$HomePage$isEnabledButton, model.z, $author$project$HomePage$ConfigJupyterEnable)
 															]))
 													]),
 												_List_fromArray(
@@ -68488,12 +69013,12 @@ var $author$project$HomePage$view = function (model) {
 																		$elm$html$Html$Attributes$class('form-control form-control-md'),
 																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 																		$elm$html$Html$Attributes$placeholder('Search for Python packages ...'),
-																		$elm$html$Html$Attributes$value(model.am),
+																		$elm$html$Html$Attributes$value(model.aq),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterJupyterPackages)
 																	]),
 																_List_Nil)
 															])),
-														A5($author$project$HomePage$packagesHtmlList, model.G, model.l, model.am, model.a, $author$project$HomePage$ConfigJupyterAddPythonPackage),
+														A5($author$project$HomePage$packagesHtmlList, model.I, model.l, model.aq, model.a, $author$project$HomePage$ConfigJupyterAddPythonPackage),
 														A2(
 														$elm$html$Html$p,
 														_List_fromArray(
@@ -68504,9 +69029,9 @@ var $author$project$HomePage$view = function (model) {
 															[
 																A2(
 																$author$project$HomePage$packagesCountText,
-																$elm$core$List$length(model.G),
+																$elm$core$List$length(model.I),
 																$elm$core$List$length(model.l)),
-																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 															])),
 														A2(
 														$elm$html$Html$p,
@@ -68517,14 +69042,14 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('raw config'),
-																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigJupyterRawConfig, $author$project$NixModules$jupyter.aG.g),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigJupyterRawConfig, $author$project$NixModules$jupyter.aM.h),
 																A2(
 																$elm$html$Html$textarea,
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$jupyter.aG.g),
-																		$elm$html$Html$Attributes$value(model.ab),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$jupyter.aM.h),
+																		$elm$html$Html$Attributes$value(model.ae),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigJupyterRawConfig)
 																	]),
 																_List_Nil)
@@ -68543,7 +69068,7 @@ var $author$project$HomePage$view = function (model) {
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$value(model._),
+																		$elm$html$Html$Attributes$value(model.ac),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigJupyterListenAddress)
 																	]),
 																_List_Nil)
@@ -68562,7 +69087,7 @@ var $author$project$HomePage$view = function (model) {
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$value(model.aa),
+																		$elm$html$Html$Attributes$value(model.ad),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigJupyterListenPort)
 																	]),
 																_List_Nil)
@@ -68576,7 +69101,7 @@ var $author$project$HomePage$view = function (model) {
 												]),
 											A3(
 												$author$project$HomePage$optionalHtmlDivElements,
-												model.z,
+												model.A,
 												_List_fromArray(
 													[
 														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
@@ -68589,7 +69114,7 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('POSTGRESQL'),
-																A2($author$project$HomePage$isEnabledButton, model.z, $author$project$HomePage$ConfigPostgresEnable)
+																A2($author$project$HomePage$isEnabledButton, model.A, $author$project$HomePage$ConfigPostgresEnable)
 															]))
 													]),
 												_List_fromArray(
@@ -68610,12 +69135,12 @@ var $author$project$HomePage$view = function (model) {
 																		$elm$html$Html$Attributes$class('form-control form-control-md'),
 																		A2($elm$html$Html$Attributes$style, 'margin-left', '10px'),
 																		$elm$html$Html$Attributes$placeholder('Search for PostgreSQL packages ...'),
-																		$elm$html$Html$Attributes$value(model.an),
+																		$elm$html$Html$Attributes$value(model.ar),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$UiFilterPostgresPackages)
 																	]),
 																_List_Nil)
 															])),
-														A5($author$project$HomePage$packagesHtmlList, model.aw, model.r, model.an, model.a, $author$project$HomePage$ConfigPostgresAddPackage),
+														A5($author$project$HomePage$packagesHtmlList, model.aC, model.s, model.ar, model.a, $author$project$HomePage$ConfigPostgresAddPackage),
 														A2(
 														$elm$html$Html$p,
 														_List_fromArray(
@@ -68626,9 +69151,9 @@ var $author$project$HomePage$view = function (model) {
 															[
 																A2(
 																$author$project$HomePage$packagesCountText,
-																$elm$core$List$length(model.aw),
-																$elm$core$List$length(model.r)),
-																A2($author$project$HomePage$morePackagesButton, model.a, model.k)
+																$elm$core$List$length(model.aC),
+																$elm$core$List$length(model.s)),
+																A2($author$project$HomePage$morePackagesButton, model.a, model.g)
 															])),
 														A2(
 														$elm$html$Html$p,
@@ -68644,8 +69169,8 @@ var $author$project$HomePage$view = function (model) {
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aU.g),
-																		$elm$html$Html$Attributes$value(model.ac),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.a$.h),
+																		$elm$html$Html$Attributes$value(model.af),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitdbArgs)
 																	]),
 																_List_Nil)
@@ -68659,14 +69184,14 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('initial script'),
-																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.aC.g),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresInitialScript, $author$project$NixModules$postgres.aI.h),
 																A2(
 																$elm$html$Html$textarea,
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aC.g),
-																		$elm$html$Html$Attributes$value(model.ad),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aI.h),
+																		$elm$html$Html$Attributes$value(model.ag),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresInitialScript)
 																	]),
 																_List_Nil)
@@ -68680,14 +69205,14 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('settings'),
-																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.aH.g),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigPostgresSettings, $author$project$NixModules$postgres.aN.h),
 																A2(
 																$elm$html$Html$textarea,
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aH.g),
-																		$elm$html$Html$Attributes$value(model.ag),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$postgres.aN.h),
+																		$elm$html$Html$Attributes$value(model.aj),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresSettings)
 																	]),
 																_List_Nil)
@@ -68706,7 +69231,7 @@ var $author$project$HomePage$view = function (model) {
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$value(model.ae),
+																		$elm$html$Html$Attributes$value(model.ah),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenAddresses)
 																	]),
 																_List_Nil)
@@ -68725,7 +69250,7 @@ var $author$project$HomePage$view = function (model) {
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$value(model.af),
+																		$elm$html$Html$Attributes$value(model.ai),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigPostgresListenPort)
 																	]),
 																_List_Nil)
@@ -68739,7 +69264,7 @@ var $author$project$HomePage$view = function (model) {
 												]),
 											A3(
 												$author$project$HomePage$optionalHtmlDivElements,
-												model.D,
+												model.E,
 												_List_fromArray(
 													[
 														A2($elm$html$Html$hr, _List_Nil, _List_Nil),
@@ -68752,7 +69277,7 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('CUSTOM PROCESS'),
-																A2($author$project$HomePage$isEnabledButton, model.D, $author$project$HomePage$ConfigCustomProcessEnable)
+																A2($author$project$HomePage$isEnabledButton, model.E, $author$project$HomePage$ConfigCustomProcessEnable)
 															]))
 													]),
 												_List_fromArray(
@@ -68766,14 +69291,14 @@ var $author$project$HomePage$view = function (model) {
 														_List_fromArray(
 															[
 																$elm$html$Html$text('command'),
-																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.aB.g),
+																A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigCustomProcessExec, $author$project$NixModules$customProcess.aH.h),
 																A2(
 																$elm$html$Html$input,
 																_List_fromArray(
 																	[
 																		$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.aB.g),
-																		$elm$html$Html$Attributes$value(model.Z),
+																		$elm$html$Html$Attributes$placeholder($author$project$NixModules$customProcess.aH.h),
+																		$elm$html$Html$Attributes$value(model.ab),
 																		$elm$html$Html$Events$onInput($author$project$HomePage$ConfigCustomProcessExec)
 																	]),
 																_List_Nil)
@@ -68810,14 +69335,14 @@ var $author$project$HomePage$view = function (model) {
 													_List_fromArray(
 														[
 															$elm$html$Html$text('from URL'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigDataFromUrlEnable, $author$project$NixModules$dataFromUrl.az.g),
+															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigDataFromUrlEnable, $author$project$NixModules$dataFromUrl.aF.h),
 															A2(
 															$elm$html$Html$textarea,
 															_List_fromArray(
 																[
 																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$dataFromUrl.az.g),
-																	$elm$html$Html$Attributes$value(model.O),
+																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$dataFromUrl.aF.h),
+																	$elm$html$Html$Attributes$value(model.R),
 																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigDataFromUrlEnable)
 																]),
 															_List_Nil)
@@ -68853,7 +69378,7 @@ var $author$project$HomePage$view = function (model) {
 													_List_fromArray(
 														[
 															$elm$html$Html$text('openGL'),
-															A2($author$project$HomePage$isEnabledButton, model.R, $author$project$HomePage$ConfigOpenGLEnable)
+															A2($author$project$HomePage$isEnabledButton, model.V, $author$project$HomePage$ConfigOpenGLEnable)
 														]))
 												])),
 											A2(
@@ -68874,14 +69399,14 @@ var $author$project$HomePage$view = function (model) {
 													_List_fromArray(
 														[
 															$elm$html$Html$text('shell hook'),
-															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigShellHookEnable, $author$project$NixModules$shellHook.aA.g),
+															A2($author$project$HomePage$useExampleButton, $author$project$HomePage$ConfigShellHookEnable, $author$project$NixModules$shellHook.aG.h),
 															A2(
 															$elm$html$Html$textarea,
 															_List_fromArray(
 																[
 																	$elm$html$Html$Attributes$class('form-control form-control-lg'),
-																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.aA.g),
-																	$elm$html$Html$Attributes$value(model.P),
+																	$elm$html$Html$Attributes$placeholder($author$project$NixModules$shellHook.aG.h),
+																	$elm$html$Html$Attributes$value(model.S),
 																	$elm$html$Html$Events$onInput($author$project$HomePage$ConfigShellHookEnable)
 																]),
 															_List_Nil)
@@ -68897,7 +69422,7 @@ var $author$project$HomePage$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								(!$elm$core$String$isEmpty(model.ai)) ? A2(
+								(!$elm$core$String$isEmpty(model.al)) ? A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
@@ -68955,7 +69480,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.as)
+												$elm$html$Html$text(model.aw)
 											])),
 										A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 										A2(
@@ -68983,7 +69508,7 @@ var $author$project$HomePage$view = function (model) {
 											]),
 										_List_fromArray(
 											[
-												$elm$html$Html$text(model.ai)
+												$elm$html$Html$text(model.al)
 											])),
 										A2(
 										$elm$html$Html$p,
@@ -69290,6 +69815,5 @@ var $author$project$HomePage$view = function (model) {
 			]));
 };
 var $author$project$HomePage$main = $elm$browser$Browser$sandbox(
-	{bp: $author$project$HomePage$initialModel, bF: $author$project$HomePage$update, bG: $author$project$HomePage$view});
+	{bx: $author$project$HomePage$initialModel, bM: $author$project$HomePage$update, bN: $author$project$HomePage$view});
 _Platform_export({'HomePage':{'init':$author$project$HomePage$main(
-	$elm$json$Json$Decode$succeed(0))(0)}});}(this));
