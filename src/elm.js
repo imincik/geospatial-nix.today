@@ -67268,7 +67268,7 @@ var $author$project$Texts$configTemplateCommentDocs = _List_fromArray(
 				$elm$html$Html$text('check out documentation.')
 			]))
 	]);
-var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\ndocker run --rm -it shell:latest\n';
+var $author$project$Texts$containerTemplate = '\nnix run .#geonixcli -- container shell\n';
 var $author$project$Texts$containerTemplateComment = '\nRun following commands to build and run environment in container\n';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $author$project$Texts$futurePlansText = '\nThis is just the beginning of a new tool, which allows you to use very unique\nfeatures of Nix to power your geospatial projects. Many more features and user\nexperience improvements are on the way.\n';
