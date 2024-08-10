@@ -115,7 +115,6 @@ Run following commands to build and run environment in container
 containerTemplate =
     """
 nix run .#geonixcli -- container shell
-docker run --rm -it shell:latest
 """
 
 
