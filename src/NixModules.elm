@@ -11,6 +11,7 @@ grass =
 
 qgis =
     { enabled = False
+    , withGrass = False
     , pythonPackages = []
     , plugins = []
     }

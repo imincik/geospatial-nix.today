@@ -113,6 +113,7 @@ type alias Model =
     , packagesQGISPluginsAvailable : List Package
     , configQGISEnabled : Bool
     , configQGISPackage : Package
+    , configQGISWithGrass : Bool
     , configQGISPythonPackages : List Package
     , configQGISPlugins : List Package
 
@@ -194,6 +195,7 @@ initialModel =
     , packagesQGISPluginsAvailable = allQGISPlugins
     , configQGISEnabled = NixModules.qgis.enabled
     , configQGISPackage = Maybe.withDefault ( "", "" ) (List.head allQGISPackages)
+    , configQGISWithGrass = NixModules.qgis.withGrass
     , configQGISPythonPackages = NixModules.qgis.pythonPackages
     , configQGISPlugins = NixModules.qgis.plugins
 
@@ -930,6 +932,7 @@ buildNixConfig model =
         -- qgis
         |> String.replace "<QGIS-ENABLED>" (boolToString model.configQGISEnabled)
         |> String.replace "<QGIS-PACKAGE>" selectedQGISPackage
+        |> String.replace "<QGIS-WITH-GRASS>" (boolToString model.configQGISWithGrass)
         |> String.replace "<QGIS-PYTHON-PACKAGES>" (String.join " " selectedQGISPythonPackages)
         |> String.replace "<QGIS-PLUGINS>" (String.join " " selectedQGISPlugins)
         -- python
@@ -983,6 +986,14 @@ update msg model =
         ConfigGRASSEnable ->
             { model
                 | configGRASSEnabled =
+                    if not model.configGRASSEnabled then
+                        True
+
+                    else
+                        False
+
+                -- enable GRASS in QGIS as well
+                , configQGISWithGrass =
                     if not model.configGRASSEnabled then
                         True
 

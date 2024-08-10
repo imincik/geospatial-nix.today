@@ -55,6 +55,7 @@ configQGISTemplate =
   applications.qgis = {
     enable = <QGIS-ENABLED>;
     package = <QGIS-PACKAGE>;
+    withGrass = <QGIS-WITH-GRASS>;
     pythonPackages = p: [ <QGIS-PYTHON-PACKAGES> ];
     plugins = p: [ <QGIS-PLUGINS> ];
   };
