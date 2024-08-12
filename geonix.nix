@@ -13,6 +13,34 @@ in
     python_version=$(echo ${pkgs.python3.pythonVersion} | sed 's|\.||')
     postgresql_version=$(echo ${pkgs.postgresql.version} | sed 's|\..*||')
 
+
+    packages_file="src/GRASSPackages.elm"
+    echo "module GRASSPackages exposing (packages)" > $packages_file
+    echo "packages = [" >> $packages_file
+    nix search --json $geonix_url  \
+      "^grass" \
+      --exclude "grass-plugin.*" \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
+      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
+    >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
+    ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
+
+
+    packages_file="src/GRASSPlugins.elm"
+    echo "module GRASSPlugins exposing (packages)" > $packages_file
+    echo "packages = [" >> $packages_file
+    nix search --json $geonix_url  \
+      "^grass-plugin" \
+      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
+      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
+    >> $packages_file
+    echo "]" >> $packages_file
+    sed -i '3s/  ,//' $packages_file
+    ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
+
+
     packages_file="src/QGISPackages.elm"
     echo "module QGISPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
@@ -50,6 +78,7 @@ in
       --exclude "unwrapped" \
       --exclude "postgresql." \
       --exclude "python.*" \
+      --exclude "grass.*" \
       --exclude "qgis.*" \
       --exclude "nixGL" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \

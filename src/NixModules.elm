@@ -1,10 +1,17 @@
-module NixModules exposing (customProcess, dataFromUrl, jupyter, openGL, packages, postgres, python, qgis, shellHook)
+module NixModules exposing (customProcess, dataFromUrl, grass, jupyter, openGL, packages, postgres, python, qgis, shellHook)
 
 -- default and example configuration values
 
 
+grass =
+    { enabled = False
+    , plugins = []
+    }
+
+
 qgis =
     { enabled = False
+    , withGrass = False
     , pythonPackages = []
     , plugins = []
     }

@@ -2,6 +2,7 @@ module NixConfig exposing
     ( configCustomProcessTemplate
     , configDataFromUrlTemplate
     , configEnterShellTemplate
+    , configGRASSTemplate
     , configJupyterKernelsTemplate
     , configJupyterTemplate
     , configNameTemplate
@@ -39,11 +40,22 @@ configPackagesTemplate =
 """
 
 
+configGRASSTemplate =
+    """
+  applications.grass = {
+    enable = <GRASS-ENABLED>;
+    package = <GRASS-PACKAGE>;
+    plugins = p: [ <GRASS-PLUGINS> ];
+  };
+"""
+
+
 configQGISTemplate =
     """
   applications.qgis = {
     enable = <QGIS-ENABLED>;
     package = <QGIS-PACKAGE>;
+    withGrass = <QGIS-WITH-GRASS>;
     pythonPackages = p: [ <QGIS-PYTHON-PACKAGES> ];
     plugins = p: [ <QGIS-PLUGINS> ];
   };
