@@ -8,8 +8,7 @@ in
   packages = [ ];
 
   scripts.make-packages-db.exec = ''
-    # geonix_url="github:imincik/geospatial-nix/latest"  # FIXME
-    geonix_url="github:imincik/geospatial-nix/master"
+    geonix_url="github:imincik/geospatial-nix/latest"
     nixpkgs_version="${inputs.geonix.inputs.nixpkgs.rev}"
     python_version=$(echo ${pkgs.python3.pythonVersion} | sed 's|\.||')
     postgresql_version=$(echo ${pkgs.postgresql.version} | sed 's|\..*||')
