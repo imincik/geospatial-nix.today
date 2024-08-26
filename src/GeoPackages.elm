@@ -2,9 +2,9 @@ module GeoPackages exposing (packages)
 
 
 packages =
-    [ ( "geopkgs.gdal", "3.9.1" )
-    , ( "geopkgs.gdal-master", "3527c3f" )
-    , ( "geopkgs.gdal-minimal", "3.9.1" )
+    [ ( "geopkgs.gdal", "3.9.2" )
+    , ( "geopkgs.gdal-master", "2a11f6b" )
+    , ( "geopkgs.gdal-minimal", "3.9.2" )
     , ( "geopkgs.geos", "3.12.2" )
     , ( "geopkgs.libgeotiff", "1.7.3" )
     , ( "geopkgs.librttopo", "1.1.0" )
