@@ -10,6 +10,7 @@ packages =
     , ( "geopkgs.python3-pyogrio", "0.9.0" )
     , ( "geopkgs.python3-pyproj", "3.6.1" )
     , ( "geopkgs.python3-pyqt5", "5.15.9" )
+    , ( "geopkgs.python3-pystac", "1.10.1" )
     , ( "geopkgs.python3-rasterio", "1.3.10" )
-    , ( "geopkgs.python3-shapely", "2.0.5" )
+    , ( "geopkgs.python3-shapely", "2.0.6" )
     ]
