@@ -3,7 +3,7 @@ module GeoPackages exposing (packages)
 
 packages =
     [ ( "geopkgs.gdal", "3.9.2" )
-    , ( "geopkgs.gdal-master", "" )
+    , ( "geopkgs.gdal-master", "33dd00c" )
     , ( "geopkgs.gdal-minimal", "3.9.2" )
     , ( "geopkgs.geos", "3.12.2" )
     , ( "geopkgs.libgeotiff", "1.7.3" )
