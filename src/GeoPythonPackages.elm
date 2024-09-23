@@ -2,7 +2,7 @@ module GeoPythonPackages exposing (packages)
 
 
 packages =
-    [ ( "geopkgs.python3-fiona", "1.10.0" )
+    [ ( "geopkgs.python3-fiona", "1.10.1" )
     , ( "geopkgs.python3-gdal", "3.9.2" )
     , ( "geopkgs.python3-geopandas", "1.0.1" )
     , ( "geopkgs.python3-owslib", "0.31.0" )

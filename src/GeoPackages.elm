@@ -10,7 +10,7 @@ packages =
     , ( "geopkgs.librttopo", "1.1.0" )
     , ( "geopkgs.libspatialindex", "2.0.0" )
     , ( "geopkgs.libspatialite", "5.1.0" )
-    , ( "geopkgs.pdal", "2.7.2" )
+    , ( "geopkgs.pdal", "2.8.0" )
     , ( "geopkgs.pg_featureserv", "1.3.1" )
     , ( "geopkgs.pg_tileserv", "1.0.11" )
     , ( "geopkgs.proj", "9.4.1" )
