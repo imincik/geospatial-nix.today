@@ -4910,9 +4910,9 @@ var $author$project$HomePage$allGRASSPlugins = $author$project$GRASSPlugins$pack
 var $author$project$GeoPackages$packages = _List_fromArray(
 	[
 		_Utils_Tuple2('geopkgs.gdal', '3.9.2'),
-		_Utils_Tuple2('geopkgs.gdal-master', '8055974'),
+		_Utils_Tuple2('geopkgs.gdal-master', '3a9bf85'),
 		_Utils_Tuple2('geopkgs.gdal-minimal', '3.9.2'),
-		_Utils_Tuple2('geopkgs.geos', '3.12.2'),
+		_Utils_Tuple2('geopkgs.geos', '3.13.0'),
 		_Utils_Tuple2('geopkgs.libgeotiff', '1.7.3'),
 		_Utils_Tuple2('geopkgs.librttopo', '1.1.0'),
 		_Utils_Tuple2('geopkgs.libspatialindex', '2.0.0'),
@@ -57938,7 +57938,7 @@ var $author$project$HomePage$allPackages = $author$project$Packages$packages;
 var $elm$core$Basics$append = _Utils_append;
 var $author$project$GeoPostgresqlPackages$packages = _List_fromArray(
 	[
-		_Utils_Tuple2('geopkgs.postgresql-postgis', '3.4.3')
+		_Utils_Tuple2('geopkgs.postgresql-postgis', '3.5.0')
 	]);
 var $author$project$PostgresqlPackages$packages = _List_fromArray(
 	[
@@ -57997,10 +57997,10 @@ var $author$project$GeoPythonPackages$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.python3-geopandas', '1.0.1'),
 		_Utils_Tuple2('geopkgs.python3-owslib', '0.31.0'),
 		_Utils_Tuple2('geopkgs.python3-psycopg', '3.1.17'),
-		_Utils_Tuple2('geopkgs.python3-pyogrio', '0.9.0'),
+		_Utils_Tuple2('geopkgs.python3-pyogrio', '0.10.0'),
 		_Utils_Tuple2('geopkgs.python3-pyproj', '3.6.1'),
 		_Utils_Tuple2('geopkgs.python3-pyqt5', '5.15.9'),
-		_Utils_Tuple2('geopkgs.python3-pystac', '1.10.1'),
+		_Utils_Tuple2('geopkgs.python3-pystac', '1.11.0'),
 		_Utils_Tuple2('geopkgs.python3-rasterio', '1.3.11'),
 		_Utils_Tuple2('geopkgs.python3-shapely', '2.0.6')
 	]);
@@ -65926,7 +65926,7 @@ var $author$project$QGISPackages$packages = _List_fromArray(
 var $author$project$HomePage$allQGISPackages = $author$project$QGISPackages$packages;
 var $author$project$QGISPlugins$packages = _List_fromArray(
 	[
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-AcATaMa', '24.7'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-AcATaMa', '24.10'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-AnotherDXFImporter', '1.3.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-ArcheoCAD', '3.2.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Azimuth-and-Distance-Calculator', '2.0.2'),
@@ -65947,7 +65947,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-GarminCustomMap', '3.4.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-GeoCoding', '2.19'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Google-Earth-Engine', '0.0.6'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Google-Earth-Engine-Data-Catalog', '0.4.3'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Google-Earth-Engine-Data-Catalog', '0.5.0'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Google-Maps-Geocoder', '0.0.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Google-Street-View-Layer', '0.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Group-Stats', '2.2.7'),
@@ -65956,11 +65956,11 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-InaSAFE', '5.0.6'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-KML-Tools', '3.2.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-LAStools', '2.1.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-LF-Tools', '1.12.12'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-LF-Tools', '1.12.13'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lat-Lon-Tools', '3.7.2'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Layers-menu-from-project', '2.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-LecoS---Landscape-Ecology-Statistics', '--Landscape-Ecology-Statistics-3.0.1'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lizmap', '4.4.0'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Lizmap', '4.4.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Map-Library', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-MapSwipe-Tool', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-MapTiler', '3.3.2'),
@@ -65968,7 +65968,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Maps-Printer', '0.9'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Mask', '1.10.4'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Memory-Layer-Saver', '5.0.2'),
-		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Mergin-Maps', '2024.2'),
+		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Mergin-Maps', '2024.2.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Multi-Ring-Buffer', '1.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Multi-distance-buffer', '3.2.4'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-Multipart-Split', '1.0.0'),
@@ -66028,7 +66028,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-mmqgis', '2021.9.10'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-qProf', '0.5.1'),
 		_Utils_Tuple2('geopkgs.qgis-ltr-plugin-qgis2web', '3.22.0'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-AcATaMa', '24.7'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-AcATaMa', '24.10'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-AnotherDXFImporter', '1.3.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-ArcheoCAD', '3.2.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Azimuth-and-Distance-Calculator', '2.0.2'),
@@ -66049,7 +66049,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-GarminCustomMap', '3.4.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-GeoCoding', '2.19'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Google-Earth-Engine', '0.0.6'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-Google-Earth-Engine-Data-Catalog', '0.4.3'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Google-Earth-Engine-Data-Catalog', '0.5.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Google-Maps-Geocoder', '0.0.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Google-Street-View-Layer', '0.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Group-Stats', '2.2.7'),
@@ -66058,11 +66058,11 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-InaSAFE', '5.0.6'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-KML-Tools', '3.2.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-LAStools', '2.1.1'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-LF-Tools', '1.12.12'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-LF-Tools', '1.12.13'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Lat-Lon-Tools', '3.7.2'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Layers-menu-from-project', '2.1.0'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-LecoS---Landscape-Ecology-Statistics', '--Landscape-Ecology-Statistics-3.0.1'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-Lizmap', '4.4.0'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Lizmap', '4.4.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Map-Library', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-MapSwipe-Tool', '1.3'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-MapTiler', '3.3.2'),
@@ -66070,7 +66070,7 @@ var $author$project$QGISPlugins$packages = _List_fromArray(
 		_Utils_Tuple2('geopkgs.qgis-plugin-Maps-Printer', '0.9'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Mask', '1.10.4'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Memory-Layer-Saver', '5.0.2'),
-		_Utils_Tuple2('geopkgs.qgis-plugin-Mergin-Maps', '2024.2'),
+		_Utils_Tuple2('geopkgs.qgis-plugin-Mergin-Maps', '2024.2.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Multi-Ring-Buffer', '1.1'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Multi-distance-buffer', '3.2.4'),
 		_Utils_Tuple2('geopkgs.qgis-plugin-Multipart-Split', '1.0.0'),
