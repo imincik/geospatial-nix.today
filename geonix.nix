@@ -1,15 +1,10 @@
 { inputs, config, pkgs, lib, ... }:
 
-let
-  geopkgs = inputs.geonix.packages.${pkgs.system};
-
-in
 {
   packages = [ ];
 
   scripts.make-packages-db.exec = ''
-    geonix_url="github:imincik/geospatial-nix/latest"
-    nixpkgs_version="${inputs.geonix.inputs.nixpkgs.rev}"
+    geonix_url="github:imincik/geospatial-nix.repo/latest"
     python_version=$(echo ${pkgs.python3.pythonVersion} | sed 's|\.||')
     postgresql_version=$(echo ${pkgs.postgresql.version} | sed 's|\..*||')
 
@@ -18,10 +13,9 @@ in
     echo "module GRASSPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
     nix search --json $geonix_url  \
-      "^grass" \
-      --exclude "grass-plugin.*" \
+      'legacyPackages.x86_64-linux.grass$' \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
+      | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
     >> $packages_file
     echo "]" >> $packages_file
     sed -i '3s/  ,//' $packages_file
@@ -32,9 +26,9 @@ in
     echo "module GRASSPlugins exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
     nix search --json $geonix_url  \
-      "^grass-plugin" \
+      'legacyPackages.x86_64-linux.grassPlugins' \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
+      | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
     >> $packages_file
     echo "]" >> $packages_file
     sed -i '3s/  ,//' $packages_file
@@ -45,12 +39,10 @@ in
     echo "module QGISPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
     nix search --json $geonix_url  \
-      "^qgis" \
-      --exclude "qgis-plugin.*" \
-      --exclude "qgis-ltr-plugin.*" \
+      'legacyPackages.x86_64-linux.qgis$|legacyPackages.x86_64-linux.qgis-ltr$' \
       --exclude "unwrapped" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
+      | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
     >> $packages_file
     echo "]" >> $packages_file
     sed -i '3s/  ,//' $packages_file
@@ -61,28 +53,9 @@ in
     echo "module QGISPlugins exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
     nix search --json $geonix_url  \
-      "^qgis-plugin|^qgis-ltr-plugin" \
+      'legacyPackages.x86_64-linux.qgisPlugins|legacyPackages.x86_64-linux.qgisLTRPlugins' \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
-    >> $packages_file
-    echo "]" >> $packages_file
-    sed -i '3s/  ,//' $packages_file
-    ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
-
-
-    packages_file="src/GeoPackages.elm"
-    echo "module GeoPackages exposing (packages)" > $packages_file
-    echo "packages = [" >> $packages_file
-    nix search --json $geonix_url  \
-      --exclude "all-packages" \
-      --exclude "unwrapped" \
-      --exclude "postgresql." \
-      --exclude "python.*" \
-      --exclude "grass.*" \
-      --exclude "qgis.*" \
-      --exclude "nixGL" \
-      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
+      | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
     >> $packages_file
     echo "]" >> $packages_file
     sed -i '3s/  ,//' $packages_file
@@ -92,26 +65,17 @@ in
     packages_file="src/Packages.elm"
     echo "module Packages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
-    nix search --json nixpkgs/$nixpkgs_version  \
+    nix search --json $geonix_url  \
+      --exclude "^packages\." \
       --exclude "postgresql.*Packages" \
       --exclude "python.*Packages" \
+      --exclude "grass.*" \
+      --exclude "grassPlugins.*" \
       --exclude "qgis.*" \
+      --exclude "qgisPlugins.*" \
+      --exclude "qgisLTRPlugins.*" \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
-    >> $packages_file
-    echo "]" >> $packages_file
-    sed -i '3s/  ,//' $packages_file
-    ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
-
-
-    packages_file="src/GeoPythonPackages.elm"
-    echo "module GeoPythonPackages exposing (packages)" > $packages_file
-    echo "packages = [" >> $packages_file
-    nix search --json $geonix_url  \
-      "python3-" \
-      --exclude "all-packages" \
-      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
     >> $packages_file
     echo "]" >> $packages_file
     sed -i '3s/  ,//' $packages_file
@@ -121,7 +85,8 @@ in
     packages_file="src/PythonPackages.elm"
     echo "module PythonPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
-    nix search --json nixpkgs/$nixpkgs_version \
+    nix search --json $geonix_url  \
+      --exclude "^packages\." \
       python''${python_version}Packages \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \
@@ -132,25 +97,11 @@ in
     ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
 
 
-    packages_file="src/GeoPostgresqlPackages.elm"
-    echo "module GeoPostgresqlPackages exposing (packages)" > $packages_file
-    echo "packages = [" >> $packages_file
-    nix search --json $geonix_url  \
-      "postgresql_''${postgresql_version}" \
-      --exclude "all-packages" \
-      | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
-      | sed 's|packages\.x86_64-linux\.|geopkgs\.|g' \
-      | sed 's|postgresql_..|postgresql|g' \
-    >> $packages_file
-    echo "]" >> $packages_file
-    sed -i '3s/  ,//' $packages_file
-    ${lib.getExe pkgs.elmPackages.elm-format} --yes $packages_file
-
-    
     packages_file="src/PostgresqlPackages.elm"
     echo "module PostgresqlPackages exposing (packages)" > $packages_file
     echo "packages = [" >> $packages_file
-    nix search --json nixpkgs/$nixpkgs_version \
+    nix search --json $geonix_url  \
+      --exclude "^packages\." \
       postgresql''${postgresql_version}Packages \
       | jq -r 'to_entries[] | "  ,( \"\(.key)\", \"\(.value | .version)\" )"' \
       | sed 's|legacyPackages\.x86_64-linux\.|pkgs\.|g' \

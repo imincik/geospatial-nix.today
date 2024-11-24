@@ -3,9 +3,6 @@ module HomePage exposing (main)
 import Browser
 import GRASSPackages
 import GRASSPlugins
-import GeoPackages
-import GeoPostgresqlPackages
-import GeoPythonPackages
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -57,11 +54,6 @@ allPackages =
     Packages.packages
 
 
-allGeoPackages : Packages
-allGeoPackages =
-    GeoPackages.packages
-
-
 allGRASSPackages : Packages
 allGRASSPackages =
     GRASSPackages.packages
@@ -84,12 +76,12 @@ allQGISPlugins =
 
 allPythonPackages : Packages
 allPythonPackages =
-    GeoPythonPackages.packages ++ PythonPackages.packages
+    PythonPackages.packages
 
 
 allPostgresPackages : Packages
 allPostgresPackages =
-    GeoPostgresqlPackages.packages ++ PostgresqlPackages.packages
+    PostgresqlPackages.packages
 
 
 type alias Model =
@@ -97,9 +89,7 @@ type alias Model =
 
     -- packages
     , packagesAvailable : List Package
-    , packagesGeoAvailable : List Package
     , configPackages : List Package
-    , configGeoPackages : List Package
 
     -- grass
     , packagesGRASSAvailable : List Package
@@ -179,9 +169,7 @@ initialModel =
 
     -- packages
     , packagesAvailable = allPackages
-    , packagesGeoAvailable = allGeoPackages
     , configPackages = NixModules.packages.packages
-    , configGeoPackages = NixModules.packages.packages
 
     -- grass
     , packagesGRASSAvailable = allGRASSPackages
@@ -357,30 +345,13 @@ view model =
                         ]
                     )
 
-                -- geospatial packages
+                -- packages
                 , optionalHtmlDiv (model.uiActiveCategoryTab == "apps")
                     (div [ class "packages" ]
                         [ hr [] []
                         , p [ class "fw-bold fs-3 d-flex justify-content-between align-items-center" ]
                             [ text "PACKAGES"
                             , input [ class "form-control form-control-md", style "margin-left" "10px", placeholder "Search for packages ...", value model.uiFilterPackages, onInput UiFilterPackages ] []
-                            ]
-                        , p [ class "fw-bold fs-4" ]
-                            [ text "geospatial"
-                            ]
-                        , packagesHtmlList model.packagesGeoAvailable model.configGeoPackages model.uiFilterPackages model.uiFilterLimit ConfigAddGeoPackage
-                        , p [ class "text-secondary" ]
-                            [ packagesCountText (List.length model.packagesGeoAvailable) (List.length model.configGeoPackages)
-                            , morePackagesButton model.uiFilterLimit model.uiFilterLimitDefault
-                            ]
-                        ]
-                    )
-
-                -- packages
-                , optionalHtmlDiv (model.uiActiveCategoryTab == "apps")
-                    (div [ class "packages" ]
-                        [ p [ class "fw-bold fs-4" ]
-                            [ text "nixpkgs"
                             ]
                         , packagesHtmlList model.packagesAvailable model.configPackages model.uiFilterPackages model.uiFilterLimit ConfigAddPackage
                         , p [ class "text-secondary" ]
@@ -624,7 +595,7 @@ view model =
             [ hr [] []
             , p [ class "text-center" ]
                 [ span [ class "text-secondary fs-6" ] [ text "Powered by " ]
-                , a [ href "https://github.com/imincik/geospatial-nix", target "_blank" ] [ text "Geospatial NIX" ]
+                , a [ href "https://github.com/imincik/geospatial-nix.repo", target "_blank" ] [ text "Geospatial NIX.repo" ]
                 , text " , "
                 , a [ href "https://github.com/imincik/geospatial-nix.env", target "_blank" ] [ text "Geospatial NIX.env" ]
                 , text " , "
@@ -818,7 +789,6 @@ nixCodeCleanup code =
 type Msg
     = ConfigName String
     | ConfigAddPackage Package
-    | ConfigAddGeoPackage Package
     | ConfigGRASSEnable
     | ConfigGRASSSetPackage Package
     | ConfigGRASSAddPlugin Package
@@ -873,7 +843,7 @@ buildNixConfig : Model -> String
 buildNixConfig model =
     let
         selectedPackages =
-            packagesListToNamesList model.configGeoPackages ++ packagesListToNamesList model.configPackages
+            packagesListToNamesList model.configPackages
 
         selectedGRASSPackage =
             packageToName model.configGRASSPackage
@@ -975,13 +945,6 @@ update msg model =
 
             else
                 { model | configPackages = List.filter (\x -> x /= pkg) model.configPackages }
-
-        ConfigAddGeoPackage pkg ->
-            if not (List.member pkg model.configGeoPackages) then
-                { model | configGeoPackages = model.configGeoPackages ++ [ pkg ] }
-
-            else
-                { model | configGeoPackages = List.filter (\x -> x /= pkg) model.configGeoPackages }
 
         ConfigGRASSEnable ->
             { model

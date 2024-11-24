@@ -65,7 +65,7 @@ mkdir <NAME> && cd <NAME>
 
 git init
 nix run github:imincik/geospatial-nix.env/latest#geonixcli -- init
-git add flake.nix geonix.nix
+git add *.nix
 """
 
 
