@@ -19,10 +19,7 @@ configTemplate =
     """
 { inputs, config, lib, pkgs, ... }:
 
-let
-  geopkgs = inputs.geonix.packages.${pkgs.system};
-
-in {
+{
   <CONFIG-BODY>
 }
 """
