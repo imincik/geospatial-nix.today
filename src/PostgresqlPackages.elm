@@ -12,6 +12,7 @@ packages =
     , ( "pkgs.postgresqlPackages.jsonb_deep_sum", "0-unstable-2021-12-24" )
     , ( "pkgs.postgresqlPackages.lantern", "0.5.0" )
     , ( "pkgs.postgresqlPackages.periods", "1.2.3" )
+    , ( "pkgs.postgresqlPackages.pg-gvm", "22.6.5" )
     , ( "pkgs.postgresqlPackages.pg-semver", "0.40.0" )
     , ( "pkgs.postgresqlPackages.pg_auto_failover", "2.1" )
     , ( "pkgs.postgresqlPackages.pg_bigm", "1.2-20240606" )
