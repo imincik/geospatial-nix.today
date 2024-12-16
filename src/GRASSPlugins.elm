@@ -244,6 +244,7 @@ packages =
     , ( "pkgs.grassPlugins.r-vif", "" )
     , ( "pkgs.grassPlugins.r-vol-dem", "" )
     , ( "pkgs.grassPlugins.r-wateroutlet-lessmem", "" )
+    , ( "pkgs.grassPlugins.r-watersheds", "" )
     , ( "pkgs.grassPlugins.r-width-funct", "" )
     , ( "pkgs.grassPlugins.r-windfetch", "" )
     , ( "pkgs.grassPlugins.r-zonal-classes", "" )
