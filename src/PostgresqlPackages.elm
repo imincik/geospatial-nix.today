@@ -23,7 +23,7 @@ packages =
     , ( "pkgs.postgresqlPackages.pg_ivm", "1.9" )
     , ( "pkgs.postgresqlPackages.pg_libversion", "2.0.1" )
     , ( "pkgs.postgresqlPackages.pg_net", "0.14.0" )
-    , ( "pkgs.postgresqlPackages.pg_partman", "5.2.2" )
+    , ( "pkgs.postgresqlPackages.pg_partman", "5.2.4" )
     , ( "pkgs.postgresqlPackages.pg_rational", "0.0.2" )
     , ( "pkgs.postgresqlPackages.pg_relusage", "0.0.1" )
     , ( "pkgs.postgresqlPackages.pg_repack", "1.5.2" )
