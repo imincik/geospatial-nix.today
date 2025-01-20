@@ -43,6 +43,7 @@ packages =
     , ( "pkgs.postgresqlPackages.pgtap", "1.3.3" )
     , ( "pkgs.postgresqlPackages.pgvecto-rs", "0.3.0" )
     , ( "pkgs.postgresqlPackages.pgvector", "0.8.0" )
+    , ( "pkgs.postgresqlPackages.pgx_ulid", "0.2.0" )
     , ( "pkgs.postgresqlPackages.plpgsql_check", "2.7.13" )
     , ( "pkgs.postgresqlPackages.plr", "8.4.7" )
     , ( "pkgs.postgresqlPackages.plv8", "3.2.3" )
