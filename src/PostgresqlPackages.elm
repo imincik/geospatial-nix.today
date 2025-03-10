@@ -7,7 +7,7 @@ packages =
     , ( "pkgs.postgresqlPackages.apache_datasketches", "1.7.0" )
     , ( "pkgs.postgresqlPackages.citus", "13.0.0" )
     , ( "pkgs.postgresqlPackages.cstore_fdw", "1.7.0-unstable-2021-03-08" )
-    , ( "pkgs.postgresqlPackages.h3-pg", "4.1.4" )
+    , ( "pkgs.postgresqlPackages.h3-pg", "4.2.2" )
     , ( "pkgs.postgresqlPackages.hypopg", "1.4.1" )
     , ( "pkgs.postgresqlPackages.jsonb_deep_sum", "0-unstable-2021-12-24" )
     , ( "pkgs.postgresqlPackages.lantern", "0.5.0" )
