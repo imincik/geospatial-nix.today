@@ -14,7 +14,7 @@ packages =
     , ( "pkgs.postgresqlPackages.periods", "1.2.3" )
     , ( "pkgs.postgresqlPackages.pg-gvm", "22.6.8" )
     , ( "pkgs.postgresqlPackages.pg-semver", "0.40.0" )
-    , ( "pkgs.postgresqlPackages.pg_auto_failover", "2.1" )
+    , ( "pkgs.postgresqlPackages.pg_auto_failover", "2.2" )
     , ( "pkgs.postgresqlPackages.pg_bigm", "1.2-20240606" )
     , ( "pkgs.postgresqlPackages.pg_byteamagic", "0.2.4" )
     , ( "pkgs.postgresqlPackages.pg_cron", "1.6.5" )
