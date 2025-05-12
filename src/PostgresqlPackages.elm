@@ -62,9 +62,9 @@ packages =
     , ( "pkgs.postgresqlPackages.system_stats", "3.2" )
     , ( "pkgs.postgresqlPackages.tds_fdw", "2.0.4" )
     , ( "pkgs.postgresqlPackages.temporal_tables", "1.2.2" )
-    , ( "pkgs.postgresqlPackages.timescaledb", "2.19.2" )
-    , ( "pkgs.postgresqlPackages.timescaledb-apache", "2.19.2" )
-    , ( "pkgs.postgresqlPackages.timescaledb_toolkit", "1.19.0" )
+    , ( "pkgs.postgresqlPackages.timescaledb", "2.19.3" )
+    , ( "pkgs.postgresqlPackages.timescaledb-apache", "2.19.3" )
+    , ( "pkgs.postgresqlPackages.timescaledb_toolkit", "1.21.0" )
     , ( "pkgs.postgresqlPackages.tsja", "0.5.0" )
     , ( "pkgs.postgresqlPackages.wal2json", "" )
     ]
