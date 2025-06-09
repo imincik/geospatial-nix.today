@@ -92,6 +92,7 @@ packages =
     , ( "pkgs.grassPlugins.r-convergence", "" )
     , ( "pkgs.grassPlugins.r-cpt2grass", "" )
     , ( "pkgs.grassPlugins.r-crater", "" )
+    , ( "pkgs.grassPlugins.r-curvenumber", "" )
     , ( "pkgs.grassPlugins.r-damflood", "" )
     , ( "pkgs.grassPlugins.r-denoise", "" )
     , ( "pkgs.grassPlugins.r-divergence", "" )
