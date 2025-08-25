@@ -45,7 +45,6 @@ packages =
     , ( "pkgs.grassPlugins.i-pysptools-unmix", "" )
     , ( "pkgs.grassPlugins.i-rh", "" )
     , ( "pkgs.grassPlugins.i-rotate", "" )
-    , ( "pkgs.grassPlugins.i-sam2", "" )
     , ( "pkgs.grassPlugins.i-sar-speckle", "" )
     , ( "pkgs.grassPlugins.i-segment-gsoc", "" )
     , ( "pkgs.grassPlugins.i-segment-stats", "" )
